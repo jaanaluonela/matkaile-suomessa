@@ -1,22 +1,23 @@
-Matkaile Suomessa - puhdas julkaisuversio
+Päivitys v30 – Karavaanari-osio
 
-Tämä paketti on tarkoitettu GitHub Pages -julkaisuun.
+Tässä versiossa on lisätty oma Karavaanari-osio.
 
-Lataa GitHubiin ZIP-paketin SISÄLTÖ, ei itse ZIP-tiedostoa.
+Mukana ovat:
+- Leirintäalueet
+- Matkaparkit
+- Huoltopisteet
+- Sähkö
+- Ruokailu
+- Kaupat
 
-Mukana:
-- index.html
-- kuntasivut ja maakuntasivut
-- CSS- ja JS-tiedostot
-- images/hero-etusivu.jpg
-- .nojekyll
+Pois jätetty tarkoituksella:
+- tankkauspaikat
+- tapahtumat
+- reittiehdotukset
+- tarkistuslista
+- yleinen pysäköinti
 
-Ei mukana:
-- GitHub Actions -työnkulkuja
-- sisäisiä ZIP-tiedostoja
-- vanhoja julkaisutiedostoja
+Tämä ZIP voidaan ladata Netlifyyn testiversiona.
 
-GitHub Pages asetukset:
-Source: Deploy from a branch / Ota käyttöön haarasta
-Branch: main / pääasiallinen
-Folder: /(root) / juuri
+
+V43: Etusivun hero-osio säädetty mallikuvan suuntaan: hakukenttä kuvan alareunaan, uusi suomalaisempi taustakuva, asuntoauto takaisin oikeaan alakulmaan, sivuttaisvieritys estetty. Oman matkan lisätietopainikkeet tiivistetty ja lisätty Museo sekä Muu...
