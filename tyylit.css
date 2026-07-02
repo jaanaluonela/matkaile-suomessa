@@ -1,0 +1,391 @@
+
+:root{
+  --green:#2f7d54;--green2:#3fa66f;--dark:#163327;--muted:#6c7a72;--bg:#f4f7f2;--card:#ffffff;
+  --gold:#e8b84c;--line:#e2eadf;--shadow:0 12px 35px rgba(21,50,35,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--dark)}
+a{text-decoration:none;color:inherit}
+.app{max-width:430px;margin:0 auto;min-height:100vh;background:#f7faf5;position:relative;padding-bottom:92px;box-shadow:0 0 0 1px rgba(0,0,0,.04)}
+.hero{
+  min-height:330px;padding:22px 18px 24px;border-radius:0 0 34px 34px;position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(180deg,rgba(10,35,25,.25),rgba(10,35,25,.75)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80') center/cover;
+}
+.hero.small{min-height:240px}
+.toprow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo-script{font-family:"Brush Script MT","Segoe Script",cursive;font-size:35px;line-height:.85;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.logo-script span{font-family:inherit;font-size:32px}
+.logo-sub{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;opacity:.95}
+.icon-btn{width:42px;height:42px;border:0;border-radius:16px;background:rgba(255,255,255,.22);color:#fff;font-size:19px;backdrop-filter:blur(10px)}
+.hero-title{margin-top:34px}
+.hero h1{font-size:34px;line-height:1.02;margin:8px 0 8px}
+.hero p{margin:0;color:rgba(255,255,255,.92);font-size:15px}
+.search{display:flex;align-items:center;gap:10px;background:#fff;color:#263b31;border-radius:22px;margin-top:22px;padding:14px 16px;box-shadow:var(--shadow)}
+.search input{border:0;outline:0;width:100%;font-size:14px;background:transparent}
+.content{padding:18px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:-32px;position:relative;z-index:2}
+.action-card{background:var(--card);border-radius:24px;padding:18px;box-shadow:var(--shadow);min-height:104px;border:1px solid rgba(255,255,255,.75)}
+.action-card b{display:block;font-size:18px;margin-bottom:7px}.action-card small{color:var(--muted);line-height:1.25}
+.action-ico{font-size:28px;margin-bottom:10px}
+.section{margin-top:24px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:12px}
+.section h2{font-size:22px;margin:0}.section a.more{color:var(--green);font-weight:800;font-size:13px}
+.card{background:#fff;border-radius:24px;padding:16px;box-shadow:0 8px 22px rgba(21,50,35,.08);border:1px solid var(--line)}
+.trip-card{display:grid;grid-template-columns:98px 1fr;gap:14px;align-items:stretch}
+.photo{border-radius:18px;background:linear-gradient(135deg,#9ec6a7,#dce8d2);overflow:hidden;min-height:98px;background-size:cover;background-position:center}
+.badge{display:inline-flex;align-items:center;gap:5px;background:#eaf5ef;color:var(--green);padding:6px 9px;border-radius:999px;font-size:12px;font-weight:800}
+.muted{color:var(--muted);font-size:13px}.progress{height:8px;background:#e7eee5;border-radius:99px;overflow:hidden;margin:10px 0}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:99px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:#fff;border-radius:22px;padding:13px;min-height:96px;box-shadow:0 8px 18px rgba(21,50,35,.07);border:1px solid var(--line)}
+.tile .emoji{font-size:25px}.tile b{display:block;margin-top:8px}.tile small{color:var(--muted)}
+.img-tile{min-height:112px;color:#fff;display:flex;align-items:flex-end;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.img-tile:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.58))}
+.img-tile > div{position:relative;z-index:1}
+.list{display:grid;gap:12px}.row{display:flex;gap:12px;align-items:center}.row .round{width:48px;height:48px;border-radius:17px;background:#eaf5ef;display:grid;place-items:center;font-size:23px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.kpi div{background:#fff;border-radius:20px;padding:12px;text-align:center;border:1px solid var(--line)}.kpi b{font-size:19px;display:block}
+.tabs{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:800;color:var(--green);white-space:nowrap}.tab.active{background:var(--green);color:#fff}
+.mapbox{background:#fff;border-radius:30px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.finmap{width:100%;height:420px;background:linear-gradient(#eaf5ef,#f8fbf6);border-radius:24px;position:relative;overflow:hidden}
+.finland-shape{position:absolute;inset:20px 64px 22px 62px;background:#e1eadf;clip-path:polygon(48% 0,63% 5%,67% 16%,61% 24%,71% 35%,63% 45%,70% 55%,57% 64%,62% 76%,48% 83%,45% 96%,33% 100%,25% 88%,31% 77%,22% 67%,29% 56%,20% 47%,28% 37%,20% 25%,33% 19%,36% 8%);border:2px solid #c6d5c8}
+.marker{position:absolute;transform:translate(-50%,-50%);background:#fff;border:2px solid var(--green);color:var(--green);font-weight:900;border-radius:999px;padding:7px 9px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.marker.done{background:var(--green);color:#fff}.marker.gold{background:var(--gold);border-color:#d09d23;color:#fff}
+.form{display:grid;gap:12px}.field{background:#fff;border:1px solid var(--line);border-radius:18px;padding:13px}.field label{display:block;font-size:12px;color:var(--muted);font-weight:800;margin-bottom:6px}.field input,.field textarea,.field select{border:0;outline:0;width:100%;font-size:15px;background:transparent;color:var(--dark)}
+.primary{border:0;background:var(--green);color:#fff;font-weight:900;border-radius:18px;padding:15px;font-size:16px;box-shadow:0 10px 20px rgba(47,125,84,.25)}
+.bottomnav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(430px,100%);height:74px;background:rgba(255,255,255,.94);display:flex;justify-content:space-around;align-items:center;border-top:1px solid var(--line);backdrop-filter:blur(16px);z-index:10}
+.bottomnav a{font-size:11px;color:#6d7b72;text-align:center;font-weight:800}.bottomnav a span{display:block;font-size:23px;margin-bottom:2px}.bottomnav .active{color:var(--green)}
+.plusnav{width:58px;height:58px;background:var(--green);color:white;border-radius:22px;margin-top:-22px;display:grid;place-items:center;font-size:31px;box-shadow:0 12px 25px rgba(47,125,84,.35)}
+@media(max-width:390px){.hero h1{font-size:30px}.logo-script{font-size:31px}.content{padding:14px}.actions{gap:10px}.action-card{padding:15px}.finmap{height:390px}}
+
+/* v27 – sovellusmainen etusivu omien suunnitelmakuvien pohjalta */
+.home-hero{
+  min-height:430px;
+  padding:22px 18px 34px;
+  border-radius:0 0 34px 34px;
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    linear-gradient(180deg,rgba(6,29,23,.08) 0%,rgba(6,29,23,.16) 42%,rgba(6,29,23,.72) 100%),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85') center/cover;
+}
+.home-hero:after{
+  content:"";position:absolute;right:-40px;bottom:70px;width:210px;height:120px;
+  background:rgba(255,255,255,.16);border-radius:80px;filter:blur(18px)
+}
+.floating-top{position:relative;z-index:2}.brand-block{position:relative;z-index:2;text-align:center;margin-top:54px;text-shadow:0 3px 18px rgba(0,0,0,.35)}
+.logo-script.huge{font-size:66px;line-height:.78;color:#fff}.logo-sub.big{font-size:22px;letter-spacing:.42em;margin-left:.42em}.brand-block p{font-size:18px;font-weight:700;margin:14px 0 0;color:rgba(255,255,255,.96)}
+.hero-search{position:absolute;z-index:4;left:18px;right:18px;bottom:42px;margin:0;border-radius:28px;padding:17px 18px}.hero-search input{font-size:16px}
+.home-content{padding-top:0}.actions.raised{margin-top:-24px}.main-action{display:grid;grid-template-columns:52px 1fr 18px;align-items:center;gap:12px;min-height:98px;padding:15px}.main-action b{font-size:18px}.main-action small{display:block}.chev{font-size:32px;color:var(--green);font-weight:300}.fin-ico{font-size:35px}.plus-ico{width:48px;height:48px;background:#238d84;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:34px;font-weight:300}
+.continue-card{display:grid;grid-template-columns:42% 1fr;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 26px rgba(21,50,35,.10);border:1px solid var(--line)}
+.continue-img{min-height:126px;background-size:cover;background-position:center}.continue-info{padding:17px 16px}.continue-info h3{margin:4px 0;font-size:24px}.continue-info p{margin:0 0 9px;color:#53665c;font-weight:600}.progress-row{display:grid;grid-template-columns:1fr 42px;gap:10px;align-items:center}.progress-row b{color:#27856c;text-align:right}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.quick{background:#fff;border:1px solid var(--line);border-radius:18px;min-height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 7px 16px rgba(21,50,35,.055);font-size:12px;text-align:center}.quick span{font-size:34px}.quick b{font-size:13px;line-height:1.1}
+.h-scroll{display:flex;gap:12px;overflow:auto;padding-bottom:8px;scroll-snap-type:x mandatory}.h-scroll::-webkit-scrollbar{display:none}.fav-card{scroll-snap-align:start;flex:0 0 122px;height:150px;border-radius:21px;padding:12px;color:#fff;background-size:cover;background-position:center;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;box-shadow:0 10px 22px rgba(21,50,35,.12)}.fav-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.68))}.fav-card>*{position:relative;z-index:1}.fav-card span{position:absolute;right:10px;top:9px;background:#fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center}.fav-card b{font-size:18px}.fav-card small{font-size:13px;color:#fff}
+.tip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.tip{min-height:132px;border-radius:20px;padding:13px 10px;display:flex;flex-direction:column;justify-content:center;gap:7px;box-shadow:0 8px 18px rgba(21,50,35,.06);border:1px solid rgba(255,255,255,.7)}.tip span{font-size:31px}.tip b{font-size:14px;line-height:1.1}.tip small{font-size:12px;color:#58695f}.tip.green{background:#e8f5ee}.tip.blue{background:#eaf4fb}.tip.purple{background:#f0eaf8}.tip.orange{background:#fff1df}
+@media(max-width:390px){.logo-script.huge{font-size:55px}.logo-sub.big{font-size:18px}.quick-grid{gap:8px}.quick{min-height:84px}.quick span{font-size:29px}.tip-grid{grid-template-columns:repeat(2,1fr)}.tip{min-height:96px}.main-action{grid-template-columns:42px 1fr 14px}.continue-info h3{font-size:20px}}
+.city-hero{min-height:340px;padding:22px 18px 28px;border-radius:0 0 32px 32px;position:relative;overflow:hidden;color:#fff;background-size:cover;background-position:center}.city-title{position:absolute;left:24px;right:20px;bottom:34px;text-shadow:0 3px 16px rgba(0,0,0,.4)}.city-title h1{font-size:56px;margin:0 0 4px;line-height:.95}.city-title p{font-size:18px;font-weight:700;margin:0;max-width:340px}.city-crest{width:62px;height:62px;border-radius:16px;background:#1f7a4a;display:grid;place-items:center;font-size:33px;border:2px solid rgba(255,255,255,.9);margin-bottom:12px}.city-note{margin-top:-36px;position:relative;z-index:2;background:#fff;border-radius:22px;padding:14px;display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;box-shadow:var(--shadow);border:1px solid var(--line)}.city-note p{margin:0;font-weight:650;line-height:1.35}.place-card{flex:0 0 150px;height:145px;border-radius:17px;background-size:cover;background-position:center;position:relative;overflow:hidden;padding:10px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 8px 18px rgba(21,50,35,.1)}.place-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(255,255,255,.94) 63%)}.place-card>*{position:relative;z-index:1}.place-card span{position:absolute;top:8px;right:8px;color:#fff;font-size:24px}.place-card small{color:#27856c;font-weight:700}.memory-row{display:flex;gap:10px;overflow:auto;padding-bottom:6px}.memory{flex:0 0 135px;height:95px;border-radius:17px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:8px;position:relative;overflow:hidden;color:#173327}.memory:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.88))}.memory b{position:relative;background:#fff;border-radius:999px;padding:5px 9px;font-size:12px}.add-memory{flex:0 0 86px;border:2px dashed #d5ded4;border-radius:17px;display:grid;place-items:center;text-align:center;color:var(--green);font-size:32px;background:#fff}.add-memory span{font-size:13px;color:#274036}
+
+/* v28 – Matkaile Suomessa: yhtenäinen sovellusmainen tavoiteilme */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.logo-script{font-family:'Pacifico','Brush Script MT','Segoe Script',cursive;font-weight:400;letter-spacing:.01em}
+.brand-heart{color:#ff7b86;font-family:inherit;font-weight:400;text-shadow:none}
+.clean-home.home-hero{
+  min-height:430px;
+  background:
+    linear-gradient(180deg,rgba(7,32,28,.18) 0%,rgba(7,32,28,.10) 34%,rgba(7,32,28,.62) 100%),
+    url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1100&q=85') center/cover;
+}
+.clean-home .brand-block{margin-top:48px}.clean-home .logo-script.huge{font-size:61px;color:#fff}.clean-home .logo-sub.big{font-size:21px;letter-spacing:.38em}.brand-block p span{border-bottom:4px solid #5ebc78;padding-bottom:2px}
+.hero-rv{position:absolute;right:30px;bottom:92px;font-size:72px;z-index:3;filter:drop-shadow(0 12px 12px rgba(0,0,0,.25));transform:rotate(-2deg)}
+.home-content:before{content:"";display:block;height:18px;background:#f7faf5;border-radius:42px 42px 0 0;margin:-18px -18px 0;position:relative;z-index:1}.home-content .actions{z-index:3}
+.action-card:first-child{background:#fff}.action-card:nth-child(2){background:#f4fbef}.main-action:hover,.quick:hover,.tip:hover,.trip-wide:hover{transform:translateY(-1px)}
+.quick-grid-trip{grid-template-columns:repeat(3,1fr)}
+.page-top{padding:18px 18px 8px;display:grid;grid-template-columns:46px 1fr 72px;gap:10px;align-items:center;background:linear-gradient(180deg,#f6faf2,#fff 70%,transparent)}
+.page-logo{font-size:34px;color:#123a32;line-height:1.05;text-align:center}.page-top p{margin:3px 0 0;text-align:center;color:#5a6b63;font-weight:600}.back,.round-light{border:0;background:#fff;border-radius:18px;min-height:44px;box-shadow:0 6px 18px rgba(21,50,35,.08);font-weight:900;color:#17402f}.back{font-size:32px;line-height:1}.round-light{font-size:13px}.soft-top{padding-top:28px}.trips-top{background:linear-gradient(180deg,#f7faf5,#fff)}
+.new-cover{padding:8px;border-radius:26px}.new-cover .photo{border-radius:22px}.filter-pill{border:0;background:#238d84;color:#fff;border-radius:999px;padding:10px 12px;font-weight:800;white-space:nowrap}.trip-list-v28{display:grid;gap:12px}.trip-wide{position:relative;display:grid;grid-template-columns:42% 1fr;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(21,50,35,.08);min-height:142px}.trip-img{background-size:cover;background-position:center;min-height:142px;position:relative}.trip-img span{position:absolute;left:10px;top:10px;background:rgba(31,122,74,.92);color:#fff;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:800}.trip-body{padding:14px 16px}.trip-body b{font-size:20px;color:#14504c}.trip-body p{margin:6px 0;color:#5d6864}.trip-body small{color:#3c4844}.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.chip-row i{font-style:normal;background:#f3f5f2;border-radius:999px;padding:7px 9px;font-size:12px;color:#48554f}.trip-wide .progress{margin:0}.trip-wide .progress em{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green2));border-radius:99px}.trip-wide .progress-row{margin-top:11px}.dots{position:absolute;right:10px;top:8px;font-size:24px;color:#1b2e28}.floating-add{position:fixed;right:calc(50% - 202px);bottom:92px;z-index:11;width:72px;height:72px;background:#238d84;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:45px;box-shadow:0 14px 25px rgba(35,141,132,.35)}.floating-add small{position:absolute;top:76px;color:#244139;font-size:12px;font-weight:800;white-space:nowrap}
+@media(max-width:390px){.clean-home .logo-script.huge{font-size:54px}.clean-home .logo-sub.big{font-size:18px}.hero-rv{font-size:56px;right:28px;bottom:100px}.quick-grid-trip{grid-template-columns:repeat(3,1fr)}.trip-wide{grid-template-columns:40% 1fr}.trip-body b{font-size:17px}.floating-add{right:18px}}
+
+
+/* v30 – etusivu takaisin mallin suuntaan, kartta ja muistot */
+.purpose-line{font-size:14px!important;max-width:330px;margin:8px auto 0!important;line-height:1.35;color:rgba(255,255,255,.94)!important;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+.home-hero.clean-home{transition:background-image .6s ease;background-position:center;background-size:cover}
+.tile{display:block;color:inherit}.tile:active,.action-card:active,.tip:active{transform:scale(.985)}
+.map-hero{background:linear-gradient(180deg,rgba(10,35,25,.20),rgba(10,35,25,.78)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80') center/cover}
+.improved-map{height:470px;background:linear-gradient(180deg,#e6f2ea,#f8fbf6)}
+.improved-map .finland-shape{inset:20px 72px 22px 58px;background:linear-gradient(180deg,#dfece0,#d3e3d4);box-shadow:inset 0 0 0 2px #c0d2c3}
+.region{position:absolute;z-index:2;display:block;transform:translate(-50%,-50%);padding:6px 8px;border-radius:999px;background:#fff;border:1px solid #cfe0d2;color:#28513d;font-size:10px;font-weight:900;box-shadow:0 5px 14px rgba(0,0,0,.10);white-space:nowrap}.region.done{background:var(--green);color:#fff;border-color:var(--green)}
+.r-lappi{left:50%;top:13%}.r-pohjois-pohjanmaa{left:46%;top:31%}.r-kainuu{left:60%;top:42%}.r-keski-suomi{left:45%;top:57%}.r-pirkanmaa{left:38%;top:69%}.r-paijat{left:52%;top:72%}.r-uusimaa{left:45%;top:84%}.r-varsinais{left:31%;top:82%}.r-ahvenanmaa{left:18%;top:89%}
+.map-note{margin:12px 4px 0;line-height:1.35}.compact-list .row{position:relative;padding-right:42px}.row-chev{position:absolute;right:16px;font-size:28px;color:var(--green);font-weight:300}.done-dot{background:var(--green)!important;color:#fff!important}.memory-panel{display:grid;gap:13px}.memory-summary{display:flex;justify-content:space-between;align-items:center;font-size:18px}.memory-summary span{color:#d69b1f;letter-spacing:2px}.memory-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.memory-fields div{background:#f7faf5;border:1px solid var(--line);border-radius:16px;padding:11px}.memory-fields small{display:block;color:var(--muted);font-weight:800;margin-bottom:5px}.memory-fields b{font-size:14px;color:#244139}
+@media(max-width:390px){.purpose-line{font-size:13px!important}.region{font-size:9px;padding:5px 7px}.memory-fields{grid-template-columns:1fr}.improved-map{height:430px}}
+
+/* v37 – oikea Suomen maakuntakartta */
+.real-map-section{background:#fff;border-radius:30px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+.real-finland-map{position:relative;margin:14px auto 4px;min-height:610px;border-radius:28px;background:linear-gradient(180deg,#edf7f0,#f9fcf8);overflow:hidden;border:1px solid #dbe8dd;display:flex;align-items:center;justify-content:center;padding:16px 8px 22px}
+.real-finland-img{height:575px;max-width:92%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(20,80,50,.12));opacity:.92}
+.map-label{position:absolute;display:inline-flex;align-items:center;justify-content:center;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid rgba(16,91,57,.16);box-shadow:0 6px 18px rgba(0,0,0,.10);font-weight:900;color:#123b2d;text-decoration:none;font-size:12px;line-height:1;white-space:nowrap;transform:translate(-50%,-50%)}
+.map-label.active-region{background:var(--green);color:#fff;border-color:var(--green);box-shadow:0 12px 22px rgba(17,127,80,.28)}
+.map-label:active{transform:translate(-50%,-50%) scale(.96)}
+.label-lappi{left:53%;top:15%}.label-pohjois-pohjanmaa{left:49%;top:33%}.label-kainuu{left:61%;top:39%}.label-keski-pohjanmaa{left:37%;top:46%}.label-pohjanmaa{left:32%;top:53%}.label-pohjois-savo{left:59%;top:54%}.label-pohjois-karjala{left:70%;top:57%}.label-etela-pohjanmaa{left:39%;top:58%}.label-keski-suomi{left:52%;top:62%}.label-etela-savo{left:63%;top:68%}.label-etela-karjala{left:70%;top:76%}.label-pirkanmaa{left:45%;top:72%}.label-satakunta{left:32%;top:73%}.label-kanta-hame{left:44%;top:79%}.label-paijat-hame{left:55%;top:78%}.label-kymenlaakso{left:62%;top:84%}.label-uusimaa{left:49%;top:87%}.label-varsinais{left:34%;top:84%}.label-ahvenanmaa{left:19%;top:86%}
+@media(max-width:430px){.real-finland-map{min-height:560px;padding-left:0;padding-right:0}.real-finland-img{height:535px;max-width:96%}.map-label{font-size:10px;padding:5px 7px}.label-pohjois-pohjanmaa{left:48%}.label-pohjois-karjala{left:72%}.label-etela-karjala{left:73%}.label-ahvenanmaa{left:18%}}
+
+/* v38 – mittasuhteet lähemmäs mallikuvia + Päijät-Häme runko */
+.clean-home.home-hero{
+  min-height:318px!important;
+  padding:14px 18px 18px!important;
+  border-radius:0 0 32px 32px;
+  background-position:center 38%!important;
+}
+.clean-home .brand-block{margin-top:18px!important;text-align:center}
+.clean-home .logo-script.huge{font-size:50px!important;line-height:.85!important}
+.clean-home .logo-sub.big{font-size:15px!important;letter-spacing:.32em!important;margin-top:4px!important}
+.brand-block p{margin:7px 0 0!important;font-size:15px!important;font-weight:650;color:rgba(255,255,255,.96)!important;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.purpose-line{display:none!important}
+.floating-top{padding-top:2px}.floating-top .icon-btn{width:44px;height:44px;border-radius:18px}
+.hero-rv{font-size:54px!important;right:42px!important;bottom:74px!important}
+.hero-search{margin-top:48px!important;padding:12px 16px!important;border-radius:26px!important;position:relative;z-index:5}
+.home-content{padding:14px 18px 18px!important}
+.home-content:before{height:12px!important;margin:-14px -18px 0!important}
+.actions.raised{margin-top:-18px!important;gap:12px!important}
+.action-card.main-action{min-height:94px!important;border-radius:18px!important;padding:14px!important;display:grid;grid-template-columns:48px 1fr 14px;gap:10px;align-items:center}
+.main-action .action-ico{margin:0!important;font-size:31px!important}.plus-ico{width:48px;height:48px;border-radius:50%;background:#1f9388;color:#fff;display:grid;place-items:center}.fin-ico{font-size:36px!important}.action-card b{font-size:17px!important;margin-bottom:5px!important}.action-card small{font-size:12.5px!important}.chev{font-size:28px;color:#123327}
+.section{margin-top:18px!important}.section h2{font-size:22px!important}.section-head{margin-bottom:9px!important}
+.continue-card{border-radius:17px!important;min-height:118px;grid-template-columns:40% 1fr!important}.continue-img{min-height:118px!important;background-size:cover;background-position:center}.continue-info{padding:13px 14px!important}.continue-info h3{font-size:21px!important;margin:3px 0!important}.continue-info p{font-size:13px!important;margin:0 0 4px!important}.progress-row{gap:8px}.progress-row b{font-size:14px}.continue-info .progress{height:6px!important;margin:8px 0!important}
+.h-scroll{gap:10px!important}.fav-card{flex-basis:112px!important;height:138px!important;border-radius:16px!important;padding:10px!important}.fav-card b{font-size:15px!important}.fav-card small{font-size:12px!important}.fav-card span{width:27px!important;height:27px!important;font-size:15px!important}
+.tip-grid{gap:10px!important}.tip{min-height:112px!important;border-radius:15px!important;padding:11px 9px!important}.tip span{font-size:27px!important}.tip b{font-size:13px!important}.tip small{font-size:11px!important}
+.home-map-preview{display:block}.mini-map-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px;display:grid;grid-template-columns:70px 1fr 20px;gap:12px;align-items:center;box-shadow:0 8px 20px rgba(21,50,35,.08)}.mini-map-card img{height:92px;width:70px;object-fit:contain}.mini-map-card b{font-size:17px;display:block}.mini-map-card small{display:block;color:var(--muted);line-height:1.3;margin-top:4px}.mini-map-card span{font-size:30px;color:var(--green)}
+.bottomnav{height:70px!important}.bottomnav a span{font-size:21px!important}.bottomnav .plusnav{width:62px!important;height:62px!important;margin-top:-32px!important;font-size:37px!important}
+@media(max-width:390px){.clean-home.home-hero{min-height:300px!important}.clean-home .logo-script.huge{font-size:44px!important}.clean-home .logo-sub.big{font-size:13px!important}.hero-rv{font-size:45px!important;right:34px!important;bottom:76px!important}.hero-search{margin-top:42px!important}.action-card.main-action{grid-template-columns:42px 1fr 12px;padding:12px!important;min-height:88px!important}.fin-ico{font-size:31px!important}.plus-ico{width:42px;height:42px}.tip-grid{grid-template-columns:repeat(4,1fr)!important}.tip{min-height:100px!important}.tip b{font-size:12px!important}.tip small{display:none}.fav-card{flex-basis:104px!important;height:132px!important}.continue-card{min-height:108px}.continue-img{min-height:108px!important}.mini-map-card{grid-template-columns:58px 1fr 16px}.mini-map-card img{height:78px;width:58px}}
+
+.region-hero{min-height:285px;padding:18px;border-radius:0 0 32px 32px;position:relative;overflow:hidden;color:#fff;background-size:cover;background-position:center}.region-title{position:absolute;left:22px;right:18px;bottom:26px;text-shadow:0 3px 16px rgba(0,0,0,.45)}.region-badge{width:54px;height:54px;border-radius:16px;background:#1f7a4a;display:grid;place-items:center;font-size:29px;border:2px solid rgba(255,255,255,.9);margin-bottom:10px}.region-title h1{font-size:43px;margin:0 0 4px;line-height:.95}.region-title p{font-size:16px;font-weight:750;margin:0;max-width:360px}.region-content{padding-top:14px}.region-intro{margin-top:-34px;position:relative;z-index:2;display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center}.region-intro p{margin:4px 0 0;color:var(--muted);line-height:1.35;font-size:13px}.region-kpi{margin-top:14px}.region-progress{display:flex;align-items:center;gap:10px;margin-bottom:12px}.region-progress .progress{flex:1;margin:0}.region-progress span{font-size:12px;color:var(--muted);font-weight:800}.municipality-grid{display:grid;grid-template-columns:1fr;gap:10px}.municipality-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px;display:grid;grid-template-columns:46px 1fr 24px;gap:12px;align-items:center;box-shadow:0 6px 17px rgba(21,50,35,.07)}.municipality-card .coat{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#1f7a4a,#34a76d);color:#fff;display:grid;place-items:center;font-weight:900;border:2px solid #fff;box-shadow:0 4px 10px rgba(21,50,35,.14)}.municipality-card b{font-size:18px}.municipality-card small{display:block;color:var(--muted);margin-top:3px}.municipality-card em{font-style:normal;font-size:28px;color:var(--green);text-align:right}.municipality-card.visited{background:#f1faf4}.municipality-card.visited .coat{background:#0f7d4d}.municipality-card.visited em{font-size:20px;background:#0f7d4d;color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
+
+/* v39 – etusivun viimeistely ja uuden matkan selkeytys */
+html,body{max-width:100%;overflow-x:hidden}
+.app{overflow-x:hidden;width:100%}
+.home-map-preview{display:none!important}
+.map-ico{width:48px;height:48px;border-radius:16px;background:#eef7f0;display:grid;place-items:center;overflow:hidden;margin:0!important;border:1px solid #dcebdd}
+.map-ico img{width:40px;height:40px;object-fit:contain;display:block}
+.fin-ico{display:none!important}
+.clean-home.home-hero{min-height:300px!important}
+.clean-home .brand-block{margin-top:12px!important}
+.clean-home .logo-script.huge{font-size:46px!important}
+.clean-home .logo-sub.big{font-size:14px!important}
+.hero-rv{font-size:45px!important;right:38px!important;bottom:74px!important}
+.hero-search{margin-top:38px!important;padding:11px 15px!important}
+.actions.raised{margin-top:-14px!important}
+.action-card.main-action{min-height:86px!important;border-radius:18px!important}
+.form-hint{margin:2px 4px 0;color:var(--muted);font-size:13px;line-height:1.35}
+.new-cover .photo{min-height:150px!important}
+.quick-grid-trip{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:286px!important}
+  .clean-home .logo-script.huge{font-size:41px!important}
+  .clean-home .logo-sub.big{font-size:12px!important}
+  .hero-search{margin-top:34px!important}
+  .action-card.main-action{min-height:82px!important}
+  .quick-grid-trip{grid-template-columns:repeat(3,1fr)!important;gap:9px!important}
+}
+
+
+/* v40 – kuntasivujen palvelut 3 vierekkäin + yksinkertainen oma kokemus */
+.grid3.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.grid3.service-grid .tile{min-height:104px;border-radius:18px;padding:10px 8px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.grid3.service-grid .tile .emoji{font-size:24px;margin-bottom:6px}
+.grid3.service-grid .tile b{font-size:15px;line-height:1.05;margin-top:0}
+.grid3.service-grid .tile small{font-size:11.5px;line-height:1.18;margin-top:5px}
+.simple-memory-fields{grid-template-columns:1fr 1fr}
+.simple-memory-fields div:nth-child(3){grid-column:1 / -1}
+.simple-memory-fields div{min-height:76px}
+@media(max-width:390px){
+  .grid3.service-grid{gap:8px}
+  .grid3.service-grid .tile{min-height:96px;padding:9px 7px;border-radius:16px}
+  .grid3.service-grid .tile .emoji{font-size:22px}
+  .grid3.service-grid .tile b{font-size:13.5px}
+  .grid3.service-grid .tile small{font-size:10.5px}
+  .simple-memory-fields{grid-template-columns:1fr}
+  .simple-memory-fields div:nth-child(3){grid-column:auto}
+}
+
+
+/* v41 – kuntasivujen viimeistely: pienemmät kortit, keskitys, vaakunat ja paremmat kansikuvat */
+.hero-title.with-coat{display:flex;align-items:flex-end;gap:12px;margin-top:30px}
+.hero-title.with-coat h1{margin:0 0 4px}.hero-title.with-coat p{margin:0}
+.coat-img{width:54px;height:60px;object-fit:contain;background:rgba(255,255,255,.92);border-radius:14px;padding:5px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.city-crest.coat-img{display:block;width:60px;height:66px;background:rgba(255,255,255,.94);border:2px solid rgba(255,255,255,.95);padding:5px;font-size:0;place-items:unset}
+.grid3.service-grid{gap:12px!important}
+.grid3.service-grid .tile{min-height:94px!important;border-radius:17px!important;padding:9px 6px!important;align-items:center!important;text-align:center!important;justify-content:center!important}
+.grid3.service-grid .tile .emoji{font-size:23px!important;margin:0 0 5px!important;line-height:1!important}
+.grid3.service-grid .tile b{font-size:13.5px!important;line-height:1.05!important;margin:0!important;max-width:100%}
+.grid3.service-grid .tile small{font-size:10.5px!important;line-height:1.14!important;margin-top:5px!important;max-width:92px;color:var(--muted)}
+.memory-panel .memory-fields.simple-memory-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.memory-panel .memory-fields.simple-memory-fields div{display:flex;flex-direction:column;justify-content:center;text-align:left;border-radius:16px;padding:12px;min-height:70px;background:#f6faf5;border:1px solid var(--line)}
+.memory-panel .memory-fields.simple-memory-fields div:nth-child(3){grid-column:1 / -1}
+@media(max-width:390px){
+  .grid3.service-grid{gap:10px!important}
+  .grid3.service-grid .tile{min-height:88px!important;padding:8px 5px!important;border-radius:16px!important}
+  .grid3.service-grid .tile .emoji{font-size:21px!important}
+  .grid3.service-grid .tile b{font-size:12.5px!important}
+  .grid3.service-grid .tile small{font-size:9.8px!important;max-width:86px}
+  .coat-img{width:48px;height:54px}.city-crest.coat-img{width:52px;height:58px}
+}
+
+/* v42 – etusivun kansikuva oikeaan kokoon ja rauhallisemmaksi */
+.clean-home.home-hero{
+  min-height:252px!important;
+  padding:16px 18px 18px!important;
+  border-radius:0 0 30px 30px!important;
+  background:
+    linear-gradient(180deg,rgba(8,31,24,.44) 0%,rgba(8,31,24,.30) 42%,rgba(8,31,24,.76) 100%),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=85') center 42%/cover!important;
+}
+.clean-home.home-hero:after{display:none!important}
+.clean-home .floating-top{padding-top:0!important}
+.clean-home .floating-top .icon-btn{width:38px!important;height:38px!important;border-radius:15px!important;font-size:17px!important;background:rgba(255,255,255,.20)!important}
+.clean-home .brand-block{margin-top:8px!important;text-shadow:0 3px 16px rgba(0,0,0,.55)!important}
+.clean-home .logo-script.huge{font-size:40px!important;line-height:.78!important}
+.clean-home .logo-sub.big{font-size:12px!important;letter-spacing:.36em!important;margin-left:.36em!important;margin-top:5px!important}
+.clean-home .brand-block p{font-size:13.5px!important;margin:8px 0 0!important;font-weight:750!important;color:rgba(255,255,255,.98)!important}
+.hero-rv{display:none!important}
+.hero-search{margin-top:22px!important;padding:10px 14px!important;border-radius:24px!important;box-shadow:0 10px 24px rgba(21,50,35,.16)!important}
+.hero-search input{font-size:14px!important}
+.actions.raised{margin-top:-12px!important}
+.action-card.main-action{min-height:82px!important;padding:12px!important;border-radius:17px!important;grid-template-columns:42px 1fr 12px!important}
+.map-ico,.plus-ico{width:42px!important;height:42px!important;border-radius:15px!important}
+.map-ico img{width:35px!important;height:35px!important}
+.action-card b{font-size:16px!important;margin-bottom:4px!important}.action-card small{font-size:12px!important;line-height:1.2!important}
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:238px!important;padding:15px 15px 16px!important}
+  .clean-home .brand-block{margin-top:6px!important}
+  .clean-home .logo-script.huge{font-size:37px!important}
+  .clean-home .logo-sub.big{font-size:11px!important}
+  .clean-home .brand-block p{font-size:13px!important;margin-top:7px!important}
+  .hero-search{margin-top:18px!important;padding:9px 13px!important}
+  .actions.raised{margin-top:-10px!important}
+  .action-card.main-action{min-height:78px!important;padding:11px!important}
+}
+
+/* v43 – etusivun hero takaisin mallikuvan suuntaan */
+html, body, .app{max-width:100%;overflow-x:hidden!important}
+.clean-home.home-hero{
+  position:relative!important;
+  min-height:318px!important;
+  padding:14px 18px 54px!important;
+  border-radius:0 0 30px 30px!important;
+  overflow:visible!important;
+  background:
+    linear-gradient(180deg,rgba(7,27,21,.34) 0%,rgba(7,27,21,.18) 42%,rgba(7,27,21,.68) 100%),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=88') center 48%/cover!important;
+}
+.clean-home .floating-top{position:relative;z-index:6;padding-top:0!important}
+.clean-home .brand-block{
+  position:relative!important;
+  z-index:4!important;
+  margin-top:18px!important;
+  text-align:center!important;
+  text-shadow:0 3px 18px rgba(0,0,0,.58)!important;
+}
+.clean-home .logo-script.huge{font-size:44px!important;line-height:.82!important;color:#fff!important}
+.clean-home .logo-sub.big{font-size:13px!important;letter-spacing:.38em!important;margin-left:.38em!important;margin-top:5px!important;color:#fff!important}
+.clean-home .brand-block p{font-size:13.5px!important;margin:8px 0 0!important;font-weight:800!important;color:rgba(255,255,255,.97)!important}
+.clean-home .purpose-line{display:none!important}
+.hero-rv{
+  display:block!important;
+  position:absolute!important;
+  z-index:5!important;
+  right:28px!important;
+  bottom:34px!important;
+  font-size:54px!important;
+  filter:drop-shadow(0 10px 12px rgba(0,0,0,.28))!important;
+  transform:rotate(-2deg)!important;
+}
+.hero-search{
+  position:absolute!important;
+  left:18px!important;
+  right:18px!important;
+  bottom:-24px!important;
+  z-index:7!important;
+  margin:0!important;
+  padding:13px 16px!important;
+  border-radius:28px!important;
+  box-shadow:0 14px 30px rgba(21,50,35,.18)!important;
+}
+.hero-search input{font-size:14px!important}
+.actions.raised{margin-top:42px!important;gap:12px!important}
+.action-card.main-action{min-height:82px!important;padding:12px!important;border-radius:18px!important;grid-template-columns:42px 1fr 12px!important}
+.map-ico,.plus-ico{width:42px!important;height:42px!important;border-radius:15px!important}
+.map-ico img{width:35px!important;height:35px!important}
+.action-card b{font-size:16px!important;margin-bottom:4px!important}
+.action-card small{font-size:12px!important;line-height:1.18!important}
+.home-content{padding-left:16px!important;padding-right:16px!important}
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:300px!important;padding:13px 15px 50px!important}
+  .clean-home .brand-block{margin-top:14px!important}
+  .clean-home .logo-script.huge{font-size:39px!important}
+  .clean-home .logo-sub.big{font-size:11px!important}
+  .clean-home .brand-block p{font-size:12.5px!important;margin-top:7px!important}
+  .hero-rv{font-size:46px!important;right:24px!important;bottom:34px!important}
+  .hero-search{left:15px!important;right:15px!important;bottom:-23px!important;padding:11px 14px!important}
+  .actions.raised{margin-top:40px!important}
+}
+
+/* v43 – Oma matka: tiivis lisätietoruudukko */
+.quick-grid-trip{grid-template-columns:repeat(3,1fr)!important;gap:10px!important}
+.quick-grid-trip .quick{min-height:78px!important;padding:8px 5px!important;border-radius:16px!important;gap:5px!important}
+.quick-grid-trip .quick span{font-size:24px!important}
+.quick-grid-trip .quick b{font-size:12px!important;line-height:1.08!important}
+
+/* v44 – etusivu mallin mukaiseksi: ei ajoneuvoa, hakupalkki kuvan alareunaan */
+.clean-home.home-hero{
+  min-height:292px!important;
+  padding:13px 18px 56px!important;
+  overflow:visible!important;
+  border-radius:0 0 34px 34px!important;
+  background:
+    linear-gradient(180deg,rgba(8,32,24,.24) 0%,rgba(8,32,24,.12) 43%,rgba(8,32,24,.66) 100%),
+    url('hero-suomi.svg') center center/cover!important;
+}
+.clean-home .brand-block{margin-top:16px!important;text-align:center!important;text-shadow:0 3px 16px rgba(0,0,0,.48)!important}
+.clean-home .logo-script.huge{font-size:42px!important;line-height:.82!important;color:#fff!important}
+.clean-home .logo-sub.big{font-size:12.5px!important;letter-spacing:.38em!important;margin-left:.38em!important;color:#fff!important}
+.clean-home .brand-block p{font-size:13.5px!important;margin-top:8px!important;color:#fff!important;font-weight:800!important}
+.hero-rv{display:none!important}
+.hero-search{position:absolute!important;left:18px!important;right:18px!important;bottom:-23px!important;margin:0!important;padding:12px 15px!important;border-radius:28px!important;z-index:7!important}
+.actions.raised{margin-top:42px!important}
+.continue-info .progress-row,.continue-info .progress,.continue-info .progress-row b{display:none!important}
+.continue-info .route-note{display:block;margin-top:6px;font-size:12.5px;line-height:1.25;color:#62716b!important}
+.continue-info p{margin-bottom:0!important}
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:282px!important;padding:12px 15px 54px!important}
+  .clean-home .brand-block{margin-top:14px!important}
+  .clean-home .logo-script.huge{font-size:38px!important}
+  .clean-home .logo-sub.big{font-size:11px!important}
+  .hero-search{left:15px!important;right:15px!important;bottom:-22px!important;padding:11px 14px!important}
+  .actions.raised{margin-top:40px!important}
+}
+
+
+/* v45 – piirroskuva pois: oikea Pulkkilanharjun valokuva etusivulle */
+.clean-home.home-hero{
+  min-height:292px!important;
+  padding:13px 18px 56px!important;
+  overflow:visible!important;
+  border-radius:0 0 34px 34px!important;
+  background:
+    linear-gradient(180deg,rgba(8,32,24,.22) 0%,rgba(8,32,24,.16) 44%,rgba(8,32,24,.70) 100%),
+    url('images/hero-etusivu.jpg') center 46%/cover!important;
+}
+.clean-home .brand-block{margin-top:16px!important;text-align:center!important;text-shadow:0 3px 16px rgba(0,0,0,.50)!important}
+.clean-home .logo-script.huge{font-size:42px!important;line-height:.82!important;color:#fff!important}
+.clean-home .logo-sub.big{font-size:12.5px!important;letter-spacing:.38em!important;margin-left:.38em!important;color:#fff!important}
+.clean-home .brand-block p{font-size:13.5px!important;margin-top:8px!important;color:#fff!important;font-weight:800!important}
+.hero-rv{display:none!important}
+.hero-search{position:absolute!important;left:18px!important;right:18px!important;bottom:-23px!important;margin:0!important;padding:12px 15px!important;border-radius:28px!important;z-index:7!important}
+.actions.raised{margin-top:42px!important}
+.continue-info .route-note{display:none!important}
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:282px!important;padding:12px 15px 54px!important;background-position:center 48%!important}
+  .clean-home .brand-block{margin-top:14px!important}
+  .clean-home .logo-script.huge{font-size:38px!important}
+  .clean-home .logo-sub.big{font-size:11px!important}
+  .hero-search{left:15px!important;right:15px!important;bottom:-22px!important;padding:11px 14px!important}
+  .actions.raised{margin-top:40px!important}
+}

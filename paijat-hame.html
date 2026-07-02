@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Päijät-Häme | Matkaile Suomessa</title>
+  <link rel="stylesheet" href="tyylit.css">
+</head>
+<body>
+<div class="app">
+
+<header class="region-hero" style="background-image:linear-gradient(180deg,rgba(7,28,22,.10),rgba(7,28,22,.78)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85')">
+  <div class="toprow">
+    <button class="icon-btn" onclick="history.back()">‹</button>
+    <div></div>
+    <button class="icon-btn">♡</button>
+  </div>
+  <div class="region-title">
+    <div class="region-badge">🌊</div>
+    <h1>Päijät-Häme</h1>
+    <p>Järviä, harjuja, kanavia ja kaupunkeja Suomen sydämessä.</p>
+  </div>
+</header>
+
+<main class="content region-content">
+  <section class="region-intro card">
+    <div class="round">🇫🇮</div>
+    <div>
+      <b>Maakunnan matkakansio</b>
+      <p>Tutustu kuntiin, löydä kohteita ja tallenna omat muistosi jokaisesta käydystä paikasta.</p>
+    </div>
+  </section>
+
+  <section class="kpi region-kpi">
+    <div><b>5</b><span class="muted">käytyä kuntaa</span></div>
+    <div><b>8</b><span class="muted">kuntaa tässä</span></div>
+    <div><b>63%</b><span class="muted">valmis</span></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Päijät-Hämeen kunnat</h2><a class="more" href="kartta.html">Kartta ›</a></div>
+    <div class="region-progress"><div class="progress"><i style="width:63%"></i></div><span>5 / 8 kuntaa käyty</span></div>
+    <div class="municipality-grid">
+      <a class="municipality-card visited" href="asikkala.html"><span class="coat">A</span><div><b>Asikkala</b><small>Vääksy · Pulkkilanharju</small></div><em>✓</em></a>
+      <a class="municipality-card" href="lahti.html"><span class="coat">L</span><div><b>Lahti</b><small>Satama · Sibeliustalo</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">H</span><div><b>Heinola</b><small>Järvimaisemat ja sillat</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">H</span><div><b>Hollola</b><small>Kirkonseutu ja luonto</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">K</span><div><b>Kärkölä</b><small>Kylät ja kulttuuri</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">O</span><div><b>Orimattila</b><small>Maalaismaisemat</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">P</span><div><b>Padasjoki</b><small>Päijänne ja satama</small></div><em>›</em></a>
+      <a class="municipality-card" href="#"><span class="coat">S</span><div><b>Sysmä</b><small>Järvet ja kesäkohteet</small></div><em>›</em></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Suosittuja kohteita</h2><a class="more">Näytä kaikki ›</a></div>
+    <div class="h-scroll">
+      <a class="place-card" href="asikkala.html" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Pulkkilanharju</b><small>Asikkala</small></a>
+      <a class="place-card" href="lahti.html" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Sibeliustalo</b><small>Lahti</small></a>
+      <a class="place-card" href="#" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Päijänne</b><small>Järvimaisema</small></a>
+    </div>
+  </section>
+
+  <section class="section card memory-panel">
+    <div class="memory-summary"><b>Sinun muistosi Päijät-Hämeestä</b><span>★ ★ ★ ★ ☆</span></div>
+    <div class="memory-fields">
+      <div><small>Paras paikka</small><b>Pulkkilanharju</b></div>
+      <div><small>Missä syötiin</small><b>Lisää myöhemmin</b></div>
+      <div><small>Muistiinpano</small><b>Tänne haluan palata uudelleen.</b></div>
+      <div><small>Kuvat</small><b>12 kuvaa</b></div>
+    </div>
+  </section>
+</main>
+
+<nav class="bottomnav"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html" class="active"><span>🗺️</span>Kartta</a><a href="uusi-matka.html" class="plusnav">＋</a><a href="paivakirja.html"><span>🧳</span>Matkat</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
+</div>
+<script src="data.js"></script>
+<script src="sovellus.js"></script>
+</body>
+</html>
