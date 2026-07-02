@@ -1,11 +1,17 @@
-Matkaile Suomessa v46 - GitHub Pages valmis
+LUE ENSIN – Matkaile Suomessa v47
 
-Lataa GitHubiin tämän ZIP-paketin SISÄLTÖ, ei itse ZIP-tiedostoa.
+Tärkein korjaus:
+hero-etusivu.jpg on nyt pääkansiossa samassa tasossa kuin index.html.
+Tämän pitää näkyä GitHubin tiedostolistassa erillisenä tiedostona.
 
-Mukana ei ole:
-- .github/workflows-kansiota
-- sisäisiä zip-tiedostoja
-- vanhoja julkaisuasetuksia
+Kun lataat GitHubiin, varmista että mukana näkyvät ainakin:
+- index.html
+- tyylit.css
+- sovellus.js
+- data.js
+- hero-etusivu.jpg
+- kartta.html
+- paijat-hame.html
+- asikkala.html
 
-GitHub Pages:
-Asetukset -> Sivut -> Lähde: Ota käyttöön haarasta -> pääasiallinen -> /(juuri) -> Tallenna.
+Älä lataa tätä ZIP-pakettia sellaisenaan repositorioon. Pura ZIP ja lataa sisältö.

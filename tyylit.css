@@ -371,7 +371,7 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   border-radius:0 0 34px 34px!important;
   background:
     linear-gradient(180deg,rgba(8,32,24,.22) 0%,rgba(8,32,24,.16) 44%,rgba(8,32,24,.70) 100%),
-    url('images/hero-etusivu.jpg') center 46%/cover!important;
+    url('hero-etusivu.jpg') center 46%/cover!important;
 }
 .clean-home .brand-block{margin-top:16px!important;text-align:center!important;text-shadow:0 3px 16px rgba(0,0,0,.50)!important}
 .clean-home .logo-script.huge{font-size:42px!important;line-height:.82!important;color:#fff!important}
@@ -388,4 +388,37 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .clean-home .logo-sub.big{font-size:11px!important}
   .hero-search{left:15px!important;right:15px!important;bottom:-22px!important;padding:11px 14px!important}
   .actions.raised{margin-top:40px!important}
+}
+
+
+/* v47 – kuva takaisin ja uusi nosto etusivulle */
+.clean-home.home-hero{
+  background:
+    linear-gradient(180deg,rgba(8,32,24,.20) 0%,rgba(8,32,24,.14) 44%,rgba(8,32,24,.68) 100%),
+    url('hero-etusivu.jpg') center 46%/cover!important;
+}
+.highlight-update{margin-top:18px!important}
+.update-card{
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:14px;
+  background:#ffffff;
+  border:1px solid rgba(23,80,52,.10);
+  border-radius:24px;
+  padding:12px;
+  box-shadow:0 14px 30px rgba(20,62,42,.08);
+}
+.update-photo{
+  min-height:112px;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg,rgba(20,50,37,.05),rgba(20,50,37,.28)),
+    url('hero-etusivu.jpg') center center/cover;
+}
+.update-text h3{margin:4px 0 5px;color:#123d2c;font-size:19px;line-height:1.08}
+.update-text p{margin:0;color:#66736e;font-size:13px;line-height:1.25}
+@media(max-width:390px){
+  .update-card{grid-template-columns:96px 1fr;gap:12px;border-radius:22px}
+  .update-photo{min-height:102px}
+  .update-text h3{font-size:17px}
 }
