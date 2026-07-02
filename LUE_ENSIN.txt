@@ -1,0 +1,11 @@
+Matkaile Suomessa v46 - GitHub Pages valmis
+
+Lataa GitHubiin tämän ZIP-paketin SISÄLTÖ, ei itse ZIP-tiedostoa.
+
+Mukana ei ole:
+- .github/workflows-kansiota
+- sisäisiä zip-tiedostoja
+- vanhoja julkaisuasetuksia
+
+GitHub Pages:
+Asetukset -> Sivut -> Lähde: Ota käyttöön haarasta -> pääasiallinen -> /(juuri) -> Tallenna.
