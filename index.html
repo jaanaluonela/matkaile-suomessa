@@ -27,7 +27,7 @@
 
 <main class="content home-content home-v51">
   <section class="home-switch layered-switch" aria-label="Etusivun valinta">
-    <button class="mode-btn layer-card is-active" type="button" data-mode="koko"><span class="finland-mini map-silhouette" aria-hidden="true"></span><b>KOKO SUOMI</b><small>Tutki maakuntia, kuntia ja kohteita</small></button>
+    <button class="mode-btn layer-card is-active" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>KOKO SUOMI</b><small>Tutki maakuntia, kuntia ja kohteita</small></button>
     <button class="mode-btn layer-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>OMAT MATKAT</b><small>Omat käynnit, kuvat ja muistot</small></button>
   </section>
 
@@ -54,7 +54,7 @@
     <section class="section">
       <div class="section-head"><h2>Tutustu Suomeen</h2><a class="more" href="kartta.html">Näytä kaikki ›</a></div>
       <div class="explore-grid-v51">
-        <a href="kartta.html"><span>🇫🇮</span><b>Maakunnat</b><small>19 maakuntaa</small></a>
+        <a href="kartta.html"><img class="mini-finland-icon" src="suomi-siluetti.svg" alt=""><b>Maakunnat</b><small>19 maakuntaa</small></a>
         <a href="kartta.html"><span>🏡</span><b>Kunnat</b><small>308 kuntaa</small></a>
         <a href="asikkala.html"><span>📷</span><b>Nähtävyydet</b><small>Luonto, kulttuuri ja historia</small></a>
         <a href="asikkala.html"><span>⛺</span><b>Leirintäalueet</b><small>Yövy mukavasti</small></a>
@@ -117,7 +117,7 @@
       </div>
     </section>
 
-    <section class="section omat-list-section">
+    <section class="section omat-list-section" id="kaydyn-kunnat">
       <div class="section-head"><h2>Käydyt kunnat</h2><a class="more" href="profiili.html">Näytä kaikki ›</a></div>
       <div class="simple-link-list municipality-memory-list">
         <a href="asikkala.html"><span>🛡️</span><b>Asikkala</b><small>Muistot ja käydyt kohteet</small><em>›</em></a>
@@ -166,6 +166,7 @@
   buttons.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
   let saved = 'koko';
   try{ saved = localStorage.getItem('matkaile-home-mode') || 'koko'; }catch(e){}
+  try{ const urlMode = new URLSearchParams(location.search).get('mode'); if(urlMode==='omat'||urlMode==='koko') saved=urlMode; }catch(e){}
   setMode(saved === 'omat' ? 'omat' : 'koko');
 })();
 </script>
