@@ -3,28 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profiili</title>
+  <title>Minä · Matkaile Suomessa</title>
   <link rel="stylesheet" href="tyylit.css">
 </head>
 <body>
-<div class="app">
+<div class="app profile-page-v57">
 
-<header class="hero small">
-  <div class="toprow"><button class="icon-btn">☰</button><div><div class="logo-script">Minun Suomeni ❤️</div><div class="logo-sub">Profiili</div></div><button class="icon-btn">⚙️</button></div>
+<header class="hero small profile-hero-v57">
+  <div class="toprow">
+    <button class="icon-btn">☰</button>
+    <div class="profile-title-v57">
+      <div class="logo-script">Minun Suomeni <span>♡</span></div>
+      <div class="logo-sub">PROFIILI</div>
+    </div>
+    <button class="icon-btn">⚙️</button>
+  </div>
 </header>
-<main class="content">
-  <section class="kpi"><div><b>5</b><span class="muted">kunnat</span></div><div><b>2</b><span class="muted">matkat</span></div><div><b>92</b><span class="muted">kuvat</span></div></section>
+
+<main class="content profile-content-v57">
+  <section class="kpi profile-kpi-v57">
+    <div><b>5</b><span class="muted">kuntaa</span></div>
+    <div><b>2</b><span class="muted">matkaa</span></div>
+    <div><b>92</b><span class="muted">kuvaa</span></div>
+  </section>
+
   <section class="section">
     <div class="section-head"><h2>Kuntabongaus</h2></div>
-    <div class="card">
+    <a class="card progress-card-v57" href="kartta.html">
       <b>Suomen valloitus</b>
       <div class="progress"><i style="width:2%"></i></div>
       <div class="muted">5 / 308 kuntaa · 1 / 19 maakuntaa</div>
-    </div>
+      <span>Katso käydyt kunnat ›</span>
+    </a>
   </section>
-  <section class="section grid2">
-    <div class="tile"><div class="emoji">🏆</div><b>Saavutukset</b><small>Ensimmäinen maakunta</small></div>
-    <div class="tile"><div class="emoji">❤️</div><b>Suosikit</b><small>12 kohdetta</small></div>
+
+  <section class="section grid2 profile-grid-v57">
+    <a class="tile" href="paivakirja.html"><div class="emoji">🏆</div><b>Saavutukset</b><small>Ensimmäinen maakunta</small></a>
+    <a class="tile" href="paivakirja.html"><div class="emoji">♡</div><b>Suosikit</b><small>12 kohdetta</small></a>
+    <a class="tile" href="paivakirja.html"><div class="emoji">📷</div><b>Omat muistot</b><small>Kuvat ja muistiinpanot</small></a>
+    <a class="tile" href="uusi-matka.html"><div class="emoji">🧳</div><b>Omat matkat</b><small>2 tallennettua matkaa</small></a>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Viimeksi tallennettu</h2><a class="more" href="paivakirja.html">Avaa ›</a></div>
+    <a class="place-row" href="matka-paijat-hame.html"><span>🌉</span><div><b>Päijät-Hämeen kesäreissu</b><small>Asikkala · Vääksyn kanava · Pulkkilanharju</small></div><em>›</em></a>
   </section>
 </main>
 

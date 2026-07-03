@@ -633,3 +633,26 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .layered-switch .mode-btn small{font-size:9.8px!important;}
   .map-silhouette{width:30px!important;height:40px!important;}
 }
+
+/* v57 – Minä-sivun rauhallinen kehitys ja toimiva pakkaus */
+.profile-hero-v57{
+  min-height:210px!important;
+  background:
+    linear-gradient(180deg,rgba(5,24,18,.38),rgba(5,24,18,.62)),
+    url('hero-etusivu.jpg') center 48%/cover!important;
+}
+.profile-title-v57{text-align:center;text-shadow:0 4px 20px rgba(0,0,0,.65)}
+.profile-title-v57 .logo-script{font-size:34px!important;line-height:.9!important;color:#fff!important}
+.profile-title-v57 .logo-script span{color:#ffd1d7!important}
+.profile-title-v57 .logo-sub{color:#fff!important;letter-spacing:.34em!important;margin-top:10px!important;font-size:13px!important}
+.profile-content-v57{padding-top:20px!important}
+.profile-kpi-v57{margin-top:-4px!important}
+.profile-kpi-v57 div{min-height:78px!important;border-radius:22px!important}
+.profile-kpi-v57 b{font-size:31px!important;color:var(--green)!important}
+.progress-card-v57{display:block;text-decoration:none;color:inherit}
+.progress-card-v57 b{font-size:23px;display:block;margin-bottom:14px;color:var(--green)}
+.progress-card-v57 span{display:inline-block;margin-top:12px;color:var(--green);font-weight:900}
+.profile-grid-v57 .tile{text-decoration:none;color:inherit;min-height:118px;align-items:flex-start;text-align:left;padding:19px}
+.profile-grid-v57 .emoji{font-size:28px!important;margin-bottom:8px!important}
+.profile-grid-v57 .tile b{font-size:24px!important;line-height:1.05!important;color:var(--green)}
+.profile-grid-v57 .tile small{font-size:16px!important;line-height:1.25!important}
