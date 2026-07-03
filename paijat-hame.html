@@ -8,8 +8,7 @@
 </head>
 <body>
 <div class="app">
-
-<header class="region-hero" style="background-image:linear-gradient(180deg,rgba(7,28,22,.10),rgba(7,28,22,.78)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85')">
+<header class="region-hero region-hero-tight" style="background-image:linear-gradient(180deg,rgba(7,28,22,.10),rgba(7,28,22,.78)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85')">
   <div class="toprow">
     <button class="icon-btn" onclick="history.back()">‹</button>
     <div></div>
@@ -21,16 +20,13 @@
     <p>Järviä, harjuja, kanavia ja kaupunkeja Suomen sydämessä.</p>
   </div>
 </header>
-
-<main class="content region-content">
-  <section class="region-intro card">
-    <div class="round">🛡️</div>
-    <div>
-      <b>Päijät-Häme</b>
-      <p>Maakunta järvien, harjujen, kanavien ja kaupunkikohteiden keskellä. Valitse kunta ja jatka kohteisiin.</p>
+<main class="content region-content no-intro-region">
+  <section class="section region-mini-progress">
+    <div class="progress-card card">
+      <div><b>Päijät-Häme</b><small>1 / 10 kuntaa käyty</small></div>
+      <div class="progress"><i style="width:10%"></i></div>
     </div>
   </section>
-
   <section class="section">
     <div class="section-head"><h2>Päijät-Hämeen kunnat</h2><a class="more" href="kartta.html">Kartta ›</a></div>
     <div class="municipality-grid clean-municipality-grid">
@@ -46,24 +42,15 @@
       <a class="municipality-card " href="hartola.html"><span class="coat crest-img-wrap"><img src="vaakuna-hartola.svg" alt="Hartola vaakuna"></span><div><b>Hartola</b></div><em>›</em></a>
     </div>
   </section>
-
-  <section class="section">
-    <div class="section-head"><h2>Suosittuja kohteita</h2><a class="more">Näytä kaikki ›</a></div>
-    <div class="h-scroll">
-      <a class="place-card" href="asikkala.html" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Pulkkilanharju</b><small>Asikkala</small></a>
-      <a class="place-card" href="lahti.html" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Sibeliustalo</b><small>Lahti</small></a>
-      <a class="place-card" href="#" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"><span>♡</span><b>Päijänne</b><small>Järvimaisema</small></a>
+  <section class="section muni-service-sections">
+    <div class="section-head"><h2>Maakunnan sisällöt</h2></div>
+    <div class="compact-info-list">
+      <a class="place-row" href="asikkala.html"><span>🌉</span><div><b>Nähtävyydet ja luonto</b><small>Harjut, järvet, kanavat, satamat ja kaupunkikohteet.</small></div><em>›</em></a>
+      <a class="place-row" href="kartta.html"><span>🗺️</span><div><b>Kartta</b><small>Avaa maakunta kartalla ja jatka kuntiin.</small></div><em>›</em></a>
+      <a class="place-row" href="index.html?mode=omat"><span>✓</span><div><b>Käydyt kunnat</b><small>Käyntimerkinnät näkyvät omalla puolella.</small></div><em>›</em></a>
     </div>
   </section>
-
-  <section class="section muni-service-sections">
-    <div class="section-head"><h2>Päijät-Hämeen pääsisällöt</h2></div>
-    <div class="card"><h3>🌲 Luonto ja nähtävyydet</h3><p>Harjut, järvimaisemat, kanavat, satamat ja kaupunkikohteet. Sovellukseen lisätään valikoidusti parhaat kohteet, ei jokaista mahdollista palvelua.</p></div>
-    <div class="card"><h3>🏕️ Karavaanarille</h3><p>Leirintäalueet, matkaparkit ja huoltopisteet lisätään omiksi selkeiksi listoikseen.</p></div>
-    <div class="card"><h3>☕ Ruoka ja taukopaikat</h3><p>Hyviä kahviloita ja ruokapaikkoja nostetaan mukaan kuntakohtaisesti.</p></div>
-  </section>
 </main>
-
 <nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
 </div>
 <script src="data.js"></script>
