@@ -739,3 +739,104 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .progress-card .progress{height:8px;background:#e7efe9;border-radius:99px;overflow:hidden}.progress-card .progress i{display:block;height:100%;background:var(--green);border-radius:99px}
 .compact-info-list{display:grid;gap:10px}.municipality-hero{min-height:245px!important}.municipality-content{padding-top:16px!important}.municipality-main-card{margin-top:0!important}.municipality-place-list{display:grid;gap:10px}.compact-services .tile{min-height:94px!important}.compact-services .tile small{display:none!important}
 @media(max-width:520px){.region-title h1{font-size:40px}.region-title p{font-size:15px}.region-hero-tight{min-height:245px!important}.municipality-hero{min-height:235px!important}}
+
+/* v62 – yläkuvat pienemmiksi ja sisältö aikaisemmin näkyviin */
+.clean-home.home-hero{
+  min-height:172px!important;
+  padding:10px 16px 34px!important;
+  border-radius:0 0 28px 28px!important;
+}
+.clean-home .brand-block{margin-top:8px!important;}
+.clean-home .logo-script.huge{font-size:38px!important;line-height:.82!important;}
+.clean-home .logo-sub.big{font-size:11px!important;letter-spacing:.34em!important;}
+.clean-home .brand-block p{font-size:12px!important;margin-top:7px!important;}
+.floating-top .icon-btn{width:38px!important;height:38px!important;border-radius:15px!important;font-size:17px!important;}
+.home-switch.layered-switch{
+  margin-top:-36px!important;
+  min-height:78px!important;
+  margin-bottom:8px!important;
+}
+.layered-switch .mode-btn{
+  min-height:62px!important;
+  border-radius:21px!important;
+  padding:9px 11px!important;
+  grid-template-columns:32px 1fr!important;
+  gap:9px!important;
+}
+.layered-switch .mode-btn.is-active{transform:translateY(-4px) scale(1.01)!important;}
+.layered-switch .mode-btn:not(.is-active){transform:translateY(7px) scale(.96)!important;}
+.layered-switch .mode-btn b{font-size:14px!important;line-height:1.03!important;}
+.layered-switch .mode-btn small{font-size:9.5px!important;line-height:1.12!important;}
+.map-silhouette-img{width:28px!important;height:40px!important;}
+.heart-mini{font-size:28px!important;}
+.home-search-v51{margin-top:0!important;padding:11px 14px!important;border-radius:22px!important;}
+.home-content{padding-top:10px!important;}
+
+.region-hero,
+.region-hero-tight{
+  min-height:190px!important;
+  padding:14px 18px 18px!important;
+  border-radius:0 0 28px 28px!important;
+}
+.region-title{bottom:18px!important;left:20px!important;right:16px!important;}
+.region-title h1{font-size:34px!important;line-height:.98!important;}
+.region-title p{font-size:13px!important;line-height:1.2!important;max-width:330px!important;}
+.region-badge,
+.crest-badge{width:46px!important;height:46px!important;border-radius:14px!important;margin-bottom:8px!important;}
+.region-content{padding-top:12px!important;}
+.progress-card{padding:13px 15px!important;border-radius:20px!important;}
+.progress-card b{font-size:19px!important;}
+.progress-card small{font-size:12px!important;}
+
+.hero.small.municipality-hero,
+.municipality-hero{
+  min-height:178px!important;
+  padding:12px 18px 18px!important;
+  border-radius:0 0 28px 28px!important;
+}
+.hero-title.with-coat{
+  margin-top:20px!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+.hero-title.with-coat h1{font-size:32px!important;line-height:1!important;margin:0 0 4px!important;}
+.hero-title.with-coat p{font-size:13px!important;line-height:1.25!important;}
+.coat-img{width:46px!important;height:52px!important;border-radius:12px!important;padding:4px!important;}
+.municipality-content{padding-top:12px!important;}
+.municipality-main-card{padding:14px!important;border-radius:21px!important;}
+.municipality-main-card b{font-size:18px!important;}
+.municipality-main-card p{font-size:12.5px!important;line-height:1.35!important;}
+.cta-visited{padding:12px 14px!important;border-radius:18px!important;font-size:14px!important;margin-top:10px!important;}
+.cta-secondary{padding:11px 14px!important;border-radius:17px!important;font-size:14px!important;}
+
+.profile-hero-v57{
+  min-height:180px!important;
+  border-radius:0 0 28px 28px!important;
+}
+.profile-title-v57 .logo-script{font-size:29px!important;}
+.profile-title-v57 .logo-sub{font-size:11px!important;margin-top:7px!important;}
+.profile-content-v57{padding-top:12px!important;}
+
+/* yleinen tiivistys: otsikot ja isot välit hieman pienemmiksi */
+.section{margin-top:18px!important;}
+.section h2{font-size:21px!important;}
+.section-head{margin-bottom:9px!important;}
+
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:164px!important;padding-bottom:32px!important;}
+  .clean-home .logo-script.huge{font-size:34px!important;}
+  .clean-home .logo-sub.big{font-size:10px!important;}
+  .home-switch.layered-switch{margin-top:-32px!important;min-height:74px!important;}
+  .layered-switch .mode-btn{min-height:58px!important;grid-template-columns:28px 1fr!important;padding:8px 9px!important;}
+  .layered-switch .mode-btn b{font-size:13px!important;}
+  .layered-switch .mode-btn small{font-size:8.8px!important;}
+  .map-silhouette-img{width:24px!important;height:36px!important;}
+  .region-hero,.region-hero-tight{min-height:178px!important;}
+  .region-title h1{font-size:30px!important;}
+  .region-title p{font-size:12px!important;}
+  .hero.small.municipality-hero,.municipality-hero{min-height:166px!important;}
+  .hero-title.with-coat h1{font-size:28px!important;}
+  .hero-title.with-coat p{font-size:12px!important;}
+  .coat-img{width:42px!important;height:48px!important;}
+  .profile-hero-v57{min-height:170px!important;}
+}
