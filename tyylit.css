@@ -530,3 +530,48 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .layered-switch{margin-top:-28px!important;min-height:86px!important}.layered-switch .mode-btn{min-height:70px!important;padding:9px 10px!important;grid-template-columns:32px 1fr!important}.layered-switch .mode-btn b{font-size:13px!important}.layered-switch .mode-btn small{font-size:9.8px!important}.layered-switch .mode-btn span{font-size:24px!important}
   .region-chips-v54 a{flex-basis:106px;min-height:96px}.mini-crest{width:38px;height:44px}
 }
+
+
+/* v55 – selkeämpi koti: kolme pääpainiketta ja rauhallisempi Omat matkat */
+.bottomnav.simple-bottom{
+  height:72px!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  padding:0 18px!important;
+  gap:8px!important;
+}
+.bottomnav.simple-bottom a{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:18px!important;
+  height:54px!important;
+  font-size:12px!important;
+}
+.bottomnav.simple-bottom a.active{
+  background:#eaf6ef!important;
+  color:var(--green)!important;
+}
+.bottomnav.simple-bottom a span{font-size:24px!important;margin-bottom:2px!important}
+.home-switch.layered-switch{margin-top:-6px!important;margin-bottom:10px!important;min-height:112px;position:relative}
+.layered-switch .layer-card{transition:transform .24s ease, box-shadow .24s ease, opacity .24s ease;}
+.layered-switch .layer-card.is-active{transform:translateY(-8px) scale(1.02);box-shadow:0 16px 34px rgba(31,122,74,.22)!important;z-index:3;}
+.home-two-mode[data-home-mode="omat"] .mode-btn[data-mode="koko"]{transform:translateY(8px) scale(.97);opacity:.88;}
+.home-two-mode[data-home-mode="koko"] .mode-btn[data-mode="omat"]{transform:translateY(8px) scale(.97);opacity:.88;}
+.omat-hero-card .featured-trip{border:1px solid #dcebdd;background:#fff;box-shadow:0 10px 24px rgba(21,50,35,.08)}
+.omat-hero-card .trip-home-info p{font-size:13px;line-height:1.35;color:var(--muted);margin:5px 0 0!important}
+.simple-link-list{display:grid;gap:10px}
+.simple-link-list a{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 13px;display:grid;grid-template-columns:42px 1fr 20px;align-items:center;gap:10px;box-shadow:0 6px 16px rgba(21,50,35,.06)}
+.simple-link-list a span{width:42px;height:42px;border-radius:14px;background:#edf7f1;display:grid;place-items:center;font-size:22px}
+.simple-link-list a b{font-size:16px;line-height:1.15}
+.simple-link-list a small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.simple-link-list a em{font-style:normal;color:var(--green);font-size:25px;text-align:right}
+.memory-links{grid-template-columns:1fr}
+.memory-links a span{background:#f3f7ef}
+.omat-list-section{margin-top:18px!important}
+@media(max-width:390px){
+  .home-switch.layered-switch{min-height:106px}
+  .simple-link-list a{grid-template-columns:38px 1fr 18px;padding:11px}
+  .simple-link-list a span{width:38px;height:38px;font-size:20px}
+}

@@ -1,3 +1,2 @@
-Matkaile Suomessa v48
-
-Etusivun viimeistely, Päijät-Hämeen kuntalista siistitty ja Asikkalan ensimmäiset kohteet lisätty.
+Matkaile Suomessa v55
+Kolme alapalkin painiketta ja selkeämpi Omat matkat -näkymä.
