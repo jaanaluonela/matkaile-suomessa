@@ -24,3 +24,33 @@ function toggleVisited(el){
   const index = new Date().getDate() % images.length;
   hero.style.backgroundImage = `linear-gradient(180deg,rgba(7,32,28,.18) 0%,rgba(7,32,28,.10) 34%,rgba(7,32,28,.62) 100%), url('${images[index]}')`;
 })();
+
+// v52: Kohteen tallennuspainikkeet – kevyt testitoiminto ilman kirjautumista.
+(function(){
+  const labels = {
+    visited: 'Merkitty käydyksi',
+    memory: 'Tallennettu muistoksi',
+    trip: 'Lisätty omaan matkaan',
+    note: 'Muisto tallennettu'
+  };
+  function toast(text){
+    let el = document.querySelector('.ms-toast');
+    if(!el){ el = document.createElement('div'); el.className='ms-toast'; document.body.appendChild(el); }
+    el.textContent = '✅ ' + text;
+    el.classList.add('show');
+    setTimeout(()=>el.classList.remove('show'), 1900);
+  }
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('[data-save-action]');
+    if(!btn) return;
+    const action = btn.dataset.saveAction;
+    const place = btn.dataset.place || 'Kohde';
+    try{
+      const key = 'matkaile_saved_' + action;
+      const old = JSON.parse(localStorage.getItem(key) || '[]');
+      if(!old.includes(place)) old.push(place);
+      localStorage.setItem(key, JSON.stringify(old));
+    }catch(err){}
+    toast(labels[action] || 'Tallennettu');
+  });
+})();
