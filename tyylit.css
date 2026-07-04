@@ -1262,3 +1262,35 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .visit-actions a{border-radius:16px;padding:12px;text-align:center;font-weight:900;text-decoration:none;}
 .visit-actions .done{background:#1f7a4a;color:#fff;}
 .visit-actions .fav{background:#eef7f0;color:#1f6b44;border:1px solid #dcecdf;}
+
+
+/* v76 korjaus: käytetään oikeita vaakunoita ulkoisista SVG-lähteistä ja estetään niiden katoaminen */
+.region-badge.crest-badge,
+.hero-title.with-coat .coat-img,
+.clean-municipality-grid .coat,
+.crest-img-wrap{
+  background:#fff!important;
+  overflow:visible!important;
+}
+.region-badge.crest-badge{
+  width:72px!important;
+  height:72px!important;
+  min-width:72px!important;
+  min-height:72px!important;
+  padding:7px!important;
+  margin-bottom:8px!important;
+  transform:translateY(8px)!important;
+}
+.region-title{bottom:22px!important;}
+.region-badge.crest-badge,
+.coat-img,
+.crest-img-wrap img{
+  object-fit:contain!important;
+}
+.clean-municipality-grid .coat img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+.clean-municipality-grid .municipality-card{grid-template-columns:62px 1fr 24px!important;}
+.clean-municipality-grid .coat{width:62px!important;height:62px!important;padding:5px!important;}
