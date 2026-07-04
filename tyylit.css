@@ -1213,3 +1213,16 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .ph-hero-facts{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.ph-hero-facts span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 9px;font-size:12px;font-weight:850;color:#fff}
 .muni-fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:12px}.muni-fact{background:#f7fbf6;border:1px solid var(--line);border-radius:16px;padding:10px}.muni-fact b{font-size:13px!important;color:var(--green);display:block}.muni-fact small{font-size:12px;color:var(--muted);line-height:1.2}.service-category-card{background:#fff;border:1px solid var(--line);border-radius:19px;padding:13px;box-shadow:0 7px 18px rgba(21,50,35,.06);margin-bottom:10px}.service-category-card h3{font-size:16px;margin:0 0 6px;color:var(--dark)}.service-category-card p{font-size:12.8px;line-height:1.4;color:var(--muted);margin:0}.nearby-kunta-links{display:flex;gap:8px;overflow:auto;padding-bottom:3px}.nearby-kunta-links a{white-space:nowrap;background:#eef7f0;border:1px solid #dbeadf;border-radius:999px;padding:8px 11px;font-size:12.5px;font-weight:850;color:#236645}
 @media(max-width:390px){.ph-info-grid,.ph-pill-grid,.muni-fact-grid{grid-template-columns:1fr 1fr}.ph-info b{font-size:17px}.ph-service-list .place-row b{font-size:14px!important}}
+
+/* v72 Asikkala mallikunta */
+.valmis-kunta .section-head h2{font-size:20px;}
+.service-details{padding:0;overflow:hidden;}
+.service-details summary{list-style:none;cursor:pointer;padding:15px 15px;font-weight:900;color:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.service-details summary::-webkit-details-marker{display:none;}
+.service-details summary:after{content:'›';font-size:20px;color:var(--muted);transform:rotate(90deg);transition:.2s ease;}
+.service-details:not([open]) summary:after{transform:rotate(0deg);}
+.service-items{border-top:1px solid var(--line);padding:8px 14px 14px;display:grid;gap:9px;}
+.service-items div{background:#f7fbf6;border:1px solid #e1eddf;border-radius:15px;padding:10px 11px;}
+.service-items b{display:block;font-size:14px;color:var(--green);margin-bottom:4px;}
+.service-items small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
+.source-note-card p{font-size:13px;line-height:1.45;color:var(--muted);margin:7px 0 0;}
