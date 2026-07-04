@@ -1226,3 +1226,15 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .service-items b{display:block;font-size:14px;color:var(--green);margin-bottom:4px;}
 .service-items small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
 .source-note-card p{font-size:13px;line-height:1.45;color:var(--muted);margin:7px 0 0;}
+
+
+/* v74: vaakunapäivitys ja Päijät-Häme-sivujen viimeistely */
+.crest-img-wrap img,.coat-img,.crest-badge{background:#fff!important;object-fit:contain!important;filter:drop-shadow(0 4px 8px rgba(0,0,0,.10));}
+.crest-img-wrap{background:#fff!important;}
+.region-badge.crest-badge{padding:4px!important;border:2px solid rgba(255,255,255,.95)!important;}
+.hero-title.with-coat .coat-img{background:#fff!important;padding:4px;border:2px solid rgba(255,255,255,.95);box-shadow:0 8px 20px rgba(0,0,0,.18);}
+.ph-hero-facts span:nth-child(2){background:rgba(255,255,255,.18)}
+.muni-quick-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 4px;}
+.muni-quick-stats span{background:#eef7f0;border:1px solid #dbeadf;border-radius:14px;padding:9px 8px;text-align:center;font-size:12px;font-weight:850;color:#1f653d;line-height:1.15;}
+.source-note-card b{color:var(--green)}
+@media(max-width:390px){.muni-quick-stats{grid-template-columns:1fr 1fr 1fr}.muni-quick-stats span{font-size:11.5px;padding:8px 5px}}
