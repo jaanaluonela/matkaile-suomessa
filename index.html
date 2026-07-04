@@ -22,21 +22,26 @@
     <div class="logo-script huge">Matkaile <span class="brand-heart">♡</span></div>
     <div class="logo-sub big">SUOMESSA</div>
     <p><span>Löydä.</span> Koe. Muista.</p>
-    <div class="hero-wau-text">Löydä Suomen kauneimmat paikat ja tallenna omat muistosi.</div>
-    <div class="hero-stat-row"><i>19<br><small>maakuntaa</small></i><i>308<br><small>kuntaa</small></i><i>6000+<br><small>kohdetta</small></i></div>
   </div>
 </header>
 
 <main class="content home-content home-v51">
   <section class="home-switch layered-switch" aria-label="Etusivun valinta">
-    <button class="mode-btn layer-card is-active primary-explore" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>TUTUSTU SUOMEEN</b><small>19 maakuntaa • 308 kuntaa • tuhansia kohteita</small><em>Aloita tutkiminen ›</em></button>
-    <button class="mode-btn layer-card diary-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>OMAT MATKAT</b><small>Käynnit • kuvat • muistot</small><em>Tallenna muistosi ›</em></button>
+    <button class="mode-btn layer-card primary-home-card is-active" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>TUTUSTU SUOMEEN</b><small>19 maakuntaa • 308 kuntaa • tuhansia kohteita</small><em>Aloita tutkiminen ›</em></button>
+    <button class="mode-btn layer-card diary-home-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>OMAT MATKAT</b><small>Käynnit • kuvat • muistot</small><em>Avaa ›</em></button>
   </section>
 
   <section class="koko-view mode-view">
-    <div class="search home-search-v51 smart-search"><span>🔍</span><input id="siteSearch" autocomplete="off" placeholder="Etsi kohde tai kunta..."><button aria-label="Suodattimet">☷</button><div id="searchSuggestions" class="search-suggestions" hidden></div></div>
-    <div class="popular-searches"><b>Suosituimmat haut</b><a href="asikkala.html">Asikkala</a><a href="lahti.html">Lahti</a><a href="kartta.html">Yyteri</a><a href="kartta.html">Koli</a><a href="pulkkilanharju.html">Pulkkilanharju</a></div>
-    <section class="section daily-pick-v67"><a href="pulkkilanharju.html"><div class="daily-pick-img" style="background-image:url('hero-etusivu.jpg')"><span>Päivän kohde ✨</span></div><div class="daily-pick-text"><small>Päijänne</small><b>Pulkkilanharju</b><p>Yksi Suomen kauneimmista harjuteistä keskellä Päijännettä.</p><em>Tutustu kohteeseen ›</em></div></a></section>
+    <div class="search home-search-v51 smart-search"><span>🔍</span><input id="siteSearch" autocomplete="off" placeholder="Etsi kunta, kohde tai nähtävyys..."><button aria-label="Suodattimet">☷</button><div id="searchSuggestions" class="search-suggestions" hidden></div></div>
+
+    <section class="popular-searches-v68" aria-label="Suosituimmat haut"><small>Suosituimmat haut</small><div><a href="asikkala.html">Asikkala</a><a href="lahti.html">Lahti</a><a href="kartta.html">Yyteri</a><a href="kartta.html">Koli</a><a href="pulkkilanharju.html">Pulkkilanharju</a></div></section>
+
+    <section class="daily-pick-v68">
+      <a href="pulkkilanharju.html" class="daily-card-v68">
+        <div class="daily-image-v68" style="background-image:url('hero-etusivu.jpg')"><span>Päivän kohde ✨</span></div>
+        <div class="daily-text-v68"><small>PÄIJÄNNE</small><b>Pulkkilanharju</b><p>Yksi Suomen kauneimmista harjuteistä keskellä Päijännettä.</p><em>Tutustu kohteeseen ›</em></div>
+      </a>
+    </section>
 
     <section class="section explore-start-v63">
       <div class="section-head"><h2>Mistä haluat aloittaa?</h2><a class="more" href="kartta.html">Näytä kaikki ›</a></div>
@@ -92,7 +97,7 @@
 
   <section class="omat-view mode-view" hidden>
     <section class="section omat-hero-card">
-      <div class="section-head"><h2>Matkapäiväkirja</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
+      <div class="section-head"><h2>Omat matkat</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
       <a class="trip-home-card featured-trip" href="matka-paijat-hame.html">
         <div class="trip-home-img" style="background-image:url('hero-etusivu.jpg')"></div>
         <div class="trip-home-info">
@@ -161,7 +166,7 @@
   }
   buttons.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
   let saved = 'koko';
-  try{ saved = localStorage.getItem('matkaile-home-mode') || 'koko'; }catch(e){}
+  // v68: etusivu avautuu aina Tutustu Suomeen -puolelle, jotta ensivaikutelma on selkeä
   try{ const urlMode = new URLSearchParams(location.search).get('mode'); if(urlMode==='omat'||urlMode==='koko') saved=urlMode; }catch(e){}
   setMode(saved === 'omat' ? 'omat' : 'koko');
 })();
