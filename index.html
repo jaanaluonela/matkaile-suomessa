@@ -9,152 +9,126 @@
   <link rel="stylesheet" href="tyylit.css">
 </head>
 <body>
-<div class="app home-two-mode" data-home-mode="koko">
+<div class="app v69-home home-two-mode" data-home-mode="koko">
 
-<header class="home-hero clean-home">
-  <div class="toprow floating-top">
-    <button class="icon-btn" aria-label="Valikko">☰</button>
-    <div></div>
-    <button class="icon-btn" aria-label="Ilmoitukset">🔔</button>
+<header class="v69-hero">
+  <div class="v69-topbar">
+    <button class="v69-icon-btn" aria-label="Valikko">☰</button>
+    <button class="v69-icon-btn" aria-label="Ilmoitukset">🔔</button>
   </div>
-
-  <div class="brand-block">
-    <div class="logo-script huge">Matkaile <span class="brand-heart">♡</span></div>
-    <div class="logo-sub big">SUOMESSA</div>
-    <p><span>Löydä.</span> Koe. Muista.</p>
+  <div class="v69-brand">
+    <div class="v69-logo-script">Matkaile</div>
+    <div class="v69-logo-sub">SUOMESSA</div>
+    <div class="v69-underline"></div>
   </div>
 </header>
 
-<main class="content home-content home-v51">
-  <section class="home-switch layered-switch" aria-label="Etusivun valinta">
-    <button class="mode-btn layer-card primary-home-card is-active" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>TUTUSTU SUOMEEN</b><small>19 maakuntaa • 308 kuntaa • tuhansia kohteita</small><em>Aloita tutkiminen ›</em></button>
-    <button class="mode-btn layer-card diary-home-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>OMAT MATKAT</b><small>Käynnit • kuvat • muistot</small><em>Avaa ›</em></button>
+<main class="v69-content">
+  <section class="v69-mode-cards" aria-label="Päävalinta">
+    <button class="mode-btn-v69 is-active" type="button" data-mode="koko">
+      <img src="suomi-siluetti.svg" alt="" class="v69-card-map" aria-hidden="true">
+      <span><b>TUTUSTU SUOMEEN</b><small>Löydä maakunnat, kunnat ja parhaat kohteet.</small></span>
+      <em>›</em>
+    </button>
+    <button class="mode-btn-v69 diary" type="button" data-mode="omat">
+      <i>♡</i>
+      <span><b>OMAT MATKAT</b><small>Omat muistot ja matkat</small></span>
+      <em>›</em>
+    </button>
   </section>
 
   <section class="koko-view mode-view">
-    <div class="search home-search-v51 smart-search"><span>🔍</span><input id="siteSearch" autocomplete="off" placeholder="Etsi kunta, kohde tai nähtävyys..."><button aria-label="Suodattimet">☷</button><div id="searchSuggestions" class="search-suggestions" hidden></div></div>
-
-    <section class="popular-searches-v68" aria-label="Suosituimmat haut"><small>Suosituimmat haut</small><div><a href="asikkala.html">Asikkala</a><a href="lahti.html">Lahti</a><a href="kartta.html">Yyteri</a><a href="kartta.html">Koli</a><a href="pulkkilanharju.html">Pulkkilanharju</a></div></section>
-
-    <section class="daily-pick-v68">
-      <a href="pulkkilanharju.html" class="daily-card-v68">
-        <div class="daily-image-v68" style="background-image:url('hero-etusivu.jpg')"><span>Päivän kohde ✨</span></div>
-        <div class="daily-text-v68"><small>PÄIJÄNNE</small><b>Pulkkilanharju</b><p>Yksi Suomen kauneimmista harjuteistä keskellä Päijännettä.</p><em>Tutustu kohteeseen ›</em></div>
-      </a>
-    </section>
-
-    <section class="section explore-start-v63">
-      <div class="section-head"><h2>Mistä haluat aloittaa?</h2><a class="more" href="kartta.html">Näytä kaikki ›</a></div>
-      <div class="explore-grid-v51">
-        <a href="kartta.html"><img class="mini-finland-icon" src="suomi-siluetti.svg" alt=""><b>Maakunnat</b><small>19 maakuntaa</small></a>
-        <a href="kartta.html"><span>🏡</span><b>Kunnat</b><small>308 kuntaa</small></a>
-        <a href="asikkala.html"><span>📷</span><b>Nähtävyydet</b><small>Luonto, kulttuuri ja historia</small></a>
-        <a href="asikkala.html"><span>⛺</span><b>Leirintäalueet</b><small>Yövy mukavasti</small></a>
-        <a href="asikkala.html"><span>🚐</span><b>Matkaparkit</b><small>Pysähdy helposti</small></a>
-        <a href="asikkala.html"><span>💧</span><b>Huoltopisteet</b><small>Vesi, sähkö, tyhjennys</small></a>
-        <a href="asikkala.html"><span>🍴</span><b>Ravintolat</b><small>Hyvät ruokapaikat</small></a>
-        <a href="asikkala.html"><span>☕</span><b>Kahvilat</b><small>Pienet herkut</small></a>
-        <a href="asikkala.html"><span>🥾</span><b>Retkeilyreitit</b><small>Polut ja reitit</small></a>
+    <section class="v69-search-card smart-search">
+      <div class="v69-search-line"><span>🔍</span><input id="siteSearch" autocomplete="off" placeholder="Hae kuntaa, paikkaa, nähtävyyksiä..."><button aria-label="Suodattimet">☷</button></div>
+      <div id="searchSuggestions" class="search-suggestions" hidden></div>
+      <div class="v69-search-chips" aria-label="Suosituimmat haut">
+        <a href="asikkala.html">Asikkala</a><a href="kartta.html">Lappi</a><a href="kartta.html">Olavinlinna</a><a href="kartta.html">Yyteri</a><a href="kartta.html">Koli</a>
       </div>
     </section>
 
-    <section class="section map-promo-v51">
-      <a href="kartta.html">
-        <div class="map-illustration"><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Finland_Regions_Map.svg" alt="Suomen kartta"></div>
-        <div><b>Avaa kartta</b><small>Selaa kohteita kartalla helposti</small></div>
-        <em>›</em>
-      </a>
-    </section>
-
-    <section class="section">
-      <div class="section-head"><h2>Suosittelemme juuri nyt</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
-      <div class="popular-row-v51">
-        <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Päijänteen kansallispuisto</b><small>Asikkala</small><span>★ 4,8</span></a>
-        <a href="lahti.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Olavinlinna</b><small>Savonlinna</small><span>★ 4,8</span></a>
-        <a href="kartta.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Yyteri</b><small>Pori</small><span>★ 4,6</span></a>
+    <section class="v69-explore-section">
+      <div class="v69-section-head"><h2>Tutustu Suomeen</h2><a href="kartta.html">Näytä kaikki ›</a></div>
+      <div class="v69-explore-panel">
+        <a class="v69-big-map" href="kartta.html" aria-label="Avaa Suomen kartta">
+          <img src="suomi-siluetti.svg" alt="Suomen kartta">
+          <span class="v69-map-marker m1">⛺</span><span class="v69-map-marker m2">📷</span><span class="v69-map-marker m3">🅿️</span><span class="v69-map-marker m4">🍴</span><span class="v69-map-marker m5">🏕️</span>
+        </a>
+        <div class="v69-category-grid">
+          <a href="kartta.html"><span>🌿</span><b>Maakunnat</b><small>19 maakuntaa</small></a>
+          <a href="kartta.html"><span>🏡</span><b>Kunnat</b><small>308 kuntaa</small></a>
+          <a href="asikkala.html"><span>🏛️</span><b>Nähtävyydet</b><small>Luonto, kulttuuri ja historia</small></a>
+          <a href="asikkala.html"><span>⛺</span><b>Leirintäalueet</b><small>Yövy mukavasti</small></a>
+          <a href="asikkala.html"><span>🚐</span><b>Matkaparkit</b><small>Pysähdy helposti</small></a>
+          <a href="asikkala.html"><span>💧</span><b>Huoltopisteet</b><small>Vesi, sähkö, tyhjennys</small></a>
+          <a href="asikkala.html"><span>🍴</span><b>Ravintolat</b><small>Hyvät ruokapaikat</small></a>
+          <a href="asikkala.html"><span>☕</span><b>Kahvilat</b><small>Pienet herkut</small></a>
+          <a href="asikkala.html"><span>🥾</span><b>Retkeilyreitit</b><small>Polut ja reitit</small></a>
+        </div>
+        <a class="v69-map-link" href="kartta.html"><span>🗺️</span><b>Avaa kartta</b><small>Selaa kohteita kartalla helposti</small><em>›</em></a>
       </div>
     </section>
 
-    <section class="section near-v64">
-      <div class="section-head"><h2>Lähellä sinua</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
-      <div class="near-cards-v64">
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>2 km</span><b>Vääksyn kanava</b><small>Asikkala</small></a>
-        <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><span>8 km</span><b>Pulkkilanharju</b><small>Asikkala</small></a>
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>10 km</span><b>Aurinkovuori</b><small>Asikkala</small></a>
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>3 km</span><b>Päijännetalo</b><small>Asikkala</small></a>
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Suositut kohteet</h2><a href="asikkala.html">Näytä kaikki ›</a></div>
+      <div class="v69-popular-row">
+        <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Päijänteen kansallispuisto</b><small>Asikkala</small><span>★ 4,8 (128)</span></a>
+        <a href="kartta.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Olavinlinna</b><small>Savonlinna</small><span>★ 4,8 (96)</span></a>
+        <a href="kartta.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Yyteri</b><small>Pori</small><span>★ 4,6 (82)</span></a>
       </div>
     </section>
 
-    <section class="section latest-v63">
-      <div class="section-head"><h2>Uutta ja kiinnostavaa</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
-      <div class="latest-row-v63">
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>📷 +12</span><b>Auringonlasku</b><small>Vääksyn kanavalla</small></a>
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>📷 +8</span><b>Kahvi Malskilla</b><small>Lahti</small></a>
-        <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><span>📷 +15</span><b>Pulkkilanharjun luontopolku</b><small>Asikkala</small></a>
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Lähellä sinua</h2><a href="asikkala.html">Näytä kaikki ›</a></div>
+      <div class="v69-near-list">
+        <a href="asikkala.html"><span>📍</span><b>Vääksyn kanava</b><small>Asikkala</small><em>1,2 km</em></a>
+        <a href="pulkkilanharju.html"><span>🌲</span><b>Pulkkilanharjun luontopolku</b><small>Asikkala</small><em>3,4 km</em></a>
+        <a href="asikkala.html"><span>🌊</span><b>Urajärven uimaranta</b><small>Asikkala</small><em>5,7 km</em></a>
+        <a href="asikkala.html"><span>🚐</span><b>Matkaparkki</b><small>Vääksy</small><em>1,5 km</em></a>
+      </div>
+    </section>
+
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Viimeksi lisätyt kohteet</h2><a href="asikkala.html">Näytä kaikki ›</a></div>
+      <div class="v69-latest-row">
+        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><b>Päijänteen kansallispuisto</b><small>Asikkala</small></a>
+        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><b>Vanha Pappila</b><small>Asikkala</small></a>
+        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><b>Vääksyn uimaranta</b><small>Asikkala</small></a>
+        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><b>Kanavan Kahvila</b><small>Asikkala</small></a>
       </div>
     </section>
   </section>
 
   <section class="omat-view mode-view" hidden>
-    <section class="section omat-hero-card">
-      <div class="section-head"><h2>Omat matkat</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
-      <a class="trip-home-card featured-trip" href="matka-paijat-hame.html">
-        <div class="trip-home-img" style="background-image:url('hero-etusivu.jpg')"></div>
-        <div class="trip-home-info">
-          <b>Päijät-Hämeen kesäreissu</b>
-          <small>Asikkala • Vääksy • Pulkkilanharju</small>
-          <p>Jatka matkaa ja lisää kuvia, muistiinpanoja tai uusia kohteita.</p>
-        </div>
-        <em>›</em>
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Jatka viimeisintä matkaa</h2><a href="paivakirja.html">Näytä kaikki ›</a></div>
+      <a class="v69-trip-card" href="matka-paijat-hame.html">
+        <div style="background-image:url('hero-etusivu.jpg')"></div>
+        <span><small>Viimeisin matka</small><b>Päijät-Häme</b><p>Asikkala • Vääksy • Pulkkilanharju</p><em>Jatka matkaa ›</em></span>
       </a>
     </section>
-
-    <section class="section omat-list-section">
-      <div class="section-head"><h2>Kaikki matkat</h2><a class="more" href="paivakirja.html">Avaa ›</a></div>
-      <div class="simple-link-list">
-        <a href="matka-paijat-hame.html"><span>🧳</span><b>Päijät-Hämeen kesäreissu</b><em>›</em></a>
-        <a href="paivakirja.html"><span>🚐</span><b>Lappi 2026</b><em>›</em></a>
-        <a href="paivakirja.html"><span>🌊</span><b>Ahvenanmaa 2025</b><em>›</em></a>
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Viimeksi lisätyt muistot</h2><a href="paivakirja.html">Näytä kaikki ›</a></div>
+      <div class="v69-latest-row">
+        <a href="paivakirja.html" style="background-image:url('hero-etusivu.jpg')"><b>Auringonlasku</b><small>Vääksyn kanavalla</small></a>
+        <a href="paivakirja.html" style="background-image:url('hero-etusivu.jpg')"><b>Kahvi Malskilla</b><small>Eilen</small></a>
+        <a href="paivakirja.html" style="background-image:url('hero-etusivu.jpg')"><b>Pulkkilanharjun luontopolku</b><small>2 päivää sitten</small></a>
       </div>
     </section>
-
-    <section class="section omat-list-section" id="kaydyn-kunnat">
-      <div class="section-head"><h2>Käydyt kunnat</h2><a class="more" href="profiili.html">Näytä kaikki ›</a></div>
-      <div class="simple-link-list municipality-memory-list">
-        <a href="asikkala.html"><span>🛡️</span><b>Asikkala</b><small>Muistot ja käydyt kohteet</small><em>›</em></a>
-        <a href="lahti.html"><span>🛡️</span><b>Lahti</b><small>Muistot ja käydyt kohteet</small><em>›</em></a>
-        <a href="kartta.html"><span>🛡️</span><b>Heinola</b><small>Muistot ja käydyt kohteet</small><em>›</em></a>
-      </div>
-    </section>
-
-    <section class="section omat-list-section">
-      <div class="section-head"><h2>Suosikit</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
-      <div class="popular-row-v51 compact-favs">
-        <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Pulkkilanharju</b><small>Asikkala</small></a>
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Vääksyn kanava</b><small>Asikkala</small></a>
-        <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Aurinkovuori</b><small>Asikkala</small></a>
-      </div>
-    </section>
-
-    <section class="section omat-list-section">
-      <div class="section-head"><h2>Tallennetut muistot</h2><a class="more" href="paivakirja.html">Aikajana ›</a></div>
-      <div class="simple-link-list memory-links">
-        <a href="paivakirja.html"><span>📷</span><b>Kuvat</b><em>›</em></a>
-        <a href="paivakirja.html"><span>📝</span><b>Muistiinpanot</b><em>›</em></a>
-        <a href="paivakirja.html"><span>📍</span><b>Käydyt kohteet</b><em>›</em></a>
-      </div>
+    <section class="v69-section">
+      <div class="v69-section-head"><h2>Käydyt kunnat</h2><a href="profiili.html">Näytä kaikki ›</a></div>
+      <div class="v69-visited-row"><a href="asikkala.html"><img src="vaakuna-asikkala.svg" alt=""><b>Asikkala</b></a><a href="lahti.html"><img src="vaakuna-lahti.svg" alt=""><b>Lahti</b></a><a href="heinola.html"><img src="vaakuna-heinola.svg" alt=""><b>Heinola</b></a><a href="hollola.html"><img src="vaakuna-hollola.svg" alt=""><b>Hollola</b></a></div>
     </section>
   </section>
 </main>
 
-<nav class="bottomnav simple-bottom"><a href="index.html" class="active"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
+<nav class="bottomnav v69-bottom"><a href="index.html" class="active"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
 </div>
 <script src="data.js"></script>
 <script src="sovellus.js"></script>
 <script>
 (function(){
   const app = document.querySelector('.home-two-mode');
-  const buttons = document.querySelectorAll('.mode-btn');
+  const buttons = document.querySelectorAll('.mode-btn-v69');
   const koko = document.querySelector('.koko-view');
   const omat = document.querySelector('.omat-view');
   function setMode(mode){
@@ -162,117 +136,34 @@
     buttons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.mode === mode));
     koko.hidden = mode !== 'koko';
     omat.hidden = mode !== 'omat';
-    try{ localStorage.setItem('matkaile-home-mode', mode); }catch(e){}
   }
   buttons.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
-  let saved = 'koko';
-  // v68: etusivu avautuu aina Tutustu Suomeen -puolelle, jotta ensivaikutelma on selkeä
-  try{ const urlMode = new URLSearchParams(location.search).get('mode'); if(urlMode==='omat'||urlMode==='koko') saved=urlMode; }catch(e){}
-  setMode(saved === 'omat' ? 'omat' : 'koko');
+  setMode('koko');
 })();
 </script>
-
 <script>
 (function(){
   const input = document.getElementById('siteSearch');
   const box = document.getElementById('searchSuggestions');
   if(!input || !box) return;
-
   const places = [
-    // Päijät-Häme
-    ['Asikkala','Kunta','Päijät-Häme','asikkala.html','🛡️'],
-    ['Hartola','Kunta','Päijät-Häme','hartola.html','🛡️'],
-    ['Heinola','Kunta','Päijät-Häme','heinola.html','🛡️'],
-    ['Hollola','Kunta','Päijät-Häme','hollola.html','🛡️'],
-    ['Iitti','Kunta','Päijät-Häme','iitti.html','🛡️'],
-    ['Kärkölä','Kunta','Päijät-Häme','karkola.html','🛡️'],
-    ['Lahti','Kunta','Päijät-Häme','lahti.html','🛡️'],
-    ['Orimattila','Kunta','Päijät-Häme','orimattila.html','🛡️'],
-    ['Padasjoki','Kunta','Päijät-Häme','padasjoki.html','🛡️'],
-    ['Sysmä','Kunta','Päijät-Häme','sysma.html','🛡️'],
-    ['Päijät-Häme','Maakunta','10 kuntaa','paijat-hame.html','🗺️'],
-
-    // Kohteet
-    ['Pulkkilanharju','Luontokohde','Asikkala','pulkkilanharju.html','🥾'],
-    ['Vääksyn kanava','Nähtävyys','Asikkala','asikkala.html','🌉'],
-    ['Aurinkovuori','Luontokohde','Asikkala','asikkala.html','🌄'],
-    ['Päijännetalo','Nähtävyys','Asikkala','asikkala.html','🏛️'],
-    ['Kalkkisten kanava','Nähtävyys','Asikkala','asikkala.html','🌉'],
-    ['Urajärven kartano','Nähtävyys','Asikkala','asikkala.html','🏛️'],
-    ['Vehkoon mylly','Kohde','Asikkala','asikkala.html','💧'],
-    ['Sibeliustalo','Nähtävyys','Lahti','lahti.html','🎵'],
-    ['Lahden satama','Kohde','Lahti','lahti.html','⛵'],
-    ['Salpausselkä','Luontokohde','Lahti','lahti.html','🥾'],
-    ['Olavinlinna','Nähtävyys','Savonlinna','kartta.html','🏰'],
-    ['Yyteri','Ranta','Pori','kartta.html','🏖️'],
-    ['Koli','Luontokohde','Lieksa','kartta.html','🌲'],
-    ['Repovesi','Kansallispuisto','Kouvola','kartta.html','🌲'],
-
-    // Maakunnat
-    ['Uusimaa','Maakunta','26 kuntaa','kartta.html','🗺️'],
-    ['Varsinais-Suomi','Maakunta','27 kuntaa','kartta.html','🗺️'],
-    ['Satakunta','Maakunta','16 kuntaa','kartta.html','🗺️'],
-    ['Kanta-Häme','Maakunta','11 kuntaa','kartta.html','🗺️'],
-    ['Pirkanmaa','Maakunta','23 kuntaa','kartta.html','🗺️'],
-    ['Kymenlaakso','Maakunta','6 kuntaa','kartta.html','🗺️'],
-    ['Etelä-Karjala','Maakunta','9 kuntaa','kartta.html','🗺️'],
-    ['Etelä-Savo','Maakunta','12 kuntaa','kartta.html','🗺️'],
-    ['Pohjois-Savo','Maakunta','19 kuntaa','kartta.html','🗺️'],
-    ['Pohjois-Karjala','Maakunta','13 kuntaa','kartta.html','🗺️'],
-    ['Keski-Suomi','Maakunta','22 kuntaa','kartta.html','🗺️'],
-    ['Etelä-Pohjanmaa','Maakunta','18 kuntaa','kartta.html','🗺️'],
-    ['Pohjanmaa','Maakunta','14 kuntaa','kartta.html','🗺️'],
-    ['Keski-Pohjanmaa','Maakunta','8 kuntaa','kartta.html','🗺️'],
-    ['Pohjois-Pohjanmaa','Maakunta','30 kuntaa','kartta.html','🗺️'],
-    ['Kainuu','Maakunta','8 kuntaa','kartta.html','🗺️'],
-    ['Lappi','Maakunta','21 kuntaa','kartta.html','🗺️'],
-    ['Ahvenanmaa','Maakunta','16 kuntaa','kartta.html','🗺️'],
-
-    // Lisää kuntia hakuehdotuksiin
-    ['Akaa','Kunta','Pirkanmaa','kartta.html','🏡'],['Alajärvi','Kunta','Etelä-Pohjanmaa','kartta.html','🏡'],['Alavieska','Kunta','Pohjois-Pohjanmaa','kartta.html','🏡'],['Alavus','Kunta','Etelä-Pohjanmaa','kartta.html','🏡'],['Espoo','Kunta','Uusimaa','kartta.html','🏡'],['Forssa','Kunta','Kanta-Häme','kartta.html','🏡'],['Helsinki','Kunta','Uusimaa','kartta.html','🏡'],['Hämeenlinna','Kunta','Kanta-Häme','kartta.html','🏡'],['Jyväskylä','Kunta','Keski-Suomi','kartta.html','🏡'],['Joensuu','Kunta','Pohjois-Karjala','kartta.html','🏡'],['Kuopio','Kunta','Pohjois-Savo','kartta.html','🏡'],['Kouvola','Kunta','Kymenlaakso','kartta.html','🏡'],['Lappeenranta','Kunta','Etelä-Karjala','kartta.html','🏡'],['Mikkeli','Kunta','Etelä-Savo','kartta.html','🏡'],['Oulu','Kunta','Pohjois-Pohjanmaa','kartta.html','🏡'],['Pori','Kunta','Satakunta','kartta.html','🏡'],['Rovaniemi','Kunta','Lappi','kartta.html','🏡'],['Savonlinna','Kunta','Etelä-Savo','kartta.html','🏡'],['Tampere','Kunta','Pirkanmaa','kartta.html','🏡'],['Turku','Kunta','Varsinais-Suomi','kartta.html','🏡'],['Vaasa','Kunta','Pohjanmaa','kartta.html','🏡'],['Vantaa','Kunta','Uusimaa','kartta.html','🏡']
+    ['Asikkala','Kunta','Päijät-Häme','asikkala.html','🛡️'],['Hartola','Kunta','Päijät-Häme','hartola.html','🛡️'],['Heinola','Kunta','Päijät-Häme','heinola.html','🛡️'],['Hollola','Kunta','Päijät-Häme','hollola.html','🛡️'],['Iitti','Kunta','Päijät-Häme','iitti.html','🛡️'],['Kärkölä','Kunta','Päijät-Häme','karkola.html','🛡️'],['Lahti','Kunta','Päijät-Häme','lahti.html','🛡️'],['Orimattila','Kunta','Päijät-Häme','orimattila.html','🛡️'],['Padasjoki','Kunta','Päijät-Häme','padasjoki.html','🛡️'],['Sysmä','Kunta','Päijät-Häme','sysma.html','🛡️'],['Päijät-Häme','Maakunta','10 kuntaa','paijat-hame.html','🗺️'],
+    ['Pulkkilanharju','Luontokohde','Asikkala','pulkkilanharju.html','🥾'],['Vääksyn kanava','Nähtävyys','Asikkala','asikkala.html','🌉'],['Aurinkovuori','Luontokohde','Asikkala','asikkala.html','🌄'],['Päijännetalo','Nähtävyys','Asikkala','asikkala.html','🏛️'],['Olavinlinna','Nähtävyys','Savonlinna','kartta.html','🏰'],['Yyteri','Ranta','Pori','kartta.html','🏖️'],['Koli','Luontokohde','Lieksa','kartta.html','🌲'],['Lappi','Maakunta','21 kuntaa','kartta.html','🗺️'],['Uusimaa','Maakunta','26 kuntaa','kartta.html','🗺️'],['Varsinais-Suomi','Maakunta','27 kuntaa','kartta.html','🗺️'],['Helsinki','Kunta','Uusimaa','kartta.html','🏡'],['Tampere','Kunta','Pirkanmaa','kartta.html','🏡'],['Turku','Kunta','Varsinais-Suomi','kartta.html','🏡'],['Oulu','Kunta','Pohjois-Pohjanmaa','kartta.html','🏡']
   ].map(([name,type,area,url,icon]) => ({name,type,area,url,icon}));
-
-  const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ä/g,'a').replace(/ö/g,'o').replace(/å/g,'a');
-
+  const normalize = v => v.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ä/g,'a').replace(/ö/g,'o').replace(/å/g,'a');
   function render(){
-    const raw = input.value.trim();
-    if(raw.length < 1){ box.hidden = true; box.innerHTML = ''; return; }
-    const query = normalize(raw);
-    const results = places
-      .filter(item => normalize(item.name).startsWith(query))
-      .sort((a,b) => a.name.localeCompare(b.name, 'fi'))
-      .slice(0, 8);
-
-    if(!results.length){
-      box.innerHTML = `<div class="suggestion-empty">Ei osumia. Kokeile esimerkiksi Asikkala, Lahti tai Pulkkilanharju.</div>`;
-      box.hidden = false;
-      return;
-    }
-
-    box.innerHTML = results.map(item => `
-      <a class="suggestion-item" href="${item.url}">
-        <span class="suggestion-icon">${item.icon}</span>
-        <span class="suggestion-text"><b>${item.name}</b><small>${item.type} · ${item.area}</small></span>
-        <em>›</em>
-      </a>
-    `).join('');
-    box.hidden = false;
+    const raw=input.value.trim();
+    if(raw.length<1){box.hidden=true;box.innerHTML='';return;}
+    const q=normalize(raw);
+    const hits=places.filter(p=>normalize(p.name).startsWith(q) || normalize(p.name).includes(q)).slice(0,7);
+    if(!hits.length){box.hidden=true;box.innerHTML='';return;}
+    box.innerHTML=hits.map(p=>`<a href="${p.url}"><span>${p.icon}</span><b>${p.name}</b><small>${p.type} · ${p.area}</small></a>`).join('');
+    box.hidden=false;
   }
-
-  input.addEventListener('input', render);
-  input.addEventListener('focus', render);
-  input.addEventListener('keydown', (event) => {
-    if(event.key === 'Enter'){
-      const first = box.querySelector('a');
-      if(first){ event.preventDefault(); first.click(); }
-    }
-    if(event.key === 'Escape') box.hidden = true;
-  });
-  document.addEventListener('click', (event) => {
-    if(!event.target.closest('.smart-search')) box.hidden = true;
-  });
+  input.addEventListener('input',render);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'){const first=box.querySelector('a');if(first) location.href=first.href;}});
+  document.addEventListener('click',e=>{if(!e.target.closest('.smart-search')) box.hidden=true;});
 })();
 </script>
-
 </body>
 </html>
