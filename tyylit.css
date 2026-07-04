@@ -1354,3 +1354,9 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .municipality-hero .coat-img{width:56px!important;height:62px!important;min-width:56px!important;}
 .region-hero .region-title{bottom:28px!important;}
 .region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
+
+/* v79: varmistetaan kuntasivujen yläkuvien näkyvyys ja selaimen yläpalkin turva-alue */
+.municipality-hero{background-size:cover;background-position:center center;}
+.municipality-hero .toprow{padding-top:calc(env(safe-area-inset-top,0px) + 22px);}
+.municipality-hero .hero-title{margin-top:36px;}
+.region-hero .region-coat{top:54px;}
