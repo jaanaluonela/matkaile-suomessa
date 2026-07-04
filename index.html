@@ -27,12 +27,12 @@
 
 <main class="content home-content home-v51">
   <section class="home-switch layered-switch" aria-label="Etusivun valinta">
-    <button class="mode-btn layer-card is-active" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>KOKO SUOMI</b><small>Tutustu ja löydä</small></button>
-    <button class="mode-btn layer-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>OMAT MATKAT</b><small>Omat muistot ja matkat</small></button>
+    <button class="mode-btn layer-card is-active" type="button" data-mode="koko"><img class="finland-mini map-silhouette-img" src="suomi-siluetti.svg" alt="" aria-hidden="true"><b>TUTKI SUOMEA</b><small>Maakunnat, kunnat ja kohteet</small></button>
+    <button class="mode-btn layer-card" type="button" data-mode="omat"><span class="heart-mini">♡</span><b>MATKAPÄIVÄKIRJA</b><small>Käynnit, kuvat ja muistot</small></button>
   </section>
 
   <section class="koko-view mode-view">
-    <div class="search home-search-v51"><span>🔍</span><input placeholder="Etsi kunta, nähtävyys, retkikohde tai ravintola..."><button aria-label="Suodattimet">☷</button></div>
+    <div class="search home-search-v51 smart-search"><span>🔍</span><input id="siteSearch" autocomplete="off" placeholder="Etsi kunta, nähtävyys, retkikohde tai ravintola..."><button aria-label="Suodattimet">☷</button><div id="searchSuggestions" class="search-suggestions" hidden></div></div>
 
     <section class="section explore-start-v63">
       <div class="section-head"><h2>Tutustu Suomeen</h2><a class="more" href="kartta.html">Näytä kaikki ›</a></div>
@@ -58,7 +58,7 @@
     </section>
 
     <section class="section">
-      <div class="section-head"><h2>Suositut kohteet</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
+      <div class="section-head"><h2>Suosittelemme juuri nyt</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
       <div class="popular-row-v51">
         <a href="pulkkilanharju.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Päijänteen kansallispuisto</b><small>Asikkala</small><span>★ 4,8</span></a>
         <a href="lahti.html" style="background-image:url('hero-etusivu.jpg')"><i>♡</i><b>Olavinlinna</b><small>Savonlinna</small><span>★ 4,8</span></a>
@@ -77,7 +77,7 @@
     </section>
 
     <section class="section latest-v63">
-      <div class="section-head"><h2>Viimeksi lisätyt kohteet</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
+      <div class="section-head"><h2>Uutta ja kiinnostavaa</h2><a class="more" href="asikkala.html">Näytä kaikki ›</a></div>
       <div class="latest-row-v63">
         <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>📷 +12</span><b>Auringonlasku</b><small>Vääksyn kanavalla</small></a>
         <a href="asikkala.html" style="background-image:url('hero-etusivu.jpg')"><span>📷 +8</span><b>Kahvi Malskilla</b><small>Lahti</small></a>
@@ -88,7 +88,7 @@
 
   <section class="omat-view mode-view" hidden>
     <section class="section omat-hero-card">
-      <div class="section-head"><h2>Omat matkat</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
+      <div class="section-head"><h2>Matkapäiväkirja</h2><a class="more" href="paivakirja.html">Näytä kaikki ›</a></div>
       <a class="trip-home-card featured-trip" href="matka-paijat-hame.html">
         <div class="trip-home-img" style="background-image:url('hero-etusivu.jpg')"></div>
         <div class="trip-home-info">
@@ -162,5 +162,108 @@
   setMode(saved === 'omat' ? 'omat' : 'koko');
 })();
 </script>
+
+<script>
+(function(){
+  const input = document.getElementById('siteSearch');
+  const box = document.getElementById('searchSuggestions');
+  if(!input || !box) return;
+
+  const places = [
+    // Päijät-Häme
+    ['Asikkala','Kunta','Päijät-Häme','asikkala.html','🛡️'],
+    ['Hartola','Kunta','Päijät-Häme','hartola.html','🛡️'],
+    ['Heinola','Kunta','Päijät-Häme','heinola.html','🛡️'],
+    ['Hollola','Kunta','Päijät-Häme','hollola.html','🛡️'],
+    ['Iitti','Kunta','Päijät-Häme','iitti.html','🛡️'],
+    ['Kärkölä','Kunta','Päijät-Häme','karkola.html','🛡️'],
+    ['Lahti','Kunta','Päijät-Häme','lahti.html','🛡️'],
+    ['Orimattila','Kunta','Päijät-Häme','orimattila.html','🛡️'],
+    ['Padasjoki','Kunta','Päijät-Häme','padasjoki.html','🛡️'],
+    ['Sysmä','Kunta','Päijät-Häme','sysma.html','🛡️'],
+    ['Päijät-Häme','Maakunta','10 kuntaa','paijat-hame.html','🗺️'],
+
+    // Kohteet
+    ['Pulkkilanharju','Luontokohde','Asikkala','pulkkilanharju.html','🥾'],
+    ['Vääksyn kanava','Nähtävyys','Asikkala','asikkala.html','🌉'],
+    ['Aurinkovuori','Luontokohde','Asikkala','asikkala.html','🌄'],
+    ['Päijännetalo','Nähtävyys','Asikkala','asikkala.html','🏛️'],
+    ['Kalkkisten kanava','Nähtävyys','Asikkala','asikkala.html','🌉'],
+    ['Urajärven kartano','Nähtävyys','Asikkala','asikkala.html','🏛️'],
+    ['Vehkoon mylly','Kohde','Asikkala','asikkala.html','💧'],
+    ['Sibeliustalo','Nähtävyys','Lahti','lahti.html','🎵'],
+    ['Lahden satama','Kohde','Lahti','lahti.html','⛵'],
+    ['Salpausselkä','Luontokohde','Lahti','lahti.html','🥾'],
+    ['Olavinlinna','Nähtävyys','Savonlinna','kartta.html','🏰'],
+    ['Yyteri','Ranta','Pori','kartta.html','🏖️'],
+    ['Koli','Luontokohde','Lieksa','kartta.html','🌲'],
+    ['Repovesi','Kansallispuisto','Kouvola','kartta.html','🌲'],
+
+    // Maakunnat
+    ['Uusimaa','Maakunta','26 kuntaa','kartta.html','🗺️'],
+    ['Varsinais-Suomi','Maakunta','27 kuntaa','kartta.html','🗺️'],
+    ['Satakunta','Maakunta','16 kuntaa','kartta.html','🗺️'],
+    ['Kanta-Häme','Maakunta','11 kuntaa','kartta.html','🗺️'],
+    ['Pirkanmaa','Maakunta','23 kuntaa','kartta.html','🗺️'],
+    ['Kymenlaakso','Maakunta','6 kuntaa','kartta.html','🗺️'],
+    ['Etelä-Karjala','Maakunta','9 kuntaa','kartta.html','🗺️'],
+    ['Etelä-Savo','Maakunta','12 kuntaa','kartta.html','🗺️'],
+    ['Pohjois-Savo','Maakunta','19 kuntaa','kartta.html','🗺️'],
+    ['Pohjois-Karjala','Maakunta','13 kuntaa','kartta.html','🗺️'],
+    ['Keski-Suomi','Maakunta','22 kuntaa','kartta.html','🗺️'],
+    ['Etelä-Pohjanmaa','Maakunta','18 kuntaa','kartta.html','🗺️'],
+    ['Pohjanmaa','Maakunta','14 kuntaa','kartta.html','🗺️'],
+    ['Keski-Pohjanmaa','Maakunta','8 kuntaa','kartta.html','🗺️'],
+    ['Pohjois-Pohjanmaa','Maakunta','30 kuntaa','kartta.html','🗺️'],
+    ['Kainuu','Maakunta','8 kuntaa','kartta.html','🗺️'],
+    ['Lappi','Maakunta','21 kuntaa','kartta.html','🗺️'],
+    ['Ahvenanmaa','Maakunta','16 kuntaa','kartta.html','🗺️'],
+
+    // Lisää kuntia hakuehdotuksiin
+    ['Akaa','Kunta','Pirkanmaa','kartta.html','🏡'],['Alajärvi','Kunta','Etelä-Pohjanmaa','kartta.html','🏡'],['Alavieska','Kunta','Pohjois-Pohjanmaa','kartta.html','🏡'],['Alavus','Kunta','Etelä-Pohjanmaa','kartta.html','🏡'],['Espoo','Kunta','Uusimaa','kartta.html','🏡'],['Forssa','Kunta','Kanta-Häme','kartta.html','🏡'],['Helsinki','Kunta','Uusimaa','kartta.html','🏡'],['Hämeenlinna','Kunta','Kanta-Häme','kartta.html','🏡'],['Jyväskylä','Kunta','Keski-Suomi','kartta.html','🏡'],['Joensuu','Kunta','Pohjois-Karjala','kartta.html','🏡'],['Kuopio','Kunta','Pohjois-Savo','kartta.html','🏡'],['Kouvola','Kunta','Kymenlaakso','kartta.html','🏡'],['Lappeenranta','Kunta','Etelä-Karjala','kartta.html','🏡'],['Mikkeli','Kunta','Etelä-Savo','kartta.html','🏡'],['Oulu','Kunta','Pohjois-Pohjanmaa','kartta.html','🏡'],['Pori','Kunta','Satakunta','kartta.html','🏡'],['Rovaniemi','Kunta','Lappi','kartta.html','🏡'],['Savonlinna','Kunta','Etelä-Savo','kartta.html','🏡'],['Tampere','Kunta','Pirkanmaa','kartta.html','🏡'],['Turku','Kunta','Varsinais-Suomi','kartta.html','🏡'],['Vaasa','Kunta','Pohjanmaa','kartta.html','🏡'],['Vantaa','Kunta','Uusimaa','kartta.html','🏡']
+  ].map(([name,type,area,url,icon]) => ({name,type,area,url,icon}));
+
+  const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ä/g,'a').replace(/ö/g,'o').replace(/å/g,'a');
+
+  function render(){
+    const raw = input.value.trim();
+    if(raw.length < 1){ box.hidden = true; box.innerHTML = ''; return; }
+    const query = normalize(raw);
+    const results = places
+      .filter(item => normalize(item.name).startsWith(query))
+      .sort((a,b) => a.name.localeCompare(b.name, 'fi'))
+      .slice(0, 8);
+
+    if(!results.length){
+      box.innerHTML = `<div class="suggestion-empty">Ei osumia. Kokeile esimerkiksi Asikkala, Lahti tai Pulkkilanharju.</div>`;
+      box.hidden = false;
+      return;
+    }
+
+    box.innerHTML = results.map(item => `
+      <a class="suggestion-item" href="${item.url}">
+        <span class="suggestion-icon">${item.icon}</span>
+        <span class="suggestion-text"><b>${item.name}</b><small>${item.type} · ${item.area}</small></span>
+        <em>›</em>
+      </a>
+    `).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('input', render);
+  input.addEventListener('focus', render);
+  input.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+      const first = box.querySelector('a');
+      if(first){ event.preventDefault(); first.click(); }
+    }
+    if(event.key === 'Escape') box.hidden = true;
+  });
+  document.addEventListener('click', (event) => {
+    if(!event.target.closest('.smart-search')) box.hidden = true;
+  });
+})();
+</script>
+
 </body>
 </html>

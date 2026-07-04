@@ -997,3 +997,85 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .layered-switch .mode-btn{min-height:63px!important;padding:8px 8px!important;grid-template-columns:27px 1fr!important}.layered-switch .mode-btn b{font-size:11.8px!important}.layered-switch .mode-btn small{font-size:8.2px!important}.layered-switch .mode-btn .map-silhouette-img{width:22px!important;height:32px!important}
   .home-search-v51 input{font-size:12.4px!important}.explore-grid-v51 a{min-height:80px!important}.explore-grid-v51 b{font-size:11.2px!important}.explore-grid-v51 small{font-size:9px!important}
 }
+
+/* v65: hakukentän automaattiset ehdotukset */
+.smart-search{position:relative; z-index:40;}
+.smart-search input{width:100%;}
+.search-suggestions{position:absolute; left:0; right:0; top:calc(100% + 10px); background:rgba(255,255,255,.98); border:1px solid rgba(19,61,47,.10); border-radius:26px; box-shadow:0 18px 45px rgba(13,45,34,.16); padding:10px; overflow:hidden; z-index:100;}
+.suggestion-item{display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:18px; color:#123d2f; text-decoration:none;}
+.suggestion-item:hover,.suggestion-item:focus{background:#eef8f1; outline:none;}
+.suggestion-icon{width:42px; height:42px; display:grid; place-items:center; border-radius:14px; background:#eaf5ee; font-size:24px; flex:0 0 auto;}
+.suggestion-text{display:flex; flex-direction:column; min-width:0; flex:1;}
+.suggestion-text b{font-size:20px; line-height:1.05; font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.suggestion-text small{font-size:14px; color:#6f7f77; margin-top:4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.suggestion-item em{font-style:normal; color:#2e8a5a; font-size:26px; font-weight:900;}
+.suggestion-empty{padding:16px; color:#6f7f77; font-weight:700; line-height:1.35;}
+@media(max-width:430px){.search-suggestions{border-radius:22px}.suggestion-text b{font-size:18px}.suggestion-icon{width:38px;height:38px;font-size:22px}}
+
+
+/* v66 – houkuttelevampi etusivu oikeasta projektista */
+.clean-home.home-hero{
+  min-height:150px!important;
+  padding:8px 16px 10px!important;
+  border-radius:0 0 20px 20px!important;
+  background:
+    linear-gradient(180deg,rgba(7,31,25,.16),rgba(7,31,25,.20) 42%,rgba(7,31,25,.55)),
+    url('hero-etusivu.jpg') center 42%/cover!important;
+}
+.clean-home .brand-block{transform:translateY(-4px)!important;}
+.clean-home .logo-script.huge{font-size:34px!important;text-shadow:0 4px 16px rgba(0,0,0,.62)!important;}
+.clean-home .logo-sub.big{font-size:9.5px!important;letter-spacing:.33em!important;}
+.clean-home .brand-block p{font-size:10.8px!important;margin-top:4px!important;}
+
+.home-switch.layered-switch{
+  margin-top:-18px!important;
+  margin-bottom:8px!important;
+  min-height:64px!important;
+  gap:9px!important;
+}
+.layered-switch .mode-btn{
+  min-height:60px!important;
+  border-radius:16px!important;
+  padding:8px 9px!important;
+  grid-template-columns:27px 1fr!important;
+}
+.layered-switch .mode-btn b{font-size:11.6px!important;line-height:1.02!important;}
+.layered-switch .mode-btn small{font-size:8.2px!important;line-height:1.08!important;}
+.layered-switch .mode-btn .map-silhouette-img{width:22px!important;height:30px!important;}
+.layered-switch .mode-btn .heart-mini{font-size:23px!important;}
+.layered-switch .mode-btn.is-active:after{display:none!important;}
+.layered-switch .mode-btn.is-active{box-shadow:0 11px 22px rgba(31,122,74,.24)!important;}
+
+.home-search-v51{
+  margin-top:2px!important;
+  margin-bottom:12px!important;
+  border-radius:18px!important;
+  box-shadow:0 12px 28px rgba(21,50,35,.10)!important;
+}
+.home-search-v51 input::placeholder{color:#63756c!important;}
+
+.explore-start-v63{margin-top:14px!important;}
+.explore-grid-v51 a{
+  background:linear-gradient(180deg,#ffffff,#f8fbf9)!important;
+  border:1px solid rgba(31,122,74,.12)!important;
+  box-shadow:0 8px 20px rgba(21,50,35,.06)!important;
+}
+.explore-grid-v51 a:hover{transform:translateY(-1px);}
+.explore-grid-v51 span{color:#1f7a4a!important;}
+
+.popular-row-v51 a{height:160px!important;flex-basis:124px!important;}
+.popular-row-v51 a b{font-size:12.8px!important;}
+.near-v64{background:linear-gradient(180deg,#eef8f1,#f7fbf8)!important;}
+.latest-v63{margin-bottom:86px!important;}
+
+@media(max-width:390px){
+  .clean-home.home-hero{min-height:142px!important;padding:8px 14px 10px!important;}
+  .clean-home .logo-script.huge{font-size:31px!important;}
+  .clean-home .logo-sub.big{font-size:8.8px!important;}
+  .home-switch.layered-switch{margin-top:-16px!important;min-height:60px!important;}
+  .layered-switch .mode-btn{min-height:57px!important;padding:7px 8px!important;grid-template-columns:24px 1fr!important;}
+  .layered-switch .mode-btn b{font-size:10.7px!important;}
+  .layered-switch .mode-btn small{font-size:7.6px!important;}
+  .layered-switch .mode-btn .map-silhouette-img{width:20px!important;height:28px!important;}
+  .popular-row-v51 a{height:150px!important;flex-basis:116px!important;}
+}
