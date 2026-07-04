@@ -1238,3 +1238,27 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .muni-quick-stats span{background:#eef7f0;border:1px solid #dbeadf;border-radius:14px;padding:9px 8px;text-align:center;font-size:12px;font-weight:850;color:#1f653d;line-height:1.15;}
 .source-note-card b{color:var(--green)}
 @media(max-width:390px){.muni-quick-stats{grid-template-columns:1fr 1fr 1fr}.muni-quick-stats span{font-size:11.5px;padding:8px 5px}}
+
+/* v75 Päijät-Häme viimeistely */
+.ph-hero-facts span:nth-child(n+2){display:none!important;}
+.region-badge.crest-badge{width:72px!important;height:72px!important;background:rgba(255,255,255,.96)!important;border-radius:18px!important;padding:6px!important;box-shadow:0 12px 25px rgba(0,0,0,.22)!important;}
+.region-badge.crest-badge img,.coat-img,.crest-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;display:block;}
+.clean-municipality-grid .municipality-card{grid-template-columns:54px 1fr 24px;padding:12px 13px;}
+.clean-municipality-grid .municipality-card small{display:none!important;}
+.clean-municipality-grid .coat{width:54px!important;height:54px!important;background:#fff!important;border:1px solid #e2eadf!important;padding:4px!important;}
+.clean-municipality-grid .coat img{max-width:100%;max-height:100%;object-fit:contain;}
+.municipality-main-card .muni-fact-grid{grid-template-columns:repeat(2,1fr);}
+.detail-section-title{font-size:18px;margin:0 0 10px;color:var(--dark);}
+.service-items div{padding:9px 0;border-bottom:1px solid #eef3ee;}
+.service-items div:last-child{border-bottom:0;}
+.service-items b{display:block;font-size:14px;color:#173d2c;}
+.service-items small{display:block;color:var(--muted);line-height:1.35;margin-top:2px;}
+.story-card{background:#fffaf0;border:1px solid #efe0bd;border-radius:18px;padding:13px;margin-bottom:10px;}
+.story-card b{display:block;color:#5c4413;margin-bottom:4px;}
+.day-route{counter-reset:step;display:grid;gap:8px;}
+.day-route div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 12px;display:flex;gap:9px;align-items:flex-start;}
+.day-route div:before{counter-increment:step;content:counter(step);background:#2f8c57;color:#fff;border-radius:50%;min-width:24px;height:24px;display:grid;place-items:center;font-size:12px;font-weight:900;}
+.visit-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+.visit-actions a{border-radius:16px;padding:12px;text-align:center;font-weight:900;text-decoration:none;}
+.visit-actions .done{background:#1f7a4a;color:#fff;}
+.visit-actions .fav{background:#eef7f0;color:#1f6b44;border:1px solid #dcecdf;}
