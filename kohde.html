@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="tyylit.css">
 </head>
 <body><div class="app kohde-app">
-<header class="hero small municipality-hero kohde-hero" id="hero">
-  <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn">♡</button></div>
-  <div class="hero-title"><h1 id="title">Kohde</h1><p id="subtitle">Asikkala · Päijät-Häme</p></div>
+<header class="kohde-topbar" id="hero">
+  <button class="icon-btn" onclick="history.back()">‹</button>
+  <div class="kohde-top-title"><b id="title">Kohde</b><small id="subtitle">Asikkala · Päijät-Häme</small></div>
+  <button class="icon-btn">♡</button>
 </header>
 <main class="content municipality-content valmis-kunta">
   <section class="section card municipality-main-card">
@@ -61,7 +62,6 @@ const kohteet = {
   'kanavan-kotileipomo': {t:'Kanavan Kotileipomo', s:'Paikallinen leipomo- ja kahvilakohde', type:'Kahvila', img:'hero-asikkala.jpg', d:'Kanavan Kotileipomo on paikallinen leipomo- ja kahvilakohde Vääksyn seudulla.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat kohteen omilta sivuilta tai somesta.', site:'https://visitlahti.fi/etusivu/ravintolat/makureitit/herkullisia-hetkia-vaaksyssa/', access:'Tarkista esteettömyys kohteelta.', wc:'Tarkista WC-palvelut kohteelta.', dogs:'Tarkista koirakäytännöt kohteelta.', motorhome:'Saavutettavissa autolla.', parking:'Pysäköinti lähialueella.', story:'Paikalliset leipomot ja kahvilat tekevät Vääksystä hyvän pysähdyspaikan.'},
   'k-supermarket-vaaksy': {t:'K-Supermarket Vääksy', s:'Päivittäistavarakauppa', type:'Ostokset', img:'hero-asikkala.jpg', d:'Päivittäistavarakauppa matkailijan ostoksiin Vääksyssä.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat kaupan omalta sivulta.', site:'https://www.k-ruoka.fi/kauppa/k-supermarket-vaaksy', access:'Tarkista esteettömyys kaupalta.', wc:'WC-palvelut kaupan mukaan.', dogs:'Koirat eivät yleensä sisätiloihin, poikkeuksena avustajakoirat.', motorhome:'Pysäköinti kaupan alueella tilanteen mukaan.', parking:'Kaupan pysäköintialue.', story:'Ruokakaupat ovat matkailijalle tärkeitä käytännön pysähdyspaikkoja.'},
   's-market-vaaksy': {t:'S-market Vääksy', s:'Päivittäistavarakauppa', type:'Ostokset', img:'hero-asikkala.jpg', d:'Päivittäistavarakauppa matkailijan ostoksiin Vääksyssä.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat kaupan omalta sivulta.', site:'https://www.s-kanava.fi/toimipaikka/s-market-vaaksy/', access:'Tarkista esteettömyys kaupalta.', wc:'WC-palvelut kaupan mukaan.', dogs:'Koirat eivät yleensä sisätiloihin, poikkeuksena avustajakoirat.', motorhome:'Pysäköinti kaupan alueella tilanteen mukaan.', parking:'Kaupan pysäköintialue.', story:'Ruokakaupat ovat matkailijalle tärkeitä käytännön pysähdyspaikkoja.'},
-  'lidl-vaaksy': {t:'Lidl Vääksy', s:'Päivittäistavarakauppa', type:'Ostokset', img:'hero-asikkala.jpg', d:'Päivittäistavarakauppa matkailijan ostoksiin Vääksyssä.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat Lidlin sivuilta.', site:'https://www.lidl.fi/', access:'Tarkista esteettömyys kaupalta.', wc:'WC-palvelut kaupan mukaan.', dogs:'Koirat eivät yleensä sisätiloihin, poikkeuksena avustajakoirat.', motorhome:'Pysäköinti kaupan alueella tilanteen mukaan.', parking:'Kaupan pysäköintialue.', story:'Ruokakaupat ovat matkailijalle tärkeitä käytännön pysähdyspaikkoja.'},
   'tokmanni-vaaksy': {t:'Tokmanni Vääksy', s:'Tavaratalo matkailijan perustarvikkeisiin', type:'Ostokset', img:'hero-asikkala.jpg', d:'Tokmanni tarjoaa matkailijalle perustarvikkeita ja kodin tuotteita Vääksyssä.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat Tokmannin sivuilta.', site:'https://www.tokmanni.fi/', access:'Tarkista esteettömyys kaupalta.', wc:'WC-palvelut kaupan mukaan.', dogs:'Koirat eivät yleensä sisätiloihin, poikkeuksena avustajakoirat.', motorhome:'Pysäköinti kaupan alueella tilanteen mukaan.', parking:'Kaupan pysäköintialue.', story:'Tavaratalot ovat hyödyllisiä, kun matkalla tarvitaan nopeasti perustarvikkeita.'},
   'asikkalan-apteekki': {t:'Asikkalan apteekki', s:'Apteekkipalvelut Vääksyssä', type:'Palvelu', img:'hero-asikkala.jpg', d:'Apteekki on matkailijalle tärkeä palvelu lääkkeisiin ja terveyteen liittyvissä tarpeissa.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat apteekin sivuilta.', site:'https://www.apteekki.fi/apteekit/asikkalan-apteekki.html', access:'Tarkista esteettömyys apteekilta.', wc:'WC-palvelut tarkistettava apteekilta.', dogs:'Koirakäytännöt tarkistettava apteekilta.', motorhome:'Saavutettavissa autolla.', parking:'Pysäköinti lähialueella.', story:'Apteekki kuuluu matkailijan tärkeisiin peruspalveluihin.'},
   'abc-asikkala': {t:'ABC Asikkala / Vääksy', s:'Polttoaine ja autoilijan palvelut', type:'Palvelu', img:'hero-asikkala.jpg', d:'Autoilijan ja matkailijan palvelupiste Vääksyn seudulla.', address:'Vääksy, Asikkala', hours:'Tarkista ajantasaiset aukioloajat ABC:n sivuilta.', site:'https://www.abcasemat.fi/', access:'Tarkista esteettömyys palveluntarjoajalta.', wc:'WC-palvelut aseman yhteydessä.', dogs:'Koirat ulkoalueilla, sisätilojen käytännöt tarkistettava.', motorhome:'Sopii autoilijan pysähdykseen, matkailuauton pysäköinti tilanteen mukaan.', parking:'Aseman pysäköintialue.', story:'Huoltoasemat ovat karavaanarin ja autoilijan tärkeimpiä reitin varren palveluja.'}
@@ -75,7 +75,7 @@ document.getElementById('leadTitle').textContent = item.t;
 document.getElementById('description').textContent = item.d;
 document.getElementById('story').textContent = item.story || '';
 const hero = document.getElementById('hero');
-hero.style.backgroundImage = `linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.72)),url('${item.img || 'hero-asikkala.jpg'}')`;
+hero.dataset.image = item.img || 'hero-asikkala.jpg';
 const fields = [
   ['📍 Osoite', item.address], ['🕒 Aukioloajat', item.hours], ['🅿️ Pysäköinti', item.parking], ['♿ Esteettömyys', item.access],
   ['🚻 WC', item.wc], ['🐕 Koirat', item.dogs], ['🚐 Matkailuauto', item.motorhome]
