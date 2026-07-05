@@ -1335,3 +1335,47 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .service-items a.service-link-row>div{cursor:pointer}
 .service-items a.service-link-row>div:after{content:'›';float:right;font-weight:900;color:#23845e;font-size:26px;margin-top:-36px}
 .municipality-hero{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+
+/* v1.2 lopullinen korjaus: kuntasivujen hero-alueet kuntoon */
+.hero.small.municipality-hero,
+.municipality-hero{
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  min-height:205px!important;
+  border-radius:0 0 28px 28px!important;
+  overflow:hidden!important;
+}
+.municipality-hero:before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  background:linear-gradient(180deg,rgba(7,31,25,.08) 0%,rgba(7,31,25,.18) 42%,rgba(7,31,25,.70) 100%)!important;
+  pointer-events:none!important;
+}
+.municipality-hero .hero-title.with-coat{
+  position:relative!important;
+  z-index:2!important;
+  margin-top:52px!important;
+  align-items:center!important;
+}
+.municipality-hero .hero-title.with-coat h1{
+  font-size:38px!important;
+  line-height:.96!important;
+  margin:0 0 5px!important;
+  text-shadow:0 3px 16px rgba(0,0,0,.50)!important;
+}
+.municipality-hero .hero-title.with-coat p{
+  font-size:14px!important;
+  line-height:1.2!important;
+  text-shadow:0 3px 14px rgba(0,0,0,.55)!important;
+}
+.municipality-hero .toprow{
+  position:relative!important;
+  z-index:3!important;
+}
+.municipality-hero .coat-img{
+  position:relative!important;
+  z-index:2!important;
+  background:#fff!important;
+}

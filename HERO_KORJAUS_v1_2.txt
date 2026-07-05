@@ -1,0 +1,14 @@
+Päijät-Häme v1.2 – hero-alueiden korjaus
+
+Korjattu:
+- Poistettu vihreät kirjalliset placeholder-hero-kuvat kuntasivuilta.
+- Jokaiselle Päijät-Hämeen kuntasivulle on palautettu valokuvapohjainen hero-tausta.
+- Taustakuvissa ei ole enää haaleaa kunnan nimeä, joten kunnan nimi näkyy hero-alueella vain kerran.
+- Nykyiset oikeat vaakunat on säilytetty ennallaan.
+- CSS:ään lisätty lopullinen sääntö, joka varmistaa hero-kuvien näkymisen mobiilissa.
+
+Tarkistetut kunnat:
+Asikkala, Heinola, Lahti, Hollola, Padasjoki, Sysmä, Hartola, Iitti, Kärkölä ja Orimattila.
+
+Huomio:
+Tässä paketissa käytetään paikallisia hero-kuvatiedostoja muodossa hero-kunta.jpg. Älä korvaa niitä enää vihreillä placeholder-kuvilla.
