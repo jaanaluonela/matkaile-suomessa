@@ -1355,35 +1355,13 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .region-hero .region-title{bottom:28px!important;}
 .region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
 
-/* v79: varmistetaan kuntasivujen yläkuvien näkyvyys ja selaimen yläpalkin turva-alue */
-.municipality-hero{background-size:cover;background-position:center center;}
-.municipality-hero .toprow{padding-top:calc(env(safe-area-inset-top,0px) + 22px);}
-.municipality-hero .hero-title{margin-top:36px;}
-.region-hero .region-coat{top:54px;}
-
-/* v80 – toiminnalliset pikalaatikot ja kohdelinkit */
-html{scroll-behavior:smooth;}
-a.muni-fact,a.ph-info{text-decoration:none;color:inherit;display:block;}
-.quick-jump-grid .muni-fact{cursor:pointer;}
-.quick-jump-grid .muni-fact:after,.ph-info:after{content:'›';float:right;color:var(--green);font-weight:900;}
-.service-category-card{scroll-margin-top:90px;}
-.section[id]{scroll-margin-top:90px;}
-.practical-list div{background:#f7fbf6;border:1px solid var(--line);border-radius:14px;padding:10px;margin:8px 0;}
-/* v80 – lisätään iPhonen selainpalkille tilaa kuntasivuilla */
-.municipality-hero.hero.small,.municipality-hero{min-height:245px!important;padding-top:calc(env(safe-area-inset-top,0px) + 58px)!important;}
-.municipality-hero .hero-title.with-coat{margin-top:86px!important;}
-/* v80 – maakuntavaakuna pysyy näkyvissä */
-.region-hero .region-title{bottom:34px!important;}
-.region-hero .region-badge.crest-badge{width:58px!important;height:58px!important;min-width:58px!important;min-height:58px!important;}
-
-/* v82 korjaus: kuntalistan asukasmäärät näkyviin ja vaakunat paikallisina */
-.clean-municipality-grid.municipality-grid-with-meta .municipality-card{grid-template-columns:58px 1fr 28px!important;min-height:78px!important;}
-.clean-municipality-grid.municipality-grid-with-meta .municipality-card small{display:block!important;font-size:12.5px!important;color:#6d7b72!important;margin-top:4px!important;font-weight:750!important;}
-.clean-municipality-grid.municipality-grid-with-meta .municipality-card b{font-size:22px!important;line-height:1.05!important;}
-.clean-municipality-grid.municipality-grid-with-meta .coat{width:58px!important;height:58px!important;border-radius:15px!important;}
-.muni-meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-.muni-meta-row span{background:#eef7f0;border:1px solid #dbeadf;border-radius:999px;padding:7px 10px;font-size:12.5px;font-weight:850;color:#236645;}
-.practical-list div{padding:10px 0;border-bottom:1px solid #e7efe8;}
-.practical-list div:last-child{border-bottom:0;}
-.practical-list b{display:block;color:#153f30;margin-bottom:2px;}
-.practical-list small{display:block;color:#6d7b72;line-height:1.35;}
+/* v81 additions */
+.quick-jump-grid a,.ph-info-grid a{color:inherit;text-decoration:none;}
+.quick-jump-grid .muni-fact,.ph-info-grid .ph-info{display:block;cursor:pointer;}
+.service-details{scroll-margin-top:24px;}
+#tarinat,#kunnat,#kaupungit,#karavaanarin-palvelut{scroll-margin-top:24px;}
+.practical-grid{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px;}
+.practical-grid div{background:#f7fbf6;border:1px solid var(--line);border-radius:14px;padding:10px;}
+.practical-grid b{display:block;color:var(--green);font-size:13px;}
+.practical-grid small{display:block;color:var(--muted);line-height:1.35;margin-top:3px;}
+.practical-grid a{color:var(--green);font-weight:800;text-decoration:none;}
