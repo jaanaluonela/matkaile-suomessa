@@ -1,0 +1,8 @@
+V82 – korjauspaketti
+
+- Korjattu vaakunat käyttämään paikallisia SVG-tiedostoja, jotta ne eivät katoa GitHubissa tai hitaassa yhteydessä.
+- Säilytetty kaikki kuntien hero-kuvat paikallisina JPG-tiedostoina.
+- Päijät-Hämeen kuntalistaan lisätty kunta/kaupunki-tieto ja asukasmäärä.
+- Kuntasivuille lisätty asukasmäärä ja kunta/kaupunki-tieto pienenä lisätietona.
+- Kohdesivun käytännön tiedot täydennetty: osoite, kartta, pysäköinti, esteettömyys, WC, koirat, matkailuauto, aukioloajat, pääsymaksu ja virallinen sivu.
+- Pikalaatikot ja kohdelinkit säilytetty toimivina.
