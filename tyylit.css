@@ -1330,27 +1330,33 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .region-hero .region-badge.crest-badge{width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;}
 }
 
-/* Asikkala mallikunta - toimivat pikavalikot ja kohdesivupohja */
-.quick-anchor-grid a.muni-fact{display:block;text-decoration:none;color:inherit}
-.service-items.link-list{display:grid;gap:10px}
-.service-items.link-list a{display:block;text-decoration:none;color:inherit;background:#f8fcf8;border:1px solid var(--line);border-radius:18px;padding:12px 14px}
-.service-items.link-list a b{display:block;color:var(--green)}
-.service-items.link-list a small{display:block;color:var(--muted);line-height:1.35;margin-top:4px}
-.story-link{display:block;text-decoration:none;color:inherit}
-.detail-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
-.detail-grid div{background:#f8fcf8;border:1px solid var(--line);border-radius:16px;padding:12px}
-.detail-grid b{display:block;color:var(--green);font-size:15px}
-.detail-grid small{display:block;color:var(--muted);line-height:1.35;margin-top:4px}
-.kohde-actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
-.kohde-actions a{text-align:center;text-decoration:none}
-.municipality-main-card .plain-region-note{font-size:17px;line-height:1.45;font-weight:500;color:var(--muted);margin-top:12px}
+/* v78 – illan viimeinen korjaus: kunnille puhtaat taustakuvat ja hero turvalliseen kohtaan */
+.municipality-hero.hero.small,
+.municipality-hero{
+  min-height:220px!important;
+  padding:calc(env(safe-area-inset-top, 0px) + 44px) 18px 22px!important;
+  background-size:cover!important;
+  background-position:center center!important;
+}
+.municipality-hero .toprow{
+  position:absolute!important;
+  top:calc(env(safe-area-inset-top, 0px) + 12px)!important;
+  left:18px!important;
+  right:18px!important;
+  z-index:3!important;
+}
+.municipality-hero .hero-title.with-coat{
+  margin-top:72px!important;
+  align-items:center!important;
+}
+.municipality-hero .hero-title h1{font-size:36px!important;line-height:1!important;}
+.municipality-hero .hero-title p{font-size:15px!important;line-height:1.22!important;max-width:310px!important;}
+.municipality-hero .coat-img{width:56px!important;height:62px!important;min-width:56px!important;}
+.region-hero .region-title{bottom:28px!important;}
+.region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
 
-
-/* v83 korjaukset: kohdesivu ilman isoa hero-kuvaa ja siistit palvelulistat */
-.kohde-topbar{min-height:92px;padding:18px 18px 12px;display:grid;grid-template-columns:54px 1fr 54px;gap:10px;align-items:center;background:#eef7f0;border-radius:0 0 24px 24px}
-.kohde-top-title{display:flex;flex-direction:column;align-items:center;text-align:center;color:#113c2f;line-height:1.15}
-.kohde-top-title b{font-size:18px;max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.kohde-top-title small{font-size:12px;color:#6b7d73;margin-top:3px}.kohde-app .municipality-content{padding-top:18px}
-.service-text-list>div{display:block;text-decoration:none;background:#f7fbf7;border:1px solid #dfeee5;border-radius:16px;padding:14px 16px;color:#153b30;margin:10px 0}
-.service-text-list b{display:block;color:#278a58;font-size:18px}.service-text-list small{display:block;color:#6c7c73;font-weight:700;line-height:1.35;margin-top:5px}
-.ph-info-grid a.ph-info{text-decoration:none;color:inherit}.municipality-main-card>b{display:block;font-size:23px;margin-bottom:12px}
+/* v79: varmistetaan kuntasivujen yläkuvien näkyvyys ja selaimen yläpalkin turva-alue */
+.municipality-hero{background-size:cover;background-position:center center;}
+.municipality-hero .toprow{padding-top:calc(env(safe-area-inset-top,0px) + 22px);}
+.municipality-hero .hero-title{margin-top:36px;}
+.region-hero .region-coat{top:54px;}

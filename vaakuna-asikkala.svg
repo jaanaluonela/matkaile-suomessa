@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="Asikkalan vaakuna">
-  <path d="M12 10h96v58c0 34-20 54-48 64C32 122 12 102 12 68z" fill="#fff" stroke="#ffffff" stroke-width="6"/>
-  <path d="M18 16h84v52c0 29-16 47-42 57C34 115 18 97 18 68z" fill="#fff" stroke="#dfe8df" stroke-width="2"/>
-  <path d="M20 18 L100 18 L100 38 L73 64 L100 90 L100 100 L86 113 L60 86 L34 113 L20 100 L20 90 L47 64 L20 38 Z" fill="#d8232a"/>
-  <path d="M57 26h6v76h-6z" fill="#d8232a" transform="rotate(45 60 64)"/>
-  <path d="M57 26h6v76h-6z" fill="#d8232a" transform="rotate(-45 60 64)"/>
-  <g fill="#ffffff" stroke="#d8232a" stroke-width="1.2">
-    <g transform="translate(34 38)"><circle cx="0" cy="0" r="6"/><circle cx="8" cy="4" r="6"/><circle cx="-4" cy="8" r="6"/><circle cx="5" cy="12" r="6"/><circle cx="2" cy="6" r="3" fill="#f4cc4b" stroke="none"/></g>
-    <g transform="translate(84 38)"><circle cx="0" cy="0" r="6"/><circle cx="-8" cy="4" r="6"/><circle cx="4" cy="8" r="6"/><circle cx="-5" cy="12" r="6"/><circle cx="-2" cy="6" r="3" fill="#f4cc4b" stroke="none"/></g>
-    <g transform="translate(40 91)"><circle cx="0" cy="0" r="6"/><circle cx="8" cy="-4" r="6"/><circle cx="-4" cy="-8" r="6"/><circle cx="5" cy="-12" r="6"/><circle cx="2" cy="-6" r="3" fill="#f4cc4b" stroke="none"/></g>
-    <g transform="translate(80 91)"><circle cx="0" cy="0" r="6"/><circle cx="-8" cy="-4" r="6"/><circle cx="4" cy="-8" r="6"/><circle cx="-5" cy="-12" r="6"/><circle cx="-2" cy="-6" r="3" fill="#f4cc4b" stroke="none"/></g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-label="asikkala vaakunamerkki">
+<path d="M12 10h96v58c0 34-20 54-48 64C32 122 12 102 12 68z" fill="#0b5aa6" stroke="#fff" stroke-width="5"/>
+<path d="M29 37h62v42H29z" fill="#f2c94c" opacity=".18"/>
+<text x="60" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#f2c94c">AS</text>
 </svg>
