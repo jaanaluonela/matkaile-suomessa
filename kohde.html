@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="fi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kohde | Matkaile Suomessa</title><link rel="stylesheet" href="tyylit.css"></head>
 <body><div class="app">
-<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.12),rgba(7,31,25,.72)),url('hero-etusivu.jpg')">
-<div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn">♡</button></div>
-<div class="hero-title"><h1 id="kohdeNimi">Kohde</h1><p>Päijät-Häme · käytännön tiedot ja matkailijan vinkit</p></div>
+<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.74)),url('hero-etusivu.jpg')">
+  <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" data-save-action="trip" data-place="Kohde">♡</button></div>
+  <div class="hero-title"><div><h1 id="placeTitle">Kohde</h1><p id="placeSub">Päijät-Häme · Matkakohde</p></div></div>
 </header>
-<main class="content municipality-content">
-<section class="section card"><b id="kohdeOtsikko">Kohteen tiedot</b><p class="plain-region-note">Tämä on kohdesivupohja. Lisäämme kohteisiin tarkempia virallisia tietoja sitä mukaa, kun ne tarkistetaan.</p><div class="county-cta-row"><a class="cta-visited" href="index.html?mode=omat#kaydyn-kohteet">✓ Olen käynyt täällä</a><a class="cta-secondary" href="index.html?mode=omat">Lisää omiin matkoihin</a></div></section>
-<section class="section card practical-card"><b>ℹ️ Käytännön tiedot</b><div class="practical-grid">
-<div><b>📍 Osoite</b><small id="address">Tarkista viralliselta sivulta / kartasta</small></div>
-<div><b>🗺️ Kartta</b><small><a id="maplink" href="https://www.google.com/maps/search/" target="_blank" rel="noopener">Avaa kartalla</a></small></div>
-<div><b>🅿️ Pysäköinti</b><small>Tarkista kohteen tiedoista</small></div>
-<div><b>♿ Esteettömyys</b><small>Tarkista ennen lähtöä</small></div>
-<div><b>🚻 WC</b><small>Tarkista kohteen palveluista</small></div>
-<div><b>🐕 Koirat</b><small>Tarkista kohteen säännöistä</small></div>
-<div><b>🚐 Matkailuautolla</b><small>Tarkista pysäköinti ja korkeusrajoitukset</small></div>
-<div><b>🕒 Aukioloajat</b><small>Tarkista viralliselta sivulta</small></div>
-<div><b>🌐 Virallinen sivu</b><small><a id="official" href="https://www.visitlahti.fi/" target="_blank" rel="noopener">Avaa Visit Lahti / kohteen sivu</a></small></div>
-</div></section>
-<section class="section card"><b>📖 Tarina ja vinkki</b><p class="plain-region-note">Kohdesivuille lisätään myöhemmin lyhyt tarina, paikallinen vinkki ja lähistön palvelut. Tämä sivu varmistaa, että kohteista pääsee nyt eteenpäin.</p></section>
+<main class="content municipality-content valmis-kunta">
+  <section class="section card municipality-main-card"><b id="introTitle">Kohde</b><p class="plain-region-note" id="introText">Tämä kohdesivu kokoaa matkailijalle tärkeimmät tiedot yhteen paikkaan.</p><div class="county-cta-row"><a class="cta-visited" href="#" data-save-action="visited" data-place="Kohde">✓ Olen käynyt täällä</a><a class="cta-secondary" href="#" data-save-action="trip" data-place="Kohde">Lisää omiin matkoihin</a></div></section>
+  <section class="section card"><b>Käytännön tiedot</b><div class="compact-info-list ph-service-list">
+    <a class="place-row" id="mapLink" href="https://www.google.com/maps/search/?api=1&query=Päijät-Häme" target="_blank" rel="noopener"><span>🗺️</span><div><b>Avaa kartta</b><small>Google Maps -haku kohteen nimellä.</small></div><em>›</em></a>
+    <div class="place-row"><span>🅿️</span><div><b>Pysäköinti</b><small>Useimmissa kohteissa pysäköinti löytyy kohteen tai palveluiden läheltä. Tarkista paikan päällä opasteet.</small></div></div>
+    <div class="place-row"><span>♿</span><div><b>Esteettömyys</b><small>Esteettömyys vaihtelee kohteittain. Luontokohteissa reitit voivat olla epätasaisia.</small></div></div>
+    <div class="place-row"><span>🚻</span><div><b>WC</b><small>WC-palvelut löytyvät usein satamista, museoista, kahviloista tai matkailupalveluista.</small></div></div>
+    <div class="place-row"><span>🐕</span><div><b>Koirat</b><small>Koirat ovat yleensä tervetulleita ulkokohteisiin kytkettynä. Sisätiloissa noudatetaan kohteen omia ohjeita.</small></div></div>
+  </div></section>
+  <section class="section card"><b>Oma muisto</b><p class="plain-region-note">Tallenna kohde omiin matkoihin ja lisää myöhemmin päivämäärä, kuvat, muistiinpanot ja oma arvio.</p><div class="visit-actions"><a class="done" href="#" data-save-action="memory" data-place="Kohde">✓ Tallenna muistoksi</a><a class="fav" href="#" data-save-action="trip" data-place="Kohde">☆ Suosikki</a></div></section>
+  <section class="section"><div class="section-head"><h2>Takaisin kuntaan</h2></div><div class="nearby-kunta-links" id="backLinks"><a href="paijat-hame.html">Päijät-Häme</a></div></section>
 </main><nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
-</div><script>
-const params=new URLSearchParams(location.search);const nimi=params.get('nimi')||'Kohde';
-document.getElementById('kohdeNimi').textContent=nimi;document.getElementById('kohdeOtsikko').textContent=nimi;
-document.getElementById('maplink').href='https://www.google.com/maps/search/'+encodeURIComponent(nimi+' Päijät-Häme');
+</div><script src="data.js"></script><script src="sovellus.js"></script><script>
+const params=new URLSearchParams(location.search);const raw=params.get('kohde')||'kohde';const kunta=params.get('kunta')||'';
+function titleFromSlug(s){return s.split('-').filter(Boolean).map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ').replace('Paijanteen','Päijänteen').replace('Vaaksyn','Vääksyn').replace('Karkolan','Kärkölän').replace('Sysman','Sysmän').replace('Hameen','Hämeen');}
+const title=titleFromSlug(raw);const kuntaName=KUNNAT[kunta]?.nimi||'Päijät-Häme';
+document.title=title+' | Matkaile Suomessa';document.getElementById('placeTitle').textContent=title;document.getElementById('placeSub').textContent=kuntaName+' · Päijät-Häme';document.getElementById('introTitle').textContent=title;document.getElementById('introText').textContent=title+' on '+kuntaName+'n kohde. Sivulle on koottu matkailijalle tärkeät painikkeet, karttalinkki ja omaan matkamuistoon tallennus.';document.querySelectorAll('[data-place]').forEach(el=>el.dataset.place=title);document.getElementById('mapLink').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(title+' '+kuntaName);document.getElementById('backLinks').innerHTML='<a href="'+(KUNNAT[kunta]?.sivu||'paijat-hame.html')+'">'+kuntaName+'</a><a href="paijat-hame.html">Päijät-Häme</a>';
 </script></body></html>

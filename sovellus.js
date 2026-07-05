@@ -43,6 +43,7 @@ function toggleVisited(el){
   document.addEventListener('click', function(e){
     const btn = e.target.closest('[data-save-action]');
     if(!btn) return;
+    if(btn.tagName === 'A') e.preventDefault();
     const action = btn.dataset.saveAction;
     const place = btn.dataset.place || 'Kohde';
     try{

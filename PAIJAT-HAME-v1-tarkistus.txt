@@ -1,0 +1,13 @@
+Päijät-Häme v1.0 – tarkistus
+
+Tehdyt korjaukset:
+- Päijät-Hämeen 10 kunnan sivut säilytetty.
+- Hero-taustakuvat säilytetty alkuperäisillä nimillä.
+- Vaakunalinkit osoittavat Wikimedia Commonsin virallisiin vaakunoihin.
+- Kuntasivujen kohdelinkit eivät enää jää tyhjiksi (#), vaan ne avaavat toimivan kohdesivun.
+- Lisätty kohde.html yleiseksi kohdesivupohjaksi.
+- Olen käynyt täällä / Lisää omiin matkoihin tallentavat localStorageen.
+- Tyhjät # linkit poistettu tai muutettu toimiviksi.
+- Mukana backup-periaate: alkuperäinen toimiva kansio kopioitiin ennen muutoksia työskentelyn ajaksi.
+
+Tarkista GitHub Pages -julkaisun jälkeen erityisesti kuvat ja vaakunat mobiilissa.

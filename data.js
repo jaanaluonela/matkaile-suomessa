@@ -1,23 +1,23 @@
 const MAAKUNNAT = {
   "paijat-hame": {
     nimi: "Päijät-Häme",
-    vaakuna: "vaakuna-paijat-hame.svg",
+    vaakuna: "https://commons.wikimedia.org/wiki/Special:Redirect/file/P%C3%A4ij%C3%A4t-H%C3%A4me.vaakuna.svg",
     kunnat: ["asikkala","hartola","heinola","hollola","iitti","karkola","lahti","orimattila","padasjoki","sysma"],
     kuvaus: "Järviä, harjuja, kanavia, kaupunkikulttuuria ja retkikohteita Suomen sydämessä."
   }
 };
 
 const KUNNAT = {
-  asikkala: { nimi:"Asikkala", maakunta:"Päijät-Häme", vaakuna:"vaakuna-asikkala.svg", sivu:"asikkala.html", tunnus:"Vääksyn kanava, Pulkkilanharju ja Päijänteen maisemat", palvelut:['Matkaparkit', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Kaupat ja palvelut', 'Autoilijan palvelut'] },
-  hartola: { nimi:"Hartola", maakunta:"Päijät-Häme", vaakuna:"vaakuna-hartola.svg", sivu:"hartola.html", tunnus:"Kuninkaanpitäjä, Itä-Hämeen museo ja järvimaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
-  heinola: { nimi:"Heinola", maakunta:"Päijät-Häme", vaakuna:"vaakuna-heinola.svg", sivu:"heinola.html", tunnus:"Jyrängönvirta, Harjupaviljonki, lintutarha ja satama", palvelut:['Nähtävyydet', 'Karavaanarille', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Tarina'] },
-  hollola: { nimi:"Hollola", maakunta:"Päijät-Häme", vaakuna:"vaakuna-hollola.svg", sivu:"hollola.html", tunnus:"Keskiaikainen kirkko, Messilä, Tiirismaa ja Salpausselkä", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Karavaanarille ja majoitus', 'Kahvilat ja ravintolat', 'Tarina'] },
-  iitti: { nimi:"Iitti", maakunta:"Päijät-Häme", vaakuna:"vaakuna-iitti.svg", sivu:"iitti.html", tunnus:"Hiidenvuori, Kymijoki, Vuolenkoski ja Kimolan kanava", palvelut:['Luonto ja retkeily', 'Nähtävyydet', 'Kahvilat ja ravintolat', 'Karavaanarille ja majoitus', 'Tarina'] },
-  karkola: { nimi:"Kärkölä", maakunta:"Päijät-Häme", vaakuna:"vaakuna-karkola.svg", sivu:"karkola.html", tunnus:"Huovilan puisto, Järvelä ja rauhalliset kylämaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
-  lahti: { nimi:"Lahti", maakunta:"Päijät-Häme", vaakuna:"vaakuna-lahti.svg", sivu:"lahti.html", tunnus:"Vesijärven satama, Salpausselkä, kulttuuri ja kaupunkipalvelut", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
-  orimattila: { nimi:"Orimattila", maakunta:"Päijät-Häme", vaakuna:"vaakuna-orimattila.svg", sivu:"orimattila.html", tunnus:"Taidemuseo, Kehräämö, kylät ja maaseutureitit", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
-  padasjoki: { nimi:"Padasjoki", maakunta:"Päijät-Häme", vaakuna:"vaakuna-padasjoki.svg", sivu:"padasjoki.html", tunnus:"Päijänteen kansallispuisto, Kelvenne, satama ja järvimaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Karavaanarille ja majoitus', 'Kahvilat ja ravintolat', 'Tarina'] },
-  sysma: { nimi:"Sysmä", maakunta:"Päijät-Häme", vaakuna:"vaakuna-sysma.svg", sivu:"sysma.html", tunnus:"Kammiovuori, Päijätsalo, Suopelto ja Tainionvirta", palvelut:['Luonto ja retkeily', 'Nähtävyydet', 'Kahvilat ja ravintolat', 'Karavaanarille ja majoitus', 'Tarina'] }
+  asikkala: { nimi:"Asikkala", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Asikkala.vaakuna.svg", sivu:"asikkala.html", tunnus:"Vääksyn kanava, Pulkkilanharju ja Päijänteen maisemat", palvelut:['Matkaparkit', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Kaupat ja palvelut', 'Autoilijan palvelut'] },
+  hartola: { nimi:"Hartola", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Hartola.vaakuna.svg", sivu:"hartola.html", tunnus:"Kuninkaanpitäjä, Itä-Hämeen museo ja järvimaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
+  heinola: { nimi:"Heinola", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Heinola.vaakuna.svg", sivu:"heinola.html", tunnus:"Jyrängönvirta, Harjupaviljonki, lintutarha ja satama", palvelut:['Nähtävyydet', 'Karavaanarille', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Tarina'] },
+  hollola: { nimi:"Hollola", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Hollola.vaakuna.svg", sivu:"hollola.html", tunnus:"Keskiaikainen kirkko, Messilä, Tiirismaa ja Salpausselkä", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Karavaanarille ja majoitus', 'Kahvilat ja ravintolat', 'Tarina'] },
+  iitti: { nimi:"Iitti", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Iitti.vaakuna.svg", sivu:"iitti.html", tunnus:"Hiidenvuori, Kymijoki, Vuolenkoski ja Kimolan kanava", palvelut:['Luonto ja retkeily', 'Nähtävyydet', 'Kahvilat ja ravintolat', 'Karavaanarille ja majoitus', 'Tarina'] },
+  karkola: { nimi:"Kärkölä", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/K%C3%A4rk%C3%B6l%C3%A4.vaakuna.svg", sivu:"karkola.html", tunnus:"Huovilan puisto, Järvelä ja rauhalliset kylämaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
+  lahti: { nimi:"Lahti", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahti.vaakuna.svg", sivu:"lahti.html", tunnus:"Vesijärven satama, Salpausselkä, kulttuuri ja kaupunkipalvelut", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
+  orimattila: { nimi:"Orimattila", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Orimattila.vaakuna.svg", sivu:"orimattila.html", tunnus:"Taidemuseo, Kehräämö, kylät ja maaseutureitit", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Kahvilat ja ravintolat', 'Palvelut', 'Tarina'] },
+  padasjoki: { nimi:"Padasjoki", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Padasjoki.vaakuna.svg", sivu:"padasjoki.html", tunnus:"Päijänteen kansallispuisto, Kelvenne, satama ja järvimaisemat", palvelut:['Nähtävyydet', 'Luonto ja retkeily', 'Karavaanarille ja majoitus', 'Kahvilat ja ravintolat', 'Tarina'] },
+  sysma: { nimi:"Sysmä", maakunta:"Päijät-Häme", vaakuna:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Sysm%C3%A4.vaakuna.svg", sivu:"sysma.html", tunnus:"Kammiovuori, Päijätsalo, Suopelto ja Tainionvirta", palvelut:['Luonto ja retkeily', 'Nähtävyydet', 'Kahvilat ja ravintolat', 'Karavaanarille ja majoitus', 'Tarina'] }
 };
 
 const HAKU = [
