@@ -1330,42 +1330,17 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .region-hero .region-badge.crest-badge{width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;}
 }
 
-/* v78 – illan viimeinen korjaus: kunnille puhtaat taustakuvat ja hero turvalliseen kohtaan */
-.municipality-hero.hero.small,
-.municipality-hero{
-  min-height:220px!important;
-  padding:calc(env(safe-area-inset-top, 0px) + 44px) 18px 22px!important;
-  background-size:cover!important;
-  background-position:center center!important;
-}
-.municipality-hero .toprow{
-  position:absolute!important;
-  top:calc(env(safe-area-inset-top, 0px) + 12px)!important;
-  left:18px!important;
-  right:18px!important;
-  z-index:3!important;
-}
-.municipality-hero .hero-title.with-coat{
-  margin-top:72px!important;
-  align-items:center!important;
-}
-.municipality-hero .hero-title h1{font-size:36px!important;line-height:1!important;}
-.municipality-hero .hero-title p{font-size:15px!important;line-height:1.22!important;max-width:310px!important;}
-.municipality-hero .coat-img{width:56px!important;height:62px!important;min-width:56px!important;}
-.region-hero .region-title{bottom:28px!important;}
-.region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
-
-/* Asikkala mallikunta - viimeistelty rakenne */
-.quick-anchor-grid a.muni-fact{text-decoration:none;color:inherit;display:block;}
-.link-list a{background:#f7fbf6;border:1px solid #e1eddf;border-radius:15px;padding:10px 11px;text-decoration:none;display:block;color:inherit;}
-.link-list a b{display:block;font-size:14px;color:var(--green);margin-bottom:4px;}
-.link-list a small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
-.story-link{text-decoration:none;color:inherit;display:block;}
-.kohde-hero{min-height:245px!important;}
-.detail-grid{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px;}
-.detail-grid div{background:#f7fbf6;border:1px solid #e1eddf;border-radius:15px;padding:10px 11px;}
-.detail-grid b{display:block;color:var(--green);font-size:13px;margin-bottom:4px;}
-.detail-grid small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
-.kohde-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
-.kohde-actions a{text-align:center;text-decoration:none;}
-@media(max-width:390px){.kohde-actions{grid-template-columns:1fr}.kohde-hero{min-height:230px!important}}
+/* Asikkala mallikunta - toimivat pikavalikot ja kohdesivupohja */
+.quick-anchor-grid a.muni-fact{display:block;text-decoration:none;color:inherit}
+.service-items.link-list{display:grid;gap:10px}
+.service-items.link-list a{display:block;text-decoration:none;color:inherit;background:#f8fcf8;border:1px solid var(--line);border-radius:18px;padding:12px 14px}
+.service-items.link-list a b{display:block;color:var(--green)}
+.service-items.link-list a small{display:block;color:var(--muted);line-height:1.35;margin-top:4px}
+.story-link{display:block;text-decoration:none;color:inherit}
+.detail-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+.detail-grid div{background:#f8fcf8;border:1px solid var(--line);border-radius:16px;padding:12px}
+.detail-grid b{display:block;color:var(--green);font-size:15px}
+.detail-grid small{display:block;color:var(--muted);line-height:1.35;margin-top:4px}
+.kohde-actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.kohde-actions a{text-align:center;text-decoration:none}
+.municipality-main-card .plain-region-note{font-size:17px;line-height:1.45;font-weight:500;color:var(--muted);margin-top:12px}
