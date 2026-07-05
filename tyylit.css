@@ -1375,3 +1375,13 @@ a.muni-fact,a.ph-info{text-decoration:none;color:inherit;display:block;}
 /* v80 – maakuntavaakuna pysyy näkyvissä */
 .region-hero .region-title{bottom:34px!important;}
 .region-hero .region-badge.crest-badge{width:58px!important;height:58px!important;min-width:58px!important;min-height:58px!important;}
+
+
+/* v81 – kuntalistaan asukasmäärä + kohdesivun käytännön tiedot */
+.clean-municipality-grid .municipality-card div{display:flex;flex-direction:column;gap:3px;}
+.clean-municipality-grid .municipality-card .muni-meta{display:block;font-size:12px;line-height:1.15;color:#6d7d74;font-weight:750;}
+.practical-list div small{display:block;margin-top:3px;}
+/* v81 – kunta-hero pysyy iPhonen selainpalkin alapuolella */
+.municipality-hero.hero.small,.municipality-hero{min-height:250px!important;}
+.municipality-hero .hero-title.with-coat{margin-top:92px!important;}
+@media(max-width:390px){.clean-municipality-grid .municipality-card .muni-meta{font-size:11.5px}.municipality-hero .hero-title.with-coat{margin-top:96px!important;}}

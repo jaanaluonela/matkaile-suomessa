@@ -1,0 +1,8 @@
+Matkaile Suomessa v81
+
+Muutokset:
+- Päijät-Hämeen kuntalistaan lisätty asukasmäärä ja tieto kunta/kaupunki.
+- Kohdesivupohjan käytännön tietoihin lisätty täydempi vakiomalli: osoite, kartta, pysäköinti, esteettömyys, WC, koirat, matkailuauto, pääsymaksu, aukioloajat ja virallinen verkkosivu.
+- Kuntasivujen pikalaatikot säilytetty ankkurilinkkeinä.
+- Lapsiperheille-osio säilytetty osana kaikkien kuntien vakiomallia.
+- Hero-alueen turvaväliä vahvistettu iPhonen selainpalkkia varten.
