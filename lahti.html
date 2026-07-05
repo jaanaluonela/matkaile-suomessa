@@ -2,7 +2,7 @@
 <html lang="fi">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lahti | Matkaile Suomessa</title><link rel="stylesheet" href="tyylit.css"></head>
 <body><div class="app">
-<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.70)),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Sibelius%20hall%20Lahti.jpg?width=1400')">
+<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.70)),url('hero-lahti.jpg')">
   <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn">♡</button></div>
   <div class="hero-title with-coat"><img class="coat-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahti.vaakuna.svg" alt="Lahti vaakuna"><div><h1>Lahti</h1><p>Päijät-Häme · Satama, Salpausselkä, kulttuuri ja kaupunkipalvelut</p></div></div>
 </header>
@@ -10,36 +10,37 @@
   <section class="section card municipality-main-card">
     <b>Lahti matkailijalle</b>
     <p class="plain-region-note">Lahti on Päijät-Hämeen suurin kaupunki ja yhdistää Vesijärven sataman, Salpausselän harjut, kulttuurikohteet ja hyvät matkailupalvelut.</p>
-    <div class="muni-fact-grid"><div class="muni-fact"><b>Maakunta</b><small>Päijät-Häme</small></div><div class="muni-fact"><b>Kohteita</b><small>15 poimintaa</small></div><div class="muni-fact"><b>Karavaanarille</b><small>2 tärkeää kohtaa</small></div><div class="muni-fact"><b>Tarinat</b><small>2 paikallista tarinaa</small></div></div>
-    <div class="county-cta-row"><a class="cta-visited" href="index.html?mode=omat#kaydyn-kunnat">✓ Olen käynyt täällä</a><a class="cta-secondary" href="index.html?mode=omat">Lisää omiin matkoihin</a></div>
+    <div class="muni-fact-grid quick-jump-grid"><a class="muni-fact" href="#nahtavyydet"><b>Nähtävyydet</b><small>Katso kohteet</small></a><a class="muni-fact" href="#lapsiperheille"><b>Lapsiperheille</b><small>Tekemistä lapsille</small></a><a class="muni-fact" href="#karavaanarille"><b>Karavaanarille</b><small>Matkaparkit ja palvelut</small></a><a class="muni-fact" href="#tarinat"><b>Tarinat</b><small>Historia ja paikallisuus</small></a></div><div class="county-cta-row"><a class="cta-visited" href="index.html?mode=omat#kaydyn-kunnat">✓ Olen käynyt täällä</a><a class="cta-secondary" href="index.html?mode=omat">Lisää omiin matkoihin</a></div>
   </section>
   <section class="section"><div class="section-head"><h2>⭐ Älä missaa</h2><a class="more" href="kartta.html">Kartta ›</a></div><div class="place-list municipality-place-list ph-service-list">
-<a class="place-row" href="#"><span>⭐</span><div><b>Vesijärven satama</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Sibeliustalo</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Lahden visuaalisten taiteiden museo Malva</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Urheilukeskus ja hyppyrimäet</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Radio- ja tv-museo Mastola</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Salpausselkä Geopark -maisemat</b><small></small></div><em>›</em></a>
+<a class="place-row" href="kohde.html?nimi=Vesij%C3%A4rven%20satama&kunta=Lahti"><span>⭐</span><div><b>Vesijärven satama</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Sibeliustalo&kunta=Lahti"><span>⭐</span><div><b>Sibeliustalo</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Lahden%20visuaalisten%20taiteiden%20museo%20Malva&kunta=Lahti"><span>⭐</span><div><b>Lahden visuaalisten taiteiden museo Malva</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Urheilukeskus%20ja%20hyppyrim%C3%A4et&kunta=Lahti"><span>⭐</span><div><b>Urheilukeskus ja hyppyrimäet</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Radio-%20ja%20tv-museo%20Mastola&kunta=Lahti"><span>⭐</span><div><b>Radio- ja tv-museo Mastola</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Salpausselk%C3%A4%20Geopark%20-maisemat&kunta=Lahti"><span>⭐</span><div><b>Salpausselkä Geopark -maisemat</b><small></small></div><em>›</em></a>
 </div></section>
   <section class="section muni-service-sections"><div class="section-head"><h2>Palvelut ja tekemistä</h2></div>
-    <details class="service-category-card service-details" open><summary>🚐 Karavaanarille</summary><div class="service-items">
+    <details id="karavaanarille" class="service-category-card service-details" open><summary>🚐 Karavaanarille</summary><div class="service-items">
 <div><b>Mukkulan alue ja leirintäpalvelut</b><small>Vesijärven läheinen matkailualue; tarkista palvelujen ajantasainen tilanne ennen lähtöä.</small></div>
 <div><b>Sataman ja keskustan pysäköinti</b><small>Päiväpysähdyksiin sopivia pysäköintialueita keskustan ja sataman tuntumassa.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>📷 Nähtävyydet</summary><div class="service-items">
+    <details id="lapsiperheille" class="service-category-card service-details" open><summary>👨‍👩‍👧 Lapsiperheille</summary><div class="service-items"><div><b>Launeen perhepuisto</b><small>Laaja perhekohde, jossa on leikkiä ja ulkoilua.</small></div><div><b>Pikku-Vesijärven puisto</b><small>Sataman lähellä oleva puisto ja helppo pysähdyspaikka.</small></div><div><b>Satama lasten kanssa</b><small>Järvimaisema, jäätelö, kahvilat ja lyhyet kävelyt.</small></div></div></details>
+
+    <details id="nahtavyydet" class="service-category-card service-details" open><summary>📷 Nähtävyydet</summary><div class="service-items">
 <div><b>Sibeliustalo</b><small>Tunnettu konsertti- ja tapahtumatalo Vesijärven satamassa.</small></div>
 <div><b>Malva</b><small>Lahden museoiden visuaalisen taiteen, muotoilun ja julisteen museo.</small></div>
 <div><b>Urheilukeskus ja hyppyrimäet</b><small>Lahden ikoninen urheilumaisema Salpausselällä.</small></div>
 <div><b>Radio- ja tv-museo Mastola</b><small>Median historiaa Lahden radiomastojen yhteydessä.</small></div>
 <div><b>Vesijärven satama</b><small>Kahviloita, ravintoloita ja järvimaisemaa.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>🌲 Luonto ja retkeily</summary><div class="service-items">
+    <details id="luonto" class="service-category-card service-details" open><summary>🌲 Luonto ja retkeily</summary><div class="service-items">
 <div><b>Salpausselkä</b><small>Harju- ja ulkoilumaastoja kaupungin tuntumassa.</small></div>
 <div><b>Pikku-Vesijärven puisto</b><small>Kaupunkipuisto sataman läheisyydessä.</small></div>
 <div><b>Mukkulan ranta-alue</b><small>Vesijärven rantamaisemia ja ulkoilua.</small></div>
 <div><b>Lapakiston luonnonsuojelualue</b><small>Retkeilykohde Lahden seudulla.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>☕ Kahvilat ja ravintolat</summary><div class="service-items">
+    <details id="ravintolat" class="service-category-card service-details" open><summary>☕ Kahvilat ja ravintolat</summary><div class="service-items">
 <div><b>Sataman ravintolat ja kahvilat</b><small>Runsaasti vaihtoehtoja Vesijärven rannalla.</small></div>
 <div><b>Lahden keskusta</b><small>Kahviloita, lounaspaikkoja ja ravintoloita.</small></div>
 <div><b>Malskin alue</b><small>Ravintoloita, museo ja kaupunkikulttuuria.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>🛒 Kaupat ja palvelut</summary><div class="service-items">
+    <details id="palvelut" class="service-category-card service-details" open><summary>🛒 Kaupat ja palvelut</summary><div class="service-items">
 <div><b>Keskustan kaupat</b><small>Matkailijan ostokset ja palvelut.</small></div>
 <div><b>Kauppakeskukset</b><small>Laajemmat ostosmahdollisuudet.</small></div>
 <div><b>Apteekit</b><small>Useita apteekkeja eri puolilla kaupunkia.</small></div>
@@ -47,7 +48,7 @@
 <div><b>Matkakeskus</b><small>Juna- ja bussiyhteydet.</small></div>
 </div></details>
   </section>
-  <section class="section"><div class="section-head"><h2>📖 Tarinat</h2></div>
+  <section class="section" id="tarinat"><div class="section-head"><h2>📖 Tarinat</h2></div>
 <div class="story-card"><b>Hyppyrimäkien Lahti</b><p>Lahden hyppyrimäet ja Salpausselän kisat ovat osa suomalaisen talviurheilun historiaa.</p></div><div class="story-card"><b>Vesijärven sataman muutos</b><p>Satama on kasvanut teollisuuden ja vesiliikenteen maisemasta kaupunkilaisten ja matkailijoiden kohtaamispaikaksi.</p></div>
 </section>
   <section class="section card"><b>Päiväreitti: Lahti</b><div class="day-route">

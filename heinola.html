@@ -2,7 +2,7 @@
 <html lang="fi">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Heinola | Matkaile Suomessa</title><link rel="stylesheet" href="tyylit.css"></head>
 <body><div class="app">
-<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.70)),url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Heinolan%20Harjupaviljonki.jpg?width=1400')">
+<header class="hero small municipality-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.10),rgba(7,31,25,.70)),url('hero-heinola.jpg')">
   <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn">♡</button></div>
   <div class="hero-title with-coat"><img class="coat-img" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Heinola.vaakuna.svg" alt="Heinola vaakuna"><div><h1>Heinola</h1><p>Päijät-Häme · Harjupaviljonki, satama, lintutarha ja Vierumäki</p></div></div>
 </header>
@@ -10,43 +10,44 @@
   <section class="section card municipality-main-card">
     <b>Heinola matkailijalle</b>
     <p class="plain-region-note">Heinola on vesistöjen, puistojen ja harjumaisemien kaupunki, jossa keskustan, sataman ja Harjupuiston kohteet ovat lähellä toisiaan.</p>
-    <div class="muni-fact-grid"><div class="muni-fact"><b>Maakunta</b><small>Päijät-Häme</small></div><div class="muni-fact"><b>Kohteita</b><small>15 poimintaa</small></div><div class="muni-fact"><b>Karavaanarille</b><small>2 tärkeää kohtaa</small></div><div class="muni-fact"><b>Tarinat</b><small>2 paikallista tarinaa</small></div></div>
-    <div class="county-cta-row"><a class="cta-visited" href="index.html?mode=omat#kaydyn-kunnat">✓ Olen käynyt täällä</a><a class="cta-secondary" href="index.html?mode=omat">Lisää omiin matkoihin</a></div>
+    <div class="muni-fact-grid quick-jump-grid"><a class="muni-fact" href="#nahtavyydet"><b>Nähtävyydet</b><small>Katso kohteet</small></a><a class="muni-fact" href="#lapsiperheille"><b>Lapsiperheille</b><small>Tekemistä lapsille</small></a><a class="muni-fact" href="#karavaanarille"><b>Karavaanarille</b><small>Matkaparkit ja palvelut</small></a><a class="muni-fact" href="#tarinat"><b>Tarinat</b><small>Historia ja paikallisuus</small></a></div><div class="county-cta-row"><a class="cta-visited" href="index.html?mode=omat#kaydyn-kunnat">✓ Olen käynyt täällä</a><a class="cta-secondary" href="index.html?mode=omat">Lisää omiin matkoihin</a></div>
   </section>
   <section class="section"><div class="section-head"><h2>⭐ Älä missaa</h2><a class="more" href="kartta.html">Kartta ›</a></div><div class="place-list municipality-place-list ph-service-list">
-<a class="place-row" href="#"><span>⭐</span><div><b>Heinolan Harjupaviljonki</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Heinolan satama</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Lintutarha</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Heinolan museot</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Vierumäki</b><small></small></div><em>›</em></a><a class="place-row" href="#"><span>⭐</span><div><b>Rantapuisto</b><small></small></div><em>›</em></a>
+<a class="place-row" href="kohde.html?nimi=Heinolan%20Harjupaviljonki&kunta=Heinola"><span>⭐</span><div><b>Heinolan Harjupaviljonki</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Heinolan%20satama&kunta=Heinola"><span>⭐</span><div><b>Heinolan satama</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Lintutarha&kunta=Heinola"><span>⭐</span><div><b>Lintutarha</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Heinolan%20museot&kunta=Heinola"><span>⭐</span><div><b>Heinolan museot</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Vierum%C3%A4ki&kunta=Heinola"><span>⭐</span><div><b>Vierumäki</b><small></small></div><em>›</em></a><a class="place-row" href="kohde.html?nimi=Rantapuisto&kunta=Heinola"><span>⭐</span><div><b>Rantapuisto</b><small></small></div><em>›</em></a>
 </div></section>
   <section class="section muni-service-sections"><div class="section-head"><h2>Palvelut ja tekemistä</h2></div>
-    <details class="service-category-card service-details" open><summary>🚐 Karavaanarille</summary><div class="service-items">
+    <details id="karavaanarille" class="service-category-card service-details" open><summary>🚐 Karavaanarille</summary><div class="service-items">
 <div><b>Heinolan sataman alue</b><small>Satama-alue toimii hyvänä pysähdyspaikkana keskustan, Rantapuiston ja kesäteatterin läheisyydessä.</small></div>
 <div><b>Heinola Camping / leirintäpalvelut</b><small>Tarkista ajantasainen tilanne ja kausi palveluntarjoajalta ennen lähtöä.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>📷 Nähtävyydet</summary><div class="service-items">
+    <details id="lapsiperheille" class="service-category-card service-details" open><summary>👨‍👩‍👧 Lapsiperheille</summary><div class="service-items"><div><b>Heinolan lintutarha</b><small>Lapsille kiinnostava ja helppo vierailukohde keskustan lähellä.</small></div><div><b>Sataman alue</b><small>Kävelyä, jäätelöä ja järvimaisemaa.</small></div><div><b>Harjupuisto</b><small>Lyhyitä kävelyjä ja maisemia keskustan tuntumassa.</small></div></div></details>
+
+    <details id="nahtavyydet" class="service-category-card service-details" open><summary>📷 Nähtävyydet</summary><div class="service-items">
 <div><b>Harjupaviljonki</b><small>Vuonna 1900 rakennettu kulttuurihistoriallisesti arvokas paviljonki Harjupuistossa.</small></div>
 <div><b>Heinolan lintutarha</b><small>Tunnettu lintujen hoitoon ja esittelyyn liittyvä kohde.</small></div>
 <div><b>Heinolan satama</b><small>Kaunis satama kävelymatkan päässä keskustasta.</small></div>
 <div><b>Heinolan taidemuseo ja kaupunginmuseo</b><small>Kulttuurikohteita keskustan tuntumassa.</small></div>
 <div><b>Kesäteatteri</b><small>Tunnettu kesäinen kulttuurikohde sataman ja keskustan alueella.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>🌲 Luonto ja retkeily</summary><div class="service-items">
+    <details id="luonto" class="service-category-card service-details" open><summary>🌲 Luonto ja retkeily</summary><div class="service-items">
 <div><b>Harjupuisto</b><small>Keskustan lähellä oleva harju- ja puistoalue.</small></div>
 <div><b>Rantapuisto</b><small>Viihtyisä kävelyalue veden äärellä.</small></div>
 <div><b>Konnivesi ja Jyrängönvirta</b><small>Heinolan vesimaisemia ja veneilyä.</small></div>
 <div><b>Vierumäki</b><small>Liikunta-, ulkoilu- ja majoituspalveluja Heinolan eteläpuolella.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>☕ Kahvilat ja ravintolat</summary><div class="service-items">
+    <details id="ravintolat" class="service-category-card service-details" open><summary>☕ Kahvilat ja ravintolat</summary><div class="service-items">
 <div><b>Harjupaviljongin kahvila</b><small>Vohvelikahvila historiallisessa paviljongissa.</small></div>
 <div><b>Sataman ravintolat ja kahvilat</b><small>Ruokailu ja kahvittelu sataman seudulla.</small></div>
 <div><b>Keskustan kahvilat</b><small>Keskustan palvelut kävelyetäisyydellä.</small></div>
 </div></details>
-    <details class="service-category-card service-details" open><summary>🛒 Kaupat ja palvelut</summary><div class="service-items">
+    <details id="palvelut" class="service-category-card service-details" open><summary>🛒 Kaupat ja palvelut</summary><div class="service-items">
 <div><b>Keskustan ruokakaupat</b><small>Ruokaostokset ja matkailijan arkipalvelut.</small></div>
 <div><b>Apteekit</b><small>Apteekkipalvelut keskustassa.</small></div>
 <div><b>Huoltoasemat</b><small>Polttoaine ja autoilijan palvelut kaupungin sisääntuloteiden läheisyydessä.</small></div>
 <div><b>Vierumäki</b><small>Majoitus-, ravintola- ja liikuntapalvelut.</small></div>
 </div></details>
   </section>
-  <section class="section"><div class="section-head"><h2>📖 Tarinat</h2></div>
+  <section class="section" id="tarinat"><div class="section-head"><h2>📖 Tarinat</h2></div>
 <div class="story-card"><b>Harjupaviljongin tarina</b><p>Vuonna 1900 valmistunut paviljonki rakennettiin aikansa matkailijoille ja kylpylävieraille. Itämaisvaikutteinen jugendrakennus on Heinolan tunnistettavimpia maamerkkejä.</p></div><div class="story-card"><b>Heinolan kylpyläkaupungin henki</b><p>Heinolan puistot, harjut ja vesimaisemat liittyvät kaupungin pitkään matkailu- ja kylpyläperinteeseen.</p></div>
 </section>
   <section class="section card"><b>Päiväreitti: Heinola</b><div class="day-route">

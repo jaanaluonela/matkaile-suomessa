@@ -1,0 +1,12 @@
+Matkaile Suomessa v80
+
+Muutokset:
+- Lahden kansikuva vaihdettu Salpausselän hyppyrimäkiä ja radiomastoja esittävään paikalliseen kuvaan.
+- Kaikki kuntien hero-kuvat osoittavat nyt projektin omiin paikallisiin tiedostoihin.
+- Kuntasivujen neljä ylälaatikkoa muutettu pikavalikoksi: Nähtävyydet, Lapsiperheille, Karavaanarille ja Tarinat.
+- Lisätty Lapsiperheille-osio kaikkiin Päijät-Hämeen kuntiin.
+- Maakuntasivun laatikot muutettu toiminnallisiksi linkeiksi: kunnat, kaupungit, karavaanarin palvelut ja omat matkat.
+- Lisätty Päijät-Hämeen kaupungit -osio sekä maakunnan karavaanaripalveluiden koonti.
+- Lisätty yleinen kohdesivumalli kohde.html, jotta listakorteista pääsee eteenpäin.
+- Lisätty kohdesivuille käytännön tiedot -rakenne: kartta, pysäköinti, esteettömyys, WC ja omat matkat.
+- Korjattu hero-alueen yläreunan turvaväliä iPhonen selainpalkkia varten.
