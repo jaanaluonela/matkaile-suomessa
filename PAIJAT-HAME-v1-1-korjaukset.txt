@@ -1,0 +1,9 @@
+Päijät-Häme v1.1 korjaus
+
+Korjattu käyttäjän havaintojen perusteella:
+- Kuntasivujen palvelukohteet muutettu oikeiksi klikattaviksi linkeiksi.
+- Lisää omiin matkoihin avaa nyt Omat matkat / Päijät-Häme -sivun tallennuksen jälkeen.
+- Kohdesivujen karttalinkki avautuu samaan ikkunaan, jotta Messenger/iPhone ei estä sitä.
+- Kuntien aloitusteksteihin lisätty tieto siitä, onko kyseessä kunta vai kaupunki sekä noin-asukasmäärä.
+- Hero-taustakuvien CSS varmistettu: cover, center ja no-repeat.
+- Ennen korjausta otettu kansiotasoinen palautuskopio: ms_backup_before_linkfix.

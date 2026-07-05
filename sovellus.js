@@ -53,5 +53,7 @@ function toggleVisited(el){
       localStorage.setItem(key, JSON.stringify(old));
     }catch(err){}
     toast(labels[action] || 'Tallennettu');
+    const redirect = btn.dataset.saveRedirect;
+    if(redirect){ setTimeout(()=>{ window.location.href = redirect; }, 350); }
   });
 })();
