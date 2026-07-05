@@ -1330,52 +1330,42 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
   .region-hero .region-badge.crest-badge{width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important;}
 }
 
-/* v1.1 korjaus: palvelukortit ovat oikeita linkkejä ja hero-kuvat näkyvät selkeämmin */
-.service-items a.service-link-row{display:block;text-decoration:none;color:inherit}
-.service-items a.service-link-row>div{cursor:pointer}
-.service-items a.service-link-row>div:after{content:'›';float:right;font-weight:900;color:#23845e;font-size:26px;margin-top:-36px}
-.municipality-hero{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
-
-/* v1.2 lopullinen korjaus: kuntasivujen hero-alueet kuntoon */
-.hero.small.municipality-hero,
+/* v78 – illan viimeinen korjaus: kunnille puhtaat taustakuvat ja hero turvalliseen kohtaan */
+.municipality-hero.hero.small,
 .municipality-hero{
+  min-height:220px!important;
+  padding:calc(env(safe-area-inset-top, 0px) + 44px) 18px 22px!important;
   background-size:cover!important;
   background-position:center center!important;
-  background-repeat:no-repeat!important;
-  min-height:205px!important;
-  border-radius:0 0 28px 28px!important;
-  overflow:hidden!important;
-}
-.municipality-hero:before{
-  content:""!important;
-  position:absolute!important;
-  inset:0!important;
-  background:linear-gradient(180deg,rgba(7,31,25,.08) 0%,rgba(7,31,25,.18) 42%,rgba(7,31,25,.70) 100%)!important;
-  pointer-events:none!important;
-}
-.municipality-hero .hero-title.with-coat{
-  position:relative!important;
-  z-index:2!important;
-  margin-top:52px!important;
-  align-items:center!important;
-}
-.municipality-hero .hero-title.with-coat h1{
-  font-size:38px!important;
-  line-height:.96!important;
-  margin:0 0 5px!important;
-  text-shadow:0 3px 16px rgba(0,0,0,.50)!important;
-}
-.municipality-hero .hero-title.with-coat p{
-  font-size:14px!important;
-  line-height:1.2!important;
-  text-shadow:0 3px 14px rgba(0,0,0,.55)!important;
 }
 .municipality-hero .toprow{
-  position:relative!important;
+  position:absolute!important;
+  top:calc(env(safe-area-inset-top, 0px) + 12px)!important;
+  left:18px!important;
+  right:18px!important;
   z-index:3!important;
 }
-.municipality-hero .coat-img{
-  position:relative!important;
-  z-index:2!important;
-  background:#fff!important;
+.municipality-hero .hero-title.with-coat{
+  margin-top:72px!important;
+  align-items:center!important;
 }
+.municipality-hero .hero-title h1{font-size:36px!important;line-height:1!important;}
+.municipality-hero .hero-title p{font-size:15px!important;line-height:1.22!important;max-width:310px!important;}
+.municipality-hero .coat-img{width:56px!important;height:62px!important;min-width:56px!important;}
+.region-hero .region-title{bottom:28px!important;}
+.region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
+
+/* Asikkala mallikunta - viimeistelty rakenne */
+.quick-anchor-grid a.muni-fact{text-decoration:none;color:inherit;display:block;}
+.link-list a{background:#f7fbf6;border:1px solid #e1eddf;border-radius:15px;padding:10px 11px;text-decoration:none;display:block;color:inherit;}
+.link-list a b{display:block;font-size:14px;color:var(--green);margin-bottom:4px;}
+.link-list a small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
+.story-link{text-decoration:none;color:inherit;display:block;}
+.kohde-hero{min-height:245px!important;}
+.detail-grid{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px;}
+.detail-grid div{background:#f7fbf6;border:1px solid #e1eddf;border-radius:15px;padding:10px 11px;}
+.detail-grid b{display:block;color:var(--green);font-size:13px;margin-bottom:4px;}
+.detail-grid small{display:block;color:#56645d;font-size:12.5px;line-height:1.4;}
+.kohde-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.kohde-actions a{text-align:center;text-decoration:none;}
+@media(max-width:390px){.kohde-actions{grid-template-columns:1fr}.kohde-hero{min-height:230px!important}}

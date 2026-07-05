@@ -43,7 +43,6 @@ function toggleVisited(el){
   document.addEventListener('click', function(e){
     const btn = e.target.closest('[data-save-action]');
     if(!btn) return;
-    if(btn.tagName === 'A') e.preventDefault();
     const action = btn.dataset.saveAction;
     const place = btn.dataset.place || 'Kohde';
     try{
@@ -53,7 +52,5 @@ function toggleVisited(el){
       localStorage.setItem(key, JSON.stringify(old));
     }catch(err){}
     toast(labels[action] || 'Tallennettu');
-    const redirect = btn.dataset.saveRedirect;
-    if(redirect){ setTimeout(()=>{ window.location.href = redirect; }, 350); }
   });
 })();
