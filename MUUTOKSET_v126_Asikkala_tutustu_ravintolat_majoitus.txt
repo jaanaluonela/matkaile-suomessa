@@ -1,0 +1,19 @@
+Versio: v126
+Nimi: MatkaileSuomessa_v126_Asikkala_tutustu_ravintolat_majoitus.zip
+
+Muutokset:
+- Päivitetty vain Asikkalan sivua ja Asikkalan kohdesivuja.
+- Vaihdettu otsikko "Älä missaa" -> "Tutustu Asikkalaan".
+- Poistettu Asikkalan esittelyn tilastolaatikot: 8 pääkohdetta, 7 ruokapaikkaa, 4 karavaanari ja 100% Asikkala-malli.
+- Poistettu Tapahtumat-osio Asikkalasta.
+- Palautettu Asikkalan hero-taustaksi valokuvapohjainen Päijänne/Pulkkilanharju-kuva.
+- Lisätty Tutustu Asikkalaan -osioon 8 kohdetta.
+- Lisätty Ravintolat ja kahvilat -osioon 7 oikeaa Asikkalan/Vääksyn ruokapaikkaa.
+- Lisätty Karavaanarin palvelut -osioon 4 selkeää palvelukohtaa Kanavaanarin ja Päijännetalon palveluihin perustuen.
+- Lisätty Majoitus-osioon vain oikeita majoituskohteita: Hotelli Tallukka, Vääksyn Apteekinmajoitus ja Hoimelan Tila.
+- Lisätty uudet kohdesivut: Aurinkovuori, Päijänteen kansallispuisto ja Vanha Vääksy.
+- Tarkistettu sisäiset linkit: ei puuttuvia HTML-tiedostoja.
+
+Huomio:
+- Muiden kuntien sivuja ei muutettu.
+- Vaakuna jätettiin samaan toimivaan Wikimedia-polkuun kuin v125-versiossa, jotta se ei vaihdu vääräksi placeholderiksi.

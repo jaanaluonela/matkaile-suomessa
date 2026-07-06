@@ -1,58 +1,7 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-  <meta name="matkaile-versio" content="v88-paijat-hame-korjattu">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Päijänteen kansallispuisto | Matkaile Suomessa</title>
-  <link rel="stylesheet" href="tyylit.css">
-</head>
-<body>
-<div class="app">
-<header class="place-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.18),rgba(7,31,25,.72)),url('hero-asikkala.jpg')">
-  <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><div class="place-actions-top"><button class="icon-btn">♡</button><button class="icon-btn">↗</button></div></div>
-  <div class="place-title">
-    <small>Asikkala · Päijät-Häme</small>
-    <h1>Päijänteen kansallispuisto</h1>
-    <p>Saaristo-, harju- ja järviluontoa erityisesti veneillen ja meloen.</p>
-  </div>
-</header>
-<main class="content place-content">
-  <section class="card place-main-card">
-    <div class="place-score"><b>★ Päijät-Hämeen kohde</b><small>Nähtävyys · Retki · Matkamuisto</small></div>
-    <div class="place-action-grid">
-      <button class="place-action" data-save-action="visited" data-place="Päijänteen kansallispuisto"><span>✅</span><b>Merkitse käydyksi</b><small>Tilastoihin</small></button>
-      <button class="place-action memory" data-save-action="memory" data-place="Päijänteen kansallispuisto"><span>💚</span><b>Tallenna muistoksi</b><small>Kuvat ja muistiinpanot</small></button>
-      <button class="place-action add" data-save-action="trip" data-place="Päijänteen kansallispuisto"><span>🧳</span><b>Lisää matkaan</b><small>Nykyiseen tai uuteen</small></button>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Tietoa kohteesta</h2></div>
-    <div class="card info-card">
-      <p>Saaristo-, harju- ja järviluontoa erityisesti veneillen ja meloen.</p>
-      <div class="info-tags"><span>⏱️ 30–120 min</span><span>📷 Kuvattavaa</span><span>🚗 Helppo poiketa</span><span>💚 Sopii omiin matkoihin</span></div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Mitä voit tehdä täällä?</h2></div>
-    <div class="grid3 service-grid compact-service">
-      <div class="tile"><div class="emoji">📷</div><b>Ota kuvia</b><small>Maisemat ja muistot</small></div>
-      <div class="tile"><div class="emoji">🧭</div><b>Tutustu</b><small>Paikan tarina</small></div>
-      <div class="tile"><div class="emoji">☕</div><b>Pysähdy</b><small>Retkihetki</small></div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Omat muistiinpanot</h2></div>
-    <div class="card note-card">
-      <textarea placeholder="Kirjoita tähän oma muisto tai vinkki tästä paikasta..."></textarea>
-      <button class="primary" data-save-action="note" data-place="Päijänteen kansallispuisto">Tallenna muisto</button>
-    </div>
-  </section>
-  <section class="section card"><b>Takaisin kuntaan</b><p class="plain-region-note">Palaa Asikkalan sivulle ja katso muut kohteet.</p><a class="cta-secondary" href="asikkala.html">Avaa Asikkala</a></section>
-</main>
-<nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
-</div>
-<script src="data.js?v=88"></script>
-<script src="sovellus.js?v=88"></script>
-</body>
-</html>
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Päijänteen kansallispuisto – Asikkala</title><link rel="stylesheet" href="styles.css"><script src="app.js"></script></head><body><div class="app">
+<a class="toplink" href="asikkala.html">‹ Asikkala</a>
+<header class="hero" style="background-image:url('assets/hero/hero-asikkala.jpg')"><div class="hero-content"><img class="coat" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Asikkala.vaakuna.svg" alt="Asikkalan vaakuna"><div><h1>Päijänteen kansallispuisto</h1><p>Kansallispuisto · Asikkala</p></div></div></header>
+<section class="card"><h2>Päijänteen kansallispuisto</h2><p>Päijänteen kansallispuisto on järvi- ja saaristoluonnon kohde. Asikkalasta siihen liittyvät erityisesti Pulkkilanharjun maisemat ja vesireitit.</p><div class="tagrow"><span class="tag">Asikkala</span><span class="tag">Päijät-Häme</span></div><button class="btn green" data-visited="asikkala-paijanteen-kansallispuisto" onclick="visited('asikkala-paijanteen-kansallispuisto',this)">✓ Olen käynyt täällä</button><button class="btn" onclick="addTrip('asikkala-paijanteen-kansallispuisto','Päijänteen kansallispuisto')">Lisää omiin matkoihin</button></section>
+<section class="card"><h2>Käyntiopas</h2><div class="factgrid"><div class="fact"><b>📍 Osoite</b><span>Päijänne, Asikkalan ja Padasjoen vesialueet</span></div><div class="fact"><b>🅿️ Pysäköinti</b><span>Päiväretkelle pääsee parhaiten Pulkkilanharjun ja vesireittien kautta.</span></div><div class="fact"><b>✨ Sopii erityisesti</b><span>Järvimaisemat, retkeily, veneily ja saaristoluonto.</span></div><div class="fact"><b>⏱️ Vierailun kesto</b><span>Lyhyt pysähdys tai rauhallinen päiväretki.</span></div></div></section>
+<section class="card"><h2>Hyvä tietää</h2><p class="story">Tämä kohdesivu on osa Asikkalan valmista mallisivua. Tiedot on pidetty selkeinä: ensin kohteen nimi ja kuvaus, sitten osoite ja käytännön käyntivinkit.</p></section>
+<nav class="bottom"><a href="index.html"><i>🏠</i>Koti</a><a href="kartta.html"><i>🗺️</i>Kartta</a><a href="paivakirja.html"><i>👤</i>Minä</a></nav></div></body></html>
