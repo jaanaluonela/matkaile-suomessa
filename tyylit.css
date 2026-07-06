@@ -1360,3 +1360,5 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .municipality-hero .toprow{padding-top:calc(env(safe-area-inset-top,0px) + 22px);}
 .municipality-hero .hero-title{margin-top:36px;}
 .region-hero .region-coat{top:54px;}
+
+a.muni-fact{display:block;text-decoration:none;color:inherit}
