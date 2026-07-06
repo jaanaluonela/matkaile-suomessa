@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Suunnittele matka | Matkaile Suomessa</title><link rel="stylesheet" href="tyylit.css"></head>
+<body><div class="app route-page-v90">
+<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Tee reitti ja avaa se Google Mapsissa. Myöhemmin tähän lisätään kohteet reitin varrelta.</p></div></header>
+<main class="content route-content-v90">
+<section class="section card route-card-v90"><b>🚗 Reittisuunnittelu</b><p class="plain-region-note">Kirjoita lähtöpaikka ja määränpää. Voit lisätä myös yhden välietapin.</p>
+<label>Lähtöpaikka<input id="routeStart" placeholder="Esim. Helsinki, koti tai leirintäalue"></label>
+<label>Määränpää<input id="routeEnd" placeholder="Esim. Asikkala, Rovaniemi tai Yyteri"></label>
+<label>Välietappi <small>(valinnainen)</small><input id="routeVia" placeholder="Esim. Lahti"></label>
+<button id="openRoute" class="cta-visited" type="button">Avaa reitti Google Mapsissa</button>
+<p id="routeHint" class="route-hint-v90">Täytä lähtöpaikka ja määränpää.</p></section>
+<section class="section"><div class="section-head"><h2>Reitin varrella myöhemmin</h2></div><div class="compact-info-list ph-service-list">
+<a class="place-row" href="kartta.html"><span>🌲</span><div><b>Luontokohteet</b><small>Kansallispuistot, retkeilyreitit ja näköalapaikat.</small></div><em>›</em></a>
+<a class="place-row" href="kartta.html"><span>🚐</span><div><b>Karavaanarin palvelut</b><small>Matkaparkit, leirintäalueet ja huoltopisteet.</small></div><em>›</em></a>
+<a class="place-row" href="kartta.html"><span>☕</span><div><b>Kahvilat ja pysähdykset</b><small>Hyvät taukopaikat matkan varrelle.</small></div><em>›</em></a>
+</div></section>
+</main><nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav></div>
+<script>
+(function(){
+ const start=document.getElementById('routeStart'), end=document.getElementById('routeEnd'), via=document.getElementById('routeVia'), btn=document.getElementById('openRoute'), hint=document.getElementById('routeHint');
+ function mapsUrl(){
+   const s=start.value.trim(), e=end.value.trim(), v=via.value.trim();
+   if(!s||!e) return '';
+   const base='https://www.google.com/maps/dir/?api=1&travelmode=driving';
+   let url=base+'&origin='+encodeURIComponent(s)+'&destination='+encodeURIComponent(e);
+   if(v) url+='&waypoints='+encodeURIComponent(v);
+   return url;
+ }
+ btn.addEventListener('click',()=>{const url=mapsUrl(); if(!url){hint.textContent='Kirjoita ensin lähtöpaikka ja määränpää.'; return;} window.open(url,'_blank');});
+})();
+</script></body></html>

@@ -1,4 +1,3 @@
-/* Matkaile Suomessa v88 - tarkistettu julkaisuversio */
 
 :root{
   --green:#2f7d54;--green2:#3fa66f;--dark:#163327;--muted:#6c7a72;--bg:#f4f7f2;--card:#ffffff;
@@ -1356,10 +1355,21 @@ html, body, .app{max-width:100%;overflow-x:hidden!important}
 .region-hero .region-title{bottom:28px!important;}
 .region-hero .region-badge.crest-badge{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;}
 
-/* v79: varmistetaan kuntasivujen yläkuvien näkyvyys ja selaimen yläpalkin turva-alue */
-.municipality-hero{background-size:cover;background-position:center center;}
-.municipality-hero .toprow{padding-top:calc(env(safe-area-inset-top,0px) + 22px);}
-.municipality-hero .hero-title{margin-top:36px;}
-.region-hero .region-coat{top:54px;}
+/* v81 additions */
+.quick-jump-grid a,.ph-info-grid a{color:inherit;text-decoration:none;}
+.quick-jump-grid .muni-fact,.ph-info-grid .ph-info{display:block;cursor:pointer;}
+.service-details{scroll-margin-top:24px;}
+#tarinat,#kunnat,#kaupungit,#karavaanarin-palvelut{scroll-margin-top:24px;}
+.practical-grid{display:grid;grid-template-columns:1fr;gap:9px;margin-top:12px;}
+.practical-grid div{background:#f7fbf6;border:1px solid var(--line);border-radius:14px;padding:10px;}
+.practical-grid b{display:block;color:var(--green);font-size:13px;}
+.practical-grid small{display:block;color:var(--muted);line-height:1.35;margin-top:3px;}
+.practical-grid a{color:var(--green);font-weight:800;text-decoration:none;}
 
-a.muni-fact{display:block;text-decoration:none;color:inherit}
+
+/* v90 – selkeä etusivu, pienempi hero ja reittisuunnittelu */
+.v70-hero{height:188px!important;min-height:188px!important;padding:12px 18px 40px!important;border-radius:0 0 28px 28px!important;background-position:center 42%!important;}
+.v70-brand{margin-top:6px!important}.v70-script{font-size:48px!important;line-height:.8!important}.v70-sub{font-size:15px!important;letter-spacing:.32em!important}.v70-slogan{font-size:15px!important;margin-top:8px!important}.v70-line{width:72px!important;height:4px!important;margin:8px auto 8px!important}.v70-round{width:40px!important;height:40px!important;border-radius:18px!important}
+.v90-actions{grid-template-columns:1fr!important;gap:9px!important;margin-top:-24px!important}.v90-actions .v70-tab{min-height:76px!important;border-radius:20px!important;text-decoration:none;color:inherit}.v90-actions .v70-tab.route{background:#fff;color:#143c2d;border:1px solid var(--line);box-shadow:0 9px 22px rgba(21,50,35,.10)}.v90-actions .v70-tab.route i{font-size:31px}.v90-actions .v70-tab b{font-size:15px!important}.v90-actions .v70-tab small{font-size:11.5px!important}.v70-search{margin-top:12px!important}.v70-search-row input{font-size:14px!important}.v70-chips{padding-bottom:2px}.v70-map-card{min-height:250px!important}.v70-map-card img{max-height:225px!important}.region-main-card-v90{margin-top:0!important}.region-main-card-v90 b{font-size:22px;color:var(--dark)}
+.route-hero-v90{min-height:190px;padding:14px 18px 22px;border-radius:0 0 28px 28px;background:linear-gradient(180deg,rgba(7,31,25,.22),rgba(7,31,25,.72)),url('hero-etusivu.jpg') center 42%/cover;color:#fff;display:flex;flex-direction:column;justify-content:space-between}.route-hero-v90 h1{font-size:38px;line-height:.96;margin:18px 0 6px}.route-hero-v90 p{margin:0;font-size:14px;font-weight:750;line-height:1.25;max-width:360px}.route-card-v90 label{display:block;margin-top:12px;font-weight:900;color:var(--dark);font-size:13px}.route-card-v90 label small{color:var(--muted);font-weight:750}.route-card-v90 input{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:16px;padding:13px 12px;font-size:15px;background:#f8fbf6;color:var(--dark);outline:0}.route-card-v90 input:focus{border-color:#2f8c57;box-shadow:0 0 0 3px rgba(47,140,87,.12)}.route-hint-v90{font-size:12.5px;color:var(--muted);margin:10px 2px 0!important}
+@media(max-width:390px){.v70-hero{height:174px!important;min-height:174px!important;padding:10px 15px 36px!important}.v70-script{font-size:42px!important}.v70-sub{font-size:13px!important}.v70-slogan{font-size:13px!important}.v90-actions{margin-top:-20px!important}.v90-actions .v70-tab{min-height:70px!important}.v90-actions .v70-tab b{font-size:13.5px!important}.v90-actions .v70-tab small{font-size:10.3px!important}.v70-map-card{min-height:220px!important}.v70-map-card img{max-height:198px!important}.route-hero-v90{min-height:176px}.route-hero-v90 h1{font-size:33px}}
