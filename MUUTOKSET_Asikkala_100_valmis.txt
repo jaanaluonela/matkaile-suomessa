@@ -1,0 +1,35 @@
+Versio: MatkaileSuomessa_v125_Asikkala_100_valmis.zip
+
+Tässä päivityksessä tehtiin vain Asikkalan sisältöä.
+Muita kuntasivuja ei tarkoituksella muutettu.
+
+Lisätty / korjattu:
+- Asikkalan oma hero-valokuva palautettu paikalliseksi tiedostoksi: assets/hero/hero-asikkala.jpg
+- Asikkalan esittely lisätty: noin 7 900 asukkaan kunta Päijät-Hämeessä
+- Asikkalan sivulle lisätty selkeät osiot:
+  * Älä missaa
+  * Luonto ja retkeily
+  * Nähtävyydet ja kulttuuri
+  * Ravintolat ja kahvilat
+  * Karavaanarin palvelut
+  * Ostokset ja palvelut
+  * Majoitus
+  * Tapahtumat ja tunnelma
+- Käyntikohteisiin lisätty osoitteet tekstinä.
+- Lisätty Asikkalan tärkeimmille kohteille omat kohdesivut:
+  * asikkala-vaaksyn-kanava.html
+  * asikkala-pulkkilanharju.html
+  * asikkala-paijannetalo.html
+  * asikkala-urajarven-kartano.html
+  * asikkala-kalkkisten-kanava.html
+- Kohdesivuilla on: esittely, osoite, käyntiopas, vierailuvinkki, “Olen käynyt täällä” ja “Lisää omiin matkoihin”.
+- Linkit Asikkalan pääsivulta kohdesivuille toimivat paikallisesti.
+
+Tärkeää:
+- Tässä vaiheessa linkkejä ulkoisiin palveluihin ei lisätty, koska sovittiin että osoitteet riittävät tekstinä.
+- Asikkalan vaakuna näytetään virallisesta Wikimedia Commons -tiedostosta, kuten pohjassa oli käytössä.
+- Hero-kuva on tallennettu projektin omaan assets/hero-kansioon.
+
+Tarkistus:
+- Kaikki tässä paketissa olevat sisäiset HTML-linkit tarkistettu.
+- Puuttuvia sisäisiä HTML-tiedostoja ei löytynyt.
