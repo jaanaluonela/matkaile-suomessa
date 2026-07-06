@@ -1,0 +1,8 @@
+Tarkistettu tässä paketissa:
+- 10 kuntasivua luotu uudelleen
+- Kuntien vaakunat asetettu oikeisiin Wikimedia Commons -vaakunoihin
+- Hero-alueista poistettu haaleat tuplatekstit
+- Hero-taustat asetettu valokuvalähteisiin, ei vihreisiin placeholder-kuviin
+- Osoitteet näkyvät tekstinä kohdekorteissa
+- Omat matkat ja Olen käynyt täällä tallentuvat localStorageen
+- Sisäiset sivulinkit olemassa paketissa
