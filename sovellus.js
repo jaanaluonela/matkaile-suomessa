@@ -1,4 +1,20 @@
 
+// v87: Varmistetaan, että kohdekortit avaavat aina oman sivunsa.
+// Tämä estää tilanteen, jossa kortin sisäinen elementti tai selainvälimuisti
+// jättää käyttäjän vanhaan ankkuriosoitteeseen kuten asikkala.html#ala-missaa.
+(function(){
+  document.addEventListener('click', function(e){
+    const row = e.target.closest('a.place-row');
+    if(!row) return;
+    const href = row.getAttribute('href');
+    if(!href || href === '#' || href.startsWith('#')) return;
+    if(e.defaultPrevented) return;
+    e.preventDefault();
+    window.location.href = href;
+  }, true);
+})();
+
+
 const q = (s)=>document.querySelector(s);
 function go(url){ window.location.href=url; }
 function saveTrip(){

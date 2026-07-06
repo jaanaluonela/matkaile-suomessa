@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta name="matkaile-versio" content="v87-paijat-hame-korjattu">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sysmän kirjakylä | Matkaile Suomessa</title>
+  <link rel="stylesheet" href="tyylit.css">
+</head>
+<body>
+<div class="app">
+<header class="place-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.18),rgba(7,31,25,.72)),url('hero-sysma.jpg')">
+  <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><div class="place-actions-top"><button class="icon-btn">♡</button><button class="icon-btn">↗</button></div></div>
+  <div class="place-title">
+    <small>Sysmä · Päijät-Häme</small>
+    <h1>Sysmän kirjakylä</h1>
+    <p>Kirjallisuuteen liittyvä paikallinen identiteetti ja kesäinen vetovoima.</p>
+  </div>
+</header>
+<main class="content place-content">
+  <section class="card place-main-card">
+    <div class="place-score"><b>★ Päijät-Hämeen kohde</b><small>Nähtävyys · Retki · Matkamuisto</small></div>
+    <div class="place-action-grid">
+      <button class="place-action" data-save-action="visited" data-place="Sysmän kirjakylä"><span>✅</span><b>Merkitse käydyksi</b><small>Tilastoihin</small></button>
+      <button class="place-action memory" data-save-action="memory" data-place="Sysmän kirjakylä"><span>💚</span><b>Tallenna muistoksi</b><small>Kuvat ja muistiinpanot</small></button>
+      <button class="place-action add" data-save-action="trip" data-place="Sysmän kirjakylä"><span>🧳</span><b>Lisää matkaan</b><small>Nykyiseen tai uuteen</small></button>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-head"><h2>Tietoa kohteesta</h2></div>
+    <div class="card info-card">
+      <p>Kirjallisuuteen liittyvä paikallinen identiteetti ja kesäinen vetovoima.</p>
+      <div class="info-tags"><span>⏱️ 30–120 min</span><span>📷 Kuvattavaa</span><span>🚗 Helppo poiketa</span><span>💚 Sopii omiin matkoihin</span></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-head"><h2>Mitä voit tehdä täällä?</h2></div>
+    <div class="grid3 service-grid compact-service">
+      <div class="tile"><div class="emoji">📷</div><b>Ota kuvia</b><small>Maisemat ja muistot</small></div>
+      <div class="tile"><div class="emoji">🧭</div><b>Tutustu</b><small>Paikan tarina</small></div>
+      <div class="tile"><div class="emoji">☕</div><b>Pysähdy</b><small>Retkihetki</small></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-head"><h2>Omat muistiinpanot</h2></div>
+    <div class="card note-card">
+      <textarea placeholder="Kirjoita tähän oma muisto tai vinkki tästä paikasta..."></textarea>
+      <button class="primary" data-save-action="note" data-place="Sysmän kirjakylä">Tallenna muisto</button>
+    </div>
+  </section>
+  <section class="section card"><b>Takaisin kuntaan</b><p class="plain-region-note">Palaa Sysmän sivulle ja katso muut kohteet.</p><a class="cta-secondary" href="sysma.html">Avaa Sysmä</a></section>
+</main>
+<nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
+</div>
+<script src="data.js?v=87"></script>
+<script src="sovellus.js?v=87"></script>
+</body>
+</html>
