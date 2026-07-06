@@ -1,0 +1,18 @@
+MatkaileSuomessa Master v2
+
+Tähän versioon on varmistettu, että Päijät-Hämeen vaakunat ovat mukana paikallisina SVG-tiedostoina ja kuntasivut viittaavat niihin suoraan.
+
+Mukana olevat vaakunat:
+- vaakuna-asikkala.svg
+- vaakuna-hartola.svg
+- vaakuna-heinola.svg
+- vaakuna-hollola.svg
+- vaakuna-iitti.svg
+- vaakuna-karkola.svg
+- vaakuna-lahti.svg
+- vaakuna-orimattila.svg
+- vaakuna-padasjoki.svg
+- vaakuna-paijat-hame.svg
+- vaakuna-sysma.svg
+
+Tarkistettu myös hero-kuvat kunnille.
