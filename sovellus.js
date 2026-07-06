@@ -1,3 +1,4 @@
+/* Matkaile Suomessa v88 - tarkistettu julkaisuversio */
 
 // v87: Varmistetaan, että kohdekortit avaavat aina oman sivunsa.
 // Tämä estää tilanteen, jossa kortin sisäinen elementti tai selainvälimuisti

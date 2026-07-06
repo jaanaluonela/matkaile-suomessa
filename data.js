@@ -1,3 +1,4 @@
+/* Matkaile Suomessa v88 - tarkistettu julkaisuversio */
 const MAAKUNNAT = {
   "paijat-hame": {
     nimi: "Päijät-Häme",
