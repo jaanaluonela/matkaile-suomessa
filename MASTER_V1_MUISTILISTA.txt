@@ -1,0 +1,14 @@
+Matkaile Suomessa – Master v1 yhdistetty
+
+Tämä versio on koottu v90-pohjasta ja siihen on säilytetty aiempien versioiden tärkeät osat:
+- uusi selkeämpi etusivu
+- toimiva hakutoiminto
+- Suunnittele matka -sivu ja Google Maps -reittilinkki
+- Päijät-Hämeen kunnat
+- kuntien vaakunat paikallisina tiedostoina
+- kuntien hero-taustakuvat paikallisina tiedostoina
+- Asikkalan hero-kuva ja vaakuna omalla sivulla
+- kohde.html mukana
+- tiedostomäärä alle 100
+
+Jatkossa tätä käytetään virallisena pohjana. Uudet versiot tehdään tästä: Master v2, Master v3 jne.

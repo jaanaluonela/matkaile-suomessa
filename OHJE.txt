@@ -1,0 +1,20 @@
+Matkaile Suomessa – v45
+
+Päivitys:
+- Etusivun piirrosmainen hero-kuva poistettu.
+- Tilalla paikallinen valokuva: images/hero-etusivu.jpg.
+- Hakupalkki säilytetty kuvan alareunassa.
+- Viimeisin matka -kortin kaksoisteksti piilotettu.
+
+Kuvan lähde: Wikimedia Commons, Ximonic (Simo Räsänen), Pulkkilanharju and Karisalmi Bridge in Asikkala, CC BY-SA 3.0.
+
+Matkaile Suomessa v44
+
+Muutokset:
+- Etusivun hero-kuva vaihdettu suomalaisemmaksi tie + järvi -maisemaksi.
+- Etusivulta poistettu irrallinen ajoneuvo, jotta sovellus ei näytä vain karavaanarisovellukselta.
+- Hakupalkki siirretty kuvan alareunaan mallin mukaisesti.
+- Viimeisin matka -kortista poistettu prosentti ja edistymisviiva.
+- Sivusuuntainen vieritys pidetty estettynä.
+
+Lataa kaikki tiedostot GitHubiin samaan repositorioon.
