@@ -509,28 +509,3 @@
 @media(max-width:430px){
   .asikkala-page .hero.asikkala-hero{height:185px!important;min-height:185px!important;}
 }
-
-
-/* v135: Etusivu 2.0 – ei muutoksia Asikkalan sivuihin */
-.home-page{background:linear-gradient(180deg,#eef8f1 0%,#ffffff 45%,#f5fbf7 100%)}
-.home-hero{height:235px;border-radius:0 0 30px 30px;background-size:cover;background-position:center;position:relative;overflow:hidden;margin-bottom:18px}
-.home-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,31,24,.12),rgba(4,31,24,.76))}
-.home-hero-content{position:absolute;z-index:1;left:22px;right:22px;bottom:24px;color:white;display:flex;gap:14px;align-items:center}
-.home-logo-mark{width:62px;height:62px;border-radius:20px;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 12px 26px rgba(0,0,0,.18)}
-.home-page h1{font-size:34px;line-height:1;margin:0 0 8px;font-weight:950;color:white;text-shadow:0 2px 12px rgba(0,0,0,.25)}
-.home-hero p{font-size:15px;line-height:1.3;margin:0;color:white;font-weight:750;text-shadow:0 2px 10px rgba(0,0,0,.3)}
-.home-card{background:#fff;border:1px solid rgba(13,63,47,.10);border-radius:24px;padding:18px;margin:16px 18px;box-shadow:0 10px 26px rgba(13,63,47,.06)}
-.home-card h2{margin:0 0 8px;font-size:23px;line-height:1.15;color:#0d3f2f;letter-spacing:-.02em}
-.home-card p{margin:0;font-size:15px;line-height:1.42;color:#52685d}
-.home-sections{display:grid;gap:12px;margin:16px 18px}
-.home-tile{display:flex;gap:13px;align-items:flex-start;text-decoration:none;color:inherit;background:#fff;border:1px solid rgba(13,63,47,.10);border-radius:24px;padding:16px;box-shadow:0 9px 22px rgba(13,63,47,.06)}
-.home-tile.highlight{background:linear-gradient(135deg,#ffffff,#ecfbf2);border-color:rgba(22,138,85,.22)}
-.home-tile.primary{background:linear-gradient(135deg,#ffffff,#eef6ff)}
-.tile-icon{width:48px;height:48px;min-width:48px;border-radius:17px;background:#eef8f0;display:flex;align-items:center;justify-content:center;font-size:27px}
-.home-tile b{display:block;color:#0d3f2f;font-size:19px;line-height:1.1;margin-bottom:5px}
-.home-tile p{margin:0;color:#5a6e64;font-size:14px;line-height:1.3}
-.home-small-link{display:inline-block;margin-top:12px;font-weight:900;text-decoration:none;color:#168a55;font-size:16px}
-.route-box{border:1px solid rgba(22,138,85,.18);background:#f4fbf6;border-radius:18px;padding:14px;margin-top:14px}
-.route-box b{display:block;color:#0d3f2f;font-size:17px}.route-box p{font-size:18px;font-weight:850;color:#168a55;margin:3px 0}.route-box small{color:#607268;font-weight:750}
-.home-sections.compact .home-tile{box-shadow:none}
-@media(max-width:360px){.home-hero{height:215px}.home-page h1{font-size:30px}.home-logo-mark{width:56px;height:56px}.home-tile{padding:14px}.tile-icon{width:44px;height:44px;min-width:44px}}
