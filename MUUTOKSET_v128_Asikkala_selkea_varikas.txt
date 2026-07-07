@@ -1,0 +1,9 @@
+Versio: v128 Asikkala selkeä ja värikäs
+
+Muutokset:
+- Asikkalan sivuille lisätty kevyempi mobiilityyli.
+- Isoja laatikoita pienennetty ja tiivistetty.
+- Kortit muutettu selkeämmiksi ja värikkäämmiksi.
+- Asikkalan pääsivun ja kohdesivujen rakenne säilytetty.
+- Ei muutettu muiden kuntien sisältöjä.
+- Hero-kuvat ja vaakunat jätetty käyttöön nykyisillä poluilla.
