@@ -1,0 +1,13 @@
+v135 Etusivu 2.0
+
+Muutettu vain etusivua ja lisätty uusi Suunnittele matkasi -alasivu.
+Asikkalan sivuja ei ole muutettu.
+
+Etusivulle lisätty pääosiot:
+- Tutustu Suomeen
+- Suunnittele matkasi
+- Karavaanarille
+- Omat matkat
+
+Lisätty uusi tiedosto:
+- suunnittele-matkasi.html
