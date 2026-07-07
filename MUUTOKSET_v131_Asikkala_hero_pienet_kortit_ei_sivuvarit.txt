@@ -1,0 +1,10 @@
+Versio: v131 Asikkala hero, pienet kortit, ei sivuvärejä
+
+Muutokset:
+- Korjattu Asikkalan hero: pakotettu käyttämään paikallista assets/hero/hero-asikkala.jpg -kuvaa.
+- Kevennetty hero-peitettä, jotta maisemakuva näkyy paremmin.
+- Pienennetty Asikkalan alun tekstikokoja.
+- Pienennetty Tutustu Asikkalaan -kortteja.
+- Poistettu osoitteet Asikkalan pääsivun korttinäkymistä; osoitteet kuuluvat kohdesivuille.
+- Poistettu värilliset sivupalkit ja kirjavat taustavärit Pulkkilanharju / kansallispuisto / Aurinkovuori -tyyppisistä listoista.
+- Sisältöä ei muutettu muihin kuntiin.

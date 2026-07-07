@@ -126,3 +126,50 @@
 .asikkala-page .bottom a{font-size:13px!important}
 .asikkala-page .bottom i{font-size:22px!important}
 @media(max-width:360px){.asikkala-page .cardlinks{grid-template-columns:1fr!important}.asikkala-page .cardlinks .place:before{height:120px!important}.asikkala-page .hero{height:235px!important;min-height:235px!important}.asikkala-page h1{font-size:30px!important}}
+
+/* v131: käyttäjän korjaus – oikea hero-kuva näkyviin, ei sivuvärejä, kompaktit kortit */
+.asikkala-page .hero{
+  height:230px!important;
+  min-height:230px!important;
+  background-image:url('assets/hero/hero-asikkala.jpg')!important;
+  background-size:cover!important;
+  background-position:center 64%!important;
+  background-color:#dbe6df!important;
+}
+.asikkala-page .hero:after{
+  background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.08) 38%,rgba(5,34,26,.64) 100%)!important;
+}
+.asikkala-page .hero-content{bottom:18px!important;}
+.asikkala-page h1{font-size:31px!important;}
+.asikkala-page .hero p{font-size:13px!important;max-width:250px!important;}
+.asikkala-page .intro-card p{font-size:14px!important;line-height:1.42!important;}
+.asikkala-page .card h2{font-size:20px!important;}
+
+/* Tutustu-kortit: pienemmät, kuvalliset, ei osoitetta */
+.asikkala-page .cardlinks{grid-template-columns:1fr 1fr!important;gap:10px!important;}
+.asikkala-page .cardlinks .place{border-radius:14px!important;box-shadow:0 5px 14px rgba(13,63,47,.08)!important;}
+.asikkala-page .cardlinks .place:before{height:74px!important;background-image:url('assets/hero/hero-asikkala.jpg')!important;background-position:center 64%!important;}
+.asikkala-page .cardlinks .place small{display:none!important;}
+.asikkala-page .cardlinks .place b{font-size:14px!important;padding:9px 9px 0!important;}
+.asikkala-page .cardlinks .place p{font-size:11px!important;line-height:1.25!important;padding:4px 9px 0!important;}
+.asikkala-page .cardlinks .linkcard:after{font-size:12px!important;padding:7px 9px 10px!important;color:#0f7a4d!important;}
+
+/* Muut osiot: ei värillisiä sivupalkkeja, ei kirjavia taustoja */
+.asikkala-page .card:not(:has(.cardlinks)) .place{
+  border:1px solid #e2eee7!important;
+  border-left:1px solid #e2eee7!important;
+  background:#ffffff!important;
+  box-shadow:none!important;
+  border-radius:12px!important;
+  padding:10px 11px!important;
+  margin:7px 0!important;
+}
+.asikkala-page .card:not(:has(.cardlinks)) .place:nth-of-type(2n),
+.asikkala-page .card:not(:has(.cardlinks)) .place:nth-of-type(3n){
+  border-left:1px solid #e2eee7!important;
+  background:#ffffff!important;
+}
+.asikkala-page .card:not(:has(.cardlinks)) .place b{font-size:14px!important;line-height:1.2!important;}
+.asikkala-page .card:not(:has(.cardlinks)) .place p{font-size:12px!important;line-height:1.32!important;color:#5e6e66!important;}
+.asikkala-page .card{padding:15px!important;margin:16px 18px!important;}
+@media(max-width:360px){.asikkala-page .cardlinks{grid-template-columns:1fr 1fr!important}.asikkala-page .cardlinks .place:before{height:70px!important}}
