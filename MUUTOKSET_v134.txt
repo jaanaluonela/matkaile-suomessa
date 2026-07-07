@@ -1,0 +1,11 @@
+Versio: v134 Asikkala hero varma ja kortit yhtenäiset
+
+Muutokset:
+- Tietosisältöjä ei muutettu.
+- Asikkalan hero-kuva upotettu CSS:ään, jotta harmaa/rikkinäinen yläosa ei jää näkyviin.
+- Rikkinäistä hero-img-kuvatagia ei enää käytetä Asikkalan sivuilla.
+- Asikkalan pääsivulla ja kohdesivuilla hero-alue on matalampi eikä yläosaan jää tyhjää.
+- Tutustu Asikkalaan -kortit muutettu yhteen sarakkeeseen.
+- Kaikki Asikkalan sisältökortit ovat pienempiä, pitkulaisia ja niissä on vihreä reunus koko kortin ympäri.
+- Osoitteet säilytetty varsinaisissa sisältöosioissa ja kohdesivuilla.
+- Muita kuntia ei muutettu tarkoituksella.
