@@ -1,0 +1,11 @@
+Versio: v130 Asikkala Visit Finland -henkinen kuvakorttikorjaus
+
+Muutokset:
+- Sisältöä ei muutettu.
+- Asikkalan hero-kuva nostettu selkeästi näkyviin.
+- Esittelytekstin fonttikokoa pienennetty.
+- Turha "Asikkalan malli" -merkintä poistettu CSS:llä.
+- Tutustu Asikkalaan -kortit muutettu kuvallisiksi, selkeämmiksi ja kevyemmiksi.
+- Kohdekorttien osoitteet poistettu näkyvistä; osoitteet jäävät kohdesivuille.
+- Harmaanvihreät isot tekstilaatikot poistettu Asikkalan kohdekorteista.
+- Muita kuntia ei muutettu.
