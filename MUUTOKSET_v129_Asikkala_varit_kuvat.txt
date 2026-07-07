@@ -1,0 +1,9 @@
+Versio v129
+
+Muutokset:
+- Asikkalan sisältö jätetty ennalleen.
+- Hero-kuva nostettu näkyvämmäksi.
+- Tutustu Asikkalaan -kohteet muutettu kuvallisiksi kortiksi.
+- Lisätty vihreä, sininen ja lämmin keltainen värimaailma.
+- Isot valkoiset laatikot kevennetty.
+- Muita kuntia ei muutettu.
