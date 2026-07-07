@@ -1,0 +1,15 @@
+MatkaileSuomessa v132 – Asikkala osoitteet, kortit ja hero
+
+Muutokset:
+- Etusivun Asikkala-hero pakotettu näkymään oikeana kuvana myös <img>-elementillä.
+- Tutustu Asikkalaan -kortit pienennetty.
+- Tutustu Asikkalaan -kortteihin vihreä reunus koko kortin ympäri.
+- Vasen väripalkki poistettu.
+- Muissa osioissa sama vihreä kokonaisreunus.
+- Osoitteet palautettu Luonto ja retkeily-, Nähtävyydet-, Ravintolat-, Karavaanari-, Kaupat- ja Majoitus-osioihin.
+- Kortit muutettu klikattaviksi.
+- Puuttuville ravintola-, kauppa-, karavaanari- ja majoituskohteille lisätty omat yksinkertaiset kohdesivut.
+- Ei muutettu muiden kuntien sisältöä.
+
+Tarkoitus:
+Asikkala toimii mallina: selkeä, kevyt, kuvallinen ja kortit ovat yhtenäiset.
