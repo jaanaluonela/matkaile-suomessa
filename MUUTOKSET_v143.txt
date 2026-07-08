@@ -1,0 +1,1 @@
+v143: Tutustu Suomeen -sivulle lisätty näyttävämpi Suomen muotoinen maakuntakartta, lisätietokortit ja maakuntaluettelo. Päijät-Häme on klikattava ja avaa paijat-hame.html. Asikkalan sivuihin ei koskettu.
