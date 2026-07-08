@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 <script src="app.js"></script>
 <style>
-/* v144: Tutustu Suomeen -sivulle oikeampi Suomen muotoinen maakuntakartta ja lisätiedot. Asikkalaan ei koskettu. */
+/* v145: Tutustu Suomeen viimeistelty: hillitty Suomen kartta, hakukenttä ja edistymistiedot. Asikkalaan ei koskettu. */
 :root{--green:#0d3f2f;--green2:#168a55;--green3:#0f6f48;--blue:#0b4f7a;--soft:#eef8f2;--line:#dce9df;--muted:#60746b;--red:#9b2e2e;--sea:#dff2fb;--paper:#fff;}
 *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#fff 47%,#eef7ff 100%);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--green)}
 .map-page{max-width:520px;margin:0 auto;min-height:100vh;padding:0 0 108px;background:linear-gradient(180deg,#eaf6ef 0%,#fff 47%,#eef7ff 100%)}
@@ -19,13 +19,23 @@
 .next-note{margin:0 18px 18px;border-radius:24px;background:linear-gradient(135deg,#0d3f2f,#168a55);color:#fff;padding:18px;box-shadow:0 12px 30px rgba(13,63,47,.14)}.next-note h2{margin:0 0 8px;color:#fff;font-size:22px}.next-note p{margin:0!important;color:rgba(255,255,255,.92)!important;font-size:14px!important;line-height:1.35!important;font-weight:650!important}
 .ms-bottom{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.94);border-top:1px solid #dce9df;box-shadow:0 -10px 28px rgba(13,63,47,.08);backdrop-filter:blur(8px);display:flex;justify-content:center;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}.ms-bottom-inner{width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px}.ms-bottom a{text-decoration:none;color:#60746b;font-weight:900;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:14px}.ms-bottom a i{font-style:normal;font-size:22px;line-height:1}.ms-bottom a.active{color:#168a55;background:#eef8f2}@media(max-width:360px){.map-intro h1{font-size:30px}.map-caption{display:block}.map-caption small{display:inline-block;margin-top:8px}.region-grid{grid-template-columns:1fr}.label{font-size:7.1px}.tiny{font-size:6.1px}.info-strip{grid-template-columns:1fr}}
 
-/* v144: oikeampi Suomen muotoinen maakuntakartta, maakuntien värit ja klikattavat alueet */
-.real-map .finland-outline{fill:#fbfdfb;stroke:#9b2e2e;stroke-width:2.4;filter:drop-shadow(0 12px 18px rgba(13,63,47,.14))}
-.real-map .region{fill:var(--c,#f7fbf8);stroke:#ffffff;stroke-width:1.25;cursor:pointer;transition:.15s;filter:drop-shadow(0 2px 4px rgba(13,63,47,.05))}
-.real-map .region:hover{filter:brightness(1.04) drop-shadow(0 6px 10px rgba(13,63,47,.16));stroke:#0d3f2f;stroke-width:1.7}
-.real-map .region.ready{fill:#168a55;stroke:#ffffff;stroke-width:1.8;filter:drop-shadow(0 6px 9px rgba(22,138,85,.28))}
-.real-map .label{font-size:8px;font-weight:950;fill:#233b34;pointer-events:none;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:2.6;stroke-linejoin:round}
+/* v145: hillitty Suomen kartta, ei moniväristä maakuntakarttaa */
+.real-map .finland-outline{fill:#fbfdfb;stroke:#0d3f2f;stroke-width:2.1;filter:drop-shadow(0 12px 18px rgba(13,63,47,.12))}
+.real-map .region{fill:#f7fbf8!important;stroke:#91aa9f;stroke-width:1.15;cursor:pointer;transition:.15s;filter:none}
+.real-map .region:hover{fill:#dff3e7!important;stroke:#0d3f2f;stroke-width:1.7;filter:drop-shadow(0 6px 10px rgba(13,63,47,.12))}
+.real-map .region.ready{fill:#168a55!important;stroke:#0d3f2f;stroke-width:1.9;filter:drop-shadow(0 7px 11px rgba(22,138,85,.25))}
+.real-map .label{font-size:8px;font-weight:950;fill:#355047;pointer-events:none;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:2.8;stroke-linejoin:round}
 .real-map .ready-label{fill:#fff;stroke:#0d3f2f;stroke-width:2.2;font-size:8.4px}
+.search-card{margin:0 18px 16px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 10px 25px rgba(13,63,47,.07)}
+.search-card label{display:block;font-size:14px;font-weight:900;color:var(--green);margin:0 0 8px}
+.search-box{width:100%;border:1px solid #cfe2d7;border-radius:18px;padding:14px 15px;font-size:16px;font-weight:700;color:var(--green);outline:none;background:#fbfdfb}
+.search-box:focus{border-color:#168a55;box-shadow:0 0 0 4px rgba(22,138,85,.10)}
+.status-card{margin:0 18px 16px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:0 10px 25px rgba(13,63,47,.07)}
+.status-card h2{margin:0 0 8px;font-size:22px;color:var(--green)}
+.status-line{height:12px;border-radius:99px;background:#e7f0ea;overflow:hidden;margin:10px 0}
+.status-line span{display:block;height:100%;width:5.3%;background:#168a55;border-radius:99px}
+.status-card p{margin:0!important;color:var(--muted)!important;font-size:14px!important;line-height:1.35!important;font-weight:700!important}
+.no-results{display:none;margin-top:12px;color:var(--muted);font-weight:800;text-align:center}
 
 </style>
 </head>
@@ -43,18 +53,26 @@
   <h1>Valitse maakunta</h1>
   <p>Tältä sivulta pääset Suomen maakuntiin. Kartta toimii koko sovelluksen porttina: ensin valitaan maakunta, sitten sen kunnat ja kohteet.</p>
   <div class="progress-card">
-    <div class="progress-box"><b>19</b><span>maakuntaa kartalla</span></div>
-    <div class="progress-box"><b>308</b><span>kuntaa myöhemmin</span></div>
+    <div class="progress-box"><b>1/19</b><span>maakunta avattavissa</span></div>
+    <div class="progress-box"><b>14</b><span>Päijät-Hämeen kuntaa</span></div>
   </div>
 </section>
 
-<section class="info-strip" aria-label="Tutustu Suomeen tiedot">
-  <div class="info-chip"><b>Valmis avattavaksi</b><span>Päijät-Häme avautuu nykyiselle maakuntasivulle.</span></div>
-  <div class="info-chip"><b>Seuraavaksi</b><span>Muut maakunnat voidaan täyttää samalla rakenteella.</span></div>
+<section class="status-card" aria-label="Edistyminen">
+  <h2>Edistyminen</h2>
+  <p><b>Valmiina nyt:</b> Päijät-Häme avautuu maakuntasivulle. Muut maakunnat on lisätty karttaan ja ne voidaan täydentää samalla rakenteella.</p>
+  <div class="status-line" aria-label="1/19 maakuntaa avattavissa"><span></span></div>
+  <p>1 / 19 maakuntaa avattavissa • 308 Suomen kuntaa myöhemmin</p>
+</section>
+
+<section class="search-card" aria-label="Haku">
+  <label for="regionSearch">🔍 Hae maakuntaa</label>
+  <input id="regionSearch" class="search-box" type="search" placeholder="Kirjoita esim. Päijät-Häme, Lappi tai Uusimaa">
+  <div id="noResults" class="no-results">Ei osumia.</div>
 </section>
 
 <section class="finland-card">
-  <div class="map-caption"><h2>Suomen maakunnat</h2><small>Paina Päijät-Hämettä</small></div>
+  <div class="map-caption"><h2>Suomen maakunnat</h2><small>Päijät-Häme valmis</small></div>
   <div class="map-wrap">
   <svg class="finland-svg real-map" viewBox="0 0 360 700" role="img" aria-label="Oikea Suomen maakuntakartta">
 <rect class="sea" x="0" y="0" width="360" height="700" rx="24"/>
@@ -111,24 +129,45 @@
 </svg>
   </div>
   <div class="map-legend"><span><i class="legend-dot ready"></i>Avautuu nyt</span><span><i class="legend-dot"></i>Sivu valmiina myöhemmin</span></div>
-  <p class="hint">Kartta on Suomen muotoinen ja maakunnat on eroteltu omiksi klikattaviksi alueiksi. Päijät-Häme on korostettu vihreällä ja avautuu nykyiselle maakuntasivulle.</p>
+  <p class="hint">Kartta on hillitty: muut maakunnat ovat vaaleita ja Päijät-Häme näkyy vihreänä. Maakuntaa painamalla avautuu sen oma sivu, kun sisältö on täydennetty.</p>
 </section>
 
 <section class="region-list">
   <h2>Maakunnat A–Ö</h2>
   <p class="lead">Voit valita maakunnan myös listasta. Valmiit sisällöt täydentyvät yksi maakunta kerrallaan.</p>
-  <a class="region-row active" href="paijat-hame.html"><span class="badge">🛡️</span><div><b>Päijät-Häme</b><p>Valmis maakuntasivu. Tästä pääset Asikkalaan ja muihin kuntiin.</p></div><i>›</i></a>
+  <a class="region-row active searchable-region" data-name="päijät-häme paijat hame" href="paijat-hame.html"><span class="badge">🛡️</span><div><b>Päijät-Häme</b><p>Valmis maakuntasivu. Tästä pääset Asikkalaan ja muihin kuntiin.</p></div><i>›</i></a>
   <div class="region-grid" aria-label="Maakuntaluettelo">
-    <a class="region-chip" href="ahvenanmaa.html">Ahvenanmaa</a><a class="region-chip" href="etela-karjala.html">Etelä-Karjala</a><a class="region-chip" href="etela-pohjanmaa.html">Etelä-Pohjanmaa</a><a class="region-chip" href="etela-savo.html">Etelä-Savo</a><a class="region-chip" href="kainuu.html">Kainuu</a><a class="region-chip" href="kanta-hame.html">Kanta-Häme</a><a class="region-chip" href="keski-pohjanmaa.html">Keski-Pohjanmaa</a><a class="region-chip" href="keski-suomi.html">Keski-Suomi</a><a class="region-chip" href="kymenlaakso.html">Kymenlaakso</a><a class="region-chip" href="lappi.html">Lappi</a><a class="region-chip ready-chip" href="paijat-hame.html">Päijät-Häme</a><a class="region-chip" href="pirkanmaa.html">Pirkanmaa</a><a class="region-chip" href="pohjanmaa.html">Pohjanmaa</a><a class="region-chip" href="pohjois-karjala.html">Pohjois-Karjala</a><a class="region-chip" href="pohjois-pohjanmaa.html">Pohjois-Pohjanmaa</a><a class="region-chip" href="pohjois-savo.html">Pohjois-Savo</a><a class="region-chip" href="satakunta.html">Satakunta</a><a class="region-chip" href="uusimaa.html">Uusimaa</a><a class="region-chip" href="varsinais-suomi.html">Varsinais-Suomi</a>
+    <a class="region-chip searchable-region" data-name="ahvenanmaa ahvenanmaa" href="ahvenanmaa.html">Ahvenanmaa</a><a class="region-chip searchable-region" data-name="etelä-karjala etela-karjala" href="etela-karjala.html">Etelä-Karjala</a><a class="region-chip searchable-region" data-name="etelä-pohjanmaa etela-pohjanmaa" href="etela-pohjanmaa.html">Etelä-Pohjanmaa</a><a class="region-chip searchable-region" data-name="etelä-savo etela-savo" href="etela-savo.html">Etelä-Savo</a><a class="region-chip searchable-region" data-name="kainuu kainuu" href="kainuu.html">Kainuu</a><a class="region-chip searchable-region" data-name="kanta-häme kanta-hame" href="kanta-hame.html">Kanta-Häme</a><a class="region-chip searchable-region" data-name="keski-pohjanmaa keski-pohjanmaa" href="keski-pohjanmaa.html">Keski-Pohjanmaa</a><a class="region-chip searchable-region" data-name="keski-suomi keski-suomi" href="keski-suomi.html">Keski-Suomi</a><a class="region-chip searchable-region" data-name="kymenlaakso kymenlaakso" href="kymenlaakso.html">Kymenlaakso</a><a class="region-chip searchable-region" data-name="lappi lappi" href="lappi.html">Lappi</a><a class="region-chip ready-chip searchable-region" data-name="päijät-häme paijat-hame" href="paijat-hame.html">Päijät-Häme</a><a class="region-chip searchable-region" data-name="pirkanmaa pirkanmaa" href="pirkanmaa.html">Pirkanmaa</a><a class="region-chip searchable-region" data-name="pohjanmaa pohjanmaa" href="pohjanmaa.html">Pohjanmaa</a><a class="region-chip searchable-region" data-name="pohjois-karjala pohjois-karjala" href="pohjois-karjala.html">Pohjois-Karjala</a><a class="region-chip searchable-region" data-name="pohjois-pohjanmaa pohjois-pohjanmaa" href="pohjois-pohjanmaa.html">Pohjois-Pohjanmaa</a><a class="region-chip searchable-region" data-name="pohjois-savo pohjois-savo" href="pohjois-savo.html">Pohjois-Savo</a><a class="region-chip searchable-region" data-name="satakunta satakunta" href="satakunta.html">Satakunta</a><a class="region-chip searchable-region" data-name="uusimaa uusimaa" href="uusimaa.html">Uusimaa</a><a class="region-chip searchable-region" data-name="varsinais-suomi varsinais-suomi" href="varsinais-suomi.html">Varsinais-Suomi</a>
   </div>
 </section>
 
 <section class="next-note">
-  <h2>Mitä täydennetään seuraavaksi?</h2>
-  <p>Kun maakuntakartta on kunnossa, seuraava työ on tehdä valituille maakunnille omat esittelysivut samalla rakenteella kuin Päijät-Hämeessä.</p>
+  <h2>Valitse maakunta</h2>
+  <p>Aloita painamalla Päijät-Hämettä kartasta tai listasta. Muut maakunnat täydentyvät vaiheittain, mutta rakenne on nyt valmiina koko Suomea varten.</p>
 </section>
 
 <nav class="ms-bottom" aria-label="Pikavalikko"><div class="ms-bottom-inner"><a href="index.html"><i>🏠</i>Koti</a><a class="active" href="maakunnat.html"><i>🇫🇮</i>Tutustu</a><a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a><a href="karavaanari.html"><i>🚐</i>Karavaanari</a><a href="paivakirja.html"><i>❤️</i>Omat</a></div></nav>
 </div>
+
+<script>
+(function(){
+  const input = document.getElementById('regionSearch');
+  const items = Array.from(document.querySelectorAll('.searchable-region'));
+  const noResults = document.getElementById('noResults');
+  if(!input || !items.length) return;
+  input.addEventListener('input', function(){
+    const q = this.value.trim().toLowerCase();
+    let shown = 0;
+    items.forEach(el => {
+      const hay = (el.dataset.name || el.textContent || '').toLowerCase();
+      const ok = !q || hay.includes(q) || hay.normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q.normalize('NFD').replace(/[\u0300-\u036f]/g,''));
+      el.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(noResults) noResults.style.display = shown ? 'none' : 'block';
+  });
+})();
+</script>
+
 </body>
 </html>
