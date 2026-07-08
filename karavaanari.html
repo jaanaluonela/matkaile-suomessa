@@ -1,1 +1,145 @@
-<!doctype html><html lang='fi'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Karavaanarin palvelut</title><link rel='stylesheet' href='styles.css'><script src='app.js'></script></head><body><div class='app'><section class='card'><h2>Karavaanarin palvelut</h2><p>Päijät-Hämeen karavaanarille tärkeät pysähdykset: satamat, leirintäalueet, matkaparkit, kaupat ja huoltopisteet. Tarkemmat kohteet löytyvät kuntasivuilta osoitteineen.</p><a class='btn' href='index.html'>Takaisin</a></section><nav class='bottom'><a href='index.html'><i>🏠</i>Koti</a><a href='kartta.html'><i>🗺️</i>Kartta</a><a href='paivakirja.html'><i>👤</i>Minä</a></nav></div></body></html>
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karavaanarille – Matkaile Suomessa</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
+<style>
+:root{--green:#0d3f2f;--green2:#168a55;--soft:#eef8f2;--line:#dce9df;--muted:#60746b;--blue:#0b4f7a;--cream:#fff8ed;}
+body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 50%,#edf7ff 100%);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--green);}
+.ms-page{max-width:520px;margin:0 auto;min-height:100vh;padding-bottom:106px;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 46%,#edf7ff 100%);}
+.ms-top{padding:18px 18px 8px;}
+.ms-back{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--green);font-weight:900;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px;box-shadow:0 8px 20px rgba(13,63,47,.08);}
+.ms-hero{margin:12px 18px 16px;border-radius:32px;overflow:hidden;position:relative;min-height:255px;background:linear-gradient(180deg,rgba(9,50,38,.08),rgba(9,50,38,.88)),url('assets/hero/hero-etusivu.jpg');background-size:cover;background-position:center;box-shadow:0 18px 42px rgba(13,63,47,.18);}
+.ms-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 12%,rgba(255,255,255,.35),transparent 35%),linear-gradient(135deg,rgba(22,138,85,.18),rgba(11,79,122,.13));}
+.ms-hero-content{position:absolute;left:20px;right:20px;bottom:22px;color:#fff;z-index:1;}
+.ms-pill{display:inline-flex;border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.18);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:950;margin-bottom:10px;}
+.ms-hero h1{margin:0 0 9px;color:#fff;font-size:38px;letter-spacing:-.05em;line-height:1.02;text-shadow:0 4px 18px rgba(0,0,0,.35);}
+.ms-hero p{margin:0;color:rgba(255,255,255,.94);font-size:15px;line-height:1.35;font-weight:720;text-shadow:0 2px 12px rgba(0,0,0,.25);}
+.ms-section{margin:0 18px 16px;}
+.ms-intro{background:#fff;border:1px solid var(--line);border-radius:28px;padding:19px;box-shadow:0 14px 36px rgba(13,63,47,.10);}
+.ms-intro h2{margin:0 0 7px;font-size:23px;letter-spacing:-.025em;}
+.ms-intro p{margin:0;color:var(--muted);font-size:15px;line-height:1.42;font-weight:650;}
+.ms-quick{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px;}
+.ms-quick a{text-decoration:none;background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:12px 10px;color:var(--green);font-weight:950;min-height:62px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 8px 20px rgba(13,63,47,.05);}
+.ms-quick span{font-size:24px;margin-bottom:3px;}
+.ms-title{display:flex;align-items:flex-end;justify-content:space-between;margin:22px 18px 10px;gap:12px;}
+.ms-title h2{margin:0;font-size:24px;letter-spacing:-.035em;}
+.ms-title small{color:var(--muted);font-weight:850;}
+.ms-cards{display:grid;gap:12px;margin:0 18px 16px;}
+.ms-card{position:relative;display:block;text-decoration:none;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:26px;padding:16px 16px 16px 84px;min-height:74px;box-shadow:0 10px 28px rgba(13,63,47,.08);overflow:hidden;}
+.ms-card:before{content:"";position:absolute;left:16px;top:16px;width:52px;height:52px;border-radius:19px;background:#eef8f2;}
+.ms-card .ico{position:absolute;left:16px;top:16px;width:52px;height:52px;display:grid;place-items:center;font-size:28px;z-index:1;}
+.ms-card b{display:block;font-size:21px;line-height:1.05;letter-spacing:-.02em;padding-right:28px;}
+.ms-card p{margin:5px 0 0;color:var(--muted);font-size:14px;line-height:1.25;font-weight:650;padding-right:8px;}
+.ms-card .arrow{position:absolute;right:16px;top:15px;font-size:31px;font-weight:950;color:var(--green2);}
+.ms-card.main{background:linear-gradient(135deg,#ffffff,#ecfbf3);}
+.ms-card.food{background:linear-gradient(135deg,#ffffff,#fff8ed);}
+.ms-card.water{background:linear-gradient(135deg,#ffffff,#edf7ff);}
+.ms-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 18px 18px;}
+.ms-tool{background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px 8px;text-align:center;box-shadow:0 8px 22px rgba(13,63,47,.06);font-weight:950;color:var(--green);font-size:13px;min-height:62px;display:flex;flex-direction:column;justify-content:center;}
+.ms-tool span{font-size:25px;margin-bottom:4px;}
+.ms-note{margin:0 18px 22px;background:linear-gradient(135deg,#0d3f2f,#168a55);border-radius:26px;padding:18px;color:#fff;box-shadow:0 14px 34px rgba(13,63,47,.16);}
+.ms-note b{display:block;font-size:21px;margin-bottom:6px;letter-spacing:-.02em;}
+.ms-note p{margin:0;color:rgba(255,255,255,.91);font-size:14px;line-height:1.35;font-weight:650;}
+.ms-bottom{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.94);border-top:1px solid #dce9df;box-shadow:0 -10px 28px rgba(13,63,47,.08);backdrop-filter:blur(8px);display:flex;justify-content:center;padding:8px 4px calc(8px + env(safe-area-inset-bottom));}
+.ms-bottom-inner{width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;}
+.ms-bottom a{text-decoration:none;color:#60746b;font-weight:900;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:14px;}
+.ms-bottom a i{font-style:normal;font-size:22px;line-height:1;}
+.ms-bottom a.active{color:var(--green2);background:#eef8f2;}
+@media(max-width:360px){.ms-hero h1{font-size:33px}.ms-card{padding-left:78px}.ms-tools{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="ms-page">
+  <div class="ms-top"><a class="ms-back" href="index.html">← Etusivulle</a></div>
+
+  <header class="ms-hero">
+    <div class="ms-hero-content">
+      <div class="ms-pill">Matkailuautolla ja vaunulla Suomessa</div>
+      <h1>Karavaanarille</h1>
+      <p>Löydä leirintäalueet, matkaparkit, huoltopisteet ja hyödylliset palvelut yhdestä paikasta.</p>
+    </div>
+  </header>
+
+  <section class="ms-section ms-intro">
+    <h2>Mitä etsit?</h2>
+    <p>Valitse palvelu tilanteen mukaan. Tämä sivu toimii karavaanarin työkalupakkina, jota voidaan täydentää alue kerrallaan.</p>
+    <div class="ms-quick">
+      <a href="#alueet"><span>🏕️</span>Alueet ja yöpyminen</a>
+      <a href="#huolto"><span>💧</span>Huoltopisteet</a>
+      <a href="suunnittele-matkasi.html"><span>🚗</span>Reitin varrelta</a>
+      <a href="maakunnat.html"><span>🗺️</span>Maakunnan mukaan</a>
+    </div>
+  </section>
+
+  <div class="ms-title" id="alueet"><h2>Alueet ja pysähdykset</h2><small>v147</small></div>
+  <div class="ms-cards">
+    <a class="ms-card main" href="paijat-hame.html">
+      <span class="ico">🏕️</span>
+      <b>Leirintäalueet</b>
+      <p>Alueet, joissa voi yöpyä, käyttää palveluja ja viipyä pidempään.</p>
+      <span class="arrow">›</span>
+    </a>
+    <a class="ms-card main" href="paijat-hame.html">
+      <span class="ico">🅿️</span>
+      <b>Matkaparkit</b>
+      <p>Lyhyempään pysähtymiseen ja yöpymiseen sopivat paikat.</p>
+      <span class="arrow">›</span>
+    </a>
+    <a class="ms-card food" href="suunnittele-matkasi.html">
+      <span class="ico">🍽️</span>
+      <b>Ruokailu reitin varrella</b>
+      <p>Paikalliset ruokapaikat, kahvilat ja taukopaikat ilman pelkkiä ketjuja.</p>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+
+  <div class="ms-title" id="huolto"><h2>Huolto ja arjen palvelut</h2><small>täydennetään</small></div>
+  <div class="ms-tools">
+    <div class="ms-tool"><span>💧</span>Vesipisteet</div>
+    <div class="ms-tool"><span>🚽</span>WC-tyhjennys</div>
+    <div class="ms-tool"><span>🌊</span>Harmaavesi</div>
+    <div class="ms-tool"><span>⚡</span>Sähkö</div>
+    <div class="ms-tool"><span>🔥</span>Kaasu</div>
+    <div class="ms-tool"><span>🧺</span>Pesula</div>
+    <div class="ms-tool"><span>⛽</span>Tankkaus</div>
+    <div class="ms-tool"><span>🛒</span>Kaupat</div>
+    <div class="ms-tool"><span>🚿</span>Suihkut</div>
+  </div>
+
+  <div class="ms-title"><h2>Karavaanarin helmet</h2><small>idea</small></div>
+  <div class="ms-cards">
+    <a class="ms-card water" href="paijat-hame.html">
+      <span class="ico">🌅</span>
+      <b>Kauniit pysähdyspaikat</b>
+      <p>Maisemapaikat, laavut, uimarannat ja lyhyet retket matkan varrella.</p>
+      <span class="arrow">›</span>
+    </a>
+    <a class="ms-card" href="asikkala.html">
+      <span class="ico">📍</span>
+      <b>Päijät-Hämeen vinkit</b>
+      <p>Aloita valmiista sisällöstä: Asikkala, Vääksy, Päijänne ja lähikohteet.</p>
+      <span class="arrow">›</span>
+    </a>
+  </div>
+
+  <section class="ms-note">
+    <b>Huomio toteutuksesta</b>
+    <p>Tämä v147 on käyttöliittymä ja palvelurakenne. Oikea sijaintihaku, reititys ja ajantasaiset paikkatiedot vaativat myöhemmin kartta- tai paikkatietopalvelun.</p>
+  </section>
+
+  <nav class="ms-bottom" aria-label="Pikavalikko">
+    <div class="ms-bottom-inner">
+      <a href="index.html"><i>🏠</i>Koti</a>
+      <a href="maakunnat.html"><i>🇫🇮</i>Tutustu</a>
+      <a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a>
+      <a class="active" href="karavaanari.html"><i>🚐</i>Karavaanari</a>
+      <a href="paivakirja.html"><i>❤️</i>Omat</a>
+    </div>
+  </nav>
+</div>
+</body>
+</html>
