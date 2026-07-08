@@ -51,7 +51,7 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 @media(max-width:360px){.ms-hero{min-height:335px}.ms-hero h1{font-size:33px}.ms-logo-script{font-size:32px}.ms-action{padding-left:84px}.ms-action b{font-size:21px}}
 
 .ms-quick-search{margin:0 18px 16px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:15px;box-shadow:0 12px 30px rgba(13,63,47,.09)}
-.ms-quick-search label{display:block;font-size:14px;font-weight:950;color:var(--green);margin:0 0 8px 3px}.ms-quick-input{width:100%;border:1px solid var(--line);border-radius:18px;padding:13px 14px;font-size:16px;font-weight:750;color:var(--green);background:#fbfdfb;outline:none}.ms-quick-results{display:grid;gap:8px;margin-top:11px}.ms-quick-results a{display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--green);background:#f7fbf8;border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-weight:900}.ms-quick-results small{color:var(--muted);font-weight:700;margin-left:8px}.ms-quick-results a[hidden]{display:none}.ms-quick-results i{font-style:normal;color:var(--green2);font-size:20px;font-weight:950}
+.ms-quick-search label{display:block;font-size:14px;font-weight:950;color:var(--green);margin:0 0 8px 3px}.ms-quick-input{width:100%;border:1px solid var(--line);border-radius:18px;padding:13px 14px;font-size:16px;font-weight:750;color:var(--green);background:#fbfdfb;outline:none}.ms-quick-results{display:none;gap:8px;margin-top:11px}.ms-quick-results a{display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--green);background:#f7fbf8;border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-weight:900}.ms-quick-results small{color:var(--muted);font-weight:700;margin-left:8px}.ms-quick-results a[hidden]{display:none}.ms-quick-results i{font-style:normal;color:var(--green2);font-size:20px;font-weight:950}
 
 </style>
 </head>
@@ -80,9 +80,10 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 
     <section class="ms-quick-search" aria-label="Pikahaku">
       <label for="homeQuickSearch">🔍 Etsi kuntaa tai kohdetta</label>
-      <input id="homeQuickSearch" class="ms-quick-input" type="search" placeholder="Kirjoita esim. Heinola, Hollola tai Messilä">
+      <input id="homeQuickSearch" class="ms-quick-input" type="search" placeholder="Kirjoita esim. Heinola">
       <div class="ms-quick-results" id="homeQuickResults">
-        <a data-q="heinola lintuhoitola satama harjupaviljonki" href="heinola.html"><span>Heinola <small>kunta</small></span><i>›</i></a>
+        <a data-q="heinola lintuhoitola satama harjupaviljonki heinäsaari heinasaari" href="heinola.html"><span>Heinola <small>kunta</small></span><i>›</i></a>
+        <a data-q="heinäsaari heinasaari camping leirintäalue caravan heinola" href="heinola-heinasaari.html"><span>Heinäsaari <small>caravan</small></span><i>›</i></a>
         <a data-q="hollola messilä tiirismaa kirkko" href="hollola.html"><span>Hollola <small>kunta</small></span><i>›</i></a>
         <a data-q="asikkala vääksy kanava pulkkilanharju" href="asikkala.html"><span>Asikkala <small>kunta</small></span><i>›</i></a>
         <a data-q="lahti" href="lahti.html"><span>Lahti <small>kaupunki</small></span><i>›</i></a>
@@ -144,7 +145,9 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
   const links=Array.from(document.querySelectorAll('#homeQuickResults a'));
   if(!input||!links.length)return;
   function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-  input.addEventListener('input',()=>{const q=norm(input.value.trim()); links.forEach(a=>{const hay=norm((a.dataset.q||'')+' '+a.textContent); a.hidden=!!q && !hay.includes(q);});});
+  function update(){const q=norm(input.value.trim()); const box=document.getElementById('homeQuickResults'); if(box) box.style.display=q?'grid':'none'; links.forEach(a=>{const hay=norm((a.dataset.q||'')+' '+a.textContent); a.hidden=!q || !hay.includes(q);});}
+  links.forEach(a=>a.hidden=true);
+  input.addEventListener('input',update);
 })();
 </script>
 

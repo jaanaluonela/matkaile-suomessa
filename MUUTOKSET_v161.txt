@@ -1,0 +1,1 @@
+v161: Heinolaan lisätty Heinäsaari karavaanarin palveluihin ja omaksi kohdesivuksi. Etusivun pikahaku korjattu niin, että tulokset näkyvät vasta kirjoittaessa. Heinäsaari lisätty hakuun.
