@@ -1,4 +1,124 @@
-<!doctype html><html lang='fi'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Päijät-Häme</title><link rel='stylesheet' href='styles.css'><script src='app.js'></script></head><body><div class='app'>
-<header class='hero' style="background-image:url('assets/hero/hero-etusivu.jpg')"><div class='hero-content'><img class='coat' src='https://commons.wikimedia.org/wiki/Special:Redirect/file/P%C3%A4ij%C3%A4t-H%C3%A4me.vaakuna.svg' alt='Päijät-Hämeen vaakuna'><div><h1>Päijät-Häme</h1><p>Järviä, harjuja, kanavia, kaupunkikulttuuria ja retkikohteita Suomen sydämessä.</p></div></div></header>
-<section class='card'><h2>Päijät-Häme matkailijalle</h2><p>Päijät-Häme kokoaa yhteen Päijänteen järvimaisemat, Vääksyn ja Kalkkisten kanavat, Lahden kaupunkikohteet, Hollolan historian, Heinolan puistot sekä monipuoliset retki- ja pysähdyspaikat.</p><div class='grid'><div class='stat'><b>10</b>kuntaa</div><div class='stat'><b>3</b>kaupunkia</div><a class='stat btn' href='karavaanari.html'>🚐 karavaanarin palvelut</a><a class='stat btn' href='paivakirja.html'>❤️ omat matkat</a></div></section>
-<h2 class='section-title'>Päijät-Hämeen kunnat</h2><div class='list'><a class='row' href='asikkala.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Asikkala.vaakuna.svg' alt='Asikkala vaakuna'><b>Asikkala</b><span>›</span></a><a class='row' href='heinola.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Heinola.vaakuna.svg' alt='Heinola vaakuna'><b>Heinola</b><span>›</span></a><a class='row' href='lahti.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Lahti.vaakuna.svg' alt='Lahti vaakuna'><b>Lahti</b><span>›</span></a><a class='row' href='hollola.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hollola.vaakuna.svg' alt='Hollola vaakuna'><b>Hollola</b><span>›</span></a><a class='row' href='padasjoki.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Padasjoki.vaakuna.svg' alt='Padasjoki vaakuna'><b>Padasjoki</b><span>›</span></a><a class='row' href='sysma.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Sysm%C3%A4.vaakuna.svg' alt='Sysmä vaakuna'><b>Sysmä</b><span>›</span></a><a class='row' href='hartola.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Hartola.vaakuna.svg' alt='Hartola vaakuna'><b>Hartola</b><span>›</span></a><a class='row' href='iitti.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Iitti.vaakuna.svg' alt='Iitti vaakuna'><b>Iitti</b><span>›</span></a><a class='row' href='karkola.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/K%C3%A4rk%C3%B6l%C3%A4.vaakuna.svg' alt='Kärkölä vaakuna'><b>Kärkölä</b><span>›</span></a><a class='row' href='orimattila.html'><img src='https://commons.wikimedia.org/wiki/Special:Redirect/file/Orimattila.vaakuna.svg' alt='Orimattila vaakuna'><b>Orimattila</b><span>›</span></a></div><nav class='bottom'><a href='index.html'><i>🏠</i>Koti</a><a href='kartta.html'><i>🗺️</i>Kartta</a><a href='paivakirja.html'><i>👤</i>Minä</a></nav></div></body></html>
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matkaile Suomessa</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
+<style>
+/* v140: OIKEA ETUSIVU – vain index.html, ei vaikuta Asikkalan sivuihin */
+:root{--green:#0d3f2f;--green2:#168a55;--blue:#0b4f7a;--soft:#eef8f2;--line:#dce9df;--muted:#60746b;}
+body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 100%);}
+.ms-home{max-width:520px;margin:0 auto;min-height:100vh;padding-bottom:104px;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 46%,#edf7ff 100%);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
+.ms-hero{position:relative;min-height:360px;border-radius:0 0 38px 38px;overflow:hidden;background-image:linear-gradient(180deg,rgba(8,45,35,.15),rgba(8,45,35,.82)),url('assets/hero/hero-etusivu.jpg');background-size:cover;background-position:center;box-shadow:0 18px 45px rgba(10,54,43,.20);}
+.ms-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 8%,rgba(255,255,255,.34),transparent 34%),linear-gradient(135deg,rgba(21,138,85,.14),rgba(11,79,122,.12));}
+.ms-logo{position:relative;z-index:1;margin:22px 18px 0;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.75);border-radius:28px;padding:14px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 14px 34px rgba(0,0,0,.16);max-width:390px;}
+.ms-logo-icon{width:62px;height:62px;border-radius:23px;background:linear-gradient(135deg,#0d3f2f,#168a55);color:#fff;display:grid;place-items:center;font-size:32px;font-weight:900;box-shadow:inset 0 0 0 2px rgba(255,255,255,.22);}
+.ms-logo-script{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:900;font-size:36px;line-height:.92;color:#0b3553;letter-spacing:-.045em;}
+.ms-logo-sub{margin-top:7px;font-weight:950;letter-spacing:.27em;font-size:15px;color:#168a55;}
+.ms-hero-text{position:absolute;z-index:1;left:22px;right:22px;bottom:30px;color:#fff;}
+.ms-kicker{display:inline-flex;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:8px 12px;font-size:13px;font-weight:900;margin-bottom:13px;backdrop-filter:blur(2px);}
+.ms-hero h1{margin:0 0 10px;font-size:38px;line-height:1.02;letter-spacing:-.05em;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,.35);}
+.ms-hero p{margin:0!important;color:rgba(255,255,255,.94)!important;font-size:16px!important;line-height:1.35!important;font-weight:720;max-width:440px;text-shadow:0 2px 12px rgba(0,0,0,.25);}
+.ms-intro{position:relative;z-index:2;margin:-24px 18px 16px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:20px 19px;box-shadow:0 18px 40px rgba(13,63,47,.13);}
+.ms-intro h2{margin:0 0 8px;color:var(--green);font-size:25px;letter-spacing:-.03em;line-height:1.06;}
+.ms-intro p{margin:0!important;color:var(--muted)!important;font-size:15px!important;line-height:1.38!important;font-weight:650;}
+.ms-actions{display:grid;gap:14px;margin:0 18px 20px;}
+.ms-action{position:relative;text-decoration:none;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px 18px 18px 92px;min-height:76px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 10px 28px rgba(13,63,47,.08);overflow:hidden;}
+.ms-action:active{transform:translateY(1px)}
+.ms-action:before{content:"";position:absolute;left:18px;top:50%;transform:translateY(-50%);width:58px;height:58px;border-radius:21px;background:#eef8f2;}
+.ms-action .ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:58px;height:58px;display:grid;place-items:center;font-size:30px;z-index:1;}
+.ms-action .arrow{position:absolute;right:18px;top:18px;font-size:34px;font-weight:950;color:var(--green2);line-height:1;}
+.ms-action b{font-size:23px;line-height:1.05;color:var(--green);letter-spacing:-.025em;padding-right:26px;}
+.ms-action small{display:block;margin-top:5px;color:var(--muted);font-size:14px;line-height:1.25;font-weight:760;padding-right:16px;}
+.ms-action.finland{background:linear-gradient(135deg,#ffffff,#eef7ff);}
+.ms-action.finland:before{background:#eaf4ff;}
+.ms-action.route{background:linear-gradient(135deg,#ffffff,#fff8ed);}
+.ms-action.route:before{background:#fff0dc;}
+.ms-action.caravan{background:linear-gradient(135deg,#ffffff,#ecfbf3);}
+.ms-action.caravan:before{background:#e5f8ec;}
+.ms-action.diary{background:linear-gradient(135deg,#ffffff,#fff0f4);}
+.ms-action.diary:before{background:#ffe9ef;}
+.ms-note{margin:0 18px 22px;background:linear-gradient(135deg,#0d3f2f,#168a55);border-radius:26px;padding:18px;color:#fff;box-shadow:0 14px 34px rgba(13,63,47,.16);}
+.ms-note b{display:block;font-size:21px;margin-bottom:6px;letter-spacing:-.02em;}
+.ms-note p{margin:0!important;color:rgba(255,255,255,.9)!important;font-size:14px!important;line-height:1.35!important;font-weight:650;}
+.ms-bottom{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.94);border-top:1px solid #dce9df;box-shadow:0 -10px 28px rgba(13,63,47,.08);backdrop-filter:blur(8px);display:flex;justify-content:center;padding:8px 4px calc(8px + env(safe-area-inset-bottom));}
+.ms-bottom-inner{width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;}
+.ms-bottom a{text-decoration:none;color:#60746b;font-weight:900;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:14px;}
+.ms-bottom a i{font-style:normal;font-size:22px;line-height:1;}
+.ms-bottom a.active{color:var(--green2);background:#eef8f2;}
+@media(max-width:360px){.ms-hero{min-height:335px}.ms-hero h1{font-size:33px}.ms-logo-script{font-size:32px}.ms-action{padding-left:84px}.ms-action b{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="ms-home">
+  <header class="ms-hero">
+    <div class="ms-logo" aria-label="Matkaile Suomessa logo">
+      <div class="ms-logo-icon">♡</div>
+      <div>
+        <div class="ms-logo-script">Matkaile</div>
+        <div class="ms-logo-sub">SUOMESSA</div>
+      </div>
+    </div>
+    <div class="ms-hero-text">
+      <div class="ms-kicker">Kotimaan matkailu yhdessä sovelluksessa</div>
+      <h1>Löydä Suomi omalla tavallasi</h1>
+      <p>Matkaile Suomessa kokoaa yhteen Suomen matkakohteet, kunnat, reitin varren palvelut, karavaanarin palvelut ja omat matkamuistot.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="ms-intro">
+      <h2>Mikä tämä on?</h2>
+      <p>Tämä on kotimaan matkailusovellus, jonka avulla voit tutustua maakuntiin ja kuntiin, suunnitella automatkan pysähdyksiä sekä tallentaa omia matkojasi.</p>
+    </section>
+
+    <nav class="ms-actions" aria-label="Pääosiot">
+      <a class="ms-action finland" href="maakunnat.html">
+        <span class="ico">🇫🇮</span>
+        <b>Tutustu Suomeen</b>
+        <small>Maakunnat • kunnat • kansallispuistot • kartta</small>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="ms-action route" href="suunnittele-matkasi.html">
+        <span class="ico">🚗</span>
+        <b>Suunnittele matkasi</b>
+        <small>Ruokapaikat • kahvilat • reitin varren helmet</small>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="ms-action caravan" href="karavaanari.html">
+        <span class="ico">🚐</span>
+        <b>Karavaanarille</b>
+        <small>Leirintäalueet • matkaparkit • huoltopisteet</small>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="ms-action diary" href="paivakirja.html">
+        <span class="ico">❤️</span>
+        <b>Omat matkat</b>
+        <small>Matkapäiväkirja • kuvat • suosikit • muistot</small>
+        <span class="arrow">›</span>
+      </a>
+    </nav>
+
+    <section class="ms-note">
+      <b>Seuraavaksi</b>
+      <p>Tutustu Suomeen -osioon lisätään iso Suomen kartta, josta maakuntaa painamalla avautuu sen oma sivu.</p>
+    </section>
+  </main>
+
+  <nav class="ms-bottom" aria-label="Pikavalikko">
+    <div class="ms-bottom-inner">
+      <a class="active" href="index.html"><i>🏠</i>Koti</a>
+      <a href="maakunnat.html"><i>🇫🇮</i>Tutustu</a>
+      <a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a>
+      <a href="karavaanari.html"><i>🚐</i>Karavaanari</a>
+      <a href="paivakirja.html"><i>❤️</i>Omat</a>
+    </div>
+  </nav>
+</div>
+</body>
+</html>
