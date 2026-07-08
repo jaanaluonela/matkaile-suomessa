@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 <script src="app.js"></script>
 <style>
-/* v143: Tutustu Suomeen -sivulle näyttävämpi Suomen muotoinen maakuntakartta ja lisätiedot. Asikkalaan ei koskettu. */
+/* v144: Tutustu Suomeen -sivulle oikeampi Suomen muotoinen maakuntakartta ja lisätiedot. Asikkalaan ei koskettu. */
 :root{--green:#0d3f2f;--green2:#168a55;--green3:#0f6f48;--blue:#0b4f7a;--soft:#eef8f2;--line:#dce9df;--muted:#60746b;--red:#9b2e2e;--sea:#dff2fb;--paper:#fff;}
 *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#fff 47%,#eef7ff 100%);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--green)}
 .map-page{max-width:520px;margin:0 auto;min-height:100vh;padding:0 0 108px;background:linear-gradient(180deg,#eaf6ef 0%,#fff 47%,#eef7ff 100%)}
@@ -18,6 +18,15 @@
 .region-list{margin:0 18px 18px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 12px 30px rgba(13,63,47,.08)}.region-list h2{font-size:24px;margin:0 0 5px;color:var(--green);letter-spacing:-.03em}.region-list .lead{margin:0 0 13px!important;color:var(--muted)!important;font-size:14px!important;line-height:1.35!important;font-weight:650}.region-row{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--green);border:1px solid var(--line);border-radius:22px;padding:13px 14px;margin-bottom:10px;background:#fff}.region-row.active{background:linear-gradient(135deg,#effaf4,#ffffff);border-color:#bce2cc}.region-row .badge{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:#eef8f2;font-size:24px;flex:0 0 auto}.region-row b{display:block;font-size:18px;line-height:1.1}.region-row p{margin:3px 0 0!important;color:var(--muted)!important;font-size:13px!important;line-height:1.25!important;font-weight:650}.region-row i{margin-left:auto;font-style:normal;font-size:30px;color:var(--green2);font-weight:900}.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:6px}.region-chip{border:1px solid var(--line);border-radius:16px;padding:11px 10px;background:#fbfdfb;color:#60746b;font-size:13px;font-weight:850;text-align:center;text-decoration:none}.region-chip.ready-chip{background:#eef8f2;color:#0d3f2f;border-color:#bce2cc}.region-chip:hover{background:#eef8f2;color:#0d3f2f}
 .next-note{margin:0 18px 18px;border-radius:24px;background:linear-gradient(135deg,#0d3f2f,#168a55);color:#fff;padding:18px;box-shadow:0 12px 30px rgba(13,63,47,.14)}.next-note h2{margin:0 0 8px;color:#fff;font-size:22px}.next-note p{margin:0!important;color:rgba(255,255,255,.92)!important;font-size:14px!important;line-height:1.35!important;font-weight:650!important}
 .ms-bottom{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.94);border-top:1px solid #dce9df;box-shadow:0 -10px 28px rgba(13,63,47,.08);backdrop-filter:blur(8px);display:flex;justify-content:center;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}.ms-bottom-inner{width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px}.ms-bottom a{text-decoration:none;color:#60746b;font-weight:900;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:14px}.ms-bottom a i{font-style:normal;font-size:22px;line-height:1}.ms-bottom a.active{color:#168a55;background:#eef8f2}@media(max-width:360px){.map-intro h1{font-size:30px}.map-caption{display:block}.map-caption small{display:inline-block;margin-top:8px}.region-grid{grid-template-columns:1fr}.label{font-size:7.1px}.tiny{font-size:6.1px}.info-strip{grid-template-columns:1fr}}
+
+/* v144: oikeampi Suomen muotoinen maakuntakartta, maakuntien värit ja klikattavat alueet */
+.real-map .finland-outline{fill:#fbfdfb;stroke:#9b2e2e;stroke-width:2.4;filter:drop-shadow(0 12px 18px rgba(13,63,47,.14))}
+.real-map .region{fill:var(--c,#f7fbf8);stroke:#ffffff;stroke-width:1.25;cursor:pointer;transition:.15s;filter:drop-shadow(0 2px 4px rgba(13,63,47,.05))}
+.real-map .region:hover{filter:brightness(1.04) drop-shadow(0 6px 10px rgba(13,63,47,.16));stroke:#0d3f2f;stroke-width:1.7}
+.real-map .region.ready{fill:#168a55;stroke:#ffffff;stroke-width:1.8;filter:drop-shadow(0 6px 9px rgba(22,138,85,.28))}
+.real-map .label{font-size:8px;font-weight:950;fill:#233b34;pointer-events:none;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:2.6;stroke-linejoin:round}
+.real-map .ready-label{fill:#fff;stroke:#0d3f2f;stroke-width:2.2;font-size:8.4px}
+
 </style>
 </head>
 <body>
@@ -47,76 +56,62 @@
 <section class="finland-card">
   <div class="map-caption"><h2>Suomen maakunnat</h2><small>Paina Päijät-Hämettä</small></div>
   <div class="map-wrap">
-  <svg class="finland-svg" viewBox="0 0 360 720" role="img" aria-label="Suomen maakuntakartta, jossa maakunnat ovat klikattavia">
-    <rect class="sea" x="0" y="0" width="360" height="720" rx="24"/>
-    <g class="shadow">
-      <!-- Suomen kokonaismuoto taustalla -->
-      <path class="coast" d="M158 18 L195 27 L215 54 L205 83 L224 111 L212 146 L228 175 L252 195 L256 235 L288 252 L297 290 L325 325 L305 370 L325 412 L300 452 L318 495 L289 536 L264 588 L227 642 L190 694 L148 678 L119 645 L82 624 L89 584 L52 552 L73 505 L39 468 L62 424 L45 372 L68 326 L51 276 L82 226 L77 184 L105 142 L94 96 L118 58 Z"/>
-      <!-- Maakunnat: oma SVG-rakenne, Suomen oikeaa muotoa mukaileva. -->
-      <a href="lappi.html" aria-label="Lappi"><path class="region" d="M158 21 L194 30 L212 56 L202 83 L221 112 L209 145 L226 176 L205 202 L159 189 L124 158 L107 105 L119 59 Z"/></a>
-      <text class="label" x="166" y="115">Lappi</text>
-
-      <a href="pohjois-pohjanmaa.html" aria-label="Pohjois-Pohjanmaa"><path class="region" d="M105 106 L124 158 L160 191 L206 204 L206 244 L167 262 L120 251 L88 218 L81 181 Z"/></a>
-      <text class="label" x="144" y="216">Pohjois-</text><text class="label" x="144" y="226">Pohjanmaa</text>
-
-      <a href="kainuu.html" aria-label="Kainuu"><path class="region" d="M208 205 L253 197 L257 236 L288 254 L282 291 L246 304 L208 245 Z"/></a>
-      <text class="label" x="247" y="256">Kainuu</text>
-
-      <a href="keski-pohjanmaa.html" aria-label="Keski-Pohjanmaa"><path class="region" d="M86 219 L120 253 L106 295 L70 299 L53 276 Z"/></a>
-      <text class="label tiny" x="86" y="266">Keski-</text><text class="label tiny" x="86" y="275">Pohjanmaa</text>
-
-      <a href="pohjanmaa.html" aria-label="Pohjanmaa"><path class="region" d="M70 301 L107 297 L116 352 L93 397 L61 379 L46 333 Z"/></a>
-      <text class="label" x="82" y="347">Pohjanmaa</text>
-
-      <a href="etela-pohjanmaa.html" aria-label="Etelä-Pohjanmaa"><path class="region" d="M108 297 L166 264 L190 306 L181 365 L118 354 Z"/></a>
-      <text class="label tiny" x="145" y="321">Etelä-</text><text class="label tiny" x="145" y="330">Pohjanmaa</text>
-
-      <a href="keski-suomi.html" aria-label="Keski-Suomi"><path class="region" d="M168 264 L247 306 L243 366 L191 414 L181 366 L190 306 Z"/></a>
-      <text class="label" x="210" y="343">Keski-</text><text class="label" x="210" y="354">Suomi</text>
-
-      <a href="pohjois-savo.html" aria-label="Pohjois-Savo"><path class="region" d="M248 307 L283 293 L319 327 L302 372 L244 366 Z"/></a>
-      <text class="label tiny" x="281" y="334">Pohjois-</text><text class="label tiny" x="281" y="344">Savo</text>
-
-      <a href="pohjois-karjala.html" aria-label="Pohjois-Karjala"><path class="region" d="M303 374 L320 329 L308 371 L325 413 L298 454 L259 441 L244 368 Z"/></a>
-      <text class="label tiny" x="288" y="400">Pohjois-</text><text class="label tiny" x="288" y="410">Karjala</text>
-
-      <a href="satakunta.html" aria-label="Satakunta"><path class="region" d="M61 381 L94 399 L109 445 L82 488 L47 457 Z"/></a>
-      <text class="label" x="78" y="438">Satakunta</text>
-
-      <a href="pirkanmaa.html" aria-label="Pirkanmaa"><path class="region" d="M119 356 L181 367 L191 416 L166 462 L110 446 L94 400 Z"/></a>
-      <text class="label" x="142" y="411">Pirkanmaa</text>
-
-      <a href="etela-savo.html" aria-label="Etelä-Savo"><path class="region" d="M192 416 L244 368 L259 443 L236 495 L188 482 L166 464 Z"/></a>
-      <text class="label" x="218" y="433">Etelä-</text><text class="label" x="218" y="444">Savo</text>
-
-      <a href="varsinais-suomi.html" aria-label="Varsinais-Suomi"><path class="region" d="M82 490 L111 448 L151 482 L137 535 L91 534 L50 495 Z"/></a>
-      <text class="label tiny" x="97" y="501">Varsinais-</text><text class="label tiny" x="97" y="511">Suomi</text>
-
-      <a href="kanta-hame.html" aria-label="Kanta-Häme"><path class="region" d="M151 484 L167 464 L188 484 L198 523 L151 533 L138 536 Z"/></a>
-      <text class="label tiny" x="165" y="504">Kanta-</text><text class="label tiny" x="165" y="514">Häme</text>
-
-      <a href="paijat-hame.html" aria-label="Päijät-Häme"><path class="region ready" d="M189 484 L236 497 L238 536 L211 561 L151 534 L198 524 Z"/></a>
-      <text class="label ready-label" x="204" y="522">Päijät-</text><text class="label ready-label" x="204" y="533">Häme</text>
-
-      <a href="etela-karjala.html" aria-label="Etelä-Karjala"><path class="region" d="M239 538 L269 516 L296 545 L273 585 L231 606 L213 562 Z"/></a>
-      <text class="label tiny" x="257" y="552">Etelä-</text><text class="label tiny" x="257" y="562">Karjala</text>
-
-      <a href="kymenlaakso.html" aria-label="Kymenlaakso"><path class="region" d="M212 563 L231 608 L192 645 L164 604 L152 536 Z"/></a>
-      <text class="label tiny" x="195" y="592">Kymen-</text><text class="label tiny" x="195" y="602">laakso</text>
-
-      <a href="uusimaa.html" aria-label="Uusimaa"><path class="region" d="M91 536 L138 538 L211 563 L164 606 L113 603 L73 571 Z"/></a>
-      <text class="label" x="139" y="575">Uusimaa</text>
-
-      <a href="ahvenanmaa.html" class="island-link" aria-label="Ahvenanmaa"><path class="island" d="M19 565 L39 553 L54 570 L38 590 L17 583 Z"/><circle class="island" cx="63" cy="552" r="5"/><circle class="island" cx="50" cy="610" r="4"/></a>
-      <text class="label tiny" x="45" y="626">Ahvenanmaa</text>
-
-      <!-- muutama järvi tekee kartasta Suomi-henkisemmän -->
-      <ellipse class="lake" cx="224" cy="342" rx="9" ry="15"/><ellipse class="lake" cx="210" cy="385" rx="8" ry="13"/><ellipse class="lake" cx="230" cy="510" rx="6" ry="11"/><ellipse class="lake" cx="171" cy="336" rx="5" ry="10"/><ellipse class="lake" cx="255" cy="230" rx="5" ry="9"/>
-    </g>
-  </svg>
+  <svg class="finland-svg real-map" viewBox="0 0 360 700" role="img" aria-label="Oikea Suomen maakuntakartta">
+<rect class="sea" x="0" y="0" width="360" height="700" rx="24"/>
+<path class="finland-outline" d="M259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L300.5 299.5 L287.4 354.4 L310.3 400.3 L302.3 442.0 L340.7 482.7 L333.2 515.6 L311.3 553.6 L257.4 636.4 L208.8 641.6 L160.9 663.3 L116.0 674.1 L102.4 638.4 L77.9 615.4 L88.3 553.9 L80.3 495.8 L94.9 460.3 L119.5 422.7 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 Z"/>
+<a href="lappi.html" aria-label="Lappi"><path class="region" style="--c:#d8ecff" d="M154.2 257.3 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L287.6 266.9 L154.2 257.3 Z"/></a>
+<a href="pohjois-pohjanmaa.html" aria-label="Pohjois-Pohjanmaa"><path class="region" style="--c:#cbe7ff" d="M206.0 406.6 L161.2 375.1 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L154.2 257.3 L287.6 266.9 L288.7 269.6 L206.0 406.6 Z"/></a>
+<a href="kainuu.html" aria-label="Kainuu"><path class="region" style="--c:#d8f1e4" d="M263.5 444.9 L208.0 417.2 L206.0 406.6 L288.7 269.6 L300.5 299.5 L287.4 354.4 L310.3 400.3 L304.7 429.5 L263.5 444.9 Z"/></a>
+<a href="keski-pohjanmaa.html" aria-label="Keski-Pohjanmaa"><path class="region" style="--c:#ffe7b0" d="M206.0 406.6 L208.0 417.2 L188.0 460.4 L177.4 467.3 L134.5 458.4 L113.5 431.9 L119.5 422.7 L161.2 375.1 L206.0 406.6 Z"/></a>
+<a href="pohjanmaa.html" aria-label="Pohjanmaa"><path class="region" style="--c:#ffd6a4" d="M84.5 526.0 L80.3 495.8 L94.9 460.3 L113.5 431.9 L134.5 458.4 L101.9 527.0 L84.5 526.0 Z"/></a>
+<a href="etela-pohjanmaa.html" aria-label="Etelä-Pohjanmaa"><path class="region" style="--c:#ffd1b3" d="M101.9 527.0 L134.5 458.4 L177.4 467.3 L160.7 524.8 L107.2 530.2 L101.9 527.0 Z"/></a>
+<a href="keski-suomi.html" aria-label="Keski-Suomi"><path class="region" style="--c:#d9efc9" d="M179.1 554.3 L160.7 524.8 L177.4 467.3 L188.0 460.4 L227.8 518.2 L206.5 554.3 L179.1 554.3 Z"/></a>
+<a href="pohjois-savo.html" aria-label="Pohjois-Savo"><path class="region" style="--c:#ead6ff" d="M227.8 518.2 L188.0 460.4 L208.0 417.2 L263.5 444.9 L258.8 513.8 L227.8 518.2 Z"/></a>
+<a href="pohjois-karjala.html" aria-label="Pohjois-Karjala"><path class="region" style="--c:#ffd2df" d="M305.6 555.6 L258.8 513.8 L263.5 444.9 L304.7 429.5 L302.3 442.0 L340.7 482.7 L333.2 515.6 L309.3 556.8 L305.6 555.6 Z"/></a>
+<a href="satakunta.html" aria-label="Satakunta"><path class="region" style="--c:#ffc9c9" d="M131.0 592.3 L128.2 601.1 L79.7 604.7 L88.3 553.9 L84.5 526.0 L101.9 527.0 L107.2 530.2 L131.0 592.3 Z"/></a>
+<a href="pirkanmaa.html" aria-label="Pirkanmaa"><path class="region" style="--c:#e4d5ff" d="M160.7 524.8 L179.1 554.3 L168.8 575.0 L131.0 592.3 L107.2 530.2 L160.7 524.8 Z"/></a>
+<a href="etela-savo.html" aria-label="Etelä-Savo"><path class="region" style="--c:#ffefb9" d="M227.8 518.2 L258.8 513.8 L305.6 555.6 L226.9 589.8 L206.5 554.3 L227.8 518.2 Z"/></a>
+<a href="varsinais-suomi.html" aria-label="Varsinais-Suomi"><path class="region" style="--c:#d6eff0" d="M128.2 601.1 L136.8 637.1 L126.7 671.5 L116.0 674.1 L102.4 638.4 L77.9 615.4 L79.7 604.7 L128.2 601.1 Z"/></a>
+<a href="kanta-hame.html" aria-label="Kanta-Häme"><path class="region" style="--c:#fff0bb" d="M131.0 592.3 L168.8 575.0 L184.6 623.6 L136.8 637.1 L128.2 601.1 L131.0 592.3 Z"/></a>
+<a href="paijat-hame.html" aria-label="Päijät-Häme"><path class="region ready" style="--c:#168a55" d="M226.9 589.8 L226.6 592.1 L196.2 630.0 L184.6 623.6 L168.8 575.0 L179.1 554.3 L206.5 554.3 L226.9 589.8 Z"/></a>
+<a href="etela-karjala.html" aria-label="Etelä-Karjala"><path class="region" style="--c:#ffcbd5" d="M226.6 592.1 L226.9 589.8 L305.6 555.6 L309.3 556.8 L257.4 636.4 L255.5 636.6 L226.6 592.1 Z"/></a>
+<a href="kymenlaakso.html" aria-label="Kymenlaakso"><path class="region" style="--c:#ffd6a1" d="M196.2 630.0 L226.6 592.1 L255.5 636.6 L208.8 641.6 L200.3 645.4 L196.2 630.0 Z"/></a>
+<a href="uusimaa.html" aria-label="Uusimaa"><path class="region" style="--c:#c8defd" d="M136.8 637.1 L184.6 623.6 L196.2 630.0 L200.3 645.4 L160.9 663.3 L126.7 671.5 L136.8 637.1 Z"/></a>
+<a href="ahvenanmaa.html" aria-label="Ahvenanmaa"><path class="region" style="--c:#e1d5ff" d="M63.2 644.3 L61.5 654.1 L56.7 662.4 L49.6 667.9 L41.2 669.8 L32.8 667.9 L25.7 662.4 L21.0 654.1 L19.3 644.3 L21.0 634.6 L25.7 626.3 L32.8 620.7 L41.2 618.8 L49.6 620.7 L56.7 626.3 L61.5 634.6 L63.2 644.3 Z"/></a>
+<text class="label" x="208.8" y="152.0">Lappi</text>
+<text class="label" x="221.3" y="326.6">Pohjois-</text>
+<text class="label" x="221.3" y="337.6">Pohjanmaa</text>
+<text class="label" x="261.2" y="377.3">Kainuu</text>
+<text class="label" x="164.3" y="415.0">Keski-</text>
+<text class="label" x="164.3" y="426.0">Pohjanmaa</text>
+<text class="label" x="106.4" y="478.0">Pohjanmaa</text>
+<text class="label" x="142.8" y="491.1">Etelä-</text>
+<text class="label" x="142.8" y="502.1">Pohjanmaa</text>
+<text class="label" x="190.1" y="487.8">Keski-</text>
+<text class="label" x="190.1" y="498.8">Suomi</text>
+<text class="label" x="233.5" y="482.1">Pohjois-</text>
+<text class="label" x="233.5" y="493.1">Savo</text>
+<text class="label" x="298.5" y="493.3">Pohjois-</text>
+<text class="label" x="298.5" y="504.3">Karjala</text>
+<text class="label" x="104.4" y="573.1">Satakunta</text>
+<text class="label" x="147.2" y="564.6">Pirkanmaa</text>
+<text class="label" x="250.5" y="531.3">Etelä-</text>
+<text class="label" x="250.5" y="542.3">Savo</text>
+<text class="label" x="119.1" y="632.8">Varsinais-</text>
+<text class="label" x="119.1" y="643.8">Suomi</text>
+<text class="label" x="155.9" y="607.4">Kanta-</text>
+<text class="label" x="155.9" y="618.4">Häme</text>
+<text class="label ready-label" x="196.7" y="602.9">Päijät-</text>
+<text class="label ready-label" x="196.7" y="613.9">Häme</text>
+<text class="label" x="256.4" y="609.2">Etelä-</text>
+<text class="label" x="256.4" y="620.2">Karjala</text>
+<text class="label" x="225.1" y="611.0">Kymenlaakso</text>
+<text class="label" x="156.2" y="654.4">Uusimaa</text>
+<text class="label" x="41.2" y="639.4">Ahvenanmaa</text>
+</svg>
   </div>
   <div class="map-legend"><span><i class="legend-dot ready"></i>Avautuu nyt</span><span><i class="legend-dot"></i>Sivu valmiina myöhemmin</span></div>
-  <p class="hint">Päijät-Häme on korostettu vihreällä. Muut maakunnat on linkitetty omille pohjasivuilleen, jotta niitä voi täydentää myöhemmin.</p>
+  <p class="hint">Kartta on Suomen muotoinen ja maakunnat on eroteltu omiksi klikattaviksi alueiksi. Päijät-Häme on korostettu vihreällä ja avautuu nykyiselle maakuntasivulle.</p>
 </section>
 
 <section class="region-list">

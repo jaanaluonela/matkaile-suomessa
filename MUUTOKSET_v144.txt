@@ -1,0 +1,1 @@
+v144: Vaihdettu Tutustu Suomeen -sivulle oikeampi Suomen muotoinen maakuntakartta. Päijät-Häme on klikattava ja avaa Päijät-Hämeen sivun. Asikkalan tiedostoihin ei koskettu.
