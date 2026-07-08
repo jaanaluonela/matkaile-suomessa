@@ -1,0 +1,6 @@
+Versio v141
+- Lisätty Tutustu Suomeen -sivulle suuri oma SVG-tyylinen Suomen maakuntakartta.
+- Päijät-Häme on kartassa klikattava ja avaa paijat-hame.html.
+- Muut maakunnat näkyvät tulevina alueina.
+- Lisätty maakuntalista kartan alle.
+- Asikkala-sivuihin ei koskettu.

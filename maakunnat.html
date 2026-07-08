@@ -1,42 +1,179 @@
 <!doctype html>
-<html lang='fi'>
+<html lang="fi">
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Maakunnat – Matkaile Suomessa</title>
-<link rel='stylesheet' href='styles.css'>
-<script src='app.js'></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tutustu Suomeen – Matkaile Suomessa</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js"></script>
+<style>
+/* v141: Tutustu Suomeen -sivu. Ei muutoksia Asikkalaan. */
+:root{--green:#0d3f2f;--green2:#168a55;--blue:#0b4f7a;--soft:#eef8f2;--line:#dce9df;--muted:#60746b;}
+body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#fff 48%,#edf7ff 100%);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--green);}
+.map-page{max-width:520px;margin:0 auto;min-height:100vh;padding:0 0 108px;background:linear-gradient(180deg,#eaf6ef 0%,#fff 48%,#edf7ff 100%);}
+.map-hero{padding:18px 18px 8px;}
+.map-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.map-back{width:46px;height:46px;border-radius:17px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;text-decoration:none;color:var(--green);font-size:25px;font-weight:900;box-shadow:0 8px 20px rgba(13,63,47,.08);}
+.map-title{margin:0;text-align:center;font-size:18px;font-weight:950;color:var(--green);}
+.map-info{width:46px;height:46px;border-radius:17px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--green2);font-size:22px;font-weight:900;box-shadow:0 8px 20px rgba(13,63,47,.08);}
+.map-intro{background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;margin:0 18px 16px;box-shadow:0 16px 34px rgba(13,63,47,.10);}
+.map-intro h1{margin:0 0 8px;font-size:33px;line-height:1.05;letter-spacing:-.045em;color:var(--green);}
+.map-intro p{margin:0!important;font-size:15px!important;line-height:1.38!important;color:var(--muted)!important;font-weight:650;}
+.progress-card{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+.progress-box{border:1px solid var(--line);border-radius:20px;padding:14px;background:linear-gradient(135deg,#fff,#f4fbf6);}
+.progress-box b{display:block;font-size:28px;color:var(--green2);line-height:1;}
+.progress-box span{font-size:13px;font-weight:850;color:var(--green);}
+.finland-card{margin:0 18px 18px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:16px 13px 18px;box-shadow:0 16px 34px rgba(13,63,47,.10);overflow:hidden;}
+.map-caption{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 5px 12px;}
+.map-caption h2{margin:0;font-size:23px;letter-spacing:-.03em;color:var(--green);}
+.map-caption small{font-weight:900;color:var(--green2);background:#eef8f2;border-radius:999px;padding:7px 10px;white-space:nowrap;}
+.finland-svg{width:100%;height:auto;display:block;background:linear-gradient(180deg,#f8fcff,#f1faf4);border-radius:24px;border:1px solid #e2eee8;padding:4px;}
+.region{fill:#f8fbf9;stroke:#9fb8aa;stroke-width:1.5;transition:.15s;cursor:not-allowed;}
+.region.ready{fill:#168a55;stroke:#0d3f2f;cursor:pointer;filter:drop-shadow(0 5px 8px rgba(22,138,85,.22));}
+a.region-link:hover .ready{fill:#0f784a;}
+.region-label{font-size:9px;font-weight:850;fill:#385249;pointer-events:none;text-anchor:middle;}
+.region-label.ready{fill:#fff;font-size:9.5px;}
+.map-legend{display:flex;gap:12px;flex-wrap:wrap;margin:12px 5px 0;color:#3f5249;font-weight:850;font-size:13px;}
+.legend-dot{width:16px;height:16px;border-radius:5px;display:inline-block;vertical-align:-3px;margin-right:6px;border:1px solid #9fb8aa;background:#f8fbf9;}
+.legend-dot.ready{background:#168a55;border-color:#168a55;}
+.region-list{margin:0 18px 18px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 12px 30px rgba(13,63,47,.08);}
+.region-list h2{font-size:24px;margin:0 0 12px;color:var(--green);letter-spacing:-.03em;}
+.region-row{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--green);border:1px solid var(--line);border-radius:22px;padding:13px 14px;margin-bottom:10px;background:#fff;}
+.region-row.active{background:linear-gradient(135deg,#effaf4,#ffffff);border-color:#bce2cc;}
+.region-row.disabled{opacity:.55;cursor:default;}
+.region-row .badge{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:#eef8f2;font-size:24px;flex:0 0 auto;}
+.region-row b{display:block;font-size:18px;line-height:1.1;}
+.region-row p{margin:3px 0 0!important;color:var(--muted)!important;font-size:13px!important;line-height:1.25!important;font-weight:650;}
+.region-row i{margin-left:auto;font-style:normal;font-size:30px;color:var(--green2);font-weight:900;}
+.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:6px;}
+.region-chip{border:1px solid var(--line);border-radius:16px;padding:11px 10px;background:#fbfdfb;color:#60746b;font-size:13px;font-weight:850;text-align:center;}
+.ms-bottom{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.94);border-top:1px solid #dce9df;box-shadow:0 -10px 28px rgba(13,63,47,.08);backdrop-filter:blur(8px);display:flex;justify-content:center;padding:8px 4px calc(8px + env(safe-area-inset-bottom));}
+.ms-bottom-inner{width:100%;max-width:520px;display:grid;grid-template-columns:repeat(5,1fr);gap:2px;}
+.ms-bottom a{text-decoration:none;color:#60746b;font-weight:900;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:14px;}
+.ms-bottom a i{font-style:normal;font-size:22px;line-height:1;}
+.ms-bottom a.active{color:#168a55;background:#eef8f2;}
+@media(max-width:360px){.map-intro h1{font-size:29px}.map-caption{display:block}.map-caption small{display:inline-block;margin-top:8px}.region-grid{grid-template-columns:1fr}.region-label{font-size:8px}}
+</style>
 </head>
 <body>
-<div class='app regions-page'>
-  <header class='regions-hero'>
-    <a class='back-link' href='index.html'>← Etusivu</a>
-    <h1>Tutustu Suomeen</h1>
-    <p>Valitse maakunta. Valmiit alueet avautuvat heti, muut voidaan lisätä myöhemmin.</p>
+<div class="map-page">
+  <header class="map-hero">
+    <div class="map-top">
+      <a class="map-back" href="index.html" aria-label="Takaisin etusivulle">‹</a>
+      <div class="map-title">Tutustu Suomeen</div>
+      <div class="map-info">ⓘ</div>
+    </div>
   </header>
 
-  <section class='regions-feature'>
-    <h2>Valmiina jatkoon</h2>
-    <a class='region-row active' href='paijat-hame.html'>
-      <span class='region-badge'>🛡️</span>
-      <div>
-        <b>Päijät-Häme</b>
-        <p>Järviä, harjuja, kanavia ja kuntasivuja.</p>
-      </div>
-      <i>›</i>
-    </a>
-  </section>
-
-  <section class='regions-feature muted'>
-    <h2>Lisätään myöhemmin</h2>
-    <div class='region-grid'>
-      <span>Lappi</span><span>Pirkanmaa</span><span>Uusimaa</span><span>Varsinais-Suomi</span>
-      <span>Keski-Suomi</span><span>Pohjois-Savo</span><span>Etelä-Savo</span><span>Satakunta</span>
-      <span>Kainuu</span><span>Pohjanmaa</span><span>Kymenlaakso</span><span>Ahvenanmaa</span>
+  <section class="map-intro">
+    <h1>Valitse maakunta</h1>
+    <p>Suomen kartasta pääset maakuntasivuille. Valmiina on nyt Päijät-Häme, ja muut maakunnat voidaan lisätä samaan rakenteeseen myöhemmin.</p>
+    <div class="progress-card">
+      <div class="progress-box"><b>1 / 19</b><span>maakunta avattavissa</span></div>
+      <div class="progress-box"><b>14</b><span>Päijät-Hämeen kuntaa</span></div>
     </div>
   </section>
 
-  <nav class='bottom'><a href='index.html'><i>🏠</i>Koti</a><a href='maakunnat.html'><i>🗺️</i>Maakunnat</a><a href='paivakirja.html'><i>👤</i>Minä</a></nav>
+  <section class="finland-card">
+    <div class="map-caption">
+      <h2>Suomen maakunnat</h2>
+      <small>Paina Päijät-Hämettä</small>
+    </div>
+
+    <svg class="finland-svg" viewBox="0 0 330 620" role="img" aria-label="Suomen maakuntakartta">
+      <!-- Oma yksinkertaistettu maakuntakartta, ei pohjaudu valmiiseen karttakuvaan -->
+      <path class="region" d="M145 18 L178 22 L194 48 L186 88 L158 102 L128 90 L116 54 Z"/>
+      <text class="region-label" x="155" y="64">Lappi</text>
+
+      <path class="region" d="M104 92 L162 104 L188 142 L180 184 L126 188 L92 150 Z"/>
+      <text class="region-label" x="138" y="146">Pohjois-</text><text class="region-label" x="138" y="158">Pohjanmaa</text>
+
+      <path class="region" d="M182 146 L218 158 L230 198 L202 230 L178 204 Z"/>
+      <text class="region-label" x="204" y="190">Kainuu</text>
+
+      <path class="region" d="M90 160 L124 190 L116 235 L82 246 L58 205 Z"/>
+      <text class="region-label" x="90" y="210">Keski-</text><text class="region-label" x="90" y="222">Pohjanmaa</text>
+
+      <path class="region" d="M120 190 L178 204 L196 244 L166 276 L118 260 L106 226 Z"/>
+      <text class="region-label" x="150" y="235">Pohjois-</text><text class="region-label" x="150" y="247">Savo</text>
+
+      <path class="region" d="M198 230 L244 226 L270 258 L252 304 L210 298 L168 276 Z"/>
+      <text class="region-label" x="223" y="266">Pohjois-</text><text class="region-label" x="223" y="278">Karjala</text>
+
+      <path class="region" d="M76 245 L116 236 L126 288 L104 330 L66 310 L50 272 Z"/>
+      <text class="region-label" x="88" y="286">Pohjanmaa</text>
+
+      <path class="region" d="M122 264 L166 278 L184 324 L154 358 L110 342 L104 326 Z"/>
+      <text class="region-label" x="143" y="316">Keski-</text><text class="region-label" x="143" y="328">Suomi</text>
+
+      <path class="region" d="M184 300 L220 304 L238 342 L214 384 L170 370 L154 358 Z"/>
+      <text class="region-label" x="199" y="344">Etelä-</text><text class="region-label" x="199" y="356">Savo</text>
+
+      <path class="region" d="M220 344 L260 338 L286 372 L268 414 L222 410 L214 384 Z"/>
+      <text class="region-label" x="249" y="381">Etelä-</text><text class="region-label" x="249" y="393">Karjala</text>
+
+      <path class="region" d="M62 314 L104 332 L108 382 L72 404 L40 368 Z"/>
+      <text class="region-label" x="76" y="358">Satakunta</text>
+
+      <path class="region" d="M108 344 L154 360 L166 406 L132 434 L86 410 L108 382 Z"/>
+      <text class="region-label" x="128" y="391">Pirkanmaa</text>
+
+      <a class="region-link" href="paijat-hame.html" aria-label="Avaa Päijät-Häme">
+        <path class="region ready" d="M166 374 L214 388 L218 430 L178 452 L140 430 L132 404 Z"/>
+      </a>
+      <text class="region-label ready" x="176" y="416">Päijät-</text><text class="region-label ready" x="176" y="428">Häme</text>
+
+      <path class="region" d="M218 412 L266 416 L288 450 L258 488 L214 466 Z"/>
+      <text class="region-label" x="251" y="449">Kymen-</text><text class="region-label" x="251" y="461">laakso</text>
+
+      <path class="region" d="M82 412 L132 438 L130 482 L90 506 L52 472 Z"/>
+      <text class="region-label" x="94" y="459">Varsinais-</text><text class="region-label" x="94" y="471">Suomi</text>
+
+      <path class="region" d="M132 434 L178 454 L182 496 L142 520 L102 494 L130 482 Z"/>
+      <text class="region-label" x="144" y="478">Kanta-</text><text class="region-label" x="144" y="490">Häme</text>
+
+      <path class="region" d="M182 456 L214 468 L248 500 L216 540 L164 520 L182 496 Z"/>
+      <text class="region-label" x="204" y="506">Uusimaa</text>
+
+      <path class="region" d="M42 504 L82 512 L84 552 L48 566 L24 536 Z"/>
+      <text class="region-label" x="58" y="540">Ahvenanmaa</text>
+    </svg>
+
+    <div class="map-legend">
+      <span><i class="legend-dot ready"></i>Avattavissa</span>
+      <span><i class="legend-dot"></i>Lisätään myöhemmin</span>
+    </div>
+  </section>
+
+  <section class="region-list">
+    <h2>Maakunnat</h2>
+    <a class="region-row active" href="paijat-hame.html">
+      <span class="badge">🛡️</span>
+      <div><b>Päijät-Häme</b><p>Valmis maakuntasivu. Tästä pääset Asikkalaan ja muihin kuntiin.</p></div>
+      <i>›</i>
+    </a>
+    <div class="region-grid" aria-label="Lisätään myöhemmin">
+      <span class="region-chip">Ahvenanmaa</span><span class="region-chip">Etelä-Karjala</span>
+      <span class="region-chip">Etelä-Pohjanmaa</span><span class="region-chip">Etelä-Savo</span>
+      <span class="region-chip">Kainuu</span><span class="region-chip">Kanta-Häme</span>
+      <span class="region-chip">Keski-Pohjanmaa</span><span class="region-chip">Keski-Suomi</span>
+      <span class="region-chip">Kymenlaakso</span><span class="region-chip">Lappi</span>
+      <span class="region-chip">Pirkanmaa</span><span class="region-chip">Pohjanmaa</span>
+      <span class="region-chip">Pohjois-Karjala</span><span class="region-chip">Pohjois-Pohjanmaa</span>
+      <span class="region-chip">Pohjois-Savo</span><span class="region-chip">Satakunta</span>
+      <span class="region-chip">Uusimaa</span><span class="region-chip">Varsinais-Suomi</span>
+    </div>
+  </section>
+
+  <nav class="ms-bottom" aria-label="Pikavalikko">
+    <div class="ms-bottom-inner">
+      <a href="index.html"><i>🏠</i>Koti</a>
+      <a class="active" href="maakunnat.html"><i>🇫🇮</i>Tutustu</a>
+      <a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a>
+      <a href="karavaanari.html"><i>🚐</i>Karavaanari</a>
+      <a href="paivakirja.html"><i>❤️</i>Omat</a>
+    </div>
+  </nav>
 </div>
 </body>
 </html>
