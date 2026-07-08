@@ -1,58 +1,9 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-  <meta name="matkaile-versio" content="v88-paijat-hame-korjattu">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Messilä | Matkaile Suomessa</title>
-  <link rel="stylesheet" href="tyylit.css">
-</head>
-<body>
-<div class="app">
-<header class="place-hero" style="background-image:linear-gradient(180deg,rgba(7,31,25,.18),rgba(7,31,25,.72)),url('hero-hollola.jpg')">
-  <div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><div class="place-actions-top"><button class="icon-btn">♡</button><button class="icon-btn">↗</button></div></div>
-  <div class="place-title">
-    <small>Hollola · Päijät-Häme</small>
-    <h1>Messilä</h1>
-    <p>Majoitus-, ravintola- ja ulkoilupalveluja; tarkista matkaparkki- ja caravan-palvelujen ajantasainen tilanne suoraan palveluntarjoajalta.</p>
-  </div>
-</header>
-<main class="content place-content">
-  <section class="card place-main-card">
-    <div class="place-score"><b>★ Päijät-Hämeen kohde</b><small>Nähtävyys · Retki · Matkamuisto</small></div>
-    <div class="place-action-grid">
-      <button class="place-action" data-save-action="visited" data-place="Messilä"><span>✅</span><b>Merkitse käydyksi</b><small>Tilastoihin</small></button>
-      <button class="place-action memory" data-save-action="memory" data-place="Messilä"><span>💚</span><b>Tallenna muistoksi</b><small>Kuvat ja muistiinpanot</small></button>
-      <button class="place-action add" data-save-action="trip" data-place="Messilä"><span>🧳</span><b>Lisää matkaan</b><small>Nykyiseen tai uuteen</small></button>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Tietoa kohteesta</h2></div>
-    <div class="card info-card">
-      <p>Majoitus-, ravintola- ja ulkoilupalveluja; tarkista matkaparkki- ja caravan-palvelujen ajantasainen tilanne suoraan palveluntarjoajalta.</p>
-      <div class="info-tags"><span>⏱️ 30–120 min</span><span>📷 Kuvattavaa</span><span>🚗 Helppo poiketa</span><span>💚 Sopii omiin matkoihin</span></div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Mitä voit tehdä täällä?</h2></div>
-    <div class="grid3 service-grid compact-service">
-      <div class="tile"><div class="emoji">📷</div><b>Ota kuvia</b><small>Maisemat ja muistot</small></div>
-      <div class="tile"><div class="emoji">🧭</div><b>Tutustu</b><small>Paikan tarina</small></div>
-      <div class="tile"><div class="emoji">☕</div><b>Pysähdy</b><small>Retkihetki</small></div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section-head"><h2>Omat muistiinpanot</h2></div>
-    <div class="card note-card">
-      <textarea placeholder="Kirjoita tähän oma muisto tai vinkki tästä paikasta..."></textarea>
-      <button class="primary" data-save-action="note" data-place="Messilä">Tallenna muisto</button>
-    </div>
-  </section>
-  <section class="section card"><b>Takaisin kuntaan</b><p class="plain-region-note">Palaa Hollolan sivulle ja katso muut kohteet.</p><a class="cta-secondary" href="hollola.html">Avaa Hollola</a></section>
-</main>
-<nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
-</div>
-<script src="data.js?v=88"></script>
-<script src="sovellus.js?v=88"></script>
-</body>
-</html>
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Messilä – Hollola</title><link rel="stylesheet" href="styles.css"><script src="app.js"></script></head><body class="asikkala-page"><div class="app">
+<a class="toplink" href="hollola.html">‹ Hollola</a>
+<header class="hero" style="background-image:url('https://commons.wikimedia.org/wiki/Special:Redirect/file/Hollolan%20kirkko.jpg')"><div class="hero-content"><img class="coat" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Hollola.vaakuna.svg" alt="Hollolan vaakuna"><div><h1>Messilä</h1><p>Hollola · Päijät-Häme</p></div></div></header>
+<section class="card intro-card"><h2>Messilä</h2><p>Matkailualue, jossa yhdistyvät rinteet, tapahtumat, majoitus ja Vesijärven maisemat.</p><div class="actions"><button class="btn green" data-visited="hollola-messilä" onclick="visited('hollola-messilä',this)">✓ Olen käynyt täällä</button><button class="btn" onclick="addTrip('hollola-messilä','Messilä')">Lisää omiin matkoihin</button></div></section>
+<section class="card section-list"><h2>Käyntiopas</h2><div class="compact-list">
+<div class="place"><b>📍 Osoite</b><p>Messiläntie 308, 15980 Messilä</p></div>
+<div class="place"><b>✨ Sopii erityisesti</b><p>Aktiiviseen lomaan ja karavaanarille tukikohdaksi</p></div>
+</div><a class="btn green" href="https://www.google.com/maps/search/?api=1&query=Messiläntie+308,+15980+Messilä" target="_blank" rel="noopener">🧭 Navigoi kohteeseen</a><a class="btn" href="https://messila.fi/" target="_blank" rel="noopener">🌐 Yrityksen kotisivut</a></section>
+<nav class="bottom"><a href="index.html"><i>🏠</i>Koti</a><a href="kartta.html"><i>🗺️</i>Kartta</a><a href="paivakirja.html"><i>👤</i>Minä</a></nav></div></body></html>
