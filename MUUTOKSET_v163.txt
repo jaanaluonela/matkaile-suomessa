@@ -1,0 +1,6 @@
+v163 korjaukset:
+- Hollola: Majoitus-osion alle lisätty Hotel Messilä, EnjoyNature Resort, Hotel Salpakangas sekä maininta vuokramökeistä, lomahuoneistoista ja B&B-majoituksesta.
+- Hollola: Camping/Messilän caravan-sisältö pidetään edelleen Karavaanarin palvelut -osiossa, mutta majoituksessa kerrotaan myös hotellit ja muut majoitukset.
+- Heinola: lisätty oma Museot-osio kuntasivulle.
+- Heinola: Heinolan museot -sivulle lisätty Heinolan kaupunginmuseo, Heinolan taidemuseo, Käkisalmi-museo ja Aschanin talo.
+- Rakenne pidetty samana kuin muissa kuntakorteissa.
