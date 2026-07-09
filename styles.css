@@ -631,3 +631,20 @@
 .caravan-page .notice{background:#eef8f2;border-color:#cfe5d8}
 .caravan-page .bottom{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid #dce9df;height:78px;display:flex;justify-content:center;gap:42px;z-index:20;box-shadow:0 -8px 22px rgba(13,63,47,.08)}
 .caravan-page .bottom a{text-decoration:none;color:#64746c;font-weight:900;text-align:center;padding-top:8px;font-size:12px}.caravan-page .bottom i{display:block;font-style:normal;font-size:24px}
+
+
+/* v168: kuntasivujen avattavat osiot */
+.section-list{padding:0!important;overflow:hidden!important;}
+.section-list h2{
+  display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;
+  margin:0!important;padding:15px 16px!important;cursor:pointer!important;user-select:none!important;
+  border-radius:18px!important;background:rgba(255,255,255,.72)!important;color:#0d3f2f!important;
+}
+.section-list h2 .acc-arrow{margin-left:auto!important;color:#168a55!important;font-weight:900!important;font-size:24px!important;line-height:1!important;}
+.section-list .compact-list{padding:0 14px 14px!important;}
+.section-list.collapsed .compact-list{display:none!important;}
+.section-list.collapsed h2 .acc-arrow{transform:rotate(-90deg)!important;}
+.section-list h2:focus{outline:3px solid rgba(22,138,85,.28)!important;outline-offset:2px!important;}
+.asikkala-page .section-list{margin:14px 16px!important;background:rgba(255,255,255,.92)!important;border:1px solid #d8eadf!important;border-radius:18px!important;box-shadow:0 7px 18px rgba(13,63,47,.055)!important;}
+.asikkala-page .section-list h2{font-size:20px!important;line-height:1.15!important;}
+.asikkala-page .section-list .place{margin:0 0 10px!important;}

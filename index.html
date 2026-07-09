@@ -52,6 +52,31 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 .ms-quick-search{margin:0 18px 16px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:15px;box-shadow:0 12px 30px rgba(13,63,47,.09)}
 .ms-quick-search label{display:block;font-size:14px;font-weight:950;color:var(--green);margin:0 0 8px 3px}.ms-quick-input{width:100%;border:1px solid var(--line);border-radius:18px;padding:13px 14px;font-size:16px;font-weight:750;color:var(--green);background:#fbfdfb;outline:none}.ms-quick-results{display:none;gap:8px;margin-top:11px}.ms-quick-results a{display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--green);background:#f7fbf8;border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-weight:900}.ms-quick-results small{color:var(--muted);font-weight:700;margin-left:8px}.ms-quick-results a[hidden]{display:none}.ms-quick-results i{font-style:normal;color:var(--green2);font-size:20px;font-weight:950}
 
+
+/* v168: pehmeät läpikuultavat reunat logoon ja Löydä Suomi -korttiin */
+.ms-logo{
+  width:252px!important;
+  padding:7px 16px!important;
+  border-radius:24px!important;
+  background:linear-gradient(90deg,rgba(255,255,255,.38) 0%,rgba(255,255,255,.92) 18%,rgba(255,255,255,.96) 50%,rgba(255,255,255,.92) 82%,rgba(255,255,255,.38) 100%)!important;
+  box-shadow:0 8px 22px rgba(13,63,47,.13)!important;
+  border:1px solid rgba(255,255,255,.45)!important;
+}
+.ms-logo img{max-height:86px!important;}
+.ms-hero-text{
+  bottom:20px!important;
+  padding:10px 13px 12px!important;
+  border-radius:24px!important;
+  background:linear-gradient(90deg,rgba(255,255,255,.48) 0%,rgba(255,255,255,.91) 14%,rgba(255,255,255,.94) 50%,rgba(255,255,255,.91) 86%,rgba(255,255,255,.48) 100%)!important;
+  box-shadow:0 8px 22px rgba(13,63,47,.10)!important;
+  border:1px solid rgba(255,255,255,.50)!important;
+}
+.ms-hero-text h1{font-size:30px!important;line-height:1.02!important;margin:0 0 5px!important;}
+.ms-hero-text p{font-size:15px!important;line-height:1.22!important;margin:0!important;max-width:420px!important;}
+.ms-kicker{font-size:10px!important;background:rgba(238,248,242,.62)!important;}
+.ms-hero-photo{height:342px!important;}
+@media(max-width:360px){.ms-logo{width:226px!important;left:18px!important}.ms-hero-text h1{font-size:27px!important}.ms-hero-text p{font-size:14px!important}}
+
 </style>
 </head>
 <body>
@@ -71,7 +96,7 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
   <main>
     <section class="ms-intro">
       <h2>Mikä tämä on?</h2>
-      <p>Tämä on kotimaan matkailusovellus, jonka avulla voit tutustua maakuntiin ja kuntiin, suunnitella automatkan pysähdyksiä sekä tallentaa omia matkojasi.</p>
+      <p>Tutustu Suomen kuntiin, nähtävyyksiin ja karavaanarin palveluihin sekä tallenna omat matkamuistosi.</p>
     </section>
 
     <section class="ms-quick-search" aria-label="Pikahaku">
@@ -120,7 +145,7 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 
     <section class="ms-note">
       <b>Aloita kartasta</b>
-      <p>Valitse Tutustu Suomeen ja siirry maakuntakarttaan. Päijät-Hämeestä pääset jo kuntiin ja Asikkalan valmiille sivulle.</p>
+      <p>Valitse Tutustu Suomeen ja siirry maakuntakarttaan. Sieltä löydät kunnat, nähtävyydet ja palvelut.</p>
     </section>
   </main>
 
