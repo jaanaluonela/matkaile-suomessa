@@ -1,0 +1,8 @@
+Matkaile Suomessa v162
+
+- Karavaanari-osio selkeytetty kunnittaiseksi rakenteeksi.
+- Lisätty Asikkalan oma karavaanarisivu: asikkala-karavaanari.html.
+- Lisätty Heinolan oma karavaanarisivu: heinola-karavaanari.html.
+- Asikkalan ja Heinolan kunnan sivuilla karavaanari-osio ohjaa nyt omalle karavaanarisivulle.
+- Alueen omilta sivuilta säilyy tarkempi tieto, esim. Kanavaanari ja Heinäsaari.
+- Korjattu karavaanari.html-rakenne ja poistettu keskeneräisen näköisiä listauksia.
