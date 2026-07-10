@@ -77,6 +77,37 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 .ms-hero-photo{height:342px!important;}
 @media(max-width:360px){.ms-logo{width:226px!important;left:18px!important}.ms-hero-text h1{font-size:27px!important}.ms-hero-text p{font-size:14px!important}}
 
+/* v169: etusivun lopullinen hero – logo ja yksi lyhyt iskulause */
+.ms-hero{padding:0!important;border-radius:0 0 28px 28px!important;}
+.ms-hero-photo{height:340px!important;border-radius:0!important;background-position:center center!important;}
+.ms-logo{
+  left:0!important;right:0!important;top:14px!important;width:auto!important;
+  padding:8px 18px!important;border:0!important;border-radius:0!important;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.78) 18%,rgba(255,255,255,.91) 50%,rgba(255,255,255,.78) 82%,rgba(255,255,255,0) 100%)!important;
+  box-shadow:none!important;display:flex!important;justify-content:center!important;
+}
+.ms-logo img{width:min(78vw,300px)!important;max-height:92px!important;border-radius:0!important;}
+.ms-hero-text{
+  left:0!important;right:0!important;bottom:0!important;padding:14px 22px 16px!important;
+  border:0!important;border-radius:0!important;box-shadow:none!important;text-align:center!important;
+  background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.82) 14%,rgba(255,255,255,.94) 50%,rgba(255,255,255,.82) 86%,rgba(255,255,255,0) 100%)!important;
+}
+.ms-hero-text p{font-size:15px!important;line-height:1.28!important;font-weight:800!important;color:#0d3f2f!important;max-width:430px!important;margin:0 auto!important;}
+.ms-intro{margin-top:16px!important;padding:15px 17px!important;}
+.ms-intro h2{font-size:21px!important;}
+.ms-quick-search{padding:13px!important;}
+.ms-quick-input{padding:12px 14px!important;font-size:15px!important;}
+.ms-action{min-height:70px!important;padding-top:15px!important;padding-bottom:15px!important;}
+.ms-action b{font-size:21px!important;}
+.ms-action small{font-size:13px!important;}
+@media(max-width:360px){
+  .ms-hero-photo{height:320px!important;}
+  .ms-logo{left:0!important;right:0!important;top:12px!important;width:auto!important;}
+  .ms-logo img{width:min(82vw,280px)!important;max-height:84px!important;}
+  .ms-hero-text{left:0!important;right:0!important;bottom:0!important;padding:12px 18px 14px!important;}
+  .ms-hero-text p{font-size:14px!important;}
+}
+
 </style>
 </head>
 <body>
@@ -87,16 +118,14 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
     </div>
     <div class="ms-hero-photo" aria-hidden="true"></div>
     <div class="ms-hero-text">
-      <div class="ms-kicker">Kotimaan matkailu yhdessä sovelluksessa</div>
-      <h1>Löydä Suomi</h1>
-      <p>Matkaile Suomessa kokoaa yhteen Suomen matkakohteet, kunnat, palvelut, karavaanarin palvelut ja omat matkamuistot.</p>
+      <p>Tutustu Suomeen, suunnittele matkasi ja tallenna muistosi.</p>
     </div>
   </header>
 
   <main>
     <section class="ms-intro">
       <h2>Mikä tämä on?</h2>
-      <p>Tutustu Suomen kuntiin, nähtävyyksiin ja karavaanarin palveluihin sekä tallenna omat matkamuistosi.</p>
+      <p>Matkakohteet, kunnat, karavaanarin palvelut ja omat matkamuistot yhdessä paikassa.</p>
     </section>
 
     <section class="ms-quick-search" aria-label="Pikahaku">
