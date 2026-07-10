@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     if(body) title.setAttribute('aria-controls', body.id);
     const arrow=document.createElement('span');
     arrow.className='acc-arrow';
-    arrow.textContent='▼';
+    arrow.textContent='›';
     title.appendChild(arrow);
     section.classList.add('collapsed');
     title.setAttribute('aria-expanded','false');
