@@ -695,3 +695,6 @@
 
 /* v172 annual events */
 .annual-events .event-card{padding:14px 16px}.annual-events .event-card p{margin:6px 0 0;line-height:1.45}.annual-events h2{margin-bottom:10px}
+
+/* v173 municipality page refinements */
+.story-card p{margin:0;line-height:1.65}.hero-content>div>h1{margin-bottom:0}.hero-content>div>p{display:none}.section-list .linkcard[target="_blank"] p{word-break:break-word}
