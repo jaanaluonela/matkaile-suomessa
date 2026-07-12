@@ -1,11 +1,12 @@
 <!-- MatkaileSuomessa version: v174 -->
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Matkaile Suomessa</title>
-<link rel="stylesheet" href="styles.css">
+<link href="styles.css" rel="stylesheet"/>
 <script src="app.js"></script>
 <style>
 /* v167: Etusivun hierarkia korjattu – logo isompi, Löydä Suomi pienempi, tekstipohja läpikuultava */
@@ -111,82 +112,73 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
 
 </style>
 </head>
-<body>
+<body><h1 class="sr-only">Matkaile Suomessa</h1>
 <div class="ms-home">
-  <header class="ms-hero">
-    <div class="ms-hero-photo" aria-hidden="true"></div>
-    <div class="ms-hero-text">
-      <p>Tutustu Suomeen, suunnittele matkasi ja tallenna muistosi.</p>
-    </div>
-  </header>
-
-  <main>
-    <section class="ms-intro">
-      <h2>Mikä tämä on?</h2>
-      <p>Matkakohteet, kunnat, karavaanarin palvelut ja omat matkamuistot yhdessä paikassa.</p>
-    </section>
-
-    <section class="ms-quick-search" aria-label="Pikahaku">
-      <label for="homeQuickSearch">🔍 Etsi kuntaa tai kohdetta</label>
-      <input id="homeQuickSearch" class="ms-quick-input" type="search" placeholder="Hae kuntaa, nähtävyyttä tai palvelua...">
-      <div class="ms-quick-results" id="homeQuickResults">
-        <a data-name="Heinola" data-q="heinola lintuhoitola satama harjupaviljonki heinäsaari heinasaari" href="heinola.html"><span>Heinola <small>kunta</small></span><i>›</i></a>
-        <a data-name="Heinäsaari" data-q="heinäsaari heinasaari camping leirintäalue caravan heinola" href="heinola-heinasaari.html"><span>Heinäsaari <small>caravan</small></span><i>›</i></a>
-        <a data-name="Hollola" data-q="hollola messilä tiirismaa kirkko" href="hollola.html"><span>Hollola <small>kunta</small></span><i>›</i></a>
-        <a data-name="Asikkala" data-q="asikkala vääksy kanava pulkkilanharju" href="asikkala.html"><span>Asikkala <small>kunta</small></span><i>›</i></a>
-        <a data-name="Lahti" data-q="lahti" href="lahti.html"><span>Lahti <small>kaupunki</small></span><i>›</i></a>
-        <a data-name="Messilä" data-q="messilä messila caravan laskettelu" href="hollola-messila.html"><span>Messilä <small>kohde</small></span><i>›</i></a>
-        <a data-name="Päijät-Häme" data-q="päijät-häme paijat-hame maakunta" href="paijat-hame.html"><span>Päijät-Häme <small>maakunta</small></span><i>›</i></a>
-      </div>
-    </section>
-
-    <nav class="ms-actions" aria-label="Pääosiot">
-      <a class="ms-action finland" href="maakunnat.html">
-        <span class="ico">🇫🇮</span>
-        <b>Tutustu Suomeen</b>
-        <small>Maakunnat • kunnat • kansallispuistot • kartta</small>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="ms-action route" href="suunnittele-matkasi.html">
-        <span class="ico">🚗</span>
-        <b>Suunnittele matkasi</b>
-        <small>Ruokapaikat • kahvilat • reitin varren helmet</small>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="ms-action caravan" href="karavaanari.html">
-        <span class="ico">🚐</span>
-        <b>Karavaanarille</b>
-        <small>Leirintäalueet • matkaparkit • huoltopisteet</small>
-        <span class="arrow">›</span>
-      </a>
-
-      <a class="ms-action diary" href="paivakirja.html">
-        <span class="ico">❤️</span>
-        <b>Omat matkat</b>
-        <small>Matkapäiväkirja • kuvat • suosikit • muistot</small>
-        <span class="arrow">›</span>
-      </a>
-    </nav>
-
-    <section class="ms-note">
-      <b>Aloita kartasta</b>
-      <p>Valitse Tutustu Suomeen ja siirry maakuntakarttaan. Sieltä löydät kunnat, nähtävyydet ja palvelut.</p>
-    </section>
-  </main>
-
-  <nav class="ms-bottom" aria-label="Pikavalikko">
-    <div class="ms-bottom-inner">
-      <a class="active" href="index.html"><i>🏠</i>Koti</a>
-      <a href="maakunnat.html"><i>🇫🇮</i>Tutustu</a>
-      <a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a>
-      <a href="karavaanari.html"><i>🚐</i>Karavaanari</a>
-      <a href="paivakirja.html"><i>❤️</i>Omat</a>
-    </div>
-  </nav>
+<header class="ms-hero">
+<div aria-hidden="true" class="ms-hero-photo"></div>
+<div class="ms-hero-text">
+<p>Tutustu Suomeen, suunnittele matkasi ja tallenna muistosi.</p>
 </div>
-
+</header>
+<main>
+<section class="ms-intro">
+<h2>Mikä tämä on?</h2>
+<p>Matkakohteet, kunnat, karavaanarin palvelut ja omat matkamuistot yhdessä paikassa.</p>
+</section>
+<section aria-label="Pikahaku" class="ms-quick-search">
+<label for="homeQuickSearch">🔍 Etsi kuntaa tai kohdetta</label>
+<input class="ms-quick-input" id="homeQuickSearch" placeholder="Hae kuntaa, nähtävyyttä tai palvelua..." type="search"/>
+<div class="ms-quick-results" id="homeQuickResults">
+<a data-name="Heinola" data-q="heinola lintuhoitola satama harjupaviljonki heinäsaari heinasaari" href="heinola.html"><span>Heinola <small>kunta</small></span><i>›</i></a>
+<a data-name="Heinäsaari" data-q="heinäsaari heinasaari camping leirintäalue caravan heinola" href="heinola-heinasaari.html"><span>Heinäsaari <small>caravan</small></span><i>›</i></a>
+<a data-name="Hollola" data-q="hollola messilä tiirismaa kirkko" href="hollola.html"><span>Hollola <small>kunta</small></span><i>›</i></a>
+<a data-name="Asikkala" data-q="asikkala vääksy kanava pulkkilanharju" href="asikkala.html"><span>Asikkala <small>kunta</small></span><i>›</i></a>
+<a data-name="Lahti" data-q="lahti" href="lahti.html"><span>Lahti <small>kaupunki</small></span><i>›</i></a>
+<a data-name="Messilä" data-q="messilä messila caravan laskettelu" href="hollola-messila.html"><span>Messilä <small>kohde</small></span><i>›</i></a>
+<a data-name="Päijät-Häme" data-q="päijät-häme paijat-hame maakunta" href="paijat-hame.html"><span>Päijät-Häme <small>maakunta</small></span><i>›</i></a>
+</div>
+</section>
+<nav aria-label="Pääosiot" class="ms-actions">
+<a class="ms-action finland" href="maakunnat.html">
+<span class="ico">🇫🇮</span>
+<b>Tutustu Suomeen</b>
+<small>Maakunnat • kunnat • kansallispuistot • kartta</small>
+<span class="arrow">›</span>
+</a>
+<a class="ms-action route" href="suunnittele-matkasi.html">
+<span class="ico">🚗</span>
+<b>Suunnittele matkasi</b>
+<small>Ruokapaikat • kahvilat • reitin varren helmet</small>
+<span class="arrow">›</span>
+</a>
+<a class="ms-action caravan" href="karavaanari.html">
+<span class="ico">🚐</span>
+<b>Karavaanarille</b>
+<small>Leirintäalueet • matkaparkit • huoltopisteet</small>
+<span class="arrow">›</span>
+</a>
+<a class="ms-action diary" href="paivakirja.html">
+<span class="ico">❤️</span>
+<b>Omat matkat</b>
+<small>Matkapäiväkirja • kuvat • suosikit • muistot</small>
+<span class="arrow">›</span>
+</a>
+</nav>
+<section class="ms-note">
+<b>Aloita kartasta</b>
+<p>Valitse Tutustu Suomeen ja siirry maakuntakarttaan. Sieltä löydät kunnat, nähtävyydet ja palvelut.</p>
+</section>
+</main>
+<nav aria-label="Pikavalikko" class="ms-bottom">
+<div class="ms-bottom-inner">
+<a class="active" href="index.html"><i>🏠</i>Koti</a>
+<a href="maakunnat.html"><i>🇫🇮</i>Tutustu</a>
+<a href="suunnittele-matkasi.html"><i>🚗</i>Matka</a>
+<a href="karavaanari.html"><i>🚐</i>Karavaanari</a>
+<a href="paivakirja.html"><i>❤️</i>Omat</a>
+</div>
+</nav>
+</div>
 <script>
 (function(){
   const input=document.getElementById('homeQuickSearch');
@@ -198,8 +190,6 @@ body{margin:0;background:linear-gradient(180deg,#eaf6ef 0%,#ffffff 45%,#edf7ff 1
   input.addEventListener('input',update);
 })();
 </script>
-
 </body>
 </html>
-
 <!-- v170: logo poistettu hero-kuvasta; pikahaku näyttää vain nimellä kirjoitetuilla kirjaimilla alkavat tulokset. -->
