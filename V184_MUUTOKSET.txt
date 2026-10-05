@@ -1,0 +1,9 @@
+MATKAILE SUOMESSA v184 – VIIMEISTELTY ULKOASU
+
+- Uusi suomalainen järvimaisema ja matkailuauto etusivun pääkuvaksi.
+- Etusivun värimaailma viimeistelty metsänvihreän, hiekan ja kullan sävyihin.
+- Otsikoita, painikkeita, kortteja ja varjoja parannettu.
+- Leirintäalueiden nostokortteihin lisätty kuvalliset taustat.
+- Mobiilinäkymän rauhallinen ja selkeä rakenne säilytetty.
+- Karavaanarin opas on edelleen etusivun pääasia.
+- Kuntasivujen ja muiden sivujen rakenne säilytetty ennallaan.
