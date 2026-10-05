@@ -1,0 +1,11 @@
+MATKAILE SUOMESSA v182 – ETUSIVU
+
+- Etusivu uudistettu mobiili edellä.
+- Uusi kuvallinen aloitusnäkymä ja selkeä pääpainike maakuntiin.
+- Koko Suomi ja Omat matkat nostettu kahdeksi pääpoluksi.
+- Lisätty toimiva pikahaku kunnille ja kohteille.
+- Lisätty Asikkalan, Padasjoen ja Heinolan kuntanostot.
+- Karavaanariosio nostettu näkyvästi esiin.
+- Reittisuunnittelu siirretty pois etusivun päätoiminnoista.
+- Etusivun rikkinäiset linkit poistettu.
+- Kuntasivujen rakenne säilytetty ennallaan.

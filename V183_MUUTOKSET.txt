@@ -1,0 +1,10 @@
+MATKAILE SUOMESSA v183 – KARAVAANARIN ETUSIVU
+
+- Etusivun päärooliksi muutettu karavaanarin opas.
+- Leirintäalueet ja matkaparkit nostettu heti etusivun alkuun.
+- Hero-osioon lisätty 16 yöpymispaikkaa ja 9 kuntaa.
+- Pikahaku painottaa leirintäalueita ja kuntia.
+- Etusivulle lisätty Heinäsaari, Camping Tallukka ja Messilä.
+- Paikkakunnat ja Omat matkat säilyvät pienempinä lisäpalveluina.
+- Reittisuunnittelu säilyy myöhemmän vaiheen ominaisuutena.
+- Kunta- ja karavaanarisivujen rakenne säilytetty ennallaan.
