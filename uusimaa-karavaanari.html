@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123f35">
+  <title>Uusimaa karavaanilla – Matkaile Suomessa</title>
+  <link rel="stylesheet" href="caravan.css">
+  <script defer src="caravan-data.js"></script>
+</head>
+<body>
+  <main>
+    <a class="back" href="karavaanari.html"><span aria-hidden="true">‹</span> Karavaanarin oppaaseen</a>
+    <header class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">ALUEOPAS</span>
+        <h1>Uusimaa karavaanilla</h1>
+        <p>Kaupunkipysähdyksiä, merenrantaa ja luonnonläheisiä yöpymispaikkoja.</p>
+        <div class="hero-stats">
+          <span><strong id="uusimaaCount">–</strong> kohdetta</span>
+          <span><strong id="uusimaaCities">–</strong> kuntaa</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-title">
+        <span class="round-icon" aria-hidden="true">🗺️</span>
+        <div><span class="kicker">Valitse paikkakunta</span><h2>Uudenmaan kohteet</h2></div>
+      </div>
+      <label for="uusimaaCity">Rajaa paikkakunnan mukaan</label>
+      <select id="uusimaaCity"><option value="">Kaikki Uudenmaan kohteet</option></select>
+      <p class="coverage">Tiedot tarkistettu 6.10.2026. Tarkista hinta, aukiolo ja saatavuus aina kohteesta ennen saapumista.</p>
+    </section>
+
+    <section aria-labelledby="placesTitle">
+      <div class="sectionhead">
+        <div><span class="kicker">Leirintäalueet ja matkaparkit</span><h2 id="placesTitle">Yöpymispaikat</h2></div>
+        <span id="count" role="status"></span>
+      </div>
+      <div id="uusimaaResults" class="results"></div>
+    </section>
+
+    <p class="footnote">Lista kattaa varmennetun ensimmäisen Uusimaa-kokonaisuuden. Opasta täydennetään uusien ja kausittaisten kohteiden varmistuessa.</p>
+  </main>
+  <nav aria-label="Päävalikko">
+    <a href="index.html"><span aria-hidden="true">⌂</span><small>Koti</small></a>
+    <a href="karavaanari.html" aria-current="page"><span aria-hidden="true">🚐</span><small>Yöpyminen</small></a>
+    <a href="maakunnat.html"><span aria-hidden="true">🗺️</span><small>Paikkakunnat</small></a>
+    <a href="paivakirja.html"><span aria-hidden="true">♡</span><small>Omat</small></a>
+  </nav>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const cities = ["Espoo","Hanko","Helsinki","Inkoo","Järvenpää","Kirkkonummi","Lapinjärvi","Loviisa","Nurmijärvi","Porvoo","Raasepori","Sipoo","Tuusula","Vihti"];
+      const all = (window.caravanPlaces || []).filter(place => cities.includes(place.city));
+      const select = document.querySelector("#uusimaaCity");
+      const results = document.querySelector("#uusimaaResults");
+      document.querySelector("#uusimaaCount").textContent = all.length;
+      document.querySelector("#uusimaaCities").textContent = new Set(all.map(place => place.city)).size;
+      [...new Set(all.map(place => place.city))].sort((a,b) => a.localeCompare(b,"fi")).forEach(city => {
+        const option = document.createElement("option"); option.value = city; option.textContent = city; select.append(option);
+      });
+      function render(){
+        const shown = all.filter(place => !select.value || place.city === select.value);
+        document.querySelector("#count").textContent = shown.length + " kohdetta";
+        results.replaceChildren();
+        const anchored = new Set();
+        shown.forEach(place => {
+          const card = document.createElement("article"); card.className = "place";
+          const cityId = place.city.toLocaleLowerCase("fi").replaceAll("ä","a").replaceAll("ö","o");
+          if (!anchored.has(cityId)) { card.id = cityId; anchored.add(cityId); }
+          const top = document.createElement("div"); top.className = "placetop";
+          const badge = document.createElement("span"); badge.className = "badge"; badge.textContent = (place.type === "park" ? "🚐 Matkaparkki" : "🏕 Leirintäalue") + " · " + place.city;
+          top.append(badge); card.append(top);
+          const title = document.createElement("h3"); title.textContent = place.name; card.append(title);
+          const address = document.createElement("div"); address.className = "address"; address.textContent = place.address; card.append(address);
+          const description = document.createElement("p"); description.textContent = place.description; card.append(description);
+          const buttons = document.createElement("div"); buttons.className = "buttons";
+          [["Kartta ↗",place.map],["Ajo-ohje ↗",place.navigate]].forEach(([label,url]) => { const a=document.createElement("a"); a.href=url; a.target="_blank"; a.rel="noopener"; a.textContent=label; buttons.append(a); });
+          card.append(buttons); results.append(card);
+        });
+        if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
+      }
+      select.addEventListener("change", render); render();
+    });
+  </script>
+</body>
+</html>
