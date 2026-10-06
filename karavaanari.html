@@ -1,1 +1,113 @@
-<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Karavaanarille – Matkaile Suomessa</title><link rel="stylesheet" href="caravan.css"><script defer src="caravan-data.js"></script><script defer src="caravan.js"></script></head><body><main><a class="back" href="index.html">‹ Etusivulle</a><header class="hero"><span class="eyebrow">MATKAILE SUOMESSA</span><h1>🚐 Karavaanarille</h1><p>Löydä paikka yöksi ja palvelut matkan varrelta.</p><div class="tags"><span>Leirintäalueet</span><span>Matkaparkit</span><span>Arjen palvelut</span></div></header><section class="panel"><h2>Mitä etsit?</h2><label for="search">Hae kohdetta tai paikkakuntaa</label><input id="search" type="search" placeholder="Esim. Heinola, Messilä tai Vääksy"><div class="filters" role="group" aria-label="Kohteen tyyppi"><button data-filter="all" aria-pressed="true">Kaikki</button><button data-filter="camping" aria-pressed="false">🏕 Leirintäalueet</button><button data-filter="park" aria-pressed="false">🚐 Matkaparkit</button><button data-filter="favorites" aria-pressed="false">♡ Suosikit</button></div><label for="city">Paikkakunta</label><select id="city"><option value="">Kaikki paikkakunnat</option></select><div class="near"><button id="near">📍 Etsi yöpymispaikkoja lähellä</button><p id="locationStatus" role="status">Avaa lähialueen haku kartassa oman sijaintisi perusteella.</p></div><a id="nearMap" class="action hidden" target="_blank" rel="noopener">Avaa lähialueen karttahaku ↗</a></section><section aria-labelledby="placesTitle"><div class="sectionhead"><h2 id="placesTitle">Yöpymispaikat</h2><span id="count" role="status"></span></div><p class="coverage">Mukana tällä hetkellä Päijät-Hämeen kohteita.</p><div id="results" class="results"></div><p id="empty" class="panel hidden">Kohteita ei löytynyt. Kokeile toista hakusanaa tai valitse Kaikki.</p></section><section class="panel"><h2>🔧 Palvelut lähellä</h2><p class="coverage">Painikkeet avaavat karttahaun. Tarkista palvelun saatavuus ja käyttöehdot kohteesta.</p><div class="services"><a data-query="matkailuauton huoltopiste kemiallisen wc:n tyhjennys">🚽 WC:n tyhjennys</a><a data-query="matkailuauton harmaaveden tyhjennys">💧 Harmaavesi</a><a data-query="matkailuauton juomaveden täyttöpiste">🚰 Veden täyttö</a><a data-query="nestekaasun vaihto">🔥 Kaasun vaihto</a><a data-query="huoltoasema">⛽ Tankkaus</a><a data-query="ruokakauppa">🛒 Ruokakauppa</a></div></section><section class="panel region"><div><h2>Selaa maakunnittain</h2><p>Päijät-Hämeen kunnat ja niiden caravan-palvelut.</p></div><a class="action" href="paijat-hame-karavaanari.html">Päijät-Häme →</a></section><p class="footnote">Suosikit säilyvät tässä selaimessa. Kohteiden hinnat, aukiolo ja palvelut tarkistetaan ennen saapumista.</p></main><nav aria-label="Päävalikko"><a href="index.html">🏠<span>Koti</span></a><a href="maakunnat.html">🇫🇮<span>Tutustu</span></a><a href="karavaanari.html" aria-current="page">🚐<span>Karavaanari</span></a><a href="paivakirja.html">❤️<span>Omat matkat</span></a></nav></body></html>
+<!-- MatkaileSuomessa version: v185 -->
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123f35">
+  <meta name="description" content="Löydä leirintäalueet, matkaparkit ja karavaanarin palvelut Päijät-Hämeessä.">
+  <title>Karavaanarin opas – Matkaile Suomessa</title>
+  <link rel="stylesheet" href="caravan.css">
+  <script defer src="caravan-data.js"></script>
+  <script defer src="caravan.js"></script>
+</head>
+<body>
+  <main>
+    <a class="back" href="index.html"><span aria-hidden="true">‹</span> Etusivulle</a>
+
+    <header class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">MATKAILE SUOMESSA</span>
+        <h1>Karavaanarin opas</h1>
+        <p>Löydä sopiva paikka yöksi ja tärkeät palvelut matkan varrelta.</p>
+        <div class="hero-stats">
+          <span><strong>24</strong> yöpymispaikkaa</span>
+          <span><strong>13</strong> kuntaa</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel search-panel" aria-labelledby="search-title">
+      <div class="panel-title">
+        <span class="round-icon" aria-hidden="true">⌕</span>
+        <div>
+          <span class="kicker">Löydä sopiva paikka</span>
+          <h2 id="search-title">Mihin olet matkalla?</h2>
+        </div>
+      </div>
+
+      <label for="search">Hae kohdetta tai paikkakuntaa</label>
+      <div class="search-field">
+        <input id="search" type="search" placeholder="Esim. Heinola, Messilä tai Vääksy">
+        <span aria-hidden="true">⌕</span>
+      </div>
+
+      <div class="filters" role="group" aria-label="Kohteen tyyppi">
+        <button data-filter="all" aria-pressed="true">Kaikki</button>
+        <button data-filter="camping" aria-pressed="false">🏕 Leirintäalueet</button>
+        <button data-filter="park" aria-pressed="false">🚐 Matkaparkit</button>
+        <button data-filter="favorites" aria-pressed="false">♡ Suosikit</button>
+      </div>
+
+      <label for="city">Rajaa paikkakunnan mukaan</label>
+      <select id="city"><option value="">Kaikki paikkakunnat</option></select>
+
+      <div class="near">
+        <button id="near">📍 Etsi läheltäni</button>
+        <p id="locationStatus" role="status">Voit hakea yöpymispaikkoja myös oman sijaintisi läheltä.</p>
+      </div>
+      <a id="nearMap" class="action hidden" target="_blank" rel="noopener">Avaa lähialueen karttahaku ↗</a>
+    </section>
+
+    <section aria-labelledby="placesTitle">
+      <div class="sectionhead">
+        <div>
+          <span class="kicker">Leirintäalueet ja matkaparkit</span>
+          <h2 id="placesTitle">Yöpymispaikat</h2>
+        </div>
+        <span id="count" role="status"></span>
+      </div>
+      <p class="coverage">Mukana ensimmäisiä kohteita Päijät-Hämeestä, Uudeltamaalta, Keski-Suomesta ja Pirkanmaalta. Valitse kortista tiedot, kartta tai ajo-ohje.</p>
+      <div id="results" class="results"></div>
+      <p id="empty" class="panel hidden">Kohteita ei löytynyt. Kokeile toista hakusanaa tai valitse Kaikki.</p>
+    </section>
+
+    <section class="panel service-panel" id="services">
+      <div class="panel-title">
+        <span class="round-icon" aria-hidden="true">⚙</span>
+        <div>
+          <span class="kicker">Matkan varrella</span>
+          <h2>Karavaanarin palvelut</h2>
+        </div>
+      </div>
+      <p class="coverage">Painikkeet avaavat karttahaun valitun paikkakunnan läheltä.</p>
+      <div class="services">
+        <a data-query="matkailuauton huoltopiste kemiallisen wc:n tyhjennys"><span>🚽</span>WC:n tyhjennys</a>
+        <a data-query="matkailuauton harmaaveden tyhjennys"><span>💧</span>Harmaavesi</a>
+        <a data-query="matkailuauton juomaveden täyttöpiste"><span>🚰</span>Veden täyttö</a>
+        <a data-query="nestekaasun vaihto"><span>🔥</span>Kaasun vaihto</a>
+        <a data-query="huoltoasema"><span>⛽</span>Tankkaus</a>
+        <a data-query="ruokakauppa"><span>🛒</span>Ruokakauppa</a>
+      </div>
+    </section>
+
+    <section class="panel region">
+      <div>
+        <span class="kicker">Alueopas</span>
+        <h2>Päijät-Häme karavaanilla</h2>
+        <p>Kunnat, yöpymispaikat ja alueen caravan-palvelut samassa näkymässä.</p>
+      </div>
+      <a class="action" href="paijat-hame-karavaanari.html">Tutustu alueeseen <span aria-hidden="true">→</span></a>
+    </section>
+
+    <p class="footnote">Suosikit säilyvät tässä selaimessa. Tarkista kohteesta hinnat, aukiolo ja palvelujen saatavuus ennen saapumista.</p>
+  </main>
+
+  <nav aria-label="Päävalikko">
+    <a href="index.html"><span aria-hidden="true">⌂</span><small>Koti</small></a>
+    <a href="karavaanari.html" aria-current="page"><span aria-hidden="true">🚐</span><small>Yöpyminen</small></a>
+    <a href="maakunnat.html"><span aria-hidden="true">🗺️</span><small>Paikkakunnat</small></a>
+    <a href="paivakirja.html"><span aria-hidden="true">♡</span><small>Omat</small></a>
+  </nav>
+</body>
+</html>

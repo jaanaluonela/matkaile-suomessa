@@ -300,6 +300,26 @@
       font-size:.82rem;
       line-height:1.4;
     }
+    .tip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .tip-card{
+      min-height:112px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:15px;
+      border:1px solid rgba(23,99,79,.08);
+      border-radius:18px;
+      color:var(--home-ink);
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(20,62,52,.06);
+    }
+    .tip-card:nth-child(1){background:#e8f2ed}
+    .tip-card:nth-child(2){background:#eaf1f7}
+    .tip-card:nth-child(3){background:#f0edf7}
+    .tip-card:nth-child(4){background:#f7efe3}
+    .tip-card span{font-size:1.45rem}
+    .tip-card strong{font-size:.92rem;line-height:1.2}
+    .tip-card small{color:var(--home-muted);font-size:.72rem}
     .bottom-nav{
       position:fixed;
       z-index:20;
@@ -348,8 +368,8 @@
         <h1>Karavaanarin opas Suomeen</h1>
         <p>Löydä leirintäalueet, matkaparkit ja paikkakuntien tärkeät palvelut helposti tien päällä.</p>
         <div class="hero-stats" aria-label="Oppaan sisältö">
-          <span>16 yöpymispaikkaa</span>
-          <span>9 kuntaa</span>
+          <span>24 yöpymispaikkaa</span>
+          <span>13 kuntaa</span>
         </div>
         <a class="hero-button" href="karavaanari.html">Etsi yöpymispaikka <span aria-hidden="true">→</span></a>
       </div>
@@ -428,6 +448,29 @@
         <a class="destination" href="hollola-messila.html">
           <small>Hollola</small>
           <strong>Messilä</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="caravan-tips">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Nopeat valinnat</p>
+          <h2 id="caravan-tips">Karavaanarin vinkit</h2>
+        </div>
+      </div>
+      <div class="tip-grid">
+        <a class="tip-card" href="karavaanari.html?type=camping">
+          <span aria-hidden="true">🏕️</span><strong>Leirintäalueet</strong><small>Yöpyminen ja palvelut</small>
+        </a>
+        <a class="tip-card" href="karavaanari.html#services">
+          <span aria-hidden="true">🚰</span><strong>Palvelupisteet</strong><small>Vesi, WC ja huolto</small>
+        </a>
+        <a class="tip-card" href="karavaanari.html?type=park">
+          <span aria-hidden="true">🅿️</span><strong>Matkaparkit</strong><small>Lyhyeen pysähdykseen</small>
+        </a>
+        <a class="tip-card" href="https://www.google.com/maps/search/?api=1&query=ravintolat+lähellä+minua" target="_blank" rel="noopener">
+          <span aria-hidden="true">🍴</span><strong>Ruokapaikat</strong><small>Etsi läheltä kartalla</small>
         </a>
       </div>
     </section>
