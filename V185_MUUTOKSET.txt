@@ -1,0 +1,11 @@
+MATKAILE SUOMESSA v185 – KARAVAANARIN PÄÄSIVU
+
+- Karavaanari-pääsivu uudistettu mobiili edellä.
+- Uusi kuvallinen yläosa vastaa etusivun metsänvihreää ja hiekanväristä tyyliä.
+- Haku, suodattimet ja paikkakuntavalinta selkeytetty.
+- Yöpymispaikkakorttien ulkoasu viimeistelty.
+- Karavaanarin palvelut muutettu selkeiksi kuvallisiksi painikkeiksi.
+- Mukaan lisätty käyttäjän ZIP-tiedostosta Porvoo, Loviisa, Jyväskylä ja Tampere.
+- Oppaassa on nyt 24 yöpymispaikkaa 13 kunnassa.
+- Etusivulle lisätty Karavaanarin vinkit -painikkeet mallikuvan mukaisella tyylillä.
+- Kunta- ja kohdesivujen rakenne säilytetty ennallaan.
