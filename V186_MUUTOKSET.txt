@@ -1,0 +1,9 @@
+MATKAILE SUOMESSA v186 – UUSIMAA
+
+- Lisätty Uudenmaan oma karavaanarin alueopas.
+- Lisätty 18 varmennettua Uudenmaan leirintäaluetta ja matkaparkkia.
+- Mukana nyt yhteensä 42 yöpymispaikkaa 25 kunnassa.
+- Uusimaa-sivulla paikkakuntasuodatus ja kartta- sekä ajo-ohjepainikkeet.
+- Tietojen tarkistuspäiväksi merkitty 6.10.2026.
+- Etusivun ja Karavaanari-sivun kohdemäärät päivitetty.
+- Reittisuunnittelua ei ole vielä lisätty.
