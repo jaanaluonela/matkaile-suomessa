@@ -1,0 +1,3 @@
+Pura ZIP ja lataa tiedostot sivustokansioon GitHubissa. Korvaa samannimiset, säilytä muut. Paketti sisältää myös v195-päivityksen.
+Lisätty haettava Kainuun alueluettelo: 205 nimettyä aluetta, karttalinkit, kuntasivujen yhteydet ja Ämmänsaaren oma kohdesivu.
+Luettelo perustuu lähteissä nimettyihin kyliin, taajamiin, matkailualueisiin ja Kajaanin tilastoalueisiin; se ei ole kaikkien paikannimien tai palvelujen täydellinen rekisteri.
