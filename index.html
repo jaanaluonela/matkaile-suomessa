@@ -385,8 +385,8 @@
 
 </style>
 <link rel="stylesheet" href="navigation-v191.css">
-<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v198.js"></script><script src="valikot-v198.js" defer></script></head>
-<body data-home="true">
+</head>
+<body>
   <main class="home-shell">
     <header class="hero">
       <div class="hero-content">
@@ -405,7 +405,7 @@
 
     
 
-    <section class="section" aria-label="Valitse kohteet"><div class="menu"><a href="kunnat.html">🗺️ Kunnat</a><a href="leirintaalueet.html">🏕️ Leirintäalueet</a><a href="matkaparkit.html">🅿️ Matkaparkit</a></div><label for="municipality">Valitse kunta</label><select id="municipality"><option value="">Valitse kunta…</option></select><p id="list-status" role="status"></p><div id="municipality-results"></div></section><section class="section" aria-labelledby="hakuotsikko">
+    <section class="section" aria-labelledby="hakuotsikko">
       <div class="section-head">
         <div>
           
@@ -418,16 +418,56 @@
         <span class="search-symbol" aria-hidden="true">⌕</span>
       </div>
       <div class="search-results" id="search-results" aria-live="polite"></div>
+    </section><section class="section" aria-labelledby="caravan-tips">
+      <div class="section-head">
+        <div>
+          
+          <h2 id="caravan-tips">Nopeat valinnat</h2>
+        </div>
+      </div>
+      <div class="tip-grid">
+        <a class="tip-card" href="karavaanari.html?type=camping">
+          <span aria-hidden="true">🏕️</span><strong>Leirintäalueet</strong><small>Yöpyminen ja palvelut</small>
+        </a>
+        <a class="tip-card" href="karavaanari.html#services">
+          <span aria-hidden="true">🚰</span><strong>Palvelupisteet</strong><small>Vesi, WC ja huolto</small>
+        </a>
+        <a class="tip-card" href="karavaanari.html?type=park">
+          <span aria-hidden="true">🅿️</span><strong>Matkaparkit</strong><small>Lyhyeen pysähdykseen</small>
+        </a>
+        <a class="tip-card" href="https://www.google.com/maps/search/?api=1&query=ravintolat+lähellä+minua" target="_blank" rel="noopener">
+          <span aria-hidden="true">🍴</span><strong>Ruokapaikat</strong><small>Etsi läheltä kartalla</small>
+        </a>
+      </div>
     </section>
 
-    
+    <section class="section" aria-labelledby="nostot">
+      <div class="section-head">
+        <div>
+          
+          <h2 id="nostot">Poimi yöpymispaikka</h2>
+        </div>
+        <a class="text-link" href="karavaanari.html">Näytä kaikki →</a>
+      </div>
+      <div class="destination-row">
+        <a class="destination" href="heinola-heinasaari.html">
+          <small>Heinola</small>
+          <strong>Heinäsaari</strong>
+        </a>
+        <a class="destination" href="camping-tallukka.html">
+          <small>Asikkala</small>
+          <strong>Camping Tallukka</strong>
+        </a>
+        
+      </div>
+    </section>
 
     
 
     <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
   </main>
 
-  <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a><a href="paivakirja.html"><span aria-hidden="true">📖</span>Omat</a></div></nav>
+  <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span>Koti</a><a href="karavaanari.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a><a href="paivakirja.html"><span aria-hidden="true">📖</span>Omat</a></div></nav>
 
   <script>
     const places = [
