@@ -1,0 +1,1 @@
+V199: Maakunta → kunta tai koko maakunta. Näyttää oppaaseen jo lisätyt kunnat ja kohteet. Pura zip ja lataa tiedostot GitHubiin korvaten samannimiset tiedostot. Tämä on päivityspaketti nykyisen sivuston päälle. Ajomatkahaku ei sisälly tähän päivitykseen.
