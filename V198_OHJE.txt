@@ -1,0 +1,5 @@
+V198 – Selkeät valikot
+Kopioi kaikki tiedostot verkkosivuston juureen aiempien päälle.
+Etusivu: Kunnat / Leirintäalueet / Matkaparkit ja kuntavalinta.
+Leirintäalueet ja matkaparkit: valitse kunta, jolloin sen kohteet tulevat suoraan näkyviin.
+Kainuun 14 kohdetta ja 205 aluetta mukana. Tämä on päivityspaketti.

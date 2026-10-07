@@ -514,7 +514,10 @@ window.caravanPlaces=[
     "description": "Caravan- ja telttapaikkoja, aitta- ja huoneistomajoitusta Lammasjärven rannalla. Uimaranta, saunoja ja välinevuokrausta. Kalevalan matkaparkki palvelee ympäri vuoden; tarkista leirintäalueen kausi ja huoltopalvelut.",
     "url": "kuhmo-kalevala-camping.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Kalevala%20Camping%20V%C3%A4in%C3%A4m%C3%B6inen%2013%2C%2088900%20Kuhmo",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Kalevala%20Camping%20V%C3%A4in%C3%A4m%C3%B6inen%2013%2C%2088900%20Kuhmo"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Kalevala%20Camping%20V%C3%A4in%C3%A4m%C3%B6inen%2013%2C%2088900%20Kuhmo",
+    "website": "https://visitkuhmo.fi/yritys/kalevala-camping/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "paltamo-golf-matkaparkki",
@@ -525,7 +528,10 @@ window.caravanPlaces=[
     "description": "Golfkentän lähellä Oulujärven rantamaisemassa. Vuoden 2026 hinnastossa vuorokausi 32 €, sisältäen sähkön ja huoltorakennuksen käytön. Sauna ei sisälly hintaan. Tarkista ajankohtainen hinta ja aukiolo.",
     "url": "paltamo-golf-matkaparkki.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Paltamo%20Caravan%20Matkaparkki%20Golftie%209%2C%2088300%20Paltamo",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paltamo%20Caravan%20Matkaparkki%20Golftie%209%2C%2088300%20Paltamo"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paltamo%20Caravan%20Matkaparkki%20Golftie%209%2C%2088300%20Paltamo",
+    "website": "https://paltamogolf.fi/fi-fi/koemajoitu/caravan-matkaparkki/168/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "paltamo-jattilaisenmaa",
@@ -536,7 +542,10 @@ window.caravanPlaces=[
     "description": "Matkaparkki Kivesvaaran huipulla. Maisemia ja retkeilyä sekä alueen kahvila- ja ravintolapalveluja. Tarkista saatavuus, ajoneuvon sopivuus ja paikan huoltopalvelut suoraan palveluntarjoajalta.",
     "url": "paltamo-jattilaisenmaa.html",
     "map": "https://www.google.com/maps/search/?api=1&query=J%C3%A4ttil%C3%A4isenmaa%20Camper%20Park%20Kivesvaarantie%2040%2C%2088300%20Paltamo",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=J%C3%A4ttil%C3%A4isenmaa%20Camper%20Park%20Kivesvaarantie%2040%2C%2088300%20Paltamo"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=J%C3%A4ttil%C3%A4isenmaa%20Camper%20Park%20Kivesvaarantie%2040%2C%2088300%20Paltamo",
+    "website": "https://arcticgiant.fi/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "kajaani-kohtauspaikka",
@@ -547,7 +556,10 @@ window.caravanPlaces=[
     "description": "Caravan- ja telttaleirintää Oulujärven rannalla Vuottolahdessa. Sähköpaikkoja, huoltorakennus, saunoja ja uimaranta sekä toimintaa lapsille. Tarkista kauden palvelut, varaaminen ja mahdolliset jäsenyysehdot.",
     "url": "kajaani-kohtauspaikka.html",
     "map": "https://www.google.com/maps/search/?api=1&query=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani",
+    "website": "https://visitkajaani.fi/palvelu/leirintaalue-sfc-kohtauspaikka/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "hyrynsalmi-vonkka",
@@ -558,7 +570,10 @@ window.caravanPlaces=[
     "description": "Caravan- ja telttapaikkoja sekä leirintämökkejä Hyrynjärven rannalla. Hiekkaranta, sauna- ja ravintolapalveluja. Tarkista kausi, sähkö ja huoltopalvelut varauksen yhteydessä.",
     "url": "hyrynsalmi-vonkka.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Camping%20Vonkka%20Hallantie%206%2C%2089400%20Hyrynsalmi",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Camping%20Vonkka%20Hallantie%206%2C%2089400%20Hyrynsalmi"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Camping%20Vonkka%20Hallantie%206%2C%2089400%20Hyrynsalmi",
+    "website": "https://www.campingvonkka.fi/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "ristijarvi-pirtti",
@@ -569,7 +584,10 @@ window.caravanPlaces=[
     "description": "Leirintäalue ja mökkimajoitusta Iijärven rannalla. Huoltorakennuksessa WC, suihku ja keittiö; palveluihin kuuluu kemiallisen WC:n ja harmaaveden tyhjennys sekä veden täyttö huoltorakennuksen ollessa avoinna. Vuoden 2026 caravan-kausi oli 31.3.–27.9. Muulloin sovi mahdollisesta majoittumisesta etukäteen puhelimitse.",
     "url": "ristijarvi-pirtti.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Ristij%C3%A4rven%20Pirtti%20Viitostie%2048%2C%2088400%20Ristij%C3%A4rvi",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Ristij%C3%A4rven%20Pirtti%20Viitostie%2048%2C%2088400%20Ristij%C3%A4rvi"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Ristij%C3%A4rven%20Pirtti%20Viitostie%2048%2C%2088400%20Ristij%C3%A4rvi",
+    "website": "https://www.ristijarvenpirtti.fi/",
+    "season": "Kausittainen",
+    "checked": "2026-10-07"
   },
   {
     "id": "hossa-lumo",
@@ -580,7 +598,10 @@ window.caravanPlaces=[
     "description": "32 sähköliitäntäpaikkaa järven rannalla. WC, suihku, keittiö ja pesutilat huoltorakennuksessa, joka on käytössä 1.6.–30.9. Teltta- ja caravan-paikkoja ei palveluntarjoajan mukaan varata ennakkoon. Mökkimajoitus ja osa muista palveluista toimivat eri kausirytmillä; tarkista tiedot suoraan alueelta.",
     "url": "hossa-lumo.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Hossan%20Lumo%20Lumontie%203%2C%2089920%20Ruhtinansalmi",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Hossan%20Lumo%20Lumontie%203%2C%2089920%20Ruhtinansalmi"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Hossan%20Lumo%20Lumontie%203%2C%2089920%20Ruhtinansalmi",
+    "website": "https://www.hossanlumo.fi/leirintaalue/",
+    "season": "Kausittainen",
+    "checked": "2026-10-07"
   },
   {
     "id": "paljakka-saunapiha",
@@ -591,7 +612,10 @@ window.caravanPlaces=[
     "description": "Matkaparkki lyhytaikaiseen oleskeluun. Palvelupaketista riippuen sähkö, WC, suihku ja saunapalveluja sekä ranta. Talvella sähkön käyttöä on rajattu. Varaa paikka ja pyydä tarkat ajo- ja palveluohjeet palveluntarjoajalta.",
     "url": "paljakka-saunapiha.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Paljakka%20Lake%20Resort%20%E2%80%93%20Saunapihan%20matkaparkki%20Paljakka%2C%20Puolanka",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paljakka%20Lake%20Resort%20%E2%80%93%20Saunapihan%20matkaparkki%20Paljakka%2C%20Puolanka"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paljakka%20Lake%20Resort%20%E2%80%93%20Saunapihan%20matkaparkki%20Paljakka%2C%20Puolanka",
+    "website": "https://paljakka.fi/tuote/karavaanari-p-saunapihalla/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
   },
   {
     "id": "paljakka-tassulampi",
@@ -602,6 +626,79 @@ window.caravanPlaces=[
     "description": "Kaksi vieraspaikkaa noin kilometrin päässä Paljakan ydinalueesta. WC-, suihku- ja keittiötilojen käyttö sekä vedenottopiste; sauna lisäpalveluna. Varmista saatavuus ja sähkö sekä sovi saapumisajasta ennen matkaa.",
     "url": "paljakka-tassulampi.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Tassulammen%20vaunualue%20Tassulampi%2C%20Paljakka%2C%20Puolanka",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Tassulammen%20vaunualue%20Tassulampi%2C%20Paljakka%2C%20Puolanka"
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Tassulammen%20vaunualue%20Tassulampi%2C%20Paljakka%2C%20Puolanka",
+    "website": "https://paljakka.fi/tuote/tassulammen-vaunualue-paljakan-loma-asunnot-2/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
+  },
+  {
+    "id": "kuhmo-lentuankoski",
+    "name": "Lentuankosken Leirintä",
+    "city": "Kuhmo",
+    "address": "Lentuankoskentie 435, 88900 Kuhmo",
+    "type": "camping",
+    "description": "Paikkoja matkailuautoille, vaunuille ja teltoille Lentuankosken rannalla. Sähkö, WC:t, suihkut, juomavesi ja kemiallisen WC:n tyhjennys. Rantasauna lisämaksusta. Julkaistu hinnasto 2025: ajoneuvopaikka 23 €/vrk + 3,50 €/aikuinen ja 1 €/alle 16-vuotias; sähkö erikseen. Varmista nykyinen hinta ja kausi.",
+    "url": "kuhmo-lentuankoski.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Lentuankosken%20Leirint%C3%A4%20Lentuankoskentie%20435%2C%2088900%20Kuhmo",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Lentuankosken%20Leirint%C3%A4%20Lentuankoskentie%20435%2C%2088900%20Kuhmo",
+    "website": "https://lentuankoski.fi/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
+  },
+  {
+    "id": "kajaani-hotelli-matkaparkki",
+    "name": "Hotelli Kajaanin matkaparkki",
+    "city": "Kajaani",
+    "address": "Onnelantie 1, 87100 Kajaani",
+    "type": "park",
+    "description": "Matkaparkki hotellin pysäköintialueella kaupungin palvelujen lähellä. Hinta 30 €, sisältäen sähkön ja pesutilojen käytön. Aamiainen matkaparkkilaisille 12 €/hlö. Sovi saapuminen ja varmista vapaat paikat hotellilta.",
+    "url": "kajaani-hotelli-matkaparkki.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Hotelli%20Kajaanin%20matkaparkki%20Onnelantie%201%2C%2087100%20Kajaani",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Hotelli%20Kajaanin%20matkaparkki%20Onnelantie%201%2C%2087100%20Kajaani",
+    "website": "https://hotellikajaani.fi/",
+    "season": "Matkaparkki",
+    "checked": "2026-10-07"
+  },
+  {
+    "id": "puolanka-camping",
+    "name": "Puolanka Camping & Cottages",
+    "city": "Puolanka",
+    "address": "Leiritie 1, 89200 Puolanka",
+    "type": "camping",
+    "description": "Caravan- ja telttapaikkoja sekä leirintämökkejä Puolankajärven rannalla, kävelymatkan päässä keskustasta. Sähköpaikkoja ja yhteisiä pesu- ja ruoanlaittotiloja. Rantasaunasta ja talvikauden huoltopalveluista kannattaa sopia etukäteen. Hinnat ja vapaat paikat varauspalvelusta.",
+    "url": "puolanka-camping.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Puolanka%20Camping%20%26%20Cottages%20Leiritie%201%2C%2089200%20Puolanka",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Puolanka%20Camping%20%26%20Cottages%20Leiritie%201%2C%2089200%20Puolanka",
+    "website": "https://www.puolankacamping.fi/fi",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
+  },
+  {
+    "id": "ristijarvi-laahtanen",
+    "name": "Laahtanen Camping",
+    "city": "Ristijärvi",
+    "address": "Sotkamontie 177, 88400 Ristijärvi",
+    "type": "camping",
+    "description": "Sähköpaikkoja matkailuajoneuvoille luonnon keskellä. Yhteiset WC:t, suihkut ja keittiö sekä sauna. Vastaanoton yhteydessä kahvila ja pieni kauppa. Veneitä vuokrattavana. Varmista hinta, aukiolo ja palvelujen saatavuus ennen saapumista.",
+    "url": "ristijarvi-laahtanen.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Laahtanen%20Camping%20Sotkamontie%20177%2C%2088400%20Ristij%C3%A4rvi",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Laahtanen%20Camping%20Sotkamontie%20177%2C%2088400%20Ristij%C3%A4rvi",
+    "website": "https://laahtanen.com/",
+    "season": "Varmista kausi",
+    "checked": "2026-10-07"
+  },
+  {
+    "id": "hossa-karhunkainalo",
+    "name": "Camping Karhunkainalo Hossa",
+    "city": "Suomussalmi",
+    "address": "Karhunkainalontie 2, 89920 Ruhtinansalmi",
+    "type": "camping",
+    "description": "50 sähköpaikkaa ja 18 sähkötöntä ajoneuvopaikkaa sekä telttapaikkoja Öllörijärven rannalla. WC:t, suihkut, ruoanlaitto- ja pyykinpesutilat, saunat sekä kemiallisen WC:n tyhjennys. Ajoneuvon leirintämaksu 18 €/vrk + 5 €/hlö (alle 15-vuotias 2 €); kiinteä sähkö 8 €/vrk. Avoinna 1.3.–25.10.2026. Sisäänkirjautuminen Hossan luontokeskuksessa; myöhäisestä saapumisesta sovittava etukäteen.",
+    "url": "hossa-karhunkainalo.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Camping%20Karhunkainalo%20Hossa%20Karhunkainalontie%202%2C%2089920%20Ruhtinansalmi",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Camping%20Karhunkainalo%20Hossa%20Karhunkainalontie%202%2C%2089920%20Ruhtinansalmi",
+    "website": "https://hossa-kylmaluoma.fi/hossan-luontokeskus/camping/",
+    "season": "Kausittainen",
+    "checked": "2026-10-07"
   }
 ];

@@ -1,0 +1,5 @@
+V197 – Kainuun yöpymiskortit
+Kopioi ZIP-paketin tiedostot verkkosivun juureen aiempien päälle.
+Avaa kainuu.html ja valitse Kainuun leirintäalueet ja matkaparkit.
+14 kohdetta, joista 5 uusia. Aiemmat 205 aluetietoa säilytetty.
+Tämä on päivityspaketti, ei koko sivuston kopio.
