@@ -419,14 +419,14 @@ window.caravanPlaces=[
   },
   {
     "id": "hanko-silversand",
-    "name": "Camping Silversand Hanko",
+    "name": "Silversand Resort & Camping",
     "city": "Hanko",
-    "address": "Aarne Karjalaisentie 15, 10960 Hanko",
-    "description": "Ympärivuotinen neljän tähden camping-alue meren rannalla Hangossa.",
+    "address": "Aarne Karjalaisen tie 15, 10900 Hanko",
+    "description": "Ympärivuotinen merenrantaleirintäalue ja caravan-huoltopalveluja.",
     "type": "camping",
-    "url": "uusimaa-karavaanari.html#hanko",
-    "map": "https://www.google.com/maps/search/?api=1&query=Camping+Silversand+Hanko",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Aarne+Karjalaisentie+15+Hanko"
+    "url": "hanko-silversand.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Silversand%20Resort%20%26%20Camping%20Hanko",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Silversand%20Resort%20%26%20Camping%20Hanko"
   },
   {
     "id": "nurmijarvi-saaksi",
@@ -495,17 +495,6 @@ window.caravanPlaces=[
     "navigate": "https://www.google.com/maps/dir/?api=1&destination=Käsivarrentie+14663+99490+Kilpisjarvi"
   },
   {
-    "id": "hanko-silversand",
-    "name": "Silversand Resort & Camping",
-    "city": "Hanko",
-    "address": "Aarne Karjalaisen tie 15, 10900 Hanko",
-    "description": "Ympärivuotinen merenrantaleirintäalue ja caravan-huoltopalveluja.",
-    "type": "camping",
-    "url": "hanko-silversand.html",
-    "map": "https://www.google.com/maps/search/?api=1&query=Silversand%20Resort%20%26%20Camping%20Hanko",
-    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Silversand%20Resort%20%26%20Camping%20Hanko"
-  },
-  {
     "id": "tammisaari-camping",
     "name": "Tammisaari Camping",
     "city": "Raasepori",
@@ -515,5 +504,49 @@ window.caravanPlaces=[
     "url": "tammisaari-camping.html",
     "map": "https://www.google.com/maps/search/?api=1&query=Tammisaari%20Camping%20Raasepori",
     "navigate": "https://www.google.com/maps/dir/?api=1&destination=Tammisaari%20Camping%20Raasepori"
+  },
+  {
+    "id": "kuhmo-kalevala-camping",
+    "name": "Kalevala Camping",
+    "city": "Kuhmo",
+    "address": "Väinämöinen 13, 88900 Kuhmo",
+    "type": "camping",
+    "description": "Caravan- ja telttapaikkoja, aitta- ja huoneistomajoitusta Lammasjärven rannalla. Uimaranta, saunoja ja välinevuokrausta. Kalevalan matkaparkki palvelee ympäri vuoden; tarkista leirintäalueen kausi ja huoltopalvelut.",
+    "url": "kuhmo-kalevala-camping.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Kalevala%20Camping%20V%C3%A4in%C3%A4m%C3%B6inen%2013%2C%2088900%20Kuhmo",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Kalevala%20Camping%20V%C3%A4in%C3%A4m%C3%B6inen%2013%2C%2088900%20Kuhmo"
+  },
+  {
+    "id": "paltamo-golf-matkaparkki",
+    "name": "Paltamo Caravan Matkaparkki",
+    "city": "Paltamo",
+    "address": "Golftie 9, 88300 Paltamo",
+    "type": "park",
+    "description": "Golfkentän lähellä Oulujärven rantamaisemassa. Vuoden 2026 hinnastossa vuorokausi 32 €, sisältäen sähkön ja huoltorakennuksen käytön. Sauna ei sisälly hintaan. Tarkista ajankohtainen hinta ja aukiolo.",
+    "url": "paltamo-golf-matkaparkki.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Paltamo%20Caravan%20Matkaparkki%20Golftie%209%2C%2088300%20Paltamo",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paltamo%20Caravan%20Matkaparkki%20Golftie%209%2C%2088300%20Paltamo"
+  },
+  {
+    "id": "paltamo-jattilaisenmaa",
+    "name": "Jättiläisenmaa Camper Park",
+    "city": "Paltamo",
+    "address": "Kivesvaarantie 40, 88300 Paltamo",
+    "type": "park",
+    "description": "Matkaparkki Kivesvaaran huipulla. Maisemia ja retkeilyä sekä alueen kahvila- ja ravintolapalveluja. Tarkista saatavuus, ajoneuvon sopivuus ja paikan huoltopalvelut suoraan palveluntarjoajalta.",
+    "url": "paltamo-jattilaisenmaa.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=J%C3%A4ttil%C3%A4isenmaa%20Camper%20Park%20Kivesvaarantie%2040%2C%2088300%20Paltamo",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=J%C3%A4ttil%C3%A4isenmaa%20Camper%20Park%20Kivesvaarantie%2040%2C%2088300%20Paltamo"
+  },
+  {
+    "id": "kajaani-kohtauspaikka",
+    "name": "SFC-Kohtauspaikka",
+    "city": "Kajaani",
+    "address": "Luomatie 123, 88200 Kajaani",
+    "type": "camping",
+    "description": "Caravan- ja telttaleirintää Oulujärven rannalla Vuottolahdessa. Sähköpaikkoja, huoltorakennus, saunoja ja uimaranta sekä toimintaa lapsille. Tarkista kauden palvelut, varaaminen ja mahdolliset jäsenyysehdot.",
+    "url": "kajaani-kohtauspaikka.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani"
   }
 ];
