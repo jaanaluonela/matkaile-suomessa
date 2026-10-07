@@ -358,18 +358,27 @@
       .hero-button,.path-card,.destination,.feature-card{transition:transform .18s ease,box-shadow .18s ease}
       .hero-button:active,.path-card:active,.destination:active,.feature-card:active{transform:scale(.985)}
     }
-  </style>
+  
+/* Etusivun logo ja mobiiliasettelu v188 */
+.home-shell > .hero {height:auto;min-height:0;padding:22px 18px;background:#174d40;}
+.home-shell > .hero::before,.home-shell > .hero::after {display:none;}
+.home-shell > .hero > .hero-content {position:relative;left:auto;right:auto;bottom:auto;display:block;width:100%;min-width:0;}
+.home-shell .home-logo {display:block;width:100%;height:auto;margin:0 0 20px;border-radius:12px;}
+.home-shell .hero h1 {font-size:clamp(1.65rem,7vw,2.6rem);line-height:1.12;max-width:100%;overflow-wrap:anywhere;}
+.home-shell .hero p {font-size:1rem;line-height:1.5;margin:14px 0 19px;}
+
+</style>
 </head>
 <body>
   <main class="home-shell">
     <header class="hero">
       <div class="hero-content">
-        <div class="eyebrow">🇫🇮 Matkaile Suomessa</div>
+        <img class="home-logo" src="assets/logo-matkaile-suomessa.png?v=188" alt="Matkaile Suomessa – koe, löydä, nauti">
         <h1>Karavaanarin opas Suomeen</h1>
         <p>Löydä leirintäalueet, matkaparkit ja paikkakuntien tärkeät palvelut helposti tien päällä.</p>
         <div class="hero-stats" aria-label="Oppaan sisältö">
-          <span>42 yöpymispaikkaa</span>
-          <span>25 kuntaa</span>
+          <span>45 yöpymispaikkaa</span>
+          <span>26 kuntaa</span>
         </div>
         <a class="hero-button" href="karavaanari.html">Etsi yöpymispaikka <span aria-hidden="true">→</span></a>
       </div>
