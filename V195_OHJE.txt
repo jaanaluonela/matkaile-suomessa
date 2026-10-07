@@ -1,0 +1,2 @@
+Pura ja lataa paketin tiedostot GitHubin sivustokansioon. Korvaa samannimiset; säilytä muut. Tämä paketti sisältää myös v194 Kainuu-lisäykset. Hanko ja Raasepori säilyvät aiemmista päivityksistä.
+Kainuun kaikki kahdeksan kuntaa: Hyrynsalmi, Kajaani, Kuhmo, Paltamo, Puolanka, Ristijärvi, Sotkamo ja Suomussalmi. Alueen palvelulista täydentyy jatkossa.

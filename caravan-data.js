@@ -548,5 +548,60 @@ window.caravanPlaces=[
     "url": "kajaani-kohtauspaikka.html",
     "map": "https://www.google.com/maps/search/?api=1&query=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani",
     "navigate": "https://www.google.com/maps/dir/?api=1&destination=SFC-Kohtauspaikka%20Luomatie%20123%2C%2088200%20Kajaani"
+  },
+  {
+    "id": "hyrynsalmi-vonkka",
+    "name": "Camping Vonkka",
+    "city": "Hyrynsalmi",
+    "address": "Hallantie 6, 89400 Hyrynsalmi",
+    "type": "camping",
+    "description": "Caravan- ja telttapaikkoja sekä leirintämökkejä Hyrynjärven rannalla. Hiekkaranta, sauna- ja ravintolapalveluja. Tarkista kausi, sähkö ja huoltopalvelut varauksen yhteydessä.",
+    "url": "hyrynsalmi-vonkka.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Camping%20Vonkka%20Hallantie%206%2C%2089400%20Hyrynsalmi",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Camping%20Vonkka%20Hallantie%206%2C%2089400%20Hyrynsalmi"
+  },
+  {
+    "id": "ristijarvi-pirtti",
+    "name": "Ristijärven Pirtti",
+    "city": "Ristijärvi",
+    "address": "Viitostie 48, 88400 Ristijärvi",
+    "type": "camping",
+    "description": "Leirintäalue ja mökkimajoitusta Iijärven rannalla. Huoltorakennuksessa WC, suihku ja keittiö; palveluihin kuuluu kemiallisen WC:n ja harmaaveden tyhjennys sekä veden täyttö huoltorakennuksen ollessa avoinna. Vuoden 2026 caravan-kausi oli 31.3.–27.9. Muulloin sovi mahdollisesta majoittumisesta etukäteen puhelimitse.",
+    "url": "ristijarvi-pirtti.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Ristij%C3%A4rven%20Pirtti%20Viitostie%2048%2C%2088400%20Ristij%C3%A4rvi",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Ristij%C3%A4rven%20Pirtti%20Viitostie%2048%2C%2088400%20Ristij%C3%A4rvi"
+  },
+  {
+    "id": "hossa-lumo",
+    "name": "Hossan Lumo",
+    "city": "Suomussalmi",
+    "address": "Lumontie 3, 89920 Ruhtinansalmi",
+    "type": "camping",
+    "description": "32 sähköliitäntäpaikkaa järven rannalla. WC, suihku, keittiö ja pesutilat huoltorakennuksessa, joka on käytössä 1.6.–30.9. Teltta- ja caravan-paikkoja ei palveluntarjoajan mukaan varata ennakkoon. Mökkimajoitus ja osa muista palveluista toimivat eri kausirytmillä; tarkista tiedot suoraan alueelta.",
+    "url": "hossa-lumo.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Hossan%20Lumo%20Lumontie%203%2C%2089920%20Ruhtinansalmi",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Hossan%20Lumo%20Lumontie%203%2C%2089920%20Ruhtinansalmi"
+  },
+  {
+    "id": "paljakka-saunapiha",
+    "name": "Paljakka Lake Resort – Saunapihan matkaparkki",
+    "city": "Puolanka",
+    "address": "Paljakka, Puolanka",
+    "type": "park",
+    "description": "Matkaparkki lyhytaikaiseen oleskeluun. Palvelupaketista riippuen sähkö, WC, suihku ja saunapalveluja sekä ranta. Talvella sähkön käyttöä on rajattu. Varaa paikka ja pyydä tarkat ajo- ja palveluohjeet palveluntarjoajalta.",
+    "url": "paljakka-saunapiha.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Paljakka%20Lake%20Resort%20%E2%80%93%20Saunapihan%20matkaparkki%20Paljakka%2C%20Puolanka",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Paljakka%20Lake%20Resort%20%E2%80%93%20Saunapihan%20matkaparkki%20Paljakka%2C%20Puolanka"
+  },
+  {
+    "id": "paljakka-tassulampi",
+    "name": "Tassulammen vaunualue",
+    "city": "Puolanka",
+    "address": "Tassulampi, Paljakka, Puolanka",
+    "type": "park",
+    "description": "Kaksi vieraspaikkaa noin kilometrin päässä Paljakan ydinalueesta. WC-, suihku- ja keittiötilojen käyttö sekä vedenottopiste; sauna lisäpalveluna. Varmista saatavuus ja sähkö sekä sovi saapumisajasta ennen matkaa.",
+    "url": "paljakka-tassulampi.html",
+    "map": "https://www.google.com/maps/search/?api=1&query=Tassulammen%20vaunualue%20Tassulampi%2C%20Paljakka%2C%20Puolanka",
+    "navigate": "https://www.google.com/maps/dir/?api=1&destination=Tassulammen%20vaunualue%20Tassulampi%2C%20Paljakka%2C%20Puolanka"
   }
 ];
