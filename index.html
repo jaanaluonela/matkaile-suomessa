@@ -359,11 +359,11 @@
       .hero-button:active,.path-card:active,.destination:active,.feature-card:active{transform:scale(.985)}
     }
   
-/* Etusivun logo ja mobiiliasettelu v188 */
+/* Etusivun logo ja mobiiliasettelu v190 */
 .home-shell > .hero {height:auto;min-height:0;padding:22px 18px;background:#174d40;}
 .home-shell > .hero::before,.home-shell > .hero::after {display:none;}
 .home-shell > .hero > .hero-content {position:relative;left:auto;right:auto;bottom:auto;display:block;width:100%;min-width:0;}
-.home-shell .home-logo {display:block;width:100%;height:auto;margin:0 0 20px;border-radius:12px;}
+.home-shell .home-logo {display:block !important;width:100% !important;max-width:600px !important;height:auto !important;min-height:0 !important;max-height:143px !important;aspect-ratio:1179 / 280 !important;object-fit:contain !important;margin:0 auto 20px !important;border-radius:12px;}
 .home-shell .hero h1 {font-size:clamp(1.65rem,7vw,2.6rem);line-height:1.12;max-width:100%;overflow-wrap:anywhere;}
 .home-shell .hero p {font-size:1rem;line-height:1.5;margin:14px 0 19px;}
 
@@ -373,7 +373,7 @@
   <main class="home-shell">
     <header class="hero">
       <div class="hero-content">
-        <img class="home-logo" src="assets/logo-matkaile-suomessa.png?v=188" alt="Matkaile Suomessa – koe, löydä, nauti">
+        <img width="1179" height="280" class="home-logo" src="assets/brand/matkaile-suomessa-logo-v190.png" alt="Matkaile Suomessa – koe, löydä, nauti">
         <h1>Karavaanarin opas Suomeen</h1>
         <p>Löydä leirintäalueet, matkaparkit ja paikkakuntien tärkeät palvelut helposti tien päällä.</p>
         <div class="hero-stats" aria-label="Oppaan sisältö">
