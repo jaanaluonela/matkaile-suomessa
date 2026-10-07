@@ -1,0 +1,1 @@
+Korjaa tyhjän maakuntavalikon. Pura zip ja lataa kaikki tiedostot nykyisen sivuston päälle GitHubiin. Maakuntalista on nyt suoraan sivuissa ja kuntatiedolla on uusi tiedostonimi välimuistin välttämiseksi.
