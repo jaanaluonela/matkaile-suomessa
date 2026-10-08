@@ -1,4 +1,7 @@
-KAINUU v208 — kaikkien 8 kunnan vaakunat ja asukasluvut
-Sisältää v207-päivityksen kokonaisuudessaan. Pura paketti ja lataa HTML-, CSS-, JS- ja SVG-tiedostot sivuston juurikansioon korvaten samannimiset. Älä poista muita tiedostoja.
-Asukasluvut: vuoden 2025 lopun ENNAKKOTIEDOT, lähde Kainuun liitto / Paltamon kunnan vuonna 2026 julkaisema taulukko. Luvut eivät ole lopullisia väestörakennetilaston lukuja.
-Kuhmon vaakuna on paikallinen SVG. Seitsemän lisättyä vaakunaa käyttää Wikimedia Commonsin ulkoisia SVG-kuvalinkkejä, koska kuvien lataus estyi työympäristössä. Niiden näkyminen lopullisella sivustolla on vielä tarkistettava. Vaakunan klikkaus avaa lähdesivun.
+Matkaile Suomessa v208 – Kainuun yöpymistiedot
+
+Pura ZIP ja siirrä kaikki sen tiedostot sivuston juureen GitHubiin. Korvaa samannimiset tiedostot. Tämä on päivityspaketti olemassa olevaan sivustoon.
+
+Täydentää Sotkamon, Paltamon, Ristijärven ja Suomussalmen kuntasivujen yöpymiskortit ja rekisteröi kohteet yöpymisvalikkoon. Sotkamoon uusi Kipinä Lomat -matkaparkki. Muut kunnat ja aiemmat yöpymiskohteet säilyvät valikon tietolistassa.
+
+Julkaisun jälkeen päivitä selaimen sivu. Sotkamon matkaparkki löytyy Matkaparkit-välilehdeltä; leirintäalueet ja matkaparkit ovat eri ryhmiä.
