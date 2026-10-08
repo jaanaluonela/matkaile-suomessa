@@ -1,0 +1,7 @@
+KAINUU v201 – osa 2/3
+
+Kunnat: Kajaani, Hyrynsalmi, Puolanka.
+
+Pura zip ja lataa sen HTML-sivut sekä kainuu-esittelyt-v201.css GitHub-sivuston juurikansioon. Korvaa samannimiset tiedostot. Lataa kaikkien kolmen osan sisältö. CSS on sama kaikissa osissa. Älä lataa zip-tiedostoa sellaisenaan. Ohje- ja lähdetiedostoa ei tarvitse ladata sivustolle.
+
+Tämä on esittelypäivitys nykyiseen sivustoon. Se ei sisällä koko sivustoa. Nykyiset kohteet, kylälinkit, omien matkojen painikkeet ja alavalikko ovat mukana ennallaan.
