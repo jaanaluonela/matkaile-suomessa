@@ -1,0 +1,9 @@
+Matkaile Suomessa v212 – etusivun neljä isompaa laatikkoa
+
+Pura tämän paketin tiedostot nykyisen sivuston juureen ja korvaa samannimiset tiedostot. Paketti sisältää v211:n päivitystiedostot sekä tämän muutoksen. Tämä on päivityspaketti, ei koko sivuston varmuuskopio.
+
+Etusivulla: Paikkakunnat, Leirintäalueet, Matkaparkit ja Lähellä minua kahdessa sarakkeessa. Jokaisessa iso kuvake ja lyhyt selitys.
+Lähellä minua pyytää sijaintiluvan vasta painettaessa. Sijaintia ei tallenneta. Kohderyhmät avautuvat Google Mapsin lähialuehakuun. Tulokset ovat karttapalvelun tuloksia, eivät oppaan etäisyysjärjestykseen laskettuja kohteita. Tarkkaa kilometrirajausta tai ajomatkaa ei vielä lasketa.
+Sijaintiluvan epääminen ja sijaintivirhe näyttävät vaihtoehdoksi paikkakuntavalinnan.
+
+Etusivun muutos käyttää nykyistä valikot-v200.js-tiedostoa, joten index.html-tiedostoa ei tarvitse korvata. Logo ja olemassa olevat tekstit säilyvät.

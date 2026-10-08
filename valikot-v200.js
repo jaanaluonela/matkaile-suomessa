@@ -28,3 +28,23 @@
  const params=new URLSearchParams(location.search), city=params.get('kunta');region.value=(city&&mapping[city])||params.get('maakunta')||'';fillTowns();if(city&&towns[city])select.value=city;region.addEventListener('change',()=>{fillTowns();const u=new URL(location.href);u.searchParams.delete('kunta');if(region.value)u.searchParams.set('maakunta',region.value);else u.searchParams.delete('maakunta');history.replaceState(null,'',u);render();});
  select.addEventListener('change',()=>{if(document.body.dataset.home&&select.value){location.href=towns[select.value];return;}const url=new URL(location.href);if(select.value)url.searchParams.set('kunta',select.value);else url.searchParams.delete('kunta');history.replaceState(null,'',url);render();});render();
 })();
+// Etusivun neljä suurta valintaa v212.
+(() => {
+ if (!document.body.dataset.home && !/\/(index.html)?$/.test(location.pathname)) return;
+ const menu = document.querySelector('main .menu');
+ if (!menu) return;
+ const cards=[['🗺️','Paikkakunnat','Kunnat ja niiden palvelut','maakunnat.html'],['⛺','Leirintäalueet','Löydä leirintäalue yöksi','leirintaalueet.html'],['🅿️','Matkaparkit','Paikka autolle tai vaunulle','matkaparkit.html'],['📍','Lähellä minua','Löydä kohteita kartalta','lahella-minua.html']];
+ menu.classList.add('home-choices-v212');
+ menu.innerHTML=cards.map(([icon,name,description,url])=>`<a href="${url}"><span aria-hidden="true" class="choice-icon">${icon}</span><strong>${name}</strong><small>${description}</small><span aria-hidden="true" class="choice-arrow">→</span></a>`).join('');
+ const section=menu.closest('section');
+ if(section) section.querySelectorAll('label,select,#list-status,#municipality-results').forEach(e=>e.remove());
+ const style=document.createElement('style');style.textContent=`
+ .home-choices-v212{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .home-choices-v212 a{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;min-height:166px!important;padding:18px 14px!important;border-radius:22px!important;background:#e6f1ec!important;color:#195d4d!important;text-decoration:none!important;box-sizing:border-box!important;white-space:normal!important;gap:8px!important;border:1px solid #d4e5dd!important}
+ .home-choices-v212 a:nth-child(2){background:#eef2e2!important}.home-choices-v212 a:nth-child(3){background:#e7eff7!important}.home-choices-v212 a:nth-child(4){background:#faeddd!important}
+ .home-choices-v212 strong{font:800 clamp(16px,4.4vw,21px)/1.2 system-ui!important;overflow-wrap:anywhere}
+ .home-choices-v212 small{font:400 13px/1.4 system-ui!important;color:#526d63!important}
+ .home-choices-v212 .choice-icon{font-size:34px!important;line-height:1!important}.home-choices-v212 .choice-arrow{margin-top:auto;align-self:flex-end;font-size:20px}
+ .home-choices-v212 a:focus-visible{outline:3px solid #f87913;outline-offset:3px}
+ `;document.head.append(style);
+})();
