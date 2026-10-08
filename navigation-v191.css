@@ -1,9 +1,16 @@
-
-/* Yhteinen päävalikko v191 */
-body{padding-bottom:calc(78px + env(safe-area-inset-bottom)) !important}
-nav.site-nav{position:fixed!important;z-index:1000!important;inset:auto 0 0!important;transform:none!important;width:100%!important;height:auto!important;max-width:none!important;display:flex!important;justify-content:center!important;gap:0!important;margin:0!important;padding:6px 8px calc(6px + env(safe-area-inset-bottom))!important;background:#fff!important;border-top:1px solid #dfe7e2!important;box-shadow:0 -3px 12px #143e340a!important}
-.site-nav .site-nav-inner{width:min(100%,520px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
-nav.site-nav a{min-height:52px!important;padding:5px 2px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;border-radius:12px!important;color:#53675f!important;font:700 12px/1.2 system-ui!important;text-decoration:none!important;background:transparent!important}
-nav.site-nav a span{font:normal 22px/1 system-ui!important}
-nav.site-nav a[aria-current=page]{background:#e8f2ed!important;color:#155342!important}
-nav.site-nav a:focus-visible{outline:3px solid #17634f;outline-offset:-3px}
+/* Alavalikko v211 – yhteinen kaikille sivuille */
+:root{--nav-ink:#0b2345;--nav-orange:#f87913;--nav-peach:#ffeadf}
+body{padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))!important}
+.site-nav{position:fixed!important;inset:auto 0 0!important;z-index:1000!important;background:#fff!important;border-top:1px solid #eee!important;padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px))!important;box-shadow:0 -2px 12px #0b234508!important}
+.site-nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;max-width:600px!important;margin:auto!important}
+.site-nav a{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important;min-width:0!important;min-height:72px!important;padding:7px 2px!important;border:0!important;border-radius:24px!important;background:transparent!important;color:var(--nav-ink)!important;text-decoration:none!important;font:600 13px/1.2 system-ui,sans-serif!important;box-sizing:border-box!important}
+.site-nav a[href*="paivakirja"],.site-nav a[href*="omat"]{display:none!important}
+.site-nav a span{display:none!important}
+.site-nav a::before{content:"";display:block;width:32px;height:32px;background:var(--nav-ink);mask:var(--nav-icon) center/contain no-repeat;-webkit-mask:var(--nav-icon) center/contain no-repeat}
+.site-nav a[aria-current="page"],.site-nav a.active{background:var(--nav-peach)!important}
+.site-nav a[aria-current="page"]::before,.site-nav a.active::before{background:var(--nav-orange)}
+.site-nav a:focus-visible{outline:3px solid var(--nav-orange);outline-offset:1px}
+.site-nav a[href="index.html"],.site-nav a[href="./"],.site-nav a[href="/"]{--nav-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2034%22%3E%3Cpath%20d%3D%22M3%2015%2016%203l13%2012v2h-4v13h-7V20h-4v10H7V17H3z%22%2F%3E%3C%2Fsvg%3E")}
+.site-nav a[href*="yopyminen"],.site-nav a[href*="karavaanari"],.site-nav a[href*="leirintaalueet"],.site-nav a[href*="matkaparkit"]{--nav-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2036%22%3E%3Cpath%20d%3D%22M2%2012h21l5%206v11h-4a4%204%200%200%200-8%200H12a4%204%200%200%200-8%200H2z%22%2F%3E%3Cpath%20d%3D%22M22%2012h6l5%205H22z%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2229%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2229%22%20r%3D%223%22%2F%3E%3Cpath%20d%3D%22m44%2010%2013%2022H31z%22%2F%3E%3Cpath%20fill%3D%22white%22%20d%3D%22m44%2019%205%2013H39zM5%2015h7v5H5zM15%2015h3v11h-3z%22%2F%3E%3C%2Fsvg%3E")}
+.site-nav a[href*="maakunnat"],.site-nav a[href*="kunnat"],.site-nav a[href*="paikkakunnat"]{--nav-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2034%22%3E%3Cpath%20d%3D%22M16%202C8%202%204%207%204%2014c0%208%2012%2018%2012%2018s12-10%2012-18C28%207%2024%202%2016%202zm0%207a5%205%200%201%201%200%2010%205%205%200%200%201%200-10z%22%2F%3E%3C%2Fsvg%3E")}
+.site-nav a[href*="yopyminen"]::before,.site-nav a[href*="karavaanari"]::before{width:56px}

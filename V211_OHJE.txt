@@ -1,0 +1,7 @@
+ALAVALIKKO v211
+
+Kopioi paketin tiedostot sivuston samaan kansioon ja korvaa samannimiset tiedostot. Mukana ovat v210-paketin muutokset. Tämä on päivityspaketti, ei koko sivuston varmuuskopio.
+
+Alavalikko: Koti, Yöpyminen ja Paikkakunnat. Talo, matkailuauto ja teltta yhdessä sekä karttaneula. Kuvakkeet 32 px korkeat, Yöpyminen-kuvake 56 px leveä. Painike noin 86 px korkea turva-alueen lisäksi. Valittu sivu vaalean oranssi.
+
+Yhteinen navigation-v191.css päivittää myös olemassa olevan etusivun, joka käyttää tätä tyylitiedostoa. Päivitä selain julkaisun jälkeen. Omat-painike on piilotettu alavalikosta; paivakirja.html säilyy käytössä.
