@@ -1,0 +1,5 @@
+KAINUUN RETKIVINKIT – 8 KUNTAA
+16 kohdekorttia: reitti, saapuminen, palvelut, kartta, ajo-ohje ja virallinen lähde. Osa korteista on saman retkialueen eri käyttötapoja.
+Sisältää kaikki v206-esittelyt ja aiemmat kylävalikkokorjaukset.
+Pura zip ja lataa HTML-, CSS-, JS- ja SVG-tiedostot GitHubiin aiempien samannimisten tilalle. Älä poista muita tiedostoja. Paketti täydentää olemassa olevaa sivustoa.
+Kohteiden tiedot tarkistettu 8.10.2026. Puuttuvia reittipituuksia tai palveluita ei ole arvattu.
