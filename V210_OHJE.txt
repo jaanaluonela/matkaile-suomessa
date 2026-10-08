@@ -1,0 +1,11 @@
+v210 – Puhelinvalikot ja Kainuun tarkistus
+
+Pura paketti. Siirrä kaikki tiedostot GitHub-sivuston juureen ja korvaa samannimiset. Tämä on päivityspaketti olemassa olevaan sivustoon, ei koko sivusto. Sisältää myös v209:n muutokset.
+
+Paikkakunnat: haku ja maakunta–kunta-valinta alussa; kartta ja palvelun tiedot avattavina. Koti: päällekkäiset aluevalinnat poistetaan nykyisen valikot-v200.js:n kautta. Yöpyminen: vain majoituksen rajaukset ja tulokset, koko Suomi näkyy aluksi.
+
+Kainuu: kaikkien 8 kunnan perustiedot tarkistettu. Väkiluvut 31.12.2025 täsmäävät lähteeseen https://kuntavaesto.com/maakunta/kainuu/. Vuokatti kuuluu Sotkamoon. Kaikista 8 kunnasta löytyy yöpymiskohteita ja niiden kohdesivut. Ristijärven Pirtin ristiriitaiset päivämäärät korvattu aukiolon varmistusohjeella.
+
+Vaakunakuvien viitteet ovat mukana kaikissa kuntasivuissa; Kuhmon kuva on paikallinen, muut latautuvat Wikimedia-palvelusta. Ulkoisten kuvien latautumista ja lopullista puhelinnäkymää ei voitu tässä ympäristössä visuaalisesti varmentaa.
+
+Julkaisun jälkeen päivitä selain. Jos Koti-sivun valinnat eivät poistu, varmista että index.html käyttää valikot-v200.js-tiedostoa vanhemman valikkoskriptin sijaan.

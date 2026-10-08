@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Tutustu Suomeen – Matkaile Suomessa</title>
-<link rel="stylesheet" href="styles.css">
+<link href="styles.css" rel="stylesheet"/>
 <script src="app.js"></script>
 <style>
 /* v145: Tutustu Suomeen viimeistelty: hillitty Suomen kartta, hakukenttä ja edistymistiedot. Asikkalaan ei koskettu. */
@@ -38,65 +39,49 @@
 .no-results{display:none;margin-top:12px;color:var(--muted);font-weight:800;text-align:center}
 
 </style>
-<link rel="stylesheet" href="navigation-v191.css">
-</head>
+<link href="navigation-v191.css" rel="stylesheet"/>
+<script defer="" src="kunnat-v198.js"></script><script defer="" src="caravan-data.js"></script><script defer="" src="valikot-v200.js"></script><script defer="" src="paikkakunnat-v210.js"></script><link href="mobiili-v210.css" rel="stylesheet"/></head>
 <body>
 <div class="map-page">
 <header class="map-hero">
-  <div class="map-top">
-    <a class="map-back" href="index.html" aria-label="Takaisin etusivulle">‹</a>
-    <div class="map-title">Tutustu Suomeen</div>
-    <div class="map-info">ⓘ</div>
-  </div>
+<div class="map-top">
+<a aria-label="Takaisin etusivulle" class="map-back" href="index.html">‹</a>
+<div class="map-title">Tutustu Suomeen</div>
+<div class="map-info">ⓘ</div>
+</div>
 </header>
+<section class="map-intro"><h1>Paikkakunnat</h1><p>Hae kuntaa tai valitse maakunta.</p></section><section aria-label="Haku" class="search-card">
+<label for="regionSearch">🔍 Hae maakuntaa tai kuntaa</label>
+<input class="search-box" id="regionSearch" placeholder="Kirjoita esim. Heinola, Hollola, Asikkala tai Päijät-Häme" type="search"/>
+<div class="no-results" id="noResults">Ei osumia.</div>
+</section><section class="search-card"><label for="region">Valitse maakunta</label><select id="region"><option value="">Valitse maakunta…</option></select><label for="municipality">Valitse kunta</label><select id="municipality"></select><p id="list-status" role="status"></p><div id="municipality-results"></div></section>
 
-<section class="map-intro">
-  <h1>Valitse maakunta</h1>
-  <p>Tältä sivulta pääset Suomen maakuntiin. Kartta toimii koko sovelluksen porttina: ensin valitaan maakunta, sitten sen kunnat ja kohteet.</p>
-  <div class="progress-card">
-    <div class="progress-box"><b>3/19</b><span>maakuntaa avattavissa</span></div>
-    <div class="progress-box"><b>14</b><span>Päijät-Hämeen kuntaa</span></div>
-  </div>
-</section>
 
-<section class="status-card" aria-label="Edistyminen">
-  <h2>Edistyminen</h2>
-  <p><b>Avattavissa nyt:</b> Päijät-Häme, Uusimaa ja Kainuu. Uudellamaalla mukana Hanko ja Raaseporin lähikohteet. Muut maakunnat on lisätty karttaan ja ne voidaan täydentää samalla rakenteella.</p>
-  <div class="status-line" aria-label="3/19 maakuntaa avattavissa"><span></span></div>
-  <p>3 / 19 maakuntaa avattavissa • 308 Suomen kuntaa myöhemmin</p>
-</section>
-
-<section class="status-card"><h2>Kainuu</h2><p>Kaikki kahdeksan Kainuun kuntaa ja matkailualueet Hossa, Ukkohalla, Paljakka ja Vuokatti ovat mukana.</p><a href="kainuu.html">Avaa Kainuun kohteet →</a></section><section class="search-card" aria-label="Haku">
-  <label for="regionSearch">🔍 Hae maakuntaa tai kuntaa</label>
-  <input id="regionSearch" class="search-box" type="search" placeholder="Kirjoita esim. Heinola, Hollola, Asikkala tai Päijät-Häme">
-  <div id="noResults" class="no-results">Ei osumia.</div>
-</section>
-
-<section class="finland-card">
-  <div class="map-caption"><h2>Suomen maakunnat</h2><small>Päijät-Häme, Uusimaa ja Kainuu</small></div>
-  <div class="map-wrap">
-  <svg class="finland-svg real-map" viewBox="0 0 360 700" role="img" aria-label="Oikea Suomen maakuntakartta">
-<rect class="sea" x="0" y="0" width="360" height="700" rx="24"/>
-<path class="finland-outline" d="M259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L300.5 299.5 L287.4 354.4 L310.3 400.3 L302.3 442.0 L340.7 482.7 L333.2 515.6 L311.3 553.6 L257.4 636.4 L208.8 641.6 L160.9 663.3 L116.0 674.1 L102.4 638.4 L77.9 615.4 L88.3 553.9 L80.3 495.8 L94.9 460.3 L119.5 422.7 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 Z"/>
-<a href="lappi.html" aria-label="Lappi"><path class="region" style="--c:#d8ecff" d="M154.2 257.3 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L287.6 266.9 L154.2 257.3 Z"/></a>
-<a href="pohjois-pohjanmaa.html" aria-label="Pohjois-Pohjanmaa"><path class="region" style="--c:#cbe7ff" d="M206.0 406.6 L161.2 375.1 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L154.2 257.3 L287.6 266.9 L288.7 269.6 L206.0 406.6 Z"/></a>
-<a href="kainuu.html" aria-label="Kainuu"><path class="region ready" style="--c:#d8f1e4" d="M263.5 444.9 L208.0 417.2 L206.0 406.6 L288.7 269.6 L300.5 299.5 L287.4 354.4 L310.3 400.3 L304.7 429.5 L263.5 444.9 Z"/></a>
-<a href="keski-pohjanmaa.html" aria-label="Keski-Pohjanmaa"><path class="region" style="--c:#ffe7b0" d="M206.0 406.6 L208.0 417.2 L188.0 460.4 L177.4 467.3 L134.5 458.4 L113.5 431.9 L119.5 422.7 L161.2 375.1 L206.0 406.6 Z"/></a>
-<a href="pohjanmaa.html" aria-label="Pohjanmaa"><path class="region" style="--c:#ffd6a4" d="M84.5 526.0 L80.3 495.8 L94.9 460.3 L113.5 431.9 L134.5 458.4 L101.9 527.0 L84.5 526.0 Z"/></a>
-<a href="etela-pohjanmaa.html" aria-label="Etelä-Pohjanmaa"><path class="region" style="--c:#ffd1b3" d="M101.9 527.0 L134.5 458.4 L177.4 467.3 L160.7 524.8 L107.2 530.2 L101.9 527.0 Z"/></a>
-<a href="keski-suomi.html" aria-label="Keski-Suomi"><path class="region" style="--c:#d9efc9" d="M179.1 554.3 L160.7 524.8 L177.4 467.3 L188.0 460.4 L227.8 518.2 L206.5 554.3 L179.1 554.3 Z"/></a>
-<a href="pohjois-savo.html" aria-label="Pohjois-Savo"><path class="region" style="--c:#ead6ff" d="M227.8 518.2 L188.0 460.4 L208.0 417.2 L263.5 444.9 L258.8 513.8 L227.8 518.2 Z"/></a>
-<a href="pohjois-karjala.html" aria-label="Pohjois-Karjala"><path class="region" style="--c:#ffd2df" d="M305.6 555.6 L258.8 513.8 L263.5 444.9 L304.7 429.5 L302.3 442.0 L340.7 482.7 L333.2 515.6 L309.3 556.8 L305.6 555.6 Z"/></a>
-<a href="satakunta.html" aria-label="Satakunta"><path class="region" style="--c:#ffc9c9" d="M131.0 592.3 L128.2 601.1 L79.7 604.7 L88.3 553.9 L84.5 526.0 L101.9 527.0 L107.2 530.2 L131.0 592.3 Z"/></a>
-<a href="pirkanmaa.html" aria-label="Pirkanmaa"><path class="region" style="--c:#e4d5ff" d="M160.7 524.8 L179.1 554.3 L168.8 575.0 L131.0 592.3 L107.2 530.2 L160.7 524.8 Z"/></a>
-<a href="etela-savo.html" aria-label="Etelä-Savo"><path class="region" style="--c:#ffefb9" d="M227.8 518.2 L258.8 513.8 L305.6 555.6 L226.9 589.8 L206.5 554.3 L227.8 518.2 Z"/></a>
-<a href="varsinais-suomi.html" aria-label="Varsinais-Suomi"><path class="region" style="--c:#d6eff0" d="M128.2 601.1 L136.8 637.1 L126.7 671.5 L116.0 674.1 L102.4 638.4 L77.9 615.4 L79.7 604.7 L128.2 601.1 Z"/></a>
-<a href="kanta-hame.html" aria-label="Kanta-Häme"><path class="region" style="--c:#fff0bb" d="M131.0 592.3 L168.8 575.0 L184.6 623.6 L136.8 637.1 L128.2 601.1 L131.0 592.3 Z"/></a>
-<a href="paijat-hame.html" aria-label="Päijät-Häme"><path class="region ready" style="--c:#168a55" d="M226.9 589.8 L226.6 592.1 L196.2 630.0 L184.6 623.6 L168.8 575.0 L179.1 554.3 L206.5 554.3 L226.9 589.8 Z"/></a>
-<a href="etela-karjala.html" aria-label="Etelä-Karjala"><path class="region" style="--c:#ffcbd5" d="M226.6 592.1 L226.9 589.8 L305.6 555.6 L309.3 556.8 L257.4 636.4 L255.5 636.6 L226.6 592.1 Z"/></a>
-<a href="kymenlaakso.html" aria-label="Kymenlaakso"><path class="region" style="--c:#ffd6a1" d="M196.2 630.0 L226.6 592.1 L255.5 636.6 L208.8 641.6 L200.3 645.4 L196.2 630.0 Z"/></a>
-<a href="uusimaa.html" aria-label="Uusimaa"><path class="region ready" style="--c:#168a55" d="M136.8 637.1 L184.6 623.6 L196.2 630.0 L200.3 645.4 L160.9 663.3 L126.7 671.5 L136.8 637.1 Z"/></a>
-<a href="ahvenanmaa.html" aria-label="Ahvenanmaa"><path class="region" style="--c:#e1d5ff" d="M63.2 644.3 L61.5 654.1 L56.7 662.4 L49.6 667.9 L41.2 669.8 L32.8 667.9 L25.7 662.4 L21.0 654.1 L19.3 644.3 L21.0 634.6 L25.7 626.3 L32.8 620.7 L41.2 618.8 L49.6 620.7 L56.7 626.3 L61.5 634.6 L63.2 644.3 Z"/></a>
+<details class="map-toggle"><summary>🗺️ Näytä Suomen kartta</summary><section class="finland-card">
+<div class="map-caption"><h2>Suomen maakunnat</h2><small>Päijät-Häme, Uusimaa ja Kainuu</small></div>
+<div class="map-wrap">
+<svg aria-label="Oikea Suomen maakuntakartta" class="finland-svg real-map" role="img" viewbox="0 0 360 700">
+<rect class="sea" height="700" rx="24" width="360" x="0" y="0"></rect>
+<path class="finland-outline" d="M259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L300.5 299.5 L287.4 354.4 L310.3 400.3 L302.3 442.0 L340.7 482.7 L333.2 515.6 L311.3 553.6 L257.4 636.4 L208.8 641.6 L160.9 663.3 L116.0 674.1 L102.4 638.4 L77.9 615.4 L88.3 553.9 L80.3 495.8 L94.9 460.3 L119.5 422.7 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 Z"></path>
+<a aria-label="Lappi" href="lappi.html"><path class="region" d="M154.2 257.3 L158.1 164.6 L105.7 85.5 L118.6 70.2 L137.7 105.6 L163.4 104.5 L184.0 120.8 L203.3 93.5 L213.4 47.3 L242.3 25.9 L266.7 50.4 L259.7 95.1 L257.8 139.4 L290.2 180.2 L272.5 228.8 L287.6 266.9 L154.2 257.3 Z" style="--c:#d8ecff"></path></a>
+<a aria-label="Pohjois-Pohjanmaa" href="pohjois-pohjanmaa.html"><path class="region" d="M206.0 406.6 L161.2 375.1 L176.4 357.6 L192.1 345.0 L190.4 318.2 L160.3 286.9 L154.0 261.9 L154.2 257.3 L287.6 266.9 L288.7 269.6 L206.0 406.6 Z" style="--c:#cbe7ff"></path></a>
+<a aria-label="Kainuu" href="kainuu.html"><path class="region ready" d="M263.5 444.9 L208.0 417.2 L206.0 406.6 L288.7 269.6 L300.5 299.5 L287.4 354.4 L310.3 400.3 L304.7 429.5 L263.5 444.9 Z" style="--c:#d8f1e4"></path></a>
+<a aria-label="Keski-Pohjanmaa" href="keski-pohjanmaa.html"><path class="region" d="M206.0 406.6 L208.0 417.2 L188.0 460.4 L177.4 467.3 L134.5 458.4 L113.5 431.9 L119.5 422.7 L161.2 375.1 L206.0 406.6 Z" style="--c:#ffe7b0"></path></a>
+<a aria-label="Pohjanmaa" href="pohjanmaa.html"><path class="region" d="M84.5 526.0 L80.3 495.8 L94.9 460.3 L113.5 431.9 L134.5 458.4 L101.9 527.0 L84.5 526.0 Z" style="--c:#ffd6a4"></path></a>
+<a aria-label="Etelä-Pohjanmaa" href="etela-pohjanmaa.html"><path class="region" d="M101.9 527.0 L134.5 458.4 L177.4 467.3 L160.7 524.8 L107.2 530.2 L101.9 527.0 Z" style="--c:#ffd1b3"></path></a>
+<a aria-label="Keski-Suomi" href="keski-suomi.html"><path class="region" d="M179.1 554.3 L160.7 524.8 L177.4 467.3 L188.0 460.4 L227.8 518.2 L206.5 554.3 L179.1 554.3 Z" style="--c:#d9efc9"></path></a>
+<a aria-label="Pohjois-Savo" href="pohjois-savo.html"><path class="region" d="M227.8 518.2 L188.0 460.4 L208.0 417.2 L263.5 444.9 L258.8 513.8 L227.8 518.2 Z" style="--c:#ead6ff"></path></a>
+<a aria-label="Pohjois-Karjala" href="pohjois-karjala.html"><path class="region" d="M305.6 555.6 L258.8 513.8 L263.5 444.9 L304.7 429.5 L302.3 442.0 L340.7 482.7 L333.2 515.6 L309.3 556.8 L305.6 555.6 Z" style="--c:#ffd2df"></path></a>
+<a aria-label="Satakunta" href="satakunta.html"><path class="region" d="M131.0 592.3 L128.2 601.1 L79.7 604.7 L88.3 553.9 L84.5 526.0 L101.9 527.0 L107.2 530.2 L131.0 592.3 Z" style="--c:#ffc9c9"></path></a>
+<a aria-label="Pirkanmaa" href="pirkanmaa.html"><path class="region" d="M160.7 524.8 L179.1 554.3 L168.8 575.0 L131.0 592.3 L107.2 530.2 L160.7 524.8 Z" style="--c:#e4d5ff"></path></a>
+<a aria-label="Etelä-Savo" href="etela-savo.html"><path class="region" d="M227.8 518.2 L258.8 513.8 L305.6 555.6 L226.9 589.8 L206.5 554.3 L227.8 518.2 Z" style="--c:#ffefb9"></path></a>
+<a aria-label="Varsinais-Suomi" href="varsinais-suomi.html"><path class="region" d="M128.2 601.1 L136.8 637.1 L126.7 671.5 L116.0 674.1 L102.4 638.4 L77.9 615.4 L79.7 604.7 L128.2 601.1 Z" style="--c:#d6eff0"></path></a>
+<a aria-label="Kanta-Häme" href="kanta-hame.html"><path class="region" d="M131.0 592.3 L168.8 575.0 L184.6 623.6 L136.8 637.1 L128.2 601.1 L131.0 592.3 Z" style="--c:#fff0bb"></path></a>
+<a aria-label="Päijät-Häme" href="paijat-hame.html"><path class="region ready" d="M226.9 589.8 L226.6 592.1 L196.2 630.0 L184.6 623.6 L168.8 575.0 L179.1 554.3 L206.5 554.3 L226.9 589.8 Z" style="--c:#168a55"></path></a>
+<a aria-label="Etelä-Karjala" href="etela-karjala.html"><path class="region" d="M226.6 592.1 L226.9 589.8 L305.6 555.6 L309.3 556.8 L257.4 636.4 L255.5 636.6 L226.6 592.1 Z" style="--c:#ffcbd5"></path></a>
+<a aria-label="Kymenlaakso" href="kymenlaakso.html"><path class="region" d="M196.2 630.0 L226.6 592.1 L255.5 636.6 L208.8 641.6 L200.3 645.4 L196.2 630.0 Z" style="--c:#ffd6a1"></path></a>
+<a aria-label="Uusimaa" href="uusimaa.html"><path class="region ready" d="M136.8 637.1 L184.6 623.6 L196.2 630.0 L200.3 645.4 L160.9 663.3 L126.7 671.5 L136.8 637.1 Z" style="--c:#168a55"></path></a>
+<a aria-label="Ahvenanmaa" href="ahvenanmaa.html"><path class="region" d="M63.2 644.3 L61.5 654.1 L56.7 662.4 L49.6 667.9 L41.2 669.8 L32.8 667.9 L25.7 662.4 L21.0 654.1 L19.3 644.3 L21.0 634.6 L25.7 626.3 L32.8 620.7 L41.2 618.8 L49.6 620.7 L56.7 626.3 L61.5 634.6 L63.2 644.3 Z" style="--c:#e1d5ff"></path></a>
 <text class="label" x="208.8" y="152.0">Lappi</text>
 <text class="label" x="221.3" y="326.6">Pohjois-</text>
 <text class="label" x="221.3" y="337.6">Pohjanmaa</text>
@@ -128,64 +113,17 @@
 <text class="label" x="156.2" y="654.4">Uusimaa</text>
 <text class="label" x="41.2" y="639.4">Ahvenanmaa</text>
 </svg>
-  </div>
-  <div class="map-legend"><span><i class="legend-dot ready"></i>Avautuu nyt</span><span><i class="legend-dot"></i>Sivu valmiina myöhemmin</span></div>
-  <p class="hint">Avattavissa ovat Päijät-Häme, Uusimaan ensimmäiset kohteet ja Kainuun kaikki kunnat. Maakuntaa painamalla avautuu sen oma sivu, kun sisältö on täydennetty.</p>
-</section>
-
-<section class="region-list">
-  <h2>Maakunnat A–Ö</h2>
-  <p class="lead">Voit valita maakunnan myös listasta. Valmiit sisällöt täydentyvät yksi maakunta kerrallaan.</p>
-  <a class="region-row active searchable-region" data-name="päijät-häme paijat hame" href="paijat-hame.html"><span class="badge">🛡️</span><div><b>Päijät-Häme</b><p>Valmis maakuntasivu. Tästä pääset Asikkalaan ja muihin kuntiin.</p></div><i>›</i></a>
-  <div class="region-grid" aria-label="Maakuntaluettelo">
-    <a class="region-chip searchable-region" data-name="ahvenanmaa ahvenanmaa" href="ahvenanmaa.html">Ahvenanmaa</a><a class="region-chip searchable-region" data-name="etelä-karjala etela-karjala" href="etela-karjala.html">Etelä-Karjala</a><a class="region-chip searchable-region" data-name="etelä-pohjanmaa etela-pohjanmaa" href="etela-pohjanmaa.html">Etelä-Pohjanmaa</a><a class="region-chip searchable-region" data-name="etelä-savo etela-savo" href="etela-savo.html">Etelä-Savo</a><a class="region-chip ready-chip searchable-region" data-name="kainuu kainuu" href="kainuu.html">Kainuu</a><a class="region-chip searchable-region" data-name="kanta-häme kanta-hame" href="kanta-hame.html">Kanta-Häme</a><a class="region-chip searchable-region" data-name="keski-pohjanmaa keski-pohjanmaa" href="keski-pohjanmaa.html">Keski-Pohjanmaa</a><a class="region-chip searchable-region" data-name="keski-suomi keski-suomi" href="keski-suomi.html">Keski-Suomi</a><a class="region-chip searchable-region" data-name="kymenlaakso kymenlaakso" href="kymenlaakso.html">Kymenlaakso</a><a class="region-chip searchable-region" data-name="lappi lappi" href="lappi.html">Lappi</a><a class="region-chip ready-chip searchable-region" data-name="päijät-häme paijat-hame" href="paijat-hame.html">Päijät-Häme</a><a class="region-chip searchable-region" data-name="pirkanmaa pirkanmaa" href="pirkanmaa.html">Pirkanmaa</a><a class="region-chip searchable-region" data-name="pohjanmaa pohjanmaa" href="pohjanmaa.html">Pohjanmaa</a><a class="region-chip searchable-region" data-name="pohjois-karjala pohjois-karjala" href="pohjois-karjala.html">Pohjois-Karjala</a><a class="region-chip searchable-region" data-name="pohjois-pohjanmaa pohjois-pohjanmaa" href="pohjois-pohjanmaa.html">Pohjois-Pohjanmaa</a><a class="region-chip searchable-region" data-name="pohjois-savo pohjois-savo" href="pohjois-savo.html">Pohjois-Savo</a><a class="region-chip searchable-region" data-name="satakunta satakunta" href="satakunta.html">Satakunta</a><a class="region-chip searchable-region" data-name="uusimaa uusimaa" href="uusimaa.html">Uusimaa</a><a class="region-chip searchable-region" data-name="varsinais-suomi varsinais-suomi" href="varsinais-suomi.html">Varsinais-Suomi</a>
-  </div>
-
-</section>
-
-<section class="region-list">
-  <h2>Päijät-Hämeen kunnat</h2>
-  <p class="lead">Pääset kuntaan suoraan ilman montaa klikkausta.</p>
-  <div class="region-grid" aria-label="Päijät-Hämeen kunnat">
-    <a class="region-chip ready-chip searchable-region" data-name="asikkala vääksy vaaksy" href="asikkala.html">Asikkala</a>
-    <a class="region-chip ready-chip searchable-region" data-name="hollola messilä messila tiirismaa" href="hollola.html">Hollola</a>
-    <a class="region-chip ready-chip searchable-region" data-name="heinola lintuhoitola satama harjupaviljonki heinäsaari heinasaari" href="heinola.html">Heinola</a>
-    <a class="region-chip searchable-region" data-name="lahti" href="lahti.html">Lahti</a>
-    <a class="region-chip searchable-region" data-name="orimattila" href="orimattila.html">Orimattila</a>
-    <a class="region-chip searchable-region" data-name="sysmä sysma" href="sysma.html">Sysmä</a>
-    <a class="region-chip searchable-region" data-name="padasjoki" href="padasjoki.html">Padasjoki</a>
-    <a class="region-chip searchable-region" data-name="hartola" href="hartola.html">Hartola</a>
-    <a class="region-chip searchable-region" data-name="iitti" href="iitti.html">Iitti</a>
-    <a class="region-chip searchable-region" data-name="kärkölä karkola" href="karkola.html">Kärkölä</a>
-  </div>
-
-<section class="next-note">
-  <h2>Valitse maakunta</h2>
-  <p>Valitse Päijät-Häme, Uusimaa tai Kainuu kartasta tai listasta. Muut maakunnat täydentyvät vaiheittain, mutta rakenne on nyt valmiina koko Suomea varten.</p>
-</section>
-
-<nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="karavaanari.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html" aria-current="page"><span aria-hidden="true">🗺️</span>Paikkakunnat</a><a href="paivakirja.html"><span aria-hidden="true">📖</span>Omat</a></div></nav>
 </div>
+<div class="map-legend"><span><i class="legend-dot ready"></i>Avautuu nyt</span><span><i class="legend-dot"></i>Sivu valmiina myöhemmin</span></div>
+<p class="hint">Avattavissa ovat Päijät-Häme, Uusimaan ensimmäiset kohteet ja Kainuun kaikki kunnat. Maakuntaa painamalla avautuu sen oma sivu, kun sisältö on täydennetty.</p>
+</section></details><details class="status-card"><summary>Tietoa palvelusta ja edistymisestä</summary><section aria-label="Edistyminen" class="status-card">
+<h2>Edistyminen</h2>
+<p><b>Avattavissa nyt:</b> Päijät-Häme, Uusimaa ja Kainuu. Uudellamaalla mukana Hanko ja Raaseporin lähikohteet. Muut maakunnat on lisätty karttaan ja ne voidaan täydentää samalla rakenteella.</p>
+<div aria-label="3/19 maakuntaa avattavissa" class="status-line"><span></span></div>
+<p>3 / 19 maakuntaa avattavissa • 308 Suomen kuntaa myöhemmin</p>
+</section><section class="status-card"><h2>Kainuu</h2><p>Kaikki kahdeksan Kainuun kuntaa ja matkailualueet Hossa, Ukkohalla, Paljakka ja Vuokatti ovat mukana.</p><a href="kainuu.html">Avaa Kainuun kohteet →</a></section></details>
 
-<script>
-(function(){
-  const input = document.getElementById('regionSearch');
-  const items = Array.from(document.querySelectorAll('.searchable-region'));
-  const noResults = document.getElementById('noResults');
-  if(!input || !items.length) return;
-  input.addEventListener('input', function(){
-    const q = this.value.trim().toLowerCase();
-    let shown = 0;
-    items.forEach(el => {
-      const hay = (el.dataset.name || el.textContent || '').toLowerCase();
-      const ok = !q || hay.includes(q) || hay.normalize('NFD').replace(/[\u0300-\u036f]/g,'').includes(q.normalize('NFD').replace(/[\u0300-\u036f]/g,''));
-      el.style.display = ok ? '' : 'none';
-      if(ok) shown++;
-    });
-    if(noResults) noResults.style.display = shown ? 'none' : 'block';
-  });
-})();
-</script>
+</div>
 
 </body>
 </html>
