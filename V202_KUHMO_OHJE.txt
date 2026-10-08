@@ -1,0 +1,3 @@
+Kuhmo v202
+
+Pura zip. Lataa kuhmo.html ja kuhmo-vaakuna.svg GitHub-sivuston juurikansioon. Korvaa aiempi kuhmo.html. Ohjetta ei tarvitse ladata. Tämä paketti sisältää Kuhmon laajan esittelyn, asukasluvun ja vaakunan. v201-pakettia ei tarvitse asentaa Kuhmon osalta.
