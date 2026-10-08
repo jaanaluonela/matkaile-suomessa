@@ -1,0 +1,7 @@
+v209 – Vuokatin palvelut ja Kainuun kuntatiedot
+
+Pura ZIP ja siirrä kaikki tiedostot sivuston juureen GitHubissa. Korvaa samannimiset tiedostot. Tämä paketti sisältää v208:n muutokset, joten näistä kahdesta riittää v209. Päivitä selain julkaisun jälkeen.
+
+Lisätty Vuokatin majoitus, ravintolat, Katinkulta, SuperPark, Vuokatinrinteet, ulkoilu sekä caravanalue Sotkamoon. Kaikkien kahdeksan Kainuun kuntasivun yläosaan lisätty vaakuna ja asukasluku (31.12.2025).
+
+Vaakunat: Wikimedia Commons, Kuhmon SVG mukana paikallisena; muut kuvat latautuvat Wikimedia-palvelusta.
