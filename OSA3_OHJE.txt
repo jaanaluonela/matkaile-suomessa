@@ -1,0 +1,1 @@
+Lataa kaikki neljä v215-osaa. Pura jokainen ZIP ja siirrä kaikkien osien tiedostot sivuston juureen. Korvaa samannimiset. Näissä osissa on täsmälleen alkuperäisen v215-korjauspaketin tiedostot.
