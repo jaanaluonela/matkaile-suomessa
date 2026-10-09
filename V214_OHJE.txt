@@ -1,0 +1,5 @@
+Matkaile Suomessa v214 – kunnat allekkain
+
+Pura paketti sivuston juureen ja korvaa samannimiset tiedostot. Kunnat näkyvät koko leveydellä olevina painikkeina yhdessä sarakkeessa, pienillä väleillä. Nuoli oikeassa reunassa. Sama tyyli kaikille maakunnille.
+
+Paketti sisältää aiemman v213-päivityksen tiedostot. Tämä on päivityspaketti, ei koko sivuston varmuuskopio.

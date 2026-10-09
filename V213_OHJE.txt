@@ -1,0 +1,2 @@
+v213 – Tiiviit kuntavalinnat
+Pura paketti sivuston juureen ja korvaa samannimiset tiedostot. Sisältää v212-päivitystiedostot. Kunnat kahdessa sarakkeessa, valikot ja välit pienemmiksi. Tämä on päivityspaketti, ei koko sivuston varmuuskopio.
