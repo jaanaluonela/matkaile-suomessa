@@ -1,0 +1,9 @@
+Matkaile Suomessa v215 – Päijät-Hämeen yhtenäiset kuntasivut
+
+Pura ZIP. Siirrä kaikki tiedostot nykyisen GitHub-sivuston juureen ja korvaa samannimiset. Paketti on päivitys olemassa olevaan sivustoon, ei koko sivusto. Mukana myös v214:n Kainuu- ja mobiilivalikkopäivitykset.
+
+Kaikki 10 Päijät-Hämeen kuntaa on mukana. Kärkölä lisätty myös molempiin kuntavalintojen tietolistoihin. Kuntien osiot ovat samassa järjestyksessä, nykyiset kohteet, kuvat ja tekstit säilytetty. Ruokapaikkojen vanhat listat ovat avattavissa; uusia tavallisia ravintolalistoja ei lisätä. Erityisinä kohteina Harjupaviljonki, Huovilan puiston kesäkahvila ja Suvi-Pinx.
+
+Yöpymiskohteet nostettu suoraan kunnan sivulle ja karavaanariosio linkitetty. Kärkölälle ei väitetä vahvistettua matkaparkkia; siellä on majoituskohde ja linkki lähiseudun yöpymishakuun. Väkiluvut säilyvät suuntaa antavina. Vaakunoiden ulkoiset lähteet säilytetty.
+
+Päivitä selain siirron jälkeen. Julkaistua sivustoa ei ole muutettu tämän paketin luomisessa.
