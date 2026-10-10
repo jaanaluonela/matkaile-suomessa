@@ -1,0 +1,6 @@
+V223: Käyntikohteet ja Kainuun tarkistus
+Lataa molemmat osat. Pura ZIPit ja siirrä tiedostot sivuston juureen. Korvaa samannimiset tiedostot, älä poista muuta. Osissa enintään 20 tiedostoa.
+Etusivun Käyntikohteet-painike mukana. index.html-tiedostoa ei tarvitse vaihtaa. Päivitys tarvitsee aiemmat v218, v220 ja v221 datat sekä navigation-v191.css-tiedoston.
+23 uutta kohdesivua, mukaan lukien Harjupaviljonki, Kumpeli Spa ja Himos. Kainuun kaikkien kahdeksan kunnan käyntikohteiden valikkokattavuus tarkistettu.
+Uudet kohteet löytyvät Käyntikohteet-valikosta. Lähikohteiden etäisyyshakua ei muutettu, koska uusien kohteiden koordinaatteja ei ole varmennettu.
+Tiedostopaketti ei päivitä julkaistua sivua automaattisesti.

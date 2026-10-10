@@ -1,0 +1,75 @@
+Tarkistettu 10.10.2026. Uudet kohteet ja ensisijaiset lähteet:
+
+Jämsä: Himos matkailukeskus
+https://visithimosjamsa.fi/palvelut-himoksella/
+
+Jämsä: Juvéninkoski
+https://visithimosjamsa.fi/kohde/juveninkoski/
+
+Heinola: Harjupaviljonki
+https://harjupaviljonki.fi/yhteystiedot/
+
+Heinola: Kumpeli Spa
+https://www.visitheinola.fi/kohde/kumpeli-spa/
+
+Hartola: Itä-Hämeen museo
+https://ihmuseo.fi/
+
+Hartola: Kuninkaanpolku
+https://visithartola.fi/nae-ja-koe/
+
+Hartola: Pohjolan Kartano ja tilamyymälä
+https://www.pohjolankartano.fi/
+
+Porvoo: Vanha Porvoo
+https://www.visitporvoo.fi/elamykset/lasten-porvoo/elamyksia-koko-perheelle/
+
+Porvoo: Brunbergin Vanhan Porvoon myymälä
+https://brunberg.fi/myymalat/
+
+Hanko: Neljän Tuulen Tupa
+https://visithanko.fi/tuotesivu/neljan-tuulen-tupa/
+
+Raasepori: Fiskarsin ruukki
+https://www.visitraseborg.com/fi/nae-koe/linnat-ruukit/fiskarsin-ruukki/
+
+Raasepori: Mustion linna
+https://www.visitraseborg.com/fi/nae-koe/linnat-ruukit/mustion-linna/
+
+Raasepori: Raaseporin rauniolinna
+https://www.visitraseborg.com/fi/nae-koe/linnat-ruukit/raaseporin-linna/
+
+Loviisa: Strömforsin ruukki
+https://stromforsinruukki.com/
+
+Espoo: Suomen luontokeskus Haltia
+https://haltia.com/
+
+Kirkkonummi: Hvitträsk
+https://suomenkansallismuseo.fi/kohde/hvittrask/
+
+Nurmijärvi: Taaborinvuori
+https://www.nurmijarvi.fi/kuntalaisen-palvelut/kulttuuri-ja-vapaa-aika/kulttuuri/taaborinvuoren-tapahtuma-alue/
+
+Kajaani: Kajaanin rauniolinna
+https://visitkajaani.fi/palvelu/kajaanin-rauniolinna/
+
+Kuhmo: Juminkeko
+https://www.juminkeko.fi/info/
+
+Paltamo: Kivesvaara
+https://arcticgiant.fi/
+
+Ristijärvi: Hiisijärven hiekat
+https://www.ristijarvi.fi/matkailu-ja-vapaa-aika/matkailukohteet/hiisijarven-hiekat.html
+
+Sotkamo: Vuokatinvaara ja Vaaran Tupa
+https://vuokatti.fi/paikka/vuokatinvaara/
+
+Suomussalmi: Hossan kansallispuisto
+https://visitsuomussalmi.fi/tuote/hossan-luontokeskus/
+
+Kainuun 8 kuntaa: Hyrynsalmi, Kajaani, Kuhmo, Paltamo, Puolanka, Ristijärvi, Sotkamo ja Suomussalmi. Olemassa olevat käyntikohteet säilytetty. Hyrynsalmen Komulanköngäs ja Puolangan Hepoköngäs olivat jo valikossa. Tarkistus koskee käyntikohteita ja valikon kuntakattavuutta, ei kaikkien palvelujen tai yöpymispaikkojen täydellistä ajantasaisuutta.
+https://hyrynsalmi.fi/kulttuuri-ja-vapaa-aika/matkailu/nahtavyydet/
+https://puolanka.fi/liikunta-ja-vapaa-aika/liikunta/liikuntaa-luonnossa/
+Uusille kohteille ei lisätty varmistamattomia koordinaatteja. Ne näkyvät Käyntikohteet-valikossa, eivät vielä lähikohteiden etäisyyshaussa. Karttalinkki hakee nimettyä kohdetta Google Mapsista.
