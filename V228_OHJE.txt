@@ -1,0 +1,4 @@
+V228 – Viimeiset seitsemän helmien karttasijaintia
+Pura paketti ja siirrä tiedostot sivuston juureen. Korvaa samannimiset, säilytä muut. Tarvitsee aiemmat päivitykset, myös v227 kaikki kolme osaa.
+Seitsemän jäljellä ollutta kohdetta löytyvät nyt etäisyyshausta. Koko nykyisessä Helmet-aineistossa (114 kohdetta) on sijainti. Tämä ei tarkoita koko Suomen kuntien valmistumista.
+Päijätsalon etäisyys tarkoittaa vahvistettua saapumisosoitetta, ei tarkkaa pysäköintipaikkaa. Seuraa opasteita. Pohjolan Kartanon ajo Tokeensalmentien kautta ja tilapäinen sulkemistieto huomioitu.

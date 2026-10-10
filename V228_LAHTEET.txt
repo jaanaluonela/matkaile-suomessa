@@ -1,0 +1,50 @@
+Tarkistettu 10.10.2026
+
+helmi223-juveninkoski.html
+Partalantie 194, Jämsä
+61.8455684694044, 25.0729513870294
+https://visithimosjamsa.fi/palvelu/juveninkoski/
+Himos-Jämsän matkailusivun karttapiste
+Tienvarren levikkeeltä jatketaan jalan. Tarkista ajoneuvosi vaatima tila.
+
+helmi223-pohjolan-kartano.html
+Pohjolantie 35, 19620 Pohela, Hartola
+61.502290196485, 25.977045291093
+https://www.pohjolankartano.fi/
+Esri World Geocoding: tarkka osoiteosuma, PointAddress, score 100
+Ajo Tokeensalmentien kautta. Kohteen sivulla 10.10.2026: myymälä suljettu, seuraava avaus marraskuussa. Tarkista ajankohtainen aukiolo ennen käyntiä.
+
+helmi223-fiskars.html
+Torin pysäköintialue, Peltorivi 1, Fiskars, Raasepori
+60.13141667742261, 23.54548961240867
+https://fiskarsvillage.fi/elamykset/torin-pysakointialue/
+Fiskars Village: toripysäköinnin oma karttapiste
+Jatka toripysäköinnistä jalan ruukkialueelle. Tarkista liikennemerkit ja ajoneuvon sopivuus.
+
+helmi223-stromfors.html
+Pysäköinti: Ruukintie 17, Ruotsinpyhtää, Loviisa
+60.524377037592, 26.473657427006
+https://stromforsinruukki.com/saapuminen/
+Esri World Geocoding: vahvistettu pysäköintiosoite, StreetAddress, score 100
+Matkailuautojen ja bussien pysäköinti on kohteen oman ohjeen mukaan hiekkakentän takaosassa. Seuraa paikallisia pysäköintiopasteita.
+
+helmi223-vuokatinvaara.html
+Vaaran Tupa, Vuokatinvaarantie 17, Vuokatti, Sotkamo
+64.1281321, 28.2676284
+https://vuokatti.fi/paikka/kahvilavaarantupa/
+OpenStreetMap / Photon: tarkka katu ja numero 17
+Tarkista kahvilan aukiolo ja tieolosuhteet. Näköalatasanteella ja tornissa ei ole talvikunnossapitoa; alueella liikkuu talvella laskettelijoita.
+
+helmi225-paijanne-asikkala.html
+Karisalmen pysäköintialue, Pulkkilantie 955, Asikkala
+61.294783333333335, 25.5347
+https://visitpaijanne.fi/aktiviteetit/retkeilyreitit/pulkkilanharjun-luontopolku-44-km/
+Visit Päijänne: lähtöpisteen koordinaatit N61 17.687, E25 32.082
+Luontopolku alkaa Karisalmen sillan levähdysalueelta. Tarkista pysäköintimerkit ja ajoneuvon vaatima tila.
+
+helmi225-paijanne-sysma.html
+Saapumisosoite: Sorolantie 28, Sysmä
+61.484115702014, 25.584289999268
+https://sysma.fi/paijatsalon-retkeilyalue/
+Esri World Geocoding: osoiteosuma StreetAddress, score 100; ei tarkka pysäköintiruudun GPS-piste
+Karttapiste ja etäisyys tarkoittavat saapumisosoitetta. Seuraa Päijätsalontieltä paikallisia pysäköintiopasteita. Pieni pysäköintialue ei välttämättä sovi matkailuajoneuvolle. Näkötornista löytyi sulkemistieto lahovaurioiden vuoksi; tarkista nykytilanne Luontoon-palvelusta.
