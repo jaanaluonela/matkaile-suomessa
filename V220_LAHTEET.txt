@@ -1,0 +1,78 @@
+Keski-Suomen ensimmäinen kuntapaketti v220. Tarkistettu 10.10.2026.
+
+Laajis Urban Caravan – https://laajis.fi/urbancaravan/
+Laajavuorentie 15, 40740 Jyväskylä
+Sijainti: 62.2564973, 25.6963387 / OpenStreetMap / Photon
+
+Lutakon sataman matkaparkki – https://visitjyvaskyla.fi/majoitu/matkaparkit/
+Lutakon satama, Jyväskylä
+Sijainti: 62.237718733149, 25.754111642297 / Visit Jyväskylä, Lutakon sataman karttalinkki
+
+Harju ja Vesilinnan näkötorni – https://visitjyvaskyla.fi/kohteet/harju-ja-nakotorni/
+Ihantolantie 5, 40100 Jyväskylä
+Sijainti: 62.2432257, 25.7394239 / Visit Jyväskylä, kohteen karttalinkki
+
+Aalto2-museokeskus – https://aalto2.museum/
+Alvar Aallon katu 7, 40600 Jyväskylä
+Sijainti: 62.2338736, 25.7307531 / OpenStreetMap / Photon
+
+Toivolan vanha piha – https://toivolanpiha.fi/
+Cygnaeuksenkatu 2, 40100 Jyväskylä
+Sijainti: 62.2377218, 25.7442686 / OpenStreetMap / Photon
+
+Riihivuori Caravan – https://www.riihivuorenlomakyla.fi/riihivuori-caravan/
+Riihivuorentie 313, 40950 Muurame
+Sijainti: 62.110053, 25.699526 / OpenStreetMap / Photon
+
+Muuramenjoen luontopolku – https://www.muurame.fi/palvelut/muuramenjoki-ja-luontopolku/
+Muuramenjoki, Muuramen keskusta
+Sijainti: ei mukana etäisyyshaussa
+
+Muuramen kirkko – https://www.muuramenseurakunta.fi/kirkko-ja-tilat/muuramenkirkko
+Sanantie 7, 40950 Muurame
+Sijainti: 62.1251835, 25.6643982 / OpenStreetMap / Photon
+
+Ravintola Riihikelo – https://ravintolariihikelo.fi/
+Riihivuorentie 313, 40950 Muurame
+Sijainti: 62.110053, 25.699526 / OpenStreetMap / Photon
+
+Peurungan matkaparkki – https://peurunka.fi/en/accommodation/motorhome-stopover/
+Peurungantie 85, 41340 Laukaa
+Sijainti: 62.433850769839, 25.89709950105 / Visit Jyväskylä, Peurungan vastaanoton karttalinkki
+
+Saraakallion kalliomaalaukset – https://visitjyvaskyla.fi/kohteet/saraakallion-kalliomaalaukset/
+Lähtöpaikka: Laukaan satama, Satamatie 3, 41340 Laukaa
+Sijainti: 62.4111237, 25.9614503 / OpenStreetMap / Photon
+
+Multamäen luontopolku – https://visitjyvaskyla.fi/kohteet/multamaen-luontopolku/
+Finnintie 292, 41350 Laukaa
+Sijainti: 62.45801, 25.86457 / Visit Jyväskylä, julkaistut WGS84-koordinaatit
+
+Varjolan tila ja kesäbistro – https://www.varjola.com/ruoka
+Vilppulantie 51, 41370 Kuusa
+Sijainti: 62.4572145, 25.9356901 / Visit Jyväskylä, Varjolan karttalinkki
+
+Himos Caravan – länsirinteet – https://himos.fi/rinnepalvelut/caravan-paikat/
+Himosraitti 6, 42100 Jämsä
+Sijainti: 61.8814103, 25.2998112 / Visit Himos-Jämsä, caravan-alueen karttalinkki
+
+Vororotti – https://visithimosjamsa.fi/kohde/vororotti/
+Vororotti, Jämsä
+Sijainti: 61.7896372, 25.0056098 / OpenStreetMap / Photon
+
+Witikkalan Kartano – https://www.witikkalankartano.fi/
+Koskentie 12, 42100 Jämsä
+Sijainti: 61.8666169, 25.1867368 / OpenStreetMap / Photon
+
+Hirvikartano – https://hirvikartano.fi/
+Heinäseläntie 381, 42100 Jämsä
+Sijainti: 61.85420453650668, 25.4338670527225 / Hirvikartano, ETRS-TM35FIN
+
+Center Market Himos – https://www.centermarkethimos.fi/
+Länsi-Himoksentie 4, 42100 Jämsä
+Sijainti: 61.8825766, 25.2903 / Center Market Himos, oma karttalinkki
+
+
+Muuramenjoen siltatyö: https://www.muurame.fi/muuramenjoen-luontopolun-rakenteita-korjataan/
+Vaakunat: Wikimedia Commons, kuntien vaakunat.
+Karttasijainnit: © OpenStreetMap contributors / Photon sekä kohteen oma lähde.

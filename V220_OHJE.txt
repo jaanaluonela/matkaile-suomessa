@@ -1,0 +1,9 @@
+V220 – Keski-Suomen ensimmäiset neljä kuntaa
+
+Pura molemmat ZIP-paketit. Siirrä niiden sisältämät tiedostot GitHub-sivuston juureen, samaan paikkaan kuin index.html. Korvaa samannimiset tiedostot. Lataa ensin osa 1, sitten osa 2 ja odota julkaisun valmistumista. Aiemmat kuntasivut säilyvät.
+
+Pohjalla pitää olla nykyinen sivusto sekä v218 ja v219. Tämä on päivityspaketti, ei kokonainen sivusto.
+
+Uudet kuntasivut: Jyväskylä, Muurame, Laukaa ja Jämsä. Uudet kohteet näkyvät kunta- ja yöpymisvalikoissa sekä Lähellä minua -haussa silloin, kun sijainti on varmistettu. Koko Keski-Suomi ei ole vielä valmis.
+
+Tarkistus: Paikkakunnat > Keski-Suomi. Lähellä minua > Jyväskylä > 50 km > Etsi.
