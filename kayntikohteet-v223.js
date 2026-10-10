@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const extra={name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'};
-const seen=new Set(), places=[...(window.nearbyData||[]),...(window.visitHighlights||[]),extra].filter(p=>{if(!['sight','stop'].includes(p.type)||!p.url)return false;const key=p.city+'|'+p.url;if(seen.has(key))return false;seen.add(key);return true;});
+const seen=new Set(), places=[...(window.visitHighlights||[]),...(window.nearbyData||[]),extra].filter(p=>{if(!['sight','stop'].includes(p.type)||!p.url)return false;const key=p.city+'|'+p.name;if(seen.has(key))return false;seen.add(key);return true;});
 const city=document.getElementById('city'),query=document.getElementById('query'),results=document.getElementById('results'),count=document.getElementById('count');
 const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const cities=[...new Set(places.map(p=>p.city))].sort((a,b)=>a.localeCompare(b,'fi'));

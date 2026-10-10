@@ -1,0 +1,6 @@
+V225 – Helmet kuntasivuille ja kansallispuistot
+Siirrä paketin tiedostot sivuston juureen, korvaa samannimiset. Älä poista muita tiedostoja. Tarvitsee aiemmat v218, v220, v221 ja v223 (molemmat osat).
+Helmet-osio lisätään app.js-tiedostoa käyttäville kuntasivuille nykyisen sisällön rinnalle, kun kunnan nimi on sivun h1-otsikossa. Nähtävyydet ja erityiset pysähdykset näkyvät sekä kuntasivulla että Käyntikohteet-valikossa.
+Uudet puistosivut: Päijänne Asikkalan, Padasjoen ja Sysmän lähtöpisteillä; Nuuksio Espoossa; päivitetty Pyhä-Häkki Saarijärvellä. Hossa säilyy Suomussalmella.
+Helmet-valinta on myös Lähellä minua -valikossa. Etäisyyshaku näyttää vain varmennetut karttasijainnit; kaikki helmet löytyvät erillisestä listasta.
+Päijätsalon näkötornin sulkemistieto mukana. Tämä ei ole kaikkien Suomen kuntien valmis kohdekokoelma.
