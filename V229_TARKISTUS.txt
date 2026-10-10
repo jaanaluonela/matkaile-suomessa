@@ -1,0 +1,19 @@
+Päijät-Häme ja Kainuu – tarkistus 10.10.2026
+
+18 kuntasivua: Päijät-Hämeen 10 kuntaa ja Kainuun 8 kuntaa.
+Kuntien vaakunat ja asukaslukutekstit löytyvät kaikilta sivuilta. Väestölukuja ei tässä päivitetty.
+Kuntien paikallisten HTML-linkkien kohdetiedostot löytyvät tunnetusta päivityskokonaisuudesta.
+Kaikkien 18 kuntasivun dynaaminen helmet-osio testattu: yhteensä 70 helmeä, sijaintikoordinaatit ja kohdesivut löytyvät.
+
+121 kuntasivujen ulkoista verkko-osoitetta tarkistettu HTTP-pyynnöllä: 116 vastasi onnistuneesti. Orimattilan kotieläinpuiston vanha yhteystietolinkki palautti 404:n ja korvattiin virallisella etusivulla.
+Epävarmoiksi jäivät Laahtanen ja Juhlapalvelu Kärkölä (502), Pro Puu (403) ja Pekan Leipä (aikakatkaisu). Näitä ei poistettu, sillä tulokset eivät osoita toiminnan loppumista.
+
+Tämä ei ole kaikkien hintojen, palvelujen, aukioloaikojen tai matkailukohteiden täydellisyysauditointi. Ajantasaiset käytännön tiedot tarkistetaan toimijalta.
+
+Korjausten lähteet:
+https://www.visitheinasaari.fi/
+https://visithartola.fi/majoitus/
+https://www.kotielainpuisto.com/
+https://www.kotielainpuisto.com/yhteystiedot/
+
+Tiedot ja aiemmat kohteet säilytetty.

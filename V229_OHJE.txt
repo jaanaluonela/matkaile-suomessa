@@ -1,0 +1,10 @@
+Matkailu Suomessa – v229
+
+Lataa ZIP ja pura se. Kopioi kolme HTML-tiedostoa samaan kansioon kuin nykyiset kuntasivut ja korvaa samannimiset tiedostot. Älä poista muita tiedostoja. Tämä pieni korjaus tulee v228:n jälkeen. Se ei sisällä aiempien päivitysten tiedostoja.
+
+Korjaukset:
+- Heinola: Heinolan Heinäsaari näkyy oikealla nimellä.
+- Asikkala: Kanavaanarin matkaparkki näkyy kohteen nimellä.
+- Orimattila: kotieläinpuiston linkki vaihdettu viralliseen etusivuun.
+
+Tarkistus kattaa paikalliset päivitystiedostot. Julkaistua GitHub Pages -sivustoa tai käyttäjän tekemää latausta ei tällä vahvisteta.
