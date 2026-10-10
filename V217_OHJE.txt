@@ -1,0 +1,6 @@
+Matkaile Suomessa v217 – laajempi kohdevalikoima
+
+Tämä paketti sisältää v216-päivityksen kokonaan sekä uudet hyväksytyt lisäykset. V216-pakettia ei tarvitse ladata erikseen.
+Pura ZIP ja lataa tiedostot GitHub-projektin juureen. Korvaa samannimiset tiedostot. Muut nykyiset projektitiedostot tarvitaan edelleen.
+
+18 kuntasivua ja kohteet-v216.css. Aiemmin lisätyt -alavalikot poistettu. Kohteiden määrä vaihtelee kunnittain. Aiemmat kohteet säilytetty; vastaavat vanhat kortit päivitetty ilman tuplia. Kainuun uudet valinnat nostettu ennen yöpymistietoja.
