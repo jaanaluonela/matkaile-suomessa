@@ -1,0 +1,76 @@
+Keski-Suomen toinen kuntapaketti v221. Tarkistettu 10.10.2026.
+
+Camping Nyyssänniemi – https://nyyssanniemi.fi/etusivu/
+Nyyssänniementie 10, 42700 Keuruu
+Sijainti: 62.2456578, 24.7070947 / OpenStreetMap / Photon
+
+Keuruun vanha kirkko – https://www.keuruunseurakunta.fi/kirkot-ja-tilat/kirkot-ja-kappelit/keuruun-vanha-kirkko
+Keuruuntie 1, 42700 Keuruu
+Sijainti: 62.2561868, 24.7096732 / OpenStreetMap / Photon
+
+Himmaan Huippu – https://visitjyvaskyla.fi/kohteet/himmaan-huippu/
+Matkalantie 159, 42820 Riiho
+Sijainti: 62.2066467, 24.3706495 / https://visitjyvaskyla.fi/kohteet/himmaan-huippu/
+
+Kahvila Iidan Unelma – Marttamökki – https://visitjyvaskyla.fi/kohteet/kahvila-iidan-unelma-2/
+Keuruuntie 2, 42700 Keuruu
+Sijainti: 62.2570596, 24.7079434 / OpenStreetMap / Photon
+
+Petäjäveden vanha kirkko – https://petajavesioldchurch.fi/tule-kaymaan/
+Vanhankirkontie 9, 41900 Petäjävesi
+Sijainti: 62.250139, 25.1839335 / OpenStreetMap / Photon
+
+Petäjäveden radio- ja puhelinmuseo – https://www.radiomarket.fi/ota-yhteytta/
+Heinämäentie 58, 41900 Petäjävesi
+Sijainti: 62.296528, 25.1804686 / OpenStreetMap / Photon
+
+Petäjäveden matkaparkki – https://www.petajavesi.fi/kulttuuri-ja-matkailu/matkailu/matkaparkki-2/
+Miilutie 2, 41900 Petäjävesi
+Sijainti: 62.2570218, 25.1796529 / OpenStreetMap / Photon
+
+Lemettilän tilan aittakahvila – https://www.lemettilantila.fi/muut-palvelut/kesakahvila/
+Siltatie 23, 41900 Petäjävesi
+Sijainti: 62.248565, 25.1785369 / OpenStreetMap / Photon
+
+Camping Sumiainen – https://camping-sumiainen9.webnode.fi/
+Sumiaisraitti 2, 44280 Sumiainen
+Sijainti: 62.6515972, 26.0494338 / OpenStreetMap / Photon
+
+Kapeenniemen virkistysalue – https://visitjyvaskyla.fi/kohteet/kapeenniemi/
+Kapeenkoskentie 67, 44250 Äänekoski
+Sijainti: 62.5294444444, 25.8436111111 / https://visitjyvaskyla.fi/kohteet/kapeenniemi/
+
+Suolahden Wanha Asema – https://visitjyvaskyla.fi/kohteet/suolahden-wanha-asema/
+Asematori, 44200 Suolahti
+Sijainti: 62.5692284, 25.8537746 / https://visitjyvaskyla.fi/kohteet/suolahden-wanha-asema/
+
+Wille – Olohuone ja Keittiö – https://www.willenolohuone.com/
+Äänekoskentie 311, 44100 Äänekoski
+Sijainti: 62.6010143, 25.7308632 / OpenStreetMap / Photon
+
+Ahvenlampi Camping – https://www.ahvenlampicamping.net/
+Ahvenlammentie 62, 43100 Saarijärvi
+Sijainti: 62.7508774, 25.1594431 / OpenStreetMap / Photon
+
+Pyhä-Häkin kansallispuisto – https://www.luontoon.fi/fi/kohteet/pyha-hakin-kansallispuisto
+Viitasaarentie 2119, 43170 Saarijärvi
+Sijainti: 62.8505157, 25.4891573 / OpenStreetMap / Photon
+
+Julmat Lammit – https://www.visitsaarijarvi.fi/nae-ja-koe/julmat-lammit/
+Kokkolantie 886, 43250 Kolkanlahti
+Sijainti: 62.76109056316504, 25.13780607676759 / https://visitjyvaskyla.fi/kohteet/julmat-lammit/
+
+Ruustinna – https://ruustinna.com/kahvila/
+Paavontie 1, 43100 Saarijärvi
+Sijainti: 62.7027284, 25.2722406 / OpenStreetMap / Photon
+
+
+Petäjäveden kirkon pysäköintiohje: https://petajavesioldchurch.fi/tule-kaymaan/
+Vaakunat: Wikimedia Commons, kuntien vaakunat.
+Karttasijainnit: © OpenStreetMap contributors / Photon sekä kohteen oma lähde.
+
+Väestötiedot (vuoden 2025 loppu, pyöristetty):
+https://kuntavaesto.com/kunta/keuruu/
+https://kuntavaesto.com/kunta/petajavesi/
+https://kuntavaesto.com/kunta/aanekoski/
+https://kuntavaesto.com/kunta/saarijarvi/
