@@ -1,0 +1,2 @@
+v219 – Etsi-painike
+Pura ZIP ja siirrä molemmat sivustotiedostot GitHub-projektin juureen. Korvaa lahella-minua.html. V218:n kohdetiedot ja tyylit tarvitaan edelleen. Etsi-painike käyttää kirjoitettua lähtöpaikkaa tai GPS-sijaintia.
