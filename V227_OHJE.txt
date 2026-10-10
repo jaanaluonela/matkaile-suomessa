@@ -1,0 +1,6 @@
+V227 – Helmille sijainnit
+Pura kaikki osat ja siirrä sivuston juureen; korvaa samannimiset, säilytä muut. Tarvitsee aiemmat v218, v220, v221, v223, v225 ja v226.
+37 aiemmin sijainnitonta helmeä lisätty etäisyyshakuun. Kaikki Lahden, Jyväskylän ja Kajaanin 16 v226-kohdetta mukana. Kohteiden omat sivut, osoitteet ja karttalinkit päivitetty.
+Olemassa olevat kohteet säilytetään. Lisäämäsi muut omat kohteet eivät poistu nearbyData-listalta. Retken etäisyys voi tarkoittaa lähtöpistettä.
+Vielä ilman varmistettua karttasijaintia: Jämsä: Juvéninkoski, Hartola: Pohjolan Kartano ja tilamyymälä, Raasepori: Fiskarsin ruukki, Loviisa: Strömforsin ruukki, Sotkamo: Vuokatinvaara ja Vaaran Tupa, Asikkala: Päijänteen kansallispuisto – Pulkkilanharju, Sysmä: Päijänteen kansallispuisto – Päijätsalo
+Nämä säilyvät Helmet-listalla ja kuntasivuilla.

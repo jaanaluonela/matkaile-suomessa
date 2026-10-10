@@ -1,0 +1,186 @@
+Tarkistettu 10.10.2026 – OpenStreetMap / Photon, kohteen nimiosuma tai ensisijaisesta lähteestä vahvistettu osoite. Aiemmin tarkistettujen Vesilinnan ja Kivesvaaran lähtöpisteet hyödynnetty.
+
+Jämsä: Himos matkailukeskus
+Länsi-Himoksentie 4, Jämsä
+61.8827757, 25.2907704
+https://visithimosjamsa.fi/palvelut-himoksella/
+
+Heinola: Harjupaviljonki
+Kauppakatu 30, Heinola
+61.1996252, 26.0372545
+https://harjupaviljonki.fi/yhteystiedot/
+
+Heinola: Kumpeli Spa
+Muonamiehenkatu 3, Heinola
+61.2054131, 26.0157982
+https://www.visitheinola.fi/kohde/kumpeli-spa/
+
+Hartola: Itä-Hämeen museo
+Koskipääntie 2, Hartola
+61.5683861, 26.0160459
+https://ihmuseo.fi/
+
+Hartola: Kuninkaanpolku
+Lähtöpaikka: Itä-Hämeen museo, Koskipääntie 2, Hartola
+61.5683861, 26.0160459
+https://visithartola.fi/nae-ja-koe/
+
+Porvoo: Vanha Porvoo
+Vanha Porvoo, Porvoo
+60.3955571, 25.6576835
+https://www.visitporvoo.fi/elamykset/lasten-porvoo/elamyksia-koko-perheelle/
+
+Porvoo: Brunbergin Vanhan Porvoon myymälä
+Välikatu 4, Porvoo
+60.3945355, 25.6592475
+https://brunberg.fi/myymalat/
+
+Hanko: Neljän Tuulen Tupa
+Neljäntuulenkuja, Pieni Mäntysaari, Hanko
+59.8240666, 23.0077865
+https://visithanko.fi/tuotesivu/neljan-tuulen-tupa/
+
+Raasepori: Mustion linna
+Hållsnäsintie 89, Mustio, Raasepori
+60.1570384, 23.840703
+https://www.visitraseborg.com/fi/nae-koe/linnat-ruukit/mustion-linna/
+
+Raasepori: Raaseporin rauniolinna
+Raaseporin linnan pysäköintialue, Snappertuna
+59.9924024, 23.6456148
+https://www.visitraseborg.com/fi/nae-koe/linnat-ruukit/raaseporin-linna/
+
+Espoo: Suomen luontokeskus Haltia
+Nuuksiontie 84, Espoo
+60.2937108, 24.5570395
+https://haltia.com/
+
+Kirkkonummi: Hvitträsk
+Hvitträskintie 166, Luoma, Kirkkonummi
+60.1813456, 24.5197595
+https://suomenkansallismuseo.fi/kohde/hvittrask/
+
+Nurmijärvi: Taaborinvuori
+Pysäköinti: Koulunkulmantie 34, Palojoki, Nurmijärvi
+60.4243907, 24.8674826
+https://www.nurmijarvi.fi/kuntalaisen-palvelut/kulttuuri-ja-vapaa-aika/kulttuuri/taaborinvuoren-tapahtuma-alue/
+
+Kajaani: Kajaanin rauniolinna
+Linnankatu, Kajaani
+64.2292242, 27.7328109
+https://visitkajaani.fi/palvelu/kajaanin-rauniolinna/
+
+Kuhmo: Juminkeko
+Kontionkatu 25, Kuhmo
+64.1263763, 29.5130607
+https://www.juminkeko.fi/info/
+
+Paltamo: Kivesvaara
+Lähtöpiste: Kivesvaarantie 40, Paltamo
+64.4594114, 27.540608
+https://arcticgiant.fi/
+
+Ristijärvi: Hiisijärven hiekat
+Hiisijärven uimaranta, Hiekkojentie, Ristijärvi
+64.3595718, 28.6097075
+https://www.ristijarvi.fi/matkailu-ja-vapaa-aika/matkailukohteet/hiisijarven-hiekat.html
+
+Suomussalmi: Hossan kansallispuisto
+Lähtöpaikka: Hossan luontokeskus, Jatkonsalmentie 6, Suomussalmi
+65.4676694, 29.5183115
+https://visitsuomussalmi.fi/tuote/hossan-luontokeskus/
+
+Padasjoki: Päijänteen kansallispuisto ja Kelvenne
+Lähtöpaikka: Padasjoen Laivaranta, Padasjoki
+61.362281, 25.2969529
+https://www.luontoon.fi/fi/kohteet/paijanteen-kansallispuisto
+
+Espoo: Nuuksion kansallispuisto
+Suunnittelun lähtöpiste: Haltia, Nuuksiontie 84, Espoo
+60.2937108, 24.5570395
+https://www.luontoon.fi/fi/kohteet/nuuksion-kansallispuisto
+
+Tampere: Pyynikin munkkikahvila ja näkötorni
+Näkötornintie 20, Tampere
+61.4963185, 23.7319211
+
+
+Lahti: Vesijärven satama ja Sibeliustalo
+Sibeliustalo, Ankkurikatu 7, Lahti
+60.9950314, 25.6515676
+https://visitlahti.fi/etusivu/nae-ja-koe/vesille/vesijarven-satama/
+
+Lahti: Urheilukeskus ja Hiihtomuseo
+Salpausselänkatu 8, Lahti
+60.9840804, 25.6325734
+https://www.hiihtomuseo.fi/tule-meille/saapuminen-ja-esteettomyys/
+
+Lahti: Lanun veistospuisto
+Lanu-puisto, Kariniemenmäki, Lahti
+60.9912129, 25.6487265
+https://www.lahti.fi/asuminen-ja-ymparisto/kaupunkiympariston-suunnittelu/julkinen-taide/lanupuisto/
+
+Lahti: Ravintola Roux
+Rautatienkatu 7, Lahti
+60.980347, 25.6580049
+https://roux.fi/
+
+Lahti: Ravintola Taivaanranta
+Rautatienkatu 13, Lahti
+60.9817716, 25.658565
+https://taivaanranta.com/yhteystiedot-ravintolan-aukioloajat-yritys/
+
+Jyväskylä: Säynätsalon kunnantalo
+Parviaisentie 9, Jyväskylä
+62.1402459, 25.7688364
+https://visitjyvaskyla.fi/kohteet/alvaraalto-saynatsalon-kunnantalo/
+
+Jyväskylä: Suomen käsityön museo ja kansallispukukeskus
+Kauppakatu 25, Jyväskylä
+62.2417736, 25.7452131
+https://www.craftmuseum.fi/en/craft-museum-finland/museum-and-contact
+
+Jyväskylä: Miriam’s kahvila
+Asemakatu 12, Jyväskylä
+62.2433967, 25.7460231
+https://www.miriams.fi/fi/yhteystiedot
+
+Jyväskylä: Kahvila-ravintola Vesilinna
+Ihantolantie 5, Jyväskylä
+62.2432257, 25.7394239
+https://visitjyvaskyla.fi/kohteet/cafe-restaurant-vesilinna/
+
+Jyväskylä: Ravintola Pöllöwaari
+Yliopistonkatu 23, Jyväskylä
+62.2459613, 25.7486013
+https://visitjyvaskyla.fi/kohteet/ravintola-pollowaari-viiniravintola/
+
+Jyväskylä: Sataman Viilu
+Satamakatu 10, Jyväskylä
+62.2353072, 25.7595582
+https://satamanviilu.fi/yhteystiedot/
+
+Kajaani: Paltaniemen kuvakirkko
+Paltaniementie 851, Kajaani
+64.2928886, 27.6608825
+https://www.visitkajaani.fi/en/palvelu/paltaniemen-kuvakirkko/
+
+Kajaani: Eino Leino -talo
+Sutelantie 28, Kajaani
+64.2945807, 27.6640919
+https://visitkajaani.fi/palvelu/eino-leino-talo/
+
+Kajaani: Riihipihan talonpoikaismuseo
+Kuusirannantie 67, Vuolijoki, Kajaani
+64.1880603, 27.0165947
+https://visitkajaani.fi/palvelu/riihipiha-talonpoikaismuseo/
+
+Kajaani: Höyrylaiva Koudan maisemaristeily
+Lähtösatama: Kalkkisilta, Kalkkisillantie 4, Kajaani
+64.2311591, 27.724792
+https://oulujarviristeilyt.fi/page/2/yhteys
+
+Kajaani: Pekka Heikkisen leipomon puoti ja kahvila
+Välikatu 7, Kajaani
+64.2261218, 27.7331981
+https://visitkajaani.fi/palvelu/pekka-heikkisen-leipomon-puoti-ja-kahvila/
