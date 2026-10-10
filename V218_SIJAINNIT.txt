@@ -1,0 +1,93 @@
+Karttasijainnit: © OpenStreetMap contributors. Geokoodaus: Photon https://photon.komoot.io/
+https://www.openstreetmap.org/copyright
+
+Aurinkovuori | Asikkala | 61.1802035, 25.5135681 | OSM 7714104031
+Kanavaanari – Vääksyn matkaparkki | Asikkala | 61.1785033, 25.5371239 | OSM 1181991117
+Kanavan Kruunu | Asikkala | 61.1760382, 25.538354 | OSM 1385212693
+Majakkapaviljonki | Asikkala | 61.1797697, 25.5450441 | OSM 822232185
+Pulkkilanharju | Asikkala | 61.3294514, 25.5685553 | OSM 1304322542
+Päijännetalo | Asikkala | 61.1780261, 25.5356771 | OSM 1072618407
+Päijännetalon lähituotemyymälä | Asikkala | 61.1780261, 25.5356771 | OSM 1072618407
+Päijänteen kansallispuisto | Asikkala | 61.2752416, 25.5271337 | OSM 1131592785
+Ranskalainen Kyläkauppa | Asikkala | 61.1752047, 25.5293253 | OSM 10896817156
+Tallukan matkaparkki | Asikkala | 61.1652664, 25.5637724 | OSM 165379574
+Toivon Talo Vääksy | Asikkala | 61.1745547, 25.5382479 | OSM 12090255692
+Urajärven kartanomuseo | Asikkala | 61.1385463, 25.7933064 | OSM 440614440
+Vanha Vääksy | Asikkala | 61.176158, 25.533211 | OSM 10899598989
+Viini- ja puutarhatila Pihamaa | Asikkala | 61.296318, 25.6821078 | OSM 362363041
+Vääksyn kanava | Asikkala | 61.1765331, 25.5367598 | OSM 11215246041
+Wine & Cafe Jokiranta | Asikkala | 61.1773745, 25.5371095 | OSM 605040696
+Haltinmaa Caravan | Enontekiö | 69.0152629, 20.8820509 | OSM 392733160
+Backbyn Kartano | Espoo | 60.2774922, 24.6663427 | OSM 82056613
+Pirttimäki Camping | Espoo | 60.2702175, 24.649373 | OSM 322082681
+Camping Koskenniemi | Hartola | 61.5632612, 25.9950655 | OSM 320349837
+Camping Heinolan Heinäsaari | Heinola | 61.2128872, 26.0139673 | OSM 764592425
+Camping Vidnäs | Heinola | 61.3086988, 26.1585564 | OSM 762639408
+Harjupuisto | Heinola | 60.8846636, 26.7724096 | OSM 155242568
+Heinolan Heila | Heinola | 61.2327003, 26.0459032 | OSM 8345603575
+Heinolan kaupunginmuseo | Heinola | 61.2015991, 26.0329275 | OSM 211884966
+Heinolan lintuhoitola | Heinola | 61.2035809, 26.043123 | OSM 10823935730
+Heinolan sataman ravintolat | Heinola | 61.2011642, 26.0253841 | OSM 204564599
+Pekan Leivän leipomomyymälä ja kahvila | Heinola | 61.2127898, 26.0427989 | OSM 2484630920
+Rastila Camping Helsinki | Helsinki | 60.2076155, 25.1182767 | OSM 44502921
+Camping Messilä | Hollola | 61.0182285, 25.5656579 | OSM 46383865
+Hollolan Hirvi | Hollola | 60.9761927, 25.4740161 | OSM 661136051
+Hollolan keskiaikainen kirkko | Hollola | 61.0521809, 25.4323561 | OSM 259552858
+Hollolan kirkonkylä | Hollola | 61.0517302, 25.4336124 | OSM 2686628160
+Messilän ravintola- ja matkailupalvelut | Hollola | 61.0140174, 25.5593903 | OSM 368222656
+Tiirismaa | Hollola | 61.0066942, 25.5252298 | OSM 589192648
+Camping Vonkka | Hyrynsalmi | 64.6941129, 28.4932899 | OSM 564045727
+Komulanköngäs | Hyrynsalmi | 64.7442538, 28.1930386 | OSM 5454260695
+Iitin Rantamakasiini | Iitti | 60.920524, 26.2748579 | OSM 45742926
+Kilkkilän Farmi | Iitti | 61.0785578, 26.1741903 | OSM 3643213411
+SFC Leininranta | Iitti | 60.9138902, 26.3000771 | OSM 708662262
+Inkoon matkaparkki | Inkoo | 60.0460498, 24.0079114 | OSM 412898324
+Laajis Urban Caravan | Jyväskylä | 62.2564973, 25.6963387 | OSM 39259076
+Pajula Matkaparkki | Järvenpää | 60.4970208, 25.1192507 | OSM 1087704034
+Hotelli Kajaanin matkaparkki | Kajaani | 64.222803, 27.7540503 | OSM 825128390
+Kainuun Museo | Kajaani | 64.2216395, 27.7377751 | OSM 446033515
+Ravintola Terva | Kajaani | 64.2269931, 27.7295554 | OSM 232773152
+SFC-Kohtauspaikka | Kajaani | 64.127158, 27.250787 | OSM 1055471148
+Friggesby | Kirkkonummi | 60.0569149, 24.5032263 | OSM 618545092
+Kaesan kahvila ja leipomo | Kuhmo | 64.1276739, 29.5193538 | OSM 238539016
+Kalevala Camping | Kuhmo | 64.1158745, 29.5905771 | OSM 400849141
+Lentuankosken Leirintä | Kuhmo | 64.1830173, 29.5832002 | OSM 440370466
+Tuupalan museo | Kuhmo | 64.1249008, 29.5041027 | OSM 555298094
+Kahvila Tähkä | Kärkölä | 60.9145911, 25.2534453 | OSM 541773727
+Hennalan matkaparkki | Lahti | 60.9578136, 25.6090749 | OSM 46096791
+Kahiwa Coffee Roasters | Lahti | 60.9861613, 25.658672 | OSM 7823329697
+Kahvila Kariranta | Lahti | 60.9934974, 25.6471621 | OSM 47074948
+Malva | Lahti | 60.9861192, 25.6588907 | OSM 10824213506
+Pro Puu -galleria ja myymälä | Lahti | 60.993776, 25.6513469 | OSM 46088240
+Ravintola Lokin matkaparkki | Lahti | 60.9884762, 25.6406461 | OSM 13680254316
+SFC Kangaslampi | Lahti | 60.9800918, 25.9354257 | OSM 941555488
+Porlammin matkaparkki | Lapinjärvi | 60.6812017, 26.0294126 | OSM 51071088
+Loviisa Camping | Loviisa | 60.4412226, 26.237114 | OSM 738309725
+Loviisan matkaparkki | Loviisa | 60.4563879, 26.2212609 | OSM 8174290694
+SFC Sääksi | Nurmijärvi | 60.5104401, 24.6941187 | OSM 1290060847
+Orimattilan kotieläinpuisto | Orimattila | 60.8193436, 25.7460423 | OSM 1813474810
+SFC Vuorenmäki | Orimattila | 60.7585503, 26.0638084 | OSM 233380752
+Keinuhongan tila – lähiruokapuoti ja Kahvila & Deli | Padasjoki | 61.30794, 25.0881661 | OSM 11067557870
+Mainiemi Caravan | Padasjoki | 61.3740277, 25.2881478 | OSM 1111604800
+SFC Mylly-Mäkelä | Padasjoki | 61.3919154, 25.1105487 | OSM 926282601
+Arctic Giant – ravintola Makuhelmi | Paltamo | 64.4594114, 27.540608 | OSM 1078161270
+Jättiläisenmaa Camper Park | Paltamo | 64.4594114, 27.540608 | OSM 1078161270
+Paltamo Caravan Matkaparkki | Paltamo | 64.3960418, 27.8685409 | OSM 13690720
+Pellinge Caravan | Porvoo | 60.2310821, 25.8694269 | OSM 345041509
+Hepoköngäs | Puolanka | 64.8198359, 27.8767165 | OSM 5464358638
+Paljakka Lake Resort – Saunapihan matkaparkki | Puolanka | 64.6806233, 27.9378241 | OSM 1366971865
+Puolanka Camping & Cottages | Puolanka | 64.8670121, 27.6479673 | OSM 1017931432
+Laahtanen Camping | Ristijärvi | 64.4003087, 28.4718264 | OSM 1453041574
+Ristijärven Pirtin kesäkahvila-ravintola | Ristijärvi | 64.4898727, 28.1760018 | OSM 1447165477
+Ristijärven Pirtti | Ristijärvi | 64.4898727, 28.1760018 | OSM 1447165477
+Jokirannan Kartano | Sipoo | 60.335811, 25.1188502 | OSM 12650576156
+Haapala Panimoravintola | Sotkamo | 64.1306369, 28.3103788 | OSM 797115768
+Kuppi & Kaneli | Sotkamo | 64.1310757, 28.3844082 | OSM 5747116984
+Hiljaisen Kansan Niittykahvila ja Niittytupa | Suomussalmi | 65.0934036, 28.9046887 | OSM 509406088
+Hossan Lumo | Suomussalmi | 65.4432011, 29.5493115 | OSM 1147611571
+Raatteen Portti | Suomussalmi | 64.8483408, 29.3266478 | OSM 218727148
+Camping Sysmä | Sysmä | 61.4973167, 25.6953141 | OSM 5806636390
+Lintan Kammari | Sysmä | 61.4998016, 25.6929772 | OSM 13333977191
+Niihaman ulkoilumajan camping | Tampere | 61.5187015, 23.8735879 | OSM 295381310
+Pieni Kotieläintila ja Kahvila Onni | Tuusula | 60.46916, 25.0050427 | OSM 355198380
+SFC VihtiPark | Vihti | 60.5295145, 24.6017694 | OSM 1182663800
