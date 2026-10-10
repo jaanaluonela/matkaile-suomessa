@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 window.addEventListener('DOMContentLoaded',()=>{
  const title=document.querySelector('h1');if(!title||document.getElementById('town-highlights-v225'))return;
  const city=title.textContent.trim();
- const script=document.createElement('script');script.src='kayntikohteet-data-v225.js';
+ const script=document.createElement('script');script.src='kayntikohteet-data-v226.js';
  script.onload=()=>{
   const places=(window.visitHighlights||[]).filter(p=>p.city===city);if(!places.length)return;
   const section=document.createElement('section');section.id='town-highlights-v225';section.className='card';section.style.margin='16px 0';

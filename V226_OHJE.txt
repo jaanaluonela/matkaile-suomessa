@@ -1,0 +1,3 @@
+V226 – Lahti, Jyväskylä ja Kajaani
+Pura molemmat osat ja siirrä tiedostot sivuston juureen. Korvaa samannimiset tiedostot, säilytä muut. Tarvitsee aiemmat päivitykset, myös v223 molemmat osat ja v225.
+16 uutta helmeä näkyvät Helmet-listalla ja kuntasivujen yhteisessä Helmet-osiossa. Jo lisätyt kahvilat, ravintolat ja nähtävyydet säilyvät. Uusia kohteita ei lisätty etäisyyshakuun ilman varmennettuja koordinaatteja.
