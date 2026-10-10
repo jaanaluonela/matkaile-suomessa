@@ -1,0 +1,13 @@
+Matkaile Suomessa v218 – Lähellä minua
+
+Lataa ja pura molemmat osat. Siirrä tiedostot nykyisen sivuston juureen GitHubiin ja korvaa samannimiset. Vanha lahella-minua-v212.js saa jäädä: uusi sivu käyttää v218-skriptiä. V217:n kuntasivuja tai muita nykyisiä tiedostoja ei poisteta eikä korvata tällä päivityksellä.
+
+Osa 1: hakunäkymä, tyylit ja toiminta. Osa 2: kohteiden ja lähtöpaikkojen karttasijainnit.
+
+Käyttö: anna sijaintilupa tai kirjoita lähtöpaikka (esimerkiksi Vääksy, myös Asikkala toimii). Valitse kohderyhmä ja 25/50/100/200 km tai kaikki etäisyydet. Kohteet näkyvät lähimmästä alkaen omalla sivustolla. Tutustu avaa kohteen tietosivun, Ajo-ohje avaa Google Mapsin.
+
+Mukana 90 kohdetta, joille karttasijainti voitiin määrittää, ja 22 lähtöpaikkaa. Kaikki oppaan kohteet eivät vielä ole etäisyyshaussa: epäselvät sijainnit jätettiin pois tästä hakemistosta, eivät kuntasivuilta. Etäisyys on linnuntietä. Paikkakuntavalinta käyttää keskustan sijaintia, GPS omaa sijaintia. Ajomatka tarkistetaan Google Mapsista. Haku ei lataa karttatietoja käytön aikana eikä tallenna käyttäjän sijaintia.
+
+Testattu: laskenta, järjestys, suodattimet, tyhjät tulokset, lähtöpaikkavalinta, sijaintiluvan onnistuminen/epääminen sekä linkit. Aitoa puhelimen GPS:ää ja julkaistun sivuston toimintaa ei voitu tässä varmentaa.
+
+Karttasijainnit: OpenStreetMap / Photon, määritetty 10.10.2026. Kohteiden aukiolo ja palvelut tarkistetaan kohteen omilta sivuilta.
