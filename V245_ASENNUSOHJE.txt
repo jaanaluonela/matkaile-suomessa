@@ -1,0 +1,24 @@
+Matkailu Suomessa – v245: Omat matkat toimii (11.10.2026)
+
+TÄMÄ ON OSAPÄIVITYS nykyiseen sivustoon (v244 tai uudempaan).
+
+1. Ota varmuuskopio nykyisestä sivustokansiosta.
+2. Pura ZIP nykyisen sivuston juureen (samaan kansioon kuin index.html).
+3. Korvaa kolme samannimistä tiedostoa: app.js, paivakirja.html, index.html.
+4. Älä poista muita tiedostoja tai paikkakuntasivuja.
+5. Julkaise muutos GitHub Pagesiin kuten aiemmat päivitykset.
+6. Lataa sivu uudelleen ja tarvittaessa tyhjennä välimuisti.
+
+Muutokset:
+- Kaikkien app.js:ää käyttävien paikkakuntasivujen Olen käynyt täällä -painike lisää kohteen Omiin matkoihin ja merkitsee käydyksi.
+- Lisää omiin matkoihin -painike tallentaa samaan matkapäiväkirjaan heti ilman erillistä vahvistusta.
+- Uudelleen painaminen ei aiheuta saman kohteen tuplakappaletta.
+- Molemmat painikkeet näyttävät tallennuksen tilan ja linkin Omiin matkoihin.
+- Etusivun Omat matkat -kortissa näkyy tallennettujen matkojen määrä.
+- Paivakirja.html näyttää lisätyt matkakohteet, ja niitä voi täydentää kuvilla, päivämäärillä ja muistoilla.
+- Vanhan ms_trips-tallennusmuodon merkinnät yritetään tuoda uuteen matkapäiväkirjaan olemassa olevia tietoja hävittämättä.
+
+HUOM:
+Selaimen localStorage + IndexedDB säilyttää matkat ja kuvat saman sivuston samalla laitteella/selaimella.
+Nämä eivät synkronoidu eri laitteiden välillä ilman erillistä käyttäjätiliä ja pilvitallennusta.
+Jos sovelluksen verkko-osoite tai selain vaihtuu, aiemmat paikalliset tallennukset eivät siirry automaattisesti.

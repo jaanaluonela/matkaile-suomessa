@@ -1,8 +1,134 @@
-
-function key(id){return 'ms_'+id}function visited(id,btn){localStorage.setItem(key('visited_'+id),'1'); if(btn) btn.textContent='✓ Olen käynyt täällä';}
-function addTrip(id,name){let a=JSON.parse(localStorage.getItem(key('trips'))||'[]'); if(!a.find(x=>x.id===id)) a.push({id,name,date:new Date().toISOString().slice(0,10)}); localStorage.setItem(key('trips'),JSON.stringify(a)); alert('Lisätty omiin matkoihin: '+name)}
-window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('[data-visited]').forEach(b=>{let id=b.dataset.visited;if(localStorage.getItem(key('visited_'+id))) b.textContent='✓ Olen käynyt täällä';})})
-
+/* Matkailu Suomessa v245: yksi matkalista kaikille paikkakunnille ja päiväkirjalle. */
+(function () {
+  'use strict';
+  const STORE = 'ms_trips_v2';
+  const LEGACY = 'ms_trips';
+  const visitedKey = id => 'ms_visited_' + id;
+  function readArray(key) {
+    try { const value = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(value) ? value : []; }
+    catch (error) { console.warn('Matkojen lukeminen epäonnistui', error); return []; }
+  }
+  function todaysDate() {
+    const now = new Date();
+    return now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+  }
+  function nameForPage(id) {
+    const title = document.querySelector('main h1, header h1, h1');
+    const text = title && title.textContent.trim();
+    return text || String(id).replace(/[-_]/g, ' ').replace(/\b\w/g, s => s.toUpperCase());
+  }
+  function tripId(id) { return 'kohde-' + String(id).replace(/[^a-zA-Z0-9_-]/g, '-'); }
+  function loadTrips() {
+    const trips = readArray(STORE);
+    // Otetaan talteen myös aiempien versioiden matkat, ei hävitetä olemassa olevaa päiväkirjaa.
+    readArray(LEGACY).forEach(old => {
+      if (!old || typeof old !== 'object') return;
+      const place = String(old.locationId || old.id || '');
+      if (trips.some(t => t.locationId === place || t.id === tripId(place) || (t.name === old.name && t.begin === old.date))) return;
+      trips.push({id: place ? tripId(place) : ('vanha-' + trips.length), locationId:place || null,
+        name:String(old.name || 'Matka'), begin:old.date || '', end:'', diary:'', stops:[],
+        visited:!!(place && localStorage.getItem(visitedKey(place)) === '1')});
+    });
+    return trips;
+  }
+  function saveTrip(placeId, placeName, isVisited) {
+    const id = String(placeId || '').trim();
+    if (!id) return false;
+    let trips;
+    try {
+      trips = loadTrips();
+      let trip = trips.find(t => t.locationId === id || t.id === tripId(id) || t.id === id);
+      if (!trip) {
+        // Vanhempiin päiväkirjamerkintöihin yhdistetään nimi, jos paikkakunta on sama.
+        trip = trips.find(t => !t.locationId && String(t.name || '').toLocaleLowerCase('fi') === String(placeName || '').toLocaleLowerCase('fi'));
+      }
+      if (!trip) {
+        trip = {id:tripId(id), locationId:id, name:String(placeName || nameForPage(id)), begin:'', end:'',
+          diary:'', stops:[], visited:false, savedAt:todaysDate(), sourceUrl:location.pathname.split('/').pop()};
+        trips.unshift(trip);
+      } else {
+        trip.locationId = id;
+        if (!trip.name) trip.name=String(placeName || nameForPage(id));
+        if (!Array.isArray(trip.stops)) trip.stops=[];
+        if (!trip.sourceUrl) trip.sourceUrl=location.pathname.split('/').pop();
+      }
+      if (isVisited) {
+        trip.visited = true;
+        localStorage.setItem(visitedKey(id), '1');
+      }
+      localStorage.setItem(STORE, JSON.stringify(trips));
+      window.dispatchEvent(new CustomEvent('ms-trips-changed', {detail:{id:id,visited:!!trip.visited}}));
+      return true;
+    } catch(error) {
+      console.error('Matkan tallennus epäonnistui',error);
+      return false;
+    }
+  }
+  function findActionBlock(button) {
+    return button && (button.closest('section.card, section, article, .card') || button.parentElement);
+  }
+  function message(button, text, success) {
+    const host = findActionBlock(button);
+    if (!host) return;
+    let element = host.querySelector('.ms-trip-feedback');
+    if (!element) {
+      element = document.createElement('p');
+      element.className='ms-trip-feedback';
+      element.setAttribute('role','status');
+      element.style.cssText='margin:12px 0 2px;font-size:14px;line-height:1.5;color:#17634f;';
+      host.appendChild(element);
+    }
+    element.replaceChildren(document.createTextNode(text + ' '));
+    if (success) {
+      const link=document.createElement('a');
+      link.href='paivakirja.html';
+      link.textContent='Avaa Omat matkat →';
+      link.style.cssText='font-weight:750;color:inherit;text-decoration:underline;';
+      element.appendChild(link);
+    }
+  }
+  function updateButtons() {
+    const trips=loadTrips();
+    document.querySelectorAll('[data-visited]').forEach(button => {
+      const id=button.dataset.visited;
+      const t=trips.find(t=>t.locationId === id || t.id === tripId(id));
+      if (localStorage.getItem(visitedKey(id))==='1' || (t && t.visited)) {
+        button.textContent='✓ Olen käynyt täällä';
+        button.setAttribute('aria-pressed','true');
+      } else {
+        button.setAttribute('aria-pressed','false');
+      }
+    });
+    document.querySelectorAll('button[onclick*="addTrip("]').forEach(button=>{
+      const match=button.getAttribute('onclick').match(/addTrip\(\s*['"]([^'"]+)['"]/);
+      if (!match) return;
+      const id=match[1];
+      const saved=trips.some(t=>t.locationId === id || t.id === tripId(id));
+      if (saved) {
+        button.textContent='✓ Lisätty omiin matkoihin';
+        button.setAttribute('aria-pressed','true');
+      } else {
+        button.setAttribute('aria-pressed','false');
+      }
+    });
+  }
+  window.visited=function visited(id, button) {
+    const name=nameForPage(id);
+    const ok=saveTrip(id,name,true);
+    updateButtons();
+    message(button,ok?'Käynti tallennettu omiin matkoihin.':'Tallennus ei onnistunut. Tarkista selaimen tallennustila.',ok);
+  };
+  window.addTrip=function addTrip(id,name) {
+    const ok=saveTrip(id,name||nameForPage(id),false);
+    updateButtons();
+    // Kutsutaan sivulla jo olevaa painiketta ilman riippuvuutta id:stä.
+    const b=Array.from(document.querySelectorAll('button[onclick*="addTrip("]')).find(el=>el.getAttribute('onclick').includes("'"+id+"'"));
+    message(b,ok?'Kohde löytyy nyt etusivun Omat matkat -sivulta.':'Tallennus ei onnistunut. Tarkista selaimen tallennustila.',ok);
+  };
+  window.addEventListener('DOMContentLoaded',updateButtons);
+  window.addEventListener('pageshow',updateButtons);
+  window.addEventListener('storage',updateButtons);
+})();
 
 // v168: Avattavat/suljettavat kuntasivujen osiot
 window.addEventListener('DOMContentLoaded',()=>{
@@ -29,116 +155,3 @@ window.addEventListener('DOMContentLoaded',()=>{
     title.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
   });
 });
-
-// v225: Add town highlights beside existing municipality content.
-window.addEventListener('DOMContentLoaded',()=>{
- const title=document.querySelector('h1');if(!title||document.getElementById('town-highlights-v225'))return;
- const city=title.textContent.trim();
- const script=document.createElement('script');script.src='kayntikohteet-data-v230.js';
- script.onload=()=>{
-  const places=(window.visitHighlights||[]).filter(p=>p.city===city);if(!places.length)return;
-  const section=document.createElement('section');section.id='town-highlights-v225';section.className='card';section.style.margin='16px 0';
-  const heading=document.createElement('h2');heading.textContent='⭐ Näe ja koe';section.append(heading);
-  const list=document.createElement('div');list.className='compact-list';
-  for(const p of places){const a=document.createElement('a');a.className='place linkcard';a.href=p.url;a.style.cssText='display:block;padding:14px;margin:8px 0;border:1px solid #cfe3db;border-radius:16px;background:#f5faf7;color:#174d40;text-decoration:none';const b=document.createElement('b');b.textContent=p.name;const desc=document.createElement('p');desc.textContent=p.description||'';const more=document.createElement('span');more.textContent='Tutustu →';a.append(b,desc,more);list.append(a);}
-  section.append(list);const all=document.createElement('a');all.href='kayntikohteet.html?kunta='+encodeURIComponent(city);all.textContent='Selaa paikkakunnan kohteita →';section.append(all);
-  const intro=document.querySelector('.intro-card')||document.querySelector('main > section.card');if(intro)intro.after(section);else(title.closest('header')||title).after(section);
- };document.head.append(script);
-});
-
-// v241: Palauta yhteinen alavalikko myös Paikkakunnat- ja muille sivuille,
-// joissa HTML-valikko puuttuu. Älä lisää toista valikkoa kuntasivuille.
-(() => {
-  const showPrimaryNavigation = () => {
-    if (!document.body) return;
-    let nav = document.querySelector('nav.site-nav');
-    if (!nav) {
-      nav = document.createElement('nav');
-      nav.className = 'site-nav';
-      nav.setAttribute('aria-label', 'Päävalikko');
-      nav.innerHTML = '<div class="site-nav-inner">'
-        + '<a href="index.html">Koti</a>'
-        + '<a href="yopyminen.html">Yöpyminen</a>'
-        + '<a href="maakunnat.html">Paikkakunnat</a>'
-        + '</div>';
-      document.body.appendChild(nav);
-    }
-
-    // Aiemmat kuntasivut käyttävät tekstin edessä myös emoji-kuvakkeita.
-    // Muutetaan vain suorat tekstilinkit yhtenäisiksi, ei kosketa sisäisiin elementteihin.
-    nav.querySelectorAll('.site-nav-inner a').forEach(link => {
-      if (!link.children.length) {
-        const dest = link.getAttribute('href') || '';
-        if (/(^|\/)index\.html$/.test(dest)) link.textContent = 'Koti';
-        else if (/yopyminen\.html$/.test(dest)) link.textContent = 'Yöpyminen';
-        else if (/maakunnat\.html$/.test(dest)) link.textContent = 'Paikkakunnat';
-      }
-    });
-
-    const filename = decodeURIComponent(location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    let selected = 'maakunnat.html';
-    if (filename === 'index.html' || filename === '') selected = 'index.html';
-    else if (/^(yopyminen|leirintaalueet|matkaparkit|karavaanari)([.-]|$)/.test(filename)) selected = 'yopyminen.html';
-    nav.querySelectorAll('a').forEach(link => {
-      link.removeAttribute('aria-current');
-      if (link.getAttribute('href') === selected) link.setAttribute('aria-current', 'page');
-    });
-
-    // Omavaraiset tyylit: toimivat myös, vaikka vanha navigation-v191.css puuttuisi.
-    // Asetetaan viimeiseksi, jotta vanhat mobiilityylit eivät peitä valikkoa.
-    if (!document.getElementById('site-nav-fix-v241')) {
-      const style = document.createElement('style');
-      style.id = 'site-nav-fix-v241';
-      style.textContent = `
-        html { scroll-padding-bottom: 115px; }
-        body { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)) !important; }
-        .site-nav {
-          display: block !important; visibility: visible !important; opacity: 1 !important;
-          position: fixed !important; inset: auto 0 0 !important; z-index: 9999 !important;
-          width: 100% !important; transform: none !important;
-          margin: 0 !important; box-sizing: border-box !important;
-          background: #fff !important; border-top: 1px solid #e3e8e5 !important;
-          padding: 6px 10px calc(6px + env(safe-area-inset-bottom, 0px)) !important;
-          box-shadow: 0 -3px 14px rgba(11,35,69,.10) !important;
-        }
-        .site-nav .site-nav-inner {
-          display: grid !important; grid-template-columns: repeat(3, minmax(0,1fr)) !important;
-          gap: 6px !important; max-width: 600px !important;
-          margin: 0 auto !important; box-sizing: border-box !important;
-        }
-        .site-nav .site-nav-inner > a {
-          display: flex !important; flex-direction: column !important;
-          align-items: center !important; justify-content: center !important; gap: 3px !important;
-          min-width: 0 !important; min-height: 72px !important;
-          box-sizing: border-box !important; padding: 6px 2px !important;
-          background: transparent !important; border: 0 !important;
-          border-radius: 18px !important; text-decoration: none !important;
-          color: #0b2345 !important; font: 650 12.5px/1.25 system-ui,sans-serif !important;
-          text-align: center !important;
-        }
-        .site-nav .site-nav-inner > a::before {
-          content: '' !important; display: block !important;
-          width: 34px !important; height: 32px !important;
-          -webkit-mask: none !important; mask: none !important;
-          background: transparent !important;
-          font: 27px/32px system-ui,sans-serif !important;
-        }
-        .site-nav .site-nav-inner > a[href$="index.html"]::before { content: '⌂' !important; font-size: 35px !important; }
-        .site-nav .site-nav-inner > a[href$="yopyminen.html"]::before { content: '🚐' !important; }
-        .site-nav .site-nav-inner > a[href$="maakunnat.html"]::before { content: '📍' !important; }
-        .site-nav .site-nav-inner > a[aria-current="page"] {
-          background: #ffeadf !important; color: #0b2345 !important;
-        }
-        .site-nav .site-nav-inner > a:focus-visible {
-          outline: 3px solid #f87913 !important; outline-offset: 1px !important;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  };
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', showPrimaryNavigation);
-  } else {
-    showPrimaryNavigation();
-  }
-})();
