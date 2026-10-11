@@ -1,4 +1,4 @@
-MATKAILU SUOMESSA – v241 ASIKKALA JA VÄÄKSY
+MATKAILU SUOMESSA – v241–v242 ASIKKALA JA VÄÄKSY
 
 OSAPÄIVITYS – ei koko sovellus. Vaatii aiemmat v238–v240-päivitykset.
 1. Tee tarvittaessa kopio nykyisestä sovelluskansiosta.
@@ -8,7 +8,7 @@ OSAPÄIVITYS – ei koko sovellus. Vaatii aiemmat v238–v240-päivitykset.
 5. Tarkista Asikkala, Vääksy, Kalkkinen, Pulkkilanharju, Urajärvi ja Vesivehmaa etusivun hausta.
 
 MUUTOKSET
-- Asikkalan uusi kuntasivu sekä 44 omaa Näe ja koe -kohdesivua
+- Asikkalan uusi kuntasivu sekä 41 ajantasaista Näe ja koe -kohdetta (v242 korjaus)
 - Asukasluku 7 841 (31.12.2025) ja kunnan vaakuna
 - Kuusi yöpymispaikkaa palveluehdoilla ja sesonkihuomioilla
 - Vääksy näkyy kuntakeskuksena Asikkalan sivulle; Kanava-kohde erillään

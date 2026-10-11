@@ -1,0 +1,23 @@
+MATKAILU SUOMESSA – v242 ASIKKALAN AJANTASAISTUS (11.10.2026)
+
+Asenna v241:n tai sitä uudemman nykyisen sovelluskansion päälle.
+1. Tee varmuuskopio nykyisestä sovelluskansiostasi.
+2. Pura ZIP nykyisen sovelluksen juureen (index.html:n viereen).
+3. Korvaa samannimiset tiedostot. Älä poista muita kaupunkien sivuja.
+4. Päivitä selaimen välimuisti tai lataa sivu uudelleen.
+
+POISTETTU ASIKKALAN AKTIIVISISTA KOHDELISTOISTA JA HAUSTA:
+- Kanavan Kunkku: samaa osoitetta Kanavatie 17 palvelee Kanavan Kruunu (toiminut vuodesta 2023).
+- Sisustuskahvila Kardemumma: ei enää ajantasainen kahvila/puoti.
+- Vääksyn Myllyn puoti: ei enää kuluttajille avoinna olevaksi ilmoitettu puoti; mylly jatkaa jauhojen valmistusta.
+
+Kanavan Kruunu säilyy aktiivisena ja sen linkki vie omille nykyisille verkkosivuille.
+Näe ja koe -kohdeluku 44 -> 41. Kaikki muut sivut ja kuusi yöpymispaikkaa säilyvät.
+Vanhat kolmen kohteen HTML-linkit ohjataan uusille sivuille, jotta aiempien asennusten vanhat kirjanmerkit eivät vie virheelliseen korttiin.
+
+VERIFIOIDUT LÄHTEET:
+https://www.kanavankruunu.fi/tarinamme
+https://www.kanavankruunu.fi/
+https://vaaksynmylly.fi/
+https://asikkala.fi/kategoria/ravintola/
+https://asikkala.fi/kategoria/ostosmahdollisuudet/
