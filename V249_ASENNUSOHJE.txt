@@ -1,0 +1,33 @@
+MATKAILU SUOMESSA v249 – MAAKUNTIEN JA KUNTIEN SUORAT LINKIT
+
+Tämä on osapäivitys nykyiseen sivustoon. Se sisältää myös viimeisimmän v248
+Lappi/Kittilä/Levi/Ylläs -paketin sekä v247 Kouvola/Repovesi -sivut.
+
+ASENNUS:
+1. Säilytä alkuperäisestä sivustosta varmuuskopio.
+2. Pura kaikki tämän ZIPin tiedostot nykyiseen sivustokansioon,
+   jossa index.html sijaitsee. Korvaa samannimiset tiedostot.
+3. ÄLÄ poista muita ennestään olevia tiedostoja!
+4. Julkaise muutokset palvelimelle ja lataa sivu uudelleen.
+5. Älä poista selaimen sivustotietoja: Omat matkat -merkinnät tallentuvat niihin.
+
+KORJATTU:
+• Kymenlaakso-linkki kartalla, luettelossa ja haussa avaa nyt kymenlaakso.html.
+• Kymenlaakson sivulta suoraan Kouvolaan, Kouvolasta Repovedelle.
+• Maakuntasivulle lisätty suora Kouvolan ja Repoveden valinta.
+• Kouvolan tieto palautettu v248:n ylikirjoittamiin maakunta- ja kuntahakuihin.
+• Kouvolan nähtävyys- ja yöpymistieto palautettu sovelluksen hakuihin.
+• Kymenlaakson kuusi kuntaa listattu; keskeneräisiä ei linkitetä puuttuviin sivuihin.
+• Kouvolan takaisin-linkki vie nyt Kymenlaaksoon.
+
+TESTAA:
+Paikkakunnat → Kymenlaakso → Kouvola → Repovesi.
+Paikkakunnat → kirjoita hakuun Kouvola → avaa kuntasivu.
+Paikkakunnat → valitse Kymenlaakso → valitse Kouvola.
+
+Huom: Kotka, Hamina, Pyhtää, Virolahti ja Miehikkälä näkyvät Kymenlaakson
+kuntalistassa, mutta niiden kuntasivuja ei vielä ole tehty.
+Muiden alueiden keskeneräisiä maakuntasivuja ei tällä päivityksellä luoda.
+
+Kymenlaakson kuntajako: https://www.kymenlaakso.fi/paatoksenteko-ja-toiminta/kunnat-ja-organisaatio
+Päivitetty 11.10.2026. Selaintestaus verkkopalvelimella ei sisälly tarkistukseen.
