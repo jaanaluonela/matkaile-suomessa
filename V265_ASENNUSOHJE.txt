@@ -1,0 +1,67 @@
+MATKAILU SUOMESSA – v265: YMPÄRIVUOTISET LEIRINTÄALUEET
+==========================================================
+Päivitetty 11.10.2026. Päivitys aiemman v264:n päälle.
+
+UUTTA
+- 23 tarkistettua, ympärivuotista caravan-/leirintäkohdetta Keski-Suomessa ja
+  pohjoisen maakunnissa (yhteensä 39 tietokohdetta kahdessa tietolisäosassa).
+- Pidämme aiemmat 16 v264-kohdetta, vanhat sivut ja kaikki kuntasisällöt.
+- Kuntavalikossa esimerkiksi Jyväskylän, Äänekosken, Kuopion, Sotkamon,
+  Ranuan ja Kittilän uudet camping-kohteet näkyvät oikeissa maakunnissa.
+- Vuosi-/talvikauden rajat, jäsenyysehdot ja varaustarve merkitty kuvauksiin.
+- Rasti "Näytä vain ympäri vuoden avoinna olevat" toimii uusilla kohteilla.
+- Tietojen yhdistäminen pyrkii estämään kaksoiskohteet.
+
+ASENNUS GITHUB PAGESIIN
+1. Pura ZIP.
+2. Lataa sen yhdeksän tiedostoa GitHub-sivuston projektin juureen
+   samalle tasolle kuin index.html, caravan-data.js ja aiemmat tiedostot.
+3. Korvaa leirintaalueet.html, yopyminen.html, leirintakohde-v264.html;
+   aiemmat v263 CSS ja JS sekä v264 datatiedosto sisältyvät varmistukseksi.
+4. Lisää uudet leirinta-data-v265.js ja leirintakohde-v265.html.
+5. ÄLÄ poista vanhoja caravan-data.js, app.js, kuntasivuja tai muita tiedostoja.
+6. Github Pagesin päivityttyä päivitä leirintaalueet.html välimuistin ohi (Ctrl+F5).
+7. Valitse maakunta Keski-Suomi, jätä "Näytä vain ympäri vuoden ..." rastitettu:
+   Lintulahti, Hietasaari, Riihivuori ja Niemenharju tulevat näkyviin,
+   samoin aiemmin v264:ään lisätty Laajis Urban Caravan.
+8. Vastaavasti Lappi: Ranua, Salla, Sodankylä, Kittilä, Inari, Tornio ja Simo.
+
+HUOMIO
+- Talvella osa alueista on OMATOIMIALUEITA. Tarkista soittamalla tai verkkosivulta.
+- Hietajärvi: loka–huhtikuussa vain SF-Caravan-jäsenille.
+- Tornio: 1.10. alkaen ennakkovaraus sähköpaikkaan.
+- Muumari: talvikauden lyhyen oleskelun saatavuus kannattaa tarkistaa.
+- Ranualla ympärivuotinen on CAMPING ELÄINPUISTO. Camping Ranuanjärvi
+  (Leirintäalueentie 5) on auki vain kesäisin ja se jätettiin ulkopuolelle.
+- Rovaniemen Ounaskoski ilmoittaa poikkeussulun 1.10.–22.11.2026:
+  EI merkitty ympärivuotiseksi tämän päivityksen perusteella.
+- Vaala / Manamansalo Camping ilmoittaa poikkeussulun 28.9.–15.10.2026:
+  EI merkitty ympärivuotiseksi tämän päivityksen perusteella.
+- Peurungan matkaparkki on MATKAPARKKI, ei leirintäalue. Se jätetty tähän
+  leirintäaluepäivitykseen kuuluvien kohteiden ulkopuolelle.
+- Tämä paketti ei päivity automaattisesti internetissä: se pitää viedä GitHubiin.
+
+LÄHTEET – 23 uutta kohdetta
+Keski-Suomi / Äänekoski / SF-Caravan Lintulahti: https://www.kskaravaanarit.fi/alueet/lintulahti/
+Keski-Suomi / Uurainen / SF-Caravan Hietasaari: https://www.kskaravaanarit.fi/hietasaari-tanaan/
+Keski-Suomi / Muurame / Riihivuori Caravan: https://www.riihivuorenlomakyla.fi/riihivuori-caravan/
+Keski-Suomi / Pihtipudas / Niemenharjun Matkailukeskus – Caravan: https://niemenharju.fi/
+Pohjois-Savo / Kuopio / SF-Caravan Alatalo: https://www.sfc-kuopionseutu.net/
+Pohjois-Savo / Vieremä / SF-Caravan Hiilimutka: https://hiilimutka.fi/
+Pohjois-Savo / Joroinen / SF-Caravan Jokiranta: https://www.sfcjokiranta.fi/
+Pohjois-Karjala / Joensuu / SFC-Hietajärvi: https://www.sfc-hietajarvi.fi/hinnasto/
+Etelä-Pohjanmaa / Seinäjoki / Caravan-Kalajärvi: https://www.caravan-kalajarvi.fi/
+Etelä-Pohjanmaa / Isokyrö / SFC-Lukkuhaka: https://www.lukkuhaka.fi/
+Pohjanmaa / Pedersöre / SFC-Sexsjö: https://sexsjo.fi/fi/tapahtumat-ja-hinnasto
+Kainuu / Sotkamo / SF-Caravan Kattivankkuri: https://www.kattivankkuri.fi/
+Pohjois-Pohjanmaa / Kalajoki / SFC-Sautinkari: https://www.sautinkari.info/sfc-alue.html
+Pohjois-Pohjanmaa / Pyhäjärvi / Emolahti Camping-Beach: https://www.emolahti.com/www/leirintaalue/
+Pohjois-Pohjanmaa / Taivalkoski / Kylmäluoman Retkeilykeskus – Camping: https://hossa-kylmaluoma.fi/leirintaalueet-ja-mokkivuokraus-ympari-vuoden/
+Lappi / Simo / SFC-Hopeaperä: https://www.sfc-perapohjola.com/
+Lappi / Ranua / Ranua Resort – Camping Eläinpuisto: https://ranuaresort.com/majoitus/camping-elainpuisto/
+Lappi / Inari / Ivalo River Camping: https://camping.fi/leirintaalueet-ja-lomakylat/ivalo-river-camping/
+Lappi / Tornio / Camping Tornio: https://www.campingtornio.com/
+Lappi / Salla / Sallainen Caravan & Cottages: https://www.sallaiset.fi/
+Lappi / Kittilä / Levilehto Caravan: https://www.levilehto.fi/karavaanarit
+Lappi / Kittilä / Muumarin Caravan – Levi: https://www.levi.fi/palvelut/muumarin-asuntovaunualue-myos-leirintaalue/
+Lappi / Sodankylä / Camping Nilimella: https://nilimella.fi/leirintaalue/
