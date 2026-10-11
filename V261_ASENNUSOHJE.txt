@@ -1,0 +1,37 @@
+MATKAILU SUOMESSA v261 – KYMENLAAKSON KUNNAT
+==============================================
+Päivitetty 11.10.2026
+
+ASENNUS
+1. Varmista, että v260-päivitys ja sitä edeltävät päivitykset ovat asennettuina.
+2. Pura tämä ZIP-paketti.
+3. Lisää kaikki tiedostot GitHub-sivuston projektin juureen.
+4. Korvaa ainoastaan samannimiset tiedostot (index.html ja maakunnat.html).
+5. ÄLÄ poista projektin muita tiedostoja. Kouvola ja Kotka säilyvät aiemmista versioista.
+6. Odota GitHub Pagesin julkaisua ja päivitä sivu tarvittaessa selaimessa.
+
+SISÄLTÖ (8 TIEDOSTOA + TÄMÄ OHJE)
+- index.html, maakunnat.html: lisäävät uuden hakumoduulin rikkomatta aiempia.
+- v261-kymenlaakso.js: rekisteröi kuntasivut ja hakusanat.
+- kymenlaakso.html: kaikkien kuuden kunnan maakuntaopas.
+- hamina.html, pyhtaa.html, virolahti.html, miehikkala.html: neljä uutta kuntasivua.
+
+KOTKA JA KOUVOLA
+Näihin on jo laajemmat oppaat aiemmissa päivityksissä. Ne toimivat linkkeinä ja säilyvät ennallaan.
+
+YÖPYMINEN
+Hamina: Camping Pitkäthiekat, Mustaniemen Leirintä, Purho Caravan.
+Virolahti: Vaalimaa Camping, Hurpun Tila.
+Pyhtää: Kaunissaaren telttailu (ei matkailuautopaikka).
+Miehikkälä: varausmajoitusta, ei tässä päivityksessä vahvistettua caravan-aluetta.
+
+PERUSTIEDOT
+Kymenlaakso: Hamina, Kotka, Kouvola, Miehikkälä, Pyhtää, Virolahti.
+Iitti kuuluu Päijät-Hämeeseen (1.1.2021 alkaen).
+Uusien kuntien asukasluvut ovat Tilastokeskuksen vuoden 2025 lopun tietoja.
+Uusien kuntien vaakunoissa käytetään Wikimedia Commonsin Public Domain -kuvia verkosta.
+
+TESTAA
+Paikkakunnat → Kymenlaakso → Hamina, Kotka, Kouvola, Miehikkälä, Pyhtää, Virolahti.
+Hae etusivulta myös: Kaunissaari, Valkmusa, Vaalimaa, Tervasaari, Salpapolku.
+Vanhojen laajojen kuntasivujen tulee edelleen avautua.
