@@ -1,0 +1,26 @@
+MATKAILU SUOMESSA – v263 ETELÄ-SAVO
+================================
+Päivitetty 11.10.2026
+
+ASENNUS v262:N PÄÄLLE
+1. Pura tämä ZIP.
+2. Lataa sen sisältämät tiedostot GitHub-projektin juureen (ei uuteen alikansioon).
+3. Korvaa samannimiset index.html ja maakunnat.html. ÄLÄ poista muita aiempia tiedostoja.
+4. Odota GitHub Pages -julkaisua; päivitä selain tarvittaessa.
+
+SISÄLTÖ
+- 11 uutta kuntasivua: Enonkoski, Hirvensalmi, Juva, Kangasniemi, Mikkeli, Mäntyharju, Pieksämäki, Puumala, Rantasalmi, Savonlinna, Sulkava.
+- etela-savo.html: kaikkien kuntien maakuntaopas.
+- v263-etela-savo.js: kuntasivulinkit ja kohteiden hakusanat.
+- index.html ja maakunnat.html: uusimman moduulin lataus muiden aiempien rinnalle.
+
+VÄKILUVUT: Tilastokeskus 31.12.2025, kuntajaolla 1.1.2026. Yhteensä 128 144.
+VAAKUNAT: Wikimedia Commonsin verkkokuvat (vaativat verkkoyhteyden).
+PERTUNMAA: ei enää erillinen kunta, vaan Mäntyharjun osa 1.1.2025 lähtien.
+VANHAT ALUEET: Punkaharju/Kerimäki → Savonlinna, Ristiina/Anttola/Haukivuori → Mikkeli.
+MATKAILUAJONEUVOT: Näytetään vain erikseen vahvistetut alueet; vesiretkien telttapaikat ja satamat eivät ole matkaparkkeja.
+
+TESTAA
+Paikkakunnat → Etelä-Savo → 11 kuntaa, Mikkeli ja Savonlinna.
+Haku: Pertunmaa, Punkaharju, Kerimäki, Ristiina, Olavinlinna, Visulahti, Etuniemi, Kolovesi.
+Tarkista myös vanhat eteläkarjalaiset ja kymenlaaksolaiset sivut.
