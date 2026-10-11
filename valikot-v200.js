@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Heinola:'heinola.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Heinola:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Lahti:'lahti.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Lahti:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Porvoo:'porvoo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Porvoo:'Uusimaa'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa:'loviisa.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Loviisa:'Uusimaa'});
@@ -76,6 +77,9 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Vierumäki',meta:'Heinola · taajama',url:'heinola.html#alueet',rank:1,aliases:['Suomen Urheiluopisto','Vierumäen urheiluopisto']},
+    {name:'Jyränkö',meta:'Heinola · kaupunginosa',url:'heinola.html#alueet',rank:1},
+    {name:'Paistjärvi',meta:'Heinola · kylä',url:'heinola.html#retket',rank:1,aliases:['Pirunkirkko Heinola','Sonnanen']},
     {name:'Nastola', meta:'Lahti · kaupunginosa', url:'lahti.html#alueet', rank:1, aliases:['Nastolan leirintäalue','Kangaslampi Nastola']},
     {name:'Saariston rengastie', meta:'Varsinais-Suomi · matkailureitti', url:'saariston-rengastie.html', rank:2, aliases:['Turun rengastie','Turun saariston rengastie','Saaristotie','Saariston suuri rengastie']},
     {name:'Pieni rengastie', meta:'Turun saaristo · matkailureitti', url:'saariston-rengastie.html#pieni', rank:2, aliases:['Saariston pieni rengastie','Östern','Seili-Hanka']},

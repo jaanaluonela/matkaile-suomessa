@@ -1,0 +1,18 @@
+Matkailu Suomessa – v235 HEINOLA
+
+ASENNUS
+1. Säilytä nykyinen Matkailu Suomessa -kansio, johon on jo asennettu v234.
+2. Pura tämä ZIP ja kopioi kaikki tiedostot sovelluskansioon index.html:n viereen.
+3. Korvaa samannimiset tiedostot. Älä poista mitään muita sivuja.
+4. Päivitä selaimen välimuisti Ctrl+F5.
+5. Hae etusivulta Heinola, Heino, Vierumäki, Paistjärvi, Jyränkö.
+6. Avaa heinola.html, testaa helmien ja caravan-kohteiden karttalinkit.
+
+SISÄLTÖ
+- Heinolan oma kuntasivu vaakunoineen ja asukaslukuineen: 17 694, 31.12.2025.
+- 30 matkailukohdetta, jokaiselle oma HTML-esittelysivu.
+- 3 varattavaa leirintä- tai matkaparkkikohdetta Heinolan kaupungissa.
+- Yhteisten hakujen JS-päivitykset sisältävät kaikki v234-päivityksen tiedot.
+- Lahti, Porvoo, Loviisa ja Saariston rengastie säilyvät.
+
+HUOM! Käytetyt hinnat, tapahtuma-aikataulut ja kausipalvelut voivat muuttua.
