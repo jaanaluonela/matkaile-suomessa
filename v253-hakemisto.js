@@ -48,6 +48,7 @@ function render(){
   const grid=document.createElement('div');grid.className='v253-towns';
   matches.forEach(name=>grid.append(createTown(name,region)));
   nearbyAliases.forEach(item=>grid.append(createTown(item.name,region,item)));
+  const guides=window.msRegionGuides254||{};if(guides[region]){const more=document.createElement('a');more.href=guides[region];more.className='v254-more';more.textContent='⭐ Tutustu maakunnan matkailukohteisiin →';d.append(more)}
   d.append(grid);summary.addEventListener('click',()=>{if(d.open)expanded.delete(region);else expanded.add(region)});host.append(d);
  }
  if(!visible){const empty=document.createElement('p');empty.className='v253-empty';empty.textContent=mode==='favorites'?'Suosikkeja ei vielä löytynyt. Voit tallentaa kunnan sydänpainikkeella.':'Ei tuloksia. Kokeile toista hakusanaa tai maakuntaa.';host.append(empty)}

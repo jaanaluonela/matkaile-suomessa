@@ -34,3 +34,5 @@
 .site-nav{z-index:50}
 @media(max-width:490px){.v253-wrap{padding:12px 11px calc(118px + env(safe-area-inset-bottom))}.v253-hero{padding:21px 16px}.v253-search{padding:14px}.v253-region>summary{min-height:64px;padding:11px 12px}.v253-towns{padding:9px;gap:6px}.v253-town>a{font-size:14px;padding:10px 1px 10px 9px}.v253-town .v253-heart{width:32px;font-size:20px}.v253-two{gap:8px}}
 @media(max-width:340px){.v253-towns{grid-template-columns:1fr}.v253-two{grid-template-columns:1fr}}
+
+.v254-more{display:block;background:#eaf4ef;border-radius:12px;margin:9px 6px 12px;padding:12px;color:#1b664e;font-weight:800;text-decoration:none;}

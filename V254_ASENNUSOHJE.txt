@@ -1,0 +1,26 @@
+MATKAILU SUOMESSA – v254, 11.10.2026
+
+LÄHTEET JA SISÄLLÖN RAJAUS
+- Vaasan seutu ja Merenkurkku: https://www.vaasa.fi/koe-ja-nae/merenkurkku/
+- Mustasaaren Maailmanperintöportti: https://www.vaasa.fi/koe-ja-nae/merenkurkku/maailmanperintoportti/
+- Pietarsaari: https://visitpietarsaari.fi/
+- Neristan, Tankar ja Kokkola Camping: https://www.visitkokkola.fi/
+- Oulun nähtävyydet: https://visitoulu.fi/ ; Nallikari: https://nallikari.fi/en/camping/
+- Kalajoki: https://visitkalajoki.fi/ ; Top Camping: https://topcampingkalajoki.fi/
+- Ylivieskan kotiseutureitit: https://www.ylivieska.fi/vapaa-ajan-palvelut/kulttuuripalvelut/kotiseutureitit/
+- Kuusamo, Oulanka ja Karhunkierros: https://www.ruka.fi/
+- Inarin Siida: https://siida.fi/ ; Inarin matkailu: https://visitinari.fi/
+- Kemijärvi: https://visitkemijarvi.fi/
+- Lappeenranta: https://visitlappeenranta.fi/
+- Imatran kulttuurireitit: https://www.imatra.fi/
+- Caravan-palvelujen vertailulähde: https://www.camping.fi/
+
+Kaikkien 308 kunnan perustiedot säilyvät v253-hakemistossa. Tässä paketissa on '+str(len(D))+' uutta kuntien matkailusivua. Osa pienempien kuntien kuvauksista on tarkoituksella yleisluontoisia; yksittäisiä ravintoloita tai hintatietoja ei ole keksitty. Tarkista palveluntarjoajien tiedot ennen matkaa.
+
+ASENNUS
+1) Pura v254 ZIP.
+2) Kopioi paketin uudet ja muokatut tiedostot sivustosi hakemiston JUUREEN.
+3) Säilytä kaikki sivustosi muut aikaisemmat tiedostot: mm. kuvat, caravan-data.js, kunnat-v200.js, valikot-v198.css ja jo tehdyt matkailusivut.
+4) GitHubissa varmista tiedostojen tallentuminen samaan hakemistoon kuin index.html.
+5) Testaa etusivulta maakunnat ja uudet kunnat sekä Omat matkat.
+6) Tärkeää: Omat matkat ja kuvat tallentuvat nykyisen toteutuksen mukaan selaimen paikalliseen tallennustilaan, eivät GitHub-tiedostoon. Älä tyhjennä selaimen sivustotietoja.

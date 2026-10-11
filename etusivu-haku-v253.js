@@ -13,7 +13,7 @@ const start=()=>{
   const available=regions[r]||[];
   available.forEach(n=>{const m=window.msTownUrl253(n);const o=new Option(n+(m.ready?' ✓':''),m.url);town.add(o)});
   town.disabled=!r;town.value='';open.hidden=true;
-  regional.href=r?'maakunnat.html?maakunta='+encodeURIComponent(r):'maakunnat.html';
+  regional.href=(window.msRegionGuides254||{})[r]|| (r?'maakunnat.html?maakunta='+encodeURIComponent(r):'maakunnat.html');
   regional.firstChild.textContent=r?'Näytä '+r+' · kaikki kunnat ':'Kaikki maakunnat ';
   if(r){
     const p=document.createElement('p');p.textContent=r+' · '+available.length+' kuntaa. ✓ = matkailuopas avattavissa. Muut kunnat avautuvat perustietokorttina.';links.append(p);
