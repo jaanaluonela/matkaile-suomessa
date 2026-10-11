@@ -1,0 +1,20 @@
+Matkailu Suomessa – v239: Näe ja koe -otsikkopäivitys
+===================================================
+
+Päivitys vaihtaa kuntasivujen "Helmet" / "Paikkakunnan helmet" -otsikon muotoon "Näe ja koe".
+
+Mukana:
+- Loviisan, Porvoon, Lahden, Heinolan, Kuhmon, Suomussalmen ja Kuusamon kuntasivut
+- app.js: vanhempienkin kuntasivujen automaattisesti luotava osio
+
+Sisältö, kohdekorttien lukumäärät, karttalinkit, tunnisteet, kohdeluettelot ja muut sivut säilyvät.
+Osiolle jätetään tekninen id="helmet", jotta aikaisemmat sivunsisäiset linkit toimivat.
+Myös "Selaa helmiä" -toimintalinkkien tekstit on selkeytetty; linkkien osoitteet pysyvät ennallaan.
+
+ASENNUS
+1. Ota halutessasi varmuuskopio nykyisestä sovelluskansiosta.
+2. Pura tämä ZIP samaan kansioon aiemmin asennettujen v238-tiedostojen kanssa.
+3. Korvaa vain samannimiset tiedostot. Älä poista muita tiedostoja.
+4. Päivitä sivu. Mobiiliselaimessa voi tarvita sivun uudelleenlatauksen tai välimuistin tyhjennyksen.
+
+Tämä on vain muutospaketti, ei koko sovelluksen asennuspaketti.
