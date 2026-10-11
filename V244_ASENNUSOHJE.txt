@@ -1,0 +1,16 @@
+Matkailu Suomessa – v244 Valikot yhdelle riville (11.10.2026)
+
+Tämä on osapäivitys nykyiseen sovellukseen.
+1. Ota varmuuskopio nykyisestä sovelluskansiosta.
+2. Pura ZIPin kaikki tiedostot nykyiseen sovelluskansioon ja korvaa samannimiset tiedostot. Älä poista muita tiedostoja.
+3. Jos käytät GitHub Pagesia, lataa tiedostot samaan kansioon kuin nykyinen index.html. Paketti ei julkaise niitä automaattisesti.
+4. Päivitä selain Ctrl+F5. Puhelimella sulje sivu ja avaa uudelleen.
+
+Muutokset:
+- Yhteinen alavalikko: Koti, Yöpyminen ja Paikkakunnat samalla rivillä.
+- Omat ei enää putoa toiselle riville. Matkapäiväkirjaan pääsee etusivun Omat matkat -kortista.
+- Yöpymisen kuvake näkyy myös Paikkakunnat-sivulla ja linkki vie Yöpyminen-sivulle.
+- Yöpymisen kolme kohdelajivalintaa ovat yhdellä rivillä sekä puhelimella että tietokoneella.
+- Päivitetyillä sivuilla on uusi tyylitiedostojen versiotunnus välimuistin päivitystä varten.
+
+Mukana ovat myös v243:n sivut ja tyylit. Muut paikkakunta- ja kohdetiedostot säilyvät ennallaan.
