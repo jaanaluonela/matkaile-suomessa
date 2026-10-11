@@ -1,11 +1,27 @@
-<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Omat matkat – Matkailu Suomessa</title>
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Omat matkat ja kuvakansio – Matkailu Suomessa</title>
 <style>
 *{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#f7f7f2;color:#294436;margin:0}main{max-width:780px;margin:auto;padding:18px 18px 85px}h1{font-size:1.8rem}.card{background:#fff;border:1px solid #e2e8dc;border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 3px 15px #243a2110}label{display:block;font-weight:650;margin:12px 0 5px}input,textarea{width:100%;font:inherit;border:1px solid #afbeaf;border-radius:10px;padding:11px}textarea{min-height:110px}button,.map{font:inherit;border:0;border-radius:10px;background:#28775a;color:white;padding:11px 15px;cursor:pointer;text-decoration:none;display:inline-block}.quiet{background:#eaf2ea;color:#285b42}.danger{background:#fae8e4;color:#893e30}.row{display:flex;gap:10px;flex-wrap:wrap}.row>div{flex:1;min-width:130px}.hidden{display:none}.muted{color:#667769}.trip{display:block;width:100%;text-align:left;margin:8px 0;background:white;color:#294436;border:1px solid #dce5da}.stop{border-left:3px solid #91c4a4;margin-left:8px;padding:9px 16px}.stop button{margin:5px 5px 0 0}.photos{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:14px}.photo{min-width:0;margin:0;border:1px solid #e2e8dc;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 2px 10px #243a2110}.photo img{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain;background:#f3f5f2}.photo-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px}.photo-count{font-size:.9rem;font-weight:650;color:#617565}.photo button{flex-shrink:0;border:1px solid #ebceca;background:#fff7f5;color:#853c33;padding:7px 12px;min-height:42px;font-size:.9rem}.photo-help{margin:0;color:#667769;font-size:.9rem;line-height:1.5}@media(min-width:700px){.photos{grid-template-columns:repeat(2,minmax(0,1fr))}.photo img{max-height:420px}}nav{position:fixed;bottom:0;background:white;border-top:1px solid #ddd;width:100%;display:flex;justify-content:center;gap:24px;padding:12px}nav a,a{color:#28664e} .status-visited{display:inline-block;padding:3px 8px;background:#e5f3e9;color:#17634f;border-radius:100px;font-size:.78rem;font-weight:750;margin-top:6px}
 .trip{padding:0;overflow:hidden}.trip-cover{display:block;width:100%;height:190px;object-fit:cover}.trip-info{display:block;padding:15px}.trip-title{display:block;font-size:1.1rem}.trip-meta{display:block;margin-top:5px;font-size:.86rem;color:#667769}
 main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-height:46px}button:focus-visible,a:focus-visible,summary:focus-visible,.photo-add:focus-visible{outline:3px solid #db922d;outline-offset:3px}.editor-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f7f7f2ee;padding:10px 0}.editor-bar p{flex:1;font-size:13px;text-align:center;margin:0}.editor-bar button{white-space:nowrap;padding:11px 12px}.card h2{font-size:1.2rem}.date-row{display:flex;align-items:end;gap:10px}.date-row>div{flex:1;min-width:0}.optional{margin-top:16px}.optional summary{cursor:pointer;font-weight:650;min-height:44px;padding:9px 0}.photo-add{display:block;border:2px dashed #8ebca3;background:#eff7f0;color:#24543d;border-radius:14px;padding:18px;text-align:center;cursor:pointer;font-weight:700}#files{font-size:14px;margin-top:8px}.rating{padding:0;margin:22px 0 4px;border:0}.rating legend{font-weight:650;margin-bottom:8px}.stars{display:flex;gap:5px;margin:0 0 8px}.stars button{padding:0;background:transparent;color:#9a691f;font-size:34px;width:44px;min-height:48px}.rating .quiet{font-size:13px;margin-left:6px;padding:8px}.storage-note{font-size:13px;line-height:1.5}.status-error{color:#943e2e!important}#photo-status{font-size:13px}.photos:empty{display:none}
 @media(max-width:400px){main{padding-left:12px;padding-right:12px}.card{padding:15px}.editor-bar{flex-wrap:wrap}.editor-bar p{order:3;flex-basis:100%;text-align:left}.stars{gap:2px}}
+/* v252: tiivis vaakasuunnassa selattava matkakohtainen kuvakansio */
+.photo-gallery{margin:12px 0;border:1px solid #dce6dc;border-radius:15px;background:#f8faf7;overflow:hidden}
+.cover-frame{position:relative;width:100%;height:clamp(175px,42vw,270px);display:flex;align-items:center;justify-content:center;background:#e9eee8;overflow:hidden;touch-action:pan-y}
+.cover-frame img{display:block;width:100%;height:100%;object-fit:contain}.cover-frame img.hidden{display:none}
+.cover-placeholder{margin:0;padding:16px;text-align:center;line-height:1.6;color:#617565;font-size:.94rem;max-width:290px}
+.cover-badge{position:absolute;top:10px;left:10px;padding:5px 10px;border-radius:999px;background:#fffdf6e8;color:#285b42;font-size:.78rem;font-weight:750}
+.cover-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:48px;min-height:48px;padding:0;border-radius:10px;background:#f7fcf1dd;color:#1c6047;font-size:30px;border:1px solid #cad9cf}
+.cover-arrow.prev{left:8px}.cover-arrow.next{right:8px}.cover-arrow:disabled{opacity:.38;cursor:default}
+.photo-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 12px 4px}.photo-controls small{color:#617565;font-size:.84rem;flex:1;white-space:nowrap}.photo-controls button{font-size:.83rem;padding:7px 9px;min-height:42px}.photo-controls button:disabled{opacity:.45;cursor:default}.photo-controls #delete-photo{background:#fae8e4;color:#893e30}.photo-controls #set-cover{background:#e5f3e9;color:#1d624c}
+.thumbs{display:flex;gap:9px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding:10px 12px 14px;scrollbar-width:thin}
+.thumb{position:relative;display:block;flex:0 0 78px;width:78px;height:78px;min-height:78px;padding:0;overflow:hidden;border-radius:10px;border:3px solid transparent;background:#e6eee7;scroll-snap-align:start}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}.thumb.selected{border-color:#28775a;box-shadow:0 0 0 1px #fff inset}.thumb-cover{position:absolute;left:0;top:0;background:#1e634ac9;color:white;font-size:12px;padding:2px 5px;border-bottom-right-radius:6px}
+.photo-note-box{padding:0 12px 7px}.photo-note-box summary{cursor:pointer;padding:7px 0;color:#285b42;font-size:.88rem;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.photo-note-box label{font-size:.89rem;margin:5px 0}.photo-note-box textarea{width:100%;height:67px;min-height:67px;resize:vertical;background:white;padding:9px 11px;font-size:.93rem}.photo-note-box small{display:block;min-height:19px;font-size:.77rem;color:#617565;margin-top:4px}.photo-help{margin:0 0 8px}
+.photo-add{padding:12px;margin-top:12px}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:400px){.cover-frame{height:185px}.thumb{flex-basis:64px;width:64px;height:64px;min-height:64px}.photo-controls{gap:5px}.photo-controls button{padding:6px 8px}.photo-gallery{margin:10px 0}}
+
 </style><link rel="stylesheet" href="navigation-v191.css?v=244"><link rel="stylesheet" href="v244.css?v=244">
-</head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Avaa kohde, lisää kuva ja kirjoita muisto. Muutokset tallentuvat automaattisesti.</p>
+</head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Avaa oma matka. Kansikuva on ylhäällä ja kaikki muut kuvat löytyvät heti sen alta sivuttain selaamalla.</p>
 <section id="list"><p class="muted">Omat matkakohteet ja matkapäiväkirja samassa paikassa.</p><button id="new">+ Lisää matka</button><div id="trips"></div></section>
 <section id="editor" class="hidden">
 <div class="editor-bar"><button id="back" class="quiet">← Omat matkat</button><p id="save-status" role="status" aria-live="polite"></p><button id="save">Valmis ✓</button></div>
@@ -13,12 +29,20 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-h
 <p id="source-page" class="hidden"><a id="source-link" href="#">Avaa kohteen sivu ↗</a></p>
 <div class="date-row"><div><label for="begin">Milloin kävit?</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button></div>
 <details class="optional"><summary>Useamman päivän matka</summary><label for="end">Päättymispäivä</label><input id="end" type="date"><p class="muted">Yhden päivän käynnille riittää ensimmäinen päivämäärä.</p></details>
-<h2>📷 Matkan kuvat</h2><p class="photo-help">Kuvat näkyvät täällä suurina, kokonaisina ja suoraan allekkain. Selaa vain alaspäin – kuvia ei tarvitse erikseen avata.</p><label class="photo-add" for="files">＋ Lisää kuvia</label><input id="files" type="file" accept="image/*" multiple disabled><p id="photo-status" class="muted" role="status">Kuvien tallennusta avataan…</p><div id="photos" class="photos"></div>
+<h2>📷 Matkan kuvakansio</h2>
+<p class="photo-help">Kansikuva näkyy ensin. Selaa alla olevia pikkukuvia <strong>sivuttain</strong> ja napauta kuvaa katsoaksesi sitä suurempana tässä samassa kohdassa.</p>
+<div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
+ <div class="cover-frame" id="cover-frame"><img class="hidden" id="cover-photo" alt="Valittu matkan kuva"><p class="cover-placeholder" id="cover-placeholder">Lisää ensimmäinen matkakuva. Se näkyy kansikuvana.</p><span class="cover-badge hidden" id="cover-badge">Kansikuva</span><button type="button" class="cover-arrow prev hidden" id="previous-photo" aria-label="Edellinen kuva">‹</button><button type="button" class="cover-arrow next hidden" id="next-photo" aria-label="Seuraava kuva">›</button></div>
+ <div class="photo-controls"><small id="photo-position" role="status">Ei kuvia</small><button id="set-cover" type="button" class="hidden">Aseta kansikuvaksi</button><button id="delete-photo" type="button" class="hidden">Poista kuva</button></div>
+ <div id="photo-thumbs" class="thumbs" role="group" aria-label="Selaa matkan kuvia sivuttain"></div>
+ <details class="photo-note-box hidden" id="photo-note-box"><summary id="photo-note-toggle">✏️ Lisää kuvan kuvauspaikka tai muisto</summary><label for="photo-note">Mistä kuva on otettu? (valinnainen)</label><textarea id="photo-note" rows="2" placeholder="Esim. Repovesi – maisema riippusillalta"></textarea><small id="photo-note-status" role="status" aria-live="polite"></small></details>
+</div>
+<label class="photo-add" for="files" tabindex="0" role="button">＋ Lisää kuvia matkan kansioon</label><input id="files" class="visually-hidden" type="file" accept="image/*" multiple disabled><p id="photo-status" class="muted" role="status">Kuvien tallennusta avataan…</p>
 <label for="diary">Muistiinpanot ja muistot</label><textarea id="diary" placeholder="Mitä näit? Mikä jäi mieleen?"></textarea>
 <fieldset class="rating"><legend>Oma arvio</legend><div class="stars" aria-label="Valitse 1–5 tähteä"><button type="button" data-rating="1" aria-label="1 tähti" aria-pressed="false">☆</button><button type="button" data-rating="2" aria-label="2 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="3" aria-label="3 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="4" aria-label="4 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="5" aria-label="5 tähteä" aria-pressed="false">☆</button></div><span id="rating-label" class="muted">Ei vielä arviota</span> <button id="clear-rating" class="quiet" type="button">Tyhjennä arvio</button></fieldset>
 </div>
 <details class="card optional"><summary>📍 Lisää reitti ja pysähdyspaikat</summary><p class="muted">Halutessasi voit lisätä matkan pysähdykset järjestyksessä.</p><div id="stops"></div><label for="place">Pysähdyspaikka</label><div class="row"><div><input id="place" placeholder="Paikkakunta tai osoite"></div><button id="add">Lisää</button></div><p><a id="map" class="map hidden" target="_blank" rel="noopener">Avaa reitti kartassa ↗</a></p></details>
-<p class="muted storage-note">Matkat ja kuvat säilyvät tässä selaimessa ja tällä laitteella.</p><button id="remove" class="danger">Poista matka</button>
+<p class="muted storage-note">Matkat, kuvat ja kuvatekstit säilyvät tässä selaimessa ja tällä laitteella. Ne eivät siirry automaattisesti toiselle laitteelle. Älä tyhjennä selaimen sivustotietoja, jos haluat säilyttää ne.</p><button id="remove" class="danger">Poista matka</button>
 </section></main><nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
 <script>
 const $=s=>document.getElementById(s),key='ms_trips_v2';let trips=[],active=null,db,rating=0,saveTimer,dirty=false,photoBusy=false;
@@ -46,10 +70,10 @@ function load(){
 }
 let listVersion=0;
 function dateText(value){if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return value||'';const [y,m,d]=value.split('-');return Number(d)+'.'+Number(m)+'.'+y}
-async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}let records=[];try{records=await photoStore('get',null,null)}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.'}if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const url=URL.createObjectURL(pictures[0].blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.rating?'★ '+t.rating+'/5':'',t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);b.append(info);b.onclick=()=>open(t.id);box.append(b)})}
+async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}let records=[];try{records=await photoStore('get',null,null)}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.'}if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const cover=pictures.find(p=>p.id===t.coverPhotoId)||pictures[0];const url=URL.createObjectURL(cover.blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.rating?'★ '+t.rating+'/5':'',t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);b.append(info);b.onclick=()=>open(t.id);box.append(b)})}
 
-function back(){if(photoBusy){status('Odota, kuvia tallennetaan.');return}if(dirty&&!capture())return;clearTimeout(saveTimer);active=null;$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
-function open(k){clearTimeout(saveTimer);dirty=false;status('');active=k||id();let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
+function back(){flushPhotoNote();if(photoBusy){status('Odota, kuvia tallennetaan.');return}if(dirty&&!capture())return;clearTimeout(saveTimer);active=null;clearPhotoGallery();$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
+function open(k){clearTimeout(saveTimer);dirty=false;status('');active=k||id();selectedPhotoId=null;let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
 function capture(){
   clearTimeout(saveTimer);if(active===null)return null;
   if($('begin').value&&$('end').value&&$('end').value<$('begin').value){status('Päättymispäivä on ennen käyntipäivää.',true);dirty=true;return null}
@@ -74,32 +98,110 @@ function photoStore(mode,value,trip=active){return new Promise((resolve,reject)=
  tx.oncomplete=()=>resolve(mode==='get'?result:null);tx.onerror=tx.onabort=()=>reject(tx.error||Error('Kuvan tallennus epäonnistui'));
  }catch(e){reject(e)}
 })}
-async function photos(){
- let current=active,box=$('photos');box.replaceChildren();let records=[];
- try{records=await photoStore('get')}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.';return}
- // Uudet kuvat lisäysjärjestyksessä, vanhojen kuvien tuttu järjestys säilyy.
- records=records.map((p,i)=>({...p,_index:i})).sort((a,b)=>(a.addedAt||0)-(b.addedAt||0)||a._index-b._index);
- if(current!==active)return;
- $('photo-status').textContent=records.length?records.length+' kuvaa. Kuvat näkyvät kokonaisina alla.':'Ensimmäinen kuva näkyy matkan kansikuvana.';
- for(let i=0;i<records.length;i++){
-   if(current!==active)return;
-   const p=records[i],figure=document.createElement('figure'),img=document.createElement('img');
-   const caption=document.createElement('figcaption'),counter=document.createElement('span'),remove=document.createElement('button');
-   figure.className='photo';caption.className='photo-caption';counter.className='photo-count';
-   img.src=URL.createObjectURL(p.blob);img.alt=p.name||'Matkan kuva '+(i+1);
-   img.loading=i<2?'eager':'lazy';img.decoding='async';
-   const objectURL=img.src;img.onload=img.onerror=()=>URL.revokeObjectURL(objectURL);
-   counter.textContent='Kuva '+(i+1)+' / '+records.length;
-   remove.type='button';remove.textContent='Poista kuva';remove.setAttribute('aria-label','Poista kuva '+(i+1));
-   remove.onclick=async()=>{
-     if(!confirm('Poistetaanko tämä kuva matkalta?'))return;
-     remove.disabled=true;
-     try{await photoStore('delete',p.id);if(current===active)photos()}
-     catch(e){remove.disabled=false;$('photo-status').textContent='Kuvan poistaminen ei onnistunut.'}
-   };
-   caption.append(counter,remove);figure.append(img,caption);box.append(figure);
- }
+let photoRecords=[], selectedPhotoId=null, photoVersion=0,photoUrls=[],noteTimer=null;
+const photoSaveQueues=new Map();
+function clearPhotoGallery(){
+ ++photoVersion;clearTimeout(noteTimer);noteTimer=null;
+ photoUrls.forEach(url=>URL.revokeObjectURL(url));photoUrls=[];
+ photoRecords=[];selectedPhotoId=null;$('photo-thumbs').replaceChildren();
 }
+function currentPhoto(){return photoRecords.find(p=>p.id===selectedPhotoId)||null}
+function coverId(){return trips.find(t=>t.id===active)?.coverPhotoId||photoRecords[0]?.id}
+function queueNoteSave(p){
+ const old=photoSaveQueues.get(p.id)||Promise.resolve();
+ const next=old.catch(()=>{}).then(()=>photoStore('put',p));photoSaveQueues.set(p.id,next);
+ next.then(()=>{if(selectedPhotoId===p.id)$('photo-note-status').textContent='✓ Kuvateksti tallennettu'}).catch(()=>{if(selectedPhotoId===p.id)$('photo-note-status').textContent='Kuvatekstin tallennus ei onnistunut'});
+}
+function flushPhotoNote(){
+ if(!noteTimer)return;
+ clearTimeout(noteTimer);noteTimer=null;
+ const p=currentPhoto();if(p)queueNoteSave(p);
+}
+function showPhoto(photoId){
+ flushPhotoNote();
+ if(!photoRecords.length){
+  $('cover-photo').classList.add('hidden');$('cover-placeholder').classList.remove('hidden');
+  $('cover-badge').classList.add('hidden');$('previous-photo').classList.add('hidden');$('next-photo').classList.add('hidden');
+  $('set-cover').classList.add('hidden');$('delete-photo').classList.add('hidden');$('photo-note-box').classList.add('hidden');
+  $('photo-position').textContent='Ei kuvia';return;
+ }
+ const idx=Math.max(0,photoRecords.findIndex(p=>p.id===photoId));
+ const p=photoRecords[idx];selectedPhotoId=p.id;
+ $('cover-photo').src=photoUrls[idx];$('cover-photo').alt=p.caption||p.name||'Matkan kuva '+(idx+1);
+ $('cover-photo').classList.remove('hidden');$('cover-placeholder').classList.add('hidden');
+ const isCover=p.id===coverId();
+ $('cover-badge').textContent=isCover?'★ Kansikuva':'Kuva '+(idx+1);
+ $('cover-badge').classList.remove('hidden');
+ $('photo-position').textContent='Kuva '+(idx+1)+' / '+photoRecords.length;
+ $('set-cover').classList.toggle('hidden',isCover);$('delete-photo').classList.remove('hidden');
+ for(const name of ['previous-photo','next-photo'])$(name).classList.toggle('hidden',photoRecords.length<2);
+ $('previous-photo').disabled=idx===0;$('next-photo').disabled=idx===photoRecords.length-1;
+ $('photo-note-box').classList.remove('hidden');$('photo-note-box').open=false;$('photo-note-toggle').textContent=p.caption?('✏️ '+p.caption):'✏️ Lisää kuvan kuvauspaikka tai muisto';$('photo-note').value=p.caption||'';$('photo-note-status').textContent='';
+ [...$('photo-thumbs').children].forEach((b,i)=>{b.classList.toggle('selected',i===idx);b.setAttribute('aria-pressed',String(i===idx))});
+ const selected=$('photo-thumbs').children[idx];if(selected)selected.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+async function photos(preferredId){
+ const current=active,version=++photoVersion;
+ let records=[];
+ try{records=await photoStore('get')}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.';return}
+ records=records.map((p,i)=>({...p,_order:i})).sort((a,b)=>(a.addedAt||0)-(b.addedAt||0)||a._order-b._order);
+ if(version!==photoVersion||current!==active)return;
+ flushPhotoNote();photoUrls.forEach(url=>URL.revokeObjectURL(url));photoUrls=[];
+ photoRecords=records;const thumbs=$('photo-thumbs');thumbs.replaceChildren();
+ for(let i=0;i<records.length;i++){
+  const p=records[i],url=URL.createObjectURL(p.blob);photoUrls.push(url);
+  const thumb=document.createElement('button'),img=document.createElement('img');
+  thumb.type='button';thumb.className='thumb';thumb.setAttribute('aria-label','Näytä kuva '+(i+1)+' / '+records.length);
+  img.src=url;img.alt=p.caption||p.name||'Kuva '+(i+1);img.loading=i<8?'eager':'lazy';img.decoding='async';thumb.append(img);
+  if(p.id===coverId()){
+   const badge=document.createElement('span');badge.className='thumb-cover';badge.textContent='★';thumb.append(badge);
+  }
+  thumb.onclick=()=>showPhoto(p.id);thumbs.append(thumb);
+ }
+ const wanted=preferredId||selectedPhotoId||coverId();
+ $('photo-status').textContent=records.length?records.length+' kuvaa yhdessä kansiossa. Selaa pikkukuvia sivuttain.':'Kuvakansio on vielä tyhjä.';
+ showPhoto(records.some(p=>p.id===wanted)?wanted:(coverId()||records[0]?.id));
+}
+function stepPhoto(offset){
+ const idx=photoRecords.findIndex(p=>p.id===selectedPhotoId);const next=idx+offset;
+ if(next>=0&&next<photoRecords.length)showPhoto(photoRecords[next].id);
+}
+$('previous-photo').onclick=()=>stepPhoto(-1);$('next-photo').onclick=()=>stepPhoto(1);
+let swipeX=0,swipeY=0;
+$('cover-frame').addEventListener('touchstart',e=>{if(e.touches.length===1){swipeX=e.touches[0].clientX;swipeY=e.touches[0].clientY}},{passive:true});
+$('cover-frame').addEventListener('touchend',e=>{
+ if(e.changedTouches.length!==1)return;
+ const dx=e.changedTouches[0].clientX-swipeX,dy=e.changedTouches[0].clientY-swipeY;
+ if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3)stepPhoto(dx<0?1:-1);
+},{passive:true});
+$('photo-note').addEventListener('input',()=>{
+ const p=currentPhoto();if(!p)return;
+ p.caption=$('photo-note').value;$('photo-note-toggle').textContent=p.caption?('✏️ '+p.caption):'✏️ Lisää kuvan kuvauspaikka tai muisto';$('photo-note-status').textContent='Tallennetaan…';
+ clearTimeout(noteTimer);noteTimer=setTimeout(()=>{noteTimer=null;queueNoteSave(p)},400);
+});
+$('photo-note').addEventListener('blur',flushPhotoNote);
+$('set-cover').onclick=()=>{
+ const p=currentPhoto();if(!p)return;
+ const t=capture();if(!t)return;t.coverPhotoId=p.id;
+ try{persist();photos(p.id);status('✓ Kansikuva vaihdettu')}
+ catch(e){status('Kansikuvan valinta ei tallentunut.',true)}
+};
+$('delete-photo').onclick=async()=>{
+ const p=currentPhoto();if(!p||photoBusy)return;
+ if(!confirm('Poistetaanko tämä kuva matkan kansiosta?'))return;
+ flushPhotoNote();photoBusy=true;$('delete-photo').disabled=true;
+ const idx=photoRecords.findIndex(x=>x.id===p.id);
+ try{
+  await photoSaveQueues.get(p.id)?.catch(()=>{});
+  await photoStore('delete',p.id);
+  const t=trips.find(x=>x.id===active);
+  if(t?.coverPhotoId===p.id){t.coverPhotoId='';persist()}
+  await photos(photoRecords[Math.max(0,idx-1)]?.id);
+ }catch(e){$('photo-status').textContent='Kuvan poistaminen ei onnistunut.'}
+ finally{photoBusy=false;$('delete-photo').disabled=false}
+};
+// Kuvien lisäys avautuu myös näppäimistöllä, vaikka tiedostokenttä ei vie tilaa.
+document.querySelector('.photo-add').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('files').click()}});
 $('new').onclick=()=>open();$('back').onclick=back;$('save').onclick=()=>{if(capture())back()};$('add').onclick=()=>{let name=$('place').value.trim();if(!name)return;let t=capture();if(!t)return;t.stops.push(name);try{persist();$('place').value='';stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}};$('place').onkeydown=e=>{if(e.key==='Enter')$('add').click()};
 for(const field of ['name','begin','end','diary'])$(field).addEventListener('input',scheduleSave);
 $('today').onclick=()=>{const d=new Date();$('begin').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');scheduleSave()};
@@ -112,7 +214,7 @@ $('files').onchange=async e=>{
  finally{photoBusy=false;$('files').disabled=!db;e.target.value='';if(active===trip)photos()}
 };
 $('remove').onclick=async()=>{
- if(photoBusy||!confirm('Poistetaanko matka ja sen kuvat?'))return;clearTimeout(saveTimer);
+ if(photoBusy||!confirm('Poistetaanko matka ja sen kuvat?'))return;flushPhotoNote();clearTimeout(saveTimer);
  try{let saved=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(saved))throw Error();saved=saved.filter(t=>t.id!==active);localStorage.setItem(key,JSON.stringify(saved));trips=saved;dirty=false;
  try{for(const p of await photoStore('get'))await photoStore('delete',p.id)}catch(e){console.warn('Kuvien poistaminen epäonnistui',e)}back();
  }catch(e){status('Matkan poistaminen ei onnistunut.',true)}
@@ -124,7 +226,7 @@ if(window.indexedDB){
  q.onsuccess=()=>{db=q.result;$('files').disabled=false;$('photo-status').textContent='Ensimmäinen kuva näkyy matkan kansikuvana.';if(active===null)list();else photos()};q.onerror=q.onblocked=photosUnavailable;
  }catch(e){photosUnavailable()}
 }else photosUnavailable();
-window.addEventListener('pagehide',()=>{if(dirty)capture()});
+window.addEventListener('pagehide',()=>{flushPhotoNote();if(dirty)capture()});
 window.addEventListener('storage',e=>{if(active===null&&(e.key===key||e.key===null))load()});
 window.addEventListener('pageshow',()=>{if(active===null)load()});
 </script></body></html>

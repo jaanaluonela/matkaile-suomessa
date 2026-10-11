@@ -20,9 +20,6 @@
     ];
     // Vain maakunnat, joihin jo olemassa oleva opas käyttää suoraa linkkiä.
     const regionPages = {
-      'Pohjanmaa':'pohjanmaa.html',
-      'Keski-Pohjanmaa':'keski-pohjanmaa.html',
-      'Pohjois-Pohjanmaa':'pohjois-pohjanmaa.html',
       'Kainuu':'kainuu.html',
       'Kymenlaakso':'kymenlaakso.html',
       'Lappi':'lappi.html',
