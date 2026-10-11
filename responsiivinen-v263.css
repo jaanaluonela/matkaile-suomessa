@@ -1,0 +1,71 @@
+/* Matkailu Suomessa v263: etusivu ja Näe ja koe — erilliset puhelin- ja työpöytäasettelut. */
+/* Käsitellään vain etusivu; muilla sivuilla nykyinen ulkoasu pysyy muuttumattomana. */
+body[data-home] .home-shell{box-sizing:border-box;min-width:0;}
+body[data-home] .home-shell .home-choices-v212{width:100%;}
+body[data-home] #visit-link-v222{box-sizing:border-box;width:100%;max-width:none;}
+body[data-home] .home-explore-v251{box-sizing:border-box;}
+@media (min-width:900px){
+  body[data-home] .home-shell{width:min(calc(100% - 48px),1180px)!important;max-width:1180px!important;margin-inline:auto!important;padding:24px 30px 112px!important;}
+  body[data-home] .home-shell>.hero{padding:25px 30px!important;}
+  body[data-home] .home-shell .home-choices-v212{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;}
+  body[data-home] .home-shell .home-choices-v212>a{min-width:0!important;min-height:148px!important;padding:18px!important;}
+  body[data-home] .home-shell .home-choices-v212 strong{font-size:clamp(17px,1.6vw,20px)!important;}
+  body[data-home] .home-shell .home-choices-v212 small{font-size:13px!important;}
+  body[data-home] #visit-link-v222{min-height:72px!important;margin-top:14px!important;}
+}
+@media (max-width:599px){
+  body[data-home] .home-shell{padding:12px 12px 112px!important;}
+  body[data-home] .home-shell>.hero{padding:15px!important;}
+  body[data-home] .home-shell .home-choices-v212{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}
+  body[data-home] .home-shell .home-choices-v212>a{min-height:140px!important;padding:13px 12px!important;gap:6px!important;border-radius:16px!important;}
+  body[data-home] .home-shell .home-choices-v212 strong{font-size:16px!important;}
+  body[data-home] .home-shell .home-choices-v212 small{font-size:12px!important;}
+  body[data-home] .home-shell .home-choices-v212 .choice-icon{font-size:28px!important;}
+  body[data-home] #visit-link-v222{min-height:70px!important;padding:13px 15px!important;margin-top:10px!important;border-radius:16px!important;}
+  body[data-home] #visit-link-v222 strong{font-size:17px!important;}
+  body[data-home] #visit-link-v222 small{font-size:12px!important;}
+}
+/* Näe ja koe -sivu: sisällön muotoilu rajataan sivulle id:n avulla. */
+body:has(main.visit-page-v263){font-size:16px;line-height:1.42;}
+main.visit-page-v263{width:min(100%,1180px);max-width:1180px;margin-inline:auto;padding:22px 22px calc(105px + env(safe-area-inset-bottom,0px));box-sizing:border-box;}
+main.visit-page-v263 .back{display:inline-block;margin:0 0 9px;text-decoration:underline;text-underline-offset:3px;font-size:14px;}
+main.visit-page-v263 h1{font-size:clamp(26px,3.3vw,36px);line-height:1.18;margin:4px 0 8px;letter-spacing:-.025em;}
+main.visit-page-v263>p:first-of-type{margin:0 0 16px;max-width:680px;font-size:15px;line-height:1.42;}
+main.visit-page-v263 .visit-filters-v263{display:grid;grid-template-columns:1fr 1fr minmax(240px,1.45fr);gap:12px;margin:5px 0 12px;align-items:end;}
+main.visit-page-v263 .visit-filter-field{min-width:0;}
+main.visit-page-v263 .visit-filter-field label{display:block;margin:0 0 5px;font-size:14px;line-height:1.25;font-weight:750;}
+main.visit-page-v263 .visit-filter-field input,
+main.visit-page-v263 .visit-filter-field select{box-sizing:border-box;width:100%;min-width:0;min-height:46px;padding:9px 12px;border:1px solid #c8dfd2;border-radius:12px;background:#fff;color:#195d4d;font:inherit;font-size:16px;}
+main.visit-page-v263 #count{margin:9px 0 12px;font-size:14px;font-weight:700;color:#28584a;}
+main.visit-page-v263 #results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;align-items:stretch;}
+main.visit-page-v263 #results .place{box-sizing:border-box;display:flex;flex-direction:column;min-width:0;margin:0;padding:16px 16px 14px;border-radius:16px;border:1px solid #d3e3da;text-decoration:none;box-shadow:0 3px 12px rgba(13,63,47,.045);overflow-wrap:anywhere;}
+main.visit-page-v263 #results .place strong{display:block;font-size:17px;line-height:1.25;letter-spacing:-.01em;}
+main.visit-page-v263 #results .place small{display:block;margin-top:5px;font-size:12px;line-height:1.35;color:#61766b;}
+main.visit-page-v263 #results .place p{margin:8px 0;font-size:14px;line-height:1.42;color:#285c4c;}
+main.visit-page-v263 #results .place>span:last-child{display:block;margin-top:auto;padding-top:7px;font-size:14px;font-weight:750;}
+main.visit-page-v263 .note{font-size:13px;margin:18px 0 8px;}
+main.visit-page-v263 :is(input,select,.place):focus-visible{outline:3px solid #f87913;outline-offset:2px;}
+@media (min-width:850px){
+  body:has(main.visit-page-v263) .site-nav .site-nav-inner{max-width:1180px!important;}
+}
+@media (min-width:600px) and (max-width:949px){
+  main.visit-page-v263 #results{grid-template-columns:repeat(2,minmax(0,1fr));}
+  main.visit-page-v263 .visit-filters-v263{grid-template-columns:1fr 1fr;}
+  main.visit-page-v263 .visit-search-v263{grid-column:1/-1;}
+}
+@media (max-width:599px){
+  main.visit-page-v263{width:100%;padding:12px 14px calc(105px + env(safe-area-inset-bottom,0px));}
+  main.visit-page-v263 h1{font-size:28px;margin:1px 0 7px;}
+  main.visit-page-v263 .back{margin-bottom:5px;}
+  main.visit-page-v263>p:first-of-type{font-size:14px;line-height:1.35;margin:0 0 14px;}
+  main.visit-page-v263 .visit-filters-v263{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0 0 12px;}
+  main.visit-page-v263 .visit-filter-field label{font-size:13px;}
+  main.visit-page-v263 .visit-filter-field :is(select,input){min-height:46px;font-size:16px;padding:9px 8px;}
+  main.visit-page-v263 .visit-search-v263{grid-column:1/-1;}
+  main.visit-page-v263 #count{margin:8px 0 10px;}
+  main.visit-page-v263 #results{grid-template-columns:1fr;gap:9px;}
+  main.visit-page-v263 #results .place{padding:13px 14px 12px;border-radius:15px;}
+  main.visit-page-v263 #results .place strong{font-size:16px;}
+  main.visit-page-v263 #results .place p{font-size:14px;line-height:1.38;margin:7px 0 5px;}
+  main.visit-page-v263 #results .place>span:last-child{padding-top:5px;}
+}
