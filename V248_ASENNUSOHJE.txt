@@ -1,0 +1,36 @@
+Matkailu Suomessa v248 – Lappi, Kittilä, Levi ja Ylläs
+
+OSAPÄIVITYS nykyiseen sivustoon, ei koko sivusto.
+Mukana ovat v247:n Rovaniemi ja helpotettu Omat matkat -sivu.
+
+ASENNUS
+1. Ota varmuuskopio nykyisestä sivustokansiosta.
+2. Pura ZIP-paketin tiedostot index.html:n kanssa samaan kansioon.
+3. Korvaa samannimiset tiedostot ja säilytä kaikki muut tiedostot.
+4. Julkaise tiedostot nykyiselle sivustolle kuten aiemmat päivitykset.
+5. Lataa sivu uudelleen. Älä poista selaimen sivustotietoja: matkat ja kuvat ovat niissä.
+
+UUTTA
+- Lappi: kaikki 21 kuntaa yhdessä listassa, kuntahaku ja suorat valinnat Rovaniemeen, Kittilään, Leville ja Ylläkselle.
+- Levi, Sirkka, Ylläs, Äkäslompolo ja Ylläsjärvi löytyvät myös Paikkakunnat-sivun hausta.
+- Kittilä: kuntatiedot, vaakuna, museot, SnowVillage ja Levin palvelut.
+- Levi: oma sivu, retket, maisemahissit, perhekohteet, ruokapaikat ja caravan-paikat.
+- Ylläs: oma sivu, Äkäslompolo ja Ylläsjärvi, kansallispuisto, retkikohteet, ruokapaikat ja caravan.
+- Kolari: Ylläksen kuntasivu, vaakuna ja kunnan ilmoittama arvio asukasluvusta.
+- 23 kohdesivua karttalinkkeineen ja omiin matkoihin tallentamisineen.
+- Jo olemassa oleviin muiden Lapin kuntien sivuihin linkitetään automaattisesti. Jos omaa kuntasivua ei ole, Lapin listan kortti ohjaa kunnan verkkosivuille. Kaikkien Lapin kuntien matkailutiedot eivät siis ole vielä valmiita.
+- Kuntavalinnassa puuttuva oma sivu ohjaa kyseisen kunnan korttiin Lapin listalla.
+- Leirintäalue- ja matkaparkkihakuihin lisätty Levilehto, Gondolin matkaparkki sekä Ylläsjärven caravan.
+- Ylläksen matkailukylät sijaitsevat Kolarissa; SnowVillage sijaitsee Kittilän Lainiossa.
+
+KOKEILE
+Paikkakunnat → Lappi → Kittilä → Levi.
+Hae Paikkakunnat-sivulta Ylläs tai Äkäslompolo.
+Lisää Levi omiin matkoihin ja avaa Omat matkat etusivulta.
+Merkitse Ylläs käydyksi; saman paikan lisääminen uudelleen ei luo kaksoiskappaletta.
+
+TARKISTUKSET
+Tarkistettu ohjelmallisesti: 21 kuntaa, sisäiset linkit ja ankkurit 29 uudelta/päivitetyltä sivulta, alavalikot, pikavalinnat, kuntahaku eri kirjoitusasuilla, nykyisten kuntasivujen säilyminen tietorekisterissä, tietojen latausjärjestys ja matkojen tallennus nykyiseen päiväkirjaan. Vanhat muistiinpanot säilyvät. JavaScriptin syntaksi tarkistettu. Visuaalista selain- tai puhelintestiä ei tehty tässä ympäristössä.
+
+Kohteiden perustiedot tarkistettu 11.10.2026. Katso LAPPI_LAHTEET_v248.md.
+Päivitystä ei ole julkaistu verkkosivulle: se näkyy siellä tiedostojen siirron jälkeen.
