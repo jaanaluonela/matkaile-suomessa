@@ -1,0 +1,16 @@
+MATKAILU SUOMESSA – v250: Omat matkat / suuret kuvat
+
+Tämä ZIP on kokonainen sivustopaketti ja sisältää myös v249-version maakuntalinkitykset.
+
+Muutokset:
+- Omat matkat → matkan muokkaus → Matkan kuvat: kännykällä kuvat ovat suuret ja suoraan allekkain.
+- Kuvat näytetään kokonaan ilman neliöksi rajaamista tai erillistä avaamista.
+- Kuvan numerointi ja Poista kuva -painike ovat kuvan alapuolella, eikä rasti peitä kuvaa.
+- Poistaminen kysyy varmistuksen; valokuvien tallennus pysyy selaimen IndexedDB:ssä.
+- Uudet kuvat näkyvät lisäysjärjestyksessä, aiempien kuvien järjestys pysyy.
+- Isommilla näytöillä kuvia näytetään kaksi rinnakkain.
+
+Päivitys: pura ZIP ja korvaa sivuston tiedostot GitHub Pages -julkaisurepossa.
+Olemassa olevia paikallisia kuvia ja matkoja ei tyhjennetä tai siirretä.
+Huom: selaimessa tallennetut kuvat pysyvät nykyisessä selaimessa/laitteessa,
+eivätkä siirry automaattisesti toiseen selaimeen tai laitteeseen.
