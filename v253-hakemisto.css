@@ -1,0 +1,36 @@
+/* Matkailu Suomessa v253 */
+:root{--pine:#155947;--ink:#234c3b;--muted:#617569;--line:#d6e6dc;--paper:#ffffff;--cream:#f7f7f1}
+*{box-sizing:border-box}body{margin:0;background:#f5f7f1;color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+.v253-wrap{max-width:860px;margin:0 auto;padding:16px 16px calc(120px + env(safe-area-inset-bottom))}
+.v253-back{display:inline-flex;min-height:38px;align-items:center;color:var(--pine);text-decoration:none;font-size:14px;font-weight:800}
+.v253-hero{border-radius:23px;background:linear-gradient(120deg,#e6f2e9,#fcf3df);padding:23px 20px 21px;margin:8px 0 14px;border:1px solid #d0e5d9}
+.v253-kicker{font-size:12px;letter-spacing:.07em;color:#4c8263;font-weight:850;margin:0 0 6px}
+.v253-hero h1{font-size:clamp(25px,4.5vw,37px);line-height:1.1;margin:0 0 9px;letter-spacing:-.035em;color:var(--pine)}
+.v253-hero>p:not(.v253-kicker){margin:0;color:#547064;font-size:15px;line-height:1.45}
+.v253-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.v253-stats span{border-radius:12px;background:#fff9;border:1px solid #d6e6dc;padding:9px 12px;font-size:13px;font-weight:730}
+.v253-search{border:1px solid var(--line);background:#fff;padding:17px;border-radius:22px}
+.v253-search label{display:block;margin:2px 0 7px;color:#255e4c;font-size:14px;font-weight:800}
+.v253-search input,.v253-search select{display:block;width:100%;font:inherit;font-size:16px;color:#194a38;background:white;border:1px solid #c5d8cb;border-radius:12px;padding:11px 12px;min-height:48px}
+.v253-two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.v253-shortcuts{display:flex;gap:7px;overflow-x:auto;padding:13px 0 3px;scrollbar-width:thin}.v253-shortcuts button{flex:0 0 auto;appearance:none;border:1px solid #d4e6d9;background:#eaf4ee;color:#226349;font:700 13px system-ui;padding:9px 12px;border-radius:999px;min-height:39px;cursor:pointer}
+.v253-shortcuts button[aria-pressed=true]{background:var(--pine);color:white}
+#v253-status{font-size:13px;color:#5a7468;margin:12px 2px 0;line-height:1.4}
+.v253-results{margin-top:14px}.v253-region{border:1px solid var(--line);border-radius:19px;background:#fff;margin-bottom:10px;overflow:hidden;box-shadow:0 3px 10px #1e5b3510}
+.v253-region>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;min-height:74px;padding:14px 15px}
+.v253-region>summary::-webkit-details-marker{display:none}.v253-region-icon{display:grid;place-items:center;background:#e7f3e9;font-size:24px;width:45px;height:45px;border-radius:13px;flex:none}
+.v253-region-name{flex:1;min-width:0}.v253-region-name strong{display:block;font-size:18px;color:var(--pine);line-height:1.3}.v253-region-name small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.v253-chevron{color:#2e7458;font-size:28px;transition:transform .15s}.v253-region[open] .v253-chevron{transform:rotate(90deg)}
+.v253-towns{border-top:1px solid #e2ece5;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:13px}
+.v253-town{border:1px solid #dce8df;background:#fbfdfa;border-radius:13px;min-width:0;display:flex;align-items:stretch;gap:3px;position:relative}
+.v253-town>a{flex:1;min-width:0;color:var(--pine);text-decoration:none;font-size:15px;font-weight:820;padding:12px 3px 12px 11px;line-height:1.26}
+.v253-town>a small{display:block;font-size:11px;color:#6c7f71;font-weight:650;margin-top:3px}
+.v253-town>a small.ready{color:#23805d}
+.v253-town .v253-heart{width:38px;border:0;background:transparent;flex:none;font-size:23px;cursor:pointer;color:#8ca99b;padding:2px}
+.v253-heart[aria-pressed=true]{color:#d34f64}
+.v253-town.empty{padding:12px;color:#728078;font-size:14px}
+.v253-empty{margin:20px 0;padding:23px;background:white;border:1px dashed #bad4bf;border-radius:18px;color:#567262}
+.v253-source{line-height:1.5;color:#6a7970;font-size:12px;margin:20px 3px}
+.v253-region :focus-visible,.v253-search :focus-visible,.v253-back:focus-visible{outline:3px solid #f49139;outline-offset:3px}
+.site-nav{z-index:50}
+@media(max-width:490px){.v253-wrap{padding:12px 11px calc(118px + env(safe-area-inset-bottom))}.v253-hero{padding:21px 16px}.v253-search{padding:14px}.v253-region>summary{min-height:64px;padding:11px 12px}.v253-towns{padding:9px;gap:6px}.v253-town>a{font-size:14px;padding:10px 1px 10px 9px}.v253-town .v253-heart{width:32px;font-size:20px}.v253-two{gap:8px}}
+@media(max-width:340px){.v253-towns{grid-template-columns:1fr}.v253-two{grid-template-columns:1fr}}

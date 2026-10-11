@@ -1,0 +1,18 @@
+MATKAILU SUOMESSA v253 – KAIKKI MAAKUNNAT JA KUNNAT
+
+Muutokset:
+- Suomen 19 maakuntaa ja 308 kuntaa yhden toimivan hakemiston kautta (Tilastokeskus 2026).
+- Maakuntavalinnat, kuntahaku, hakusuodattimet, valmiiden oppaiden tunnistus ja kuntasuosikit.
+- Etusivun kuntavalinnassa myös sellaiset kunnat, joiden matkailuopas on vasta tulossa.
+- Keskeneräisille kunnille yhteinen perustietokortti: ei rikkinäisiä linkkejä.
+- Kartan maakuntalinkit avaavat suoraan kyseisen maakunnan hakemistosta.
+- Omat matkat v252 ja kuvat säilyvät muuttumattomina.
+
+HUOM: Tämä ZIP on nykyisen sivuston päivityspaketti, ei riippumaton uusi asennus.
+Pidä vanhat tiedostot ja korvaa paketin samannimiset tiedostot GitHubissa.
+Uusi toiminnallisuus tarvitsee erikseen ladattavat v253 tiedostot.
+Matkat ja matkakuvat säilyvät kyseisen selaimen paikallisessa tallennuksessa,
+eivät synkronoidu laitteiden välillä. Älä poista sivustotietoja.
+
+Aineisto: Tilastokeskus, kuntien ja maakuntien 2026 luokitusavain.
+https://stat.fi/fi/luokitukset/corrmaps/kunta_1_20260101%23maakunta_1_20260101
