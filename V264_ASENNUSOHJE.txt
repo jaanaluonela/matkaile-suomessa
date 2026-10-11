@@ -1,0 +1,44 @@
+MATKAILU SUOMESSA – v264 LISÄÄ LEIRINTÄALUEITA
+================================================
+Päivitetty 11.10.2026
+
+Tämä päivitys sisältää 16 tarkistettua kohdetta eri puolilta Suomea.
+Päivitys yhdistää uudet kohteet vanhaan luetteloon eikä poista vanhoja.
+Jos kohde on jo luettelossa, samaa ei lisätä uudelleen.
+
+ASENNUS
+1. Pura ZIP-tiedosto.
+2. Vie sen tiedostot GitHub-projektin juurikansioon.
+3. Korvaa vanhat leirintaalueet.html ja yopyminen.html.
+4. Lisää uusi leirinta-data-v264.js ja leirintakohde-v264.html.
+5. ZIP sisältää myös v263:n aukiolotietojen .js- ja .css-tiedostot.
+6. Säilytä kaikki muut aiemmat tiedostot, varsinkin caravan-data.js,
+   kunnat-v200.js, valikot-v200.js ja kuntien omat sivut.
+7. Päivitä sivu välimuistin ohi (Ctrl+F5) ja avaa Leirintäalueet.
+
+Leirintäalueet ja Yöpyminen -näkymissä näkyvät myös uudet kohteet.
+Tietojen avaamiseen käytetään yhtä leirintakohde-v264.html-tietosivua.
+Aukiolosuodatin käyttää kenttää openingStatus.
+Tiedot eivät kerro reaaliaikaista aukioloa: tarkista saapuminen aina etukäteen.
+
+LÄHTEET (tarkistettu 11.10.2026)
+Nallikari Lomakylä – Camping (Oulu): https://nallikari.fi/en/camping/price-list/
+Santalahti Resort – Camping (Kotka): https://santalahti.fi/en/finland-accommodation-santalahti/5-star-kotka-camping/
+Holiday Linnunlahti – Caravan & Camping (Joensuu): https://linnunlahti.fi/en/caravan-camping/
+Camping Silversand (Hanko): https://silversand.fi/yhteystiedot/
+Laajis Urban Caravan (Jyväskylä): https://laajis.fi/urbancaravan/
+Kokkola Camping Meripuisto (Kokkola): https://www.visitkokkola.fi/helmia-merenrannalla/
+Matkailukeskus Rauhalahti – Camping (Kuopio): https://visitrauhalahti.fi/rauhalahti/ajankohtaista/
+Poroholman Lomakeskus – Caravan (Rauma): https://www.poroholma.fi/fi/paikkavaraukset
+Tampere Camping Härmälä (Tampere): https://harmalacamping.fi/
+Yyteri Resort & Camping (Pori): https://yytericamping.fi/yyteri/info/
+Top Camping Vaasa (Vaasa): https://www.tropiclandia.fi/topcamping/
+Naantali Camping (Naantali): https://naantalicamping.bookingonline.fi/stable/tuotteet.jsp?kieli=FIN&teema_id=3023
+SF-Caravan Naantali Saloranta (Naantali): https://www.naantali.fi/fi/kulttuuri-ja-liikunta/vuokrattavat-tilat-ja-liikuntapaikat/saloranta
+Tammisaari Camping Ekenäs (Raasepori): https://camping.fi/
+Ähtäri Camping (Ähtäri): https://ahtaricamping.fi/saapuminen-ja-avaimet/
+Top Camping Kalajoki (Kalajoki): https://topcampingkalajoki.fi/aukioloajat/
+
+HUOM: Usein yksittäiset caravan-paikat ovat avoinna talvella, vaikka telttailu,
+sauna, ravintola tai vastaanotto ei olisi auki. Tämän vuoksi ympärivuotisuus
+perustuu nimenomaan leirintä- tai caravan-paikan ilmoitettuun aukioloon.
