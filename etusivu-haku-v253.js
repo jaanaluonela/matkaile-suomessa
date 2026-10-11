@@ -1,4 +1,4 @@
-/* Matkailu Suomessa v253: täysi kuntavalitsin (308 kuntaa) ja toimivat maakuntalinkit. */
+/* Matkailu Suomessa v255: maakuntakohtaiset etusivulaatikot; perustuu v253-hakuun.  täysi kuntavalitsin (308 kuntaa) ja toimivat maakuntalinkit. */
 (()=>{'use strict';
 const start=()=>{
  const region=document.getElementById('home-region-v251'),town=document.getElementById('home-town-v251'),open=document.getElementById('home-open-v251'),regional=document.getElementById('home-region-page-v251'),links=document.getElementById('home-town-links-v251');
@@ -6,6 +6,32 @@ const start=()=>{
  const regions=window.msFinlandRegions2026||{};const alias=window.msPlaceAliases253||{};
  const buttons=[...document.querySelectorAll('[data-home-region-v251]')];
  const source=window.siteMunicipalities||{};
+ const scope=document.getElementById('home-scope-v255');
+ const scopeLabel=document.getElementById('home-scope-label-v255');
+ const clearRegion=document.getElementById('home-clear-region-v255');
+ const scopedCardPages=['maakunnat.html','leirintaalueet.html','matkaparkit.html'];
+ const baseDescriptions={
+   'maakunnat.html':'Kunnat ja niiden palvelut',
+   'leirintaalueet.html':'Löydä leirintäalue yöksi',
+   'matkaparkit.html':'Paikka autolle tai vaunulle'
+ };
+ function updateCards(r){
+   // Sivun suuret laatikot luodaan valikot-v200.js-tiedostossa.
+   scopedCardPages.forEach(page=>{
+     const a=document.querySelector('main .home-choices-v212 a[href^="'+page+'"]');
+     if(!a)return;
+     a.href=r?page+'?maakunta='+encodeURIComponent(r):page;
+     const small=a.querySelector('small');
+     if(small)small.textContent=r?r+' · '+(page==='maakunnat.html'?'kunnat ja palvelut':page==='leirintaalueet.html'?'leirintäalueet':'matkaparkit'):baseDescriptions[page];
+   });
+   if(scope&&scopeLabel){scope.hidden=!r;scopeLabel.textContent=r||'';}
+ }
+ function saveSelection(){
+   const url=new URL(location.href);
+   if(region.value)url.searchParams.set('maakunta',region.value);
+   else url.searchParams.delete('maakunta');
+   history.replaceState(null,'',url);
+ }
  region.replaceChildren(new Option('Valitse maakunta…',''));
  Object.keys(regions).sort((a,b)=>a.localeCompare(b,'fi')).forEach(n=>region.add(new Option(n,n)));
  function fill(){
@@ -22,10 +48,12 @@ const start=()=>{
     if(shortlist.length||extras.length){const row=document.createElement('div');shortlist.forEach(n=>{const a=document.createElement('a');a.href=window.msTownUrl253(n).url;a.textContent=n+' ›';row.append(a)});extras.forEach(([name,v])=>{const a=document.createElement('a');a.href=v.url;a.textContent=name+' ›';row.append(a)});links.append(row)}
   }
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.homeRegionV251===r)));
+  updateCards(r);
  }
- region.addEventListener('change',fill);
+ region.addEventListener('change',()=>{fill();saveSelection();});
  town.addEventListener('change',()=>{open.hidden=!town.value;if(town.value)open.href=town.value;});
- buttons.forEach(b=>b.addEventListener('click',()=>{region.value=b.dataset.homeRegionV251;fill();}));
+ buttons.forEach(b=>b.addEventListener('click',()=>{region.value=b.dataset.homeRegionV251;fill();saveSelection();}));
+ if(clearRegion)clearRegion.addEventListener('click',()=>{region.value='';fill();saveSelection();});
  const search=document.getElementById('place-search'),results=document.getElementById('search-results');
  if(search&&results){
    const normalize=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -42,6 +70,8 @@ const start=()=>{
    search.addEventListener('input',()=>requestAnimationFrame(update));
    search.addEventListener('keydown',e=>{if(e.key==='Enter'&&search.value.trim()){const first=results.querySelector('a[href]');if(first){e.preventDefault();location.href=first.href;}}});
  }
+ const initial=new URLSearchParams(location.search).get('maakunta');
+ if(initial&&Object.prototype.hasOwnProperty.call(regions,initial))region.value=initial;
  fill();
 };if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();

@@ -1,0 +1,18 @@
+MATKAILU SUOMESSA v255 – MAAKUNNAN SUODATUS ETUSIVULLE
+
+UUTTA
+- Etusivun maakuntien pikavalinnat ovat kuntalinkkien yläpuolella.
+- Maakunnan valinta rajaa myös etusivun suurten Paikkakunnat-, Leirintäalueet- ja Matkaparkit-laatikoiden linkit.
+- Esimerkiksi Päijät-Häme -> Leirintäalueet avaa leirintaalueet.html?maakunta=P%C3%A4ij%C3%A4t-H%C3%A4me
+- Selaussivulla nykyinen maakuntasuodatus rajaa tulokset oikeasti.
+- "Näytä koko Suomi" poistaa rajauksen. "Lähellä minua" säilyy sijaintiin perustuvana.
+- Suoran index.html?maakunta=...-linkin avaaminen valitsee saman maakunnan.
+
+ASENNUS
+1) LAAJEMPI-paketti sisältää v254-kehityspaketin sekä tämän muutoksen. Kopioi sen tiedostot sivuston juureen, mutta ÄLÄ poista sivuston muita vanhoja tiedostoja.
+2) PAIVITYS-paketti on suositeltu, jos nykyinen v254 toimii: vie kolme muuttunutta tiedostoa (index.html, etusivu-haku-v253.js, etusivu-haku-v251.css) samaan sivuston juureen vanhojen tilalle. Älä muuta kansiorakennetta.
+3) Päivitä selain tarvittaessa uudelleen, jotta uudet JS/CSS-versiot latautuvat.
+
+Huomio: sivuston nykyisten listojen käytettävissä olevat kohteet rajataan maakuntaan. Paketti ei lisää uusia yöpymiskohteita.
+
+Huom! LAAJEMPI-pakettikaan ei ole uusi itsenäinen sivusto: vanhat kuvat, caravan-data.js, kunnat-v200.js, styles.css ja muut sivuston perustiedostot säilytetään GitHubissa.

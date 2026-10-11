@@ -1,4 +1,4 @@
-<!-- Matkailu Suomessa v251 – maakunta- ja kuntahaku suoraan etusivulle -->
+<!-- Matkailu Suomessa v255 – etusivun maakuntarajaus välittyy valintalaatikoihin -->
 <!doctype html>
 <html lang="fi">
 <head>
@@ -385,7 +385,7 @@
 
 </style>
 <link rel="stylesheet" href="navigation-v191.css?v=244">
-<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"><link rel="stylesheet" href="etusivu-haku-v251.css?v=251"><script src="suomi-kunnat-v253.js?v=253" defer></script><script src="v254-kuntalinkit.js?v=254" defer></script><script src="etusivu-haku-v253.js?v=253" defer></script></head>
+<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"><link rel="stylesheet" href="etusivu-haku-v251.css?v=255"><script src="suomi-kunnat-v253.js?v=253" defer></script><script src="v254-kuntalinkit.js?v=254" defer></script><script src="etusivu-haku-v253.js?v=255" defer></script></head>
 <body data-home="true">
   <main class="home-shell">
     <header class="hero">
@@ -434,11 +434,6 @@
           <select id="home-town-v251" disabled><option value="">Valitse ensin maakunta…</option></select>
         </div>
       </div>
-      <div class="home-explore-actions-v251">
-        <a id="home-open-v251" class="home-explore-open-v251" href="maakunnat.html" hidden>Avaa paikkakunta <span aria-hidden="true">→</span></a>
-        <a id="home-region-page-v251" href="maakunnat.html">Kaikki maakunnat <span aria-hidden="true">→</span></a>
-      </div>
-      <div id="home-town-links-v251" class="home-town-links-v251" aria-live="polite"></div>
       <div class="home-explore-favorites-v251" aria-label="Suositut maakunnat">
         <span>Siirry nopeasti:</span>
         <button type="button" data-home-region-v251="Kymenlaakso">Kymenlaakso</button>
@@ -447,9 +442,18 @@
         <button type="button" data-home-region-v251="Kainuu">Kainuu</button>
         <button type="button" data-home-region-v251="Uusimaa">Uusimaa</button>
       </div>
+      <div class="home-explore-actions-v251">
+        <a id="home-open-v251" class="home-explore-open-v251" href="maakunnat.html" hidden>Avaa paikkakunta <span aria-hidden="true">→</span></a>
+        <a id="home-region-page-v251" href="maakunnat.html">Kaikki maakunnat <span aria-hidden="true">→</span></a>
+      </div>
+      <div id="home-town-links-v251" class="home-town-links-v251" aria-live="polite"></div>
     </section><section aria-label="Uudet maakuntaoppaat" style="margin:12px auto 20px;padding:14px;border:1px solid #d1e3d7;border-radius:18px;background:#f0f7f2"><h2 style="font-size:20px;margin:0 0 10px;color:#155540">⭐ Tutustu uusiin maakuntiin</h2><div style="display:flex;flex-wrap:wrap;gap:8px"><a href="pohjanmaa.html" style="padding:9px 12px;border-radius:12px;background:#fff;color:#195e4e;font-weight:750">Pohjanmaa</a><a href="keski-pohjanmaa.html" style="padding:9px 12px;border-radius:12px;background:#fff;color:#195e4e;font-weight:750">Keski-Pohjanmaa</a><a href="pohjois-pohjanmaa.html" style="padding:9px 12px;border-radius:12px;background:#fff;color:#195e4e;font-weight:750">Pohjois-Pohjanmaa</a><a href="lappi.html" style="padding:9px 12px;border-radius:12px;background:#fff;color:#195e4e;font-weight:750">Lappi</a><a href="etela-karjala.html" style="padding:9px 12px;border-radius:12px;background:#fff;color:#195e4e;font-weight:750">Etelä-Karjala</a></div></section>
 
     <section class="section" aria-label="Muut matkailukohteet">
+      <div id="home-scope-v255" class="home-scope-v255" hidden aria-live="polite">
+        <span>Valittu maakunta: <strong id="home-scope-label-v255"></strong></span>
+        <button id="home-clear-region-v255" type="button">Näytä koko Suomi</button>
+      </div>
       <div class="menu">
         <a href="maakunnat.html">🗺️ Paikkakunnat</a>
         <a href="leirintaalueet.html">🏕️ Leirintäalueet</a>

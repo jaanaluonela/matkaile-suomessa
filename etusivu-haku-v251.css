@@ -40,3 +40,9 @@ body[data-home] .home-explore-v251 a:focus-visible,body[data-home] .home-explore
   body[data-home] .home-explore-v251{padding:22px 24px}
   body[data-home] .home-explore-fields-v251{max-width:790px;gap:18px}
 }
+
+/* v255: valitun maakunnan rajaus näkyy myös suurten etusivulaatikoiden yllä. */
+body[data-home] .home-scope-v255:not([hidden]){display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 12px;margin-bottom:12px;border:1px solid #c5ded1;border-radius:14px;background:#edf7f0;color:#225b49;font-size:13px;line-height:1.4}
+body[data-home] .home-scope-v255 strong{font-weight:850}
+body[data-home] .home-scope-v255 button{appearance:none;border:1px solid #c3d9cc;background:#fff;padding:7px 10px;border-radius:999px;font:750 12px/1.3 system-ui;color:#175b46;cursor:pointer}
+body[data-home] .home-scope-v255 button:focus-visible{outline:3px solid #fa8824;outline-offset:2px}
