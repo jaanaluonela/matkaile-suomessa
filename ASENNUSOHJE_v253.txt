@@ -1,0 +1,15 @@
+MATKAILU SUOMESSA - V253 PIENI PÄIVITYS
+
+Tämä päivitys tehdään jo käytössä olevan v252-version päälle.
+
+1. Pura tämä ZIP-paketti.
+2. Siirrä tiedosto paivakirja.html sivustosi GitHub-tiedostojen joukkoon
+   ja korvaa vanha samanniminen tiedosto.
+3. Muut tiedostot jätetään ennalleen.
+4. Päivitä sivu selaimessa. Tarvittaessa sulje Messengerin selain
+   ja avaa sivu uudelleen, jotta näet uusimman version.
+
+Uutta: kuvien koko näytön katselu, sivuttainen selaus ja zoomaus.
+
+HUOM: jos v252 ei ole sivustolla, tämä yhden tiedoston päivitys ei yksin
+sisällä kaikkia sivuston aiempia tiedostoja.
