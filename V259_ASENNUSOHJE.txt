@@ -1,0 +1,27 @@
+MATKAILU SUOMESSA v259 – FISKARS + 6 UUTTA KUNTAA
+
+PIENI PÄIVITYS v258-VERSION PÄÄLLE
+
+Sisältö:
+- Fiskarsin ruukille oma sivu fiskars.html, linkki Raaseporin sivulle ja haku suoraan Fiskarsiin
+- Uudet kuntasivut: Karkkila, Somero, Paimio, Sauvo, Parainen ja Naantali
+- Väkiluvut 31.12.2025, kuntien vaakunat, nähtävyydet, retket, yöpyminen ja ruokailu
+- Etusivun ja Maakunnat-sivun haut/avaukset kunnan tai kylän nimellä
+
+ASENNUS GITHUBIIN
+1. Pura tämän paketin ZIP.
+2. Avaa projektisi GitHubissa -> Lisää tiedosto -> Lataa tiedostoja.
+3. Valitse KAIKKI 12 tiedostoa tästä kansiosta GitHubin juureen.
+4. Hyväksy tiedostojen korvaaminen ja Commit changes.
+5. Odota GitHub Pages -julkaisua. Päivitä selaimessa sivu uudelleen.
+6. Testaa: Maakunnat -> Raasepori -> Fiskars sekä Maakunnat -> Uusimaa -> Karkkila
+   ja Varsinais-Suomi -> Somero / Paimio / Sauvo / Parainen / Naantali.
+   Kokeile myös hakua: Fiskars, Häntälän notkot, Nauvo, Kultaranta.
+
+Älä poista muita sivuja. Tämä paketti käyttää v258:n ja aiempien versioiden perusrakennetta.
+Matkaparkkeja ja leirintäalueita ei ole arvattu: sivu kertoo, jos vahvistettu kohde puuttuu.
+Yritysten palvelut, aukiolot, lautat ja yöpyminen tarkistettava ennen matkaa.
+
+Sisältää 1 JavaScript-tiedoston, 2 korvattavaa perussivua,
+1 päivitetyn Raaseporin sivun, 1 Fiskars-kohdesivun ja 6 uutta kuntasivua.
+Yhteensä 12 tiedostoa.
