@@ -1,0 +1,18 @@
+MATKAILU SUOMESSA v257 – SIUNTIO
+
+Tämä on PIENI PÄIVITYS aiemman v256-version päälle, ei koko sovellus.
+
+1) Pura ZIP-paketti tietokoneelle.
+2) Lataa seuraavat neljä tiedostoa GitHubin repositorion PÄÄKANSIOON:
+   - siuntio.html
+   - v257-siuntio.js
+   - maakunnat.html (korvaa vanha)
+   - index.html (korvaa vanha)
+3) Paina GitHubissa Vahvista muutokset / Commit changes.
+4) Odota GitHub Pagesin päivittymistä ja paina tarvittaessa Ctrl+F5.
+5) Kokeile: Paikkakunnat -> Uusimaa -> Siuntio. Tarkista myös etusivun haku.
+
+Älä poista muita sivuston tiedostoja. Keltainen 1 000 tiedoston varoitus
+koskee GitHubin tiedostoluettelon näyttämistä, ei estä päivityksen latausta.
+
+Siuntiossa ei ole merkitty matkaparkkia varmaksi ilman vahvistettua yöpymislupaa.
