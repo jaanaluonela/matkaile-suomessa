@@ -1,0 +1,25 @@
+Matkailu Suomessa – v241: Alavalikko takaisin
+============================================
+
+KORJAUSPAKETTI aiemmin asennettuun sovellukseen.
+
+Korjaus:
+- Puuttuva alavalikko (Koti, Yöpyminen, Paikkakunnat) lisätään automaattisesti
+  myös Tutustu Suomeen / Paikkakunnat -näkymään.
+- Valikko pysyy ruudun alareunassa puhelimella ja tietokoneella.
+- Nykyinen sivu merkitään aktiiviseksi.
+- Kuntasivuilla jo olemassa olevaa alavalikkoa ei kopioida toistamiseen.
+- Sisältöä, kuntatietoja tai Näe ja koe -kohteita ei muuteta.
+
+ASENNUS
+1. Ota halutessasi varmuuskopio nykyisestä app.js-tiedostosta.
+2. Pura ZIP ja kopioi app.js sovelluksen juurikansioon, jossa index.html sijaitsee.
+3. Korvaa saman niminen vanha app.js. Älä poista tai korvaa muita tiedostoja.
+4. Julkaise muuttunut tiedosto GitHubiin, jos sovellus toimii GitHub Pages -sivulla.
+5. Päivitä selain Ctrl+F5 (Macilla Cmd+Shift+R). Puhelimessa tyhjennä tarvittaessa välimuisti.
+
+Huomio: Tämä on vain päivityspaketti, ei koko sivuston ZIP.
+Muutos vaikuttaa sivuihin, jotka lataavat yhteisen app.js-tiedoston.
+
+Tarkistus: navigoinnin olemassaolo, kiinnitys ruudun alareunaan ja
+kaksoisvalikon välttäminen testattu selainmoottorilla puhelin- ja tietokonekoossa.
