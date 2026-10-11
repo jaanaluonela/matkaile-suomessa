@@ -1,0 +1,28 @@
+Matkailu Suomessa – v232 PORVOO
+=================================
+Tämä on LISÄPÄIVITYS aiempien v230 Loviisa (osa 1 + osa 2) ja v231 Hakukorjaus -versioiden päälle.
+
+ASENNUS
+1. Pura ZIP-tiedosto.
+2. Kopioi kaikki ZIP:in HTML-, CSS- ja JS-tiedostot sovelluksen samaan juurikansioon kuin index.html.
+3. Korvaa samannimiset tiedostot. ÄLÄ poista muita tiedostoja.
+4. Päivitä selain Ctrl + F5 (Mac Cmd + Shift + R).
+5. Testaa: etusivu -> kirjoita "por" / "porvoo" / "borgå" -> Porvoo -> helmet ja kohteet.
+
+PORVOOSSA
+- Oma Porvoo-kuntasivu, Loviisan tapainen ulkoasu ja valikko
+- Vaakuna ja 31.12.2025 asukasluku 51 863
+- 21 helmeä, jokaisella oma kohdesivu ja karttahaku
+- 3 caravan-kohdetta omilla kohdesivuillaan, lisäksi hotellivaihtoehdot
+- Luonto, kulttuuri, kahvilat, ravintolat, ostokset, tapahtumat ja kylät
+- Uusimaa-sivun Porvoo-linkki
+- Porvoo ja Borgå kuntahaussa ja helmet yhteisessä Käyntikohteet-listassa
+- Caravan-kohteet yhteisissä yöpyminen-listoissa
+
+HUOM: Erillistä keskustan virallista matkailuautojen yömatkaparkkia ei vahvistettu.
+Tavallista julkista pysäköintipaikkaa EI kuvata yöpymisalueeksi.
+Sondby Caravan on luonteeltaan kausipaikkapainotteinen ja Pellinge Caravan vaatii yhteydenoton etukäteen.
+Aiemmat muiden kuntien kohteet ja hakukorjaus säilyvät.
+
+Käytettyjä lähteitä: V232_LAHTEET.txt
+Paikalliset HTML/linkki/JS-testit toteutetaan ennen julkaisua. Käyttäjän selainta ei ole päästy testaamaan.
