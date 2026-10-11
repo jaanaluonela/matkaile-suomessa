@@ -1,0 +1,25 @@
+Matkailu Suomessa v246 – Rovaniemi ja Omat matkat
+
+OSAPÄIVITYS nykyiseen v244/v245-sivustoon. Tämä ei ole koko sivusto.
+
+1. Ota varmuuskopio nykyisestä sivustokansiosta.
+2. Pura tämän ZIP-paketin tiedostot sivuston juureen, jossa index.html on.
+3. Korvaa samannimiset tiedostot. Älä poista muita tiedostoja.
+4. Julkaise tiedostot nykyiseen sivustoosi kuten aiemmat päivitykset.
+5. Lataa sivu uudelleen. Älä poista selaimen sivustotietoja: niissä ovat omat matkasi ja kuvasi.
+
+MUKANA
+- Rovaniemen kuntasivu, vaakuna ja perustiedot.
+- 19 käyntikohdesivua sekä Ounaskoski Camping ja CaravanPoint Arctic Circle.
+- Luonto, kulttuuri, lapsiperheiden kohteet, ravintolat, kahvilat, majoitus ja palvelut.
+- Lapin koontisivu sekä Rovaniemen tiedot hakuun ja lähihakuun.
+- Omat matkat -korjaus: yhteinen app.js, päiväkirja ja etusivun matkamäärä.
+- Molemmat tallennuspainikkeet myös Rovaniemen kaikilla 21 kohdesivulla.
+- Poistetut vanhasta tallennusmuodosta tuodut merkinnät eivät palaudu uudelleen.
+
+KÄYTÖN TARKISTUS
+Avaa Rovaniemi ja paina Lisää omiin matkoihin. Avaa sen jälkeen Omat matkat painikkeen alla olevasta linkistä tai etusivulta. Rovaniemi näkyy listassa. Uusi painallus ei lisää kaksoiskappaletta. Olen käynyt täällä merkitsee saman kohteen käydyksi. Myös yksittäisen nähtävyyden voi lisätä erikseen.
+
+Matkat ja kuvat säilyvät samalla selaimella ja laitteella. Eri laitteiden välinen synkronointi ei sisälly tähän päivitykseen.
+
+Tiedostojen vieminen nykyiselle verkkosivulle tarvitaan ennen kuin päivitys näkyy siellä.

@@ -28,3 +28,12 @@
 - Korvalan leirintäalue on suljettu: https://www.korvala.com/campsite
 
 Sijainnit: OpenStreetMap / Photon. Vain kohteen nimeä ja osoitetta vastaavat pisteet lisättiin. Epävarmoja retkikohteiden pisteitä ei lisätty lähihakuun. Karttalinkit käyttävät kohteen nimeä tai ilmoitettua saapumisosoitetta.
+
+## V246-tarkistus 11.10.2026
+
+Rovaniemen aiempi sisältö säilytettiin ja Omat matkat -toiminnot yhdistettiin samaan pakettiin. Arktikumin, Joulupukin Pajakylän, CaravanPointin, Ounaskosken sekä Korvalan ajankohtaiset tiedot tarkistettiin uudelleen.
+
+- Ounaskosken ilmoittama sulku 1.10.–22.11.2026: https://www.ounaskoski-camping-rovaniemi.com/yhteystiedot/
+- Pilkkeen toiminnan päättyminen: https://www.tiedekeskus-pilke.fi/tiedekeskus-pilke-sulkeutuu-lokakuun-alussa-2026/
+
+V246:n ohjelmalliset tarkistukset: tallennus kaikilta 22 Rovaniemen sivulta, kaksoiskappaleiden esto, käyty-merkintä, päiväkirjan luku ja tietojen säilyminen muokkauksen jälkeen, etusivun matkamäärä sekä vanhojen merkintöjen tuonti ja poistaminen. JavaScriptin syntaksi ja Rovaniemen sisäiset kohdelinkit tarkistettiin. Selaimessa tehtävää visuaalista tai puhelimen käyttöliittymätestiä ei tehty tässä ympäristössä.

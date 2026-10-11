@@ -21,7 +21,7 @@
   function loadTrips() {
     const trips = readArray(STORE);
     // Otetaan talteen myös aiempien versioiden matkat, ei hävitetä olemassa olevaa päiväkirjaa.
-    readArray(LEGACY).forEach(old => {
+    (localStorage.getItem('ms_trips_legacy_imported_v246') === '1' ? [] : readArray(LEGACY)).forEach(old => {
       if (!old || typeof old !== 'object') return;
       const place = String(old.locationId || old.id || '');
       if (trips.some(t => t.locationId === place || t.id === tripId(place) || (t.name === old.name && t.begin === old.date))) return;
@@ -57,6 +57,7 @@
         localStorage.setItem(visitedKey(id), '1');
       }
       localStorage.setItem(STORE, JSON.stringify(trips));
+      localStorage.setItem('ms_trips_legacy_imported_v246', '1');
       window.dispatchEvent(new CustomEvent('ms-trips-changed', {detail:{id:id,visited:!!trip.visited}}));
       return true;
     } catch(error) {
@@ -108,6 +109,7 @@
         button.textContent='✓ Lisätty omiin matkoihin';
         button.setAttribute('aria-pressed','true');
       } else {
+        button.textContent='Lisää omiin matkoihin';
         button.setAttribute('aria-pressed','false');
       }
     });

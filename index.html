@@ -428,7 +428,7 @@
 
     
 
-    <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small>Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
+    <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small id="v245-trips-summary">Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
     <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
   </main>
 
@@ -481,5 +481,23 @@
       }
     });
   </script>
+<script>
+// v245: näkyvä yhteys etusivun Omat matkat -kortin ja matkapäiväkirjan välillä.
+(function () {
+  function refresh() {
+    const output=document.getElementById('v245-trips-summary');
+    if (!output) return;
+    try {
+      const data=JSON.parse(localStorage.getItem('ms_trips_v2')||'[]');
+      if (!Array.isArray(data) || data.length===0) { output.textContent='Tallenna matkojen kuvat, muistiinpanot ja muistot.'; return; }
+      const last=data[0];
+      output.textContent=data.length+' tallennettua matkaa · '+(last.name||'Avaa matkapäiväkirja');
+    } catch (e) { /* Tallentamattomat matkat: näytetään alkuperäinen teksti. */ }
+  }
+  document.addEventListener('DOMContentLoaded',refresh);
+  window.addEventListener('pageshow',refresh);
+  window.addEventListener('storage',refresh);
+})();
+</script>
 </body>
 </html>
