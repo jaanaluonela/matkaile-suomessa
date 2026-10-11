@@ -54,7 +54,7 @@ whenReady(()=>{
     townSelect.addEventListener('change',()=>{if(townSelect.value)location.href=townSelect.value});
     fill();
     if(townSearch&&hits){
-      const aliases=[['Vääksy','Asikkala','asikkala.html#vaaksy'],['Kalkkinen','Asikkala','asikkala.html#kalkkinen'],['Vuokatti','Sotkamo','sotkamo.html#vuokatti'],['Ruka','Kuusamo','kuusamo.html#ruka'],['Hossa','Suomussalmi','suomussalmi.html#retket']];
+      const aliases=[['Napapiiri','Rovaniemi','rovaniemi.html#helmet'],['Joulupukin Pajakylä','Rovaniemi','rovaniemi-pajakyla.html'],['Vääksy','Asikkala','asikkala.html#vaaksy'],['Kalkkinen','Asikkala','asikkala.html#kalkkinen'],['Vuokatti','Sotkamo','sotkamo.html#vuokatti'],['Ruka','Kuusamo','kuusamo.html#ruka'],['Hossa','Suomussalmi','suomussalmi.html#retket']];
       const entries=[...Object.entries(allTowns).map(([n,u])=>({name:n,meta:regions[n]||'Kunta',url:u})),...aliases.map(([name,meta,url])=>({name,meta,url}))];
       function search(){
         const q=norm(townSearch.value);hits.replaceChildren();hits.classList.remove('active');if(!q)return;

@@ -226,7 +226,7 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
   function loadExtra(src,property){
     if(Array.isArray(window[property]))return;
     const script=document.createElement('script');script.src=src;
-    script.onload=()=>{if(input.value.trim())search();};
+    script.onload=()=>{window.applyRovaniemiV245?.();if(input.value.trim())search();};
     script.onerror=()=>{};document.head.append(script);
   }
   // Hakutulokset laajenevat myös karavaanikohteisiin ja paikkakuntien helmiin.
