@@ -1,21 +1,36 @@
-<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Omat matkat – Matkailu Suomessa</title>
+<!doctype html><html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Omat matkat – Matkailu Suomessa</title>
 <style>
 *{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#f7f7f2;color:#294436;margin:0}main{max-width:780px;margin:auto;padding:18px 18px 85px}h1{font-size:1.8rem}.card{background:#fff;border:1px solid #e2e8dc;border-radius:18px;padding:18px;margin:14px 0;box-shadow:0 3px 15px #243a2110}label{display:block;font-weight:650;margin:12px 0 5px}input,textarea{width:100%;font:inherit;border:1px solid #afbeaf;border-radius:10px;padding:11px}textarea{min-height:110px}button,.map{font:inherit;border:0;border-radius:10px;background:#28775a;color:white;padding:11px 15px;cursor:pointer;text-decoration:none;display:inline-block}.quiet{background:#eaf2ea;color:#285b42}.danger{background:#fae8e4;color:#893e30}.row{display:flex;gap:10px;flex-wrap:wrap}.row>div{flex:1;min-width:130px}.hidden{display:none}.muted{color:#667769}.trip{display:block;width:100%;text-align:left;margin:8px 0;background:white;color:#294436;border:1px solid #dce5da}.stop{border-left:3px solid #91c4a4;margin-left:8px;padding:9px 16px}.stop button{margin:5px 5px 0 0}.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:10px}.photo{position:relative}.photo img{width:100%;height:105px;object-fit:cover;border-radius:10px}.photo button{position:absolute;right:3px;top:3px;padding:3px 7px;background:white;color:#853c33}nav{position:fixed;bottom:0;background:white;border-top:1px solid #ddd;width:100%;display:flex;justify-content:center;gap:24px;padding:12px}nav a,a{color:#28664e} .status-visited{display:inline-block;padding:3px 8px;background:#e5f3e9;color:#17634f;border-radius:100px;font-size:.78rem;font-weight:750;margin-top:6px}
-.trip{padding:0;overflow:hidden}.trip-cover{display:block;width:100%;height:190px;object-fit:cover}.trip-info{display:block;padding:15px}.trip-title{display:block;font-size:1.1rem}.trip-meta{display:block;margin-top:5px;font-size:.86rem;color:#667769}</style><link rel="stylesheet" href="navigation-v191.css?v=244"><link rel="stylesheet" href="v244.css?v=244">
-</head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Paikkakunnilta lisätyt kohteet näkyvät täällä automaattisesti. Avaa matka ja täydennä päivämäärät, muistot sekä kuvat.</p>
+.trip{padding:0;overflow:hidden}.trip-cover{display:block;width:100%;height:190px;object-fit:cover}.trip-info{display:block;padding:15px}.trip-title{display:block;font-size:1.1rem}.trip-meta{display:block;margin-top:5px;font-size:.86rem;color:#667769}
+main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-height:46px}button:focus-visible,a:focus-visible,summary:focus-visible,.photo-add:focus-visible{outline:3px solid #db922d;outline-offset:3px}.editor-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f7f7f2ee;padding:10px 0}.editor-bar p{flex:1;font-size:13px;text-align:center;margin:0}.editor-bar button{white-space:nowrap;padding:11px 12px}.card h2{font-size:1.2rem}.date-row{display:flex;align-items:end;gap:10px}.date-row>div{flex:1;min-width:0}.optional{margin-top:16px}.optional summary{cursor:pointer;font-weight:650;min-height:44px;padding:9px 0}.photo-add{display:block;border:2px dashed #8ebca3;background:#eff7f0;color:#24543d;border-radius:14px;padding:18px;text-align:center;cursor:pointer;font-weight:700}#files{font-size:14px;margin-top:8px}.rating{padding:0;margin:22px 0 4px;border:0}.rating legend{font-weight:650;margin-bottom:8px}.stars{display:flex;gap:5px;margin:0 0 8px}.stars button{padding:0;background:transparent;color:#9a691f;font-size:34px;width:44px;min-height:48px}.rating .quiet{font-size:13px;margin-left:6px;padding:8px}.storage-note{font-size:13px;line-height:1.5}.status-error{color:#943e2e!important}#photo-status{font-size:13px}.photos:empty{display:none}
+@media(max-width:400px){main{padding-left:12px;padding-right:12px}.card{padding:15px}.editor-bar{flex-wrap:wrap}.editor-bar p{order:3;flex-basis:100%;text-align:left}.stars{gap:2px}}
+</style><link rel="stylesheet" href="navigation-v191.css?v=244"><link rel="stylesheet" href="v244.css?v=244">
+</head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Avaa kohde, lisää kuva ja kirjoita muisto. Muutokset tallentuvat automaattisesti.</p>
 <section id="list"><p class="muted">Omat matkakohteet ja matkapäiväkirja samassa paikassa.</p><button id="new">+ Lisää matka</button><div id="trips"></div></section>
-<section id="editor" class="hidden"><button id="back" class="quiet">← Omat matkat</button><div class="card"><h2>Matkan tiedot</h2><p id="source-page" class="hidden"><a id="source-link" href="#">Avaa paikkakunnan sivu ↗</a></p><label for="name">Matkan nimi</label><input id="name" placeholder="Esim. Kesäreissu"><div class="row"><div><label for="begin">Alkaa</label><input id="begin" type="date"></div><div><label for="end">Päättyy</label><input id="end" type="date"></div></div><label for="diary">Päiväkirja</label><textarea id="diary" placeholder="Mitä näit ja koit?"></textarea></div>
-<div class="card"><h2>📍 Reitti</h2><p class="muted">Lisää pysähdyspaikat matkustusjärjestyksessä.</p><div id="stops"></div><label for="place">Pysähdyspaikka</label><div class="row"><div><input id="place" placeholder="Paikkakunta tai osoite"></div><button id="add">Lisää</button></div><p><a id="map" class="map hidden" target="_blank" rel="noopener">Avaa reitti kartassa ↗</a></p></div>
-<div class="card"><h2>📷 Kuvat</h2><label for="files">Lisää kuvia</label><input id="files" type="file" accept="image/*" multiple><div id="photos" class="photos"></div><p class="muted">Matkat ja kuvat säilyvät tässä selaimessa. Selaimen tietojen poistaminen poistaa ne.</p></div>
-<button id="save">Tallenna matka</button> <button id="remove" class="danger">Poista matka</button></section></main><nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
+<section id="editor" class="hidden">
+<div class="editor-bar"><button id="back" class="quiet">← Omat matkat</button><p id="save-status" role="status" aria-live="polite"></p><button id="save">Valmis ✓</button></div>
+<div class="card"><label for="name">Paikka tai matkan nimi</label><input id="name" placeholder="Esim. Rovaniemi tai kesäreissu" autocomplete="off">
+<p id="source-page" class="hidden"><a id="source-link" href="#">Avaa kohteen sivu ↗</a></p>
+<div class="date-row"><div><label for="begin">Milloin kävit?</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button></div>
+<details class="optional"><summary>Useamman päivän matka</summary><label for="end">Päättymispäivä</label><input id="end" type="date"><p class="muted">Yhden päivän käynnille riittää ensimmäinen päivämäärä.</p></details>
+<h2>📷 Matkan kuvat</h2><label class="photo-add" for="files">＋ Lisää kuvia</label><input id="files" type="file" accept="image/*" multiple disabled><p id="photo-status" class="muted" role="status">Kuvien tallennusta avataan…</p><div id="photos" class="photos"></div>
+<label for="diary">Muistiinpanot ja muistot</label><textarea id="diary" placeholder="Mitä näit? Mikä jäi mieleen?"></textarea>
+<fieldset class="rating"><legend>Oma arvio</legend><div class="stars" aria-label="Valitse 1–5 tähteä"><button type="button" data-rating="1" aria-label="1 tähti" aria-pressed="false">☆</button><button type="button" data-rating="2" aria-label="2 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="3" aria-label="3 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="4" aria-label="4 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="5" aria-label="5 tähteä" aria-pressed="false">☆</button></div><span id="rating-label" class="muted">Ei vielä arviota</span> <button id="clear-rating" class="quiet" type="button">Tyhjennä arvio</button></fieldset>
+</div>
+<details class="card optional"><summary>📍 Lisää reitti ja pysähdyspaikat</summary><p class="muted">Halutessasi voit lisätä matkan pysähdykset järjestyksessä.</p><div id="stops"></div><label for="place">Pysähdyspaikka</label><div class="row"><div><input id="place" placeholder="Paikkakunta tai osoite"></div><button id="add">Lisää</button></div><p><a id="map" class="map hidden" target="_blank" rel="noopener">Avaa reitti kartassa ↗</a></p></details>
+<p class="muted storage-note">Matkat ja kuvat säilyvät tässä selaimessa ja tällä laitteella.</p><button id="remove" class="danger">Poista matka</button>
+</section></main><nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
 <script>
-const $=s=>document.getElementById(s),key='ms_trips_v2';let trips=[],active=null,db;
+const $=s=>document.getElementById(s),key='ms_trips_v2';let trips=[],active=null,db,rating=0,saveTimer,dirty=false,photoBusy=false;
 function id(){return crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random()}
-function persist(){localStorage.setItem(key,JSON.stringify(trips))}
+function status(text,error=false){$('save-status').textContent=text;$('save-status').classList.toggle('status-error',error)}
+function persist(){localStorage.setItem(key,JSON.stringify(trips));window.dispatchEvent(new CustomEvent('ms-trips-changed'))}
+function scheduleSave(){dirty=true;status('Tallennetaan…');clearTimeout(saveTimer);saveTimer=setTimeout(()=>capture(),450)}
+function updateRating(){document.querySelectorAll('[data-rating]').forEach(b=>{const n=Number(b.dataset.rating);b.textContent=n<=rating?'★':'☆';b.setAttribute('aria-pressed',String(n===rating))});$('rating-label').textContent=rating?rating+'/5 tähteä':'Ei vielä arviota'}
 function load(){
   try {
     let saved=JSON.parse(localStorage.getItem(key)||'[]');
-    trips=Array.isArray(saved)?saved:[];
+    if(!Array.isArray(saved))throw Error('Virheellinen matkalista');trips=saved;
     const old=localStorage.getItem('ms_trips_legacy_imported_v246')==='1'?[]:JSON.parse(localStorage.getItem('ms_trips')||'[]');
     if(Array.isArray(old)) old.forEach(x=>{
       if(!x||!x.name)return;
@@ -26,24 +41,65 @@ function load(){
     trips.forEach(t=>{if(t.locationId&&localStorage.getItem('ms_visited_'+t.locationId)==='1')t.visited=true;});
     persist();
     localStorage.setItem('ms_trips_legacy_imported_v246','1');
-  }catch(e){console.warn('Matkapäiväkirjan avaaminen epäonnistui',e);trips=[]}
+  }catch(e){console.warn('Matkapäiväkirjan avaaminen epäonnistui',e);status('Matkojen avaamisessa tai tallentamisessa oli ongelma.',true)}
   list();
 }
 let listVersion=0;
 function dateText(value){if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return value||'';const [y,m,d]=value.split('-');return Number(d)+'.'+Number(m)+'.'+y}
-async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}const records=await photoStore('get',null,null);if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const url=URL.createObjectURL(pictures[0].blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);b.append(info);b.onclick=()=>open(t.id);box.append(b)})}
+async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}let records=[];try{records=await photoStore('get',null,null)}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.'}if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const url=URL.createObjectURL(pictures[0].blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.rating?'★ '+t.rating+'/5':'',t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);b.append(info);b.onclick=()=>open(t.id);box.append(b)})}
 
-function back(){active=null;$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
-function open(k){active=k||id();let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','begin','end','diary'])$(f).value=t[f]||'';$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
-function capture(){let t=trips.find(x=>x.id===active);if(!t){t={id:active,stops:[]};trips.unshift(t)}for(let f of ['name','begin','end','diary'])t[f]=$(f).value;t.name=t.name.trim()||'Nimetön matka';persist();return t}
-function stops(){let a=trips.find(x=>x.id===active)?.stops||[],box=$('stops');box.replaceChildren();a.forEach((name,i)=>{let d=document.createElement('div');d.className='stop';let label=document.createElement('strong');label.textContent=(i+1)+'. '+name;d.append(label);for(let [txt,fn] of [['↑',()=>move(i,-1)],['↓',()=>move(i,1)],['Poista',()=>{capture().stops.splice(i,1);persist();stops()}]]){let b=document.createElement('button');b.className='quiet';b.textContent=txt;b.onclick=fn;d.append(b)}box.append(d)});$('map').classList.toggle('hidden',a.length<2);if(a.length>1)$('map').href='https://www.google.com/maps/dir/'+a.map(encodeURIComponent).join('/')+'/'}
-function move(i,n){let a=capture().stops,j=i+n;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];persist();stops()}
-function photoStore(mode,value,trip=active){return new Promise(resolve=>{if(!db)return resolve(mode==='get'?[]:null);let s=db.transaction('photos',mode==='get'?'readonly':'readwrite').objectStore('photos'),q=mode==='get'?s.getAll():mode==='put'?s.put(value):s.delete(value);q.onsuccess=()=>resolve(mode==='get'?(trip===null?q.result:q.result.filter(p=>p.trip===trip)):null);q.onerror=()=>resolve(mode==='get'?[]:null)})}
-async function photos(){let current=active,box=$('photos');box.replaceChildren();for(let p of await photoStore('get')){if(current!==active)return;let d=document.createElement('div'),img=document.createElement('img'),b=document.createElement('button');d.className='photo';img.src=URL.createObjectURL(p.blob);img.alt=p.name;img.onload=()=>URL.revokeObjectURL(img.src);b.textContent='×';b.setAttribute('aria-label','Poista kuva');b.onclick=async()=>{await photoStore('delete',p.id);photos()};d.append(img,b);box.append(d)}}
-$('new').onclick=()=>open();$('back').onclick=back;$('save').onclick=()=>{capture();back()};$('add').onclick=()=>{let name=$('place').value.trim();if(!name)return;capture().stops.push(name);persist();$('place').value='';stops()};$('place').onkeydown=e=>{if(e.key==='Enter')$('add').click()};
-$('files').onchange=async e=>{let files=[...e.target.files];capture();for(let f of files)if(f.type.startsWith('image/'))await photoStore('put',{id:id(),trip:active,name:f.name,blob:f});e.target.value='';photos()};
-$('remove').onclick=async()=>{if(!confirm('Poistetaanko matka ja sen kuvat?'))return;for(let p of await photoStore('get'))await photoStore('delete',p.id);trips=trips.filter(t=>t.id!==active);persist();back()};
-if(window.indexedDB){let q=indexedDB.open('ms_trip_photos',1);q.onupgradeneeded=()=>q.result.createObjectStore('photos',{keyPath:'id'});q.onsuccess=()=>{db=q.result;load()};q.onerror=load}else load();
+function back(){if(photoBusy){status('Odota, kuvia tallennetaan.');return}if(dirty&&!capture())return;clearTimeout(saveTimer);active=null;$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
+function open(k){clearTimeout(saveTimer);dirty=false;status('');active=k||id();let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
+function capture(){
+  clearTimeout(saveTimer);if(active===null)return null;
+  if($('begin').value&&$('end').value&&$('end').value<$('begin').value){status('Päättymispäivä on ennen käyntipäivää.',true);dirty=true;return null}
+  try{
+    // Read fresh records so saving one trip preserves places added in another tab.
+    const fresh=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(fresh))throw Error('Invalid trip list');
+    let t=fresh.find(x=>x.id===active)||trips.find(x=>x.id===active);
+    t=t?{...t}:{id:active,stops:[]};if(!Array.isArray(t.stops))t.stops=[];
+    for(let f of ['name','begin','end','diary'])t[f]=$(f).value;
+    t.name=t.name.trim()||'Nimetön matka';t.rating=rating;
+    const i=fresh.findIndex(x=>x.id===active);if(i<0)fresh.unshift(t);else fresh[i]=t;
+    localStorage.setItem(key,JSON.stringify(fresh));trips=fresh;dirty=false;status('✓ Tallennettu');$('remove').classList.remove('hidden');window.dispatchEvent(new CustomEvent('ms-trips-changed'));return t;
+  }catch(e){dirty=true;status('Tallennus ei onnistunut. Muutokset ovat vielä lomakkeessa.',true);return null}
+}
+function stops(){let a=trips.find(x=>x.id===active)?.stops||[],box=$('stops');box.replaceChildren();a.forEach((name,i)=>{let d=document.createElement('div');d.className='stop';let label=document.createElement('strong');label.textContent=(i+1)+'. '+name;d.append(label);for(let [txt,fn] of [['↑',()=>move(i,-1)],['↓',()=>move(i,1)],['Poista',()=>{const t=capture();if(!t)return;t.stops.splice(i,1);try{persist();stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}}]]){let b=document.createElement('button');b.className='quiet';b.textContent=txt;b.onclick=fn;d.append(b)}box.append(d)});$('map').classList.toggle('hidden',a.length<2);if(a.length>1)$('map').href='https://www.google.com/maps/dir/'+a.map(encodeURIComponent).join('/')+'/'}
+function move(i,n){let t=capture();if(!t)return;let a=t.stops,j=i+n;if(j<0||j>=a.length)return;[a[i],a[j]]=[a[j],a[i]];try{persist();stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}}
+function photoStore(mode,value,trip=active){return new Promise((resolve,reject)=>{
+ if(!db){if(mode==='get')resolve([]);else reject(Error('Kuvien tallennus ei ole käytettävissä'));return}
+ try{const tx=db.transaction('photos',mode==='get'?'readonly':'readwrite'),store=tx.objectStore('photos');let result=[];
+ const q=mode==='get'?store.getAll():mode==='put'?store.put(value):store.delete(value);
+ q.onsuccess=()=>{if(mode==='get')result=trip===null?q.result:q.result.filter(p=>p.trip===trip)};
+ tx.oncomplete=()=>resolve(mode==='get'?result:null);tx.onerror=tx.onabort=()=>reject(tx.error||Error('Kuvan tallennus epäonnistui'));
+ }catch(e){reject(e)}
+})}
+async function photos(){let current=active,box=$('photos');box.replaceChildren();let records=[];try{records=await photoStore('get')}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.';return}for(let p of records){if(current!==active)return;let d=document.createElement('div'),img=document.createElement('img'),b=document.createElement('button');d.className='photo';img.src=URL.createObjectURL(p.blob);img.alt=p.name;img.onload=()=>URL.revokeObjectURL(img.src);b.textContent='×';b.setAttribute('aria-label','Poista kuva');b.onclick=async()=>{try{await photoStore('delete',p.id);photos()}catch(e){$('photo-status').textContent='Kuvan poistaminen ei onnistunut.'}};d.append(img,b);box.append(d)}}
+$('new').onclick=()=>open();$('back').onclick=back;$('save').onclick=()=>{if(capture())back()};$('add').onclick=()=>{let name=$('place').value.trim();if(!name)return;let t=capture();if(!t)return;t.stops.push(name);try{persist();$('place').value='';stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}};$('place').onkeydown=e=>{if(e.key==='Enter')$('add').click()};
+for(const field of ['name','begin','end','diary'])$(field).addEventListener('input',scheduleSave);
+$('today').onclick=()=>{const d=new Date();$('begin').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');scheduleSave()};
+document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>{rating=Number(b.dataset.rating);updateRating();scheduleSave()});
+$('clear-rating').onclick=()=>{rating=0;updateRating();scheduleSave()};
+$('files').onchange=async e=>{
+ if(!capture())return;const trip=active,files=[...e.target.files].filter(f=>f.type.startsWith('image/'));photoBusy=true;$('files').disabled=true;let count=0;
+ try{for(const f of files){await photoStore('put',{id:id(),trip,name:f.name,blob:f});count++}$('photo-status').textContent=count+' kuvaa tallennettu.'}
+ catch(error){$('photo-status').textContent='Tallennettu '+count+' kuvaa. Kaikkien kuvien tallennus ei onnistunut; yritä uudelleen.'}
+ finally{photoBusy=false;$('files').disabled=!db;e.target.value='';if(active===trip)photos()}
+};
+$('remove').onclick=async()=>{
+ if(photoBusy||!confirm('Poistetaanko matka ja sen kuvat?'))return;clearTimeout(saveTimer);
+ try{let saved=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(saved))throw Error();saved=saved.filter(t=>t.id!==active);localStorage.setItem(key,JSON.stringify(saved));trips=saved;dirty=false;
+ try{for(const p of await photoStore('get'))await photoStore('delete',p.id)}catch(e){console.warn('Kuvien poistaminen epäonnistui',e)}back();
+ }catch(e){status('Matkan poistaminen ei onnistunut.',true)}
+};
+function photosUnavailable(){$('files').disabled=true;$('photo-status').textContent='Kuvien tallennus ei ole käytettävissä tässä selaimessa. Muut matkan tiedot voi silti tallentaa.'}
+load();
+if(window.indexedDB){
+ try{const q=indexedDB.open('ms_trip_photos',1);q.onupgradeneeded=()=>q.result.createObjectStore('photos',{keyPath:'id'});
+ q.onsuccess=()=>{db=q.result;$('files').disabled=false;$('photo-status').textContent='Ensimmäinen kuva näkyy matkan kansikuvana.';if(active===null)list();else photos()};q.onerror=q.onblocked=photosUnavailable;
+ }catch(e){photosUnavailable()}
+}else photosUnavailable();
+window.addEventListener('pagehide',()=>{if(dirty)capture()});
 window.addEventListener('storage',e=>{if(active===null&&(e.key===key||e.key===null))load()});
 window.addEventListener('pageshow',()=>{if(active===null)load()});
 </script></body></html>
