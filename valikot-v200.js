@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuusamo:'kuusamo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuusamo:'Pohjois-Pohjanmaa'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Suomussalmi:'suomussalmi.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Suomussalmi:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuhmo:'kuhmo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuhmo:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Heinola:'heinola.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Heinola:'Päijät-Häme'});
@@ -79,6 +80,11 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Ruka',meta:'Kuusamo · tunturi ja matkailukeskus',url:'kuusamo.html#ruka',rank:1,aliases:['Rukatunturi','Rukan kylä']},
+    {name:'Juuma',meta:'Kuusamo · Pieni Karhunkierros',url:'kuusamo.html#karhunkierros',rank:1,aliases:['Pieni Karhunkierros','Myllykoski']},
+    {name:'Oulanka',meta:'Kuusamo · kansallispuisto',url:'kuusamo.html#retket',rank:1,aliases:['Oulangan kansallispuisto','Kiutaköngäs']},
+    {name:'Käylä',meta:'Kuusamo · kylä',url:'kuusamo.html#alueet',rank:1},
+    {name:'Karhunkierros',meta:'Kuusamo · vaellusreitti',url:'kuusamo.html#karhunkierros',rank:1,aliases:['Iso Karhunkierros','Pieni Karhunkierros']},
     {name:'Ämmänsaari',meta:'Suomussalmi · keskustaajama',url:'suomussalmi.html#alueet',rank:1,aliases:['Ammansaari','Jalonniemi']},
     {name:'Hossa',meta:'Suomussalmi · kansallispuisto',url:'suomussalmi.html#retket',rank:1,aliases:['Hossan kansallispuisto','Hossan Lumo','Karhunkainalo']},
     {name:'Ruhtinansalmi',meta:'Suomussalmi · kylä',url:'suomussalmi.html#alueet',rank:1},

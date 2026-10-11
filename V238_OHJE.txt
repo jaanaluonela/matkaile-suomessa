@@ -1,0 +1,24 @@
+MATKAILU SUOMESSA v238 – KUUSAMO / KARHUNKIERROS
+
+ASENNUS
+1. Tämä on aiempien v230–v237-päivitysten päälle tuleva OSAPÄIVITYS, ei itsenäinen sovellus.
+2. Pura ZIP ja kopioi tiedostot nykyiseen sovelluskansioon index.html:n viereen.
+3. Korvaa saman nimiset JS-tiedostot; ÄLÄ poista aiemmin asennettuja kaupunkeja.
+4. Päivitä sivu Ctrl+F5.
+5. Kokeile etusivun hakuja: Kuusamo, Ruka, Karhunkierros, Juuma, Oulanka.
+6. Pohjois-Pohjanmaan maakuntasivusta pääsee Kuusamoon.
+
+SISÄLTÖ
+- Kuusamon vaakuna ja asukasluku 14 800 (31.12.2025)
+- 43 helmeä omine sivuineen, mm. Iso ja Pieni Karhunkierros
+- 8 leirintä-, caravan- ja matkaparkkikohdetta
+- 2 vaellusreitin viralliset karttalinkit ja bussilinkki
+- Kunnan hakutiedot, Ruka/Juuma/Oulanka-aluenimet sekä maakuntasivu
+- Nykyiset muiden kuntien tiedot säilyvät.
+
+REITTITARKENNUS
+82 km Karhunkierros alkaa Hautajärveltä Sallan puolelta ja päättyy Saaruaan Kuusamossa.
+Pieni Karhunkierros on 11,8 km vaativa rengasreitti Juumassa Kuusamossa.
+Riisitunturi on Posiolla, Julma-Ölkky Suomussalmella.
+
+Palvelut, hinnat, kaudet, turvallisuus ja reittien tila tarkistettava paikan omilta sivuilta.
