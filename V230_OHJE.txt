@@ -1,0 +1,16 @@
+Matkailu Suomessa – v230 Loviisa
+
+Lataa ja pura MOLEMMAT osat. Kopioi molempien ZIP-tiedostojen sisältö sivuston juurikansioon. Korvaa samannimiset tiedostot. Älä poista muita tiedostoja. Paketti jatkaa v228/v229-päivityksiä ja tarvitsee aiempien päivitysten kohdesivut sekä yhteiset tyylit ja hakutoiminnot.
+
+Osa 1: Loviisan kuntasivu, kohdesivut, yöpyminen, oma tyyli sekä ohje ja lähteet.
+Osa 2: yhteisten hakujen, valikoiden ja tietojen päivitykset. Molemmat tarvitaan.
+
+Loviisa: 14 helmeä, Loviisa Camping ja keskustan matkaparkki, valitut majoitusvaihtoehdot, retket, kulttuuri, kahvilat ja ravintolat, palvelut, tapahtumat, kylät sekä vaakuna ja asukasluku. Strömforsin aiemmin lisätty kohdesivu säilyy.
+
+Loviisa löytyy Uusimaa-sivulta, kuntavalikosta, etusivun hausta, Helmet-listasta ja lähihakujen lähtöpaikoista. Ruotsinpyhtää/Strömfors käy myös lähtöpaikaksi.
+
+Loviisa Campingin vuoden 2026 kausi päättyi 15.9.; tarkista seuraava kausi. Keskustan matkaparkin osoite päivitetty palveluntarjoajan mukaan Sibeliuksenkatu 1:ksi. Motellin osoite on edelleen Sibeliuksenkatu 3. Svartholman kartta ja etäisyys tarkoittavat laivamatkan lähtöpaikkaa Laivasillalla.
+
+Aiemmat 114 helmeä ja muiden kuntien karavaanikohteet säilytetty. Oman käyntimerkinnän ja vanhojen Loviisa-hakulinkkien toiminta testattu.
+
+Tarkistettu paikallisissa päivitystiedostoissa; julkaistua sivustoa tai käyttäjän latausta ei tällä vahvisteta.

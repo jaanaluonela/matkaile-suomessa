@@ -1,0 +1,27 @@
+Loviisan lähteet – tarkistettu 11.10.2026
+
+https://matkaparkki.com/matkaparkit/loviisan-keskustan-matkaparkki/
+https://saltbodan.fi/fi
+https://stromforsinruukki.com/saapuminen/
+https://teehelmi.fi/
+https://www.loviisa.fi/ihanaloviisa/kohdekortit/favorit-cafe-teashop/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/loviisan-laivasilta/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/luontoaktiviteetit/polut-ja-vaellusreitit/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/luontoaktiviteetit/uimarannat/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/nahtavyyksia/museoita-ja-nayttelyita/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/stromforsin-ruukki/kukuljarven-vaellusreitti/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/svartholman-merilinnoitus/
+https://www.loviisa.fi/kulttuuri-ja-vapaa-aika/loviisa-camping/
+https://www.malmgard.fi/
+https://www.tuhannentuskankahvila.fi/
+https://www.visitfinland.com/en/product/50ad62da-7c3c-47c3-a07c-96533aced144/bonga-castle/
+https://www.visitkotkahamina.fi/tunnelmallinen-loviisa/
+https://www.loviisa.fi/ihanaloviisa/ruokaile/kahvilat/
+https://www.loviisa.fi/ihanaloviisa/majoitu/hotellit/
+https://www.loviisa.fi/ihanaloviisa/nae-ja-koe/nahtavyyksia/puistoja-ja-puutarhoja/
+https://kuntavaesto.com/kunta/loviisa/
+https://www.loviisa.fi/kaupunki-ja-paatoksenteko/hallinto/viestinta/kaupungin-vaakuna/
+
+Koordinaatit: nimetyt OpenStreetMap-kohteet Photon-haulla; Malmgård 47 tarkka Esri-osoiteosuma (score 100). Matkaparkin aiemmin varmennettu kohdepiste säilytetty, osoite korjattu palveluntarjoajan mukaan. Svartholmassa lähtölaituri, Kukuljärvellä reitin lähtöalue. Vanhan kaupungin karttapiste on Poikkikujalla.
+
+Tarkistukset: 25 ulkoista verkkolinkkiä vastasi onnistuneesti; 180 paikallista sivu-/tiedostoviittausta löytyi. Kuntavalikko, etusivun haku, 14 helmen listaus, lähihaku, käyntimerkintä ja vanha matkaparkin tunniste testattu.
