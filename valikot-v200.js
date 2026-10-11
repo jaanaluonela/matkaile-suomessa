@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Lahti:'lahti.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Lahti:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Porvoo:'porvoo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Porvoo:'Uusimaa'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa:'loviisa.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Loviisa:'Uusimaa'});
 (() => { const item = {"id": "vuokatinrinteet-caravan", "name": "Vuokatinrinteiden Caravanalue – Vuokatti", "city": "Sotkamo", "address": "Veikontie 3, 88610 Vuokatti", "type": "camping", "description": "Talvikauden caravanalue Pohjoisrinteiden juurella. Avoinna 1.10.–15.5., kesällä suljettu. Sähkö, WC:t, suihkut, saunat, vedenottopiste ja kemiallisen WC:n tyhjennys; ei harmaavesisäiliön ajokaivoa. Käyntipaikka varattava ennakkoon.", "url": "vuokatinrinteet-caravan.html", "website": "https://vuokatti.fi/paikka/vuokatinrinteet-5/", "season": "Talvikausi 1.10.–15.5.", "checked": "2026-10-08", "map": "https://www.google.com/maps/search/?api=1&query=Veikontie%203%2C%2088610%20Vuokatti", "navigate": "https://www.google.com/maps/dir/?api=1&destination=Veikontie%203%2C%2088610%20Vuokatti"}; const a = window.caravanPlaces || (window.caravanPlaces = []); const i=a.findIndex(p=>p.id===item.id); if(i<0)a.push(item);else a[i]={...a[i],...item}; })();
@@ -75,6 +76,7 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Nastola', meta:'Lahti · kaupunginosa', url:'lahti.html#alueet', rank:1, aliases:['Nastolan leirintäalue','Kangaslampi Nastola']},
     {name:'Saariston rengastie', meta:'Varsinais-Suomi · matkailureitti', url:'saariston-rengastie.html', rank:2, aliases:['Turun rengastie','Turun saariston rengastie','Saaristotie','Saariston suuri rengastie']},
     {name:'Pieni rengastie', meta:'Turun saaristo · matkailureitti', url:'saariston-rengastie.html#pieni', rank:2, aliases:['Saariston pieni rengastie','Östern','Seili-Hanka']},
     {name:'Vääksy', meta:'Asikkala · taajama', url:'asikkala.html', rank:1, aliases:['Vanha Vääksy']},

@@ -1,0 +1,23 @@
+Matkailu Suomessa – v234 LAHTI
+
+Tämä on LISÄPÄIVITYS v230 (Loviisa), v231 (hakukorjaus), v232 (Porvoo) ja v233 (Saariston rengastie) -versioiden päälle.
+
+ASENNUS
+1. Pura ZIP-tiedosto.
+2. Kopioi kaikki sen HTML-, CSS- ja JS-tiedostot samaan kansioon kuin sovelluksen index.html.
+3. Korvaa samannimiset tiedostot, älä poista mitään muuta.
+4. Päivitä selain painamalla Ctrl + F5 (Mac Cmd + Shift + R).
+5. Testaa etusivun haku: Lahti, Lahd, Nastola. Avaa Lahti ja kokeile helmet ja matkaparkit.
+
+SISÄLTÖ
+- Oma lahti.html-kuntasivu, sama tyyli ja ominaisuudet kuin Porvoossa/Loviisassa
+- Tilastokeskuksen vahvistama väkiluku 121 832 (31.12.2025) ja Lahden vaakuna
+- 29 kiinnostavaa nähtävyyttä, luontokohdetta, kahvilaa ja ravintolaa
+- 6 vahvistettua matkaparkki- tai caravan-kohdetta Lahden kaupungin alueella
+- Kaikilla kohteilla oma esittelysivu ja karttalinkki
+- Etusivun haku ja yhteiset Käyntikohteet- ja Caravan-tiedostot päivitetty
+- Aiemmat Loviisan, Porvoon, Kainuun ja Saariston rengastien kohteet säilyvät
+
+HUOM
+Camping Messilä sijaitsee Hollolassa, eikä sitä esitetä Lahden matkaparkkina.
+Hinnat, aukiolot ja kausipalvelut on tarkistettava ennen matkalle lähtöä.
