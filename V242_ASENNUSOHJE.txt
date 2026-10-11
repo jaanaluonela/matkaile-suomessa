@@ -1,0 +1,22 @@
+MATKAILU SUOMESSA – v242 Paikkakunnat-sivun alavalikko
+
+Tämä paketti korjaa nimenomaan maakunnat.html-sivun puuttuvan alavalikon.
+
+ASENNUS GITHUBIIN
+1. Avaa https://github.com/jaanaluonela/matkaile-suomessa
+2. Etsi maakunnat.html-tiedosto.
+3. Lataa ZIP-paketista purettu uusi maakunnat.html GitHubin pääkansioon
+   korvaten vanha saman niminen tiedosto (Commit changes).
+4. Odota GitHub Pages -julkaisun valmistumista ja avaa Paikkakunnat-sivu
+   uudelleen. Tarvittaessa sulje Safari-välilehti ja avaa uudelleen.
+
+HUOM: ZIP-tiedostoa ei pidä lähettää GitHubiin sellaisenaan. Pura se ensin.
+Tämä päivitys ei edellytä app.js:n vaihtamista.
+
+MUUTOKSET
+- Lisätty kolmen valinnan (Koti, Yöpyminen, Paikkakunnat) alavalikko
+  suoraan maakunnat.html:n HTML-rakenteeseen.
+- Kiinnitys näytön alareunaan iPhone- ja tietokonenäkymässä.
+- Huomioitu iPhonen alareunan turva-alue.
+- Kuntahaku, kartta ja Keski-Suomi-kortti jätetty ennalleen.
+- Vanha v241 JavaScript-korjaus tunnistaa valikon eikä lisää toista.

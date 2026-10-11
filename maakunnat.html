@@ -3,7 +3,7 @@
 <html lang="fi">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <title>Tutustu Suomeen – Matkaile Suomessa</title>
 <link href="styles.css" rel="stylesheet"/>
 <script src="app.js"></script>
@@ -40,7 +40,76 @@
 
 </style>
 <link href="navigation-v191.css" rel="stylesheet"/>
-<script defer="" src="kunnat-v198.js"></script><script defer="" src="caravan-data.js"></script><script defer src="keski-suomi-data-v220.js"></script><script defer src="keski-suomi-data-v221.js"></script><script defer="" src="valikot-v200.js"></script><script defer="" src="paikkakunnat-v210.js"></script><link href="mobiili-v210.css" rel="stylesheet"/></head>
+<script defer="" src="kunnat-v198.js"></script><script defer="" src="caravan-data.js"></script><script defer src="keski-suomi-data-v220.js"></script><script defer src="keski-suomi-data-v221.js"></script><script defer="" src="valikot-v200.js"></script><script defer="" src="paikkakunnat-v210.js"></script><link href="mobiili-v210.css" rel="stylesheet"/>
+<!-- v242: Paikkakunnat-sivun alavalikko suoraan HTML:ssä, myös ilman JavaScriptiä. -->
+<style id="paikkakunnat-nav-v242">
+  html { scroll-padding-bottom: 112px; }
+  body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important; }
+  .map-page { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)) !important; }
+  .site-nav.site-nav--v242 {
+    position: fixed !important;
+    inset: auto 0 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 6px 12px calc(6px + env(safe-area-inset-bottom, 0px)) !important;
+    background: #fff !important;
+    border-top: 1px solid #e3e8e5 !important;
+    box-shadow: 0 -3px 14px rgba(11,35,69,.10) !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner > a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    min-width: 0 !important;
+    min-height: 70px !important;
+    padding: 5px 2px !important;
+    border: 0 !important;
+    border-radius: 18px !important;
+    box-sizing: border-box !important;
+    color: #0b2345 !important;
+    background: transparent !important;
+    text-decoration: none !important;
+    font: 650 13px/1.25 system-ui,-apple-system,sans-serif !important;
+    text-align: center !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner > a::before {
+    display: block !important;
+    width: 42px !important;
+    height: 32px !important;
+    content: attr(data-icon) !important;
+    background: none !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+    font: 28px/32px system-ui,-apple-system,sans-serif !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner > a[href="index.html"]::before {
+    font-size: 35px !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner > a[aria-current="page"] {
+    background: #ffeadf !important;
+    color: #0b2345 !important;
+  }
+  .site-nav.site-nav--v242 .site-nav-inner > a:focus-visible {
+    outline: 3px solid #f87913 !important;
+    outline-offset: 2px !important;
+  }
+</style>
+</head>
 <body>
 <div class="map-page">
 <header class="map-hero">
@@ -125,5 +194,14 @@
 
 </div>
 
+
+<!-- v242: Kiinteä päävalikko. Ei tarvitse app.js:n latautumista. -->
+<nav class="site-nav site-nav--v242" aria-label="Päävalikko">
+  <div class="site-nav-inner">
+    <a href="index.html" data-icon="⌂">Koti</a>
+    <a href="yopyminen.html" data-icon="🚐">Yöpyminen</a>
+    <a href="maakunnat.html" data-icon="📍" aria-current="page">Paikkakunnat</a>
+  </div>
+</nav>
 </body>
 </html>
