@@ -1,0 +1,23 @@
+MATKAILU SUOMESSA v256 – SELKEÄT MAAKUNNAT POHJOISESTA ETELÄÄN
+
+PÄIVITYS v255-SIVUSTON PÄÄLLE
+1. Avaa GitHubissa sivustosi tiedostot (juurikansio).
+2. Lataa tämän ZIP-paketin VIISI verkkosivutiedostoa samaan juurikansioon.
+3. Korvaa samannimiset vanhat index.html, maakunnat.html ja etusivu-haku-v253.js.
+4. Lisää kaksi uutta tiedostoa: v256-maakunnat.css ja v256-maakunnat.js.
+5. Älä poista mitään muita tiedostoja tai kansioita.
+6. Odota GitHub Pagesin päivittymistä, ja päivitä puhelimen sivu tarvittaessa uudelleen.
+
+MUUTOKSET
+- Maakunnat näytetään isoina laatikkoina allekkain, pohjoisesta etelään.
+- Kaikki 19 maakuntaa ovat mukana. Lappi ensin, Uusimaa viimeisenä.
+- Maakuntalaatikko avaa kyseisen maakunnan kuntaluettelon suoraan samalla sivulla.
+- Kuntalinkit vievät matkailuoppaaseen tai keskeneräisten kuntien perustietokorttiin.
+- Haku suodattaa kuntia ja maakuntia.
+- Suosikit säilyvät (samat paikallisen selaimen tallennusavaimet).
+- Etusivun päällekkäiset pikamaakunnat, maakuntavalitsimet ja uudet maakunnat -linkkilaatikko on poistettu.
+- Etusivun paikka- ja kohdehaku sekä matkaparkit, leirintäalueet ja omat matkat pysyvät.
+- Muut sivuston tiedostot ja sisällöt säilyvät ennallaan.
+
+TÄMÄ ON PIENI PÄIVITYSPAKETTI, EI KOKO ITSENÄINEN SIVUSTO.
+Sivusto tarvitsee edelleen aiemmat kunta-, CSS-, JS- ja kuvatiedostonsa GitHubista.

@@ -1,0 +1,47 @@
+/* Matkailu Suomessa v256 – yksinkertainen maakuntaluettelo */
+:root{--forest:#175541;--muted:#546c61;--line:#d3e5db}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fafbf8;color:#153e31;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.regions-page{max-width:760px;margin:auto;padding:14px 16px calc(136px + env(safe-area-inset-bottom))}
+.regions-back{display:inline-flex;align-items:center;min-height:36px;margin-bottom:10px;font-weight:750;font-size:14px;color:#1f654c;text-decoration:none}
+.regions-hero{padding:19px 18px 18px;border-radius:22px;background:#e7f2ec;border:1px solid #d5e8dd;margin-bottom:13px}
+.regions-kicker{margin:0 0 4px;color:#397a62;font-size:12px;letter-spacing:.06em;font-weight:850}
+.regions-hero h1{font-size:clamp(27px,5.7vw,37px);margin:0 0 5px;color:#165440;line-height:1.17;letter-spacing:-.035em}
+.regions-hero p{margin:0 0 7px;font-size:15px;line-height:1.45;color:#3e5f50}
+.regions-hero small{font-size:12px;color:#547769;font-weight:650}
+.regions-search{padding:2px 0 6px}
+.regions-search label{display:block;font-size:14px;font-weight:780;margin:4px 0 7px;color:#245945}
+.regions-input-wrap{position:relative}
+.regions-input-wrap input{width:100%;min-height:50px;padding:12px 44px 12px 15px;background:#fff;border:1px solid #bed9ca;border-radius:14px;font:inherit;font-size:16px;color:#194534;box-shadow:none}
+.regions-input-wrap span{position:absolute;right:16px;top:4px;font-size:29px;color:#236047;pointer-events:none}
+.regions-status{margin:8px 0 12px;font-size:13px;color:#5e776a;min-height:17px}
+.regions-list{display:grid;gap:10px}
+.region-card{min-width:0;background:var(--card-bg,#eaf2eb);border:1px solid #d5e7dd;border-radius:20px;overflow:hidden;scroll-margin-top:14px}
+.region-card:nth-child(6n+1){--card-bg:#e6f1eb}
+.region-card:nth-child(6n+2){--card-bg:#e9f0f7}
+.region-card:nth-child(6n+3){--card-bg:#f5eadf}
+.region-card:nth-child(6n+4){--card-bg:#f2edf5}
+.region-card:nth-child(6n+5){--card-bg:#f2f1e4}
+.region-card:nth-child(6n+6){--card-bg:#eaf3ee}
+.region-card summary{display:flex;align-items:center;gap:8px;min-height:79px;padding:14px 17px;list-style:none;cursor:pointer}
+.region-card summary::-webkit-details-marker{display:none}
+.region-card summary strong{font-size:clamp(20px,5.1vw,25px);font-weight:830;line-height:1.17;letter-spacing:-.025em;color:#175845;flex:1;overflow-wrap:anywhere}
+.region-card summary .region-arrow{font-size:26px;font-weight:600;color:#175845;transition:transform .15s ease;flex:none}
+.region-card[open] summary .region-arrow{transform:rotate(90deg)}
+.region-content{padding:0 13px 14px}
+.region-meta{margin:0 3px 10px;padding-top:9px;border-top:1px solid #cddfd4;font-size:13px;font-weight:700;color:#477360}
+.region-towns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.region-town{background:white;border:1px solid #d8e7dd;border-radius:12px;display:flex;min-width:0;align-items:stretch;overflow:hidden}
+.region-town a{min-width:0;flex:1;padding:12px 4px 12px 12px;color:#195944;font-size:15px;font-weight:750;text-decoration:none;line-height:1.25;overflow-wrap:anywhere}
+.region-town a small{display:block;margin-top:4px;font-size:11px;font-weight:500;color:#668174}
+.region-town button{appearance:none;border:0;background:transparent;padding:2px 9px;min-width:37px;cursor:pointer;font-size:23px;color:#91aa9c}
+.region-town button[aria-pressed=true]{color:#d0526b}
+.region-guide{display:block;margin:12px 1px 0;background:#fff;border-radius:12px;padding:13px;color:#216a50;font-weight:800;font-size:14px;text-decoration:none}
+.regions-empty{background:#fff;padding:24px;border:1px dashed #bfd7c8;border-radius:15px;color:#527062}
+.regions-footnote{margin:17px 3px;font-size:12px;line-height:1.5;color:#62796c}
+.region-card summary:focus-visible,.region-town a:focus-visible,.region-town button:focus-visible,.regions-search input:focus-visible,.regions-back:focus-visible{outline:3px solid #ed923c;outline-offset:2px}
+.site-nav{z-index:50}
+@media(max-width:480px){.regions-page{padding:11px 12px calc(132px + env(safe-area-inset-bottom))}.region-card summary{min-height:73px;padding:11px 14px}.regions-hero{padding:16px}}
+@media(max-width:360px){.region-towns{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.region-card summary .region-arrow{transition:none}}
