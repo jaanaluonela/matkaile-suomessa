@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Sotkamo:'sotkamo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Sotkamo:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuusamo:'kuusamo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuusamo:'Pohjois-Pohjanmaa'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Suomussalmi:'suomussalmi.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Suomussalmi:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuhmo:'kuhmo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuhmo:'Kainuu'});
@@ -80,6 +81,11 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Vuokatti',meta:'Sotkamo · lomakeskus ja vaarat',url:'sotkamo.html#vuokatti',rank:1,aliases:['Vuokatinrinteet','Katinkulta','Vuokatinvaara']},
+    {name:'Naapurinvaara',meta:'Sotkamo · kylä ja retket',url:'sotkamo.html#retket',rank:1,aliases:['Naapurinvaaran huvikeskus']},
+    {name:'Hiukka',meta:'Sotkamo · hiekkaranta',url:'sotkamo.html#retket',rank:1,aliases:['Hiukan hiekat']},
+    {name:'Tipasoja',meta:'Sotkamo · luontopolku',url:'sotkamo.html#retket',rank:1},
+    {name:'Hiidenportti',meta:'Sotkamo · kansallispuisto',url:'sotkamo.html#retket',rank:1,aliases:['Hiidenportin kansallispuisto']},
     {name:'Ruka',meta:'Kuusamo · tunturi ja matkailukeskus',url:'kuusamo.html#ruka',rank:1,aliases:['Rukatunturi','Rukan kylä']},
     {name:'Juuma',meta:'Kuusamo · Pieni Karhunkierros',url:'kuusamo.html#karhunkierros',rank:1,aliases:['Pieni Karhunkierros','Myllykoski']},
     {name:'Oulanka',meta:'Kuusamo · kansallispuisto',url:'kuusamo.html#retket',rank:1,aliases:['Oulangan kansallispuisto','Kiutaköngäs']},

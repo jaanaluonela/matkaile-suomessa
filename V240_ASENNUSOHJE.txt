@@ -1,0 +1,22 @@
+MATKAILU SUOMESSA – v240 SOTKAMO JA VUOKATTI
+
+OSAPÄIVITYS – ei itsenäinen koko sovellus.
+1. Aiemmat päivitykset v238 ja v239 tulee olla asennettu.
+2. Pura kaikki v240-zipin tiedostot sovelluksen kansion JUUREEN index.html:n viereen.
+3. Korvaa samannimiset tiedostot, älä poista muita tiedostoja.
+4. Lataa sivu uudelleen (tietokoneella Ctrl + F5, puhelimella päivitä sivu / tarvittaessa tyhjennä sivuston välimuisti).
+5. Testaa hakusanat Sotkamo, Vuokatti, Hiukka, Naapurinvaara, Hiidenportti.
+
+SISÄLTÖ
+- Sotkamon vaakuna, asukasluku 10 161 (31.12.2025)
+- 40 Näe ja koe -kohdesivua ja karttahaku
+- 3 varmistettua caravan/leirintäaluetta, kaudet oikein eriteltyinä
+- Vuokatin alueen sivulle linkki Sotkamon pääsivulle
+- Yhteiset hakutiedostot päivitetty aiempaa poistamatta
+
+TÄRKEÄT HUOMIOT
+- Kattivankkuri: kesän vastaanottokäytäntö vaihtui 30.9.2026 talvikauden vastaanottoon.
+- Vuokatinrinteiden Caravanalue: vain talvikaudella 1.10.–15.5.
+- Naapurinvaaran Lomakeskus: caravan- ja telttailupalvelut kesällä.
+- Vuokatinrannan caravanalue on uudistuksen alla – sitä ei lisätty aktiivisten leirintäalueiden listaan.
+- Tiilikkajärven kansallispuisto ulottuu Sotkamoon ja Rautavaaraan; tunnetuimmat lähtöpisteet Rautavaaran puolella.
