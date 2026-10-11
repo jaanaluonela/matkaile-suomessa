@@ -1,0 +1,10 @@
+Matkailu Suomessa v252 – Pohjanmaa, Ylivieska ja Kokkola
+
+Tämä on pieni PÄIVITYSPAKETTI, ei koko sivusto.
+Pura ZIP nykyisen sivuston juurikansioon. Korvaa samannimiset tiedostot. Älä poista muita tiedostoja.
+Pohjana v251. Paketti säilyttää v251:n etusivun ja maakuntasivun. Jos käytössä on niitä uudempi versio, yhdistä index.html- ja maakunnat.html-tiedostojen pohjanmaa-data-v252.js-lisäykset omaan uudempaan versioon sen sijaan, että korvaat nämä kaksi tiedostoa.
+
+Mukana kolme maakuntalistaa (14, 8 ja 30 kuntaa), Ylivieska ja Kokkola, 29 kohdesivua, hakuintegraatio sekä Omat matkat -painikkeet.
+Muiden kuntien valmiit sivut linkitetään olemassa olevasta kuntarekisteristä.
+Aiemmat kuvat ja muut kuntasivut jäävät nykyiseen sivustoon.
+Lataa tarvittaessa sivu uudelleen ilman välimuistia.
