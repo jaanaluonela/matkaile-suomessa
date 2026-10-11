@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuhmo:'kuhmo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuhmo:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Heinola:'heinola.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Heinola:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Lahti:'lahti.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Lahti:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Porvoo:'porvoo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Porvoo:'Uusimaa'});
@@ -77,6 +78,9 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Lentiira',meta:'Kuhmo · kylä',url:'kuhmo.html#alueet',rank:1,aliases:['Lentiiran Lomakylä','Lentiiran kirkko']},
+    {name:'Viiksimo',meta:'Kuhmo · kylä',url:'kuhmo.html#alueet',rank:1,aliases:['Boreal Wildlife Centre']},
+    {name:'Tönölä',meta:'Kuhmo · alue',url:'kuhmo.html#alueet',rank:1,aliases:['Kalevala Camping']},
     {name:'Vierumäki',meta:'Heinola · taajama',url:'heinola.html#alueet',rank:1,aliases:['Suomen Urheiluopisto','Vierumäen urheiluopisto']},
     {name:'Jyränkö',meta:'Heinola · kaupunginosa',url:'heinola.html#alueet',rank:1},
     {name:'Paistjärvi',meta:'Heinola · kylä',url:'heinola.html#retket',rank:1,aliases:['Pirunkirkko Heinola','Sonnanen']},

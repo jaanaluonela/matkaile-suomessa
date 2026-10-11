@@ -1,0 +1,18 @@
+MATKAILU SUOMESSA v236 – KUHMO
+
+ASENNUS
+1. Varmista, että nykyisessä sovelluskansiossa ovat aiemmat versiot v230–v235.
+2. Pura tämä ZIP ja kopioi sen kaikki tiedostot samaan kansioon index.html:n viereen.
+3. Korvaa vain samannimiset tiedostot. ÄLÄ poista muita tiedostoja.
+4. Päivitä selain Ctrl+F5.
+5. Hae etusivulta Kuhmo, Lentiira ja Viiksimo; avaa uusi kuhmo.html.
+6. Testaa helmien karttalinkit, majoituskohteet ja Omat matkat -painikkeet.
+
+KOHDEKOOSTE
+- Kuhmon oma sivu, vaakuna ja väestötilasto (7 300 henkeä 31.12.2025)
+- 33 esittelykorttia ja omaa kohdesivua
+- 4 leirintä-/matkaparkkikohdetta, kaksi erillistä Kalevala-alueen vaihtoehtoa
+- Päivitetyt käyntikohde- ja caravan-hakemistot sekä hakunimet
+- Loviisan, Porvoon, Lahden, Heinolan ja Saariston rengastien sivut säilyvät
+
+HUOM. Matkaparkin hinnat, varaukset ja palvelut sekä retkeilyreittien olosuhteet tarkistettava aina kohteelta.
