@@ -1,0 +1,44 @@
+MATKAILU SUOMESSA – v251 / etusivun maakunta- ja kuntapikahaku
+11.10.2026
+
+Tämä paketti pohjautuu käyttäjän lähettämään v250-versioon.
+
+MUUTOKSET
+- Etusivun yläosassa on näkyvä "Löydä maakunta tai paikkakunta" -osio.
+- Nimihaku on nostettu näkyviin suoraan etusivun alkuun.
+- Maakunnan voi valita suoraan kaikista Suomen 19 maakunnasta.
+- Paikkakuntavalikossa ja pikapainikkeissa ovat kyseiseen maakuntaan
+  kuuluvat, tämän sivuston kuntarekisterissä jo olevat linkit.
+- Omaa sivua vailla olevaan kuntaan EI tehdä rikkoutunutta sivulinkkiä.
+- Suorat pikalinkit Kymenlaaksoon, Lappiin, Päijät-Hämeeseen, Kainuuseen
+  ja Uudellemaalle sekä valmiisiin Levi-, Ylläs- ja Repovesi-kohteisiin.
+- Hakutuloksissa näkyvät nyt suoraan Levi, Ylläs ja Repovesi.
+- Etusivun neljä suurta päävalintaa, Näe ja koe, Saariston rengastie,
+  Omat matkat ja sivun alavalikko säilyvät.
+
+ASENNUS GITHUB PAGES -SIVUSTOON
+1. Ota nykyisistä sivustotiedostoista varmuuskopio.
+2. Pura ZIP samaan GitHub-repositorion juurikansioon kuin index.html.
+3. Korvaa samannimiset tiedostot. ÄLÄ POISTA ennestään olevia tiedostoja.
+4. GitHub Pages julkaisee muutokset normaalisti.
+5. Päivitä selain tarvittaessa. Älä tyhjennä selaimen sivustotietoja.
+
+HUOMAUTUS
+Tämä ZIP on aiemman v250-paketin päivitys eikä sisällä jokaista
+alkuperäisen sivuston vanhaa kuva-, CSS-, JavaScript- tai HTML-tiedostoa.
+Siksi ZIPiä ei ole tarkoitettu julkaistavaksi tyhjään repositorioon.
+Alkuperäiset tiedostot on säilytettävä.
+
+Matkamuistot/kuvat ovat tallessa käytetyssä selaimessa (localStorage /
+IndexedDB). Tätä päivitystä varten niitä ei poisteta tai siirretä.
+
+PAIKALLISESTI TARKISTETTU
+- Kaikki 19 maakuntaa löytyvät valikosta.
+- Kymenlaakso -> Kouvola (kouvola.html).
+- Lappi -> Rovaniemi / Kittilä / Kolari sekä Levi ja Ylläs.
+- Nimihaku -> Levi, Kouvola ja Repovesi.
+- Vanhat valikkokortit syntyvät edelleen normaalisti.
+- Keskeneräiselle maakunnalle näytetään turvallinen maakuntaluettelo,
+  ei oletettua kuntasivua.
+- Muutokset testattu paikallisessa Chromium-mobiilitestissä.
+Verkkosivuston live-julkaisua ei ole muutettu tämän työn aikana.

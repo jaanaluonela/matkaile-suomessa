@@ -1,4 +1,4 @@
-<!-- Matkailu Suomessa v243 – responsiivinen etusivu -->
+<!-- Matkailu Suomessa v251 – maakunta- ja kuntahaku suoraan etusivulle -->
 <!doctype html>
 <html lang="fi">
 <head>
@@ -385,7 +385,7 @@
 
 </style>
 <link rel="stylesheet" href="navigation-v191.css?v=244">
-<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="kotka-data-v250.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"></head>
+<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"><link rel="stylesheet" href="etusivu-haku-v251.css?v=251"><script src="etusivu-haku-v251.js?v=251" defer></script></head>
 <body data-home="true">
   <main class="home-shell">
     <header class="hero">
@@ -409,19 +409,53 @@
 
     
 
-    <section class="section" aria-label="Valitse kohteet"><div class="menu"><a href="kunnat.html">🗺️ Kunnat</a><a href="leirintaalueet.html">🏕️ Leirintäalueet</a><a href="matkaparkit.html">🅿️ Matkaparkit</a></div><label for="region">Valitse maakunta</label><select id="region"><option value="">Valitse maakunta…</option><option value="Ahvenanmaa">Ahvenanmaa</option><option value="Etelä-Karjala">Etelä-Karjala</option><option value="Etelä-Pohjanmaa">Etelä-Pohjanmaa</option><option value="Etelä-Savo">Etelä-Savo</option><option value="Kainuu">Kainuu</option><option value="Kanta-Häme">Kanta-Häme</option><option value="Keski-Pohjanmaa">Keski-Pohjanmaa</option><option value="Keski-Suomi">Keski-Suomi</option><option value="Kymenlaakso">Kymenlaakso</option><option value="Lappi">Lappi</option><option value="Pirkanmaa">Pirkanmaa</option><option value="Pohjanmaa">Pohjanmaa</option><option value="Pohjois-Karjala">Pohjois-Karjala</option><option value="Pohjois-Pohjanmaa">Pohjois-Pohjanmaa</option><option value="Pohjois-Savo">Pohjois-Savo</option><option value="Päijät-Häme">Päijät-Häme</option><option value="Satakunta">Satakunta</option><option value="Uusimaa">Uusimaa</option><option value="Varsinais-Suomi">Varsinais-Suomi</option></select><label for="municipality">Valitse kunta</label><select id="municipality"><option value="">Valitse kunta…</option></select><p id="list-status" role="status"></p><div id="municipality-results"></div></section><section class="section" aria-labelledby="hakuotsikko">
-      <div class="section-head">
+    <!-- v251: suora, helposti löytyvä maakunta- ja kuntahaku etusivulla. -->
+    <section class="section home-explore-v251" aria-labelledby="home-explore-heading">
+      <div class="home-explore-top-v251">
         <div>
-          
-          <h2 id="hakuotsikko">Etsi yöpymispaikka tai kunta</h2>
+          <p class="home-explore-kicker-v251">🧭 Tutustu Suomeen</p>
+          <h2 id="home-explore-heading">Löydä maakunta tai paikkakunta</h2>
+          <p>Hae suoraan nimellä tai valitse maakunta ja sen kohde.</p>
         </div>
       </div>
-      <div class="search-box">
-        <label for="place-search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Etsi kuntaa tai kohdetta</label>
-        <input id="place-search" type="search" placeholder="Esim. Heinäsaari tai Asikkala" autocomplete="off">
+      <div class="search-box home-explore-search-v251">
+        <label for="place-search" class="home-explore-label-v251">Hae kuntaa, maakuntaa tai kohdetta</label>
+        <input id="place-search" type="search" placeholder="Esim. Kouvola, Levi tai Repovesi" autocomplete="off">
         <span class="search-symbol" aria-hidden="true">⌕</span>
       </div>
       <div class="search-results" id="search-results" aria-live="polite"></div>
+      <div class="home-explore-fields-v251">
+        <div>
+          <label for="home-region-v251">Maakunta</label>
+          <select id="home-region-v251"><option value="">Valitse maakunta…</option></select>
+        </div>
+        <div>
+          <label for="home-town-v251">Paikkakunta</label>
+          <select id="home-town-v251" disabled><option value="">Valitse ensin maakunta…</option></select>
+        </div>
+      </div>
+      <div class="home-explore-actions-v251">
+        <a id="home-open-v251" class="home-explore-open-v251" href="maakunnat.html" hidden>Avaa paikkakunta <span aria-hidden="true">→</span></a>
+        <a id="home-region-page-v251" href="maakunnat.html">Kaikki maakunnat <span aria-hidden="true">→</span></a>
+      </div>
+      <div id="home-town-links-v251" class="home-town-links-v251" aria-live="polite"></div>
+      <div class="home-explore-favorites-v251" aria-label="Suositut maakunnat">
+        <span>Siirry nopeasti:</span>
+        <button type="button" data-home-region-v251="Kymenlaakso">Kymenlaakso</button>
+        <button type="button" data-home-region-v251="Lappi">Lappi</button>
+        <button type="button" data-home-region-v251="Päijät-Häme">Päijät-Häme</button>
+        <button type="button" data-home-region-v251="Kainuu">Kainuu</button>
+        <button type="button" data-home-region-v251="Uusimaa">Uusimaa</button>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Muut matkailukohteet">
+      <div class="menu">
+        <a href="maakunnat.html">🗺️ Paikkakunnat</a>
+        <a href="leirintaalueet.html">🏕️ Leirintäalueet</a>
+        <a href="matkaparkit.html">🅿️ Matkaparkit</a>
+        <a href="lahella-minua.html">📍 Lähellä minua</a>
+      </div>
     </section>
 
     

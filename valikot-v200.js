@@ -82,6 +82,10 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    // v251: valmiit lomakeskus- ja kansallispuistosivut suoraan etusivun haussa.
+    {name:'Levi',meta:'Kittilä · matkailukeskus',url:'levi.html',rank:0,aliases:['Sirkka','Levitunturi']},
+    {name:'Ylläs',meta:'Kolari · matkailukeskus',url:'yllas.html',rank:0,aliases:['Äkäslompolo','Ylläsjärvi']},
+    {name:'Repovesi',meta:'Kouvola · kansallispuisto',url:'repovesi.html',rank:0,aliases:['Repoveden kansallispuisto']},
     {name:'Vääksy',meta:'Asikkala · kuntakeskus',url:'asikkala.html#vaaksy',rank:0,aliases:['Vanha Vääksy','Vääksyn kanava']},
     {name:'Kalkkinen',meta:'Asikkala · kylä ja kanava',url:'asikkala.html#kalkkinen',rank:1,aliases:['Kalkkisten kanava','Kalkkisten satama']},
     {name:'Pulkkilanharju',meta:'Asikkala · maisematie ja luontopolku',url:'asikkala.html#retket',rank:1,aliases:['Karisalmen silta','Pulkkilanharjun luontopolku']},
