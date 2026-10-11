@@ -1,0 +1,21 @@
+Matkailu Suomessa – v231 Hakukorjaus
+
+TÄMÄ ON LISÄPÄIVITYS aiemmin asennettuun sovellukseen.
+
+1. Pura ZIP-tiedosto.
+2. Kopioi valikot-v200.js sovelluksen JUURIKANSIOON samaan kansioon kuin index.html.
+3. Korvaa vanha valikot-v200.js samalla nimellä olevalla uudella tiedostolla.
+4. Älä poista muita tiedostoja. V230:n molemmat Loviisa-osat ja aiemmat päivitykset säilyvät.
+5. Päivitä sivu selaimessa Ctrl+F5 (Macissa Cmd+Shift+R), jotta vanha JavaScript ei jää välimuistiin.
+
+Mitä korjattu:
+- Etusivun haku käyttää olemassa olevaa kuntarekisteriä, eikä pelkästään vanhaa etusivun listaa.
+- Kunnat, tärkeät kylät ja taajamat näkyvät ennen yksittäisiä nähtävyyksiä.
+- Loviisa löytyy myös kesken kirjoitettaessa: lovi / lovii / lovisa.
+- Vääksy löytyy hakusanoilla vää, vaak, Vääksy ja vie Asikkalan kuntasivulle.
+- Entiset paikkakunnat, Kainuun kylät, karavaanikohteet ja helmet säilyvät haussa.
+- Ruotsinkielisiä hakunimiä tuetaan muutamille oppaan nykyisille kunnille.
+- Hakutuloksen Enter-näppäin avaa ensimmäisen tuloksen.
+
+Koodin toiminta ja esimerkkihakujen tulokset testattu paikallisesti;
+sivuston varsinaista julkaisua ei ole testattu.

@@ -55,4 +55,142 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
 // Etusivun käyntikohteet-painike v222.
 (()=>{if(!document.body.dataset.home&&!/\/(index.html)?$/.test(location.pathname))return;const menu=document.querySelector('main .menu');if(!menu||document.getElementById('visit-link-v222'))return;const a=document.createElement('a');a.id='visit-link-v222';a.href='kayntikohteet.html';a.innerHTML='<span aria-hidden="true">⭐</span><span><strong>Käyntikohteet</strong><small>Paikkakuntien helmet ja pysähdyspaikat</small></span><span aria-hidden="true">→</span>';a.style.cssText='display:flex;align-items:center;gap:14px;margin-top:12px;padding:18px;border:1px solid #d4e5dd;border-radius:22px;background:#f5eddc;color:#195d4d;text-decoration:none;min-height:88px';a.querySelector('strong').style.cssText='display:block;font:800 21px/1.3 system-ui';a.querySelector('small').style.cssText='display:block;font:400 14px/1.4 system-ui;margin-top:5px';a.lastElementChild.style.marginLeft='auto';menu.after(a);})();
 
-(()=>{if(!document.body.dataset.home&&!/\/(index.html)?$/.test(location.pathname))return;const input=document.getElementById('place-search'),results=document.getElementById('search-results');if(!input||!results)return;input.addEventListener('input',()=>{const q=input.value.trim().toLocaleLowerCase('fi');if(!q||!['loviisa','lovisa','strömfors','stromfors','ruotsinpyhtää','pernaja','liljendal'].some(s=>s.includes(q)||q.includes(s)))return;results.replaceChildren();for(const [name,url,meta] of [['Loviisa','loviisa.html','Kaupunki · Uusimaa'],['Loviisan helmet','kayntikohteet.html?kunta=Loviisa','Käyntikohteet'],['Loviisan yöpyminen','loviisa-karavaanari.html','Leirintäalue ja matkaparkki']]){const a=document.createElement('a');a.href=url;const span=document.createElement('span');span.textContent=name;const small=document.createElement('small');small.textContent=meta;a.append(span,small);results.append(a);}results.classList.add('is-open');});})();
+// v231 – etusivun yhtenäinen paikkakunta-, kylä- ja kohdehaku.
+// Kunnat haetaan käytössä olevasta kuntarekisteristä; vanhaa hakulistaa ei poisteta.
+(() => {
+  if (!document.body.dataset.home && !/\/(index\.html)?$/.test(location.pathname)) return;
+  const input = document.getElementById('place-search');
+  const results = document.getElementById('search-results');
+  if (!input || !results) return;
+
+  const normalize = value => String(value ?? '')
+    .toLocaleLowerCase('fi').replace(/\s+/g, ' ').trim();
+  const withoutAccents = value => value.normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+  const swedishNames = {
+    Loviisa: ['Lovisa'], Porvoo: ['Borgå'], Raasepori: ['Raseborg'],
+    Hanko: ['Hangö'], Helsinki: ['Helsingfors'], Espoo: ['Esbo'],
+    Kirkkonummi: ['Kyrkslätt'], Sipoo: ['Sibbo'], Inkoo: ['Ingå'],
+    Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
+  };
+  const nearbyTowns = [
+    {name:'Vääksy', meta:'Asikkala · taajama', url:'asikkala.html', rank:1, aliases:['Vanha Vääksy']},
+    {name:'Vuokatti', meta:'Sotkamo · taajama', url:'vuokatti.html', rank:1},
+    {name:'Ruotsinpyhtää', meta:'Loviisa · alue', url:'loviisa.html', rank:1, aliases:['Strömfors', 'Stromfors']},
+    {name:'Pernaja', meta:'Loviisa · alue', url:'loviisa.html', rank:1, aliases:['Pernå']},
+    {name:'Liljendal', meta:'Loviisa · alue', url:'loviisa.html', rank:1},
+    {name:'Tammisaari', meta:'Raasepori · taajama', url:'tammisaari.html', rank:1, aliases:['Ekenäs']}
+  ];
+  function allEntries() {
+    const index = new Map();
+    function add(value) {
+      if (!value || !value.name || !value.url) return;
+      const entry = {name:String(value.name), url:String(value.url),
+        meta:String(value.meta || ''), rank:value.rank ?? 4,
+        aliases:Array.isArray(value.aliases)?value.aliases:[],
+        keywords:String(value.keywords || '')};
+      if (!/^(?!\/\/|https?:|javascript:|data:)[^?#]+\.html(?:[?#].*)?$/i.test(entry.url)) return;
+      const key=normalize(entry.name)+'|'+entry.url;
+      const existing=index.get(key);
+      if(!existing || entry.rank<existing.rank) index.set(key,entry);
+    }
+
+    const towns=window.siteMunicipalities || {};
+    const regions=window.municipalityRegions || {};
+    for (const [name,url] of Object.entries(towns)) {
+      add({name,url,meta:(regions[name]?regions[name]+' · ':'')+'kunta / kaupunki',rank:0,
+        aliases:swedishNames[name] || []});
+    }
+    nearbyTowns.forEach(add);
+
+    // Säilytetään kaikki aiemman etusivun haun paikat ja alueet.
+    // Vanha index.html määrittelee tämän listan globaalina `places`-vakiona.
+    let oldEntries=[];
+    try { if (typeof places !== 'undefined' && Array.isArray(places)) oldEntries=places; } catch (_) {}
+    for (const place of oldEntries) {
+      const meta=String(place.meta || '');
+      const rank=/^(kunta|kaupunki|maakunta)$/i.test(meta)?0:
+        /\b(alue|kylä|taajama)\b/i.test(meta)?2:
+        /nähtävyys|luontokohde|retki/i.test(meta)?3:4;
+      add({...place,rank});
+    }
+    for (const place of window.caravanPlaces || []) {
+      add({name:place.name,url:place.url,meta:(place.city || '')+' · '+
+        (place.type==='park'?'matkaparkki':'leirintäalue'),rank:4,
+        keywords:[place.address,place.city].filter(Boolean).join(' ')});
+    }
+    for (const place of window.visitHighlights || []) {
+      add({name:place.name,url:place.url,meta:(place.city||'')+' · käyntikohde',rank:3,
+        keywords:[place.address,place.city].filter(Boolean).join(' ')});
+    }
+    return [...index.values()];
+  }
+  function weight(entry,query) {
+    const names=[entry.name,...entry.aliases].map(normalize);
+    let match=Infinity;
+    for(const name of names) {
+      const parts=name.split(/[\s\-/]+/);
+      if(name===query) match=Math.min(match,0);
+      else if(name.startsWith(query)) match=Math.min(match,10);
+      else if(parts.some(word=>word.startsWith(query))) match=Math.min(match,20);
+      else if(name.includes(query)) match=Math.min(match,30);
+    }
+    // Kuntanimi kohteen metatiedoissa on täydentävä, ei ensisijainen osuma.
+    if(normalize(entry.meta).includes(query)) match=Math.min(match,50);
+    if(normalize(entry.keywords).includes(query)) match=Math.min(match,60);
+    // Tavallisilla näppäimillä kirjoitettu 'vaaksy' löytää myös 'Vääksy',
+    // mutta 'vää' ei tuo mukaan kaikkia 'vaa'-alkuisia paikannimiä.
+    if(match===Infinity && withoutAccents(query)===query) {
+      for(const name of names) {
+        const folded=withoutAccents(name);
+        if(folded===query) match=Math.min(match,70);
+        else if(folded.startsWith(query))match=Math.min(match,80);
+        else if(folded.includes(query))match=Math.min(match,90);
+      }
+    }
+    return match+entry.rank;
+  }
+  function search() {
+    const query=normalize(input.value);
+    results.replaceChildren();
+    if(!query){results.classList.remove('is-open');return;}
+    const matches=allEntries()
+      .map(place=>({place,score:weight(place,query)}))
+      .filter(item=>item.score!==Infinity)
+      .sort((a,b)=>a.score-b.score || a.place.name.localeCompare(b.place.name,'fi'))
+      .slice(0,8);
+    if(!matches.length){
+      const link=document.createElement('a');link.href='maakunnat.html';
+      const label=document.createElement('span');label.textContent='Selaa kaikkia paikkakuntia';
+      const meta=document.createElement('small');meta.textContent='Ei suoraa osumaa';
+      link.append(label,meta);results.append(link);
+    }else{
+      for(const {place} of matches){
+        const link=document.createElement('a');link.href=place.url;
+        const label=document.createElement('span');label.textContent=place.name;
+        const meta=document.createElement('small');meta.textContent=place.meta;
+        link.append(label,meta);results.append(link);
+      }
+    }
+    results.classList.add('is-open');
+  }
+  // Kaapataan tapahtumat ennen vanhan etusivun hakua. Se käyttää vanhentunutta
+  // nimilistaa ja piilottaisi muuten uudet kuntatulokset.
+  for(const type of ['input','focus','search']){
+    input.addEventListener(type, event=>{event.stopImmediatePropagation();search();},true);
+  }
+  input.addEventListener('keydown',event=>{
+    if(event.key!=='Enter' || !input.value.trim())return;
+    const first=results.querySelector('a[href]');
+    if(first){event.preventDefault();location.href=first.href;}
+  },true);
+  function loadExtra(src,property){
+    if(Array.isArray(window[property]))return;
+    const script=document.createElement('script');script.src=src;
+    script.onload=()=>{if(input.value.trim())search();};
+    script.onerror=()=>{};document.head.append(script);
+  }
+  // Hakutulokset laajenevat myös karavaanikohteisiin ja paikkakuntien helmiin.
+  loadExtra('caravan-data.js','caravanPlaces');
+  loadExtra('kayntikohteet-data-v230.js','visitHighlights');
+})();
