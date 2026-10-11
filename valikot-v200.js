@@ -75,6 +75,8 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Saariston rengastie', meta:'Varsinais-Suomi · matkailureitti', url:'saariston-rengastie.html', rank:2, aliases:['Turun rengastie','Turun saariston rengastie','Saaristotie','Saariston suuri rengastie']},
+    {name:'Pieni rengastie', meta:'Turun saaristo · matkailureitti', url:'saariston-rengastie.html#pieni', rank:2, aliases:['Saariston pieni rengastie','Östern','Seili-Hanka']},
     {name:'Vääksy', meta:'Asikkala · taajama', url:'asikkala.html', rank:1, aliases:['Vanha Vääksy']},
     {name:'Vuokatti', meta:'Sotkamo · taajama', url:'vuokatti.html', rank:1},
     {name:'Ruotsinpyhtää', meta:'Loviisa · alue', url:'loviisa.html', rank:1, aliases:['Strömfors', 'Stromfors']},
@@ -194,4 +196,19 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
   // Hakutulokset laajenevat myös karavaanikohteisiin ja paikkakuntien helmiin.
   loadExtra('caravan-data.js','caravanPlaces');
   loadExtra('kayntikohteet-data-v230.js','visitHighlights');
+})();
+
+
+// v233 – Saariston rengastien näkyvä valinta myös etusivulle.
+(() => {
+  if (!document.body.dataset.home && !/\/(index\.html)?$/.test(location.pathname)) return;
+  const visitLink = document.getElementById('visit-link-v222');
+  const menu = document.querySelector('main .menu');
+  if (!menu || document.getElementById('archipelago-route-v233')) return;
+  const card = document.createElement('a');
+  card.id = 'archipelago-route-v233';
+  card.href = 'saariston-rengastie.html';
+  card.innerHTML = '<span aria-hidden="true" style="font-size:26px">⛴️</span><span><strong style="display:block;font:800 21px/1.2 system-ui">Saariston rengastie</strong><small style="display:block;font:400 14px/1.4 system-ui;margin-top:5px">Lautat, hinnat, aikataulut ja saariston helmet</small></span><span aria-hidden="true" style="margin-left:auto">→</span>';
+  card.style.cssText = 'display:flex;align-items:center;gap:14px;margin-top:12px;padding:18px;border:1px solid #d4e5dd;border-radius:22px;background:#e7eff4;color:#195d4d;text-decoration:none;min-height:88px';
+  if (visitLink) visitLink.after(card); else menu.after(card);
 })();

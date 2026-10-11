@@ -1,0 +1,17 @@
+Matkailu Suomessa – v233 Saariston rengastie
+
+Sisältö:
+- saariston-rengastie.html: Saariston rengastien oma sivu
+- saariston-rengastie-v233.css: sivun ulkoasu
+- valikot-v200.js: Porvoon v232 pohjalta päivitetty etusivuvalikko ja haku
+- V233_LAHTEET.txt: lähteet
+
+ASENNUS
+1. Pura ZIP.
+2. Kopioi kaikki ZIPin tiedostot Matkailu Suomessa -sovelluksen kansioon, jossa index.html on.
+3. Korvaa samanniminen valikot-v200.js. Säilytä kaikki muut vanhat tiedostot.
+4. Päivitä selain Ctrl+F5. Etusivulle tulee Saariston rengastie -linkki ja hakusanoilla Saariston rengastie / Turun rengastie löytyy sivu.
+
+HUOM
+Tämä on osapäivitys eikä itsenäinen koko sovellus. Olemassa olevat kunnat, mukaan lukien Loviisa ja Porvoo, säilyvät.
+Lautta-aikataulut ja hinnat ovat vuoden 2026 tietoja. Koko rengas on kausiluonteinen.
