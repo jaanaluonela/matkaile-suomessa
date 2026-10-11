@@ -1,25 +1,22 @@
-Matkailu Suomessa – v241: Alavalikko takaisin
-============================================
+MATKAILU SUOMESSA – v241 ASIKKALA JA VÄÄKSY
 
-KORJAUSPAKETTI aiemmin asennettuun sovellukseen.
+OSAPÄIVITYS – ei koko sovellus. Vaatii aiemmat v238–v240-päivitykset.
+1. Tee tarvittaessa kopio nykyisestä sovelluskansiosta.
+2. Pura kaikki ZIPin tiedostot nykyisen sovelluksen juureen index.html:n viereen.
+3. Korvaa vain samannimiset tiedostot, älä poista aiempia tiedostoja.
+4. Päivitä selain: tietokoneella Ctrl + F5, puhelimella välimuistin tyhjennys tarvittaessa.
+5. Tarkista Asikkala, Vääksy, Kalkkinen, Pulkkilanharju, Urajärvi ja Vesivehmaa etusivun hausta.
 
-Korjaus:
-- Puuttuva alavalikko (Koti, Yöpyminen, Paikkakunnat) lisätään automaattisesti
-  myös Tutustu Suomeen / Paikkakunnat -näkymään.
-- Valikko pysyy ruudun alareunassa puhelimella ja tietokoneella.
-- Nykyinen sivu merkitään aktiiviseksi.
-- Kuntasivuilla jo olemassa olevaa alavalikkoa ei kopioida toistamiseen.
-- Sisältöä, kuntatietoja tai Näe ja koe -kohteita ei muuteta.
+MUUTOKSET
+- Asikkalan uusi kuntasivu sekä 44 omaa Näe ja koe -kohdesivua
+- Asukasluku 7 841 (31.12.2025) ja kunnan vaakuna
+- Kuusi yöpymispaikkaa palveluehdoilla ja sesonkihuomioilla
+- Vääksy näkyy kuntakeskuksena Asikkalan sivulle; Kanava-kohde erillään
+- Yhteiset visitHighlights, caravanPlaces ja etusivun hakutiedot päivitetty
+- Asikkalan muut paikkakunnat ja kohteet eivät muutu
 
-ASENNUS
-1. Ota halutessasi varmuuskopio nykyisestä app.js-tiedostosta.
-2. Pura ZIP ja kopioi app.js sovelluksen juurikansioon, jossa index.html sijaitsee.
-3. Korvaa saman niminen vanha app.js. Älä poista tai korvaa muita tiedostoja.
-4. Julkaise muuttunut tiedosto GitHubiin, jos sovellus toimii GitHub Pages -sivulla.
-5. Päivitä selain Ctrl+F5 (Macilla Cmd+Shift+R). Puhelimessa tyhjennä tarvittaessa välimuisti.
-
-Huomio: Tämä on vain päivityspaketti, ei koko sivuston ZIP.
-Muutos vaikuttaa sivuihin, jotka lataavat yhteisen app.js-tiedoston.
-
-Tarkistus: navigoinnin olemassaolo, kiinnitys ruudun alareunaan ja
-kaksoisvalikon välttäminen testattu selainmoottorilla puhelin- ja tietokonekoossa.
+HUOMIOI
+Kalkkisten sataman viisi paikkaa kunnan ilmoituksen mukaan maksuttomia.
+Kanavaanarilla talvella ei aurausta.
+Niemimäki ei ole yleinen matkaparkki: sovi yöpyminen suoraan yrityksen kanssa.
+Päijänteen kansallispuiston Kelvenne kuuluu Padasjoen puolelle.

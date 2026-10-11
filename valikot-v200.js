@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Asikkala:'asikkala.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Asikkala:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Sotkamo:'sotkamo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Sotkamo:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuusamo:'kuusamo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuusamo:'Pohjois-Pohjanmaa'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Suomussalmi:'suomussalmi.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Suomussalmi:'Kainuu'});
@@ -81,6 +82,12 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Vääksy',meta:'Asikkala · kuntakeskus',url:'asikkala.html#vaaksy',rank:0,aliases:['Vanha Vääksy','Vääksyn kanava']},
+    {name:'Kalkkinen',meta:'Asikkala · kylä ja kanava',url:'asikkala.html#kalkkinen',rank:1,aliases:['Kalkkisten kanava','Kalkkisten satama']},
+    {name:'Pulkkilanharju',meta:'Asikkala · maisematie ja luontopolku',url:'asikkala.html#retket',rank:1,aliases:['Karisalmen silta','Pulkkilanharjun luontopolku']},
+    {name:'Urajärvi',meta:'Asikkala · kartanomuseo',url:'asikkala.html#kulttuuri',rank:1,aliases:['Urajärven kartano']},
+    {name:'Vesivehmaa',meta:'Asikkala · ilmailumuseo',url:'asikkala.html#kulttuuri',rank:1,aliases:['Päijät-Hämeen Ilmailumuseo']},
+    {name:'Aurinkovuori',meta:'Asikkala · retkeily',url:'asikkala.html#retket',rank:1},
     {name:'Vuokatti',meta:'Sotkamo · lomakeskus ja vaarat',url:'sotkamo.html#vuokatti',rank:1,aliases:['Vuokatinrinteet','Katinkulta','Vuokatinvaara']},
     {name:'Naapurinvaara',meta:'Sotkamo · kylä ja retket',url:'sotkamo.html#retket',rank:1,aliases:['Naapurinvaaran huvikeskus']},
     {name:'Hiukka',meta:'Sotkamo · hiekkaranta',url:'sotkamo.html#retket',rank:1,aliases:['Hiukan hiekat']},
