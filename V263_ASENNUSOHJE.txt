@@ -1,26 +1,31 @@
-MATKAILU SUOMESSA v263 – ETUSIVUN JA NÄE JA KOE -SIVUN KORJAUS
+MATKAILU SUOMESSA – v263 LEIRINTÄALUEIDEN AUKIOLO
+=================================================
+Päivitetty 11.10.2026
 
-Tämä on pieni PÄIVITYS nykyiseen GitHub-sivustoon, ei koko sivusto.
+ASENNUS v262:N PÄÄLLE
+1. Pura tämä ZIP.
+2. Lataa kaikki 4 tiedostoa GitHub-projektin juureen.
+3. Korvaa leirintaalueet.html. Lisää kaksi uutta tiedostoa .js ja .css.
+4. Säilytä kaikki muut vanhat tiedostot. Kuntia ja aiempia kohteita ei poisteta.
+5. Päivitä leirintäalueiden sivu selaimessa.
 
-1. Pura ZIP-tiedosto koneella.
-2. Avaa GitHubista nykyisen matkaile-suomessa-projektin päätason tiedostot.
-3. Lisää ZIP:n sisältämät neljä verkkosivutiedostoa samaan kansioon (projektin juuri).
-4. Kun GitHub kysyy korvataanko index.html ja kayntikohteet.html,
-   korvaa vain nämä kaksi samannimistä tiedostoa.
-5. Hyväksy/Commit changes ja odota GitHub Pagesin päivittymistä.
-6. Päivitä sivu tarvittaessa selaimen välimuistin ohittaen.
+UUTTA
+- Ympäri vuoden avoinna olevien leirintäalueiden suodatin sivun yläosassa.
+- Kohdekorteissa näkyy: ympäri vuoden / kausiluonteinen / ei varmistettua aukiolotietoa.
+- Suodatin toimii maakunta-, kunta- ja tekstihakurajauksen rinnalla.
+- Ei merkitä tuntemattomia aukioloaikoja vahvistetuiksi.
+- Kohdekorteissa vanhat linkit, kuvaukset ja osoitteet säilyvät.
 
-Päivittyvät:
-- index.html (uusin v262 etusivupohja + responsiivinen asettelu)
-- kayntikohteet.html (maakunta- ja kuntavalikot sekä responsiivinen asettelu)
+TÄRKEÄ HUOMAUTUS
+Suodatin listaa vain kohteita, joille tietoa ympärivuotisuudesta on merkitty
+rakenteisesti (season-kenttä) tai erikseen vahvistettu. Kohde ei automaattisesti
+ole suljettu, jos se ei näy suodattimessa. Vanhoja epämääräisiä aukiolotietoja
+EI arvata. Jatkossa aukioloja voi täydentää window.campingOpeningData-tietueilla
+(esim. {"kohteen-id": {status:"yearround"}}) tai avaamisaikatiedolla suoraan
+caravanPlaces-tietueeseen.
 
-Uudet:
-- responsiivinen-v263.css (kummankin näkymän CSS)
-- kayntikohteet-v263.js (säilyttää vanhat kohdelähteet, lisää maakuntasuodatuksen)
-
-Älä poista muita vanhoja tiedostoja, erityisesti
-suomi-kunnat-v253.js, kayntikohteet-data-v230.js, nearby-data-v218.js
-ja navigation-v191.css. Niitä käytetään edelleen.
-
-Huom: ZIP ei julkaise itse itseään GitHubiin. Sivustolla näkyvät muutokset
-vasta tiedostojen siirtämisen ja GitHubin julkaisun jälkeen.
+TESTAA
+Leirintäalueet → näet jokaisen kortin aukiolomerkinnän.
+Laita rasti "Näytä vain ympäri vuoden avoinna olevat".
+Valitse maakunta ja kunta ja kirjoita hakusanalla.
+Poista rasti: kaikki leirintäalueet näkyvät jälleen normaalisti.

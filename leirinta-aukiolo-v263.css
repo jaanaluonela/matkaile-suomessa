@@ -1,0 +1,14 @@
+/* Matkailu Suomessa v263 – leirintäalueiden aukiolot ja ympärivuotisuussuodatin. */
+body[data-kind="camping"] .camp-opening-panel{margin:10px 0 15px;padding:14px;border:1px solid #bad7c8;border-radius:15px;background:#f1f8f3;color:#174b3d}
+body[data-kind="camping"] .camp-opening-choice{display:flex;gap:12px;align-items:center;cursor:pointer;margin:0;padding:0;line-height:1.3}
+body[data-kind="camping"] .camp-opening-choice input{flex:none;appearance:auto;width:22px;height:22px;margin:0;accent-color:#23734e;cursor:pointer}
+body[data-kind="camping"] .camp-opening-choice strong{display:block;font-size:16px;font-weight:800}
+body[data-kind="camping"] .camp-opening-choice small{display:block;margin-top:4px;font-size:13px;font-weight:500;color:#536f62}
+body[data-kind="camping"] .camp-opening-note{margin:10px 0 0;font-size:13px;color:#526b60;line-height:1.5}
+body[data-kind="camping"] .stay .camp-opening-badge{display:inline-flex;align-self:flex-start;align-items:center;max-width:100%;box-sizing:border-box;border-radius:999px;padding:7px 10px;font-size:13px;font-weight:800;line-height:1.4;white-space:normal;overflow-wrap:anywhere}
+body[data-kind="camping"] .stay .camp-opening-badge--yearround{background:#e0f3e5;color:#146136;border:1px solid #9bdbad}
+body[data-kind="camping"] .stay .camp-opening-badge--seasonal{background:#fff2da;color:#785009;border:1px solid #eed5a3}
+body[data-kind="camping"] .stay .camp-opening-badge--unknown{background:#edf0f0;color:#52626a;border:1px solid #d6dfe0}
+body[data-kind="camping"] .stay[hidden]{display:none!important}
+body[data-kind="camping"] #camp-opening-empty{margin:13px 0 5px;padding:13px 14px;border:1px solid #dce7df;border-radius:12px;background:#fff;color:#52665b;font-size:14px}
+@media(max-width:650px){body[data-kind="camping"] .camp-opening-panel{padding:12px;margin-top:8px}body[data-kind="camping"] .camp-opening-choice strong{font-size:15px}}
