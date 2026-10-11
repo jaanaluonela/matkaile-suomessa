@@ -1,0 +1,77 @@
+/* Matkailu Suomessa v243 – responsiiviset yhteiset näkymät. */
+:root{--v243-ink:#173c34;--v243-border:#d8e6de;--v243-muted:#526f62}
+.v243-wordmark{display:flex;align-items:center;gap:16px;padding:15px 20px;margin:0 0 18px;background:#fcf9ef;color:#173c34;border:1px solid #e2e1d3;border-radius:15px;min-width:0}
+.v243-brand-symbol{font-size:39px;line-height:1}
+.v243-brand-name{flex:1;min-width:0;font-family:Georgia,serif;font-size:clamp(23px,3.8vw,38px);font-weight:700;font-style:italic;letter-spacing:-.04em;line-height:1.1;white-space:normal}
+.v243-brand-name strong{font-weight:700;color:#1d6d58}
+.v243-brand-name small{display:block;margin-top:6px;font-family:system-ui,sans-serif;font-size:11px;font-weight:800;font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:#65746c}
+.v243-brand-camper{font-size:26px;white-space:nowrap}
+body[data-home] .home-shell{width:min(100%,1040px)!important;max-width:1040px!important;box-sizing:border-box!important}
+body[data-home] .home-shell>.hero{height:auto!important;min-height:0!important}
+body[data-home] .home-shell .hero h1{font-size:clamp(27px,3.2vw,39px)!important}
+body[data-home] .home-shell .hero-stats{display:flex;gap:16px;flex-wrap:wrap}
+body[data-home] .home-shell .hero-stats span{font-size:14px!important}
+body[data-home] .home-choices-v212{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+body[data-home] .home-choices-v212>a{min-width:0!important;min-height:155px!important;padding:18px 21px!important}
+body[data-home] .home-choices-v212 strong{font-size:clamp(17px,2.1vw,22px)!important}
+body[data-home] #visit-link-v222,body[data-home] #archipelago-route-v233{box-sizing:border-box}
+body[data-home] .search-box{width:100%}
+body[data-home] .later-note{margin-bottom:16px}
+.v243-stay-top{margin:0 0 10px}.v243-page-description{color:var(--v243-muted);margin:8px 0 12px;font-size:16px}
+.v243-search-label{margin:6px 0 7px!important}
+#v243-stay-search,.v243-municipality-search input{width:100%;min-height:48px;box-sizing:border-box;padding:10px 14px;border-radius:13px;border:1px solid #b9d0c2;background:#fff;color:var(--v243-ink);font:inherit;font-size:16px}
+#v243-stay-search:focus,.v243-municipality-search input:focus{outline:3px solid #c8e4d7;outline-offset:1px}
+.v243-filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:7px 0 9px}
+.v243-filter-field{min-width:0}.v243-filter-field label{margin:5px 0 6px!important;font-size:15px}
+.v243-filter-field select{min-height:46px;font-size:16px;padding:8px 11px}
+body[data-kind] .page{box-sizing:border-box;width:min(100%,1020px);max-width:1020px;margin:0 auto;padding:22px 24px 110px}
+body[data-kind] .page>h1{margin:12px 0 10px}
+body[data-kind] #region{margin-bottom:0}
+body[data-kind] #municipality-results .stay{height:100%;box-sizing:border-box;margin:0}
+body[data-kind] #municipality-results:has(.stay){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-top:10px}
+body[data-kind] #municipality-results .stay .buttons{margin-top:auto}
+body[data-kind] #municipality-results .stay{display:flex;flex-direction:column}
+body[data-kind] #list-status{margin:15px 0 4px;color:var(--v243-muted);font-size:15px}
+body[data-kind=town] #municipality-results{display:grid;grid-template-columns:1fr!important}
+/* Maakuntanäkymä */
+.map-page{width:min(100%,1020px)!important;max-width:1020px!important;box-sizing:border-box;margin:0 auto}
+.v243-municipality-search{margin:0 18px 12px;padding:22px 24px;background:#fff;border:1px solid var(--v243-border);border-radius:22px;box-shadow:0 9px 25px rgba(13,63,47,.06)}
+.v243-municipality-search h1{margin:0 0 5px;font-size:clamp(26px,3.2vw,35px);line-height:1.2;color:#174d40}
+.v243-municipality-search>p{margin:0 0 14px;color:var(--v243-muted)}
+.v243-municipality-search label{display:block;margin:8px 0 6px;font-weight:700}
+.v243-region-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0 0}
+.v243-region-filters>div{min-width:0}.v243-region-filters select{display:block;box-sizing:border-box;width:100%;min-height:46px;padding:10px;border:1px solid #bdd0c4;border-radius:13px;background:#fff;color:#173c34;font:inherit;font-size:16px}
+.v243-search-hits{display:none;margin-top:10px;border:1px solid #d8e6de;border-radius:15px;overflow:hidden}
+.v243-search-hits.active{display:block}
+.v243-search-hits a{display:flex;gap:12px;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #e8eee9;text-decoration:none;font-weight:750;color:#174d40}
+.v243-search-hits a:last-child{border:0}.v243-search-hits small{font-size:12px;font-weight:600;color:#62786e;text-align:right}
+.v243-map-toggle{margin:10px 18px 14px}
+.v243-map-toggle>summary{display:flex;align-items:center;justify-content:space-between;background:#eaf4ee;border:1px solid #cbded1;border-radius:15px;padding:13px 17px;color:#164b3a;font-weight:800;cursor:pointer;list-style:none}
+.v243-map-toggle>summary::-webkit-details-marker{display:none}
+.v243-map-toggle>.finland-card{margin:12px 0!important}
+.v243-map-toggle[open]>summary span{transform:rotate(180deg)}
+.map-page .region-list{margin-top:12px}
+.map-page .no-results{display:none}
+.v243-info-panel{margin:12px 18px 24px;border:1px solid #cbded1;background:#f1f7f2;border-radius:16px;color:#174b3c}.v243-info-panel>summary{padding:13px 16px;cursor:pointer;font-weight:800}.v243-info-panel>p{padding:0 16px 15px;margin:0;font-size:14px;color:#526f62}
+@media(min-width:900px){
+ body[data-home] .home-shell{width:min(calc(100% - 56px),1040px)!important;padding:30px 32px 110px!important}
+ body[data-home] .home-shell>.hero{padding:30px 34px!important;border-radius:24px!important}
+ body[data-home] .home-choices-v212{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+ body[data-home] .home-choices-v212>a{min-height:180px!important}
+ .site-nav .site-nav-inner{width:min(100%,900px)}
+ .v243-municipality-search{padding:24px 30px}
+}
+@media(max-width:650px){
+ .v243-wordmark{gap:8px;padding:12px 10px;border-radius:12px}
+ .v243-brand-symbol{font-size:26px}.v243-brand-camper{font-size:19px}
+ .v243-brand-name{font-size:clamp(19px,6vw,27px)}
+ .v243-brand-name small{font-size:9px;letter-spacing:.12em}
+ body[data-home] .home-shell{width:100%!important}
+ body[data-home] .home-choices-v212{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ body[data-home] .home-choices-v212>a{padding:14px 11px!important;min-height:165px!important}
+ body[data-kind] .page{padding:16px 13px 110px}
+ body[data-kind] #municipality-results:has(.stay){grid-template-columns:1fr;gap:12px}
+ .v243-filter-grid,.v243-region-filters{grid-template-columns:1fr;gap:3px}
+ .v243-municipality-search{padding:17px 14px;margin:0 12px 12px}
+ .v243-map-toggle{margin:10px 12px}
+}

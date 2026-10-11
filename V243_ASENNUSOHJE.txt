@@ -1,0 +1,17 @@
+Matkailu Suomessa – v243 Sivukorjaukset (11.10.2026)
+
+1. Ota varmuuskopio nykyisestä sovelluskansiosta.
+2. Pura tämän ZIPin tiedostot suoraan sovelluksen nykyiseen kansioon.
+3. Korvaa samannimiset tiedostot. Älä poista muita tiedostoja.
+4. Avaa index.html ja päivitä selain Ctrl+F5 (puhelimella päivitä sivu).
+
+Muutokset:
+- Etusivu avautuu leveämmällä tietokoneella ja pysyy kahdessa sarakkeessa puhelimella.
+- Logo on nyt muokattavaa tekstiä: Matkailu Suomessa.
+- Etusivun yöpymispaikka- ja kuntamäärät perustuvat samaan aineistoon kuin luettelot; luvut päivittyvät mukana tulevista tiedoista.
+- Yöpyminen-, leirintäalue- ja matkaparkkisivuissa on tekstihaku ja rinnakkaiset suodattimet leveällä ruudulla.
+- Paikkakuntien suora haku on näkyvissä heti; kartta avautuu painamalla sitä.
+- Etusivun Käyntikohteet muuttui Näe ja koe -valinnaksi, ja vanhentuneet helmet-tekstit korjattu.
+- Puhelimen alavalikko säilyy. Vanhojen kuntasivujen ja kohteiden tiedostoihin ei kosketa.
+
+Huom: PAKETTI ON OSAPÄIVITYS, ei kokonainen sovelluskansio.
