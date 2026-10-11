@@ -1,0 +1,29 @@
+MATKAILU SUOMESSA v260 – SEINÄJOEN SEUTU / ETELÄ-POHJANMAA
+
+TÄMÄ ON PIENI PÄIVITYS v259-VERSION PÄÄLLE.
+
+Uudet sivut: 18 Etelä-Pohjanmaan kuntaa ja maakunnan esittelysivu.
+Seinäjoen opas sisältää myös Nurmon, Ylistaron ja Peräseinäjoen (eivät ole omia kuntia).
+Hakusanat kuten Kalajärvi, PowerPark, Pirunpesä, Tuuri ja Ähtärin eläinpuisto avaavat oikean kunnan.
+Kaikissa 18 sivussa on vuoden 2025 lopun asukasluvut, vaakunapaikka, nähtävyyksiä, retkiä ja majoituslinkkejä.
+Caravan- ja leirintäpaikkoja lisättiin vain, jos lähdetieto löytyi.
+
+ASENNUS
+1. ZIP-tiedosto pitää purkaa (ZIP ei sellaisenaan toimi sivupäivityksenä).
+2. Siirrä KAIKKI tämän ZIP:n tiedostot GitHub Pages -projektin JUUREEN.
+   GitHub -> Add file -> Upload files -> valitse kaikki, korvaa index.html ja maakunnat.html.
+3. Commit changes ja odota että GitHub Pages päivittää julkaistun sivun.
+4. Testaa maakunnat.html?maakunta=Etelä-Pohjanmaa, valitse Seinäjoki ja Kauhava.
+5. Hae etusivulta Nurmo, Ylistaro, Peräseinäjoki, PowerPark, Tuuri, Susiluola ja Ähtärin eläinpuisto.
+
+Älä poista v259:n Fiskars-sivua tai muiden kuntien tiedostoja.
+Ähtärin eläinpuisto on syyslomalla 10.-25.10.2026 avoinna, sen jälkeen ryhmävarauksin.
+Tarkista ajantasaiset aukioloajat, yöpymisehdot ja kausipalvelut ennen matkaa.
+
+LÄHTEET
+- Kuntaluettelo: https://epliitto.fi/etela-pohjanmaa/kunnat/
+- Kuntien väkiluvut 31.12.2025: https://kuntavaesto.com/kunta/seinajoki/
+- Nähtävyydet: https://visitseinajokiregion.fi/matkailualueen-kunnat/
+- Leirintäalueet: https://visitseinajokiregion.fi/majoitu-seinajoella/leirintaalueet/
+- Karijoen Susiluola: https://karijoki.fi/vapaa-aika-ja-matkailu/matkailu-ja-kulttuuri/susiluola/info/
+- Soinin reitit: https://visitsoini.fi/retkeilyreitit/
