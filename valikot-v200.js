@@ -1,3 +1,4 @@
+Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Suomussalmi:'suomussalmi.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Suomussalmi:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Kuhmo:'kuhmo.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Kuhmo:'Kainuu'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Heinola:'heinola.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Heinola:'Päijät-Häme'});
 Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Lahti:'lahti.html'});Object.assign(window.municipalityRegions||(window.municipalityRegions={}),{Lahti:'Päijät-Häme'});
@@ -78,6 +79,12 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
     Lapinjärvi: ['Lappträsk'], Vihti: ['Vichtis'], Järvenpää: ['Träskända']
   };
   const nearbyTowns = [
+    {name:'Ämmänsaari',meta:'Suomussalmi · keskustaajama',url:'suomussalmi.html#alueet',rank:1,aliases:['Ammansaari','Jalonniemi']},
+    {name:'Hossa',meta:'Suomussalmi · kansallispuisto',url:'suomussalmi.html#retket',rank:1,aliases:['Hossan kansallispuisto','Hossan Lumo','Karhunkainalo']},
+    {name:'Ruhtinansalmi',meta:'Suomussalmi · kylä',url:'suomussalmi.html#alueet',rank:1},
+    {name:'Yli-Vuokki',meta:'Suomussalmi · kylä',url:'suomussalmi.html#alueet',rank:1,aliases:['Vuokki','Murhisalo']},
+    {name:'Juntusranta',meta:'Suomussalmi · kylä',url:'suomussalmi.html#alueet',rank:1},
+    {name:'Piispajärvi',meta:'Suomussalmi · kylä',url:'suomussalmi.html#alueet',rank:1,aliases:['PiispanPysäkki']},
     {name:'Lentiira',meta:'Kuhmo · kylä',url:'kuhmo.html#alueet',rank:1,aliases:['Lentiiran Lomakylä','Lentiiran kirkko']},
     {name:'Viiksimo',meta:'Kuhmo · kylä',url:'kuhmo.html#alueet',rank:1,aliases:['Boreal Wildlife Centre']},
     {name:'Tönölä',meta:'Kuhmo · alue',url:'kuhmo.html#alueet',rank:1,aliases:['Kalevala Camping']},

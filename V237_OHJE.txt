@@ -1,0 +1,16 @@
+MATKAILU SUOMESSA v237 – SUOMUSSALMI
+
+ASENNUS
+1. Tämä on v236:n päälle asennettava osapäivitys, EI yksin toimiva koko sovellus.
+2. Pura ZIP ja kopioi kaikki tiedostot nykyiseen sovelluskansioon index.html:n viereen.
+3. Korvaa vain saman nimiset tiedostot; älä poista muita.
+4. Päivitä selaimen välimuisti Ctrl+F5.
+5. Hae: Suomussalmi, Ämmänsaari, Hossa, Juntusranta; avaa suomussalmi.html.
+
+SISÄLTÖ
+- Suomussalmen vaakuna ja asukasluku 6 957 (31.12.2025)
+- 39 helmeä ja niiden omat sivut
+- 7 caravan-/leirintä-/yöpaikkakorttia, joista 4 leirintäalueita ja 3 yrityksen tarjoamia sähköpaikkoja
+- Päivitetyt haku- ja kohdehakemistot. Aiemmat kaupungit ja Hossan omat sivut säilyvät.
+
+HUOM. Kansallispuiston alueella ajoneuvoyöpyminen vain Karhunkainalossa, jos Metsähallituksen ohjeistus ei muutu. Hinnat, aukioloajat, palvelut ja reittien kunto tarkistettava etukäteen.
