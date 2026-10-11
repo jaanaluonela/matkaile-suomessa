@@ -1,30 +1,7 @@
-Matkailu Suomessa v247 – Helppo Omat matkat -sivu
+Matkailu Suomessa v247 – Kouvolan seutu ja Repovesi
 
-OSAPÄIVITYS nykyiseen v244/v245/v246-sivustoon. Mukana ovat myös v246:n Rovaniemi ja Omat matkat -korjaukset.
+OSAPÄIVITYS aiempaan sivustoon. Pura tiedostot nykyiseen sivustokansioon ja korvaa samannimiset tiedostot. Älä poista muita tiedostoja. Mukana myös v246-paketin Rovaniemi ja Omat matkat -korjaus.
 
-ASENNUS
-1. Ota varmuuskopio nykyisestä sivustokansiosta.
-2. Pura ZIP-paketin tiedostot sivuston juureen index.html:n kanssa samaan kansioon.
-3. Korvaa samannimiset tiedostot. Säilytä kaikki muut sivuston tiedostot.
-4. Julkaise tiedostot nykyiselle sivustollesi kuten aiemmat päivitykset.
-5. Lataa sivu uudelleen. Älä poista selaimen sivustotietoja, koska ne sisältävät tallennetut matkasi ja kuvasi.
+Uutta: Kouvolan seudun koontisivu ja 11 kohdesivua, Repoveden retkiohjeet, nähtävyydet, ruoka ja majoitus. Kouvola lisätty kuntavalintaan, Repovesi ja Verla paikkakuntahakuun. Uusilla sivuilla molemmat Omat matkat -painikkeet.
 
-UUTTA OMISSA MATKOISSA
-- Paikka tai matkan nimi, käyntipäivä, kuvat, muistiinpanot ja 1–5 tähden arvio yhdessä näkymässä.
-- Tänään-painike täyttää päivämäärän.
-- Teksti, päivämäärät ja tähtiarvio tallentuvat automaattisesti. Tallennuksen tila näkyy lomakkeen yläreunassa.
-- Valmis-painike tallentaa ja palaa matkalistaan.
-- Useamman päivän matkan päättymispäivä ja reitti ovat avattavissa tarvittaessa.
-- Matkalistassa näkyvät kansikuva, päivämäärät, käyntimerkintä ja tähtiarvio.
-- Vanhat matkat, muistiinpanot, reitit ja kuvat käyttävät samoja tallennuksia kuin ennenkin.
-- Virheestä kerrotaan lomakkeessa; tietoja ei väitetä tallennetuiksi epäonnistuneen tallennuksen jälkeen.
-
-KOKEILE
-Lisää Rovaniemi omiin matkoihin kuntasivulta. Avaa Omat matkat etusivulta ja valitse Rovaniemi. Lisää käyntipäivä, muisto, kuva ja tähtiarvio. Paina Valmis. Avaa merkintä uudelleen ja varmista tietojen näkyminen.
-
-Matkat ja kuvat säilyvät samalla laitteella ja selaimella. Tämä päivitys ei synkronoi tietoja laitteiden välillä eikä ole koko sivusto.
-
-TARKISTUKSET
-Ohjelmallisesti tarkistettu: automaattinen tallennus, tähtiarvion lisäys/tyhjennys, päivämäärien tarkistus, vanhojen kenttien ja reittien säilyminen, tyhjän uuden lomakkeen sulkeminen, toisessa välilehdessä lisättyjen kohteiden säilyminen, tallennusvirheen palaute ja kuvien tallennuksen onnistuminen vasta tietokantatapahtuman valmistuttua. Kuvien tietokannan nimi, versio ja tietueiden kentät pysyvät ennallaan. JavaScriptin syntaksi sekä lomakkeen tunnisteet tarkistettu. Visuaalista selain- tai puhelintestiä ei voitu tehdä tässä ympäristössä.
-
-Tiedostot on vietävä verkkosivulle, ennen kuin päivitys näkyy siellä.
+Tämä paketti ei ole koko sivusto. Aiempien versioiden yhteiset tiedostot tarvitaan. Nykyisen verkkosivuston julkaisu tehdään kuten aiemmissa päivityksissä.
