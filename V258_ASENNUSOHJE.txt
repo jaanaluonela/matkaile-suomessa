@@ -1,0 +1,20 @@
+MATKAILU SUOMESSA v258 – HANKO JA LÄHIALUEET (8 KUNTAA)
+
+Pieni päivitys v256-version päälle. Sisältää lisäksi v257-Siuntion, joten v257:n erillinen asennus ei ole pakollinen.
+
+1. Pura ZIP.
+2. GitHub -> Lisää tiedosto -> Lataa tiedostoja.
+3. Lataa ZIP-paketin juuresta index.html, maakunnat.html, v258-lansi-suomi.js, v257-siuntio.js sekä yhdeksän kuntasivua (.html).
+   Yhteensä 13 verkkosivulle kuuluvaa tiedostoa.
+4. Vahvista muutokset / Commit changes.
+5. Odota sivun päivittymistä ja tee Ctrl + F5.
+6. Avaa Paikkakunnat -> Uusimaa -> Hanko / Raasepori / Inkoo / Lohja / Kirkkonummi / Vihti.
+   Salo ja Kemiönsaari löytyvät Varsinais-Suomen alta.
+7. Kokeile myös hakusanat Fiskars, Tammisaari, Nummela, Mathildedal, Kasnäs.
+
+Älä poista aiempia tiedostoja. V257-siuntio.js ja siuntio.html toimitetaan mukana, eivätkä ne muuta v257:n Siuntio-sivua.
+Tiedostojen määrä ei ole GitHubin keltaisen 1 000 tiedoston ilmoituksen vuoksi estynyt.
+
+Huom! Kylien nimellä tehty haku ohjataan niiden kunnan sivulle. Majoitus- ja ruokailupaikkojen
+aukiolo sekä caravan-yöpymisen säännöt on tarkistettava ennen matkaa. Kaikissa kunnissa ei
+ole vahvistettua matkaparkkia.
