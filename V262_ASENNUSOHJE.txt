@@ -1,0 +1,29 @@
+MATKAILU SUOMESSA – v262 ETELÄ-KARJALA
+=====================================
+Päivitetty 11.10.2026
+
+ASENNUS v261:N PÄÄLLE
+1. Pura tämä ZIP.
+2. Lataa kaikki paketin tiedostot GitHub-projektin juureen.
+3. Korvaa samannimiset index.html, maakunnat.html ja etela-karjala.html.
+4. Älä poista vanhoja tiedostoja tai hakemistoja. Lappeenrannan, Imatran, Parikkalan ja Ruokolahden laajat oppaat säilyvät.
+5. Odota GitHub Pages -julkaisua ja päivitä selain tarvittaessa.
+
+SISÄLTÖ
+- 5 uutta kuntasivua: Lemi, Luumäki, Rautjärvi, Savitaipale, Taipalsaari.
+- etela-karjala.html: koontisivu kaikille 9 kunnalle.
+- v262-etela-karjala.js: hakusanat ja kuntasivulinkit.
+- index.html ja maakunnat.html: uusi moduuli mukana, edelliset ennallaan.
+
+ASUKASLUVUT: Tilastokeskus 31.12.2025.
+VAAKUNAT: Wikimedia Commonsin kuntavaakunat verkkoyhteydellä.
+
+VAHVISTETUT MATKAILUAJONEUVOJEN YÖPYMISPAIKAT
+- Luumäki: Hotelli Salpa Matkaparkki ja Palvaanjärven Loma / SFC Palvaanjärvi.
+- Savitaipale: Olkkola Camping & Caravan.
+Muiden kolmen uuden kunnan osalta tässä julkaisussa ei esitetä varmistamattomia matkailuautopaikkoja.
+
+TESTAUS
+Paikkakunnat → Etelä-Karjala → kaikki 9 kuntaa.
+Etusivun haku: Lemi, Taavetti, Hiitolanjoki, Kärnäkoski, Sarviniemi, Salpa Matkaparkki.
+Etusivun ja Kymenlaakson vanhojen hakujen tulee toimia entiseen tapaan.
