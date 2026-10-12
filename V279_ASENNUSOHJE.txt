@@ -1,0 +1,40 @@
+MATKAILU SUOMESSA – KARAVAANIALUEIDEN TÄYDENNYS v279
+12.10.2026
+
+Tämä on pieni päivitys nykyisen sivuston päälle, EI uusi sivusto.
+
+SISÄLTÖ
+- 46 yleistä caravan-/leirintäkohdetta lähdetietoineen eri puolilta Suomea (jo olemassa olevia ei lisätä uudestaan, kun sama nimi/osoite tunnistetaan).
+- Karavaanarialue Onnela, Tuuri / Töysä / Alavus / Keskisen Kyläkauppa: hakunimen korjaus ja sähkö, vesi, WC, tyhjennykset ym.
+- Jo tiedossa olevien alueiden palvelut ja aukiolo täydennetään: Alatalo, Kalajärvi, Mylly-Mäkelä, Leininranta, Yyteri, Maisansalo, Vankkurimännikkö.
+- Uudet palvelurastit: leikkipaikka, uimaranta, keittiö, pyykinpesu.
+- Uusi yhteinen kohdetietosivu (karavaanialue-v279.html).
+- Leirintäalueiden hakusivun ulkoasu säilyy; mobiilin ja tietokoneen leveydet eivät muutu.
+
+ASENNUS GITHUBIIN
+1. Pura ZIP.
+2. Lataa seuraavat 3 sivustotiedostoa GitHub-repositorion juureen:
+   leirintaalueet.html (korvaa vanha)
+   karavaanialueet-v279.js (uusi)
+   karavaanialue-v279.html (uusi)
+3. Älä poista muita tiedostoja tai aiempia päivityksiä.
+4. Anna GitHub Pagesin päivittyä ja tee selaimessa Ctrl+F5.
+
+TÄRKEÄÄ
+- Edellyttää v275-palvelusuodatinta sekä aiemman sivuston caravan-data.js:n ja valikot-v200.js:n.
+- Noin 47 tietuetta toimitetaan, mutta nettolisäysten määrä riippuu nykyisen sivuston sisällöstä.
+- Aukioloa ei oleteta ympärivuotiseksi ilman toimijan vahvistusta.
+- SFC-alueen tunnus annetaan vain viralliselle jäsenyhdistyksen alueelle, ei siksi että kohde tarjoaa SFC-alennusta.
+- Kaikki palvelut eivät ole kaikkina vuodenaikoina käytössä.
+
+LÄHTEET
+- https://leirintaopas.fi/alueet?cat=leirintaalueet-yleiset
+- https://leirintaopas.fi/alueet/page/2?cat=leirintaalueet-yleiset
+- https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+- https://tuuri.fi/majoitu/karavaanarialue-onnela/
+- https://www.caravan-kalajarvi.fi/
+- https://www.sfclansipaijanne.fi/
+- https://caravanhuiput.fi/etualueet/leininranta/
+- https://sfcpirkanmaa.fi/aukioloajat/
+- https://camping.fi/leirintaalueet-ja-lomakylat/yyteri-resort-camping/
+- https://www.sfc-kuopionseutu.net/talviloma-alatalossa-sauna-ajat-ja-ulkoilumadollisuudet-talvilomaviikoilla-8-10-2026/
