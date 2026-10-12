@@ -25,3 +25,5 @@ body[data-kind="camping"] .stay .camp-sfc-badge{
   border:1px solid #c5dccc;background:#eaf5ee;color:#245b3d;
   font-size:12px;font-weight:800;line-height:1.2
 }
+
+.camp-service-options{border:0;padding:0;margin:18px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}.camp-service-options legend{font-weight:800;margin-bottom:10px}.camp-service-info{font-size:14px;color:#245d46;line-height:1.6}

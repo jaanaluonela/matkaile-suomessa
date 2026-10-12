@@ -1,0 +1,11 @@
+Matkailu Suomessa v274 – Leirintäalueiden palveluhaku
+
+Pura ZIP ja kopioi kaikki viisi sivustotiedostoa samaan kansioon nykyisten tiedostojen kanssa. Korvaa samannimiset tiedostot. Aiemmat päivitykset säilytetään. Päivitä selain Ctrl+F5.
+
+Seitsemän uutta rastia: mökit, teltat, matkailuautot/vaunut, sauna, uimaranta, ravintola/kahvila ja lemmikit. Kaikki valitut ehdot vaaditaan, yhdessä SFC- ja ympärivuotisuushaun sekä maakunnan ja kunnan kanssa.
+Heinäsaari ja Onnela: palvelut tarkistettu 12.10.2026 kohteiden omilta sivuilta. Onnelalle ei ole merkitty mökkejä. Muilla kohteilla käytetään jo tallennettuja nimenomaisia palvelutietoja; puuttuva palvelutieto ei tarkoita palvelun puuttumista. Ympärivuotinen alue ei takaa kaikkien palvelujen ympärivuotisuutta.
+
+Lähteet:
+https://tuuri.fi/majoitu/karavaanarialue-onnela/
+https://www.visitheinasaari.fi/leirintaaluepalvelut/
+https://www.visitheinasaari.fi/majoitus/

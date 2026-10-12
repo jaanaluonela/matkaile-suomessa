@@ -109,6 +109,7 @@
     const box = document.getElementById('municipality-results');
     const status = document.getElementById('list-status');
     if (!yearCheckbox || !sfcCheckbox || !box) return;
+    const serviceCheckboxes = [...document.querySelectorAll('[data-camp-service]')];
     const params = new URLSearchParams(location.search);
     if (params.get('sfc') === '1') sfcCheckbox.checked = true;
     const places = () => window.caravanPlaces || [];
@@ -138,21 +139,25 @@
           sfcBadge.textContent='SFC-alue';
           badge.insertAdjacentElement('afterend',sfcBadge);
         } else if (!sfc && sfcBadge) sfcBadge.remove();
+        const services = window.campServicesV274(place);
+        let serviceInfo=card.querySelector('.camp-service-info');
+        if(!serviceInfo){serviceInfo=document.createElement('p');serviceInfo.className='camp-service-info';card.append(serviceInfo);}
+        serviceInfo.textContent=Object.entries(window.campServiceLabelsV274).filter(([key])=>services[key]===true).map(([,label])=>label).join(' · ') || 'Palvelutietoja ei vielä vahvistettu';
         const searchableText = normal(card.textContent+' '+(place.name||'')+' '+(place.city||''));
         const show = (!q || searchableText.includes(q)) &&
           (!yearCheckbox.checked || aukiolo.status === 'yearround') &&
-          (!sfcCheckbox.checked || sfc);
+          (!sfcCheckbox.checked || sfc) && serviceCheckboxes.every(c=>!c.checked || services[c.dataset.campService]===true);
         card.hidden = !show;
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       }
-      const hasFilter = Boolean(yearCheckbox.checked || sfcCheckbox.checked || q);
+      const hasFilter = Boolean(yearCheckbox.checked || sfcCheckbox.checked || serviceCheckboxes.some(c=>c.checked) || q);
       let empty = document.getElementById('camp-opening-empty');
       const baseEmpty = box.querySelector('.empty');
       if (baseEmpty) baseEmpty.hidden = hasFilter;
       if (visible === 0 && hasFilter) {
         if (!empty) {empty=document.createElement('p');empty.id='camp-opening-empty';box.append(empty);}
-        empty.textContent = sfcCheckbox.checked
+        empty.textContent = serviceCheckboxes.some(c=>c.checked) ? 'Valituilla palveluilla ei löytynyt vahvistettuja kohteita. Poista jokin rasti tai laajenna aluetta.' : sfcCheckbox.checked
           ? 'Valituilla hakuehdoilla ei löytynyt SFC-alueita. Poista jokin rasti tai valitse toinen maakunta.'
           : yearCheckbox.checked
             ? 'Tällä rajauksella ei löytynyt vahvistetusti ympäri vuoden avoinna olevia leirintäalueita.'
@@ -165,6 +170,7 @@
         const active = [
           sfcCheckbox.checked ? 'SFC-alueet' : '',
           yearCheckbox.checked ? 'Ympäri vuoden' : '',
+          ...serviceCheckboxes.filter(c=>c.checked).map(c=>window.campServiceLabelsV274[c.dataset.campService]),
           q ? 'Haku' : ''
         ].filter(Boolean);
         status.textContent = area+' · '+active.join(' · ')+' · '+visible+' kohdetta';
@@ -174,6 +180,7 @@
         status.textContent=(city || region || 'Koko Suomi')+' · '+cards.length+' kohdetta';
       }
     }
+    serviceCheckboxes.forEach(c=>c.addEventListener('change',apply));
     yearCheckbox.addEventListener('change',apply);
     sfcCheckbox.addEventListener('change',() => {
       const url = new URL(location.href);

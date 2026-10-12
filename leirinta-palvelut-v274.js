@@ -1,0 +1,20 @@
+(() => {'use strict';
+const labels={"cabins": "Mökkimajoitus", "tents": "Telttapaikat", "caravan": "Matkailuauto- ja vaunupaikat", "sauna": "Sauna", "beach": "Uimaranta", "food": "Ravintola tai kahvila", "pets": "Lemmikit sallittu"}, additions=[{"id": "v274-onnela", "name": "Keskisen Kyläkauppa – Karavaanarialue Onnela", "city": "Alavus", "region": "Etelä-Pohjanmaa", "address": "Onnelantie 45, 63610 Tuuri", "website": "https://tuuri.fi/majoitu/karavaanarialue-onnela/", "phone": "010 770 7277", "services": {"tents": true, "caravan": true, "sauna": true, "beach": true, "food": true, "pets": true}, "season": "Ympäri vuoden; telttapaikat kesäkaudella. Talvikaudella sisäänkirjautuminen Hotelli OnnenTähdessä. Sauna-ajat vaihtelevat.", "openingStatus": "yearround", "sfcArea": false, "checked": "2026-10-12", "type": "camping", "url": "leirintakohde-v274.html?kohde=v274-onnela", "map": "https://www.google.com/maps/search/?api=1&query=Keskisen%20Kyl%C3%A4kauppa%20%E2%80%93%20Karavaanarialue%20Onnela%20Onnelantie%2045%2C%2063610%20Tuuri", "navigate": "https://www.google.com/maps/dir/?api=1&destination=Keskisen%20Kyl%C3%A4kauppa%20%E2%80%93%20Karavaanarialue%20Onnela%20Onnelantie%2045%2C%2063610%20Tuuri", "description": "Tuurissa Keskisen Kyläkaupan vieressä sijaitseva karavaanialue. Teltta- ja caravanpaikat, saunat, uimaranta, ravintolapalvelut ja lemmikit sallittu."}, {"id": "v274-heinasaari", "name": "Heinolan Heinäsaari", "city": "Heinola", "region": "Päijät-Häme", "address": "Heinäsaarentie 101, 18100 Heinola", "website": "https://www.visitheinasaari.fi/", "phone": "020 767 0240", "services": {"cabins": true, "tents": true, "caravan": true, "sauna": true, "beach": true, "food": true, "pets": true}, "season": "Ympäri vuoden; talvella osa caravanpaikoista ja mökit, saunat tilauksesta. Palvelut ja vastaanottoajat vaihtelevat.", "openingStatus": "yearround", "sfcArea": false, "checked": "2026-10-12", "type": "camping", "url": "leirintakohde-v274.html?kohde=v274-heinasaari", "map": "https://www.google.com/maps/search/?api=1&query=Heinolan%20Hein%C3%A4saari%20Hein%C3%A4saarentie%20101%2C%2018100%20Heinola", "navigate": "https://www.google.com/maps/dir/?api=1&destination=Heinolan%20Hein%C3%A4saari%20Hein%C3%A4saarentie%20101%2C%2018100%20Heinola", "description": "Heinolan leirintäalue Ruotsalaisen rannalla. Mökit, teltta- ja caravanpaikat, saunat, uimaranta, kahvila-ravintola ja lemmikit sallittu."}];
+window.campServiceLabelsV274=labels;
+const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
+const list=window.caravanPlaces||(window.caravanPlaces=[]);
+for(const extra of additions){
+ const match=list.find(p=>p.type==='camping' && (p.id===extra.id || (norm(p.city)===norm(extra.city) && (norm(p.name).includes(extra.city==='Heinola'?'heinasaari':'onnela') || norm(p.address)===norm(extra.address))) || (extra.city==='Alavus' && norm(p.city)==='tuuri' && norm(p.name).includes('onnela'))));
+ if(match){Object.assign(match,{services:{...match.services,...extra.services},openingStatus:extra.openingStatus,season:extra.season,sfcArea:false,checked:extra.checked});}else list.push(extra);
+ const mapping=window.municipalityRegions||(window.municipalityRegions={});mapping[extra.city]=extra.region;
+ const towns=window.siteMunicipalities||(window.siteMunicipalities={});if(!towns[extra.city])towns[extra.city]='leirintaalueet.html?kunta='+encodeURIComponent(extra.city);
+}
+window.campServicesV274=p=>{
+ const services={...(p.services||{})};
+ // Existing explicitly written service descriptions remain searchable. Do not infer from names.
+ const text=String(p.description||'').toLowerCase();
+ const patterns={cabins:/mök(?:ki|kejä|it|keja|kimajoitus)/,tents:/teltta(?:paik|alue|il)/,caravan:/(?:caravan|matkailuajoneuvo|vaunu)paik|sähköpaik/,sauna:/sauna|sauno/,beach:/uimaranta|uimarannan/,food:/ravintola|kahvila/,pets:/lemmikit (?:ovat )?(?:sallittu|tervetulleita)/};
+ for(const [key,re] of Object.entries(patterns))if(services[key]===undefined && re.test(text) && !/(?:ei |ilman |puuttuu)/.test(text))services[key]=true;
+ return services;
+};
+})();

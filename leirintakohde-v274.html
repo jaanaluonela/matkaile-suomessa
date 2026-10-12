@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leirintäalue – Matkailu Suomessa</title>
+<link rel="stylesheet" href="navigation-v191.css?v=244"><script src="caravan-data.js"></script><script defer src="leirinta-data-v264.js?v=264"></script><script defer src="leirinta-palvelut-v274.js"></script><script defer src="app.js?v=264"></script>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6faf7;color:#1f3832;font-family:system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}main{width:min(100% - 30px,1100px);margin:16px auto 110px}.back{display:inline-block;margin:6px 0 20px;color:#17694c;font-weight:700;text-decoration:none}h1{font-size:clamp(27px,4vw,41px);line-height:1.14;margin:4px 0 10px}.intro{font-size:clamp(16px,2vw,19px);max-width:800px;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:16px}.card{background:#fff;padding:clamp(17px,3vw,25px);border:1px solid #d5e6db;border-radius:19px;min-width:0;box-shadow:0 5px 20px #1b3d2420}.card h2{font-size:20px;margin:0 0 8px}.tag{display:inline-block;padding:8px 12px;border-radius:99px;font-weight:800;font-size:14px;margin-bottom:12px}.tag.yearround{background:#e0f3e5;color:#166338}.tag.seasonal{background:#fff0d7;color:#7e5000}.tag.unknown{background:#e9eeee;color:#4c6265}.muted{color:#557168}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}.actions a,.actions button{border:1px solid #bcdac9;background:#e7f3ec;color:#195b43;border-radius:11px;padding:12px 15px;text-decoration:none;font:700 15px system-ui;cursor:pointer;max-width:100%}.actions a:hover,.actions button:hover{background:#d7ebdf}.note{color:#526c61;font-size:13px;margin-top:17px}#error{padding:24px;background:#fff;border-radius:15px}
+@media(max-width:520px){main{width:calc(100% - 24px);margin-top:8px}.actions a,.actions button{width:100%;text-align:center}}
+</style></head><body><main><a class="back" href="leirintaalueet.html">‹ Leirintäalueet</a><div id="content"><p>Ladataan kohteen tietoja…</p></div></main>
+<nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html" aria-current="page"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+const key=new URLSearchParams(location.search).get('kohde');
+const p=(window.caravanPlaces||[]).find(d=>d.id===key && d.type==='camping');
+const el=document.getElementById('content');
+if(!p){el.innerHTML='<p id="error">Kohdetta ei löytynyt. <a href="leirintaalueet.html">Palaa leirintäalueisiin</a>.</p>';return;}
+const mk=(tag,className,value)=>{const a=document.createElement(tag);if(className)a.className=className;a.textContent=value||'';return a;};
+const link=(label,url)=>{const a=mk('a','',label);a.href=url;a.rel='noopener noreferrer';a.target='_blank';return a;};
+const card=(heading)=>{const c=mk('section','card','');c.append(mk('h2','',heading));return c;};
+let intro=mk('div','',null);intro.append(mk('h1','',p.name));intro.append(mk('p','intro',p.description));el.replaceChildren(intro);
+document.title=p.name+' – Matkailu Suomessa';
+let grid=mk('div','grid',null);el.append(grid);
+let first=card('📅 Aukiolo ja saapuminen');
+const status=p.openingStatus||'unknown', s=status==='yearround'?'✓ Avoinna ympäri vuoden':status==='seasonal'?'📅 Kausiluonteinen':'? Tarkista aukiolo';
+first.append(mk('span','tag '+status,s));first.append(mk('p','',p.season||'Aukioloaika varmistettava'));first.append(mk('p','muted','Aukiolot ja huoltopalvelut voivat muuttua. Varmista tiedot ennen matkaa.'));grid.append(first);
+let second=card('📍 Sijainti ja yhteystiedot');second.append(mk('p','',p.address));if(p.phone)second.append(mk('p','',p.phone));
+let act=mk('div','actions','');act.append(link('Kohteen omat sivut ↗',p.website));act.append(link('Ajo-ohje ↗',p.navigate||p.map));second.append(act);grid.append(second);
+let serviceCard=card('Palvelut');serviceCard.append(mk('p','',Object.entries(window.campServiceLabelsV274).filter(([key])=>window.campServicesV274(p)[key]===true).map(([,label])=>label).join(' · ')));grid.append(serviceCard);
+let third=card('❤️ Omat matkat');let btns=mk('div','actions','');let visited=mk('button','action','✓ Olen käynyt täällä');visited.type='button';visited.dataset.visited=p.id;visited.addEventListener('click',()=>window.visited?.(p.id,visited));let trip=mk('button','action','Lisää omiin matkoihin');trip.type='button';trip.addEventListener('click',()=>window.addTrip?.(p.id,p.name));btns.append(visited,trip);third.append(btns);let diary=mk('p','','');let dia=mk('a','','Avaa Omat matkat →');dia.href='paivakirja.html';diary.append(dia);third.append(diary);grid.append(third);
+el.append(mk('p','note','Tiedot tarkistettu 12.10.2026 verkkolähteistä. Aukiolo ei ole reaaliaikainen, ja mahdollinen muutos on tarkistettava kohteesta.'));
+});
+</script></body></html>
