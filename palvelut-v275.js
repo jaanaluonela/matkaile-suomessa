@@ -1,34 +1,39 @@
-/* v283: independent, robust service reset, including all newly-added checkboxes.
-   Capture-phase handling also works if older filter initialization fails. */
-(()=>{
-  'use strict';
-  const init=()=>{
-    const choices=document.querySelector('.ms275-services-panel .ms275-services-choices');
-    if(choices){
-      choices.setAttribute('role','group');
-      choices.setAttribute('aria-label','Valitse palvelut, pyyhkäise sivulle nähdäksesi kaikki vaihtoehdot');
-      if(!document.querySelector('.ms275-scroll-hint')){
-        const hint=document.createElement('p');
-        hint.className='ms275-scroll-hint';
-        hint.textContent='Näytä lisää palveluita pyyhkäisemällä sivulle →';
-        choices.insertAdjacentElement('afterend',hint);
-      }
-    }
-    document.addEventListener('click',event=>{
-      const target=event.target;
-      const button=target?.closest?.('#ms275-clear-services');
-      if(!button)return;
-      event.preventDefault();
-      const panel=button.closest('.ms275-services-panel')||document;
-      const checked=[...panel.querySelectorAll('.ms275-services-choices input[type="checkbox"]')].filter(input=>input.checked);
-      // Uncheck everything before calling filters, to avoid rendering partial selections.
-      for(const input of checked)input.checked=false;
-      for(const input of checked)input.dispatchEvent(new Event('change',{bubbles:true}));
-      if(typeof window.ms275ApplyFilters==='function')window.ms275ApplyFilters();
-    },true);
-  };
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
-  else init();
+/* Matkailu Suomessa v284: tiiviit palvelut; EI tavallista WC:tä eikä vettä. */
+(()=>{'use strict';
+ const SERVICES=[
+  ['electric','⚡ Sähkö','Sähkö'],['shower','🚿 Suihku','Suihku'],
+  ['sauna','♨️ Sauna','Sauna'],['wc','🚻 WC','WC'],
+  ['greywater','🛠️ Harmaavesi','Harmaavesi'],['cottages','🏠 Mökit','Mökit'],
+  ['cafe','☕ Kahvila','Kahvila'],['playground','🛝 Leikkipaikka','Leikkipaikka'],
+  ['beach','🏖️ Uimaranta','Uimaranta'],['kitchen','🍳 Keittiö','Keittiö'],
+  ['laundry','🧺 Pyykinpesu','Pyykinpesu']
+ ];
+ function init(){
+   const group=document.querySelector('.ms275-services-panel .ms275-services-choices');
+   if(!group)return;
+   // Rakennetaan joka sivulla samat valinnat. Arvot säilyvät suodatusmoottorille.
+   const existing=new Map([...group.querySelectorAll('input.ms275-service-choice')].map(i=>[i.value,i.checked]));
+   group.replaceChildren(...SERVICES.map(([value,caption,full])=>{
+     const label=document.createElement('label');label.title=full;
+     const checkbox=document.createElement('input');checkbox.type='checkbox';
+     checkbox.className='ms275-service-choice';checkbox.value=value;
+     checkbox.checked=Boolean(existing.get(value));checkbox.setAttribute('aria-label',full);
+     const text=document.createElement('span');
+     text.textContent=caption;
+     label.append(checkbox,text);return label;
+   }));
+   group.setAttribute('role','group');group.setAttribute('aria-label','Valitse tarvitsemasi palvelut');
+   document.querySelectorAll('.ms275-scroll-hint').forEach(x=>x.remove());
+   const reset=document.getElementById('ms275-clear-services');
+   if(reset){reset.type='button';reset.addEventListener('click',()=>{
+     // Myös nykyistä vanhempien valintojen mahdolliset rastit tyhjentyvät.
+     const inputs=[...group.querySelectorAll('input[type=checkbox]')];
+     inputs.forEach(input=>input.checked=false);
+     inputs.forEach(input=>input.dispatchEvent(new Event('change',{bubbles:true})));
+     if(typeof window.ms275ApplyFilters==='function')window.ms275ApplyFilters();
+   });}
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 
 /* Matkailu Suomessa v275: Verified services. Unknown is NOT yes. */

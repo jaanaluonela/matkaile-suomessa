@@ -1,0 +1,36 @@
+MATKAILU SUOMESSA – v287 – PALVELUVALIKON TIIVISTYS JA MOBIILIKORJAUS
+12.10.2026
+
+Pieni päivityspaketti (ei koko verkkosivusto).
+Pohjana v286 LAPPI_JA_PALVELUT -paketti. Voit käyttää tätä myös viimeisimmän
+Pohjois-Pohjanmaan v286-päivityksen kanssa, koska sen maakunta- ja kuntasivuihin
+ei kosketa.
+
+ASENNUS GITHUBIIN
+1. Pura ZIP-paketti.
+2. Vie NELJÄ mukana olevaa HTML/JS/CSS-tiedostoa sivustosi pääkansioon:
+   - leirintaalueet.html
+   - matkaparkit.html
+   - palvelut-v275.css
+   - palvelut-v275.js
+3. Korvaa vain nämä samannimiset tiedostot. Säilytä KAIKKI muut sivut,
+   tietokannat, maakuntakartat sekä aiemmat Lapin ja Pohjois-Pohjanmaan tiedostot.
+4. Odota GitHub Pages -julkaisua ja päivitä selainvälimuisti.
+
+MUUTOKSET
+- Tietokoneella 11 palveluvalintaa kahdessa tiiviissä rivissä (6 + 5),
+  hyödyntäen käytettävissä olevan paneelin koko leveyttä.
+- Tabletilla 4 saraketta, puhelimella yksi sarake allekkain.
+- Palveluvalikon sivuttaisvieritys poistettu.
+- Puhelimella hakutulosten kortit asetellaan yhteen sarakkeeseen.
+- Vesi- ja WC-tyhjennys-valinnat eivät näy palveluhakusuodattimina.
+- Tavallinen WC säilyy valittavana palveluna.
+- Harmaavesi, Sähkö, Suihku, Sauna, Mökit, Kahvila, Leikkipaikka,
+  Uimaranta, Keittiö ja Pyykinpesu säilyvät.
+- Palvelutietoja (myös vesi/kemiallinen WC), karttoja, kohteita tai muita
+  hakulogiikan tietoja ei poisteta.
+- Palvelusuodattimen tyhjennyspainike säilyy.
+- CSS ja JS saavat ?v=287-välimuistitunnisteen molemmilla sivuilla.
+
+HUOM: Jos GitHubissa palvelut-v275.js sisältää uudempia itse tehtyjä
+muutoksia, yhdistä ne ennen tämän version korvaamista.
