@@ -1,0 +1,28 @@
+MATKAILU SUOMESSA – SUURI SISÄLTÖPÄIVITYS v278
+
+Tämä on pienikokoinen PÄIVITYS nykyisen GitHub-sivustosi päälle, EI uusi koko sivusto.
+
+MITÄ LISÄTTY
+- 23 paikkakuntasivulle uusi "Lisää tekemistä matkalle" -osio.
+- 69 paikallista vinkkikorttia: karttahaut, lähdesivut ja käytännön kuvaus.
+- 7 Kuopion seudun sivulle yhteensä 31 uutta kohdekorttia vanhoja poistamatta.
+- Yhteensä 100 LISÄVINKKIÄ yhteensä 30 paikkakunnalla.
+- Uudet linkit Lasten kanssa-, Karavaanarin palvelut- ja Leirintäalueet -hakuihin.
+- Responsiivinen muotoilu: puhelimella yksi kortti / rivi, tietokoneella useampi.
+
+GITHUB-ASENNUS
+1. Avaa tämä ZIP ja pura sen sisältö koneellesi.
+2. Mene GitHub-repositorioosi, jonka juurikansiossa index.html on.
+3. Lataa ZIPin 25 tiedostoa repositorion JUURIKANSIOON.
+4. GitHubissa korvaa samannimiset .html- ja .js-tiedostot. ÄLÄ poista mitään muuta tiedostoa.
+5. Odota GitHub Pagesin päivitystä ja tee selaimessa Ctrl+F5.
+
+TÄRKEÄÄ
+- Tämä päivitys edellyttää, että aiemmat paikkakuntasivut on asennettu, erityisesti v270 Kuopion seutu.
+- Tämä ei sisällä kaikkia Suomen kohteita eikä automaattisia reaaliaikaisia aukioloaikoja.
+- Karttalinkit ovat nimihakuja eivätkä vahvistettuja matkailuauton pysäköintilupia.
+- Tämä päivitys ei muuta valikkoja, päiväkirjaa, omaa matkadataa tai etusivua.
+- Sisältö on koottu alueellisten matkailusivustojen, kuntien ja palveluntarjoajien tiedoista.
+- Tarkista aina aukioloajat ja palvelut ennen lähtöä.
+
+Sisältöpäivitys v278 / 12.10.2026

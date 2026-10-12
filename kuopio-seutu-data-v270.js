@@ -25,8 +25,7 @@ window.KUOPIO_SEUTU={
       ["Puijon ravintolat","Torniravintola, Tornikahvila ja Puijon Maja yhdistävät maisemat ja paikalliset maut.","Varaa suosituimpina aikoina","https://www.puijopeak.fi/ravintolat/","Puijon ravintolat"],
       ["Bellanranta","Ravintoloita, sauna- ja hyvinvointipalveluja sekä tapahtumia Kallaveden rannalla.","Palvelut yrityskohtaisia","https://bellanranta.fi/","Bellanranta Kuopio"]]},
     {title:"🚐 Karavaanarin yöpyminen",items:[
-      ["Matkailukeskus Rauhalahti","Viiden tähden campingalue: 150 sähköpaikkaa, huoltorakennukset, keittiöt, pyykinpesu sekä kemiallisen WC:n ja harmaaveden tyhjennys. Talvikaudella 27 sähköpaikkaa.","✓ Caravan-paikkoja ympäri vuoden","https://visitrauhalahti.fi/rauhalahti/camping/","Rauhankatu 3 Kuopio"],
-      ["SFC Alatalo","SF-Caravan Kuopion Seutu ry:n oma caravan-alue Jännevirralla, noin 20 kilometrin päässä Kuopion keskustasta. Tarkista vierailuohjeet ja ajankohtaiset palvelut ennen saapumista.","Jännevirta · tarkista vierailuohjeet","https://www.sfc-kuopionseutu.net/","Jänneniementie 264, 70940 Jännevirta"]]}
+      ["Matkailukeskus Rauhalahti","Viiden tähden campingalue: 150 sähköpaikkaa, huoltorakennukset, keittiöt, pyykinpesu sekä kemiallisen WC:n ja harmaaveden tyhjennys. Talvikaudella 27 sähköpaikkaa.","✓ Caravan-paikkoja ympäri vuoden","https://visitrauhalahti.fi/rauhalahti/camping/","Rauhankatu 3 Kuopio"]]}
   ]},
   "siilinjarvi":{name:"Siilinjärvi",lead:"Kylpylää, ulkoilua, golfia ja helposti saavutettavia päiväretkikohteita Kuopion pohjoispuolella.",tags:["Fontanella","Kasurila","Pöljä"],sections:[{title:"⭐ Näe ja koe",items:[
     ["Kylpylä Fontanella","Uimista, vesiliikuntaa ja hyvinvointipalveluja kaikenikäisille.","Tarkista aukiolo","https://fontanella.fi/","Kylpylä Fontanella"],
@@ -53,3 +52,36 @@ window.KUOPIO_SEUTU={
     ["Vaikkojoki","Melontaa, kalastusta ja retkeilyä pitkällä jokireitillä.","Olosuhteet ja luvat tarkistettava","https://www.kaavi.fi/","Vaikkojoki Kaavi"],
     ["Luikonlahti","Kylä- ja järvimaisemia sekä kesäisiä palveluja Kaavin eteläosassa.","Palvelut kausittaisia","https://www.kaavi.fi/","Luikonlahti Kaavi"]]}]}
 };
+
+/* v278: lisää kohteita alkuperäisiä tietueita korvaamatta. */
+(function(){
+const data=window.KUOPIO_SEUTU;if(!data)return;
+if(data["kuopio"]){
+data["kuopio"].sections.push({title:"🧸 Lasten ja perheiden pysähdykset",items:[["VB-valokuvakeskus", "Vaihtuvat näyttelyt lähellä keskustaa, alle 18-vuotiaille maksuton pääsy.", "Sisäkohde", "https://vb-valokuvakeskus.fi/", "VB-valokuvakeskus Kuopio"], ["Valkeisenlammen puisto", "Kävelyreitti ja viihtyisä viheralue kaupungin keskustan lähellä.", "Ulkoilukohde", "https://www.kuopio.fi/", "Valkeisenlampi Kuopio"], ["Kuopion torialue", "Kalakukko-, kahvila- ja toripysähdys, jossa voi piipahtaa lyhyesti.", "Keskusta", "https://www.kuopionkauppahalli.fi/", "Kuopion kauppatori"]]});
+data["kuopio"].sections.push({title:"🚐 Matkailuautoilijan taukovinkit",items:[["Rauhalahden matkailualueen palvelut", "Selvitä paikkavaraus ja huoltopalvelut erikseen; kaikki palvelut eivät välttämättä kuulu ohikulkijalle.", "Palvelut varmistettava", "https://visitrauhalahti.fi/rauhalahti/camping/", "Rauhalahti Kuopio"], ["Bellanrannan palvelualue", "Ravintoloita ja hyvinvointipalveluja; pysäköinnin soveltuvuus matkailuautolle tarkistettava.", "Ei leiriytymislupa", "https://bellanranta.fi/", "Bellanranta Kuopio"]]});
+}
+if(data["siilinjarvi"]){
+data["siilinjarvi"].sections.push({title:"🌲 Luonto ja kesäpäivä",items:[["TarinaGolfin ympäristö", "Golfpäivä tai rauhallinen kahvitauko ennen jatkomatkaa.", "Golfaus kesäkaudella", "https://tarinagolf.fi/", "TarinaGolf Siilinjärvi"], ["Pöljän kotiseutumuseo", "Paikallishistoriaa lapsille ja aikuisille, käy aukioloaikoina.", "Kausittainen", "https://www.siilinjarvi.fi/", "Pöljän kotiseutumuseo"], ["Kasurilan ulkoilualue", "Talvisin laskettelua, muina aikoina tutki ulkoilumahdollisuudet.", "Olosuhteet vaihtelevat", "https://kasurila.com/", "Kasurila Siilinjärvi"]]});
+data["siilinjarvi"].sections.push({title:"🧸 Lasten kanssa ja sadepäivänä",items:[["Kylpylä Fontanella", "Uimista ja sisätekemistä lapsiperheille.", "Tarkista aukiolo", "https://fontanella.fi/", "Fontanella Siilinjärvi"], ["Pöljän kylämaisemat", "Yhdistä museovierailu rauhalliseen kyläretkeen.", "Kävely", "https://www.siilinjarvi.fi/", "Pöljä Siilinjärvi"]]});
+}
+if(data["lapinlahti"]){
+data["lapinlahti"].sections.push({title:"🏛️ Lisää kulttuuria",items:[["Taidemuseo Eemil", "Halosen taiteilijasuvun näyttelyitä; soveltuu myös sadepäivän pysähdykseksi.", "Museo", "https://lapinlahti.fi/visitlapinlahti/kulttuuria-ja-nahtavyyksia", "Taidemuseo Eemil Lapinlahti"], ["Kulttuurikeskus LASTU", "Arkkitehtuuri- ja ympäristökulttuuria; tarkista avoimet tapahtumat.", "Kulttuuri", "https://lapinlahti.fi/visitlapinlahti/kulttuuria-ja-nahtavyyksia", "LASTU Lapinlahti"]]});
+data["lapinlahti"].sections.push({title:"🌲 Luonto ja maisemat",items:[["Väisälänmäen kulttuuri- ja luontopolku", "Retkeile kansallismaisemassa taiteilijoiden jalanjäljissä.", "Luontopolku", "https://lapinlahti.fi/visitlapinlahti/kulttuuria-ja-nahtavyyksia", "Väisälänmäki Lapinlahti"], ["Lapinlahden kirkonkylä", "Lyhyt kävely ja kahvitauko ennen matkan jatkumista.", "Keskusta", "https://lapinlahti.fi/", "Lapinlahti keskusta"]]});
+}
+if(data["leppavirta"]){
+data["leppavirta"].sections.push({title:"🧸 Lasten kanssa",items:[["Vesileppiksen Muumi-jääluola", "Erikoista sisätekemistä ja talvitunnelmaa. Tarkista sesongin ohjelma ja liput.", "Sisäaktiviteetti", "https://www.vesileppis.fi/", "Muumi jääluola Leppävirta"], ["Vesileppiksen kylpylä", "Sadepäivän uimatauon mahdollisuus.", "Tarkista päiväkäynnit", "https://www.vesileppis.fi/", "Vesileppis Leppävirta"], ["Leppävirran kesäpuistot", "Kesäkauden leikkipaikat ja uimapaikat paikallisen matkailuinfokartan avulla.", "Kesäkausi", "https://leppavirta.fi/", "Leppävirta leikkipuisto"]]});
+data["leppavirta"].sections.push({title:"🌲 Reittivinkit",items:[["Orinoron rotko", "Jyrkkä ja paikoin vaativa luontokohde. Varaa tukevat kengät.", "Vaativa maasto", "https://leppavirta.fi/", "Orinoro Leppävirta"], ["Konnuksen kanava", "Vesimaisemia ja kanavahistoriaa; kulku vain sallituilla alueilla.", "Maisemakohde", "https://leppavirta.fi/", "Konnuksen kanava Leppävirta"]]});
+}
+if(data["suonenjoki"]){
+data["suonenjoki"].sections.push({title:"🍓 Mansikkakaupungin elämykset",items:[["Suonenjoen Mansikkakarnevaalit", "Vuosittainen kesätapahtuma; vuoden 2027 tapahtumapäivät ovat 16.–17.7.", "Tapahtuma", "https://www.mansikkakarnevaalit.fi/", "Mansikkakarnevaalit Suonenjoki"], ["Suonenjoen tori", "Sesonkiaikaan torilta voi löytää paikallisia marjoja ja muita herkkuja.", "Tarjonta vaihtelee", "https://www.suonenjoki.fi/", "Suonenjoen tori"]]});
+data["suonenjoki"].sections.push({title:"🌲 Ulkoilu ja historia",items:[["Lintharjun reitit", "Metsä- ja harjumaisemia lyhyemmällekin tauolle.", "Luonto", "https://www.suonenjoki.fi/", "Lintharju Suonenjoki"], ["Kolikkoinmäen museoalue", "Perinteistä työläisasumisen historiaa, tarkista museon aukiolo.", "Museo kausittain", "https://www.suonenjoki.fi/", "Kolikkoinmäen työläiskotimuseo"]]});
+}
+if(data["tuusniemi"]){
+data["tuusniemi"].sections.push({title:"🌲 Lyhyet ja pitkät retket",items:[["Seinävuoren rotkolaakson kierto", "Noin 2,5 km reitti on paikoin vaativa. Rotkon reunoilla varovaisuutta lasten kanssa.", "Osin vaativa", "https://www.tuusniemi.fi/seinavuoren-rotkolaakso1", "Seinävuoren rotkolaakso Tuusniemi"], ["Silmäsuon polut", "Helppokulkuisempi vaihtoehto luonnossa liikkumiseen; tutustu reittikarttaan.", "Helppo reitti", "https://www.tuusniemi.fi/retkeilyreitistot", "Silmäsuo Tuusniemi"], ["Mäkimajan laavu", "Pidemmän reitin taukopaikka, jonne kuljetaan maastossa.", "Retkikohde", "https://www.tuusniemi.fi/retkeilyreitistot", "Mäkimaja Tuusniemi"]]});
+data["tuusniemi"].sections.push({title:"🚐 Karavaanarille",items:[["Seinävuoren pysäköintipaikka", "Käytä opastettua pysäköintialuetta; tien talvikunnossapito ei yllä kaikille lähtöpaikoille.", "Ei yöpymislupa", "https://www.tuusniemi.fi/seinavuoren-rotkolaakso1", "Seinävuoren rotkolaakson pysäköintialue"]]});
+}
+if(data["kaavi"]){
+data["kaavi"].sections.push({title:"🌲 Luonto ja melonta",items:[["Vaikkojoen Rakkinekoski", "Retkeilyn lähtöpaikka Kaavin Vaikkojoella. Melonta ja kalastus edellyttävät olosuhteiden sekä lupien tarkistamista.", "Retkikohde", "https://kaavi.fi/tekemista-kaavilla/matkailu-ja-tapahtumat/vaikkojoki/", "Rakkinekoski Kaavi"], ["Vaikkojoen helppokulkuinen reitti", "Jokimaisemaan voi tutustua myös patikoiden tai pyöräillen.", "Reitti", "https://kaavi.fi/tekemista-kaavilla/matkailu-ja-tapahtumat/vaikkojoki/", "Vaikkojoki Kaavi"]]});
+data["kaavi"].sections.push({title:"🧸 Kulttuuria lapsille",items:[["Telkkämäen kaskiperinnetila", "Tutustu kaskikulttuuriin historiallisessa pihapiirissä.", "Vapaa ulkoalue", "https://kaavi.fi/tekemista-kaavilla/kulttuuri-ja-museot/telkkamaen-kaskiperinnetila/", "Telkkämäki Kaavi"], ["Telkkämäen lyhyet luontopolut", "Laidunkierto noin 0,9 km ja Rietulan kierto noin 1,9 km. Alueella ei saa leiriytyä.", "Luontopolut", "https://kaavi.fi/tekemista-kaavilla/kulttuuri-ja-museot/telkkamaen-kaskiperinnetila/", "Telkkämäki luontopolku"]]});
+}
+})();

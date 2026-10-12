@@ -1,0 +1,12 @@
+/* Matkailu Suomessa v278 · kohdennetut lisävinkit */
+.v278-more{margin:20px 0 22px;padding:18px;border:1px solid #cfe0d5;border-radius:18px;background:#f0f7f1;color:#173f34;box-sizing:border-box}
+.v278-more *{box-sizing:border-box}.v278-more h2{font-size:clamp(20px,3vw,25px);line-height:1.24;margin:0 0 8px}.v278-more>p{color:#506a5d;font-size:14px;margin:4px 0 13px;line-height:1.5}
+.v278-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;align-items:stretch}
+.v278-tip{background:#fff;border:1px solid #dbe9df;border-radius:14px;padding:13px;min-width:0}
+.v278-tip .v278-tag{font-size:12px;color:#47715f;font-weight:800}.v278-tip h3{font-size:17px;line-height:1.3;margin:5px 0 6px;color:#184a3a}
+.v278-tip p{font-size:14px;line-height:1.5;margin:0 0 10px;color:#485d54}
+.v278-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.v278-links a{font-size:13px;font-weight:800;color:#195b45;text-decoration:underline;text-underline-offset:3px}
+.v278-extra{font-size:13px;color:#52675d;line-height:1.5;margin:13px 0 4px}
+.v278-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:10px}
+.v278-actions a{border:1px solid #a9cbb4;border-radius:10px;padding:10px 12px;background:#fff;color:#17523f;font-size:14px;text-decoration:none;font-weight:750;min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:480px){.v278-more{padding:12px;margin:15px 0}.v278-grid{grid-template-columns:1fr}.v278-tip{padding:12px}}
