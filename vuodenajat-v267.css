@@ -1,0 +1,49 @@
+/* Matkailu Suomessa v267 – pidetty erillään vanhoista osioista. */
+.season-home-v267{margin-top:24px}
+.season-home-v267 h2{margin:4px 0 8px;font-family:Georgia,serif;color:#173c34;font-size:1.45rem}
+.season-home-v267>p{margin:0 0 13px;color:#52645c;line-height:1.5;font-size:.94rem}
+.season-home-grid-v267{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.season-home-card-v267{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:146px;border-radius:18px;text-decoration:none;padding:16px 13px;border:1px solid rgba(27,60,50,.13);box-shadow:0 8px 20px rgba(15,56,46,.08)}
+.season-home-card-v267.autumn{background:linear-gradient(135deg,#f8dfae,#fff4dc);color:#56360d}
+.season-home-card-v267.winter{background:linear-gradient(135deg,#d4e6f1,#eff9ff);color:#1d4362}
+.season-home-card-v267 .emoji{font-size:2rem;line-height:1.1}
+.season-home-card-v267 strong{font-size:1.08rem;line-height:1.2}
+.season-home-card-v267 small{font-size:.78rem;line-height:1.35;opacity:.86}
+.season-shortcuts-v267{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 18px}
+.season-shortcuts-v267 a{display:block;text-align:center;padding:12px 8px;text-decoration:none;background:#eaf3ed;color:#1a5646;border:1px solid #cfe2d7;border-radius:12px;font-weight:750;font-size:.91rem}
+body.season-page-v267{margin:0;background:#edf3ef;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1d3931}
+.season-page-v267 *{box-sizing:border-box}
+.season-wrap-v267{width:min(100%,800px);margin:0 auto;min-height:100vh;padding:17px 14px calc(94px + env(safe-area-inset-bottom));background:#f9fbf8}
+.season-back-v267{display:inline-block;color:#1a604c;text-decoration:none;font-weight:730;margin:0 0 13px}
+.season-hero-v267{border-radius:22px;padding:24px 22px;margin:0 0 17px;background:linear-gradient(120deg,#f7d69a,#fdeed7);color:#583607}
+body.season-winter-v267 .season-hero-v267{background:linear-gradient(120deg,#bddbec,#eff8fc);color:#16476a}
+.season-hero-v267 .season-eyebrow-v267{text-transform:uppercase;font-size:.74rem;letter-spacing:.08em;font-weight:850;margin:0 0 7px}
+.season-hero-v267 h1{margin:0 0 10px;font-size:clamp(1.9rem,7vw,2.75rem);line-height:1.05;font-family:Georgia,serif}
+.season-hero-v267 p{margin:0;line-height:1.5;max-width:590px}
+.season-switch-v267{display:flex;gap:8px;margin:0 0 14px}
+.season-switch-v267 a{flex:1;text-align:center;border:1px solid #cdded5;border-radius:11px;text-decoration:none;padding:11px 9px;color:#265846;background:#fff;font-weight:760;min-height:44px}
+.season-switch-v267 a[aria-current="page"]{background:#205c4a;color:#fff;border-color:#205c4a}
+.season-filters-v267{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 13px}
+.season-field-v267{display:flex;flex-direction:column;min-width:0;gap:5px}
+.season-field-v267 label{font-size:.78rem;font-weight:760;color:#365c4d}
+.season-field-v267 select,.season-field-v267 input{width:100%;min-width:0;min-height:46px;background:#fff;border:1px solid #aecbc0;border-radius:10px;padding:10px 9px;font-size:1rem;color:#18382d}
+.season-search-v267{grid-column:1/-1}
+.season-count-v267{margin:0 0 13px;font-weight:750;color:#35614f}
+.season-results-v267{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.season-place-v267{min-width:0;background:#fff;border:1px solid #d7e2da;border-radius:15px;padding:15px;box-shadow:0 5px 15px rgba(26,70,51,.05)}
+.season-place-top-v267{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 10px;align-items:flex-start}
+.season-place-v267 h2{font-size:1.13rem;line-height:1.24;color:#153d2e;margin:0}
+.season-tag-v267{font-size:.7rem;line-height:1.3;font-weight:800;white-space:normal;color:#2f624d;background:#e8f2ea;border-radius:999px;padding:4px 8px}
+.season-place-meta-v267{font-size:.8rem;font-weight:800;color:#687b70;margin:10px 0 8px}
+.season-place-desc-v267{font-size:.91rem;line-height:1.5;margin:0 0 12px}
+.season-months-v267{font-size:.8rem;font-weight:700;color:#385e4d;margin:0 0 9px;line-height:1.5}
+.season-note-v267{font-size:.79rem;color:#647267;margin:0 0 13px;line-height:1.45}
+.season-actions-v267{display:flex;flex-wrap:wrap;gap:8px 14px;margin:11px 0 0;align-items:center}
+.season-actions-v267 a{color:#175c48;font-size:.82rem;font-weight:800;text-decoration:none;min-height:30px;display:inline-flex;align-items:center}
+.season-actions-v267 a.season-action-v267{background:#e6f2eb;border-radius:9px;padding:9px 10px;min-height:42px}
+.season-empty-v267{grid-column:1/-1;border:1px dashed #c4d9cc;border-radius:12px;padding:19px;background:white}
+.season-disclaimer-v267{font-size:.85rem;line-height:1.5;color:#617469;margin:24px 1px 10px}
+.season-bottom-nav-v267{display:flex;justify-content:space-around;gap:9px;position:fixed;bottom:0;left:0;right:0;z-index:50;max-width:800px;margin:auto;background:rgba(250,252,250,.97);border-top:1px solid #cfddd3;padding:10px 10px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -3px 20px rgba(30,70,48,.06)}
+.season-bottom-nav-v267 a{text-align:center;flex:1;color:#215e4c;font-weight:760;font-size:.84rem;text-decoration:none;padding:9px 5px;min-height:44px}
+@media (max-width:610px){.season-results-v267{grid-template-columns:1fr}.season-home-card-v267{min-height:145px}.season-filters-v267{grid-template-columns:1fr 1fr}.season-field-v267:nth-child(3){grid-column:1/-1}.season-hero-v267{padding:22px 18px}}
+@media (max-width:340px){.season-home-grid-v267{grid-template-columns:1fr}.season-shortcuts-v267{grid-template-columns:1fr}}

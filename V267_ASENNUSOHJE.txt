@@ -1,0 +1,30 @@
+MATKAILU SUOMESSA – v267 SYKSYN JA TALVEN KOHTEET
+===================================================
+Pieni päivitys nykyiseen GitHub-sivustoon (v266:n jälkeen).
+
+SISÄLTÖ
+- index.html: etusivulle 2 uutta selkeää korttia: Syksyn kohteet ja Talven kohteet.
+- kayntikohteet.html: Näe ja koe -sivulta pääsee myös molempiin vuodenaikaosioihin.
+- syksylla.html ja talvella.html: erilliset sivut maakunta-, kunta-, kuukausi- ja tekstisuodatuksella.
+- vuodenajat-v267.css ja vuodenajat-v267.js: ulkoasu, kohdeaineisto ja karttahakutoiminnot.
+
+KOHDELISTA
+- Syksy: 43 kohdetta.
+- Talvi: 36 kohdetta.
+- Yhteensä: 79 vuodenaikaan sopivaa matkailuvinkkiä koko Suomesta.
+
+ASENNUS
+1. Pura tämä ZIP.
+2. Vie ZIP:n 6 verkkosivutiedostoa GitHub-sivuston projektin juureen.
+3. Korvaa VAIN index.html ja kayntikohteet.html. Neljä muuta ovat uusia tiedostoja.
+4. Muut vanhat v263–v266 tiedostot, kunnittaiset sivut, app.js, leirintädata ja Omat matkat säilytetään.
+5. Tee Commit changes ja päivitä sivu tarvittaessa selaimen välimuistin ohittaen.
+6. Avaa etusivulta Syksyn kohteet / Talven kohteet ja testaa hakua.
+
+HUOMIOITA
+- Kohteiden suosittelukuukaudet eivät ole aukiololupauksia.
+- Karttapainike hakee kohteen Google Mapsista, eikä ole suora varmistettu osoitelinkki.
+- Osa poluista on talvella vaikeakulkuisia; vuodenaika ja lumitilanne vaihtelevat.
+- Tämä päivityspaketti ei julkaise tiedostoja automaattisesti GitHubiin.
+- Jos GitHubissa on index.html- tai kayntikohteet.html-tiedostoihin tehty tämän
+  pohjaversion jälkeen muita paikallisia muutoksia, ne kannattaa yhdistää ennen korvaamista.

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#174d40">
+  <meta name="description" content="Hyviä ravintoloita, kahviloita ja kiinnostavia pysähdyspaikkoja paikkakunnittain Suomessa.">
+  <title>Pysähdy matkalla – Matkailu Suomessa</title>
+  <link rel="stylesheet" href="navigation-v191.css?v=244">
+  <link rel="stylesheet" href="pysahdy-v268.css?v=268">
+  <script defer src="nearby-data-v218.js"></script>
+  <script defer src="kayntikohteet-data-v230.js"></script>
+  <script defer src="pysahdy-v268.js?v=268"></script>
+</head>
+<body class="stop-page-v268">
+  <main>
+    <a class="back" href="index.html">‹ Etusivulle</a>
+    <header class="intro">
+      <span class="eyebrow">🚗 Matkailu Suomessa</span>
+      <h1>Pysähdy matkalla</h1>
+      <p>Kahvitauko, hyvä ruokapaikka tai kiinnostava pieni löytö reitin varrella. Selaa oppaaseen kerättyjä kohteita paikkakunnittain.</p>
+    </header>
+
+    <nav class="quicklinks" aria-label="Muita tapoja löytää pysähdyspaikka">
+      <a href="lahella-minua.html"><strong>📍 Lähellä minua</strong><small>Hae lähimmät kohteet ja valitse ”Pysähdy matkalla”</small></a>
+      <a href="kayntikohteet.html"><strong>⭐ Näe ja koe</strong><small>Nähtävyydet ja muut kiinnostavat kohteet</small></a>
+    </nav>
+
+    <section class="filters" aria-label="Etsi pysähdyspaikkoja">
+      <div class="fields">
+        <div>
+          <label for="stop-town-v268">Valitse paikkakunta</label>
+          <select id="stop-town-v268"><option value="">Koko Suomi</option></select>
+        </div>
+        <div>
+          <label for="stop-query-v268">Hae nimellä tai sanalla</label>
+          <input id="stop-query-v268" type="search" placeholder="Esim. Vääksy tai kahvila">
+        </div>
+      </div>
+      <div class="categories" role="group" aria-label="Valitse pysähdyspaikan tyyppi">
+        <button type="button" data-stop-category="all" aria-pressed="true">Kaikki</button>
+        <button type="button" data-stop-category="restaurant" aria-pressed="false">🍽️ Ravintolat</button>
+        <button type="button" data-stop-category="cafe" aria-pressed="false">☕ Kahvilat</button>
+        <button type="button" data-stop-category="shop" aria-pressed="false">🛍️ Puodit ja lähiruoka</button>
+        <button type="button" data-stop-category="other" aria-pressed="false">🚗 Muut pysähdykset</button>
+      </div>
+    </section>
+
+    <p id="stop-count-v268" class="meta" role="status" aria-live="polite">Haetaan oppaan kohteita…</p>
+    <div id="stop-results-v268"></div>
+    <noscript><p>Hakua varten tarvitaan JavaScript. <a href="kayntikohteet.html">Selaa Näe ja koe -kohteita</a>.</p></noscript>
+    <p class="notice">Kohteet ovat oppaan suosituksia, eivät reaaliaikainen suosituimmuusjärjestys. Aukiolo, sesonkiajat ja palvelut kannattaa tarkistaa ennen käyntiä. Karttalinkki avaa kohdehaun.</p>
+  </main>
+  <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
+</body>
+</html>

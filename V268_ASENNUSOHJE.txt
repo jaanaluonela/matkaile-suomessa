@@ -1,0 +1,33 @@
+MATKAILU SUOMESSA – v268 PYSÄHDY MATKALLA -PAINIKE TAKASIN
+=============================================================
+Tämä on PIENI PÄIVITYS viimeisimpään v267-sivustoon.
+
+PÄIVITYKSEN 4 TIEDOSTOA (siirrä GitHub-projektin JUUREEN):
+1. index.html              – KORVAA nykyinen index.html
+2. pysahdy-matkalla.html   – UUSI sivu
+3. pysahdy-v268.css       – UUSI tyylitiedosto
+4. pysahdy-v268.js        – UUSI toimintatiedosto
+
+Zipissä on näiden lisäksi tämä asennusohje. Älä poista muita nykyisiä tiedostoja.
+
+ASENNUS
+1. Pura ZIP tietokoneella tai puhelimella.
+2. Lataa yllä mainitut 4 tiedostoa GitHub-repositorion juurikansioon.
+3. Korvaa vain index.html, muut lisää uusina.
+4. Tee Commit changes GitHubissa.
+5. Päivitä sivu selaimessa (tarvittaessa tyhjennä välimuisti).
+6. Testaa etusivun iso "🚗 Pysähdy matkalla" -painike.
+7. Kokeile sivulla paikkakunta-, teksti- ja kahvila/ravintola-suodattimia.
+
+MIKÄ KORJAANTUI
+- Vanhassa valikot-v200.js-tiedostossa etusivun päävalikko rakennettiin uudelleen
+  neljällä kortilla. Uusi JS tuo viidennen painikkeen takaisin tämän jälkeen.
+- Sama painike näkyy myös HTML:ssä, jos JavaScript ei ole käytössä.
+- Uusi sivu käyttää jo olemassa olevia nearby-data-v218.js- ja
+  kayntikohteet-data-v230.js-tiedostoja, joista suodatetaan pysähdykset.
+- Sieltä löytyy oppaaseen lisättyjä kahviloita, ravintoloita ja muita pysähdyksiä.
+- "Lähellä minua" -sivu tarjoaa sijaintiin perustuvan lähihakutoiminnon.
+- Syksylla.html, talvella.html, vuodenajat-v267.css ja vuodenajat-v267.js
+  sekä kaikki muut v267-sisällöt JÄÄVÄT ENNALLEEN.
+
+HUOM: Päivitystä EI ole automaattisesti viety GitHubiin. Tämä on ladattava paketti.
