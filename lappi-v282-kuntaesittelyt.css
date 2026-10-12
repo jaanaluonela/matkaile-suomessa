@@ -1,0 +1,19 @@
+/* v282: kunnille syventävä esittely. Rajattu omaan luokkaan; ei muuta etusivun mobiilirakennetta. */
+.lap282-guide{box-sizing:border-box;max-width:1040px;width:100%;margin:18px auto 26px;padding:18px 20px;border:1px solid #d9e7db;border-radius:18px;background:#f6faf6;color:#264538;clear:both;overflow-wrap:anywhere}
+.lap282-guide *{box-sizing:border-box}
+.lap282-guide h2{font-size:clamp(20px,2.5vw,26px);margin:0 0 12px;line-height:1.3;color:#183e30}
+.lap282-guide h3{font-size:16px;margin:0 0 9px;color:#244b3b}
+.lap282-guide p{font-size:15px;line-height:1.66;margin:0 0 12px;max-width:90ch}
+.lap282-guide .lap282-eyebrow{margin:0 0 6px;font-size:12px;font-weight:800;letter-spacing:.07em;color:#557261;text-transform:uppercase}
+.lap282-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.lap282-panel{background:#fff;border:1px solid #dbe7df;border-radius:12px;padding:15px;min-width:0}
+.lap282-panel p{font-size:14px;margin:0}
+.lap282-panel--wide{grid-column:1 / -1}
+.lap282-places{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0}
+.lap282-places li{min-width:0;background:#f1f7f1;border-radius:10px;padding:12px}
+.lap282-places strong{display:block;color:#183e30;font-size:14px;margin-bottom:4px}
+.lap282-places p{font-size:13px;line-height:1.5;margin:0}
+.lap282-places a{display:inline-block;color:#155340;text-decoration:underline;font-size:12px;font-weight:800;margin-top:6px}
+.lap282-footnote{font-size:12px!important;color:#627468;margin:13px 0 0!important}
+.lap282-footnote a{color:#16523f;font-weight:750}
+@media(max-width:700px){.lap282-guide{padding:14px 12px;margin:12px auto 19px;border-radius:13px}.lap282-grid{grid-template-columns:1fr}.lap282-places{grid-template-columns:1fr}.lap282-panel{padding:12px}.lap282-guide p{font-size:14px}.lap282-guide h2{font-size:21px}}
