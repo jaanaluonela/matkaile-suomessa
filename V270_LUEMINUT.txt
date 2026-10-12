@@ -1,0 +1,13 @@
+MATKAILU SUOMESSA v270 – KUOPION SEUTU
+
+Lataa kaikki tämän paketin tiedostot GitHubin pääkansioon.
+
+Lisätty:
+- Kuopion seudun alueopas
+- Kuopion laaja kuntasivu: Puijo, keskusta, museot, luonto, lapsiperheet, ruoka, Tahko ja Rauhalahden caravan
+- Siilinjärven, Lapinlahden, Leppävirran, Suonenjoen, Tuusniemen ja Kaavin kuntasivut
+- kartta- ja lisätietopainikkeet
+- puhelimelle suunniteltu yhtenäinen rakenne
+
+Yhteensä 7 kuntaa. Tahko on esitetty osana Kuopiota, koska se kuuluu Kuopion kaupunkiin.
+Tiedot tarkistettu 12.10.2026. Tarkista muuttuvat aukiolot ja palvelut ennen lähtöä.
