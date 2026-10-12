@@ -1,0 +1,15 @@
+MATKAILU SUOMESSA v269 – PALTAMO
+
+Lataa tämän paketin tiedostot GitHubin pääkansioon.
+
+Lisätty:
+- Paltamon oma mobiiliystävällinen kuntasivu
+- Jättiläisenmaa
+- Jättiläisen linnunpöntöt / Birdhouse-mökit
+- Jättiläisenmaan Camper Park karavaanareille
+- verkkosivu-, kartta- ja ajo-ohjepainikkeet
+- Olen käynyt täällä- ja Lisää omiin matkoihin -painikkeet
+
+Nykyistä etusivua, mobiilivalikkoa tai muiden kuntien rakennetta ei muuteta.
+
+Tiedot tarkistettu 12.10.2026.
