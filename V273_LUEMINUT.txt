@@ -1,0 +1,35 @@
+MATKAILU SUOMESSA v273 – TIETOKONENÄKYMÄN LEVEYS
+=================================================
+
+Tämä on pieni ULKOASUN päivityspaketti (4 CSS-tiedostoa).
+Se ei sisällä eikä korvaa sivujen HTML-, JavaScript- tai
+matkailutietoja. Puhelinnäkymä pidetään ennallaan.
+
+1. Avaa GitHubissa Matkailu Suomessa -projektin pääkansio.
+2. Pura ZIP ja lataa seuraavat neljä CSS-tiedostoa pääkansioon:
+   navigation-v191.css
+   kuopio-seutu-v270.css
+   vuodenajat-v267.css
+   suositut-ruokapaikat-v267.css
+3. Korvaa samannimiset tiedostot, muut tiedostot jätetään ennalleen.
+4. Tee Commit changes.
+5. Päivitä sivu tietokoneella Ctrl+F5 (välimuisti pois).
+
+TIETOKONENÄKYMÄN KORJAUS
+- Puhelinleveydellä ei tehdä muutoksia (muutokset alkavat 980 px).
+- Useimpien sivujen sisältöalue: enintään 1160 px.
+- Maakuntien/kuntien kortit: 3–4 saraketta leveillä näytöillä.
+- Kuopion seudun, syksyn, talven ja aiemman ruokapaikkasivun
+  omat tyylitiedostot saavat myös tietokoneleveyden.
+
+HUOM: Paketti on koottu aiemmista projektiversioista. Jos GitHubin
+samannimisiä CSS-tiedostoja on myöhemmin muutettu käsin, älä korvaa
+niitä suoraan: lisää niiden loppuun vain v273-merkityt CSS-säännöt.
+
+LISÄYSTEN TARKISTUS
+- Arkistosta löytyvät v266 Kuusamo/Ruka, v267 vuodenaikasivut,
+  v268 Pysähdy matkalla, v269 Paltamo, v270 Kuopion seutu,
+  v271 SFC Alatalo ja v272 SFC-suodatin.
+- Pelkistä arkistotiedostoista ei voi vahvistaa, onko jokainen
+  päivitys julkaistu GitHubissa. Tarkista GitHubin tiedostolista.
+- v272 on pieni lisäys vanhan päälle, ei koko sivuston korvike.

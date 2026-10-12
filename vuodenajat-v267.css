@@ -47,3 +47,9 @@ body.season-winter-v267 .season-hero-v267{background:linear-gradient(120deg,#bdd
 .season-bottom-nav-v267 a{text-align:center;flex:1;color:#215e4c;font-weight:760;font-size:.84rem;text-decoration:none;padding:9px 5px;min-height:44px}
 @media (max-width:610px){.season-results-v267{grid-template-columns:1fr}.season-home-card-v267{min-height:145px}.season-filters-v267{grid-template-columns:1fr 1fr}.season-field-v267:nth-child(3){grid-column:1/-1}.season-hero-v267{padding:22px 18px}}
 @media (max-width:340px){.season-home-grid-v267{grid-template-columns:1fr}.season-shortcuts-v267{grid-template-columns:1fr}}
+
+/* v273: syksy- ja talvisivut leveiksi vain tietokoneella. */
+@media (min-width:980px){
+ .season-page-v267 .season-wrap-v267 {width:min(calc(100% - 64px),1160px);max-width:1160px;padding:24px 26px 110px;}
+ .season-page-v267 .season-results-v267{grid-template-columns:repeat(3,minmax(0,1fr));}
+}

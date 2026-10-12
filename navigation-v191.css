@@ -24,3 +24,32 @@ nav.site-nav .site-nav-inner>a span,nav.site-nav .site-nav-inner>a i{display:non
 nav.site-nav .site-nav-inner>a::before{content:""!important;display:block!important;flex:none!important;height:30px!important;mask:var(--nav-icon) center/contain no-repeat!important;-webkit-mask:var(--nav-icon) center/contain no-repeat!important}
 nav.site-nav .site-nav-inner>a[href*="yopyminen"]::before,nav.site-nav .site-nav-inner>a[href*="karavaanari"]::before{width:52px!important}
 html{scroll-padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+
+
+/* Matkailu Suomessa v273 – tietokoneen leveyskorjaus.
+   Puhelin- ja tablet-ikkunoita ei muuteta. */
+@media (min-width:980px) {
+  body > main,
+  body > main.page,
+  body > main.map-page,
+  body > main.v253-wrap,
+  body > main.home-shell,
+  body[data-kind] main.page,
+  body[data-home] main.home-shell,
+  body.kuusamo-v266 main,
+  body.stop-page-v268 main {
+    width:min(calc(100% - 64px),1160px)!important;
+    max-width:1160px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    box-sizing:border-box!important;
+  }
+  .v253-towns, .v254-towns {grid-template-columns:repeat(3,minmax(0,1fr))!important;}
+  .v253-region, .v254-town, .v253-town {min-width:0;}
+}
+@media (min-width:1260px) {
+  .v253-towns{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+  body[data-kind]:not([data-kind="town"]) #municipality-results:has(.stay) {
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
