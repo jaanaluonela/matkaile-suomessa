@@ -1,0 +1,32 @@
+MATKAILU SUOMESSA – v288: UUSIMAA, KAIKKI 26 KUNTAA
+12.10.2026
+
+TÄMÄ ON PÄIVITYS NYKYISEEN SIVUSTOON – EI KOKO SIVUSTO.
+
+ASENNUS GITHUBIIN:
+1. Pura ZIP ja siirrä kaikki .html-, .js- ja .css-tiedostot suoraan GitHub-sivuston samaan pääkansioon, missä index.html sijaitsee.
+2. Korvaa vanhat samannimiset tiedostot VAIN silloin kun niitä on päivityspaketissa.
+3. ÄLÄ POISTA MUITA TIEDOSTOJA. Aiemmat Lapin, Pohjois-Pohjanmaan, caravan-datan ja kartan sivut säilyvät.
+4. Odota GitHub Pagesin julkaisua ja lataa uudelleen / tyhjennä tarvittaessa välimuisti.
+
+SISÄLTÖ:
+- 18 uutta, pitkää kuntasivua: Askola, Espoo, Helsinki, Hyvinkää, Järvenpää, Kauniainen, Kerava, Lapinjärvi, Loviisa, Myrskylä, Mäntsälä, Nurmijärvi, Pornainen, Porvoo, Pukkila, Sipoo, Tuusula, Vantaa.
+- Kahdeksaa aiempaa Uudenmaan sivua ei korvata: Hanko, Inkoo, Karkkila, Kirkkonummi, Lohja, Raasepori, Siuntio ja Vihti. Kaikki kahdeksan linkitetään edelleen uusimaa.html-sivulle.
+- uusimaa.html: kaikki 26 kuntaa, kuntahaku, alueiden retkivinkit ja karavaanareiden palvelut.
+- maakunnat.html: uusi Uudenmaan 26 kunnan linkitystiedosto. Pohjois-Pohjanmaan v286-linkit ja v285 maakuntakartan värit/kohotus pidetty ennallaan.
+- v288-uusimaa.js: kuntalinkitykset ja maakuntaoppaan suora linkki.
+- uusimaa-karavaani-v288.js: neljä caravan-kohdetta, joissa vahvistetut tiedot ja kaksoiskappaleiden välttäminen.
+- leirintaalueet.html ja matkaparkit.html: käytetään v287-tiedostojen MOBIILI ALLEKKAIN -asettelua; vain uuden Uusimaa-lisäosan skriptiviittaus lisätty.
+
+VARMENNETUT CARAVAN-KOHTEET:
+- Rastila Camping Helsinki: toimijan mukaan ympärivuotinen. Huoltorakennukset, kemiallisen WC:n ja harmaavesityhjennys.
+- Camping Silversand, Hanko: toimijan ilmoituksen mukaan ympärivuotinen; kysy kauden palvelut.
+- SF-Caravan Etelälahti, Vihti: SF-Caravan-alue; vieraspaikkoja myös talviviikoilla, rajatut vastaanottojärjestelyt.
+- Loviisa Camping, Loviisa: kausialue, vuonna 2026 29.5.–15.9. Ei ympärivuotinen.
+
+HUOM:
+Tämän paketin leirintäaluetäydennyksessä on neljä kohdetta, joista osa voi jo löytyä vanhasta caravan-data.js:stä. Lisäosa yrittää yhdistää kohteet (ei lupaa neljää uutta tulosta).
+Tietoja tai kohteita ei keksitä kuntiin, joista ei ole varmennettua yöpymispaikkaa. Pysäköintipaikka ei itsessään oikeuta yöpymiseen.
+Muiden 18 kunnan yleiset ruokailuvinkit ovat aluekuvauksia, eivät varmistettuja yksittäisiä auki olevia yrityksiä.
+Vain erikseen varmistetut vuoden 2026 ympärivuotisuustiedot käytössä. Tarkista tilanne ennen matkaa.
+Jos repositoriossa on paikallisia uudempia muutoksia mukana oleviin maakunnat.html-, leirintaalueet.html- tai matkaparkit.html-tiedostoihin, yhdistä ne ennen korvaamista.
