@@ -1,0 +1,30 @@
+MATKAILU SUOMESSA v272 – SFC-ALUEIDEN SUODATIN
+===============================================
+PIENI PÄIVITYS AIEMPIEN PÄÄLLE (ei korvaa koko sivustoa).
+
+UUTTA:
+- Leirintäalueiden sivulla uusi rasti: Näytä vain SF-Caravan (SFC) -alueet.
+- Maakunta- ja kuntasuodattimet, tekstihaku sekä ympärivuotisen aukiolon rasti toimivat yhdessä.
+- Näyttää SFC-merkinnän tunnistetuille SFC-kohteille.
+- Aluetunnistus pohjautuu SF-Caravanin viralliseen 58 alueen listaan,
+  mutta näyttää vain ne kohteet, jotka on jo tallennettu sovellukseen.
+- SFC-rasti pysyy käytössä maakuntaa vaihdettaessa ja toimii linkissä ?sfc=1.
+
+ASENNUS GITHUBIIN:
+1) Pura ZIP.
+2) Lataa kolme alla olevaa tiedostoa GitHub-sivuston projektin JUUREEN:
+   - leirintaalueet.html
+   - leirinta-aukiolo-v263.js
+   - leirinta-aukiolo-v263.css
+3) Korvaa vanhat samannimiset tiedostot, älä poista muita tiedostoja.
+4) Tee Commit changes ja avaa Leirintäalueet-sivu uudelleen.
+
+TÄRKEÄÄ:
+- Älä poista caravan-data.js-, leirinta-data-v264.js- tai
+  leirinta-data-v265.js-tiedostoja.
+- Tämä paketti ei lisää tai muuta leirintäaluetietoja.
+- SF-Caravanin SFC-alueet ovat jäsenyhdistysten omia leirintäalueita.
+  Tavalliset alueet, joissa saa jäsenalennuksen, eivät yksinään ole SFC-alueita.
+- Luettelo: https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+  (virallinen lista tarkistettu 12.10.2026, päivitetty 8.9.2026).
+- Nykyiset aukiolotiedot eivät ole reaaliaikaisia. Varmista saapuminen.

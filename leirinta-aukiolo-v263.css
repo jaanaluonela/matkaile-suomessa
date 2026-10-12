@@ -12,3 +12,16 @@ body[data-kind="camping"] .stay .camp-opening-badge--unknown{background:#edf0f0;
 body[data-kind="camping"] .stay[hidden]{display:none!important}
 body[data-kind="camping"] #camp-opening-empty{margin:13px 0 5px;padding:13px 14px;border:1px solid #dce7df;border-radius:12px;background:#fff;color:#52665b;font-size:14px}
 @media(max-width:650px){body[data-kind="camping"] .camp-opening-panel{padding:12px;margin-top:8px}body[data-kind="camping"] .camp-opening-choice strong{font-size:15px}}
+
+/* v272: SFC-alueiden valintarasti muiden hakuehtojen yhteydessä. */
+body[data-kind="camping"] .camp-opening-panel{display:grid;gap:12px;margin-top:14px}
+body[data-kind="camping"] .camp-opening-choice + .camp-opening-choice{
+  border-top:1px solid #cbded1;padding-top:12px
+}
+body[data-kind="camping"] .camp-opening-note{margin-top:0}
+body[data-kind="camping"] .stay .camp-sfc-badge{
+  display:inline-flex;align-items:center;align-self:flex-start;
+  border-radius:999px;padding:6px 10px;margin:0 0 6px;
+  border:1px solid #c5dccc;background:#eaf5ee;color:#245b3d;
+  font-size:12px;font-weight:800;line-height:1.2
+}

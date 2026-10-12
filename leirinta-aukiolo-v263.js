@@ -1,16 +1,88 @@
-/* Matkailu Suomessa v263 – avoinna ympäri vuoden / kausittain / tuntematon.
-   Aukiolo merkitään ympärivuotiseksi VAIN vahvistetun, kohdekohtaisen tiedon perusteella.
-   Tietorakenne tulevia täydennyksiä varten:
-   window.campingOpeningData = { 'kohteen-id': {status:'yearround'|'seasonal'|'unknown', season:'...', checked:'VVVV-KK-PP'} };
-   Saman voi tallentaa window.caravanPlaces-kohteeseen kentillä openingStatus, season ja checked.
+/* Matkailu Suomessa v272 – Leirintäalueiden aukiolo- ja SF-Caravan-suodattimet.
+   Virallisten SFC-alueiden luettelon lähde (päivitetty 8.9.2026):
+   https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+   Huom. Rajaus käyttää sovellukseen jo tallennettuja kohteita, ei lataa listasta uusia.
 */
 (() => {
   'use strict';
   const ready = callback => document.readyState === 'loading'
     ? document.addEventListener('DOMContentLoaded', callback, {once:true}) : callback();
-    const hasYearRoundText = text => /(?:ymp[äa]ri\s+vuoden|ymp[äa]rivuotinen|avoinna\s+365\s+p[äa]iv[äa][äa]?)/i.test(text);
-  // Tulkitaan nimenomaan vanha kausikenttä, ei vapaata kuvaustekstiä:
-  // kuvauksessa ympärivuotinen mökki ei kerro leirintäalueen aukiolosta.
+  const normal = s => String(s ?? '').toLocaleLowerCase('fi').normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  const officialNames = [
+    "Alatalo",
+    "Etelälahti",
+    "Etuniemi",
+    "Hakalanranta",
+    "Harvaluoto",
+    "Hietajärvi",
+    "Hietasaari",
+    "Hiilimutka",
+    "Hopeaperä",
+    "Hämeenhelmi",
+    "Jokiranta",
+    "Kalajärvi",
+    "Kangaslampi",
+    "Kattivankkuri",
+    "Kesäniemi",
+    "Koivulehto",
+    "Krapuranta",
+    "Kuninkaanlähde",
+    "Kuturanta",
+    "Kuusisto",
+    "Laamalansaari",
+    "Leininranta",
+    "Leporanta",
+    "Lintulahti",
+    "Lohenpyrstö",
+    "Lukkuhaka",
+    "Maisansalo",
+    "Majamäki",
+    "Margareta",
+    "Mellajärvi",
+    "Multaranta",
+    "Mussalo",
+    "Mylly-Mäkelä",
+    "Palvaanjärvi",
+    "Pitkäjärvi",
+    "Pitkäniemi",
+    "Purho",
+    "Rairanta",
+    "Rantasarka",
+    "Rekiniemi",
+    "Ruissalo Camping Talvialue",
+    "Ryynäsenniemi",
+    "Naantali Saloranta",
+    "Sarapisto",
+    "Sautinkari",
+    "Sexsjö",
+    "Siikalainen",
+    "Skeppars",
+    "Sydänlampi",
+    "Sääksi",
+    "Tilkunpelto",
+    "Valasranta",
+    "Vankkuri-Vehmas",
+    "Vankkurimännikkö",
+    "Vantaan Talli",
+    "Vieresniemi",
+    "VihtiPark",
+    "Vuorenmäki"
+  ].map(normal);
+  const officialNamesSorted = officialNames.sort((a,b)=>b.length-a.length);
+  const hasYearRoundText = text => /(?:ymp[äa]ri\s+vuoden|ymp[äa]rivuotinen|avoinna\s+365\s+p[äa]iv[äa][äa]?)/i.test(text);
+
+  function isSfcArea(place) {
+    if (place.sfcArea === false || place.sfCaravanArea === false) return false;
+    if (place.sfcArea === true || place.sfCaravanArea === true) return true;
+    const n = normal(place.name);
+    if (!n) return false;
+    // Nimen SF-Caravan/SFC-tunnus tai liiton ajantasaisen luettelon aluenimi.
+    // EI käytetä kuvaustekstiä, sillä tavalliset alueet voivat tarjota SFC-jäsenalennuksia.
+    if (/^(?:sfc\b|sf caravan\b)|\b(?:sfc|sf caravan)\b/.test(n)) return true;
+    const padded=' '+n+' ';
+    return officialNamesSorted.some(name => padded.includes(' '+name+' '));
+  }
   function opening(place) {
     const extra = (window.campingOpeningData || {})[place.id] ||
       (window.campingOpeningData || {})[place.url] || {};
@@ -31,72 +103,93 @@
   }
   ready(() => {
     if (document.body.dataset.kind !== 'camping') return;
-    const checkbox = document.getElementById('camp-only-year-round');
+    const yearCheckbox = document.getElementById('camp-only-year-round');
+    const sfcCheckbox = document.getElementById('camp-only-sfc');
     const input = document.getElementById('v243-stay-search');
     const box = document.getElementById('municipality-results');
     const status = document.getElementById('list-status');
-    if (!checkbox || !box) return;
-    // Päivitetty tietovarasto voidaan laajentaa ilman muita sivumuutoksia.
+    if (!yearCheckbox || !sfcCheckbox || !box) return;
+    const params = new URLSearchParams(location.search);
+    if (params.get('sfc') === '1') sfcCheckbox.checked = true;
     const places = () => window.caravanPlaces || [];
     function placeForCard(card) {
       const href = card.querySelector('.buttons a[href]')?.getAttribute('href') || '';
       return places().find(p => p && p.type === 'camping' && p.url === href) ||
         places().find(p => p && p.type === 'camping' && p.name === card.querySelector('h2')?.textContent);
     }
-    const searchable = value => String(value ?? '').toLocaleLowerCase('fi')
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-    const apply = () => {
+    function apply() {
       const cards = [...box.querySelectorAll('.stay')];
-      const q = searchable(input?.value);
+      const q = normal(input?.value);
       let visible = 0;
       for (const card of cards) {
         const place = placeForCard(card) || {};
         const aukiolo = opening(place);
+        const sfc = isSfcArea(place);
         card.dataset.openingStatus = aukiolo.status;
-        let badge = card.querySelector('.badge, .camp-opening-badge');
+        card.dataset.sfcArea = sfc ? 'true' : 'false';
+        let badge = card.querySelector('.camp-opening-badge, .badge');
         if (!badge) {badge = document.createElement('span');card.prepend(badge);}
         badge.className = 'camp-opening-badge camp-opening-badge--'+aukiolo.status;
         badge.textContent = aukiolo.label;
-        const searchableText = searchable(card.textContent + ' '+(place.name || '')+' '+(place.city||''));
-        const matchesSearch = !q || searchableText.includes(q);
-        const matchesOpen = !checkbox.checked || aukiolo.status === 'yearround';
-        const show = matchesSearch && matchesOpen;
+        let sfcBadge=card.querySelector('.camp-sfc-badge');
+        if (sfc && !sfcBadge) {
+          sfcBadge=document.createElement('span');
+          sfcBadge.className='camp-sfc-badge';
+          sfcBadge.textContent='SFC-alue';
+          badge.insertAdjacentElement('afterend',sfcBadge);
+        } else if (!sfc && sfcBadge) sfcBadge.remove();
+        const searchableText = normal(card.textContent+' '+(place.name||'')+' '+(place.city||''));
+        const show = (!q || searchableText.includes(q)) &&
+          (!yearCheckbox.checked || aukiolo.status === 'yearround') &&
+          (!sfcCheckbox.checked || sfc);
         card.hidden = !show;
         card.style.display = show ? '' : 'none';
-        if(show) visible++;
+        if (show) visible++;
       }
+      const hasFilter = Boolean(yearCheckbox.checked || sfcCheckbox.checked || q);
       let empty = document.getElementById('camp-opening-empty');
       const baseEmpty = box.querySelector('.empty');
-      if (baseEmpty) baseEmpty.hidden = checkbox.checked && cards.length === 0;
-      if (visible === 0 && (checkbox.checked || (q && cards.length))) {
+      if (baseEmpty) baseEmpty.hidden = hasFilter;
+      if (visible === 0 && hasFilter) {
         if (!empty) {empty=document.createElement('p');empty.id='camp-opening-empty';box.append(empty);}
-        empty.textContent=checkbox.checked
-          ? 'Tällä rajauksella ei löytynyt vahvistetusti ympäri vuoden avoinna olevia leirintäalueita. Kokeile poistaa rasti tai valitse toinen maakunta.'
-          : 'Hakusanalla ei löytynyt leirintäalueita.';
-        empty.hidden=false;
-      } else if(empty) empty.hidden=true;
-      if(status && (checkbox.checked || q)) {
-        status.textContent=(checkbox.checked?'Ympäri vuoden avoinna: ':'Hakutuloksia: ')+visible+' kohdetta';
-      } else if(status && cards.length) {
-        // Ei ylikirjoiteta vanhan listauksen omaa otsikkoa ilman aktiivista rajausta.
+        empty.textContent = sfcCheckbox.checked
+          ? 'Valituilla hakuehdoilla ei löytynyt SFC-alueita. Poista jokin rasti tai valitse toinen maakunta.'
+          : yearCheckbox.checked
+            ? 'Tällä rajauksella ei löytynyt vahvistetusti ympäri vuoden avoinna olevia leirintäalueita.'
+            : 'Hakusanalla ei löytynyt leirintäalueita.';
+        empty.hidden = false;
+      } else if (empty) empty.hidden = true;
+      if (status && hasFilter) {
+        const area = document.getElementById('municipality')?.value ||
+          document.getElementById('region')?.value || 'Koko Suomi';
+        const active = [
+          sfcCheckbox.checked ? 'SFC-alueet' : '',
+          yearCheckbox.checked ? 'Ympäri vuoden' : '',
+          q ? 'Haku' : ''
+        ].filter(Boolean);
+        status.textContent = area+' · '+active.join(' · ')+' · '+visible+' kohdetta';
+      } else if (status && cards.length) {
         const city=document.getElementById('municipality')?.value;
         const region=document.getElementById('region')?.value;
         status.textContent=(city || region || 'Koko Suomi')+' · '+cards.length+' kohdetta';
       }
-    };
-    checkbox.addEventListener('change', apply);
-    input?.addEventListener('input', apply);
-    // Vanha valikko piirtää kohdekortit uusiksi maakuntaa tai kuntaa vaihdettaessa.
-    // Kuunnellaan DOM-muutosta, jotta aukiolomerkinnät ja rasti pysyvät mukana.
+    }
+    yearCheckbox.addEventListener('change',apply);
+    sfcCheckbox.addEventListener('change',() => {
+      const url = new URL(location.href);
+      if (sfcCheckbox.checked) url.searchParams.set('sfc','1');
+      else url.searchParams.delete('sfc');
+      history.replaceState(null,'',url);
+      apply();
+    });
+    input?.addEventListener('input',apply);
     const observer = new MutationObserver(mutations => {
       if (mutations.some(m => m.type === 'childList' &&
-          [...m.addedNodes, ...m.removedNodes].some(n =>
-            n.nodeType === 1 && (n.classList?.contains('stay') || n.classList?.contains('empty') || n.querySelector?.('.stay'))))) {
-        apply();
-      }
+        [...m.addedNodes, ...m.removedNodes].some(n =>
+          n.nodeType === 1 && (n.classList?.contains('stay') ||
+          n.classList?.contains('empty') || n.querySelector?.('.stay'))))) apply();
     });
     observer.observe(box,{childList:true});
-    // Toimii myös silloin, kun valikko ei muutu (vain valitut suodattimet).
     document.getElementById('region')?.addEventListener('change',apply);
     document.getElementById('municipality')?.addEventListener('change',apply);
     apply();
