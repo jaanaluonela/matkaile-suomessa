@@ -1,26 +1,20 @@
-MATKAILU SUOMESSA – LAPIN 21 KUNNAN ESITTELYT v282
+MATKAILU SUOMESSA – MAAKUNTAKARTAN PALAUTUS v282
 
-SISÄLTÖ
-- Kaikkien Lapin 21 kunnan sivuille oma selvästi nykyisiä esittelyjä laajempi "Tutustu kuntaan" -osio.
-- Yhteensä 42 erillistä esittelykappaletta, 64 kylän tai alueen nostoa sekä 21 vuodenaika-,
-  21 karavaanari- ja 21 lapsiperhevinkkiä.
-- Lapin maakuntasivun kuntalistaan lyhyet, kuntaa kuvaavat esittelytekstit.
-- Nykyiset nähtävyyskortit, reitit, valikot, Omat matkat, Lappi-kohdeoppaat ja mobiilirakenne säilyvät.
-- Uusi tyylitiedosto lappi-v282-kuntaesittelyt.css, jota käytetään vain päivitettyjen kuntien sivuilla.
+Mikä korjattiin:
+- Palautettiin aiemmin sivuilla ollut Suomen maakuntakartta kaikkine 19 maakuntarajoineen.
+- Kartta näkyy heti maakunnat.html-sivulla, mutta sen voi myös sulkea.
+- Kartan maakuntaa painamalla avautuvat kyseisen maakunnan kunnat samalla sivulla.
+- Vanha maakuntalista, kuntahaku, maakuntien opassivut ja Lapin v281-päivitykset säilyvät.
+- Tietokoneella kartta ja luettelo ovat rinnakkain, puhelimessa allekkain.
 
-ASENNUS GITHUBIIN v281:n JÄLKEEN
-1) Pura ZIP ja avaa paketti.
-2) Lataa GitHubin sivuston PÄÄKANSIOON paketista kaikki 23 .html/.css-tiedostoa.
-3) Korvaa samannimiset 21 kuntasivua ja lappi.html. Uusi CSS-tiedosto lisätään mukaan.
-4) Älä poista mitään muuta sivuston tiedostoa. Etusivua index.html, hakemistojen
-   kunnat.html/maakunnat.html tai muita kuntia ei tässä paketissa korvata.
-5) Tarkista: Lappi → Enontekiö, Inari, Salla, Utsjoki, Rovaniemi ja Posio.
-   Näet uuden "Tutustu kuntaan" -osion vanhojen kohteiden yläpuolella.
+GITHUB-ASENNUS:
+1. Avaa zip-paketti, lataa sen kolme tiedostoa GitHub-sivuston pääkansioon.
+2. Korvaa vanha maakunnat.html ja lisää kaksi uutta tiedostoa:
+   maakuntakartta-v282.css
+   maakuntakartta-v282.js
+3. Älä poista muita sivuja tai JS-/CSS-tiedostoja.
+4. Avaa julkaistu sivu maakunnat.html ja kokeile esim. Lappi, Kainuu ja Uusimaa.
+   Päivitä selain tarvittaessa uudelleen, jos vanha näkymä on välimuistissa.
 
-HUOM!
-- v282 olettaa, että v281 on asennettu. Päivitys käyttää Lapin kuntien v281-sivupohjia.
-- Jos olet myöhemmin muokannut samoja 21 HTML-sivua, niiden korvaaminen voi
-  ylikirjoittaa nämä myöhemmät muutokset. Säilytä tarvittaessa varmuuskopio.
-- Tekstit ovat pitkäikäisiä matkailukuvauksia; aukiolo-, maksut-, sää- ja
-  matkailuauton huoltotietoja ei ole vahvistettu reaaliajassa.
-- Julkaistua GitHub Pages -sivustoa ei ole voitu testata.
+HUOM: Päivityspaketti perustuu viimeisimpään käytettävissä olleeseen v281-maakunnat.html-tiedostoon.
+Jos olet muokannut kyseistä sivua v281:n jälkeen, uudempi erikoismuutos saattaa vaatia yhdistämistä.

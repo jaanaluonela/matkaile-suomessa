@@ -1,0 +1,33 @@
+/* v282 – alkuperäinen Suomen 19 maakunnan kartta takaisin, ilman muutoksia kunta- tai hakudataan. */
+.regions-layout{display:grid;gap:17px;align-items:start}
+.ms-map-panel{min-width:0;scroll-margin-top:14px}
+.ms-map-toggle{background:#f1f7f2;border:1px solid #d2e5d9;border-radius:20px;overflow:hidden}
+.ms-map-toggle>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;padding:16px 17px;min-height:56px;color:#15513f;cursor:pointer;font-size:18px;font-weight:850}
+.ms-map-toggle>summary::-webkit-details-marker{display:none}
+.ms-map-toggle>summary .ms-map-chevron{font-size:23px;transform:rotate(180deg);transition:transform .2s}
+.ms-map-toggle:not([open])>summary .ms-map-chevron{transform:rotate(0)}
+.ms-map-intro{margin:0;padding:0 17px 9px;color:#486d5d;font-size:13px;line-height:1.45}
+.ms-map-viewport{display:flex;justify-content:center;align-items:start;min-width:0;padding:0 8px 14px}
+.ms-finland-map{display:block;width:min(100%,380px);height:auto;overflow:visible;border-radius:14px}
+.ms-finland-map .sea{fill:#eef7fa}
+.ms-finland-map .finland-outline{fill:#eaf3eb;stroke:#16533f;stroke-width:3;stroke-linejoin:round}
+.ms-finland-map .region{fill:#d6ebde;stroke:#21644f;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:fill .18s ease,stroke-width .18s ease}
+.ms-finland-map .ms-map-link:nth-of-type(even) .region{fill:#e5f2e5}
+.ms-finland-map .ms-map-link:hover .region,.ms-finland-map .ms-map-link:focus .region{fill:#b1dbbb;stroke:#0c543a;stroke-width:3}
+.ms-finland-map .ms-map-link.is-selected .region{fill:#f1d993;stroke:#aa701e;stroke-width:2.8}
+.ms-finland-map .ms-map-link{cursor:pointer;outline:none}
+.ms-finland-map .ms-map-link:focus-visible .region{stroke:#dc8129;stroke-width:4}
+.ms-finland-map .label{fill:#1c493b;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:9px;font-weight:750;text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:#f9fffa;stroke-width:2;stroke-linejoin:round}
+.ms-regions-results{min-width:0}
+@media (min-width:960px){
+  .regions-page{max-width:1180px}
+  .regions-layout{grid-template-columns:minmax(310px,410px) minmax(0,1fr);gap:20px}
+  .ms-map-panel{position:sticky;top:12px}
+}
+@media (max-width:420px){
+  .ms-map-toggle>summary{font-size:16px;padding:13px 14px}
+  .ms-map-intro{padding:0 14px 8px}
+  .ms-map-viewport{padding:0 3px 9px}
+  .ms-finland-map .label{font-size:9.5px}
+}
+@media (prefers-reduced-motion:reduce){.ms-finland-map .region,.ms-map-toggle>summary .ms-map-chevron{transition:none}}
