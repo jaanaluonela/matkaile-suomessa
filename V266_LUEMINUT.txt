@@ -1,0 +1,44 @@
+MATKAILU SUOMESSA – v266 KUUSAMO & RUKA
+========================================
+Päivitetty 12.10.2026. PIENI PÄIVITYSPAKETTI v265:n PÄÄLLE.
+
+SISÄLTÖ
+- kuusamo.html: uusi laaja opas Kuusamoon; luonto, kulttuuri, lapsiperheet, ruokailu ja 8 caravan-/matkaparkkikohdetta.
+- ruka.html: oma opas Rukalle, joka linkittyy Kuusamon sivulta.
+- kuusamo-ruka-v266.css ja .js: näiden oppaiden ulkoasu ja suodatustoiminnot.
+- leirinta-data-v266-kuusamo.js: seitsemän camping-kohdetta valtakunnalliseen leirintäaluelistaan. Puhdas matkaparkki Oivanki näkyy Kuusamon oppaassa, EI virheellisesti leirintäalueena.
+- leirintaalueet.html: aiemman v265:n leirintälistan päivitys, joka lataa uuden Kuusamo-tiedon. Kaikki aiemmat v264/v265 tiedostot säilyvät.
+
+ASENNUS GITHUBIIN
+1. Pura tämän ZIPin tiedostot.
+2. Vie kaikki 7 tiedostoa GitHub-projektin JUUREEN (samaan hakemistoon kuin index.html).
+3. Korvaa vain samannimiset kuusamo.html ja leirintaalueet.html; lisää loput uudet tiedostot.
+4. ÄLÄ poista vanhoja tiedostoja. Erityisesti v263/v264/v265 JS ja CSS sekä app.js säilyvät ennallaan.
+5. Odota sivuston julkaisu; päivitä sivu selaimessa.
+6. Avaa: kuusamo.html, sieltä Ruka, ja leirintaalueet.html > Pohjois-Pohjanmaa > Kuusamo.
+7. Tarkista myös 'Omat matkat' -toiminnot vanhasta sovelluksesta.
+
+TARKISTETUT CAMPING-AUKIOLOT 12.10.2026
+Ruka Caravan: ympärivuotinen, kesä- ja talvikauden hinnastot.
+Ala-Juuma Camping: 1.6.–30.9.
+Juuman Leirintä: vastaanotto kesä–syyskuussa, caravan-paikkojen talvikausi varmistettava.
+Jyrävän Leirintä: 1.6.–30.9.
+Kuusingin Leirintä: 1.6.–31.8.2026.
+Oulanka Camping: kesä–elokuu, syyskuu vain sopimuksesta.
+Viipuksen Leirintäalue: aukiolo ei varmistunut.
+Oivangin matkaparkki: varaus ja käytettävyys varmistettava puhelimitse.
+
+PÄÄLÄHTEET
+https://www.ruka.fi/fi/majoitus/caravan-ja-leirinta
+https://www.ruka.fi/fi/ruka-vaunualue
+https://www.ruka.fi/fi/tulossa-kuusamoon/nahtavyydet
+https://www.ruka.fi/fi/hiihtokeskus/kesakartta
+https://www.ruka.fi/fi/hiihtokeskus/rinteet
+https://www.alajuumacamping.fi/fi
+https://juumanleirintaalue.com/
+https://stellapolaris.fi/jyravan-leirintaalue/
+https://www.kuusinki.com/fi/
+https://oulankacamping.fi/yhteystiedot/
+https://www.oivanki.fi/majoitu-ja-viihdy/matkaparkki/
+
+HUOM: Tämä on sivuston tiedostopäivitys, ei automaattinen julkaisu GitHubiin.
