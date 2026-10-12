@@ -1,0 +1,27 @@
+MATKAILU SUOMESSA – LAPIN SUURI SISÄLTÖPÄIVITYS v281
+
+Sisältö:
+- Kaikki Lapin 21 kuntaa: 14 UUTTA paikkakuntasivua, 7 nykyisen paikkakuntasivun LAAJENNUS alkuperäinen sisältö säilyttäen.
+- 103 kohdevinkkiä uusilla sivuilla tai lisättyinä vanhoihin sivuihin (aiemmin sivuilla olleet, toistuvat kohteet jätetty lisäämättä).
+- 6 uutta matkailukylän ja tunturikohteen opasta: Kilpisjärvi, Hetta, Saariselkä, Ivalo, Pyhä, Luosto (30 kohdevinkkiä).
+- Levi- ja Ylläs-oppaiden sisältöjä täydennetty (9 kohdetta ilman päällekkäisyyttä).
+- Lapin maakuntasivulle suorat linkit kaikkiin 21 kuntaan ja kahdeksaan matkailukohteeseen; 3 vanhaa identtistä toistolohkoa poistettu.
+- Hakutiedosto v281-lappi-kuntalinkit.js; toimii v280:n jälkeen ja säilyttää aiemmat kuntalinkit.
+
+ASENNUS GITHUBIIN
+1. Pura ZIP ja lataa kaikki .html-, .css- ja .js-tiedostot GitHub Pages -sivuston pääkansioon. Korvaa samannimiset tiedostot.
+2. ÄLÄ poista muita sivuja, kuvia tai data-tiedostoja.
+3. Paketti sisältää index.html, maakunnat.html ja kunnat.html v280-pohjilta. Jos muutit näitä v280:n jälkeen, lisää niihin sen sijaan vain rivi:
+<script src="v281-lappi-kuntalinkit.js?v=281" defer></script>
+heti v280-kuntalinkit.js-scriptin jälkeen; muita uusia/korvattuja tiedostoja voi ladata normaalisti.
+4. GitHub Pages -päivityksen jälkeen tarkista Lappi -> Enontekiö, Salla, Posio, Utsjoki, Kilpisjärvi, Pyhä; kokeile hakua sanoilla Saana, Saariselkä, Pyhä, Rovaniemi.
+
+HUOMIO
+- Kyseessä on kohdeoppaiden sisältöpäivitys. Se ei vahvista matkailuauton yöpymislupia, vesipisteiden tai tyhjennyspaikkojen olemassaoloa kohteissa.
+- Aukioloajat, laivavuorot, kausiluonteiset palvelut ja retkipolut tarkistettava ajantasaisesta kohdeoppaasta.
+- Korouoma, Isokuru ja Saana eivät ole esteettömiä pikaisia levähdyspaikkoja.
+- Kuusamo kuuluu Pohjois-Pohjanmaahan, eikä sitä ole lisätty Lapin kuntalistaan.
+- GitHub-julkaisua ei ole voitu tarkistaa käyttäjän sivustolla.
+
+VANHOJEN SIVUJEN SISÄLTÖ SÄILYY: Inari, Kemijärvi, Kittilä, Kolari, Rovaniemi, Sodankylä, Tornio, Levi, Ylläs.
+UUDET KUNTASIVUT: Enontekiö, Kemi, Keminmaa, Muonio, Pelkosenniemi, Pello, Posio, Ranua, Salla, Savukoski, Simo, Tervola, Utsjoki, Ylitornio.
