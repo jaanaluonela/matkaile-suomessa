@@ -1,0 +1,13 @@
+MATKAILU SUOMESSA v271 – SFC ALATALO
+
+Pieni päivitys aiemman v270 Kuopion seutu -paketin päälle.
+
+Lataa GitHubin pääkansioon:
+- kuopio-seutu-data-v270.js (korvaa vanha tiedosto)
+
+Lisätty Kuopion karavaanariosioon:
+- SFC Alatalo
+- osoite ja karttapainike
+- yhdistyksen verkkosivu
+
+Tiedot tarkistettu 12.10.2026. Tarkista vierailuohjeet ja muuttuvat palvelut ennen lähtöä.

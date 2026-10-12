@@ -25,7 +25,8 @@ window.KUOPIO_SEUTU={
       ["Puijon ravintolat","Torniravintola, Tornikahvila ja Puijon Maja yhdistävät maisemat ja paikalliset maut.","Varaa suosituimpina aikoina","https://www.puijopeak.fi/ravintolat/","Puijon ravintolat"],
       ["Bellanranta","Ravintoloita, sauna- ja hyvinvointipalveluja sekä tapahtumia Kallaveden rannalla.","Palvelut yrityskohtaisia","https://bellanranta.fi/","Bellanranta Kuopio"]]},
     {title:"🚐 Karavaanarin yöpyminen",items:[
-      ["Matkailukeskus Rauhalahti","Viiden tähden campingalue: 150 sähköpaikkaa, huoltorakennukset, keittiöt, pyykinpesu sekä kemiallisen WC:n ja harmaaveden tyhjennys. Talvikaudella 27 sähköpaikkaa.","✓ Caravan-paikkoja ympäri vuoden","https://visitrauhalahti.fi/rauhalahti/camping/","Rauhankatu 3 Kuopio"]]}
+      ["Matkailukeskus Rauhalahti","Viiden tähden campingalue: 150 sähköpaikkaa, huoltorakennukset, keittiöt, pyykinpesu sekä kemiallisen WC:n ja harmaaveden tyhjennys. Talvikaudella 27 sähköpaikkaa.","✓ Caravan-paikkoja ympäri vuoden","https://visitrauhalahti.fi/rauhalahti/camping/","Rauhankatu 3 Kuopio"],
+      ["SFC Alatalo","SF-Caravan Kuopion Seutu ry:n oma caravan-alue Jännevirralla, noin 20 kilometrin päässä Kuopion keskustasta. Tarkista vierailuohjeet ja ajankohtaiset palvelut ennen saapumista.","Jännevirta · tarkista vierailuohjeet","https://www.sfc-kuopionseutu.net/","Jänneniementie 264, 70940 Jännevirta"]]}
   ]},
   "siilinjarvi":{name:"Siilinjärvi",lead:"Kylpylää, ulkoilua, golfia ja helposti saavutettavia päiväretkikohteita Kuopion pohjoispuolella.",tags:["Fontanella","Kasurila","Pöljä"],sections:[{title:"⭐ Näe ja koe",items:[
     ["Kylpylä Fontanella","Uimista, vesiliikuntaa ja hyvinvointipalveluja kaikenikäisille.","Tarkista aukiolo","https://fontanella.fi/","Kylpylä Fontanella"],
