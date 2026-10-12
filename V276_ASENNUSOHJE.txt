@@ -1,0 +1,35 @@
+MATKAILU SUOMESSA – v276: PYSÄHDY MATKALLA, KAKSI UUTTA HAKURYHMÄÄ
+=====================================================================
+PIENI PÄIVITYS nykyisen v275-sivuston päälle. EI KOKO SIVUSTO.
+
+Lataa GitHubin matkaile-suomessa-repositorion JUUREEN nämä 3 tiedostoa:
+1. pysahdy-matkalla.html     (korvaa vanha)
+2. pysahdy-v276.js          (uusi)
+3. pysahdy-v276.css         (uusi)
+
+Älä poista muita tiedostoja. Älä korvaa index.html:ää.
+Sivun käyttämä vanha läheisten kohteiden aineisto on edelleen tarvittava:
+  nearby-data-v218.js
+  kayntikohteet-data-v230.js
+
+PARANNUKSET
+- 🚐 Karavaanarin palvelut (vesi, WC- ja harmaavesityhjennys, iso pysäköinti)
+- 🧸 Lasten kanssa (leikkipuistot, kotieläinpihat, lasten taukopaikat)
+- Paikkakunta + tekstihaku toimivat ryhmille.
+- Uusissa ryhmissä näkyvät tiedossa olevat osumat oppaan aineistoista.
+- Jos tallennettuja kohteita ei ole, tarjolla on karttahakupainikkeet.
+- Karttahaku ei ole tarkistettu kohdeluettelo.
+- Tietokonenäkymä on leveämpi, mobiilin mitoitus säilyy.
+- Entiset ravintolat, kahvilat, puodit, muut pysähdykset ja etusivu säilyvät.
+
+TÄRKEÄÄ
+Tämä päivitys lisää toimivat hakuryhmät ja karttahaut. Se EI vielä lisää
+Suomen kaikkia vesipisteitä, tyhjennyspaikkoja, leikkipuistoja tai kotieläinpihoja
+tietokantaan. Tallennettuja tuloksia näkyy vain jos nykyinen aineisto sisältää
+tunnistettavia palvelu-/lastenkohdemerkintöjä.
+
+TESTAA
+- Avaa /pysahdy-matkalla.html?ryhma=caravan
+- Avaa /pysahdy-matkalla.html?ryhma=kids
+- Kokeile valita paikkakunta ja avata karttahakulinkki.
+- Testaa vanhat ryhmät ja myös mobiilinäkymä.
