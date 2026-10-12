@@ -1,0 +1,57 @@
+/* Matkailu Suomessa v283 – havainnollinen, luonnonläheinen maakuntakartta */
+.regions-layout{display:grid;gap:18px;align-items:start}
+.ms-map-panel,.ms-regions-results{min-width:0}
+.ms-map-panel{scroll-margin-top:14px}
+.ms-map-toggle{overflow:hidden;border:1px solid #d0e1d3;border-radius:25px;background:#fff;box-shadow:0 8px 28px rgba(31,77,55,.08)}
+.ms-map-toggle>summary{display:flex;align-items:center;gap:10px;min-height:60px;padding:12px 18px;color:#244e3d;cursor:pointer;list-style:none;background:#f4f7f0;font-weight:800;font-size:16px}
+.ms-map-toggle>summary::-webkit-details-marker{display:none}
+.ms-map-summary-icon{display:grid;place-items:center;width:33px;height:33px;flex:0 0 33px;border-radius:11px;background:#ddede0;color:#34775e;font-size:29px;line-height:1}
+.ms-map-summary-title{flex:1;letter-spacing:-.02em}
+.ms-map-chevron{color:#6c967c;font-size:27px;line-height:1;transform:rotate(180deg);transition:transform .2s}
+.ms-map-toggle:not([open]) .ms-map-chevron{transform:none}
+.ms-map-copy{padding:19px 21px 0}
+.ms-map-eyebrow{display:block;margin-bottom:6px;font-size:10px;font-weight:900;letter-spacing:.18em;color:#628b72}
+.ms-map-copy h2{margin:0 0 6px;font-size:clamp(21px,2.5vw,27px);line-height:1.14;letter-spacing:-.045em;color:#184e3c}
+.ms-map-copy p{margin:0;font-size:13px;line-height:1.5;color:#5b7968}
+.ms-map-viewport{min-width:0;padding:17px 15px 0;display:flex;justify-content:center}
+.ms-map-stage{width:100%;max-width:430px;overflow:hidden;position:relative;padding:0 9px 7px;border-radius:20px;border:1px solid #cdded5;background:linear-gradient(140deg,#eef6ee 1%,#d7eae3 68%,#c9dfd7 100%);box-shadow:inset 0 1px #ffffffa3, 0 5px 15px #2c725a12}
+.ms-map-stage-head{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:41px;padding:8px 7px 0}
+.ms-map-stage-kicker{font-size:9px;letter-spacing:.13em;font-weight:850;color:#386b58}
+.ms-map-count{white-space:nowrap;display:inline-flex;align-items:center;padding:6px 9px;border-radius:30px;color:#2e6550;background:#ffffffcc;font-size:10px;font-weight:800;box-shadow:0 1px 6px #2d614d17}
+.ms-finland-map{display:block;width:100%;height:auto;max-width:395px;margin:-11px auto -5px;overflow:visible;filter:drop-shadow(0 2px 1px #184d3412)}
+.ms-finland-map .sea{fill:url(#ms-sea)}
+.ms-finland-map .finland-outline{fill:#f1f5dc;stroke:#315c4d;stroke-width:2.4;stroke-linejoin:round;filter:url(#ms-terrain-shadow)}
+.ms-finland-map .region{fill:var(--c,#d1e4cd);stroke:#628276;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;transition:fill .17s ease,stroke .17s ease,stroke-width .17s ease;vector-effect:non-scaling-stroke}
+.ms-finland-map .ms-map-link{cursor:pointer;outline:none}
+.ms-finland-map .ms-map-link:hover .region,.ms-finland-map .ms-map-link:focus .region,.ms-finland-map .ms-map-link.is-hovered .region{fill:#fbe5a4;stroke:#266448;stroke-width:2.9}
+.ms-finland-map .ms-map-link.is-selected .region{fill:#3f8c63;stroke:#fff9e5;stroke-width:3.1}
+.ms-finland-map .ms-map-link.is-selected .region:hover,.ms-finland-map .ms-map-link.is-selected:focus .region{fill:#2f7f59}
+.ms-finland-map .ms-map-link:focus-visible .region{stroke:#f5a645;stroke-width:4}
+.ms-finland-map .label{fill:#244f41;stroke:#f7f8e9;stroke-width:2.4;stroke-linejoin:round;paint-order:stroke;pointer-events:none;font:740 8.8px system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:-.15px;text-anchor:middle}
+.ms-finland-map .ms-sea-label{fill:#699d93;stroke:none;font:800 8.5px system-ui,sans-serif;letter-spacing:.15em;pointer-events:none}
+.ms-finland-map .ms-compass text{font:800 9px system-ui,sans-serif;text-anchor:middle;fill:#28604d}
+.ms-map-stage-foot{display:flex;gap:9px;align-items:center;justify-content:center;padding:0 0 12px;color:#5f9181;letter-spacing:.19em;font-size:8px;font-weight:850}
+.ms-map-foot-line{height:1px;background:#b6cfc4;width:23px}
+.ms-map-selection{display:flex;align-items:center;gap:11px;margin:13px 15px 16px;padding:12px 13px;border-radius:15px;background:#eef4e8;border:1px solid #d4e3d1;color:#25563f}
+.ms-map-selection-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;background:#dae9d6;border-radius:10px;color:#2c7957;font-size:24px}
+.ms-map-selection-text{display:flex;flex:1;min-width:0;flex-direction:column;gap:2px}
+.ms-map-selection strong{font-size:13px;line-height:1.25;font-weight:830;overflow-wrap:anywhere}
+.ms-map-selection small{font-size:11px;line-height:1.25;color:#6d8a73}
+.ms-map-selection-arrow{color:#5e9369;font-size:18px}
+@media(min-width:960px){
+ .regions-page{max-width:1180px}
+ .regions-layout{grid-template-columns:minmax(330px,420px) minmax(0,1fr);gap:22px}
+ .ms-map-panel{position:sticky;top:12px}
+}
+@media(max-width:480px){
+ .ms-map-toggle{border-radius:20px}
+ .ms-map-toggle>summary{padding:10px 14px;min-height:56px;font-size:15px}
+ .ms-map-copy{padding:15px 16px 0}
+ .ms-map-copy h2{font-size:22px}
+ .ms-map-viewport{padding:13px 10px 0}
+ .ms-map-stage{padding:0 6px 5px;border-radius:16px}
+ .ms-map-selection{margin:11px 10px 12px}
+ .ms-finland-map .label{font-size:8.6px}
+}
+@media(max-width:350px){.ms-map-stage-kicker{font-size:8px}.ms-map-count{font-size:9px}.ms-finland-map .label{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.ms-finland-map .region,.ms-map-chevron{transition:none}}

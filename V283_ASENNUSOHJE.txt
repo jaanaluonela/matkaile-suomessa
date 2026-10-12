@@ -1,24 +1,18 @@
-MATKAILU SUOMESSA – V283 PALVELUVALIKON TIIVISTYS JA TYHJENNYSKORJAUS
+MATKAILU SUOMESSA – NÄYTTÄVÄMPI MAAKUNTAKARTTA v283
 
-1. Pura ZIP-paketti.
-2. Lataa GitHub-sivuston pääkansioon nämä kaksi tiedostoa:
-   - palvelut-v275.css
-   - palvelut-v275.js
-3. Korvaa GitHubissa näiden tiedostojen vanhat versiot.
-4. Älä poista mitään muita tiedostoja tai korvaa HTML-sivuja.
-5. Avaa Leirintäalueet tai Matkaparkit ja päivitä sivu.
-   Jos selain näyttää edelleen vanhan ulkoasun, tee pakotettu päivitys
-   tai sulje sivuston välilehti ja avaa se uudelleen (välimuisti).
+Mitä muuttui:
+• Luontoteemainen kartan ulkoasu: pehmeät vaaleat sävyt, selkeämmät maakuntarajat, hienovarainen meritausta ja kompassi.
+• Maakunta korostuu karttaa osoitettaessa ja valittaessa; nimi näkyy kartan alla.
+• Maakuntaa napsauttamalla kyseisen maakunnan kunnat avautuvat samalla sivulla.
+• Kaikki 19 maakuntaa ja maakuntaluettelo säilyvät.
+• Sivun tietokone- ja puhelinnäkymät on huomioitu.
+• Kartan rajat ovat suuntaa antava havainnollistus eivätkä tarkkaa virallista rajageometriaa.
 
-TULOS
-- Palveluvalinnat ovat kahdessa vierekkäin selattavassa rivissä.
-- Puhelimella valintoja pyyhkäistään sivulle; mitään palvelua ei poisteta.
-- Tyhjennä palveluvalinnat -nappi poistaa kaikki palvelurastit, myös
-  Keittiö, Pyykinpesu, Leikkipaikka ja Uimaranta.
-- Maakunta-, kunta-, SFC- ja aukiolorajaukset pysyvät ennallaan.
-- Vahvistettujen palvelujen varsinainen hakulogiikka säilyy entisellään.
+PÄIVITYS GITHUBIIN
+1. Avaa ZIP ja kopioi KAIKKI 3 tiedostoa sivuston pääkansioon.
+2. Korvaa nykyinen maakunnat.html tiedostolla tässä paketissa.
+3. Lisää 2 uutta tiedostoa: maakuntakartta-v283.css ja maakuntakartta-v283.js.
+4. Muita sivuston tiedostoja ei tarvitse poistaa. Tämä korvaa vain kartan näyttöön liittyvät v282-tiedostot.
+5. Avaa julkaistu maakunnat.html ja kokeile valita esimerkiksi Lappi ja Päijät-Häme.
 
-HUOM: Päivitys käyttää viimeisintä käytettävissä olevaa v275-ohjelmatiedostoa,
-jonka alkuun on lisätty itsenäinen toimiva tyhjennyspainikkeen käsittelijä.
-Jos olet muokannut palvelut-v275.js-tiedostoa käsin v275:n jälkeen,
-yhdistä aiemmat käsin tehdyt muutokset ennen korvaamista.
+HUOM: Tämä päivitys perustuu v282-tiedostoihin. Jos maakunnat.html on päivittynyt v282:n jälkeen, tarkista uusien sivumuutosten säilyminen ennen korvaamista.
