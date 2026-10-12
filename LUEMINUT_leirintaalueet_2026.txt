@@ -1,0 +1,24 @@
+MATKAILU SUOMESSA — LEIRINTÄALUEIDEN KOKO SUOMEN AUKIOLOPÄIVITYS, 11.10.2026
+
+Sisältö:
+- matkailu_suomessa_leirintaalueet_2026.html = puhelimella toimiva selailusivu, maakuntasuodatus, haku ja matkapäivä
+- matkailu_suomessa_leirintaalueet_2026.json = sovellukseen yhdistettävä 131 alueen aineisto
+- matkailu_suomessa_leirintaalueet_2026.csv = sama puolipiste-eroteltuna taulukkona, UTF-8 BOM
+
+Tiedot 73 Camping.fi-alueesta sekä 58 SF-Caravan-alueesta. 19/19 maakuntaa.
+Ympärivuotiseksi merkitty 33, kausialueita 40, aukiolo tarkistettava 57, erityispoikkeus 1.
+
+HUOMIO:
+Merkinnät koskevat vuotta 2026. Ne ovat julkisia aukioloilmoituksia eivätkä reaaliaikaisia majoituspaikkavahvistuksia. Leirintäauto- ja vaunupaikkojen talvipalvelut voivat olla rajatut. Ounaskoski Camping on suljettuna 1.10.–22.11.2026, vaikka yleishakemisto näyttää 1.1.–31.12. SF-Caravanin 58 kohdetta on otettu mukaan, mutta 54 alueen varsinaista aukiolokautta ei ole vahvistettu erikseen. Ympärivuotisten kolmen SF-Caravan-alueen aukiolo pohjautuu omiin sivuihin.
+
+Tämä paketti on erillinen aineisto ja selailusivu. Matkailu Suomessa -sovelluksen nykyistä ZIP-projektia ei ollut käytettävissä, joten tiedostot eivät muuta olemassa olevaa sovellusta. Aineisto on mahdollista yhdistää lähdekoodiin projektitiedoston avulla; päällekkäiset alueet tulee yhdistää nimen ja kunnan perusteella eikä vain lisätä toistamiseen.
+
+Lähteet:
+https://camping.fi/
+https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+https://www.ounaskoski-camping-rovaniemi.com/yhteystiedot/
+https://hameenhelmi.com/
+https://www.sfcsatakunta.fi/
+https://www.sfc-kantahame.com/
+https://silversand.fi/
+https://visitrauhalahti.fi/rauhalahti/ajankohtaista/
