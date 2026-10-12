@@ -1,0 +1,23 @@
+MATKAILU SUOMESSA – PAIKKAKUNTIEN SISÄLTÖPÄIVITYS v280
+
+Sisältö: 23 uutta, valmista paikkakuntasivua, 118 nimettyä kohdevinkkiä.
+- 11 Keski-Suomen kuntaa
+- 12 Pirkanmaan kuntaa
+
+ASENNUS GITHUBIIN
+1. Pura ZIP koneellesi.
+2. Avaa sivuston GitHub-repository ja lataa paketin kaikki .html-, .css- ja .js-tiedostot pääkansioon. Korvaa vain samannimiset tiedostot.
+3. Älä poista entisiä paikkakuntasivuja, alueiden tietoja tai kuvahakemistoa.
+4. Odota GitHub Pages -julkaisua, päivitä selain ja etsi esim. Jyväskylä, Laukaa, Kangasala tai Sastamala maakunnat-haussa.
+
+HUOMAUTUS
+- Tässä lisätään oppaan kohdevinkkejä ja sisältöä; karavaanarialueiden yöpymis- tai huoltopalveluista ei anneta varmistamattomia lupauksia.
+- Uusia kuntasivuja linkittävät index.html, kunnat.html ja maakunnat.html pohjautuvat index.html-sivulla v274-versioon, maakunnat.html-sivulla v262-versioon ja kunnat.html-sivulla v254-versioon. Jos olet muokannut näitä sivuja näiden versioiden jälkeen, tarkista ennen niiden korvaamista etteivät omat muutokset ylikirjoitu. Vaihtoehtona lisää vain <script src="v280-kuntalinkit.js?v=280" defer></script> vanhojen v254-kuntalinkit.js -viittausten jälkeen, ja lataa kaksi tusinaa uutta kuntasivua sekä CSS/JS.
+- Tässä versiossa nykyisen v278/v279 sivukohtaisia lisäyksiä EI korvata.
+- Sivuston julkaistua GitHub-versiota ei ole tämän paketin yhteydessä testattu.
+
+KESKI-SUOMI
+Jyväskylä, Jämsä, Laukaa, Äänekoski, Saarijärvi, Keuruu, Petäjävesi, Konnevesi, Muurame, Joutsa, Hankasalmi
+
+PIRKANMAA
+Tampere, Kangasala, Nokia, Ylöjärvi, Valkeakoski, Sastamala, Orivesi, Mänttä-Vilppula, Ruovesi, Virrat, Ikaalinen, Lempäälä
