@@ -1,0 +1,93 @@
+/* Desktop and mobile service filters, additive styles */
+.ms275-services-panel{margin:16px 0 18px;padding:17px 19px;border:1px solid #cfe3d6;border-radius:17px;background:#f5faf6}.ms275-services-panel h2{font-size:19px;margin:0 0 5px;color:#174d40}.ms275-services-panel>p{margin:0 0 12px;color:#546b60;font-size:14px}.ms275-services-choices{display:flex;flex-wrap:wrap;gap:8px}.ms275-services-choices label{cursor:pointer;display:inline-flex;gap:7px;align-items:center;border:1px solid #c6d8cc;border-radius:11px;background:#fff;padding:9px 12px;font-size:14px;font-weight:650;color:#225242}.ms275-services-choices label:has(input:checked){background:#d7ece0;border-color:#227456}.ms275-services-choices input{width:17px;height:17px;accent-color:#226c50;margin:0}.ms275-service-footer{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:12px;color:#526f62}.ms275-service-footer button{color:#195946;background:#fff;border:1px solid #bacfc2;padding:8px 11px;border-radius:9px;cursor:pointer;font-weight:700}.ms275-service-footer small{font-size:12px}.ms275-card-services{display:flex;flex-direction:column;align-items:flex-start;gap:7px;border-top:1px solid #dce8dd;margin:12px 0 8px;padding-top:12px;font-size:13px;color:#2e604a}.ms275-card-tags{display:flex;flex-wrap:wrap;gap:5px}.ms275-card-tags span{padding:5px 8px;border-radius:9px;background:#edf6eb;color:#215540;font-size:12px;font-weight:700}.ms275-card-services small{line-height:1.45;color:#556b61}.ms275-card-services a{color:#1e6650;font-weight:750}.ms275-not-verified{color:#78877e;font-size:12px}.ms275-card-services:not(.ms275-not-verified){background:transparent}#ms275-no-results{color:#526f62;font-weight:650;padding:10px}.stay[hidden]{display:none!important}@media(max-width:650px){.ms275-services-panel{padding:14px 12px}.ms275-services-choices label{padding:8px 10px;font-size:13px}}
+
+.ms275-year-choice{margin:13px 0 5px;font-weight:700;color:#225242}.ms275-year-choice input{width:17px;height:17px;accent-color:#226c50}
+
+/* v283 - compact two-row service chips, including touch devices.
+   The rows scroll horizontally when there is not enough viewport width. */
+.ms275-services-panel .ms275-services-choices {
+  display: grid !important;
+  grid-template-rows: repeat(2, minmax(0, auto)) !important;
+  grid-template-columns: none !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: max-content !important;
+  align-items: stretch !important;
+  justify-content: start !important;
+  gap: 7px !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+  padding: 3px 2px 9px !important;
+  scrollbar-width: thin;
+}
+.ms275-services-panel .ms275-services-choices label {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: max-content !important;
+  max-width: none !important;
+  min-height: 37px !important;
+  box-sizing: border-box !important;
+  padding: 6px 10px !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  white-space: nowrap !important;
+  scroll-snap-align: start;
+}
+.ms275-services-panel .ms275-services-choices label span {
+  white-space: nowrap !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+.ms275-services-panel .ms275-services-choices input[type='checkbox'] {
+  flex: 0 0 auto;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+.ms275-services-panel .ms275-services-choices label:focus-within {
+  outline: 2px solid #256a54;
+  outline-offset: 2px;
+}
+.ms275-services-panel .ms275-service-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 12px;
+  margin-top: 7px;
+}
+.ms275-services-panel #ms275-clear-services {
+  min-height: 36px;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  padding: 6px 10px !important;
+  touch-action: manipulation;
+}
+.ms275-scroll-hint {
+  display: none;
+  margin: 0 !important;
+  color: #526b61;
+  font-size: 12px !important;
+}
+@media(max-width:650px) {
+  .ms275-services-panel { padding: 12px 10px !important; }
+  .ms275-services-panel .ms275-services-choices { gap: 6px !important; }
+  .ms275-services-panel .ms275-services-choices label {
+    min-height: 35px !important;
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    gap: 5px !important;
+  }
+  .ms275-services-panel .ms275-service-footer small {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    font-size: 11px;
+  }
+  .ms275-scroll-hint { display: block !important; }
+}

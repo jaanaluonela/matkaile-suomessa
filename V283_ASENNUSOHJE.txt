@@ -1,0 +1,24 @@
+MATKAILU SUOMESSA – V283 PALVELUVALIKON TIIVISTYS JA TYHJENNYSKORJAUS
+
+1. Pura ZIP-paketti.
+2. Lataa GitHub-sivuston pääkansioon nämä kaksi tiedostoa:
+   - palvelut-v275.css
+   - palvelut-v275.js
+3. Korvaa GitHubissa näiden tiedostojen vanhat versiot.
+4. Älä poista mitään muita tiedostoja tai korvaa HTML-sivuja.
+5. Avaa Leirintäalueet tai Matkaparkit ja päivitä sivu.
+   Jos selain näyttää edelleen vanhan ulkoasun, tee pakotettu päivitys
+   tai sulje sivuston välilehti ja avaa se uudelleen (välimuisti).
+
+TULOS
+- Palveluvalinnat ovat kahdessa vierekkäin selattavassa rivissä.
+- Puhelimella valintoja pyyhkäistään sivulle; mitään palvelua ei poisteta.
+- Tyhjennä palveluvalinnat -nappi poistaa kaikki palvelurastit, myös
+  Keittiö, Pyykinpesu, Leikkipaikka ja Uimaranta.
+- Maakunta-, kunta-, SFC- ja aukiolorajaukset pysyvät ennallaan.
+- Vahvistettujen palvelujen varsinainen hakulogiikka säilyy entisellään.
+
+HUOM: Päivitys käyttää viimeisintä käytettävissä olevaa v275-ohjelmatiedostoa,
+jonka alkuun on lisätty itsenäinen toimiva tyhjennyspainikkeen käsittelijä.
+Jos olet muokannut palvelut-v275.js-tiedostoa käsin v275:n jälkeen,
+yhdistä aiemmat käsin tehdyt muutokset ennen korvaamista.
