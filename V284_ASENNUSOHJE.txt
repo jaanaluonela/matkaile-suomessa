@@ -1,0 +1,21 @@
+MATKAILU SUOMESSA – V284: SAMANVÄRISET MAAKUNNAT JA KARTTAVALINTA
+
+Tämä on pieni päivitys nykyisen GitHub-sivustosi päälle.
+
+1. Pura ZIP.
+2. Lataa kaikki neljä tiedostoa GitHubin sivuston pääkansioon:
+   - maakunnat.html (korvaa vanha)
+   - v284-maakunnat.js (uusi)
+   - maakuntakartta-v284.css (uusi)
+   - maakuntakartta-v284.js (uusi)
+3. Älä poista muita sivuja tai vanhoja JS/CSS-tiedostoja: vanhat v256-perustyylit ja kuntatietokanta ovat yhä käytössä.
+
+Näin käytät:
+- Kartassa ja maakuntakorteissa näkyy sama sävy, maakunta maakunnalta.
+- Napauta maakunnan nimeä listassa: maakunta korostuu myös kartalla.
+- Napauta kunnan nimeä: sen maakunta korostuu kartalla ja puhelimella siirryt kartan kohdalle.
+- Kunnan "Avaa matkaopas" / "Avaa kuntakortti" -linkki avaa aiemman sivun.
+- Kartan valinnan jälkeen matkaopaslinkki näkyy myös kartan alapuolella.
+
+Kaikki aiemmat sivuston kunta-, kohde- ja karavaanitiedostot jäävät koskematta.
+Kartta on suuntaa antava maakuntakartta. Kunnan valinta värjää sen maakunnan, ei yksittäisen kunnan rajoja.

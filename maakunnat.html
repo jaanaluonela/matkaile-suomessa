@@ -8,15 +8,15 @@
 <meta name="description" content="Tutustu kaikkiin Suomen 19 maakuntaan pohjoisesta etelään. Valitse maakunta ja avaa sen kunnat suoraan.">
 <link rel="stylesheet" href="navigation-v191.css?v=244">
 <link rel="stylesheet" href="v256-maakunnat.css?v=256">
-<link rel="stylesheet" href="maakuntakartta-v283.css?v=283">
+<link rel="stylesheet" href="maakuntakartta-v284.css?v=284">
 <script src="kunnat-v200.js"></script>
 <script src="rovaniemi-data-v245.js" defer></script>
 <script src="kouvola-data-v247.js" defer></script>
 <script src="lappi-data-v248.js" defer></script>
 <script src="suomi-kunnat-v253.js?v=253" defer></script>
 <script src="v254-kuntalinkit.js?v=254" defer></script><script src="v280-kuntalinkit.js?v=280" defer></script><script src="v281-lappi-kuntalinkit.js?v=281" defer></script><script src="v257-siuntio.js?v=257" defer></script><script src="v258-lansi-suomi.js?v=258" defer></script><script src="v259-fiskars-kunnat.js?v=259" defer></script><script src="v260-etela-pohjanmaa.js?v=260" defer></script><script src="v261-kymenlaakso.js?v=261" defer></script><script src="v262-etela-karjala.js?v=262" defer></script>
-<script src="v256-maakunnat.js?v=256" defer></script>
-<script src="maakuntakartta-v283.js?v=283" defer></script>
+<script src="v284-maakunnat.js?v=284" defer></script>
+<script src="maakuntakartta-v284.js?v=284" defer></script>
 </head>
 <body>
 <main class="regions-page">
@@ -24,7 +24,7 @@
   <header class="regions-hero">
     <p class="regions-kicker">🧭 MATKAILU SUOMESSA</p>
     <h1>Maakunnat</h1>
-    <p>Löydä nähtävää ja matkakohteita maakunnittain. Valitse alue kartalta tai luettelosta.</p>
+    <p>Löydä nähtävää ja matkakohteita maakunnittain. Kartta ja lista ovat samanväriset. Kuntaa painamalla korostat sen maakunnan kartalla.</p>
     <small>19 maakuntaa · pohjoisesta etelään</small>
   </header>
   <div class="regions-search">
@@ -35,7 +35,7 @@
     <section class="ms-map-panel" id="suomen-maakuntakartta" aria-label="Suomen maakuntakartta">
       <details class="ms-map-toggle" open>
         <summary><span class="ms-map-summary-icon" aria-hidden="true">⌁</span><span class="ms-map-summary-title">Tutki Suomen karttaa</span><span class="ms-map-chevron" aria-hidden="true">⌄</span></summary>
-        <div class="ms-map-copy"><span class="ms-map-eyebrow">LÖYDÄ OMA KOHTEESI</span><h2>Suomi, maakunta kerrallaan.</h2><p>Napauta karttaa ja löydä kunnat sekä matkavinkit.</p></div>
+        <div class="ms-map-copy"><span class="ms-map-eyebrow">LÖYDÄ OMA KOHTEESI</span><h2>Suomi, maakunta kerrallaan.</h2><p>Valitse maakunta kartalta tai napauta listasta kuntaa — vastaava maakunta korostuu kartalla.</p></div>
         <div class="ms-map-viewport">
           <div class="ms-map-stage">
             <div class="ms-map-stage-head"><span class="ms-map-stage-kicker">SUOMEN MATKAKARTTA</span><span class="ms-map-count">19 maakuntaa</span></div>
@@ -110,7 +110,11 @@
              <div class="ms-map-stage-foot" aria-hidden="true"><span class="ms-map-foot-line"></span> MATKAILU SUOMESSA <span class="ms-map-foot-line"></span></div>
           </div>
         </div>
-        <div class="ms-map-selection" aria-live="polite" aria-atomic="true"><span class="ms-map-selection-icon" aria-hidden="true">⌖</span><span class="ms-map-selection-text"><strong id="ms-map-selected-region">Valitse maakunta kartalta</strong><small id="ms-map-selected-hint">Avaa kunnat ja alueen matkavinkit</small></span><span class="ms-map-selection-arrow" aria-hidden="true">↗</span></div>
+        <div class="ms-map-selection" aria-live="polite" aria-atomic="true"><span class="ms-map-selection-icon" aria-hidden="true">⌖</span><span class="ms-map-selection-text"><strong id="ms-map-selected-region">Valitse maakunta kartalta</strong><small id="ms-map-selected-hint">Kartta ja maakuntalista käyttävät samoja värejä</small></span><span class="ms-map-selection-arrow" aria-hidden="true">↗</span></div>
+        <div class="ms-selected-actions" id="ms-selected-actions" hidden>
+          <a id="ms-selected-guide" class="ms-selected-guide" href="#">Avaa kunnan matkaopas ↗</a>
+          <button type="button" id="ms-back-to-towns" class="ms-back-to-towns">Takaisin kuntalistaan ↓</button>
+        </div>
       </details>
     </section>
     <section class="ms-regions-results" aria-label="Maakuntien kuntaluettelot">
