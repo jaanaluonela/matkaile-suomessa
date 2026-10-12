@@ -1,0 +1,41 @@
+MATKAILU SUOMESSA — LEIRINTÄALUEET JA MATKAPARKIT 2026
+Päivitetty 12.10.2026.
+
+KOOSTE
+- Leirintäalueet sisältävät aiemman 131 kohteen listan, josta poistettiin Kainuun Meri: hakemiston kuvaus koski lähinnä mökkejä/loma-asuntoja eikä matkailuajoneuvopaikkoja vahvistettu.
+- Leirintäalueita täydennettiin muilla Camping.fi:n luettelossa näkyvillä kohteilla.
+- Matkaparkkeja lisättiin Matkaparkki.comin julkisista hakemistoista, kesän 2025 julkaistuista uusista kohteista ja ajantasaisesta palveluluettelosta.
+- Koko Suomen jokaiselle 19 maakunnalle löytyy kohteita, mutta tämä EI ole kaikkien Suomessa olevien matkaparkkien täydellinen rekisteri; Matkaparkki-palvelun nykyinen hakemisto sisältää noin 298 matkailuautoille sopivaa kohdetta.
+- Saman alueen vaihtoehtoiset paikkatyypit on pyritty yhdistämään; vahingossa monistettuja kohteita ja testikohteita on rajattu pois.
+
+AUKIOLO
+- Ympärivuotinen: vuoden 2026 julkaistussa luettelossa 1.1.–31.12., mutta palvelujen ja matkailuajoneuvopaikkojen talvinen toiminta varmistettava.
+- Kausialue: tiedossa olevat 2026 alku- ja loppupäivämäärät. Näyttö arvioidaan valitun matkapäivän mukaan.
+- Tarkista aukiolo: ei vahvistettua 2026 kausitietoa, joten ei esitetä varmasti avoimena.
+- Hakemistossa suljettu: kohde nimenomaisesti merkitty suljetuksi ilman uskottavaa avautumispäivää.
+- Ounaskoski Camping Rovaniemellä: 1.10.–22.11.2026 suljettu toimijan oman ilmoituksen mukaan. Talvikaudella matkailuajoneuvopaikkoja on rajoitetusti.
+- Lempäälän Moision ja Kuljun koulupihaparkkien julkaistu kausi 8.6.–31.7.2026; ei pidä merkitä ympärivuotisiksi.
+- Ähtäri Camping: ympärivuotiset mökit eivät yksin vahvista ympärivuotisia matkailuajoneuvopaikkoja.
+- Kainuun Meri poistettiin leirintäalueiden yöpaikkalistasta, koska matkailuajoneuvopaikkaa ei voitu vahvistaa.
+
+RAJAUKSET
+- Ei reaaliaikainen saatavuus tai varaustilanne.
+- Matkaparkki.comin varattavat ajankohdat, palvelut, hinnat, osoitteet ja sesongit voivat muuttua. Matkaparkkien kausitiedot ovat suurelta osin avoinna varmistettavaksi.
+- Vuoden 2027 aukioloja ei vielä ole vahvistettu.
+- Aiempi 131-paikkainen luettelo ja uudet hakemistot eivät takaa, että kaikkien toimijoiden tiedot olisivat täydellisiä tai että kaikki 2026 kausitiedot olisivat tarkistettu toimijalta.
+
+TIEDOSTOT
+- MatkailuSuomessa_yopaikat_koko_Suomi_2026.html – itsenäinen mobiilisivu, haku, maakunnat, kunnat, päivä, leirintä-/matkaparkkivalinnat
+- MatkailuSuomessa_yopaikat_koko_Suomi_2026.csv – puolipiste-eroteltu UTF-8, kauden tiedot ja lähteet
+- MatkailuSuomessa_yopaikat_koko_Suomi_2026.json – rakenteinen aineisto sovellusintegraatioon
+
+TÄRKEÄÄ: Tämä ZIP on itsenäinen aineistopaketti, ei olemassa olevan Matkailu Suomessa -sovelluksen asennuspaketti. Sovelluksen nykyinen lähde-ZIP tarvitaan tietojen yhdistämiseen ja vanhojen rivien tuplien välttämiseen.
+
+Lähteet:
+https://camping.fi/
+https://camping.fi/luokitellut-leirintaalueet-2023/
+https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+https://matkaparkki.com/matkaparkit/
+https://app.matkaparkki.com/matkaparkit
+https://matkaparkki.com/2025/06/16/kesalla-2025-avautuu-uusia-matkaparkkeja-katso-lista-ja-sijainnit/
+https://www.ounaskoski-camping-rovaniemi.com/yhteystiedot/
