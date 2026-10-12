@@ -1,0 +1,34 @@
+MATKAILU SUOMESSA — V277, PYSÄHDY MATKALLA: 29 TARKISTETTUA KOHDETTA
+===================================================================
+
+Pieni v276:n päälle asennettava päivitys GitHub-repositorion JUUREEN:
+
+1. pysahdy-matkalla.html      (korvaa aiempi)
+2. pysahdy-v277.js           (lisää uusi)
+3. pysahdy-v277.css          (lisää uusi)
+4. pysahdy-kohteet-v277.js   (lisää uusi)
+
+Älä korvaa muita sivuja tai poista aiempia tiedostoja. Uusi sivu käyttää
+edelleen siteen nykyisiä lähdetiedostoja nearby-data-v218.js,
+kayntikohteet-data-v230.js sekä navigation-v191.css.
+
+Sisältö:
+- 13 varmistettua karavaanaripalvelujen kohdetta (vesi, WC/harmaavesi, paikat)
+- 16 lastenkohdetta (leikkipaikat, kotieläinpihat, taukopaikat)
+- Tarkenteet ryhmien sisällä (vesi/tyhjennys/paikat; leikki/eläimet/tauko)
+- Osoitteet, viralliset lisätietolinkit, käyttörajoitukset ja sesonkihuomiot
+- Tuuri, Töysä, Keskinen ja Onnela löytyvät Onnelan tekstin haulla
+- Nykyiset muut ryhmät pysyvät ennallaan, Koko Suomi -haku toimii
+- Ei vahvistamatonta "avoinna nyt" -merkintää eikä väitettä maksuttomasta huollosta
+
+PYSÄHDY MATKALLA -SIVUSTON TESTAUS:
+/pysahdy-matkalla.html?ryhma=caravan&haku=T%C3%B6ys%C3%A4
+/pysahdy-matkalla.html?ryhma=caravan&tarkenne=water
+/pysahdy-matkalla.html?ryhma=kids&tarkenne=animals
+
+VANHAT JS/CSS -versiot (v276) voi jättää palvelimelle, mutta v277 ei käytä niitä.
+
+Huom: Tämä ei ole Suomen kaikkien huoltopisteiden rekisteri. Joissakin
+leirintäalueissa palvelut on tarkoitettu majoittujille tai maksullisia.
+Kaikki osoitteet ja palvelut on tarkistettu julkisista kohdesivuista lokakuussa 2026.
+Linkit löytyvät kohdetietueista v277.js-aineistotiedostossa.
