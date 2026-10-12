@@ -1,0 +1,18 @@
+MATKAILU SUOMESSA – V274: SYKSY JA TALVI POIS ETUSIVULTA
+
+Pieni päivitys, ei koko sivuston vaihtoa.
+
+Sisältö:
+- index.html: Poistettu etusivulta erillinen Syksyn kohteet / Talven kohteet -osio.
+- kayntikohteet.html: Syksyn ja talven vinkit löytyvät Näe ja koe -sivulta. Samalla säilyvät ravintola- ja kahvilalinkit.
+- vuodenajat-v267.css: Sisältää myös aiemman v273 tietokoneleveyskorjauksen.
+
+ASENNUS:
+1. Pura tämä ZIP.
+2. Lataa tiedostot GitHub-projektin samaan kansioon kuin index.html.
+3. Korvaa GitHubin samannimiset tiedostot. Älä poista muita tiedostoja.
+4. Sivuston julkaistua muutokset päivitä selain tarvittaessa Ctrl+F5.
+
+Muuta:
+- syksylla.html ja talvella.html jäävät ennalleen.
+- Pysähdy matkalla ja Omat matkat -linkkeihin ei puututa.
