@@ -1,0 +1,7 @@
+POHJOIS-POHJANMAA – v286
+
+Päivitys olemassa olevan sivuston päälle. Pura ZIP ja kopioi kaikki tiedostot sivuston juurikansioon samannimisten päälle. Tämä ei ole koko sivusto.
+
+25 uutta kuntasivua, kaikki 30 kuntaa linkitetty maakunnan oppaaseen ja maakunnat.html:n kuntahakuun. Viiden aiemman oppaan sisältö säilytetty; Kuusamo ja Ruka v266 säilytetty. Maakuntakartan v285 värit ja kohoaminen säilyvät.
+
+Mukana vain sisältöpäivitys ja kuntalinkitys. Leirintäaluehaun palvelusuodattimia tai palvelutietokantaa ei muuteta.
