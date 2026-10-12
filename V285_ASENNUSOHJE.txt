@@ -1,0 +1,20 @@
+MATKAILU SUOMESSA – V285: RAUHALLISEMPI MAAKUNTAKARTTA
+
+Pieni päivityspaketti v284-version päälle (ei korvaa koko sivustoa).
+
+1. Pura ZIP ja lataa nämä 4 tiedostoa GitHub-sivuston pääkansioon:
+   - maakunnat.html  (korvaa vanha)
+   - maakuntakartta-v285.css (uusi)
+   - maakuntakartta-v285.js  (uusi)
+   - v285-maakunnat.js       (uusi)
+2. Säilytä kaikki muut sivuston tiedostot (mm. v256-maakunnat.css ja suomi-kunnat-v253.js).
+
+Muutokset:
+- 19 maakuntaa käyttävät vain neljää toisiinsa sopivaa vihreän sävyä.
+- Kartan värit ovat samat kuin maakuntalistassa.
+- Hiiri maakunnan päälle: maakunta nousee kevyesti ja siihen ilmestyy varjo.
+- Maakuntien nimien vieressä ei enää ole erillisiä värillisiä valintapisteitä.
+- Kuntaa listasta painamalla sen maakunta korostuu kartalla kuten aiemmin.
+- Kosketusnäytöllä valinta toimii ilman hiiriefektiä.
+
+Kartta on havainnekuva maakunnista, ei virallinen rajakartta.
