@@ -1,0 +1,24 @@
+MATKAILE SUOMESSA – v295 SFC-HAUN KORJAUS, KAIKKI MAAKUNNAT
+
+OIRE: Etelä-Savo + Näytä vain SFC-alueet = 0 / 4 kohdetta.
+Oikein: v292-tietopaketissa Etelä-Savon SFC-alueina ovat Etuniemi (Hirvensalmi)
+ja Laamalansaari (Mikkeli). Niiden kuuluu löytyä SFC-haulla.
+
+GITHUB-PÄIVITYS
+1. Pura ZIP koneelle.
+2. Vie nämä KOLME tiedostoa GitHub-repositorion pääkansioon (sama, jossa index.html):
+   * leirintaalueet.html       (korvaa vanha)
+   * sfc-alueet-v295.js      (uusi, sisältää KAIKKI 58 SFC-aluetta ja korjauksen)
+   * sfc-kohde-v292.html     (korvaa vanha, jotta kohteen tiedot avautuvat)
+3. Commit changes. Odota GitHub Pages -julkaisua ja päivitä leirintäaluehaku Ctrl+F5
+   tai avaa yksityinen selainikkuna.
+4. Testaa maakunta Etelä-Savo + SFC-rasti: Etuniemi ja Laamalansaari.
+5. Testaa myös Etelä-Karjala + SFC-rasti: Palvaanjärvi.
+6. Testaa valitse Suomi + SFC-rasti: valtakunnallinen luettelo.
+
+HUOM:
+- Uuden tiedoston v295 ansiosta selain ei käytä vanhaan versioon jäänyttä SFC-tiedostoa.
+- Paketti toimii ilman v292:n ja v293:n vanhoja SFC-hakuskriptejä. Niitä ei tarvitse poistaa GitHubista.
+- Muut caravan-/kuntatiedostot, matkaparkit, Järvenpää ja etusivu eivät muutu.
+- Tässä ei ole lisätty vahvistamattomia palveluja tai ympärivuotista aukioloa.
+- Lataa yksittäiset puretut tiedostot, EI ZIP-tiedostoa sellaisenaan.
