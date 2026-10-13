@@ -1,0 +1,162 @@
+/* Matkaile Suomessa v290 – hyväksytty logo ja tiivis, selkeä etusivu.
+   Vaikutus rajattu vain etusivulle. Muilla sivuilla ei tyylimuutoksia. */
+body[data-home="true"] .home-shell {
+  background:#fafbf8;
+}
+body[data-home="true"] .home-shell > .hero {
+  min-height:0!important;
+  height:auto!important;
+  display:block!important;
+  padding:15px!important;
+  border-radius:24px!important;
+  background:#174d40!important;
+  box-shadow:none!important;
+}
+body[data-home="true"] .home-shell > .hero::before,
+body[data-home="true"] .home-shell > .hero::after {display:none!important;}
+body[data-home="true"] .hero-content {width:100%;min-width:0;}
+body[data-home="true"] .home-brand-banner-v290 {
+  display:block;
+  width:100%;
+  max-width:900px;
+  height:auto;
+  aspect-ratio:1500 / 467;
+  object-fit:contain;
+  margin:0 auto;
+}
+body[data-home="true"] .home-accessible-title-v290 {
+  position:absolute!important;
+  width:1px!important;height:1px!important;
+  padding:0!important;margin:-1px!important;
+  overflow:hidden!important;clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;border:0!important;
+}
+body[data-home="true"] .hero p.home-hero-lead-v290 {
+  max-width:none;
+  margin:9px 0 5px!important;
+  font:600 14px/1.35 system-ui,-apple-system,sans-serif!important;
+  text-align:center;
+  color:#eef7f1!important;
+}
+body[data-home="true"] .hero-stats {
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:6px 15px!important;
+  margin:0!important;
+}
+body[data-home="true"] .hero-stats span {
+  padding:0!important;
+  font-size:12px!important;
+  font-weight:650!important;
+  line-height:1.35;
+  color:#e3f1e9;
+  background:none!important;
+  border:none!important;
+  white-space:nowrap;
+}
+body[data-home="true"] .home-explore-v251 {
+  margin-top:14px!important;
+  padding:15px 17px!important;
+  border-radius:19px!important;
+  box-shadow:none!important;
+}
+body[data-home="true"] .home-explore-v251 h2 {
+  margin:0 0 3px!important;
+  font:800 clamp(21px,4vw,25px)/1.17 system-ui,-apple-system,sans-serif!important;
+  letter-spacing:-.028em!important;
+}
+body[data-home="true"] .home-explore-top-v251 p.home-search-intro-v290 {
+  margin:0 0 11px!important;
+  font-size:13px!important;
+  line-height:1.3!important;
+}
+body[data-home="true"] .home-explore-label-v251.home-search-label-v290 {
+  position:absolute!important;
+  width:1px!important;height:1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  padding:0!important;
+  border:0!important;
+  margin:-1px!important;
+}
+body[data-home="true"] .home-explore-search-v251 input {
+  min-height:48px!important;
+  height:48px!important;
+  box-shadow:none!important;
+  border-radius:13px!important;
+  padding:0 44px 0 14px!important;
+}
+body[data-home="true"] .home-explore-search-v251 input::placeholder {
+  color:#789184;
+  opacity:1;
+}
+body[data-home="true"] .home-primary-links-v290 {
+  margin-top:13px!important;
+}
+body[data-home="true"] .menu.home-choices-v212 {
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:10px!important;
+}
+body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) {
+  min-width:0!important;
+  min-height:126px!important;
+  padding:15px!important;
+  gap:5px!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  border-radius:19px!important;
+  box-shadow:none!important;
+}
+body[data-home="true"] .home-shell .menu.home-choices-v212 > a .choice-icon {
+  font-size:27px!important;
+}
+body[data-home="true"] .home-shell .menu.home-choices-v212 > a strong {
+  font-size:clamp(15px,2vw,20px)!important;
+  line-height:1.2!important;
+  font-weight:800!important;
+}
+body[data-home="true"] .home-shell .menu.home-choices-v212 > a .choice-arrow {
+  margin-top:2px!important;
+}
+body[data-home="true"] .home-primary-links-v290 + .v244-memories {margin-top:14px!important;}
+body[data-home="true"] .search-results {position:relative;z-index:10;}
+body[data-home="true"] #place-search:focus-visible,
+body[data-home="true"] .home-primary-links-v290 a:focus-visible {
+  outline:3px solid #f87913!important;
+  outline-offset:3px!important;
+}
+@media (max-width:599px) {
+  body[data-home="true"] .home-shell {
+    padding:10px 12px calc(102px + env(safe-area-inset-bottom,0px))!important;
+  }
+  body[data-home="true"] .home-shell > .hero {
+    padding:10px!important;
+    border-radius:21px!important;
+  }
+  body[data-home="true"] .hero p.home-hero-lead-v290 {margin:6px 0 3px!important;font-size:12px!important;}
+  body[data-home="true"] .hero-stats span {font-size:11px!important;}
+  body[data-home="true"] .home-explore-v251 {padding:13px 14px!important;}
+  body[data-home="true"] .home-explore-top-v251 p.home-search-intro-v290 {margin-bottom:9px!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) {
+    min-height:111px!important;
+    padding:12px 11px!important;
+    gap:4px!important;
+    border-radius:16px!important;
+  }
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) .choice-icon {font-size:27px!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) strong {font-size:clamp(14px,4vw,17px)!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) small,
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) .choice-arrow {display:none!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a#travel-stop-v268 {
+    min-height:77px!important;
+    padding:12px!important;
+  }
+}
+@media (min-width:900px) {
+  body[data-home="true"] .home-shell > .hero {padding:22px 30px!important;}
+  body[data-home="true"] .hero p.home-hero-lead-v290 {font-size:16px!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 {grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+  body[data-home="true"] .home-shell .menu.home-choices-v212 > a:not(#travel-stop-v268) {min-height:148px!important;}
+}

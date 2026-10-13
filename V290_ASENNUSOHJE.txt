@@ -1,0 +1,18 @@
+MATKAILE SUOMESSA v290 – LOGO JA ETUSIVU + v289 YÖPYMISHAKU
+
+GitHubiin lisätään kaikki tämän ZIP-paketin 7 tiedostoa repositorion PÄÄHAKEMISTOON
+(samaan kansioon jossa nykyinen index.html on). Korvaa samannimiset tiedostot.
+Älä poista sivuston muita tiedostoja tai kansioita.
+
+Päivitys:
+- Hyväksytty Matkaile Suomessa -logo: matkailuauto ja järvimaisema.
+- Alaotsikko Vapaus kulkea · Ilo löytää käsialalla, pääotsikko selkeä.
+- Etusivun yläosa pienempi mobiilissa; haku ja 4 valintaa näkyvät aikaisemmin.
+- Päävalinnat: Paikkakunnat / Leirintäalueet / Matkaparkit / Lähellä minua.
+- Muut etusivun osiot, maakuntarajaus ja alavalikko jäävät.
+- Mukana aiemman v289-paketin Tuuri–Onnela-hakukorjaus yöpymissivuille.
+
+Latauksen jälkeen päivitä selain; tarvittaessa avaa GitHub Pages -sivu
+uudelleen tai päivitä selaimen välimuisti.
+
+Huom. Päivitys on luotu tiedostoihin, sitä ei ole julkaistu automaattisesti GitHubiin.
