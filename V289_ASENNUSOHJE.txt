@@ -1,0 +1,21 @@
+MATKAILE SUOMESSA — v289 YÖPYMISHAKU KORJATTU
+
+KORJAA: Kun kirjoitat esim. TUURI leirintäaluehaun tai matkaparkkihaun
+hakukenttään, osumat aukeavat HETI hakukentän alle. Maakuntaa/kunnan
+valintaa ei enää vaadita. Karavaanarialue Onnela löytyy myös nimillä
+Onnela, Tuuri, Töysä ja Alavus, jos aiempi v279 data on asennettu.
+
+ASENNUS: pura ZIP ja lataa sen kaikki 4 tiedostoa GitHubin
+sivuston juurikansioon, index.html:n viereen. Korvaa kaksi samannimistä
+HTML-sivua. Muut sivuston tiedostot säilytetään ennallaan.
+
+Paketin HTML-pohjat ovat viimeisimmästä käytössä olleesta v288
+UUSIMAA-päivityspaketista. Jos olet ehtinyt muokata leirintaalueet.html-
+tai matkaparkit.html-tiedostoa tämän jälkeen, yhdistä pelkät
+v289.js- ja v289.css-viittaukset uusimpiin sivuihisi.
+
+Haku tukee osumia kaikista sivuston ladatuista caravanPlaces-kohteista,
+myös kun hakutulosten vanha korttilista on aluksi tyhjä.
+Vanha alue-/kuntahaku ja palvelusuodatus jätetään käyttöön.
+
+Tämä on pieni PÄIVITYS, ei koko sivuston asennus.

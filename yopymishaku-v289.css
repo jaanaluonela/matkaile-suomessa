@@ -1,0 +1,13 @@
+/* V289: heti hakukentän alle aukeava hakutuloslista. */
+.ms289-results[hidden] { display: none !important; }
+.ms289-results { margin: 14px 0 4px; background:#f7faf7; border:1px solid #bad4c7; border-radius:17px; padding:14px; color:#164b3d; }
+.ms289-title { font-size:1.08rem !important; line-height:1.3; margin:0 0 6px; color:#154b3c; }
+.ms289-summary { margin:0 0 11px; color:#47685c; font-size:.92rem; }
+.ms289-note { margin:9px 0; color:#426458; font-size:.94rem; }
+.ms289-list { display:grid; gap:9px; }
+.ms289-item { display:flex; flex-direction:column; gap:3px; padding:12px 13px; background:white; border:1px solid #d1e1d8; border-radius:12px; color:#194d3e; text-decoration:none; overflow-wrap:anywhere; }
+.ms289-item strong { font-size:1rem; line-height:1.25; }
+.ms289-item span { color:#395f50; font-size:.9rem; }
+.ms289-item small { color:#557266; font-size:.82rem; line-height:1.4; }
+.ms289-item:focus-visible,.ms289-item:hover { border-color:#1c765e; background:#f2f9f5; }
+@media(max-width:600px) { .ms289-results { padding:11px; margin-top:11px; } .ms289-item { padding:11px; } }
