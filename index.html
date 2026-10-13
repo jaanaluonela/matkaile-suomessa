@@ -389,7 +389,7 @@
   <link rel="stylesheet" href="pysahdy-v268.css?v=268">
   <script defer src="pysahdy-v268.js?v=268"></script>
   <link rel="preload" href="matkaile-suomessa-logo-v296.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="etusivu-v291.css?v=291"><link rel="stylesheet" href="etusivu-v296.css?v=296">
+  <link rel="stylesheet" href="etusivu-v291.css?v=291"><link rel="stylesheet" href="etusivu-v296.css?v=296"><link rel="stylesheet" href="ruukkikylat-v297.css?v=297">
 </head>
 <body data-home="true">
   <main class="home-shell">
@@ -441,6 +441,7 @@
         <a href="matkaparkit.html">🅿️ Matkaparkit</a>
         <a href="lahella-minua.html">📍 Lähellä minua</a>
         <a id="travel-stop-v268" href="pysahdy-matkalla.html" aria-label="Pysähdy matkalla – kahvilat, ravintolat ja kiinnostavat taukopaikat">🚗 Pysähdy matkalla</a>
+        <div class="ms-ruukki-entry-v297" id="ms-ruukki-entry-v297"><a href="ruukkikylat.html" aria-label="Nähtävää – Ruukkikylät">🏭 <strong>Ruukkikylät</strong><span>Historialliset ruukit ja kylät</span><span class="ms-ruukki-arrow-v297" aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -452,6 +453,22 @@
 
   <script>
     const places = [
+      {"name": "Ruukkikylät", "meta": "Nähtävää · Historialliset ruukit", "url": "ruukkikylat.html"},
+      {"name": "Fiskarsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#fiskars"},
+      {"name": "Billnäsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#billnas"},
+      {"name": "Mustion ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#mustio"},
+      {"name": "Fagervikin ruukki", "meta": "Inkoo · Ruukkikylä", "url": "ruukkikylat.html#fagervik"},
+      {"name": "Strömforsin ruukki", "meta": "Loviisa · Ruukkikylä", "url": "ruukkikylat.html#stromfors"},
+      {"name": "Högforsin ruukki", "meta": "Karkkila · Ruukkikylä", "url": "ruukkikylat.html#hogfors"},
+      {"name": "Mathildedalin ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#mathildedal"},
+      {"name": "Teijon ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#teijo"},
+      {"name": "Kirjakkalan ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#kirjakkala"},
+      {"name": "Taalintehtaan ruukkikylä", "meta": "Kemiönsaari · Ruukkikylä", "url": "ruukkikylat.html#taalintehdas"},
+      {"name": "Leineperin ruukki", "meta": "Ulvila · Ruukkikylä", "url": "ruukkikylat.html#leineperi"},
+      {"name": "Noormarkun ruukki", "meta": "Pori · Ruukkikylä", "url": "ruukkikylat.html#noormarkku"},
+      {"name": "Kauttuan Ruukinpuisto", "meta": "Eura · Ruukkikylä", "url": "ruukkikylat.html#kauttua"},
+      {"name": "Verlan tehdaskylä", "meta": "Kouvola · Ruukkikylä", "url": "ruukkikylat.html#verla"},
+      {"name": "Möhkön ruukki", "meta": "Ilomantsi · Ruukkikylä", "url": "ruukkikylat.html#mohko"},
       {name:"Tuuri",meta:"Alavus · Keskisen Kyläkauppa ja Onnela",url:"leirintaalueet.html?haku=Tuuri"},
       {name:"Onnela – Keskisen Kyläkauppa",meta:"Tuuri · Alavus · karavaanialue",url:"leirintaalueet.html?haku=Onnela"},
       {name:"Töysä",meta:"Alavus · Tuuri ja lähialueet",url:"leirintaalueet.html?haku=Töysä"},
@@ -504,6 +521,7 @@
       }
     });
   </script>
+<script defer src="ruukkikylat-v297.js?v=297"></script>
 <script>
 // v245: näkyvä yhteys etusivun Omat matkat -kortin ja matkapäiväkirjan välillä.
 (function () {

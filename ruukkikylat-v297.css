@@ -1,0 +1,7 @@
+/* v297: ruukkikylät näkyvät Nähtävää / Näe ja koe -valinnan alla */
+body[data-home="true"] .ms-ruukki-entry-v297{grid-column:1/-1;width:100%;margin:0 0 2px;min-width:0}
+body[data-home="true"] .ms-ruukki-entry-v297 > a{display:flex!important;align-items:center!important;gap:11px!important;min-height:66px!important;padding:14px 16px!important;text-decoration:none!important;color:#1b5947!important;background:#f1f4ea!important;border:1px solid #d9e7dc!important;border-radius:15px!important;box-shadow:none!important;font-size:17px!important}
+body[data-home="true"] .ms-ruukki-entry-v297 > a strong{font-size:16px;font-weight:850}
+body[data-home="true"] .ms-ruukki-entry-v297 > a > span:not(.ms-ruukki-arrow-v297){font-size:12px;font-weight:500;color:#607469;white-space:normal}
+body[data-home="true"] .ms-ruukki-entry-v297 .ms-ruukki-arrow-v297{margin-left:auto;font-size:18px}
+@media(max-width:540px){body[data-home="true"] .ms-ruukki-entry-v297 > a{min-height:58px!important;padding:12px 13px!important;gap:7px!important}body[data-home="true"] .ms-ruukki-entry-v297 > a > span:not(.ms-ruukki-arrow-v297){font-size:11px}}

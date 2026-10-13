@@ -1,0 +1,31 @@
+MATKAILE SUOMESSA v297 — RUUKKIKYLÄT (13.10.2026)
+
+UUTTA
+- Ruukkikylät Nähtävää / Näe ja koe -osion alavalintana etusivulla.
+- Oma ruukkikylat.html-kohdesivu, mukana 15 kohdetta.
+- Haku ruukkikylän nimellä ja paikkakunnalla sekä maakuntasuodatus.
+- Kohdekortit: esittely, lähdesivun linkki ja ajo-ohjeet.
+- Etusivun hakuehdotuksiin lisätty ruukkikylät nimellä.
+- v296:n logo, SFC, leirintäalueet ja matkaparkit säilyvät muuttumattomina.
+
+ASENNUS GITHUBIIN
+1. Pura tämä ZIP.
+2. GitHubissa vie kaikki sisällä olevat tiedostot nykyisen sivuston pääkansioon,
+   samaan kuin index.html. Korvaa samannimiset tiedostot.
+3. Älä poista muita tiedostoja GitHubista. Tämä on osittainen päivityspaketti.
+4. Commit changes, odota GitHub Pagesin päivitystä ja päivitä selain.
+5. Tarkista ensin Nähtävää / Näe ja koe -> Ruukkikylät sekä ruukkikylat.html.
+
+HUOM: Päivitetty index.html pohjautuu viimeisimpään v296-pakettiin.
+Jos GitHubissa oleva index.html on jo muuttunut v296:n jälkeen,
+muutokset on yhdistettävä ettei uudempi sisältö korvaudu.
+
+Tietolähteitä:
+https://www.visitfinland.com/en/articles/discover-finlands-ironwork-villages/
+https://fiskarsvillage.fi/
+https://visitmathildedal.fi/
+https://www.leineperinruukki.fi/
+https://www.verla.fi/fi/
+https://visitilomantsi.fi/p/43/mohkon-ruukkikyla
+https://visitkimitoon.johku.com/fi_FI/saariston-uniikit-kylat-ja-kayntikohteet/taalintehtaan-ruukkikyla
+Kohteiden palvelut ja aukioloajat voivat muuttua.
