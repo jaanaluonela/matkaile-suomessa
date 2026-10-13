@@ -1,0 +1,2 @@
+/* v296: Etusivun nimitäsmäytys leirintäalueiden ja matkaparkkien hakukenttään. */
+(()=>{'use strict';const q=new URLSearchParams(location.search).get('haku');if(!q)return;function ready(){const el=document.getElementById('v243-stay-search');if(!el)return;el.value=q;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{ready();setTimeout(ready,80)},{once:true});else ready();})();

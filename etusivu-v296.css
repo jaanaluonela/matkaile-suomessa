@@ -1,0 +1,4 @@
+/* v296: etusivun uusi kehyksetön logo ja ohuet korttien reunat */
+body[data-home="true"] .home-brand-banner-v290{display:block;width:100%;max-width:900px;height:auto;object-fit:contain;border:0!important;box-shadow:none!important;background:transparent!important}
+body[data-home="true"] .home-shell>.hero{border:0!important;box-shadow:none!important;background:transparent!important}
+body[data-home="true"] .home-primary-links-v290 .menu a{border-width:1px!important}

@@ -1,0 +1,28 @@
+MATKAILE SUOMESSA – v296 (13.10.2026)
+
+MUKANA
+- Uusi logo ilman vanhaa 30 px paksua vihreää kehystä. Hyväksytty otsikko ja maisema säilyvät.
+- Leirintäalue- ja matkaparkkisivujen päivitykset, uusi kohdetietojen lisäaineisto.
+- 43 Camping.fi:n vuoden 2026 luettelosta tarkistettua leirintäaluekohdetta.
+- 17 Matkaparkki.com-luettelosta tarkistettua matkaparkkikohdetta.
+- Kohteita ei lisätä kahtena, jos sama paikka on jo sivuston tiedoissa.
+- Uusi erillinen kohdesivu ja linkki ajoreittiin/tiedon lähteeseen.
+- Etusivun nimihaussa myös uusien kohteiden nimet; siirtää hakusanan yöpymissivulle.
+- Vanha SFC v295 -korjaus ja 58 SFC-aluetta säilyvät; samoin v274:n 118 matkaparkkikohdetta.
+- Matkaparkki- ja leirintäalueiden palveluita ei arvata, vaan vahvistamattomat jäävät tyhjiksi.
+- Ympärivuotisuutta ei lisätä vain 2026 kausiluettelon perusteella.
+
+ASENNUS GITHUBIIN
+1. Pura ZIP koneellesi.
+2. Vie ZIP:n sisällä olevat tiedostot GitHub-repositorion PÄÄKANSIOON, samaan jossa index.html.
+   GitHubissa Add file > Upload files. Korvaa samannimiset. Älä poista muita tiedostoja.
+3. Commit changes, odota Pages-julkaisun valmistumista ja päivitä selain (Ctrl+F5).
+4. Tarkista etusivu (logo), leirintaalueet.html (SFC-etelä-Savo edelleen toimii),
+   matkaparkit.html sekä haku esimerkiksi Heinäsaari, Väärninsaari, Molpe Caravan.
+
+HUOMIO
+- GitHubiin ei tehdä suoraa muutosta tästä keskustelusta. Paketti pitää julkaista itse.
+- Tämä on PÄIVITYSPAKETTI, ei koko sivusto. Nykyiset caravan-data.js, styles.css,
+  valikot-v200.js jne. säilytetään GitHubissa.
+- Vuoden 2026 luettelon ilmoittamat aukiolokaudet eivät ole reaaliaikaista aukiolotietoa.
+- Lähteet: https://camping.fi/luokitellut-leirintaalueet-2023/ sekä https://matkaparkki.com/matkaparkit/.
