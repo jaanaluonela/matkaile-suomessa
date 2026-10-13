@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-labelledby="title">
+<title id="title">Oma sijainti kartalla</title>
+<defs><filter id="s" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#3d5735" flood-opacity=".16"/></filter></defs>
+<ellipse cx="130" cy="134" rx="99" ry="18" fill="#ecf2dc"/>
+<ellipse cx="130" cy="132" rx="82" ry="24" fill="none" stroke="#a9d18d" stroke-width="9"/><ellipse cx="130" cy="132" rx="54" ry="16" fill="none" stroke="#b4d79b" stroke-width="8"/><ellipse cx="130" cy="132" rx="24" ry="7" fill="#7cbb6a"/>
+<path d="M36 121q12-20 29-10 9-21 23-8" fill="none" stroke="#98c384" stroke-width="5" stroke-linecap="round"/>
+<path d="M210 118q10-17 22-7" fill="none" stroke="#98c384" stroke-width="5" stroke-linecap="round"/>
+<path filter="url(#s)" d="M130 9c-30 0-54 24-54 53 0 37 54 79 54 79s54-42 54-79c0-29-24-53-54-53Z" fill="#f35335"/><circle cx="130" cy="63" r="22" fill="#ffffff"/>
+</svg>

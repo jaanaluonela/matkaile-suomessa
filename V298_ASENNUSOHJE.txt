@@ -1,24 +1,24 @@
-MATKAILE SUOMESSA v298 — NÄE JA KOE -SIVUN UUDISTUS (13.10.2026)
+MATKAILE SUOMESSA v298 – NÄE JA KOE (13.10.2026)
 
-MUUTOKSET
-- Syksyn nähtävää- ja Talven nähtävää -painikkeet poistettu Näe ja koe -sivulta.
-- Sivulle lisätty kaksi selkeää nostoa: Ruukkikylät ja Kahvilat ja ravintolat.
-- Haku on selkeämpi: kohdetyyppi, vapaa nimihaku, maakunta ja paikkakunta.
-- Kohdetyypit: Kaikki, Nähtävyydet, Luonto ja retket sekä Taukopaikat.
-- Tuloksia näytetään ensin 8. Näytä lisää -painike tuo 12 lisää kerrallaan.
-- Tyhjennä rajaukset -painike palauttaa koko Suomen kohteet.
-- Alue- ja nimihaku toimivat yhdessä, myös vanhat ?maakunta= ja ?kunta= -linkit säilyvät.
-- Suunniteltu erityisesti puhelimen näytölle. Ei paksuja reunuksia.
-- Luonto ja retket -rajaus perustuu nykyisten kohdetietojen nimen ja tarkkojen luontotermien avainsanoihin, koska alkuperäisessä aineistossa tyypit ovat vain "sight" ja "stop".
+KORJAUKSET
+- kayntikohteet.html: poistettu Syksyn nähtävää ja Talven nähtävää -painikkeet.
+- kayntikohteet.html: lisätty näkyvä Ruukkikylät-kategoria Näe ja koe -otsikon alle.
+- index.html: Ruukkikylät näkyvät myös etusivulla; linkki ei katoa, vaikka vanha valikkoskripti rakentaa painikkeet uudestaan.
+- Kohdelistauksen Tutustu-linkeistä poistetaan perässä näkyvä nuoli. Linkit toimivat edelleen.
+- ruukkikylat.html: 15 ruukkikohdetta mukana v297-version mukaisesti.
+- v297:n leirintäalueet, matkaparkit, SFC-tiedot ja logo säilyvät.
 
-GITHUB-ASENNUS
-1. Pura ZIP ensin.
-2. Siirrä tiedostot GitHub-repositorion samaan pääkansioon kuin index.html.
-3. Korvaa vain samannimiset tiedostot. Älä poista muita sivuston tiedostoja.
-4. Tämän paketin kayntikohteet.html, kayntikohteet-v298.css ja kayntikohteet-v298.js päivittävät Näe ja koe -sivun.
-5. Mukana on myös v297:n ruukkikylat.html ja tyylitiedostot, jotta Ruukkikylät-linkki toimii, vaikka ne eivät vielä olisi GitHubissa.
-6. Commit changes. Testaa: kayntikohteet.html, alue- ja nimihaku, kohdetyypit, Näytä lisää ja Ruukkikylät-linkki.
+ASENNA KAIKKI SISÄLLÖT
+1. Pura ZIP.
+2. Lataa KAIKKI tiedostot GitHub-repositorion samaan kansioon missä index.html sijaitsee.
+3. Korvaa samannimiset tiedostot. Älä poista muita projektin tiedostoja.
+4. Paina GitHubissa Commit changes ja anna GitHub Pagesin päivittyä.
+5. Tee puhelimessa sivun päivitys. Jos vanha näkymä jatkuu, kokeile yksityistä välilehteä.
+6. Avaa kayntikohteet.html: näkyvissä Ruukkikylät, mutta ei Syksyn eikä Talven painikkeita.
+7. Tarkista kohdelistan Tutustu-linkit ja ruukkikylat.html.
 
 HUOMAUTUS
-- Tämä on osittainen päivitys; etusivua ja muita kuntasivuja ei korvata.
-- Jos GitHubin kayntikohteet.html on tämän v274-pohjan jälkeen muokattu erikseen, tarkista ensin, ettei omia uudempia muutoksia jää pois.
+Paketti yhdistää v297:n muutokset sekä v274:n viimeisimmän tässä käytettävissä olleen
+kayntikohteet.html-tiedoston. Jos nykyisessä GitHubin kayntikohteet.html-tiedostossa on
+sen jälkeen tehty muita yksilöllisiä muutoksia, ne on yhdistettävä ennen ylikirjoitusta.
+Tämä päivitys ei automaattisesti muuta GitHubin tiedostoja.

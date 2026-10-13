@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-labelledby="title">
+<title id="title">Matkailuvaunu leirintäalueella</title>
+<defs><linearGradient id="rv" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#dce7e6"/></linearGradient><filter id="s" x="-20%" y="-30%" width="150%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#254939" flood-opacity=".17"/></filter></defs>
+<ellipse cx="132" cy="139" rx="122" ry="9" fill="#b7d889" opacity=".8"/>
+<g stroke="#4a8055" stroke-width="3" stroke-linejoin="round">
+<path d="M30 117V37m0 0-22 33h15L9 86h17L7 104h46L34 86h17L37 70h15Z" fill="#397744"/><path d="M224 115V31m0 0-21 33h14l-17 21h17l-20 23h54l-20-23h15l-15-21h14Z" fill="#397744"/>
+<path d="M57 113V59m0 0-16 29h10l-13 18h37L64 88h9Z" fill="#548e57"/><path d="M249 120V72m0 0-13 22h10l-12 19h26l-9-19h8Z" fill="#5c995a"/></g>
+<g filter="url(#s)">
+<path d="M72 68q7-18 24-18h102q17 0 25 20l6 58H69l3-60Z" fill="url(#rv)" stroke="#7e9496" stroke-width="2.5"/>
+<path d="M80 78q2-15 17-15h18v28H78Z" fill="#527b8d"/><path d="M129 63h33v28h-33Z" fill="#527b8d"/><path d="M174 63h30q11 0 12 15l2 13h-44Z" fill="#527b8d"/>
+<path d="M167 96h31v31h-31Z" fill="#eff6f5" stroke="#879da0" stroke-width="2"/><circle cx="192" cy="111" r="2.3" fill="#3d5e63"/>
+<path d="M74 118h151" stroke="#b6c8c5" stroke-width="3"/>
+<circle cx="112" cy="127" r="11" fill="#31454e" stroke="#e1e6e4" stroke-width="3"/><circle cx="112" cy="127" r="3" fill="#b7c9ca"/>
+<path d="M228 125h21m-21-13h5v22" stroke="#56696d" stroke-width="3"/>
+</g>
+<g stroke="#365d5a" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M25 122v15m27-15v15M25 124h27M25 116l8 9m19-9-8 9"/><path d="M58 123h24m-19-2v17m15-17v17"/></g>
+<path d="m21 114 10 3v7H20Z" fill="#2e7c8c"/><path d="m46 114 10 3-1 7H42Z" fill="#2e7c8c"/>
+<path d="M26 142h201" stroke="#7ca66d" stroke-width="3" stroke-linecap="round"/>
+</svg>

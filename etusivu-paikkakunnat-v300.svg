@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 160" role="img" aria-labelledby="title">
+<title id="title">Kartta ja sijaintimerkki</title>
+<defs><linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#eff8ed"/></linearGradient><filter id="sh" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#215545" flood-opacity=".14"/></filter></defs>
+<g filter="url(#sh)" transform="translate(8 16)">
+<path d="M9 31 85 13 161 31 237 14v104l-76 17-76-18L9 135Z" fill="url(#paper)" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/>
+<path d="M16 37 85 21v87l-69 17Z" fill="#b8e3a2"/><path d="M85 21 161 38v88l-76-18Z" fill="#d8edba"/><path d="M161 38 230 23v87l-69 16Z" fill="#b9dfa7"/>
+<path d="M16 74c24-6 24 1 39 11s29 8 30 13v10l-69 17Zm69-37c13 4 23 18 39 17s22-12 37-16v31c-18 2-31 18-45 20-13 3-21-6-31-5Zm76 51c21-8 34-8 47-1l22-12v20l-69 16Z" fill="#75bee7"/>
+<g fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"><path d="m20 64 65 3 76 29 69-47"/><path d="m52 30 23 44-5 40"/><path d="m112 29 8 98"/><path d="m183 32 4 86"/></g>
+<g fill="#ffffff"><circle cx="84" cy="67" r="4"/><circle cx="161" cy="96" r="4"/><circle cx="199" cy="71" r="4"/></g>
+</g>
+<g filter="url(#sh)"><path d="M131 8c-23 0-41 18-41 41 0 28 41 72 41 72s41-44 41-72c0-23-18-41-41-41Z" fill="#f75a34"/><circle cx="131" cy="48" r="16" fill="#ffffff"/></g>
+</svg>

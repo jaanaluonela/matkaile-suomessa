@@ -1,0 +1,25 @@
+MATKAILE SUOMESSA – v300 ETUSIVUN ISOT KUVAKKEET
+13.10.2026
+
+PÄIVITYKSEN SISÄLTÖ
+- Paikkakunnat: iso kartta ja punainen sijaintimerkki.
+- Leirintäalueet: iso matkailuvaunu leirintäalueella, ei telttaa.
+- Matkaparkit: P-merkki, pysäköintiruudut, kuu ja tähdet, ei autoa.
+- Lähellä minua: iso sijaintimerkki vihreällä karttapohjalla.
+- Neljä pääpainiketta mobiilissa 2 x 2, tietokoneella neljä rinnakkain.
+- Painikkeiden vaaleat värit ja reilut koot säilytetty.
+- Alkuperäinen hyväksytty Matkaile Suomessa -logo säilytetty ennallaan.
+- Muut sivut ja niiden sisältö pohjautuvat v298-pakettiin, ja Näe ja koe -valikko v299-päivitykseen.
+
+GITHUB-PÄIVITYS
+1. PURA tämä ZIP koneellesi. Älä lataa pelkkää zip-tiedostoa GitHubiin.
+2. Avaa GitHubissa Matkaile Suomessa -sivuston repositorio.
+3. Lataa ZIPistä puretut tiedostot repositorion JUURIKANSIOON (samaan paikkaan, jossa nykyinen index.html on).
+4. Hyväksy samannimisten tiedostojen korvaaminen ja tallenna muutokset (Commit changes).
+5. Päivitä sivu selaimessa tarvittaessa kovalla päivityksellä tai avaamalla yksityinen välilehti.
+
+HUOM:
+Tämä on sivuston PÄIVITYSPAKETTI, ei koko alkuperäisen GitHub-repositorion varmuuskopio.
+GitHubissa jo olevia muita sivuja ja tiedostoja EI saa poistaa.
+Paketissa uudet neljä SVG-kuvaketta sekä niitä käyttävä etusivu-v300.css ja päivitetty index.html.
+Kaikki tiedostot tässä ZIPissä kuuluvat sivuston juurikansioon.

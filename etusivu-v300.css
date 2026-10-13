@@ -1,0 +1,133 @@
+/* Matkaile Suomessa v300: hyväksytyt suuret, yksinkertaiset etusivukuvakkeet.
+   Muutokset koskevat vain neljää päävalintaa, ei alisivuja tai navigointia. */
+body[data-home="true"] .home-primary-links-v290 .menu {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268),
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268),
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268),
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) {
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 3px !important;
+  min-height: 169px !important;
+  min-width: 0 !important;
+  padding: 10px 8px 14px !important;
+  position: relative !important;
+  border: 1px solid #d4e4da !important;
+  border-radius: 19px !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  color: #164f41 !important;
+  font-size: 0 !important; /* piilottaa aiemmat emojit, ei otsikkoa */
+  line-height: 1 !important;
+  overflow: hidden !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268) {
+  background: #e5f2ed !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268) {
+  background: #eef3e1 !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268) {
+  background: #e6f0fa !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) {
+  background: #fff0e3 !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268)::before,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268)::before,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268)::before,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268)::before {
+  content: "" !important;
+  display: block !important;
+  width: min(100%, 230px) !important;
+  height: 115px !important;
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+  margin: 0 auto 3px !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268)::before {
+  background-image: url("etusivu-paikkakunnat-v300.svg") !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268)::before {
+  background-image: url("etusivu-leirintaalueet-v300.svg") !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268)::before {
+  background-image: url("etusivu-matkaparkit-v300.svg") !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268)::before {
+  background-image: url("etusivu-lahella-minua-v300.svg") !important;
+}
+/* Vanhat pienet kuvakkeet ja nuolimerkit pois; otsikot jäävät näkyviksi. */
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268) .choice-icon,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268) .choice-icon,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268) .choice-icon,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) .choice-icon,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268) .choice-arrow,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268) .choice-arrow,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268) .choice-arrow,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) .choice-arrow,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268) small,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268) small,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268) small,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) small {display: none !important;}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268) strong,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268) strong,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268) strong,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) strong {
+  display: block !important;
+  color: #164f41 !important;
+  font: 800 clamp(16px, 4.5vw, 20px)/1.17 system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  letter-spacing: -.025em !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Pysähdy matkalla ja alemmat painikkeet omilla paikoillaan. */
+body[data-home="true"] .home-primary-links-v290 .menu > a#travel-stop-v268 {
+  grid-column: 1 / -1 !important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268):focus-visible,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268):focus-visible,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268):focus-visible,
+body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268):focus-visible {
+  outline: 3px solid #ef7e25 !important;
+  outline-offset: 3px !important;
+}
+@media (max-width: 390px) {
+  body[data-home="true"] .home-primary-links-v290 .menu {gap: 9px !important;}
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) {
+    min-height: 150px !important;
+    padding: 9px 5px 12px !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268)::before {
+    height: 99px !important;
+  }
+}
+@media (min-width: 850px) {
+  body[data-home="true"] .home-primary-links-v290 .menu {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 13px !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268),
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268) {min-height: 178px !important;}
+}

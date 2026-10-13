@@ -1,0 +1,36 @@
+/* v298 – Näe ja koe: ruukkikylät näkyville, kausilinkit pois, sirommat kortit. */
+.ms-ruukki-link-v298,
+.ms-ruukki-feature-v298>a {
+  box-sizing:border-box; width:100%; display:flex; align-items:center; gap:12px;
+  min-height:72px; padding:14px 16px; margin:10px 0 0;
+  border:1px solid #d5e4d9; border-radius:16px; background:#f0f5e9;
+  color:#205747; text-decoration:none; box-shadow:none;
+}
+.ms-ruukki-feature-v298 {display:block;margin:16px 0 20px}
+.ms-ruukki-feature-v298>a{margin:0}
+.ms-ruukki-icon-v298{font-size:26px;flex:0 0 32px;text-align:center}
+.ms-ruukki-text-v298{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ms-ruukki-text-v298 strong{font-size:18px;line-height:1.22;font-weight:850}
+.ms-ruukki-text-v298 small{font-size:13px;line-height:1.35;color:#66766a}
+.ms-ruukki-link-v298:hover,
+.ms-ruukki-feature-v298>a:hover{background:#e6f0df;border-color:#b7d0bf}
+body[data-home="true"] .home-primary-links-v290 .menu>.ms-ruukki-link-v298{
+  grid-column:1/-1; margin:3px 0 0; min-height:66px; background:#f0f5e9!important;
+  border:1px solid #d5e4d9!important; border-radius:16px!important;
+  display:flex!important;align-items:center!important;gap:12px!important;
+  padding:13px 16px!important;box-shadow:none!important;
+  color:#205747!important;text-decoration:none!important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu>.ms-ruukki-link-v298 strong{font-size:17px!important}
+/* Poista mahdollisten vanhojen versioiden kausivalinnat nimenomaan Näe ja koe -sivulta. */
+body .season-shortcuts-v267 {display:none!important}
+/* Nuoli pois vain Tutustu-teksteistä; linkit säilyvät toimivina. */
+a.ms-tutustu-no-arrow-v298::after,button.ms-tutustu-no-arrow-v298::after{content:none!important;display:none!important}
+@media(max-width:600px){
+ .ms-ruukki-link-v298,.ms-ruukki-feature-v298>a{min-height:65px;padding:12px 14px}
+ .ms-ruukki-text-v298 strong{font-size:17px}
+ .ms-ruukki-text-v298 small{font-size:12px}
+}
+
+/* hidden-pikavalinta piilotetaan myös silloin, kun linkillä on display:flex */
+.ms-ruukki-link-v298[hidden]{display:none!important}

@@ -1,4 +1,4 @@
-<!-- Matkaile Suomessa v291 – vaalea yhtenäinen etusivu -->
+<!-- Matkaile Suomessa v300 – hyväksytyt neljä suurta etusivukuvaketta -->
 <!doctype html>
 <html lang="fi">
 <head>
@@ -390,6 +390,9 @@
   <script defer src="pysahdy-v268.js?v=268"></script>
   <link rel="preload" href="matkaile-suomessa-logo-v296.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="etusivu-v291.css?v=291"><link rel="stylesheet" href="etusivu-v296.css?v=296"><link rel="stylesheet" href="ruukkikylat-v297.css?v=297">
+  <link rel="stylesheet" href="nahtavaa-v298.css?v=298">
+  <script defer src="nahtavaa-v298.js?v=298"></script>
+  <link rel="stylesheet" href="etusivu-v300.css?v=300">
 </head>
 <body data-home="true">
   <main class="home-shell">
@@ -436,14 +439,20 @@
         <button id="home-clear-region-v255" type="button">Näytä koko Suomi</button>
       </div>
       <div class="menu">
-        <a href="maakunnat.html">🗺️ Paikkakunnat</a>
-        <a href="leirintaalueet.html">🏕️ Leirintäalueet</a>
-        <a href="matkaparkit.html">🅿️ Matkaparkit</a>
-        <a href="lahella-minua.html">📍 Lähellä minua</a>
+        <a href="maakunnat.html" aria-label="Paikkakunnat"><strong>Paikkakunnat</strong></a>
+        <a href="leirintaalueet.html" aria-label="Leirintäalueet"><strong>Leirintäalueet</strong></a>
+        <a href="matkaparkit.html" aria-label="Matkaparkit"><strong>Matkaparkit</strong></a>
+        <a href="lahella-minua.html" aria-label="Lähellä minua"><strong>Lähellä minua</strong></a>
         <a id="travel-stop-v268" href="pysahdy-matkalla.html" aria-label="Pysähdy matkalla – kahvilat, ravintolat ja kiinnostavat taukopaikat">🚗 Pysähdy matkalla</a>
-        <div class="ms-ruukki-entry-v297" id="ms-ruukki-entry-v297"><a href="ruukkikylat.html" aria-label="Nähtävää – Ruukkikylät">🏭 <strong>Ruukkikylät</strong><span>Historialliset ruukit ja kylät</span><span class="ms-ruukki-arrow-v297" aria-hidden="true">→</span></a></div>
+        
       </div>
     </section>
+    <!-- v298: pysyvä pikavalinta. JS siirtää näkyvän kopion Näe ja koe -kortin alle,
+         mutta linkki säilyy käytettävänä vaikka vanha valikko rakentuu uudelleen. -->
+    <a id="ms-ruukki-backup-v298" class="ms-ruukki-link-v298" href="ruukkikylat.html" aria-label="Ruukkikylät – 15 historiallista kohdetta Suomessa">
+      <span class="ms-ruukki-icon-v298" aria-hidden="true">🏭</span>
+      <span class="ms-ruukki-text-v298"><strong>Ruukkikylät</strong><small>Historialliset ruukit ja kylät</small></span>
+    </a>
 
 <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small id="v245-trips-summary">Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
     <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
@@ -521,7 +530,7 @@
       }
     });
   </script>
-<script defer src="ruukkikylat-v297.js?v=297"></script>
+
 <script>
 // v245: näkyvä yhteys etusivun Omat matkat -kortin ja matkapäiväkirjan välillä.
 (function () {
