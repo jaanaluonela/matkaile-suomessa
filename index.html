@@ -386,11 +386,15 @@
 </style>
 <link rel="stylesheet" href="navigation-v191.css?v=244">
 <link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="matkaparkit-lisat-v274.js?v=274" defer></script><script src="sfc-alueet-v295.js?v=295" defer></script><script src="ms-kohteet-v296.js?v=296" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"><link rel="stylesheet" href="etusivu-haku-v251.css?v=255"><script src="suomi-kunnat-v253.js?v=253" defer></script><script src="v254-kuntalinkit.js?v=254" defer></script><script src="v257-siuntio.js?v=257" defer></script><script src="v258-lansi-suomi.js?v=258" defer></script><script src="v259-fiskars-kunnat.js?v=259" defer></script><script src="v260-etela-pohjanmaa.js?v=260" defer></script><script src="v261-kymenlaakso.js?v=261" defer></script><script src="v262-etela-karjala.js?v=262" defer></script><script src="etusivu-haku-v253.js?v=256" defer></script><link rel="stylesheet" href="responsiivinen-v263.css?v=263">
-  <script defer src="etusivu-pysahdy-v301.js?v=301"></script>
+  <link rel="stylesheet" href="pysahdy-v268.css?v=268">
+  <script defer src="pysahdy-v268.js?v=268"></script>
   <link rel="preload" href="matkaile-suomessa-logo-v296.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="etusivu-v291.css?v=291"><link rel="stylesheet" href="etusivu-v296.css?v=296"><link rel="stylesheet" href="ruukkikylat-v297.css?v=297">
-  <link rel="stylesheet" href="etusivu-v300.css?v=300">
-  <link rel="stylesheet" href="etusivu-pysahdy-v301.css?v=301">
+  <link rel="stylesheet" href="nahtavaa-v298.css?v=298">
+  <script defer src="nahtavaa-v298.js?v=298"></script>
+  <link rel="stylesheet" href="etusivu-v301.css?v=301">
+  <link rel="stylesheet" href="alavalikko-v301.css?v=301">
+  <script defer src="alavalikko-v301.js?v=301"></script>
 </head>
 <body data-home="true">
   <main class="home-shell">
@@ -441,10 +445,16 @@
         <a href="leirintaalueet.html" aria-label="Leirintäalueet"><strong>Leirintäalueet</strong></a>
         <a href="matkaparkit.html" aria-label="Matkaparkit"><strong>Matkaparkit</strong></a>
         <a href="lahella-minua.html" aria-label="Lähellä minua"><strong>Lähellä minua</strong></a>
-        <a id="travel-stop-v268" href="pysahdy-matkalla.html" aria-label="Pysähdy matkalla – nähtävyydet, luonto, kahvilat, ravintolat ja taukopaikat">📍 Pysähdy matkalla</a>
+        <a id="travel-stop-v268" href="pysahdy-matkalla.html" aria-label="Pysähdy matkalla – kahvilat, ravintolat ja kiinnostavat taukopaikat">🚗 Pysähdy matkalla</a>
         
       </div>
     </section>
+    <!-- v298: pysyvä pikavalinta. JS siirtää näkyvän kopion Näe ja koe -kortin alle,
+         mutta linkki säilyy käytettävänä vaikka vanha valikko rakentuu uudelleen. -->
+    <a id="ms-ruukki-backup-v298" class="ms-ruukki-link-v298" href="ruukkikylat.html" aria-label="Ruukkikylät – 15 historiallista kohdetta Suomessa">
+      <span class="ms-ruukki-icon-v298" aria-hidden="true">🏭</span>
+      <span class="ms-ruukki-text-v298"><strong>Ruukkikylät</strong><small>Historialliset ruukit ja kylät</small></span>
+    </a>
 
 <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small id="v245-trips-summary">Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
     <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
@@ -454,7 +464,7 @@
 
   <script>
     const places = [
-      {"name": "Ruukkikylät", "meta": "Pysähdy matkalla · Historialliset ruukit", "url": "pysahdy-matkalla.html?tyyppi=ruukki"},
+      {"name": "Ruukkikylät", "meta": "Nähtävää · Historialliset ruukit", "url": "ruukkikylat.html"},
       {"name": "Fiskarsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#fiskars"},
       {"name": "Billnäsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#billnas"},
       {"name": "Mustion ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#mustio"},

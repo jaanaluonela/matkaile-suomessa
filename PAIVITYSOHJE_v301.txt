@@ -1,0 +1,28 @@
+MATKAILE SUOMESSA – v301: PIENEMMAT KUVAT + KAIKKIEN SIVUJEN ALAVALIKKO
+13.10.2026
+
+1) PURA zip tietokoneella. GitHubiin ladataan puretut tiedostot (ei zip-tiedostoa).
+2) Avaa sivuston GitHub-repositorio ja lataa sisalto paakansioon.
+   Myos .github/workflows ja tyokalut-kansiot tarvitaan: sailyta kansiorakenne.
+3) Korvaa samannimiset tiedostot ja vahvista muutokset.
+4) GitHub Actionsin "Paivita alapalkki kaikille sivuille" -tyonkulku paivittaa
+   nykysen repositorion jokaisen HTML-sivun muuttamatta sen muuta sisaltoa.
+   Tyokulku vaatii, etta Actions on kaytossa ja sen GITHUB_TOKEN saa kirjoittaa.
+5) Jos Actions ei ole kaytossa, suorita komento repositorion paakansiossa:
+   python tyokalut/paivita_alavalikko_v301.py
+   ja tallenna sen muokkaamat tiedostot GitHubiin.
+6) Selaimen kovapaivitys Ctrl+F5 tarvittaessa.
+
+MITA MUUTTUI:
+- Suuret nelja etusivukorttia sailyivat, mutta niiden kuvat ovat pienemmat.
+- Kiintea kolmeosainen alapalkki kaikilla HTML-sivuilla: 🏡 Koti,
+  🏞️ Pysähdy matkalla, ⭐ Suosikit.
+- Pysähdy matkalla sisaltaa valinnat: Nähtävyydet, Luonto ja retket,
+  Taukopaikat, Ruukkikylät sekä Kahvilat ja ravintolat.
+- Suosikit-sivulle voi tallentaa yksittaisia kohteita niiden sivuilta.
+  Tiedot tallentuvat selaimen paikalliseen tallennustilaan, ei palvelimelle.
+- Muut alkuperaiset kohteet ja tiedot pysyvat ennallaan.
+
+HUOM! Tämä on päivityspaketti, EI täydellinen varmuuskopio repoosi sisällöstä.
+Älä poista GitHubin muita tiedostoja. Alapalkki paivitetaan muillekin
+olemassa oleville sivuille nimenomaan mukana tulevalla tyokalulla / tyonkululla.
