@@ -1,0 +1,24 @@
+MATKAILE SUOMESSA v298 — NÄE JA KOE -SIVUN UUDISTUS (13.10.2026)
+
+MUUTOKSET
+- Syksyn nähtävää- ja Talven nähtävää -painikkeet poistettu Näe ja koe -sivulta.
+- Sivulle lisätty kaksi selkeää nostoa: Ruukkikylät ja Kahvilat ja ravintolat.
+- Haku on selkeämpi: kohdetyyppi, vapaa nimihaku, maakunta ja paikkakunta.
+- Kohdetyypit: Kaikki, Nähtävyydet, Luonto ja retket sekä Taukopaikat.
+- Tuloksia näytetään ensin 8. Näytä lisää -painike tuo 12 lisää kerrallaan.
+- Tyhjennä rajaukset -painike palauttaa koko Suomen kohteet.
+- Alue- ja nimihaku toimivat yhdessä, myös vanhat ?maakunta= ja ?kunta= -linkit säilyvät.
+- Suunniteltu erityisesti puhelimen näytölle. Ei paksuja reunuksia.
+- Luonto ja retket -rajaus perustuu nykyisten kohdetietojen nimen ja tarkkojen luontotermien avainsanoihin, koska alkuperäisessä aineistossa tyypit ovat vain "sight" ja "stop".
+
+GITHUB-ASENNUS
+1. Pura ZIP ensin.
+2. Siirrä tiedostot GitHub-repositorion samaan pääkansioon kuin index.html.
+3. Korvaa vain samannimiset tiedostot. Älä poista muita sivuston tiedostoja.
+4. Tämän paketin kayntikohteet.html, kayntikohteet-v298.css ja kayntikohteet-v298.js päivittävät Näe ja koe -sivun.
+5. Mukana on myös v297:n ruukkikylat.html ja tyylitiedostot, jotta Ruukkikylät-linkki toimii, vaikka ne eivät vielä olisi GitHubissa.
+6. Commit changes. Testaa: kayntikohteet.html, alue- ja nimihaku, kohdetyypit, Näytä lisää ja Ruukkikylät-linkki.
+
+HUOMAUTUS
+- Tämä on osittainen päivitys; etusivua ja muita kuntasivuja ei korvata.
+- Jos GitHubin kayntikohteet.html on tämän v274-pohjan jälkeen muokattu erikseen, tarkista ensin, ettei omia uudempia muutoksia jää pois.
