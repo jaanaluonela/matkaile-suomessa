@@ -1,0 +1,30 @@
+MATKAILE SUOMESSA – v301 YKSI PYSÄHDY MATKALLA -SIVU
+13.10.2026
+
+UUDISTUS
+- Yhdistetty Näe ja koe sekä Pysähdy matkalla yhdelle sivulle.
+- Etusivulle jää vain Pysähdy matkalla -painike näille sisällöille.
+- Sisällä valikot: Nähtävyydet, Luonto ja retket, Taukopaikat,
+  Kahvilat, Ravintolat, Lähiruoka ja puodit, Ruukkikylät,
+  Karavaanarin palvelut, Lasten kanssa, Kaikki.
+- Haku nimellä, maakunnan ja paikkakunnan suodattimet sekä lisää tuloksia.
+- Aiemmat 15 ruukkikylää näkyvät myös yhdistetyssä haussa.
+- Karavaanarin palveluissa ja lasten kohteissa on myös erilliset
+  Google Maps -haut. Karttahakujen tuloksia ei ole tarkistettu oppaaseen.
+- Aiemmat kayntikohteet.html-linkit ohjautuvat uuteen yhteiseen näkymään.
+- v300:n suuret hyväksytyt etusivukuvakkeet ja logo säilyvät.
+
+GITHUB-PÄIVITYS
+1. PURA ZIP-tiedosto tietokoneelle. GitHubiin ei pidä ladata pelkkää ZIPiä.
+2. Avaa oma Matkaile Suomessa -GitHub-repositorio.
+3. Lataa kaikki ZIPistä puretut tiedostot juurikansioon, jossa index.html on.
+4. Korvaa samannimiset tiedostot ja tallenna muutokset (Commit changes).
+5. Testaa etusivun Pysähdy matkalla -painike ja sen sisäiset valikot.
+6. Jos näkyy vanha versio, päivitä sivu tai testaa yksityisellä välilehdellä.
+
+HUOMAUTUS
+Tämä on päivityspaketti, EI koko alkuperäisen GitHub-repositorion varmuuskopio.
+Älä poista GitHubissa jo olevia muita tiedostoja. Vanha sivusto sisältää
+mm. aineistot nearby-data-v218.js ja kayntikohteet-data-v230.js,
+joita yhteinen näkymä tarvitsee. Tarkista kohteiden ajantasaiset tiedot.
+Tätä tiedostoa ei ole automaattisesti ladattu tai julkaistu GitHubissa.

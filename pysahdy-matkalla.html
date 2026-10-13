@@ -3,57 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#174d40">
-  <meta name="description" content="Ravintolat, kahvilat, karavaanarin palvelut ja lapsiperheiden taukopaikat paikkakunnittain Suomessa.">
-  <title>Pysähdy matkalla – Matkailu Suomessa</title>
+  <meta name="theme-color" content="#f8faf7">
+  <meta name="description" content="Nähtävyydet, luonto, taukopaikat, kahvilat, ravintolat ja ruukkikylät samassa haussa eri puolilla Suomea.">
+  <title>Pysähdy matkalla – Matkaile Suomessa</title>
   <link rel="stylesheet" href="navigation-v191.css?v=244">
-  <link rel="stylesheet" href="pysahdy-v277.css?v=277">
+  <link rel="stylesheet" href="pysahdy-v301.css?v=301">
   <script defer src="nearby-data-v218.js"></script>
+  <script defer src="keski-suomi-data-v220.js"></script>
+  <script defer src="keski-suomi-data-v221.js"></script>
   <script defer src="kayntikohteet-data-v230.js"></script>
-  <script defer src="pysahdy-kohteet-v277.js?v=277"></script>
-  <script defer src="pysahdy-v277.js?v=277"></script>
+  <script defer src="rovaniemi-data-v245.js"></script>
+  <script defer src="kouvola-data-v247.js"></script>
+  <script defer src="lappi-data-v248.js"></script>
+  <script defer src="suomi-kunnat-v253.js?v=253"></script>
+  <script defer src="suositut-ruokapaikat-v267.js?v=267"></script>
+  <script defer src="ruukkikylat-v301.js?v=301"></script>
+  <script defer src="pysahdy-v301.js?v=301"></script>
 </head>
-<body class="stop-page-v268">
-  <main>
-    <a class="back" href="index.html">‹ Etusivulle</a>
-    <header class="intro">
-      <span class="eyebrow">🚗 Matkailu Suomessa</span>
+<body class="ms301-stop">
+  <main class="ms301-page">
+    <a class="ms301-back" href="index.html">‹ Etusivulle</a>
+    <header class="ms301-intro">
+      <p class="ms301-overline">Ideoita matkan varrelle</p>
       <h1>Pysähdy matkalla</h1>
-      <p>Kahvitauko, karavaanarin palvelut tai lasten kanssa sopiva pysähdys. Hae kohteita paikkakunnittain.</p>
+      <p>Löydä nähtävyydet, luontokohteet, kahvilat, ruokapaikat ja kiinnostavat pysähdykset yhdestä paikasta.</p>
     </header>
-
-    <nav class="quicklinks" aria-label="Muita tapoja löytää pysähdyspaikka">
-      <a href="lahella-minua.html"><strong>📍 Lähellä minua</strong><small>Hae lähimmät kohteet ja valitse ”Pysähdy matkalla”</small></a>
-      <a href="kayntikohteet.html"><strong>⭐ Näe ja koe</strong><small>Nähtävyydet ja muut kiinnostavat kohteet</small></a>
-    </nav>
-
-    <section class="filters" aria-label="Etsi pysähdyspaikkoja">
-      <div class="fields">
-        <div>
-          <label for="stop-town-v268">Valitse paikkakunta</label>
-          <select id="stop-town-v268"><option value="">Koko Suomi</option></select>
-        </div>
-        <div>
-          <label for="stop-query-v268">Hae nimellä tai sanalla</label>
-          <input id="stop-query-v268" type="search" placeholder="Esim. Vääksy tai kahvila">
-        </div>
+    <section class="ms301-search" aria-label="Etsi pysähdyspaikkoja">
+      <h2>Mitä haluaisit löytää?</h2>
+      <div class="ms301-categories" role="group" aria-label="Kohdetyypit">
+        <button class="ms301-category" type="button" data-ms301-category="sight" aria-pressed="false"><span aria-hidden="true">🏛️</span> Nähtävyydet</button>
+        <button class="ms301-category" type="button" data-ms301-category="nature" aria-pressed="false"><span aria-hidden="true">🌲</span> Luonto ja retket</button>
+        <button class="ms301-category" type="button" data-ms301-category="stop" aria-pressed="false"><span aria-hidden="true">📍</span> Taukopaikat</button>
+        <button class="ms301-category" type="button" data-ms301-category="caravan" aria-pressed="false"><span aria-hidden="true">🚐</span> Karavaanarin palvelut</button>
+        <button class="ms301-category" type="button" data-ms301-category="kids" aria-pressed="false"><span aria-hidden="true">🧸</span> Lasten kanssa</button>
+        <button class="ms301-category" type="button" data-ms301-category="cafe" aria-pressed="false"><span aria-hidden="true">☕</span> Kahvilat</button>
+        <button class="ms301-category" type="button" data-ms301-category="restaurant" aria-pressed="false"><span aria-hidden="true">🍽️</span> Ravintolat</button>
+        <button class="ms301-category" type="button" data-ms301-category="shop" aria-pressed="false"><span aria-hidden="true">🧺</span> Lähiruoka ja puodit</button>
+        <button class="ms301-category" type="button" data-ms301-category="ruukki" aria-pressed="false"><span aria-hidden="true">🏭</span> Ruukkikylät</button>
+        <button class="ms301-category" type="button" data-ms301-category="all" aria-pressed="true"><span aria-hidden="true">✨</span> Kaikki</button>
       </div>
-      <div class="categories" role="group" aria-label="Valitse pysähdyspaikan tyyppi">
-        <button type="button" data-stop-category="all" aria-pressed="true">Kaikki</button>
-        <button type="button" data-stop-category="restaurant" aria-pressed="false">🍽️ Ravintolat</button>
-        <button type="button" data-stop-category="cafe" aria-pressed="false">☕ Kahvilat</button>
-        <button type="button" data-stop-category="shop" aria-pressed="false">🛍️ Puodit ja lähiruoka</button>
-        <button type="button" data-stop-category="caravan" aria-pressed="false">🚐 Karavaanarin palvelut</button>
-        <button type="button" data-stop-category="kids" aria-pressed="false">🧸 Lasten kanssa</button>
-        <button type="button" data-stop-category="other" aria-pressed="false">🚗 Muut pysähdykset</button>
+      <div class="ms301-search-grid">
+        <div class="ms301-field ms301-query"><label for="ms301-query">Hae nimellä tai hakusanalla</label><input type="search" id="ms301-query" placeholder="Esim. Vääksy, Pyynikki tai kahvila" autocomplete="off"></div>
+        <div class="ms301-field"><label for="ms301-region">Maakunta</label><select id="ms301-region"><option value="">Koko Suomi</option></select></div>
+        <div class="ms301-field"><label for="ms301-city">Paikkakunta</label><select id="ms301-city"><option value="">Kaikki paikkakunnat</option></select></div>
       </div>
+      <div class="ms301-filterbar"><span>Valitse aihe ja alue tai hae suoraan nimellä.</span><button type="button" id="ms301-reset">Tyhjennä valinnat</button></div>
     </section>
-
-    <section id="stop-category-info-v276" class="category-info-v276" hidden aria-label="Lisää tapoja löytää palveluja"></section>
-    <p id="stop-count-v268" class="meta" role="status" aria-live="polite">Haetaan oppaan kohteita…</p>
-    <div id="stop-results-v268"></div>
-    <noscript><p>Hakua varten tarvitaan JavaScript. <a href="kayntikohteet.html">Selaa Näe ja koe -kohteita</a>.</p></noscript>
-    <p class="notice">Kohteet ovat oppaan suosituksia, eivät reaaliaikainen suosituimmuusjärjestys. Aukiolo, sesonkiajat, palveluiden sopivuus matkailuautolle ja mahdolliset maksut kannattaa tarkistaa ennen käyntiä. Karttalinkki avaa kohdehaun, ei varmennettua palveluluetteloa.</p>
+    <section class="ms301-results-section" aria-label="Hakutulokset">
+      <div class="ms301-results-head"><h2>Kohteita matkan varrelta</h2><p id="ms301-count" aria-live="polite" role="status"></p></div>
+      <div id="ms301-results" class="ms301-results"></div>
+      <button class="ms301-more" type="button" id="ms301-more" hidden>Näytä lisää kohteita</button>
+    </section>
+    <p class="ms301-note">Tarkista kohteiden aukioloajat, pysäköinti ja palvelut ennen matkaa. Tietoja täydennetään jatkuvasti.</p>
+    <noscript><p>Ota JavaScript käyttöön nähdäksesi kohteet. Voit myös <a href="ruukkikylat.html">tutustua ruukkikyliin</a>.</p></noscript>
   </main>
   <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
 </body>

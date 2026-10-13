@@ -1,0 +1,15 @@
+/* Yksi Pysähdy matkalla -kortti neljän tärkeimmän etusivupainikkeen alla */
+body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268 {
+  grid-column:1 / -1!important;display:flex!important;align-items:center!important;
+  justify-content:flex-start!important;flex-direction:row!important;
+  gap:14px!important;padding:15px 18px!important;min-height:94px!important;
+  text-decoration:none!important;background:#eef4e8!important;
+  color:#21533f!important;border:1px solid #d7e3d1!important;
+  border-radius:17px!important;box-shadow:none!important;
+}
+body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268 .choice-icon{display:inline-flex!important;align-items:center;font-size:29px!important;flex:none}
+body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268 strong{display:block;font-size:1.14rem!important;font-weight:800!important}
+body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268 small{display:block;font-size:.82rem!important;color:#617363!important;margin-top:3px!important}
+body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268:focus-visible{outline:3px solid #d7b067;outline-offset:3px}
+body[data-home="true"] #ms-ruukki-backup-v298,
+body[data-home="true"] #ms-ruukki-in-menu-v298{display:none!important}
