@@ -1,0 +1,25 @@
+MATKAILE SUOMESSA – NÄE JA KOE – v299
+
+Lataa nämä kolme tiedostoa GitHub-repositorion matkaile-suomessa
+PÄÄKANSIOON (samaan paikkaan kuin index.html):
+- kayntikohteet.html (korvaa vanha)
+- kayntikohteet-v299.css (uusi)
+- kayntikohteet-v299.js (uusi)
+
+UUSI SUODATINVALIKKO:
+- Nähtävyydet
+- Luonto ja retket
+- Taukopaikat
+- Kaikki (alimmaisen rivin ensimmäisenä)
+- Ruukkikylät -> avaa ruukkikylat.html
+- Kahvilat ja ravintolat -> avaa pysahdy-matkalla.html
+
+Puhelimella kuusi valintaa näkyvät kahdessa sarakkeessa ja kolmessa rivissä.
+Ruukkikylien ja kahviloiden erilliset suuret laatikot on poistettu.
+Aiemmat suodattimet toimivat edelleen. Kaikki näyttää kaikki hakutulokset,
+ja loput linkit avaavat omat koontisivunsa.
+
+Lisäksi korttien toimintalinkissä lukee "Tutustu" ilman nuolta.
+Muut sivut, kohdetiedot ja aiemmat päivitykset jätetään ennalleen.
+
+Jos ulkoasu näkyy vanhana GitHub Pagesissa, päivitä sivu selaimessa.
