@@ -1,0 +1,29 @@
+MATKAILE SUOMESSA v293 – SFC-ALUEET EIVÄT NÄY / KORJAUS
+
+KUVASSA NÄKYVÄ VIRHE:
+Etelä-Karjala + Näytä vain SFC-alueet -> 0 kohdetta,
+vaikka Palvaanjärvi (Luumäki) on SFC-alue.
+
+ASENNUS GITHUBIIN
+1. Avaa GitHubissa matkaile-suomessa-repositorion pääkansio, jossa index.html sijaitsee.
+2. Pura ZIP omalla koneella. Lataa kaikki neljä alla mainittua tiedostoa GitHubin pääkansioon:
+   - leirintaalueet.html             [korvaa vanha]
+   - sfc-alueet-v292.js             [lisää tai korvaa]
+   - sfc-haku-korjaus-v293.js       [uusi]
+   - sfc-kohde-v292.html            [lisää tai korvaa]
+   Älä lataa ZIP-pakettia sellaisenaan GitHubiin.
+3. Tallenna muutokset GitHubissa (Commit changes) ja odota GitHub Pagesin päivitystä.
+4. Avaa leirintäaluehaku uudelleen, tarvittaessa Ctrl+F5 tai yksityinen ikkuna.
+5. Testaa: Etelä-Karjala -> Näytä vain SFC-alueet. Palvaanjärven pitäisi näkyä.
+   Kokeile myös koko Suomea, esimerkiksi Alatalo (Kuopio).
+
+MITÄ KORJAA:
+- Paketti sisältää kaikki 58 SFC-kohdetta edelleen (v292 data).
+- Täydentää vanhan listauksen kuntien maakuntaluokitusta myös SFC-tiedoilla.
+- Jos vanha listaus silti jättää SFC-alueen pois, lisää puuttuvan kohteen
+  näkyviin niin, että muut nykyiset leirintäalueet pysyvät mukana.
+- SFC-paikkakunnat voivat näkyä kuntavalinnassa, vaikka niillä ei ole omaa kuntasivua.
+- Ei merkitse palveluja eikä ympärivuotista aukioloa vahvistetuksi ilman tietoja.
+- Säilyttää muiden sivujen, etusivun, matkaparkkien ja ulkoasun tiedostot ennallaan.
+
+HUOM. Tämä on ladattava päivityspaketti, ei suora muutos GitHubiin.
