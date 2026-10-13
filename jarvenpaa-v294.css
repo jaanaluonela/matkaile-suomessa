@@ -1,0 +1,35 @@
+/* Matkailu Suomessa – Järvenpää v294, toimii v288 Uusimaa-tyylin kanssa. */
+.jp294{--jp-line:#e3e9e4;--jp-green:#225b49;--jp-muted:#52685f}
+.jp294 main{max-width:940px}
+.jp294-hero{background:linear-gradient(120deg,#f1f7f1,#f8f9f4);border-radius:18px;padding:15px 18px 14px;margin:6px 0 14px}
+.jp294-hero h1{margin:4px 0 7px}.jp294-hero .lead{margin:0 0 7px;color:#1e5745;font-weight:650}
+.jp294-hero p:not(.lead){margin:4px 0 9px;max-width:70ch;font-size:15px}
+.jp294-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}.jp294-pills span{background:#fff;border:1px solid #e0eae0;border-radius:20px;font-size:12px;font-weight:700;padding:5px 10px}
+.jp294-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:12px 0}
+.jp294-nav a{border-radius:10px;padding:10px 7px;background:#f0f6f0;color:#245843;font-size:13px;font-weight:750;text-decoration:none;text-align:center;border:1px solid #e3eae1}
+.jp294-intro{font-size:14px;padding:10px 3px 15px;line-height:1.7;color:#3c594c}.jp294-intro a{font-weight:700;white-space:nowrap}
+.jp294-section{padding:0;border:1px solid #e4ebe5;border-radius:13px;overflow:hidden;background:white;margin:12px 0;scroll-margin-top:10px}
+.jp294-section>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;font-size:17px;min-height:62px}
+.jp294-section>summary small{display:block;font-size:11px;color:#6c7f73;line-height:1.45;font-weight:650;letter-spacing:.035em}
+.jp294-section>summary strong{font-size:18px;line-height:1.4}
+.jp294-section[open]>summary{margin:0;border-bottom:1px solid #e8eee9}
+.jp294-section summary::marker{content:''}.jp294-section summary::-webkit-details-marker{display:none}
+.jp294-count{white-space:nowrap;color:#62796a;font-size:11px;font-weight:650}.jp294-chevron{font-size:21px;margin-left:4px;display:inline-block;transition:transform .2s ease}
+.jp294-section[open] .jp294-chevron{transform:rotate(180deg)}
+.jp294-places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;padding:0 13px}
+.jp294-place{padding:15px 3px 14px;border-bottom:1px solid #e8eee9;min-width:0}.jp294-place:nth-last-child(1):nth-child(odd){border-bottom:0}
+.jp294-itemtop{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}
+.jp294-place h3{font-size:16px;line-height:1.35;margin:0;color:#234d3c;flex:1 1 190px}
+.jp294-tag{font-size:11px;font-weight:700;background:#eef5ec;border-radius:7px;padding:3px 7px;color:#47705d;display:inline-block}
+.jp294-place p{font-size:14px;line-height:1.52;margin:7px 0;color:#394f42}
+.jp294-place .jp294-location{font-size:12px;color:#6b786c;margin:7px 0}
+.jp294-place .jp294-note{font-size:12px;color:#846b43;background:#fbf7ed;border-radius:6px;padding:7px 9px}
+.jp294-links{display:flex;gap:13px;flex-wrap:wrap;margin-top:9px}.jp294-links a{font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.jp294-message,.jp294-itineraries,.jp294-practical,.jp294-save{margin:17px 0;padding:17px;border:1px solid #e3eae3;border-radius:14px;background:#fff;scroll-margin-top:14px}
+.jp294-message{background:#f1f6f1}.jp294-message p,.jp294-practical p,.jp294-save p,.jp294-itineraries p{font-size:14px;margin:8px 0;color:#435a4d}
+.jp294 h2{font-size:19px;color:#254f3f;margin:0 0 9px}.jp294 h3{font-size:16px}.jp294-ideas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.jp294-ideas article{padding:10px 12px;border-radius:10px;background:#f7faf7}.jp294-ideas h3{margin:8px 0 4px}.jp294-ideas p{margin:0}
+.jp294-practical-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.jp294-practical-grid p{border-bottom:1px solid #e8eee8;padding:8px 0}
+.jp294-footnote{font-size:12px;color:#69796d;line-height:1.5;padding:4px 4px 10px}.jp294-endlinks{display:flex;gap:18px;flex-wrap:wrap;font-weight:750;font-size:14px}
+.jp294 .actions button,.jp294 .actions a{font-size:14px}
+@media(max-width:700px){.jp294-places{grid-template-columns:1fr}.jp294-place{padding:12px 1px}.jp294-place:last-child{border-bottom:0}.jp294-ideas,.jp294-practical-grid{grid-template-columns:1fr}.jp294-ideas{gap:8px}.jp294-nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.jp294-nav a{font-size:12px;min-height:43px;display:grid;place-items:center;padding:7px 5px}.jp294-hero{padding:12px}.jp294-section>summary{padding:12px}.jp294-section>summary strong{font-size:16px}.jp294-count{font-size:10px}.jp294-message,.jp294-itineraries,.jp294-practical,.jp294-save{padding:13px}.jp294-pills span{font-size:11px}}
+@media(max-width:360px){.jp294-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.jp294-section>summary strong{font-size:15px}}

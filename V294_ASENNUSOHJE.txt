@@ -1,0 +1,27 @@
+MATKAILU SUOMESSA – V294 JÄRVENPÄÄ VALMIIKSI
+13.10.2026
+
+Tämä on PÄIVITYS nykyiseen sivustoon, ei koko sivuston korvaus.
+
+PAKETISSA ON NELJÄ TIEDOSTOA:
+- jarvenpaa.html (Järvenpään uusittu koko kuntaopas)
+- jarvenpaa-v294.css (vain Järvenpään sivun tiivis mobiili- ja tietokoneasettelu)
+- jarvenpaa-karavaani-v294.js (Järvenpään kaksi vahvistettua matkaparkkia matkaparkkihakuun)
+- matkaparkit.html (nykyistä hakusivua vastaava v291-pohja, lisätty Järvenpään tiedosto)
+
+ASENNUS GITHUBIIN:
+1. Pura ZIP. Vie nämä neljä tiedostoa suoraan GitHub-sivuston pääkansioon index.html:n viereen.
+2. Korvaa vain mukana olevat samannimiset tiedostot. Älä poista muita sivuja ja tiedostoja.
+3. Jos matkaparkit.html-sivuasi on muutettu v291:n jälkeen, ÄLÄ korvaa sitä sellaisenaan: lisää sen <head>-osioon seuraava rivi muiden tietoskriptien jälkeen mutta ennen v243.js-tiedostoa:
+   <script src="jarvenpaa-karavaani-v294.js?v=294" defer></script>
+4. Odota GitHub Pagesin julkaisu ja päivitä selaimen sivu Ctrl+F5.
+5. Avaa jarvenpaa.html ja matkaparkit.html, valitse Uusimaa / Järvenpää ja tarkista Pajula sekä STEP.
+
+TÄRKEÄÄ:
+- v293 SFC-päivitys säilyy. Tämä paketti EI korvaa leirintaalueet.html:ää.
+- Matkaparkkien tiedot on tarkistettu suoraan Pajulan ja STEP-koulutuksen lähteistä; STEP on kesäkausikohde.
+- Pajulan 48 € palvelupakettiin sisältyvät WC, suihku, sauna ja vesipiste; 28 € pakettiin sähkö. Saatavuus kysyttävä puhelimitse.
+- Harmaavesi- ja kemiallisen WC:n tyhjennyksiä ei ole vahvistettu kummallekaan kohteelle, eikä niitä lisätä palvelurasteihin.
+- 2026 aukiolot ja hinnat muuttuvat; oppaassa kehotetaan tarkistamaan tiedot toimijoilta.
+
+Käytettyjä lähteitä: jarvenpaa.fi, jarvenpaantaidemuseo.fi, ainola.fi, bbpajula.fi, step.fi, visittuusulanjarvi.fi, tervanokansatama.com, vanhankylankartano.com, huvilassa.fi.
