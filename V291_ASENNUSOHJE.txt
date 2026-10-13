@@ -1,0 +1,16 @@
+MATKAILE SUOMESSA v291 – VAALEA YHTENÄINEN ETUSIVU
+
+Lataa ZIP-paketin KAIKKI tiedostot GitHub-repositorion pääkansioon
+(samaan kansioon kuin index.html). Korvaa vain samannimiset tiedostot.
+Älä poista muita tiedostoja tai kansioita.
+
+Muutokset v290-versioon:
+- Hyväksytty logo säilyy täysin ennallaan.
+- Logon ympärillä ollut iso tumma vihreä laatikko poistettu.
+- Etusivun yläosa vaalea, pehmeästi vaihtuva väripinta ilman jyrkkää rajaa.
+- Logon alla olevat esittelytekstit tummanvihreällä ja luvut harmaanvihreällä.
+- Hakukenttä jatkuu samalla vaalealla taustalla ilman erillistä reunustettua laatikkoa.
+- 4 päävalintaa, valikot, hakutoiminnot ja aiemmat korjaukset ennallaan.
+- Muita sivuja ei muuteta.
+
+Päivitys ei julkaistu automaattisesti GitHubiin.
