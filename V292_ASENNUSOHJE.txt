@@ -1,0 +1,21 @@
+MATKAILE SUOMESSA v292 – KAIKKI 58 SFC-LEIRINTÄALUETTA
+
+PÄIVITYS NYKYISEEN SIVUSTOON (myös v291:n jälkeen)
+1. Avaa GitHub-repositorion pääkansio (index.html:n kansio).
+2. Lataa tämän ZIPin kolme tiedostoa pääkansioon (älä lisää ZIPiä sellaisenaan).
+3. Korvaa samanniminen leirintaalueet.html. Lisää kaksi uutta tiedostoa.
+4. Älä poista muita sivuston tiedostoja tai korvaa index.html-tiedostoa.
+
+SISÄLTÖ
+- Virallisen SF-Caravanin 8.9.2026 päivitetyn listauksen 58 yhdistysaluetta.
+- Nimet, osoitteet, kunnat, maakunnat, kotisivulinkit (jos löytyvät virallisesta listauksesta).
+- Aiemmin olemassa olevat kohteet merkitään SFC-kohteiksi: duplikaatteja ehkäistään.
+- Olemassa oleva SFC-rasti toimii maakunnan, kunnan ja nimihakukentän rinnalla.
+- Uusille kohteille kevyt yksittäinen tietonäkymä ja reittiohje.
+- Aukioloa ei oleteta ympärivuotiseksi. Kaksi toimijan lähteistä vahvistettua poikkeusta: Hietasaari ja Hopeaperä.
+- Aiemmin vahvistettuja palveluja, aukioloa tai muiden sivujen tietoja ei poisteta.
+
+LÄHDE (tarkistettu 13.10.2026)
+https://www.karavaanarit.fi/karavaanarin-tietopankki/leirintamatkailu/leirinta-suomessa/sf-caravan-leirintaalueet/
+
+Huom. Tämä on GitHubiin ladattava päivityspaketti; ChatGPT ei ole vienyt sitä GitHubiin.
