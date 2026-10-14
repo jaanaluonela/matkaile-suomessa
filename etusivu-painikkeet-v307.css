@@ -1,0 +1,25 @@
+/* Compact illustrated main buttons; overrides earlier per-card styles. */
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306{display:grid!important;grid-template-columns:100px minmax(0,1fr) 22px!important;grid-column:1/-1!important;align-items:center!important;gap:14px!important;min-height:110px!important;height:auto!important;padding:0 15px 0 0!important;margin:0!important;border:1px solid #d3e0d5!important;border-radius:21px!important;background:#f4f6ee!important;overflow:hidden!important;box-shadow:0 4px 14px #224e3b09!important;color:#194e40!important;text-decoration:none!important;text-align:left!important;flex-direction:row!important;transition:transform .18s ease,box-shadow .18s ease}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306::before,body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306::after{display:none!important;content:none!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306{display:block!important;width:100px!important;height:110px!important;object-fit:cover!important;max-width:none!important;margin:0!important;align-self:stretch!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 strong{display:block!important;font:800 clamp(18px,4.6vw,23px)/1.2 system-ui!important;letter-spacing:-.025em!important;margin:0!important;color:#194e40!important;text-align:left!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 small{display:block!important;font:500 13px/1.4 system-ui!important;color:#667970!important;margin-top:7px!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-arrow-v306{font:600 24px/1 system-ui!important;display:block!important}
+body[data-home="true"] .home-primary-links-v290 .menu > #home-route-v306{background:#eaf1ec!important}
+body[data-home="true"] .home-primary-links-v290 .menu > #archipelago-route-v233{background:#edf4f5!important}
+body[data-home="true"] .home-primary-links-v290 .menu > #home-memories-v306{background:#f7f0e5!important}
+body[data-home="true"] .home-feature-v306:focus-visible{outline:3px solid #cc7653!important;outline-offset:4px!important}
+@media(hover:hover){body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306:hover{transform:translateY(-2px);box-shadow:0 7px 20px #224e3b16!important}}
+@media(min-width:650px){body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306{grid-template-columns:140px minmax(0,1fr) 30px!important;min-height:116px!important}body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306{width:140px!important;height:116px!important}}
+@media(prefers-reduced-motion:reduce){body[data-home="true"] .home-feature-v306{transition:none!important}}
+
+/* Image windows from the approved mockup; crops are handled by CSS. */
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306{grid-template-columns:34% minmax(0,1fr) 18px!important;gap:12px!important;min-height:112px!important;height:112px!important;padding-right:12px!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306{width:100%!important;height:100%!important;background-image:url('etusivu-kuvitukset-v307.png');background-repeat:no-repeat;background-size:312.195% 552.518%;background-position-x:4.167%}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .art-stops{background-position-y:22.178%}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .art-route{background-position-y:46.184%}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .art-ferry{background-position-y:70.032%}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .art-memories{background-position-y:94.038%}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 strong{font-size:clamp(16px,4.3vw,23px)!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 small{font-size:12px!important}
+@media(min-width:650px){body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306{height:150px!important;grid-template-columns:34% minmax(0,1fr) 24px!important}body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 small{font-size:15px!important}}
