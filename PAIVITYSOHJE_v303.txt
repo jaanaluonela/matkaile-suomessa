@@ -1,0 +1,17 @@
+Matkaile Suomessa v303 – JÄRVISYDÄN, RANTASALMI (päivitys v302:n päälle)
+
+Lisätty:
+- Järvisydän näkyy etusivun nimihakuna, nimellä ja Järvisydämen karavaanialue -haulla.
+- Järvisydämen karavaanialue näkyy matkaparkkihauissa (ei virheellisesti tavallisena leirintäalueena).
+- Järvisydän näkyy Pysähdy matkalla -sivun Nähtävyydet-osiossa; ei kahdesti saman hakunäkymän tuloksissa.
+- Yksi kohdesivu jarvisydan.html sisältää karavaanialueen palvelut ja elämykset.
+- Tietoihin EI merkitty kemiallisen WC:n tyhjennystä, koska sitä ei ole.
+
+Asennus:
+1. Edellyttää aiempaa v302-päivitystä.
+2. Lisää kaikki ZIP-paketin tiedostot GitHub-repositorion juureen ja korvaa samannimiset tiedostot.
+3. Pidä muut sivuston tiedostot ja tietokannat ennallaan.
+4. Odota GitHub Pagesin päivittymistä. Tämä ZIP ei julkaise päivitystä automaattisesti.
+
+Lähde: https://www.jarvisydan.com/karavaanialue/
+Tarkistettu 14.10.2026. Tarkista aukiolo ja saatavuus ennen matkaa.
