@@ -394,6 +394,270 @@
   <script defer src="alavalikko-v304.js?v=304"></script>
 
 <link rel="stylesheet" href="etusivu-painikkeet-v310.css?v=310"><script defer src="etusivu-painikkeet-v310.js?v=310"></script><link rel="stylesheet" href="etusivu-opaste-v311.css?v=311">
+<style id="ms-desktop-v314">
+
+/* Matkaile Suomessa v314 tietokonenäkymä.
+   Vaikuttaa vain etusivuun ja vain vähintään 980px leveisiin ikkunoihin.
+   Mobiilin v313 ulkoasu, sisällöt ja toiminnallisuus säilytetään. */
+@media screen and (min-width: 980px) {
+  html { scroll-padding-top: 86px !important; scroll-padding-bottom: 0 !important; }
+  body[data-home="true"] {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    background: linear-gradient(180deg,#e8f1e9 0%,#f7f9f5 44%,#edf3ed 100%) !important;
+  }
+  body[data-home="true"] .home-shell {
+    display: grid !important;
+    width: min(calc(100% - 64px), 1220px) !important;
+    max-width: 1220px !important;
+    min-height: auto !important;
+    grid-template-columns: minmax(0, 1.65fr) minmax(340px, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 26px 26px !important;
+    align-items: stretch;
+    margin: 100px auto 52px !important;
+    padding: 30px 34px 38px !important;
+    border: 1px solid #dbe9de;
+    border-radius: 28px;
+    background: #fffdfa !important;
+    box-shadow: 0 16px 55px rgba(25, 73, 49, .08);
+  }
+  body[data-home="true"] .home-shell > .hero {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0 !important;
+    padding: 24px 28px !important;
+    min-height: 264px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    border: 1px solid #d5e6d9 !important;
+    border-radius: 23px !important;
+    background: linear-gradient(135deg, #e9f3e8, #fcfdf7 72%) !important;
+    box-shadow: none !important;
+    color: #195240 !important;
+  }
+  body[data-home="true"] .hero-content { width: 100% !important; }
+  body[data-home="true"] .home-brand-banner-v290 {
+    display: block !important;
+    width: min(100%, 660px) !important;
+    max-width: 660px !important;
+    height: auto !important;
+    margin: 0 auto 8px !important;
+    object-fit: contain !important;
+  }
+  body[data-home="true"] .home-hero-lead-v290 {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    color: #375f50 !important;
+    text-align: center;
+    margin: 8px 0 12px !important;
+  }
+  body[data-home="true"] .hero-stats {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 12px !important;
+  }
+  body[data-home="true"] .hero-stats span {
+    color: #3e6956 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+  body[data-home="true"] .home-shell > .home-explore-v251 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 !important;
+    padding: 27px 26px !important;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 23px !important;
+    background: #f1f7f0 !important;
+    border: 1px solid #d6e5d8 !important;
+    box-shadow: none !important;
+  }
+  body[data-home="true"] .home-explore-v251 h2 {
+    font-size: clamp(23px, 2.2vw, 30px) !important;
+    margin: 0 0 10px !important;
+  }
+  body[data-home="true"] .home-explore-top-v251 p:not(.home-explore-kicker-v251) {
+    margin-bottom: 18px !important;
+    font-size: 15px;
+  }
+  body[data-home="true"] .home-explore-search-v251 input {
+    min-height: 58px !important;
+    font-size: 17px !important;
+    border-radius: 15px !important;
+  }
+  body[data-home="true"] .home-explore-v251 .search-results {
+    z-index: 50;
+    position: absolute;
+    top: calc(100% - 20px);
+    left: 26px;
+    right: 26px;
+    margin: 0;
+  }
+  body[data-home="true"] .home-shell > .home-primary-links-v290 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-width: 0;
+    margin: 0 !important;
+  }
+  body[data-home="true"] .home-shell .home-primary-links-v290 .menu {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a {
+    grid-column: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 208px !important;
+    height: 208px !important;
+    border-radius: 23px !important;
+    overflow: hidden;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a:is([href="maakunnat.html"],[href="leirintaalueet.html"],[href="matkaparkit.html"],[href="lahella-minua.html"]) {
+    padding: 20px 10px 22px !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a:is([href="maakunnat.html"],[href="leirintaalueet.html"],[href="matkaparkit.html"],[href="lahella-minua.html"])::before {
+    width: min(82%, 170px) !important;
+    height: 112px !important;
+    margin: 0 auto 3px !important;
+  }
+  body[data-home="true"] .home-shell .home-primary-links-v290 .menu > a.home-feature-v306:is(#home-stops-v308,#home-route-v306,#archipelago-route-v233,#home-memories-v306) {
+    grid-column: auto !important;
+    min-height: 208px !important;
+    height: 208px !important;
+    padding: 20px 10px 22px !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+  body[data-home="true"] .home-shell .home-primary-links-v290 .menu > a.home-feature-v306:is(#home-stops-v308,#home-route-v306,#archipelago-route-v233,#home-memories-v306) .feature-art-v306 {
+    width: min(82%, 170px) !important;
+    height: 112px !important;
+    flex: 0 0 112px !important;
+    margin: 0 auto 3px !important;
+    object-fit: contain !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a strong,
+  body[data-home="true"] .home-shell .home-primary-links-v290 .menu > a.home-feature-v306 strong {
+    font-size: clamp(16px, 1.5vw, 20px) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a:focus-visible {
+    outline: 3px solid #d47f40 !important;
+    outline-offset: 4px !important;
+  }
+  body[data-home="true"] .home-shell > .home-overview-v311 {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 0 !important;
+    padding: 30px 34px 26px !important;
+    border-radius: 24px !important;
+    box-shadow: none !important;
+  }
+  body[data-home="true"] .home-overview-v311 > h2 {
+    font-size: 30px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-intro-v311 {
+    font-size: 16px !important;
+    margin-bottom: 20px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-items-v311 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px 34px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-item-v311 {
+    padding: 18px 0 !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 16px !important;
+    min-width: 0;
+    border-bottom: 1px solid #dae7dc;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-icon-v311 {
+    width: 54px !important;
+    height: 54px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-copy-v311 h3 {
+    font-size: 18px !important;
+    margin-bottom: 6px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-copy-v311 p {
+    font-size: 15px !important;
+  }
+  body[data-home="true"] .home-overview-v311 .home-overview-closing-v311 {
+    font-size: 16px !important;
+    margin-top: 16px !important;
+    padding-top: 18px !important;
+  }
+  /* Puhelimen alapalkki muuttuu leveällä näytöllä tietokoneen ylävalikoksi. */
+  body[data-home="true"] .ms302-nav {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+    min-height: 70px !important;
+    padding: 8px 28px !important;
+    background: rgba(255,253,250,.97) !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #d7e6dc !important;
+    box-shadow: 0 6px 20px rgba(23,73,54,.06) !important;
+  }
+  body[data-home="true"] .ms302-nav .ms302-nav-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    gap: 14px !important;
+    max-width: 1220px !important;
+    min-height: 54px !important;
+    margin: 0 auto !important;
+  }
+  body[data-home="true"] .ms302-nav a {
+    flex-direction: row !important;
+    gap: 10px !important;
+    min-height: 48px !important;
+    padding: 8px 15px !important;
+    border-radius: 13px !important;
+  }
+  body[data-home="true"] .ms302-nav .ms302-icon { font-size: 22px !important; }
+  body[data-home="true"] .ms302-nav .ms302-label { font-size: 15px !important; }
+  body[data-home="true"] .home-shell > .v244-memories {
+    grid-column: 1 / -1;
+  }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    body[data-home="true"] .home-primary-links-v290 .menu > a { transition: transform .18s ease, box-shadow .18s ease; }
+    body[data-home="true"] .home-primary-links-v290 .menu > a:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 9px 24px rgba(31,78,56,.13) !important;
+    }
+  }
+}
+@media screen and (min-width: 980px) and (max-width: 1120px) {
+  body[data-home="true"] .home-shell {
+    width: calc(100% - 42px) !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(310px, 1fr);
+    padding: 23px 25px 33px !important;
+    gap: 20px !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a,
+  body[data-home="true"] .home-shell .home-primary-links-v290 .menu > a.home-feature-v306:is(#home-stops-v308,#home-route-v306,#archipelago-route-v233,#home-memories-v306) {
+    height: 188px !important;
+    min-height: 188px !important;
+  }
+}
+</style>
 </head>
 <body data-home="true">
   <main class="home-shell">
