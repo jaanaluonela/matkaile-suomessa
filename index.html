@@ -702,14 +702,14 @@
  .msv-road{font-size:60px;line-height:.9;width:146px;flex:none;text-align:center}
  .msv-stops h2{font-size:31px;line-height:1.1;letter-spacing:-.038em;font-weight:850;margin:0 0 5px;color:#13483c}
  .msv-stops p{font-size:14px;margin:0;color:#56665d;line-height:1.4}
- .msv-stop-form{display:flex;gap:8px;margin-left:164px;position:relative}
+ .msv-stop-form{display:flex;gap:8px;margin-left:0;position:relative}
  .msv-main-search{height:43px;background:white;border:1px solid #dedfda;border-radius:11px;display:flex;align-items:center;flex:1;min-width:0;padding:0 14px;gap:10px;box-shadow:0 3px 7px rgba(37,56,44,.04)}
  .msv-main-search:focus-within{border-color:#207354;box-shadow:0 0 0 3px #d4eade}
  .msv-main-search input{outline:0;border:0;background:transparent;width:100%;min-width:0;font-size:13px;color:#173e34;font-family:inherit}
  .msv-region{white-space:nowrap;display:flex;align-items:center;gap:5px;border:1px solid #dedfda;background:#fff;padding:0 12px;border-radius:11px;font-size:12.4px;font-weight:690}
  .msv-go{border:0;background:#0d5848;color:white;border-radius:11px;padding:0 19px;white-space:nowrap;font-size:12.2px;font-weight:760;cursor:pointer}
  .msv-go:hover{background:#084637}
- .msv-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin:11px 0 0 164px}
+ .msv-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin:11px 0 0 0}
  .msv-tags a{min-height:33px;display:inline-flex;align-items:center;justify-content:center;gap:5px;background:#fffdf8;border:1px solid #dddcd1;padding:7px 13px;border-radius:999px;box-shadow:0 2px 4px rgba(45,54,33,.035);font-size:11.4px;font-weight:750;white-space:nowrap}
  .msv-tags a:first-child,.msv-tags a:hover{background:#0d5b48;color:#fff;border-color:#0d5b48}
  .msv-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:13px}
@@ -743,7 +743,7 @@
  .msv-brand{min-width:160px;font-size:16px}.msv-brand-icon{width:47px}.msv-nav{gap:10px}.msv-nav a{font-size:10.7px}.msv-head-search{width:155px}.msv-header-actions{gap:9px}
  .msv-main{width:calc(100% - 38px)}.msv-hero-content{width:calc(100% - 38px)}
  .msv-primary-card{gap:7px;padding:12px 9px}.msv-icon{width:54px;flex-basis:54px;font-size:37px}.msv-card-copy strong{font-size:13.5px}.msv-card-copy small{font-size:10.5px}.msv-arr{font-size:15px}
- .msv-road{width:85px;font-size:48px}.msv-stop-form,.msv-tags{margin-left:103px}
+ .msv-stop-form,.msv-tags{margin-left:0}
  .msv-small-card{padding:10px}.msv-small-ico{font-size:25px}.msv-small-copy strong{font-size:12px}.msv-small-copy small{font-size:10px}
  .msv-photo-card img{height:115px}
 }
@@ -770,12 +770,12 @@
  <a class="msv-primary-card" href="lahella-minua.html"><span class="msv-icon" aria-hidden="true">📍</span><span class="msv-card-copy"><strong>Lähellä minua</strong><small>Löydä kiinnostavat kohteet läheltä</small></span><span class="msv-arr" aria-hidden="true">→</span></a>
  </section>
  <section class="msv-stops" aria-labelledby="msv-stops-title">
- <div class="msv-stops-head"><span class="msv-road" aria-hidden="true">🚗🌲</span><div><h2 id="msv-stops-title">Pysähdy matkalla</h2><p>Nähtävyydet, luonto, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat.</p></div></div>
+ <div class="msv-stops-head"><div><h2 id="msv-stops-title">Pysähdy matkalla</h2><p>Nähtävyydet, luonto, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat.</p></div></div>
  <div class="msv-stop-form"><div class="msv-search-wrap" style="flex:1;min-width:0"><form class="msv-main-search" data-msv-form="main" role="search"><span aria-hidden="true">⌕</span><input type="search" data-msv-search="main" placeholder="Hae kohdetta, esim. Fiskars, Vääksy tai kahvila…" autocomplete="off" aria-label="Hae pysähdyspaikkaa" aria-controls="msv-main-results" aria-expanded="false"></form><div class="msv-results" id="msv-main-results" role="listbox" aria-label="Hakuehdotukset"></div></div><span class="msv-region" aria-label="Haku koko Suomen alueelta">⌖ Koko Suomi</span><button type="button" class="msv-go" id="msv-find-button">Hae kohteita →</button></div>
  <div class="msv-tags" aria-label="Pysähdyskohteiden kategoriat"><a href="pysahdy-matkalla.html">✨ Kaikki</a><a href="pysahdy-matkalla.html">🏛️ Nähtävyydet</a><a href="pysahdy-matkalla.html">🌲 Luonto ja retket</a><a href="pysahdy-matkalla.html">🚐 Taukopaikat</a><a href="ruukkikylat.html">🏰 Ruukkikylät</a><a href="pysahdy-matkalla.html">☕ Kahvilat ja ravintolat</a></div>
  </section>
  <section class="msv-shortcuts" aria-label="Lisää matkailuoppaan palveluita">
- <a id="msv-route-link" class="msv-small-card" href="https://www.google.com/maps/dir/" target="_blank" rel="noopener noreferrer"><span class="msv-small-ico" aria-hidden="true">🧭</span><span class="msv-small-copy"><strong>Suunnittele reitti</strong><small>Suunnittele oma matkareittisi</small></span><span aria-hidden="true">→</span></a>
+ <a id="msv-route-link" class="msv-small-card" href="reittisuunnittelu.html"><span class="msv-small-ico" aria-hidden="true">🧭</span><span class="msv-small-copy"><strong>Suunnittele reitti</strong><small>Suunnittele oma matkareittisi</small></span><span aria-hidden="true">→</span></a>
  <a class="msv-small-card" href="saariston-rengastie.html"><span class="msv-small-ico" aria-hidden="true">⛴️</span><span class="msv-small-copy"><strong>Saariston rengastie</strong><small>Lautat, reitti ja saariston kohteet</small></span><span aria-hidden="true">→</span></a>
  <a class="msv-small-card" href="paivakirja.html"><span class="msv-small-ico" aria-hidden="true">🏞️</span><span class="msv-small-copy"><strong>Omat matkat</strong><small>Tallenna suosikit ja matkamuistot</small></span><span aria-hidden="true">→</span></a>
  <a class="msv-small-card" href="#msv-featured" id="msv-fav-shortcut"><span class="msv-small-ico" aria-hidden="true">⭐</span><span class="msv-small-copy"><strong>Suosikit</strong><small>Tallentamasi kiinnostavat kohteet</small></span><span aria-hidden="true">→</span></a>
@@ -1013,9 +1013,6 @@
       document.addEventListener('click',e=>{if(!input.closest('.msv-search-wrap').contains(e.target)){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');}});
     });
     const searchButton=root.querySelector('#msv-find-button');searchButton.addEventListener('click',()=>{const inp=root.querySelector('[data-msv-search="main"]');const q=inp.value.trim();if(!q){location.href='pysahdy-matkalla.html';return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html';});
-    /* Use the original site's native route planner link if v310 injected one. */
-    const originalRoute=document.getElementById('home-route-v306');
-    if(originalRoute){const href=originalRoute.getAttribute('href');if(href && href!=='#'){const link=root.querySelector('#msv-route-link');link.setAttribute('href',href);link.removeAttribute('target');link.removeAttribute('rel');}}
     const storageKey='ms_v315_home_favorites';let fav=[];
     try{const saved=JSON.parse(localStorage.getItem(storageKey)||'[]');fav=Array.isArray(saved)?saved.filter(x=>Number.isInteger(x)):[];}catch(e){}
     const toggle=root.querySelector('#msv-favs-toggle');const short=root.querySelector('#msv-fav-shortcut');const count=root.querySelector('#msv-fav-count');const heading=root.querySelector('#msv-featured-title');const empty=root.querySelector('#msv-no-favs');let filtered=false;
