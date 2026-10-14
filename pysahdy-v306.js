@@ -16,7 +16,13 @@
  const natureDesc=/kansallispuist|luontopol|luontokoh|luonnonsuojelualu|retkeilyreit|vaellusreit|nakoalapaik|nakoalatorn|vesiputou|pitkospuu/;
  const foodRx=/kahvil|kahvi|munkki|leipomo|teehetk|vohveli|cafe|paviljonki|ravintol|ruokail|lounas|bistro|illallinen|ruokaa|keittio|konditoria/;
  // Prioritize the dedicated ruukkikyla entries, then shared visit highlights and nearby items.
- const raw=[...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
+ const satakuntaStops=(window.msSatakunta318||[]).flatMap(t=>t.sites.map(s=>({
+ name:s.title,city:t.name,region:'Satakunta',description:s.description,address:t.name+', Satakunta',
+ type:/ruukki/i.test(s.title)?'ruukki':s.cat==='luonto'?'nature':(['tauko','ruoka','caravan'].includes(s.cat)?'stop':'sight'),
+ url:'satakunta-kunta.html?kunta='+encodeURIComponent(t.name),
+ mapUrl:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.title+', '+t.name+', Satakunta')
+ })));
+ const raw=[...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),...satakuntaStops,{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
  // Kuntien maakuntajaon lähde on sivuston nykyinen suomi-kunnat-v253.js.
  const regions=window.msFinlandRegions2026||{};
  const regionByTown=new Map(Object.entries(regions).flatMap(([name,cities])=>cities.map(city=>[city,name])));

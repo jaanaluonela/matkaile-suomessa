@@ -1,0 +1,24 @@
+MATKAILE SUOMESSA – Satakunta v318
+
+Vaihda GitHubin päähakemistoon ZIPin 10 tiedostoa. Korvaa samannimiset tiedostot.
+Huom: maakunnat.html ja kunnat.html ovat lähtökohtaisesti alkuperäisestä matkaile-suomessa-main.zip -paketista, ja niihin lisättiin vain Satakunta-scriptin lataus. Jos olet tehnyt näihin tiedostoihin erillisiä julkaisemattomia päivityksiä myöhemmin, yhdistä vain uusi v318-satakunta-linkit.js-latausrivi niihin.
+
+SIVUT:
+- satakunta.html: Satakunnan maakuntaopas, 16 kuntaa, kohdevinkit, kuvakortit.
+- satakunta-kunta.html?kunta=Eura : yksi yhteinen sivupohja 16 kunnalle, jokaiselle omat sisällöt.
+- satakunta-data-v318.js: paikkakuntien esittelyt, väkiluvut 31.12.2025, 50+ kohdevinkkiä, vaakunat ja kuvaviitteet.
+- satakunta-v318.css: erillinen desktop- ja mobiiliasettelu.
+- v318-satakunta-linkit.js: reitittää kaikki Satakunnan kunnat uusiin oppaisiin ja lisää Satakunta-opaslinkin maakuntaluetteloon.
+- maakunnat.html ja kunnat.html: ainoastaan uusi skriptilataus.
+- pysahdy-matkalla.html ja pysahdy-v306.js: Satakunnan 53 kohdetta saa näkyviin maakuntahaussa, kun valitset Satakunta. Näiden lähtöversiona on v317, joten aiempi maakuntavalikkokorjaus säilyy.
+
+VALOKUVAT: oikeita Wikimedia Commons -kuvia ulkoisilla HTTPS-osoitteilla. Niitä ei upotettu ZIPiin, joten kuvat tarvitsevat internetyhteyden. Kuvien oikeudet tarkistettu. Kuvan tekijä ja lisenssi näkyvät sivulla. Kuva voidaan rajata CSS object-fit:cover -tyylillä, mikä on ei-deskruktiivinen esitystapa.
+
+VAAKUNAT: 16 Wikimedia Commons -vaakunaa, lähdelinkki jokaisella kuntasivulla.
+
+VÄKILUVUT: 31.12.2025 tilastotiedot, Satakunta yhteensä 210 112, lähteet: https://stat.fi/fi/tilastot/tietoa-teemoittain/suomi-lukuina/vaesto-ja-yhteiskunta sekä https://kuntavaesto.com/maakunta/satakunta/
+
+KOHDEFAKTAT: Satakuntaliitto https://satakunta.fi/info/tietopaketti-satakunnasta/satakunnan-kunnat-ja-kartat/
+Kaikki kohteet ovat matkaideoita, eivät luvattuja palveluaukioloja.
+
+HUOM! Tätä päivitystä ei ole julkaistu GitHubiin. Sivut tulevat näkyviin vasta kun tiedostot on siirretty sivustolle.
