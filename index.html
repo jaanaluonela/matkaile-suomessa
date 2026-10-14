@@ -770,9 +770,9 @@
  <a class="msv-primary-card" href="lahella-minua.html"><span class="msv-icon" aria-hidden="true">📍</span><span class="msv-card-copy"><strong>Lähellä minua</strong><small>Löydä kiinnostavat kohteet läheltä</small></span><span class="msv-arr" aria-hidden="true">→</span></a>
  </section>
  <section class="msv-stops" aria-labelledby="msv-stops-title">
- <div class="msv-stops-head"><div><h2 id="msv-stops-title">Pysähdy matkalla</h2><p>Nähtävyydet, luonto, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat.</p></div></div>
+ <div class="msv-stops-head"><div><h2 id="msv-stops-title">Pysähdy matkalla</h2><p>Nähtävyydet, lasten paikat, eläinpuistot, taukopaikat ja makuelämykset.</p></div></div>
  <div class="msv-stop-form"><div class="msv-search-wrap" style="flex:1;min-width:0"><form class="msv-main-search" data-msv-form="main" role="search"><span aria-hidden="true">⌕</span><input type="search" data-msv-search="main" placeholder="Hae kohdetta, esim. Fiskars, Vääksy tai kahvila…" autocomplete="off" aria-label="Hae pysähdyspaikkaa" aria-controls="msv-main-results" aria-expanded="false"></form><div class="msv-results" id="msv-main-results" role="listbox" aria-label="Hakuehdotukset"></div></div><span class="msv-region" aria-label="Haku koko Suomen alueelta">⌖ Koko Suomi</span><button type="button" class="msv-go" id="msv-find-button">Hae kohteita →</button></div>
- <div class="msv-tags" aria-label="Pysähdyskohteiden kategoriat"><a href="pysahdy-matkalla.html">✨ Kaikki</a><a href="pysahdy-matkalla.html">🏛️ Nähtävyydet</a><a href="pysahdy-matkalla.html">🌲 Luonto ja retket</a><a href="pysahdy-matkalla.html">🚐 Taukopaikat</a><a href="ruukkikylat.html">🏰 Ruukkikylät</a><a href="pysahdy-matkalla.html">☕ Kahvilat ja ravintolat</a></div>
+ <div class="msv-tags" aria-label="Pysähdyskohteiden kategoriat"><a href="pysahdy-matkalla.html">✨ Kaikki</a><a href="pysahdy-matkalla.html?tyyppi=sight">🏛️ Nähtävyydet</a><a href="pysahdy-matkalla.html?tyyppi=nature">🌲 Luonto ja retket</a><a href="pysahdy-matkalla.html?tyyppi=stop">🚐 Taukopaikat</a><a href="pysahdy-matkalla.html?tyyppi=ruukki">🏰 Ruukkikylät</a><a href="pysahdy-matkalla.html?tyyppi=food">☕ Kahvilat ja ravintolat</a><a href="pysahdy-matkalla.html?tyyppi=kids">🧸 Lasten kanssa</a><a href="pysahdy-matkalla.html?tyyppi=animals">🐾 Eläinpuistot</a></div>
  </section>
  <section class="msv-shortcuts" aria-label="Lisää matkailuoppaan palveluita">
  <a id="msv-route-link" class="msv-small-card" href="reittisuunnittelu.html"><span class="msv-small-ico" aria-hidden="true">🧭</span><span class="msv-small-copy"><strong>Suunnittele reitti</strong><small>Suunnittele oma matkareittisi</small></span><span aria-hidden="true">→</span></a>
@@ -1004,15 +1004,15 @@
       const show=()=>{out.replaceChildren();const q=input.value.trim();if(!q){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');return;}
         const found=matches(q);
         if(found.length){found.forEach(x=>out.appendChild(makeItem(x)))}
-        else {const a=makeItem({name:'Selaa pysähdyskohteita',meta:'Ei suoraa osumaa – avaa kohdehaku',url:'pysahdy-matkalla.html'});out.appendChild(a)}
+        else {const a=makeItem({name:'Selaa pysähdyskohteita',meta:'Ei suoraa osumaa – avaa kohdehaku',url:'pysahdy-matkalla.html?haku='+encodeURIComponent(q)});out.appendChild(a)}
         out.classList.add('is-open');input.setAttribute('aria-expanded','true');
       };
       input.addEventListener('input',show);input.addEventListener('focus',show);
-      form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q){input.focus();return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html';});
+      form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q){input.focus();return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html?haku='+encodeURIComponent(q);});
       input.addEventListener('keydown',e=>{if(e.key==='Escape'){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');}});
       document.addEventListener('click',e=>{if(!input.closest('.msv-search-wrap').contains(e.target)){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');}});
     });
-    const searchButton=root.querySelector('#msv-find-button');searchButton.addEventListener('click',()=>{const inp=root.querySelector('[data-msv-search="main"]');const q=inp.value.trim();if(!q){location.href='pysahdy-matkalla.html';return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html';});
+    const searchButton=root.querySelector('#msv-find-button');searchButton.addEventListener('click',()=>{const inp=root.querySelector('[data-msv-search="main"]');const q=inp.value.trim();if(!q){location.href='pysahdy-matkalla.html';return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html?haku='+encodeURIComponent(q);});
     const storageKey='ms_v315_home_favorites';let fav=[];
     try{const saved=JSON.parse(localStorage.getItem(storageKey)||'[]');fav=Array.isArray(saved)?saved.filter(x=>Number.isInteger(x)):[];}catch(e){}
     const toggle=root.querySelector('#msv-favs-toggle');const short=root.querySelector('#msv-fav-shortcut');const count=root.querySelector('#msv-fav-count');const heading=root.querySelector('#msv-featured-title');const empty=root.querySelector('#msv-no-favs');let filtered=false;

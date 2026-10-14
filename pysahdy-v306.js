@@ -8,7 +8,7 @@
  const buttons=[...document.querySelectorAll('[data-ms302-category]')];
  const favKey='ms_favorites_v301';
  const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
- const allowed=new Set(['all','sight','special','nature','stop','ruukki','food']);
+ const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','kids','animals']);
  const params=new URLSearchParams(location.search);
  let category=allowed.has(params.get('tyyppi'))?params.get('tyyppi'):'all';
  let visible=12;
@@ -16,13 +16,8 @@
  const natureDesc=/kansallispuist|luontopol|luontokoh|luonnonsuojelualu|retkeilyreit|vaellusreit|nakoalapaik|nakoalatorn|vesiputou|pitkospuu/;
  const foodRx=/kahvil|kahvi|munkki|leipomo|teehetk|vohveli|cafe|paviljonki|ravintol|ruokail|lounas|bistro|illallinen|ruokaa|keittio|konditoria/;
  // Prioritize the dedicated ruukkikyla entries, then shared visit highlights and nearby items.
- const satakuntaStops=(window.msSatakunta318||[]).flatMap(t=>t.sites.map(s=>({
- name:s.title,city:t.name,region:'Satakunta',description:s.description,address:t.name+', Satakunta',
- type:/ruukki/i.test(s.title)?'ruukki':s.cat==='luonto'?'nature':(['tauko','ruoka','caravan'].includes(s.cat)?'stop':'sight'),
- url:'satakunta-kunta.html?kunta='+encodeURIComponent(t.name),
- mapUrl:'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.title+', '+t.name+', Satakunta')
- })));
- const raw=[...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),...satakuntaStops,{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
+ const oldKids=(window.stopExtrasV277||[]).filter(p=>p.group==='kids').map(p=>({...p,...((window.ms318PerhePaivitykset||{})[p.name]||{})}));
+ const raw=[...(window.ms318Kohteet||[]),...oldKids,...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
  // Kuntien maakuntajaon lähde on sivuston nykyinen suomi-kunnat-v253.js.
  const regions=window.msFinlandRegions2026||{};
  const regionByTown=new Map(Object.entries(regions).flatMap(([name,cities])=>cities.map(city=>[city,name])));
@@ -33,8 +28,10 @@
  const known=new Set();
  const items=raw.filter(p=>p && p.name && p.city && ['ruukki','sight','stop','nature'].includes(p.type)).map(p=>{
    const nature=p.type==='nature'||(p.type==='sight' && (natureName.test(norm(p.name))||natureDesc.test(norm(p.description))));
-   const food=p.type==='stop' && foodRx.test(norm(p.name+' '+(p.description||'')));
-   return {...p,nature,food,kind:p.type==='ruukki'?'ruukki':p.type==='nature'?'sight':p.type};
+   const kids=p.group==='kids';
+   const animals=kids && Array.isArray(p.subtypes) && p.subtypes.includes('animals');
+   const food=(!kids && p.type==='stop' && foodRx.test(norm(p.name+' '+(p.description||'')))) || (!kids && Array.isArray(p.subtypes) && p.subtypes.includes('food'));
+   return {...p,nature:!kids&&nature,food,kids,animals,kind:p.type==='ruukki'?'ruukki':p.type==='nature'?'sight':p.type};
  }).filter(p=>{
    const key=norm(p.city).replace(/\W/g,'')+'|'+norm(p.name).replace(/\W/g,'');
    if(known.has(key))return false;
@@ -46,19 +43,22 @@
  input.value=params.get('haku')||params.get('q')||'';
  const matchesType=p=>{
    if(category==='all')return true;
+   if(category==='kids')return p.kids;
+   if(category==='animals')return p.animals;
    if(category==='special')return !!p.special;
    if(category==='ruukki')return p.kind==='ruukki';
    if(category==='nature')return p.nature;
    if(category==='sight')return p.special||p.kind==='sight'&&!p.nature;
-   if(category==='stop')return p.kind==='stop'&&!p.food;
+   if(category==='stop')return p.kind==='stop'&&!p.food&&!p.kids;
    if(category==='food')return p.food;
    return true;
  };
- const label=p=>p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
+ const label=p=>p.animals?'🐾 Eläinpuisto tai eläinpiha':p.kids?'🧸 Lasten kanssa':p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
  function favorites(){try {const a=JSON.parse(localStorage.getItem(favKey)||'[]');return Array.isArray(a)?a:[];}catch{return [];}}
  function makeFavorite(p){
     const a=document.createElement('button');a.type='button';a.className='ms302-favorite';
-    const link='pysahdy-matkalla.html?tyyppi='+encodeURIComponent(p.kind==='ruukki'?'ruukki':p.food?'food':p.nature?'nature':p.kind)+'&haku='+encodeURIComponent(p.name);
+    const favType=p.animals?'animals':p.kids?'kids':p.kind==='ruukki'?'ruukki':p.food?'food':p.nature?'nature':p.kind;
+    const link='pysahdy-matkalla.html?tyyppi='+encodeURIComponent(favType)+'&haku='+encodeURIComponent(p.name);
     const update=()=>{const isSaved=favorites().some(x=>x.url===link);a.setAttribute('aria-pressed',String(isSaved));a.textContent=isSaved?'⭐ Tallennettu':'☆ Suosikki';};
     a.addEventListener('click',()=>{const f=favorites();const ix=f.findIndex(x=>x.url===link);
       if(ix>=0)f.splice(ix,1);else f.unshift({url:link,title:p.name+' · '+p.city,savedAt:new Date().toISOString()});
@@ -79,6 +79,8 @@
    const title=document.createElement('strong');title.textContent=p.name;
    card.append(tag,title);
    if(p.description){const d=document.createElement('p');d.textContent=p.description;card.append(d);}
+   if(p.address){const a=document.createElement('div');a.className='ms318-address';a.textContent='📍 '+p.address;card.append(a);}
+   if(p.access||p.season){const info=document.createElement('div');info.className='ms318-season';info.textContent=[p.access,p.season].filter(Boolean).join(' · ');card.append(info);}
    const actions=document.createElement('div');actions.className='ms302-actions';
    action(actions,'Tutustu',p.url);
    action(actions,'📍 Kartalle',p.mapUrl||'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.name+' '+p.city));
@@ -92,7 +94,7 @@
  }
  function render(){
    const q=norm(input.value.trim());
-   const matches=items.filter(p=>matchesType(p)&&(!region.value||getRegion(p)===region.value)&&(!q||norm([p.name,p.city,getRegion(p),p.description,p.address].join(' ')).includes(q)));
+   const matches=items.filter(p=>matchesType(p)&&(!region.value||getRegion(p)===region.value)&&(!q||norm([p.name,p.city,getRegion(p),p.description,p.address,p.aliases].join(' ')).includes(q)));
    const uniqueCount=matches.length;
    count.textContent=(region.value||'Koko Suomi')+' · '+uniqueCount+(uniqueCount===1?' kohde':' kohdetta');
    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ms302Category===category)));

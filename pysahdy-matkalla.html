@@ -11,19 +11,23 @@
 <script defer src="ruukkikylat-data-v302.js?v=302"></script>
 <script defer src="erikoiset-kohteet-v305.js?v=305"></script>
 <script defer src="suomi-kunnat-v253.js?v=253"></script>
-<script defer src="satakunta-data-v318.js?v=318"></script>
+<script defer src="pysahdy-kohteet-v277.js?v=277"></script>
+<script defer src="kiinnostavat-perhe-v318.js?v=318"></script>
 <script defer src="pysahdy-v306.js?v=306"></script>
 <script defer src="alavalikko-v304.js?v=304"></script>
-</head><body class="ms302-stops-page">
+<style>
+.ms318-address{font-size:12px;color:#386656;font-weight:660;line-height:1.5}
+.ms318-season{font-size:12px;color:#6f756a;line-height:1.4;margin:1px 0 6px}
+</style></head><body class="ms302-stops-page">
 <main class="ms302-stops" id="main">
   <header class="ms302-stops-intro">
     <h1>Pysähdy matkalla</h1>
-    <p>Nähtävyydet, luonto, taukopaikat ja makuelämykset yhdestä paikasta.</p>
+    <p>Nähtävyydet, lasten kohteet, eläinpuistot, taukopaikat ja makuelämykset yhdestä paikasta.</p>
   </header>
   <section class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
     <div class="ms302-stops-fields">
       <label>Maakunta<select id="ms302-region"><option value="">Koko Suomi</option></select></label>
-      <label>Hae kohdetta<input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"></label>
+      <label>Hae kohdetta<input id="ms302-query" type="search" placeholder="Esim. Muumimaailma, Mommila tai eläinpuisto" autocomplete="off"></label>
     </div>
     <div class="ms302-category" role="group" aria-label="Valitse kohdeluokka">
       <button type="button" data-ms302-category="all" aria-pressed="true">✨ Kaikki</button>
@@ -33,6 +37,8 @@
       <button type="button" data-ms302-category="stop" aria-pressed="false">🚐 Taukopaikat</button>
       <button type="button" data-ms302-category="ruukki" aria-pressed="false">🏭 Ruukkikylät</button>
       <button type="button" data-ms302-category="food" aria-pressed="false">☕ Kahvilat ja ravintolat</button>
+      <button type="button" data-ms302-category="kids" aria-pressed="false">🧸 Lasten kanssa</button>
+      <button type="button" data-ms302-category="animals" aria-pressed="false">🐾 Eläinpuistot ja eläinpihat</button>
     </div>
   </section>
   <div class="ms302-results-head"><p id="ms302-count" role="status" aria-live="polite">Haetaan kohteita…</p><button id="ms302-reset" type="button">Tyhjennä rajaukset</button></div>
