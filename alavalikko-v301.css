@@ -1,4 +1,4 @@
-/* Matkaile Suomessa v301: kiintea alapalkki jokaisella sivulla. */
+/* Matkaile Suomessa v303: kaikille sivuille yksi yhteinen alavalikko. */
 :root {--ms301-ink:#164b3d;--ms301-muted:#637a70;--ms301-border:#dbe6df;}
 html{scroll-padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))!important;}
 body{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))!important;}
@@ -38,7 +38,7 @@ body{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))!important;}
  padding:8px 10px;color:#754022;font-weight:700;cursor:pointer;}
 .ms301-empty{background:#edf5ef;border-radius:18px;padding:18px;}
 /* This stylesheet loads after older page styles, but the JS also removes obsolete nav. */
-body .bottom-nav,body nav.site-nav{display:none!important;}
+body .bottom-nav,body nav.site-nav,body nav[aria-label="Päävalikko"]{display:none!important;}
 @media (min-width:700px){.ms301-nav a{min-height:61px!important;}}
 
 .ms301-stop-categories{margin:18px 0;padding:17px;border-radius:18px;background:#eff6f0;border:1px solid #d8e7dc;}

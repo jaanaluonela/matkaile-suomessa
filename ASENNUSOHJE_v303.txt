@@ -1,0 +1,31 @@
+MATKAILE SUOMESSA – v303 ALAVALIKON YHTENÄISTÄMINEN
+13.10.2026
+
+TAVOITE:
+Jokaisella sivulla täsmälleen sama kiinteä alapalkki:
+🏡 Koti  |  🏞️ Pysähdy matkalla  |  ⭐ Suosikit.
+Ei enää vanhoja Koti / Yöpyminen / Paikkakunnat -painikkeita.
+
+Tässä on pieni KORJAUSPAKETTI, ei koko sivusto.
+Paketti EI sisällä vanhoja sivuja eikä korvaa Matkaparkit- tai
+Paikkakunnat-sivujen v302-sisältömuutoksia.
+
+ASENNUS:
+1. Pura ZIP. Älä vie ZIP-tiedostoa sellaisenaan GitHubiin.
+2. Vie kaksi alavalikko-v301.* -tiedostoa repositorion juureen.
+3. Vie tyokalut/paivita_alavalikko_v301.py ja
+   .github/workflows/alavalikko-v301.yml samoihin kansioihin kuin ZIP:ssä.
+4. Tallenna muutokset GitHubissa (Commit changes).
+5. Avaa GitHubissa Actions > Yhtenainen alavalikko kaikille sivuille.
+   Tarkista, että työnkulku onnistuu. Tarvittaessa valitse Run workflow.
+6. Työnkulku lisää valikon automaattisesti kaikkiin olemassa oleviin
+   HTML-sivuihin, myös lahella-minua.html-sivulle, mikäli se on repositoriossa.
+7. Varmista GitHubin tiedostosta lahella-minua.html, että <head>-osassa on
+   alavalikko-v301.css?v=303 ja alavalikko-v301.js?v=303.
+8. Odota GitHub Pages -julkaisua ja avaa sivu uudelleen. Tarvittaessa päivitä
+   sivu ja tyhjennä vanha välimuisti. Jos Pages ei julkaise Actions-botin
+   automaattista commitia, tee lopuksi yksi uusi manuaalinen commit GitHubissa.
+
+HUOM. Jos GitHub Actions on poissa käytöstä tai puhelimella ei saa
+.github-kansiota ladattua, lähetä GitHub-repositorion nykyinen ZIP tähän.
+Silloin kaikki sivut voidaan muokata suoraan ja palauttaa ZIP:inä.
