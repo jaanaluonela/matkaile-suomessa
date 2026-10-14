@@ -1,0 +1,126 @@
+
+/* v305 Matkaile Suomessa – tietokoneen etusivu. Mobiili pysyy ennallaan. */
+.ms305-topbar,.ms305-desktop-hero-copy,.ms305-desktop-stops,.ms305-desktop-secondary,.ms305-featured{display:none!important}
+.ms305-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media (min-width:960px){
+  body[data-home="true"]{padding:0!important;margin:0!important;background:#fafbf8!important;color:#123f36!important}
+  body[data-home="true"] .site-nav,body[data-home="true"] .bottom-nav,body[data-home="true"] .ms302-nav{display:none!important}
+  body[data-home="true"] .home-shell{width:min(100%,1520px)!important;max-width:none!important;min-height:100vh!important;padding:0 32px 65px!important;background:#fafbf8!important;box-shadow:none!important}
+  /* Yläpalkki */
+  body[data-home="true"] .ms305-topbar{box-sizing:border-box;display:block!important;position:relative;z-index:50;width:100%;padding:0 26px;background:#fff;border-bottom:1px solid #e6eae7}
+  .ms305-topbar-inner{max-width:1456px;min-height:76px;margin:0 auto;display:flex;gap:clamp(12px,1.9vw,28px);align-items:center}
+  .ms305-brand{display:flex;align-items:center;gap:9px;min-width:max-content;font:900 20px/.99 system-ui,sans-serif!important;color:#154d40;text-decoration:none;letter-spacing:-.05em}
+  .ms305-brand-mark{display:grid;place-items:center;width:53px;height:49px;font-size:38px}
+  .ms305-toplinks{display:flex;align-items:center;gap:clamp(11px,1.55vw,27px);margin:0 auto;white-space:nowrap}
+  .ms305-toplinks a{color:#19483c;text-decoration:none;font-size:clamp(12px,.94vw,14px);font-weight:700}
+  .ms305-toplinks a[aria-current]{text-decoration:underline;text-underline-offset:7px;text-decoration-thickness:2px}
+  .ms305-topsearch{flex:0 1 230px;display:flex;align-items:center;height:42px;min-width:135px;padding:0 13px;background:#f9fbf9;border:1px solid #dce6df;border-radius:14px}
+  .ms305-topsearch span{font-size:22px;color:#2b5d4f;line-height:1}
+  .ms305-topsearch input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#174c3e;font:500 12px system-ui,sans-serif;padding:8px}
+  .ms305-topfavs{display:flex;gap:7px;align-items:center;white-space:nowrap;font-size:13px;font-weight:800;text-decoration:none;color:#153d35}
+  .ms305-topfavs span{font-size:24px;font-weight:500}
+  /* Maisemakuva ja oma desktop-teksti */
+  body[data-home="true"] .home-shell>.hero{
+    display:flex!important;align-items:center!important;min-height:350px!important;height:350px!important;
+    margin:0 -32px!important;padding:30px max(44px,calc((100vw - 1400px)/2))!important;
+    border:0!important;border-radius:0!important;overflow:hidden!important;
+    background-image:linear-gradient(90deg,rgba(247,248,240,.96) 0%,rgba(250,247,235,.86) 25%,rgba(250,246,229,.38) 53%,rgba(0,0,0,.08) 100%),url("assets/hero/hero-karavaanari-v184.jpg")!important;
+    background-position:center center,center 48%!important;background-size:cover!important;background-repeat:no-repeat!important;
+    box-shadow:none!important;color:#123c34!important
+  }
+  body[data-home="true"] .home-shell>.hero .hero-content{position:relative;z-index:1;width:100%;max-width:1400px;margin:0 auto}
+  body[data-home="true"] .home-shell>.hero .home-brand-banner-v290,
+  body[data-home="true"] .home-shell>.hero .home-hero-lead-v290,
+  body[data-home="true"] .home-shell>.hero .hero-stats{display:none!important}
+  body[data-home="true"] .ms305-desktop-hero-copy{display:block!important;max-width:660px}
+  .ms305-hero-eyebrow{margin:0 0 8px!important;color:#2e6350!important;font:800 12px/1.2 system-ui!important;text-transform:uppercase;letter-spacing:.15em}
+  .ms305-desktop-hero-copy h2{font:900 clamp(45px,4.5vw,68px)/1.08 system-ui,sans-serif;letter-spacing:-.055em;margin:0 0 7px;color:#113f34;text-wrap:balance}
+  .ms305-desktop-hero-copy .ms305-hero-slogan{margin:0 0 14px!important;color:#225c4a!important;font:600 clamp(20px,1.8vw,27px)/1.2 system-ui!important}
+  .ms305-desktop-hero-copy .ms305-hero-desc{margin:0 0 17px!important;color:#284c3e!important;font:500 16px/1.48 system-ui!important;max-width:490px}
+  .ms305-hero-cta{display:inline-flex;gap:10px;align-items:center;min-height:42px;padding:9px 16px;border-radius:12px;background:#155c49;color:white!important;text-decoration:none;font-size:14px;font-weight:800}
+  /* Desktop-kuvakkeet näkyvät myös, jos vanha v300 CSS ei ole ladattu. */
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="maakunnat.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="leirintaalueet.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="matkaparkit.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="lahella-minua.html"]::before{content:""!important;display:block!important;background-repeat:no-repeat!important;background-size:contain!important;background-position:center!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="maakunnat.html"]::before{background-image:url("etusivu-paikkakunnat-v300.svg")!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="leirintaalueet.html"]::before{background-image:url("etusivu-leirintaalueet-v300.svg")!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="matkaparkit.html"]::before{background-image:url("etusivu-matkaparkit-v300.svg")!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="lahella-minua.html"]::before{background-image:url("etusivu-lahella-minua-v300.svg")!important}
+  /* Mobiilin erillinen haku piilotetaan desktopilla; desktopilla haku yläpalkissa. */
+  body[data-home="true"] .home-explore-v251{display:none!important}
+  body[data-home="true"] .home-primary-links-v290{margin:0!important;padding:20px 0 0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+  body[data-home="true"] .home-primary-links-v290 .menu,
+  body[data-home="true"] .home-shell .menu.home-choices-v212{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;align-items:stretch!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a#travel-stop-v268{display:none!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="maakunnat.html"],
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="leirintaalueet.html"],
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="matkaparkit.html"],
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="lahella-minua.html"]{
+    display:flex!important;flex-direction:row!important;justify-content:flex-start!important;align-items:center!important;
+    min-height:111px!important;padding:12px 18px!important;gap:10px!important;text-align:left!important;
+    border-radius:20px!important;border:1px solid #dbe8df!important;box-shadow:none!important;position:relative!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="maakunnat.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="leirintaalueet.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="matkaparkit.html"]::before,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="lahella-minua.html"]::before{
+    flex:0 0 90px!important;width:90px!important;height:76px!important;min-height:76px!important;margin:0 8px 0 0!important;background-size:contain!important
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="maakunnat.html"] strong,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="leirintaalueet.html"] strong,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="matkaparkit.html"] strong,
+  body[data-home="true"] .home-primary-links-v290 .menu>a[href="lahella-minua.html"] strong{
+    font-size:clamp(16px,1.45vw,21px)!important;text-align:left!important;line-height:1.16!important
+  }
+  body[data-home="true"] .ms305-desktop-stops{display:grid!important;grid-template-columns:190px minmax(0,1fr);gap:16px;align-items:center;min-height:204px;margin-top:16px;padding:18px 28px 18px 12px;border:1px solid #efdbb9;border-radius:21px;background:linear-gradient(110deg,#faf0dc,#faf5e9 65%,#f1efdb)}
+  .ms305-stop-illustration{display:grid;place-items:center;font-size:85px;text-shadow:0 8px 16px rgba(36,53,25,.12)}
+  .ms305-stops-body{min-width:0}
+  .ms305-stops-body h2{font:900 clamp(29px,2.4vw,38px)/1.15 system-ui,sans-serif;letter-spacing:-.045em;color:#134d40;margin:0 0 3px}
+  .ms305-stops-body>p{margin:0 0 14px;color:#596f60;font:500 15px/1.4 system-ui,sans-serif}
+  .ms305-stop-form{display:flex;gap:9px;margin-bottom:12px}
+  .ms305-stop-form input,.ms305-stop-form select{min-width:0;height:45px;border:1px solid #d7dcd1;border-radius:12px;background:#fff;color:#16473c;font:500 13px system-ui,sans-serif}
+  .ms305-stop-form input{flex:1;padding:0 15px}.ms305-stop-form select{width:162px;padding:0 10px}
+  .ms305-stop-form button{flex:0 0 auto;min-width:133px;height:45px;border:0;border-radius:12px;background:#115743;color:#fff;font:800 13px system-ui,sans-serif;cursor:pointer}
+  .ms305-stop-categories{display:flex;flex-wrap:wrap;gap:6px}
+  .ms305-stop-categories a{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:6px 13px;white-space:nowrap;text-decoration:none;border:1px solid #d9e0d8;border-radius:999px;background:#f4f7f3;color:#244f42;font-size:12px;font-weight:800}
+  .ms305-stop-categories .ms305-category-active{background:#145d49;color:#fff;border-color:#145d49}
+  body[data-home="true"] .ms305-desktop-secondary{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:16px}
+  .ms305-extra{display:flex;align-items:center;gap:14px;padding:17px 18px;min-height:94px;border:1px solid #dae7df;border-radius:18px;text-decoration:none;color:#134c3d}
+  .ms305-extra>span:first-child{font-size:39px;line-height:1;flex:0 0 60px;text-align:center}
+  .ms305-extra>span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0}.ms305-extra strong{font-size:19px;font-weight:900;line-height:1.2}.ms305-extra small{font-size:12px;color:#617365;line-height:1.38}
+  .ms305-extra b{margin-left:auto;font-size:24px}.ms305-extra-blue{background:#eaf4fa}.ms305-extra-green{background:#edf5ee}.ms305-extra-peach{background:#faf2e5}
+  body[data-home="true"] .v244-memories,body[data-home="true"] .later-note{display:none!important}
+  body[data-home="true"] .ms305-featured{display:block!important;margin-top:28px}
+  .ms305-featured-head{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-bottom:12px}
+  .ms305-featured-head h2{margin:0;font-size:25px;letter-spacing:-.035em;color:#154c3c}
+  .ms305-featured-head>a{font-size:13px;font-weight:800;color:#155c49;text-decoration:underline;text-underline-offset:3px}
+  .ms305-featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .ms305-destination{display:flex;flex-direction:column;overflow:hidden;border:1px solid #e1e9e3;border-radius:18px;background:white;color:#183f35;text-decoration:none;box-shadow:0 4px 16px rgba(22,59,47,.045)}
+  .ms305-destination img{display:block;width:100%;height:180px;object-fit:cover;background:linear-gradient(135deg,#b7d5ca,#e5eedb)}
+  .ms305-destination>span{display:flex;flex-direction:column;gap:4px;padding:13px 16px 17px}
+  .ms305-destination strong{font-size:17px}.ms305-destination small{color:#627368;font-size:13px}
+  .ms305-toplinks a:hover,.ms305-featured-head>a:hover{text-decoration:underline}
+  .ms305-topbar a:focus-visible,.ms305-stop-form :focus-visible,.ms305-desktop-stops a:focus-visible,.ms305-extra:focus-visible,.ms305-destination:focus-visible{outline:3px solid #ce8b24;outline-offset:3px}
+}
+@media (min-width:960px) and (max-width:1250px){
+ .ms305-topbar-inner{flex-wrap:wrap;justify-content:space-between;gap:10px;min-height:96px;padding:8px 0}
+ .ms305-toplinks{order:3;flex:1 0 100%;justify-content:center;gap:22px}
+ .ms305-topsearch{margin-left:auto}
+ body[data-home="true"] .home-primary-links-v290 .menu>a[href]::before{flex-basis:60px!important;width:60px!important;height:62px!important;min-height:62px!important}
+ body[data-home="true"] .home-primary-links-v290 .menu>a[href]{padding:10px!important}
+ body[data-home="true"] .ms305-desktop-stops{grid-template-columns:110px minmax(0,1fr)}
+ .ms305-stop-illustration{font-size:61px}
+ .ms305-stop-categories a{font-size:11px;padding:6px 9px}
+ .ms305-extra{gap:7px;padding:12px}.ms305-extra>span:first-child{flex-basis:44px;font-size:30px}
+ .ms305-extra strong{font-size:16px}
+}
+@media (min-width:960px) and (max-width:1060px){
+ body[data-home="true"] .home-primary-links-v290 .menu>a[href] strong{font-size:15px!important}
+ .ms305-stop-form select{width:125px}
+ .ms305-stop-form button{min-width:115px}
+}
+@media (prefers-reduced-motion:no-preference) and (min-width:960px){
+ .ms305-extra,.ms305-destination,.ms305-stop-categories a{transition:transform .2s ease,box-shadow .2s ease}
+ .ms305-extra:hover,.ms305-destination:hover{transform:translateY(-3px);box-shadow:0 9px 24px rgba(18,69,51,.1)}
+}

@@ -392,13 +392,41 @@
     <link rel="stylesheet" href="alavalikko-v304.css?v=304">
   <link rel="stylesheet" href="etusivu-pysahdy-v304.css?v=304">
   <script defer src="alavalikko-v304.js?v=304"></script>
-
-<link rel="stylesheet" href="etusivu-painikkeet-v310.css?v=310"><script defer src="etusivu-painikkeet-v310.js?v=310"></script><link rel="stylesheet" href="etusivu-opaste-v311.css?v=311">
+  <script defer src="etusivu-pysahdy-v304.js?v=304"></script>
+  <link rel="stylesheet" href="etusivu-desktop-v305.css?v=305">
+  <script defer src="etusivu-desktop-v305.js?v=305"></script>
 </head>
 <body data-home="true">
+  
+<!-- v305: tietokoneen oma yläpalkki (puhelimessa piilotettu). -->
+<header class="ms305-topbar" aria-label="Tietokoneversion ylävalikko">
+  <div class="ms305-topbar-inner">
+    <a class="ms305-brand" href="index.html" aria-label="Matkaile Suomessa – etusivu"><span class="ms305-brand-mark" aria-hidden="true">🏞️</span><span>Matkaile<br>Suomessa</span></a>
+    <nav class="ms305-toplinks" aria-label="Päävalikko tietokoneella">
+      <a href="index.html" aria-current="page">Koti</a><a href="maakunnat.html">Paikkakunnat</a>
+      <a href="leirintaalueet.html">Leirintäalueet</a><a href="matkaparkit.html">Matkaparkit</a>
+      <a href="pysahdy-matkalla.html">Pysähdy matkalla</a><a href="saariston-rengastie.html">Saariston rengastie</a>
+    </nav>
+    <form class="ms305-topsearch" action="pysahdy-matkalla.html" method="get" role="search">
+      <label class="ms305-sr-only" for="ms305-topquery">Hae matkailukohdetta</label>
+      <span aria-hidden="true">⌕</span><input type="search" id="ms305-topquery" name="haku" placeholder="Hae kohdetta tai paikkakuntaa" autocomplete="off">
+    </form>
+    <a class="ms305-topfavs" href="suosikit.html"><span aria-hidden="true">♡</span> Suosikit</a>
+  </div>
+</header>
+
   <main class="home-shell">
     <header class="hero">
       <div class="hero-content">
+
+<div class="ms305-desktop-hero-copy">
+  <p class="ms305-hero-eyebrow">Karavaanarin matkailuopas</p>
+  <h2>Matkaile Suomessa</h2>
+  <p class="ms305-hero-slogan">Vapaus kulkea · Ilo löytää</p>
+  <p class="ms305-hero-desc">Löydä yöpymispaikat, pysähdykset ja elämykset kotimaan matkoihin.</p>
+  <a class="ms305-hero-cta" href="pysahdy-matkalla.html">Löydä matkakohteita <span aria-hidden="true">→</span></a>
+</div>
+
         <img class="home-brand-banner-v290"
              src="matkaile-suomessa-logo-v296.webp"
              width="1438" height="398"
@@ -448,43 +476,48 @@
         
       </div>
     </section>
+
+<!-- v305: mobiilissa nämä osiot ovat piilossa, siellä säilyvät aiemmat valikot. -->
+<section class="ms305-desktop-stops" aria-labelledby="ms305-stops-heading">
+  <div class="ms305-stop-illustration" aria-hidden="true"><span>🚗</span></div>
+  <div class="ms305-stops-body">
+    <h2 id="ms305-stops-heading">Pysähdy matkalla</h2>
+    <p>Nähtävyydet, luonto, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat.</p>
+    <form class="ms305-stop-form" action="pysahdy-matkalla.html" method="get" role="search">
+      <label class="ms305-sr-only" for="ms305-stop-query">Hae pysähdyskohdetta</label>
+      <input id="ms305-stop-query" type="search" name="haku" autocomplete="off" placeholder="Hae kohdetta, esim. Fiskars, Vääksy tai kahvila…">
+      <label class="ms305-sr-only" for="ms305-stop-town">Valitse paikkakunta</label>
+      <select id="ms305-stop-town" name="kunta"><option value="">Koko Suomi</option></select>
+      <button type="submit">Hae kohteita <span aria-hidden="true">→</span></button>
+    </form>
+    <nav class="ms305-stop-categories" aria-label="Pysähdy matkalla -kategoriat">
+      <a href="pysahdy-matkalla.html" class="ms305-category-active">✨ Kaikki</a>
+      <a href="pysahdy-matkalla.html?tyyppi=sight">🏛️ Nähtävyydet</a>
+      <a href="pysahdy-matkalla.html?tyyppi=nature">🌲 Luonto ja retket</a>
+      <a href="pysahdy-matkalla.html?tyyppi=stop">🚐 Taukopaikat</a>
+      <a href="pysahdy-matkalla.html?tyyppi=ruukki">🏭 Ruukkikylät</a>
+      <a href="pysahdy-matkalla.html?tyyppi=food">☕ Kahvilat ja ravintolat</a>
+    </nav>
+  </div>
+</section>
+
+<nav class="ms305-desktop-secondary" aria-label="Matkailun muut palvelut">
+  <a class="ms305-extra ms305-extra-blue" href="saariston-rengastie.html"><span aria-hidden="true">⛴️</span><span><strong>Saariston rengastie</strong><small>Lautat, hinnat, aikataulut ja saariston kohteet</small></span><b aria-hidden="true">→</b></a>
+  <a class="ms305-extra ms305-extra-green" href="paivakirja.html"><span aria-hidden="true">🏞️</span><span><strong>Omat matkat</strong><small>Tallenna matkamuistot ja suunnittele matkoja</small></span><b aria-hidden="true">→</b></a>
+  <a class="ms305-extra ms305-extra-peach" href="suosikit.html"><span aria-hidden="true">⭐</span><span><strong>Suosikit</strong><small>Tallenna kiinnostavat kohteet</small></span><b aria-hidden="true">→</b></a>
+</nav>
+
+<section class="ms305-featured" aria-labelledby="ms305-featured-heading">
+  <div class="ms305-featured-head"><h2 id="ms305-featured-heading">Tutustu Suomen kohteisiin</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet <span aria-hidden="true">→</span></a></div>
+  <div class="ms305-featured-grid">
+    <a class="ms305-destination" href="pysahdy-matkalla.html?haku=Asikkala"><img src="assets/hero/hero-asikkala.jpg" alt="Asikkalan maisemia" loading="lazy"><span><strong>Asikkala</strong><small>Järvimaisemia ja pysähdyksiä</small></span></a>
+    <a class="ms305-destination" href="pysahdy-matkalla.html?tyyppi=nature"><img src="assets/hero/hero-paijat-hame.jpg" alt="Päijät-Hämeen maisemia" loading="lazy"><span><strong>Luonto ja retket</strong><small>Retkikohteita ympäri Suomen</small></span></a>
+    <a class="ms305-destination" href="leirintaalueet.html"><img src="assets/hero/hero-karavaanari-v184.jpg" alt="Karavaanarin maisemia Suomessa" loading="lazy"><span><strong>Leirintäalueet</strong><small>Löydä seuraava yöpymispaikka</small></span></a>
+  </div>
+</section>
+
     <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small id="v245-trips-summary">Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
-        <!-- v311: sivuston sisältöä esittelevä opaste, ei uusia päävalikon painikkeita. -->
-    <section class="home-overview-v311" aria-labelledby="home-overview-title-v311">
-      <h2 id="home-overview-title-v311">Löydä enemmän matkan varrelta</h2>
-      <p class="home-overview-intro-v311">Mitä kaikkea Matkaile Suomessa tarjoaa?</p>
-      <div class="home-overview-items-v311">
-        <div class="home-overview-item-v311">
-          <span class="home-overview-icon-v311" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2V6Z"/><path d="M9 4v14m6-12v14"/><path d="M12.8 9.7c0 1.2-1.8 3.2-1.8 3.2s-1.8-2-1.8-3.2a1.8 1.8 0 0 1 3.6 0Z"/></svg></span>
-          <div class="home-overview-copy-v311">
-            <h3>Tutustu Suomen paikkakuntiin</h3>
-            <p>Nähtävyyksiä, paikallisia erikoisuuksia ja kiinnostavia vierailukohteita.</p>
-          </div>
-        </div>
-        <div class="home-overview-item-v311">
-          <span class="home-overview-icon-v311" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v10H3V7Z"/><path d="M18 11h2a1 1 0 0 1 1 1v5h-3"/><path d="M6 8h8v5H6z"/><path d="M6 17v1m11-1v1"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg></span>
-          <div class="home-overview-copy-v311">
-            <h3>Löydä sopiva yöpymispaikka</h3>
-            <p>Leirintäalueita, matkaparkkeja ja karavaanarin palveluita.</p>
-          </div>
-        </div>
-        <div class="home-overview-item-v311">
-          <span class="home-overview-icon-v311" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z"/><path d="M17 9h2a2.5 2.5 0 0 1 0 5h-2M3 21h16M8 3v2m5-2v2"/></svg></span>
-          <div class="home-overview-copy-v311">
-            <h3>Pysähdy ja koe jotain uutta</h3>
-            <p>Persoonallisia kahviloita, ruukkikyliä, luontokohteita ja erikoisia nähtävyyksiä.</p>
-          </div>
-        </div>
-        <div class="home-overview-item-v311">
-          <span class="home-overview-icon-v311" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3a3 3 0 0 0-3 3c0 2 3 5 3 5s3-3 3-5a3 3 0 0 0-3-3Z"/><circle cx="7" cy="6" r=".7"/><path d="M17 13a3 3 0 0 0-3 3c0 2 3 5 3 5s3-3 3-5a3 3 0 0 0-3-3Z"/><circle cx="17" cy="16" r=".7"/><path d="M8.5 11h5a3 3 0 0 1 0 6h-2" stroke-dasharray="2 2"/></svg></span>
-          <div class="home-overview-copy-v311">
-            <h3>Suunnittele oma matkasi</h3>
-            <p>Löydä kiinnostavia pysähdyspaikkoja reitin varrelta ja kerää omat matkamuistosi.</p>
-          </div>
-        </div>
-      </div>
-      <p class="home-overview-closing-v311">Suomi on täynnä paikkoja, joiden ohi on helppo ajaa. Me autamme sinua löytämään ne.</p>
-    </section>
+    <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
   </main>
 
   <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>

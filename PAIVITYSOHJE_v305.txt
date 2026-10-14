@@ -1,0 +1,32 @@
+
+MATKAILE SUOMESSA v305 – TIETOKONEVERSIO
+=========================================
+PÄIVITYS: Lataa kaikki kolme tämän ZIP:n tiedostoa GitHub-sivustosi juureen:
+  index.html
+  etusivu-desktop-v305.css
+  etusivu-desktop-v305.js
+  etusivu-paikkakunnat-v300.svg
+  etusivu-leirintaalueet-v300.svg
+  etusivu-matkaparkit-v300.svg
+  etusivu-lahella-minua-v300.svg
+Korvaa vanha index.html, lisää uudet CSS- ja JS-tiedostot sekä SVG-kuvakkeet. Säilytä kaikki muut tiedostot.
+
+Mitä muuttuu:
+- Näyttöleveys vähintään 960 px: oma leveä tietokoneen etusivu.
+- Yläpalkissa valikko, haku ja suosikit.
+- Suuri maisemakuva sekä 4 pääpainiketta samalla rivillä.
+- Vain yksi Pysähdy matkalla -kokonaisuus, jonka hakukenttä ja 6 kategoriaa linkittävät
+  olemassa olevaan pysahdy-matkalla.html-hakusivuun.
+- Saariston rengastie, Omat matkat, Suosikit ja 3 kuvallista kohdekorttia.
+- Alle 960 px: nykyinen puhelin- ja tablet-näkymä säilyy sellaisenaan.
+
+Edellytykset:
+  v304 tai uudempi sivusto, jossa alavalikko-v304, etusivu-pysahdy-v304 jne. ovat jo paikoillaan;
+  etusivu-v300.css ja neljä etusivun SVG-kuvaketta ovat käytössä.
+  Valokuvien polut ovat nykyisen sivuston käytössä olevia hero-kuvia
+  (assets/hero/hero-karavaanari-v184.jpg, hero-asikkala.jpg ja hero-paijat-hame.jpg).
+  Jos jokin kuva puuttuu GitHubista, valokuva täytyy lisätä vastaavaan polkuun.
+  Saariston rengastie -linkki edellyttää sivua saariston-rengastie.html.
+
+HUOM: Tämä on tiedostopäivitys, ei GitHubin suora julkaisu.
+Tarkista muutokset tietokoneella ja puhelimella sekä tee tarvittaessa selaimen päivitys.
