@@ -1,0 +1,86 @@
+/* Matkaile Suomessa v311: kevyt opaste etusivun kahdeksan pääpainikkeen jälkeen. */
+body[data-home="true"] .home-shell > .home-overview-v311 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 22px 17px 19px;
+  border: 1px solid #d3e2d7;
+  border-radius: 22px;
+  background: linear-gradient(155deg, #f0f6ee 0%, #f8faf4 56%, #fffdfa 100%);
+  color: #1b4e3f;
+  box-shadow: 0 3px 14px rgba(24,69,49,.035);
+}
+body[data-home="true"] .home-overview-v311 > h2 {
+  padding: 0;
+  margin: 0 0 5px;
+  font: 800 clamp(21px,5.2vw,25px)/1.22 system-ui,-apple-system,sans-serif;
+  letter-spacing: -.025em;
+  color: #194e3e;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-intro-v311 {
+  margin: 0 0 15px;
+  padding: 0;
+  font: 500 14px/1.5 system-ui,-apple-system,sans-serif;
+  color: #60766d;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-items-v311 { display: block; }
+body[data-home="true"] .home-overview-v311 .home-overview-item-v311 {
+  display: grid;
+  grid-template-columns: 46px minmax(0,1fr);
+  align-items: start;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #dce8dd;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-item-v311:first-child { padding-top: 4px; }
+body[data-home="true"] .home-overview-v311 .home-overview-item-v311:last-child { border-bottom: 0; padding-bottom: 11px; }
+body[data-home="true"] .home-overview-v311 .home-overview-icon-v311 {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #deeadf;
+  border-radius: 13px;
+  background: #fffefa;
+  color: #39765a;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-icon-v311 svg {
+  display: block;
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-copy-v311 {min-width: 0;}
+body[data-home="true"] .home-overview-v311 .home-overview-copy-v311 h3 {
+  margin: 0 0 4px;
+  padding: 0;
+  font: 750 15px/1.3 system-ui,-apple-system,sans-serif;
+  color: #164c3b;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-copy-v311 p {
+  margin: 0;
+  padding: 0;
+  font: 400 13.5px/1.5 system-ui,-apple-system,sans-serif;
+  color: #51695f;
+}
+body[data-home="true"] .home-overview-v311 .home-overview-closing-v311 {
+  margin: 7px 0 0;
+  padding: 12px 1px 0;
+  border-top: 1px solid #dce8dd;
+  font: italic 500 13.5px/1.6 system-ui,-apple-system,sans-serif;
+  color: #536f62;
+}
+/* Tilaa kiinteälle alavalikolle, mutta ei suurta tyhjää osiota. */
+body[data-home="true"] .home-shell {
+  padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px))!important;
+}
+@media(max-width:380px) {
+  body[data-home="true"] .home-shell > .home-overview-v311 {padding:18px 14px 17px;}
+  body[data-home="true"] .home-overview-v311 .home-overview-item-v311 {grid-template-columns:41px minmax(0,1fr);gap:11px;}
+  body[data-home="true"] .home-overview-v311 .home-overview-icon-v311 {width:41px;height:41px;}
+}
