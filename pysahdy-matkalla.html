@@ -1,67 +1,40 @@
 <!doctype html>
-<html lang="fi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#174d40">
-  <meta name="description" content="Hyviä ravintoloita, kahviloita ja kiinnostavia pysähdyspaikkoja paikkakunnittain Suomessa.">
-  <title>Pysähdy matkalla – Matkailu Suomessa</title>
-  <link rel="stylesheet" href="navigation-v191.css?v=244">
-  <link rel="stylesheet" href="pysahdy-v268.css?v=268">
-  <script defer src="nearby-data-v218.js"></script>
-  <script defer src="kayntikohteet-data-v230.js"></script>
-  <script defer src="pysahdy-v268.js?v=268"></script>
-  <link rel="stylesheet" href="alavalikko-v301.css?v=301">
-  <script defer src="alavalikko-v301.js?v=301"></script>
-</head>
-<body class="stop-page-v268">
-  <main>
-    <a class="back" href="index.html">‹ Etusivulle</a>
-    <header class="intro">
-      <span class="eyebrow">🚗 Matkailu Suomessa</span>
-      <h1>Pysähdy matkalla</h1>
-      <p>Nähtävyydet, luonto, taukopaikat ja kahvilat – kaikki kiinnostavat pysähdykset saman valikon kautta.</p>
-    </header>
-
-    <nav class="quicklinks" aria-label="Muita tapoja löytää pysähdyspaikka">
-      <a href="lahella-minua.html"><strong>📍 Lähellä minua</strong><small>Hae lähimmät kohteet ja valitse ”Pysähdy matkalla”</small></a>
-    </nav>
-
-    <section class="ms301-stop-categories" aria-label="Pysähdy matkalla: valitse kohteet">
-      <h2>Löydä kiinnostava pysähdys</h2>
-      <div class="ms301-shortcuts">
-        <a href="kayntikohteet.html?tyyppi=sight">🏛️ Nähtävyydet</a>
-        <a href="kayntikohteet.html?tyyppi=nature">🌲 Luonto ja retket</a>
-        <a href="kayntikohteet.html?tyyppi=stop">🚐 Taukopaikat</a>
-        <a href="ruukkikylat.html">🏭 Ruukkikylät</a>
-        <a href="#stop-filters-v301">☕ Kahvilat ja ravintolat</a>
-      </div>
-    </section>
-    <section id="stop-filters-v301" class="filters" aria-label="Etsi pysähdyspaikkoja">
-      <div class="fields">
-        <div>
-          <label for="stop-town-v268">Valitse paikkakunta</label>
-          <select id="stop-town-v268"><option value="">Koko Suomi</option></select>
-        </div>
-        <div>
-          <label for="stop-query-v268">Hae nimellä tai sanalla</label>
-          <input id="stop-query-v268" type="search" placeholder="Esim. Vääksy tai kahvila">
-        </div>
-      </div>
-      <div class="categories" role="group" aria-label="Valitse pysähdyspaikan tyyppi">
-        <button type="button" data-stop-category="all" aria-pressed="true">Kaikki</button>
-        <button type="button" data-stop-category="restaurant" aria-pressed="false">🍽️ Ravintolat</button>
-        <button type="button" data-stop-category="cafe" aria-pressed="false">☕ Kahvilat</button>
-        <button type="button" data-stop-category="shop" aria-pressed="false">🛍️ Puodit ja lähiruoka</button>
-        <button type="button" data-stop-category="other" aria-pressed="false">🚗 Muut pysähdykset</button>
-      </div>
-    </section>
-
-    <p id="stop-count-v268" class="meta" role="status" aria-live="polite">Haetaan oppaan kohteita…</p>
-    <div id="stop-results-v268"></div>
-    <noscript><p>Hakua varten tarvitaan JavaScript. <a href="kayntikohteet.html">Selaa Näe ja koe -kohteita</a>.</p></noscript>
-    <p class="notice">Kohteet ovat oppaan suosituksia, eivät reaaliaikainen suosituimmuusjärjestys. Aukiolo, sesonkiajat ja palvelut kannattaa tarkistaa ennen käyntiä. Karttalinkki avaa kohdehaun.</p>
-  </main>
-  <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
-</body>
-</html>
+<html lang="fi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#174d40">
+<meta name="description" content="Löydä nähtävyydet, luontokohteet, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat samalla haulla.">
+<title>Pysähdy matkalla – Matkaile Suomessa</title>
+<link rel="stylesheet" href="pysahdy-v302.css?v=302">
+<link rel="stylesheet" href="alavalikko-v302.css?v=302">
+<script defer src="nearby-data-v218.js"></script>
+<script defer src="kayntikohteet-data-v230.js"></script>
+<script defer src="ruukkikylat-data-v302.js?v=302"></script>
+<script defer src="pysahdy-v302.js?v=302"></script>
+<script defer src="alavalikko-v302.js?v=302"></script>
+</head><body class="ms302-stops-page">
+<main class="ms302-stops" id="main">
+  <header class="ms302-stops-intro">
+    <h1>Pysähdy matkalla</h1>
+    <p>Nähtävyydet, luonto, taukopaikat ja makuelämykset yhdestä paikasta.</p>
+  </header>
+  <section class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
+    <div class="ms302-stops-fields">
+      <label>Paikkakunta<select id="ms302-town"><option value="">Koko Suomi</option></select></label>
+      <label>Hae kohdetta<input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"></label>
+    </div>
+    <div class="ms302-category" role="group" aria-label="Valitse kohdeluokka">
+      <button type="button" data-ms302-category="all" aria-pressed="true">Kaikki</button>
+      <button type="button" data-ms302-category="sight" aria-pressed="false">🏛️ Nähtävyydet</button>
+      <button type="button" data-ms302-category="nature" aria-pressed="false">🌲 Luonto ja retket</button>
+      <button type="button" data-ms302-category="stop" aria-pressed="false">🚐 Taukopaikat</button>
+      <button type="button" data-ms302-category="ruukki" aria-pressed="false">🏭 Ruukkikylät</button>
+      <button type="button" data-ms302-category="food" aria-pressed="false">☕ Kahvilat ja ravintolat</button>
+    </div>
+  </section>
+  <div class="ms302-results-head"><p id="ms302-count" role="status" aria-live="polite">Haetaan kohteita…</p><button id="ms302-reset" type="button">Tyhjennä rajaukset</button></div>
+  <section id="ms302-results" class="ms302-results" aria-label="Hakutulokset"></section>
+  <button class="ms302-more" id="ms302-more" type="button" hidden>Näytä lisää kohteita</button>
+  <p class="ms302-note">Tarkista aukioloajat ja palvelut kohteesta ennen matkaa.</p>
+  <noscript><p>Hakutulosten näyttäminen vaatii JavaScriptin.</p></noscript>
+</main>
+</body></html>

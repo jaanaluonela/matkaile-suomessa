@@ -1,0 +1,24 @@
+Matkaile Suomessa v302 – SELKEÄMMÄT SIVUT, VÄHEMMÄN PÄÄLLEKKÄISYYKSIÄ
+
+Tämä on PÄIVITYSPAKETTI v301-version päälle, ei täydellinen uusi sivusto.
+
+Muutokset:
+1. Kolmen painikkeen pysyvä alapalkki kaikilla sivuilla: Koti, Pysähdy matkalla, Suosikit.
+2. Sivupolku näyttää, missä olet. Kohdesivuilla paluu luettelon suuntaan.
+3. Leirintäalueiden ja matkaparkkien päällekkäinen 3-painikkeen ylävalikko poistuu.
+4. Pysähdy matkalla yhdistää Näe ja koe -kohteet, ruukkikylät, taukopaikat sekä kahvilat ja ravintolat yhdeksi kategoriavalikoksi ja hakutuloslistaksi.
+5. Samat kohteet eivät toistu kahdesti samassa tuloslistassa.
+6. Vanhat Näe ja koe / Ruukkikylät -linkit ohjautuvat samaan Pysähdy matkalla -hakuun.
+7. Aiemmat tietolähteet, kuntaesittelyt, hakudata ja neljä suurta etusivun painiketta pysyvät ennallaan.
+
+ASENNUS
+- Avaa ZIP ja lataa SEN SISÄLLÄ OLEVAT tiedostot ja kansiot GitHub-repositorion juureen.
+- Ylikirjoita samanniminen .github/workflows/alavalikko-v301.yml uudella versiolla,
+  jotta vanha workflow ei kirjoita vanhaa alavalikkoa takaisin.
+- Kun GitHub Actions on sallittu sekä workflowlla kirjoitusoikeus, toiminto
+  lisää v302-alapalkin myös niille vanhoille HTML-sivuille, joita ZIP ei sisällä.
+- Jos GitHub Actions ei ole käytössä, suorita itse: python tyokalut/paivita_rakenne_v302.py
+- Sivusto ei ole päivitetty verkkoon ennen kuin nämä tiedostot on viety GitHubiin.
+
+HUOMAUTUS: Tämä on tarkoitettu olemassa olevan sivuston päälle. Koko kohdedataa
+(esimerkiksi nearby-data-v218.js) ei ole pakattu uudelleen; se jää entiselleen.
