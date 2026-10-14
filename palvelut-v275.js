@@ -1,4 +1,4 @@
-/* Matkailu Suomessa v284: tiiviit palvelut; EI tavallista WC:tä eikä vettä. */
+/* Matkaile Suomessa v311: matkaparkkien oma 3 palvelun valikko; leirintäalueiden valinnat ennallaan. */
 (()=>{'use strict';
  const SERVICES=[
   ['electric','⚡ Sähkö','Sähkö'],['shower','🚿 Suihku','Suihku'],
@@ -8,12 +8,20 @@
   ['beach','🏖️ Uimaranta','Uimaranta'],['kitchen','🍳 Keittiö','Keittiö'],
   ['laundry','🧺 Pyykinpesu','Pyykinpesu']
  ];
+ // Matkaparkkien palvelurajaukset on tarkoituksella erotettu leirintäalueista.
+ // Suodatusmoottori käyttää samoja tunnuksia (electric, wc, greywater).
+ const PARK_SERVICES=[
+  ['electric','⚡ Sähkö','Sähkö'],
+  ['wc','🚻 WC','WC'],
+  ['greywater','🔧 Harmaaveden tyhjennys','Harmaaveden tyhjennys']
+ ];
  function init(){
    const group=document.querySelector('.ms275-services-panel .ms275-services-choices');
    if(!group)return;
-   // Rakennetaan joka sivulla samat valinnat. Arvot säilyvät suodatusmoottorille.
+   const services=document.body.dataset.kind==='park'?PARK_SERVICES:SERVICES;
+   // Sivukohtaiset valinnat ovat näkyvissä myös JavaScriptin päivityksen jälkeen.
    const existing=new Map([...group.querySelectorAll('input.ms275-service-choice')].map(i=>[i.value,i.checked]));
-   group.replaceChildren(...SERVICES.map(([value,caption,full])=>{
+   group.replaceChildren(...services.map(([value,caption,full])=>{
      const label=document.createElement('label');label.title=full;
      const checkbox=document.createElement('input');checkbox.type='checkbox';
      checkbox.className='ms275-service-choice';checkbox.value=value;

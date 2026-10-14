@@ -1,0 +1,20 @@
+MATKAILE SUOMESSA – MATKAPARKKIEN PALVELUVALIKKO v311
+14.10.2026
+
+KORJATTU
+- Matkaparkkien palveluvalinnat: ⚡ Sähkö, 🚻 WC, 🔧 Harmaaveden tyhjennys.
+- Matkaparkit ja leirintäalueet käyttävät eri valikoita. Yhteinen skripti ei enää palauta poistettuja palveluvalintoja matkaparkkeihin.
+- Leirintäalueiden palveluvalinnat säilyvät ennallaan.
+- Säilytetty ympärivuotisuushaku, kunta- ja maakuntasuodatus, nimihaku sekä olemassa olevat kohteet.
+- Matkaparkkien hakuteksti täsmennetty ja välimuistin välttämiseksi lisätty v311-versiotunnus skriptilinkkiin.
+
+ASENNUS GITHUBIIN
+1. Pura ZIP tietokoneelle.
+2. Siirrä vain seuraavat kaksi tiedostoa GitHubin projektin JUUREEN:
+   matkaparkit.html
+   palvelut-v275.js
+3. Korvaa samannimiset vanhat tiedostot ja paina Commit changes.
+4. Älä poista muita sivuston tiedostoja.
+5. Päivitä Matkaparkit-sivu puhelimessa. Jos vanha valikko näkyy yhä, tee kova päivitys tai kokeile yksityistä välilehteä.
+
+Tämä ZIP on vain pieni korjaus, ei koko sivuston varmuuskopio.
