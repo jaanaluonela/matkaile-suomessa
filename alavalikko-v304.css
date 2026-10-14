@@ -1,0 +1,40 @@
+/* v302: compact bottom nav + one clear breadcrumb on every page */
+:root{--ms302-green:#174d40;--ms302-border:#dae7dc}
+html{scroll-padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))!important}
+body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+body .site-nav,body .bottom-nav,body .ms301-nav{display:none!important}
+.ms302-nav{position:fixed!important;z-index:1200!important;inset:auto 0 0!important;box-sizing:border-box!important;
+ background:rgba(255,255,255,.97)!important;border-top:1px solid var(--ms302-border)!important;
+ box-shadow:0 -3px 14px rgba(26,65,47,.07)!important;padding:5px 9px calc(5px + env(safe-area-inset-bottom,0px))!important;
+ -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.ms302-nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;max-width:610px!important;margin:auto!important}
+.ms302-nav a{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;min-width:0!important;
+ gap:1px!important;text-align:center!important;text-decoration:none!important;min-height:54px!important;padding:4px 1px!important;border-radius:13px!important;
+ color:#184839!important;background:transparent!important}
+.ms302-nav a.ms302-active{background:#fff0e5!important}
+.ms302-icon{font:normal 25px/1.16 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif!important}
+.ms302-label{font:780 clamp(10px,3vw,12px)/1.2 system-ui,-apple-system,'Segoe UI',sans-serif!important;letter-spacing:-.02em!important;overflow-wrap:normal!important}
+.ms302-nav :is(a):focus-visible,.ms302-crumb a:focus-visible{outline:3px solid #f48728!important;outline-offset:1px!important}
+.ms302-crumb{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:4px 0 12px!important;padding:3px 0!important;
+ color:#678172;font:700 12px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif!important;max-width:100%}
+.ms302-crumb a{color:#27694f;text-decoration:underline;text-underline-offset:3px}
+.ms302-crumb .ms302-where{color:#456354}
+.ms302-other-stay{display:inline-block!important;margin:2px 0 12px;padding:5px 0;font:750 13px/1.35 system-ui,-apple-system,'Segoe UI',sans-serif;
+ color:#216a52!important;text-decoration:underline!important;text-underline-offset:3px!important;background:none!important;border:none!important}
+.ms302-detail-save{margin:8px 0 12px;border:1px solid #e1d7b8;border-radius:999px;padding:9px 13px;background:#fff7df;color:#255243;font:700 13px system-ui;cursor:pointer}
+.ms302-detail-save[aria-pressed=true]{background:#e9f4e9}
+.ms302-empty-favs{background:#edf5ef;border-radius:12px;padding:18px}
+.ms302-fav-line{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #d9e4dc;border-radius:14px;padding:12px;margin:10px 0;background:#fff}
+.ms302-fav-line a{font-weight:750;color:#174b3d;text-decoration:underline;overflow-wrap:anywhere}
+.ms302-fav-line button{border:1px solid #eed7c8;background:#fff3ea;border-radius:9px;padding:8px 10px;color:#784930;font-weight:750;cursor:pointer}
+/* Etusivulla pysähdys näkyy. Vain vanhat erilliset nähtävyys- ja ruukkilinkit poistuvat. */
+body[data-home=true] #ms-ruukki-backup-v298,body[data-home=true] #ms-ruukki-in-menu-v298{display:none!important}
+@media(max-width:390px){.ms302-nav{padding-left:6px!important;padding-right:6px!important}.ms302-nav-inner{gap:1px!important}.ms302-label{font-size:10px!important}}
+
+.ms301-favorites{box-sizing:border-box;width:min(calc(100% - 28px),700px);margin:18px auto 35px;color:#174b3d;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.ms301-favorites h1{font-size:clamp(28px,6vw,40px);margin:12px 0 8px}
+.ms301-favorites p{color:#596c60}
+.ms302-fav-notice{font-size:12px;margin-top:22px}
+
+body .ms303-nav,body .ms304-nav{display:none!important}
+body[data-home="true"] .home-primary-links-v290 .menu > a[href*="kayntikohteet.html"],body[data-home="true"] .home-primary-links-v290 .menu > a[href*="ruukkikylat.html"]{display:none!important}

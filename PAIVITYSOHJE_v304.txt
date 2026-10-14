@@ -1,0 +1,27 @@
+MATKAILE SUOMESSA v304 – PYSÄHDY MATKALLA ON NYT AINOA YHTEINEN HAKUSIVU
+
+Korjaukset
+- Etusivulta poistuu NÄE JA KOE sekä erillinen Ruukkikylät-pikavalinta.
+- Etusivun neljä suurta painiketta ja Omat matkat / Saariston rengastie jäävät ennalleen.
+- Etusivun PYSÄHDY MATKALLA säilyy ja kertoo nyt kaikista sisältöluokista.
+- Pysähdy matkalla avaa samalta sivulta 6 kategoriaa:
+  Kaikki, Nähtävyydet, Luonto ja retket, Taukopaikat, Ruukkikylät,
+  Kahvilat ja ravintolat.
+- Paikkakunta- ja nimihaku toimii samassa näkymässä. Samat kohteet näytetään vain kerran.
+- Vanhat Näe ja koe ja Ruukkikylät -osoitteet ohjautuvat yhdistettyyn hakuun.
+- Alapalkin 3 painiketta säilyvät: Koti / Pysähdy matkalla / Suosikit.
+
+ASENNUS
+1. Pura ZIP ja vie sen SISÄLLÄ OLEVAT tiedostot sekä kansiot GitHub-
+   repositorion juureen, ylikirjoita samannimiset tiedostot.
+2. Tallenna GitHubissa (Commit changes).
+3. Jos GitHub Actions on käytössä, työnkulku "Yhtenainen alavalikko v304"
+   päivittää uusimman alavalikon kaikkiin muihinkin HTML-sivuihin.
+   Tarvittaessa käynnistä se Actions-valikosta käsin.
+4. Odota Pages-julkaisua, päivitä selaimessa sivu ja tarkista etusivu sekä
+   Pysähdy matkalla. Sivun uusi CSS/JS käyttää välimuistin ohittavaa ?v=304 -numeroa.
+
+HUOM: Tämä on pieni päivityspaketti olemassa olevan GitHub-sivuston PÄÄLLE.
+Älä poista vanhoja tiedostoja, etenkään lähdeaineistoja nearby-data-v218.js ja
+kayntikohteet-data-v230.js, joihin yhdistetty haku tukeutuu. ZIP ei itsessään
+julkaise muutoksia GitHubiin. Kokonainen sivusto ei sisälly tähän ZIPiin.
