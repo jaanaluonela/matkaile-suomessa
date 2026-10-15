@@ -1,0 +1,48 @@
+MATKAILE SUOMESSA v328 – OULUN SEUTU + ALAVALIKKO SAMASSA PAKETISSA
+
+1. ALAVALIKKO – hyväksytty vaihtoehto 2
+   Koti – Paikkakunnat – Pysähdy matkalla – Omat matkat.
+   Valkoinen alusta, yhtenäiset suuremmat SVG-kuvakkeet, tummanvihreä teksti.
+   Etusivun suuri Omat matkat -painike ei muutu.
+   Suosikkitoiminnon tiedot eivät häviä, Suosikit poistuu vain alapalkista.
+
+2. OULUN SEUDUN SISÄLTÖPÄIVITYS
+   Uusi: oulun-seutu.html.
+   Yhteisellä JS-tiedostolla lisätty kohteita Oulun, Kempeleen, Limingan,
+   Hailuodon, Iin, Muhoksen, Tyrnävän, Lumijoen ja Utajärven sivuille.
+   Linkki Oulun seutuun myös Pohjois-Pohjanmaan maakuntasivulle.
+   Vanhoja kuntasivuja EI korvata – lisäsisältö näytetään erillisinä kortteina.
+   Luontokohteet, lasten kohteet, nähtävyydet, kulttuuri, yöpymispalvelujen
+   esittely ja ajantasaisiin virallisiin sivuihin vievät linkit.
+
+3. OIKEAT VALOKUVAT
+   4 oikeaa, paikan päällä otettua valokuvaa Oulusta, Limingasta,
+   Hailuodosta ja Iistä. Kuvat tulevat Wikimedia Commonsin palvelimelta
+   (niitä ei ole sisällytetty ZIPiin); CC0/public domain -käyttöoikeus
+   tarkistettu ja tekijät ja lähdelinkit näkyvät sivuilla.
+   Jos kuvat ovat verkosta pois, sisältö ja kortit toimivat silti.
+
+ASENNUS:
+  Pura tämä ZIP ja lataa sisällä olevat tiedostot GitHub-repositorion
+  samoihin polkuihin; säilytä kansiot .github/workflows/ ja tyokalut/.
+  Repositorion Github Actions -työ "Yhtenainen alavalikko v328"
+  lisää/korjaa alavalikko-v304.js/css -viitteet kaikissa HTML-sivuissa.
+  Jos Actions ei saa kirjoitusoikeutta, käynnistä omalla koneella:
+     python tyokalut/paivita_rakenne_v304.py
+  ja vie myös sen muuttamat HTML-sivut GitHubiin.
+  Ei kannata korvata koko sivustoa vanhalla ZIPillä.
+
+HUOM: Päivitystä ei ole julkaistu GitHubiin. Suurimmat sisällöt näytetään
+käyttöliittymässä JavaScriptillä, joten selaimessa on oltava JS päällä.
+Hinnat, aukiolot, kulkuyhteydet ja caravan-palvelujen saatavuus varmistettava.
+
+ALKUPERÄISLÄHTEET (esimerkkejä)
+ https://visitoulu.fi/nahtavyydet/
+ https://visitoulu.fi/oulussa-lasten-kanssa-kesa/
+ https://kempele.fi/matkailijoille/tee-ja-koe/
+ https://visitliminka.fi/liminganlahti/
+ https://visitliminka.fi/vanha-liminka/
+ https://www.visithailuoto.fi/n%C3%A4ht%C3%A4vyydet
+ https://muhos.fi/visitmuhos/koe-ja-nae/nahtavyydet/
+ https://visittyrnava.fi/
+ https://www.utajarvi.fi/fi/matkailu/rokua_geopark/

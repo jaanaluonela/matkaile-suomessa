@@ -1,0 +1,17 @@
+/* Matkaile Suomessa: Oulun seutu v328 */
+.os328-wrap{margin:22px 0 36px;color:#1b4c3c;font:16px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+.os328-wrap *{box-sizing:border-box}.os328-wrap h2{font-size:clamp(23px,3vw,31px);line-height:1.18;margin:0 0 10px;color:#164936}
+.os328-intro{border:1px solid #d8e8db;border-radius:22px;background:linear-gradient(130deg,#f0f7ef,#eff7f8);padding:18px;margin-bottom:16px}
+.os328-intro p{margin:6px 0;color:#4f6f60}.os328-photo{width:100%;height:clamp(170px,28vw,320px);display:block;object-fit:cover;border-radius:16px;margin:0 0 8px}
+.os328-credit{display:block;color:#63796b;font-size:11px;margin-bottom:12px}.os328-credit a{color:#326e51}
+.os328-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:13px 0}.os328-card{border:1px solid #d5e8dc;background:white;padding:15px;border-radius:15px;display:flex;flex-direction:column;min-width:0;gap:6px;box-shadow:0 3px 13px #2848310d}
+.os328-category{font-size:11px;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:#37705b}
+.os328-card strong{font-size:17px;line-height:1.26}.os328-card p{margin:0;color:#566f60;font-size:14px;flex:1}
+.os328-card a,.os328-go{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;background:#e7f4e9;color:#1b624a;padding:8px 11px;border-radius:11px;font-size:13px;font-weight:800;text-decoration:none;margin-top:5px;min-height:36px}
+.os328-links{display:flex;flex-wrap:wrap;gap:9px}.os328-go{background:#176747;color:#fff}.os328-town-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.os328-town{display:flex;flex-direction:column;background:#fff;border-radius:15px;border:1px solid #d5e7dc;padding:14px;text-decoration:none;color:#1d503d;gap:4px;min-height:99px;justify-content:center}
+.os328-town b{font-size:18px}.os328-town span{font-size:13px;color:#567468}.os328-tips{background:#fbf7e9;border:1px solid #f0e5c6;padding:13px;border-radius:13px;color:#46583c;font-size:14px}
+.os328-wrap a:focus-visible{outline:3px solid #e99f31;outline-offset:3px}
+.os328-wrap[hidden]{display:none!important}
+@media(max-width:620px){.os328-grid,.os328-town-grid{grid-template-columns:1fr}.os328-wrap{margin:18px 0}.os328-photo{height:200px}}
+@media(min-width:880px){.os328-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}

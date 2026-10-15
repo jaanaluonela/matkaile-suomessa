@@ -7,7 +7,7 @@ body .site-nav,body .bottom-nav,body .ms301-nav{display:none!important}
  background:rgba(255,255,255,.97)!important;border-top:1px solid var(--ms302-border)!important;
  box-shadow:0 -3px 14px rgba(26,65,47,.07)!important;padding:5px 9px calc(5px + env(safe-area-inset-bottom,0px))!important;
  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.ms302-nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;max-width:610px!important;margin:auto!important}
+.ms302-nav-inner{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important;max-width:780px!important;margin:auto!important}
 .ms302-nav a{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;min-width:0!important;
  gap:1px!important;text-align:center!important;text-decoration:none!important;min-height:54px!important;padding:4px 1px!important;border-radius:13px!important;
  color:#184839!important;background:transparent!important}
@@ -38,3 +38,26 @@ body[data-home=true] #ms-ruukki-backup-v298,body[data-home=true] #ms-ruukki-in-m
 
 body .ms303-nav,body .ms304-nav{display:none!important}
 body[data-home="true"] .home-primary-links-v290 .menu > a[href*="kayntikohteet.html"],body[data-home="true"] .home-primary-links-v290 .menu > a[href*="ruukkikylat.html"]{display:none!important}
+
+/* v327: neljä helposti napautettavaa painiketta, myös pienellä puhelimella. */
+.ms302-nav-inner{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.ms302-nav a{min-height:57px!important;padding:5px 1px!important}
+.ms302-nav .ms302-label{font-size:clamp(10px,2.85vw,12px)!important;line-height:1.15!important}
+.ms302-nav .ms302-icon{font-size:clamp(21px,6vw,26px)!important}
+@media(min-width:700px){.ms302-nav .ms302-label{font-size:12px!important}}
+@media(max-width:360px){.ms302-nav{padding-left:3px!important;padding-right:3px!important}.ms302-nav-inner{gap:1px!important}}
+
+/* v328 – hyväksytty malli 2: valkoiset pinnat, hieman suuremmat kuvakkeet ja lempeän vihreä korostus */
+body .footnav{display:none!important}
+.ms302-nav{background:#fff!important;border-top:1px solid #e0eae3!important;box-shadow:0 -6px 25px #24463617!important}
+.ms302-nav-inner{max-width:1040px!important;gap:5px!important}
+.ms302-nav a{min-height:63px!important;padding:6px 2px!important;border-radius:16px!important}
+.ms302-nav a.ms302-active{background:#e7f3eb!important}
+.ms302-nav .ms302-icon{font-size:clamp(25px,7vw,33px)!important;line-height:1.03!important}
+.ms302-nav .ms302-label{font-size:clamp(10px,2.6vw,13px)!important;font-weight:800!important;color:#174d40!important}
+@media(min-width:720px){.ms302-nav{padding-top:8px!important;padding-bottom:8px!important}.ms302-nav a{min-height:66px!important}}
+
+/* Yhtenäiset SVG-kuvakkeet: eivät vaihdu käyttöjärjestelmän emojien mukaan. */
+.ms302-nav .ms302-icon{display:flex!important;align-items:center!important;justify-content:center!important;height:39px!important;width:48px!important;line-height:1!important}
+.ms302-nav .ms302-icon svg{display:block;width:45px;height:38px;max-width:100%}
+@media(max-width:360px){.ms302-nav .ms302-icon svg{width:39px;height:34px}}
