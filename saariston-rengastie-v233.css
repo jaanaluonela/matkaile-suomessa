@@ -45,3 +45,29 @@
  .quick a{min-height:64px;display:flex;align-items:center}
  .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+
+
+/* v322 – Saariston rengastien kaupat ja ostokset: selkeät mobiilisuodattimet ja desktop-kortit */
+.shops-section{scroll-margin-top:18px}
+.shop-controls{display:grid;gap:12px;margin:16px 0 2px}
+.shop-filters{display:flex;flex-wrap:wrap;gap:8px}
+.shop-filters button{appearance:none;border:1px solid #cadfd2;background:#f0f5ef;color:#225943;border-radius:12px;padding:10px 13px;min-height:44px;font:750 14px/1.35 system-ui,sans-serif;cursor:pointer}
+.shop-filters button[aria-pressed="true"]{background:#155e4d;color:#fff;border-color:#155e4d}
+.shop-filters button:focus-visible,#shop-town-choice:focus-visible{outline:3px solid #e8771f;outline-offset:3px}
+.shop-town-label{font-size:13px;font-weight:750;color:#396550;margin-top:1px}
+#shop-town-choice{display:block;max-width:360px;width:100%;background:#fff;color:#173e34;padding:12px 13px;border:1px solid #b9d1c2;border-radius:11px;font-size:16px}
+.shop-count{font-size:13px;color:#536f60;margin:11px 0 12px}
+.shop-grid{display:grid;grid-template-columns:1fr;gap:11px}
+.shop-item{background:#f8fbf8;border:1px solid #d8e5d9;border-radius:15px;padding:16px;display:flex;flex-direction:column;min-width:0}
+.shop-item[hidden]{display:none!important}
+.shop-topline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:center}
+.shop-town,.shop-kind{font-size:12px;font-weight:750;color:#316a4e}
+.shop-kind{background:#e3eee6;border-radius:8px;padding:3px 7px}
+.shop-item h3{font-size:17px;margin:9px 0 1px}
+.shop-item p{font-size:14px;margin:7px 0 8px}
+.shop-item .shop-address{font-size:13px;color:#426956;font-weight:650}
+.shop-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:7px}
+.shop-actions .mini{font-size:12px}
+.shop-notice{margin:18px 0 0;font-size:13px;background:#f2f7f2;border-radius:12px;padding:12px;color:#576b5e}
+@media(min-width:640px){.shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.shop-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.quick{grid-template-columns:repeat(3,minmax(0,1fr))}}
