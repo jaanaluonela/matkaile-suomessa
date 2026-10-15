@@ -1,0 +1,38 @@
+MATKAILE SUOMESSA – v331: ALAVALIKKO KAIKILLE SIVUILLE
+
+TAVOITE
+Vanhan "Koti / Yöpyminen / Paikkakunnat" -alavalikon tilalle
+Koti  |  Paikkakunnat  |  Pysähdy matkalla  |  Omat matkat.
+Tausta valkoinen, kuvakkeet selkeät, korostus vaaleanvihreä.
+
+TÄRKEÄÄ
+Tämä on päivityspaketti nykyisen GitHub-sivuston PÄÄLLE, EI uusi kokonainen sivusto.
+ZIP-tiedoston lataaminen GitHubiin sellaisenaan ei asenna päivitystä.
+Pura ZIP ensin; kopioi tiedostot samoihin kansioihin ja korvaa vanhat.
+Säilytä muut olemassa olevat sivuston tiedostot.
+
+ERITYISESTI
+- paivakirja.html (Omat matkat): nyt suoraan korjattu, vaikka automaattinen asennus ei käynnistyisi.
+- alavalikko-v304.css + alavalikko-v304.js: yhteinen mobiilialavalikko.
+- tyokalut/paivita_alavalikko_v331.py: lisää valikon suoraan jokaisen HTML:n loppuun.
+- .github/workflows/alavalikko-v301.yml: suorittaa sivujen päivityksen GitHub Actionsissa.
+- Sisältää myös edellisen v330-päivityksen sisältösivujen selkeytykset ja Oulun tiedostot.
+
+ASENNUS
+1. Pura ZIP tietokoneella.
+2. Siirrä ZIP:n sisällön tiedostot GitHub-repositorion pääkansioon
+   (ja .github/workflows sekä tyokalut alakansioihin) ja korvaa samannimiset.
+3. Commit. Avaa GitHubin Actions ja odota työn "Matkaile Suomessa – neljän painikkeen alavalikko v331" onnistumista.
+4. Tarkista että alavalikko-v304.js ja .css ovat GitHubin pääkansiossa
+   sekä että paivakirja.html:n päällä on uusin tiedosto.
+5. Avaa GitHub Pages -sivu uudestaan iPhonessa. Tarvittaessa sulje vanha välilehti.
+
+JOS ACTIONS EI SUORITA PÄIVITYSTÄ
+Aja projektin pääkansiossa:
+  python tyokalut/paivita_rakenne_v329.py
+  python tyokalut/paivita_rakenne_v330.py
+  python tyokalut/paivita_alavalikko_v331.py
+ja vie niiden muuttamat HTML-sivut GitHubiin.
+
+Säilyttää päiväkirjan ja kuvien tallennuksen ennallaan. Ei poista suosikkeja.
+GitHub-sivustoa EI ole päivitetty suoraan tästä keskustelusta.

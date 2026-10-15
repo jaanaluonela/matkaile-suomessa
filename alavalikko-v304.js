@@ -1,4 +1,4 @@
-/* v329: alavalikon vaihtoehto 2 ja Oulun seudun sisältö. Muut sivuston toiminnot säilyvät. */
+/* v331: alavalikon vaihtoehto 2, neljä linkkiä jokaisella sivulla, ja Oulun seudun sisältö. Muut sivuston toiminnot säilyvät. */
 (() => {
  'use strict';
  const source=document.currentScript?.src||location.href;
