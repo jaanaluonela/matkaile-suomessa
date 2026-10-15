@@ -1,38 +1,33 @@
-MATKAILE SUOMESSA – v331: ALAVALIKKO KAIKILLE SIVUILLE
+MATKAILE SUOMESSA v331 – OULU NÄKYVIIN
 
-TAVOITE
-Vanhan "Koti / Yöpyminen / Paikkakunnat" -alavalikon tilalle
-Koti  |  Paikkakunnat  |  Pysähdy matkalla  |  Omat matkat.
-Tausta valkoinen, kuvakkeet selkeät, korostus vaaleanvihreä.
+Tämä ZIP on päivitys olemassa olevaan GitHub-sivustoon, ei koko sivuston varmuuskopio.
 
-TÄRKEÄÄ
-Tämä on päivityspaketti nykyisen GitHub-sivuston PÄÄLLE, EI uusi kokonainen sivusto.
-ZIP-tiedoston lataaminen GitHubiin sellaisenaan ei asenna päivitystä.
-Pura ZIP ensin; kopioi tiedostot samoihin kansioihin ja korvaa vanhat.
-Säilytä muut olemassa olevat sivuston tiedostot.
+MIKÄ KORJAANTUU?
+- Paikkakunnat-sivulla on suora linkki Oulun kattavaan oppaaseen.
+- Pohjois-Pohjanmaan sivun alussa on Oulu ja Oulun seutu helposti löydettävissä.
+- Myös vanhalla kunnat.html-sivulla on linkit Ouluun.
+- Oulun oma sivu sisältää 37 kohdetta ja suodatuksen. Oulun seutu -sivu sisältää alueen muita paikkakuntia.
+- Kaikilla sivuilla jatkaa vaalea neljän painikkeen alavalikko: Koti, Paikkakunnat, Pysähdy matkalla, Omat matkat.
+- Edellisten pakettien (v329 ja v330) aineisto on mukana samassa paketissa.
+- Etusivun sisältöä, muita paikkakuntia tai olemassa olevia suosikkeja ei poisteta.
 
-ERITYISESTI
-- paivakirja.html (Omat matkat): nyt suoraan korjattu, vaikka automaattinen asennus ei käynnistyisi.
-- alavalikko-v304.css + alavalikko-v304.js: yhteinen mobiilialavalikko.
-- tyokalut/paivita_alavalikko_v331.py: lisää valikon suoraan jokaisen HTML:n loppuun.
-- .github/workflows/alavalikko-v301.yml: suorittaa sivujen päivityksen GitHub Actionsissa.
-- Sisältää myös edellisen v330-päivityksen sisältösivujen selkeytykset ja Oulun tiedostot.
+ASENNUS GITHUBIIN
+1. Pura ZIP tietokoneelle. Siirrä KAIKKI ZIP-paketin tiedostot GitHub-repositorion JUUREEN
+   vastaaviin hakemistoihin. Muista myös piilotettu .github/workflows-kansio.
+   Korvaa samannimiset tiedostot. Älä lataa ZIP-tiedostoa sellaisenaan verkkosivulle.
+2. Tallenna muutokset GitHubiin (Commit changes).
+3. Tarkista GitHub > Actions > "Oulu löydettäväksi ja sisältösivut v331".
+   Työn pitää mennä vihreäksi; tarvittaessa Settings > Actions > General >
+   Workflow permissions > Read and write permissions.
+4. Jos GitHub Actions ei päivitä HTML-sivuja, aja projektin juuressa:
+       python tyokalut/paivita_rakenne_v329.py
+       python tyokalut/paivita_rakenne_v330.py
+       python tyokalut/paivita_oulun_loydettavyys_v331.py
+   ja vie muuttuneet HTML-sivut takaisin GitHubiin.
+5. Tarkista osoitteet /maakunnat.html, /pohjois-pohjanmaa.html,
+   /oulu.html ja /oulun-seutu.html. Päivitä selaimessa tarvittaessa välimuisti.
 
-ASENNUS
-1. Pura ZIP tietokoneella.
-2. Siirrä ZIP:n sisällön tiedostot GitHub-repositorion pääkansioon
-   (ja .github/workflows sekä tyokalut alakansioihin) ja korvaa samannimiset.
-3. Commit. Avaa GitHubin Actions ja odota työn "Matkaile Suomessa – neljän painikkeen alavalikko v331" onnistumista.
-4. Tarkista että alavalikko-v304.js ja .css ovat GitHubin pääkansiossa
-   sekä että paivakirja.html:n päällä on uusin tiedosto.
-5. Avaa GitHub Pages -sivu uudestaan iPhonessa. Tarvittaessa sulje vanha välilehti.
-
-JOS ACTIONS EI SUORITA PÄIVITYSTÄ
-Aja projektin pääkansiossa:
-  python tyokalut/paivita_rakenne_v329.py
-  python tyokalut/paivita_rakenne_v330.py
-  python tyokalut/paivita_alavalikko_v331.py
-ja vie niiden muuttamat HTML-sivut GitHubiin.
-
-Säilyttää päiväkirjan ja kuvien tallennuksen ennallaan. Ei poista suosikkeja.
-GitHub-sivustoa EI ole päivitetty suoraan tästä keskustelusta.
+HUOM: Vasta GitHubiin tehty onnistunut asennus muuttaa julkaistua sivustoa.
+Testattu saatavilla ollutta 14.10.2026 päivättyä sivustokopiota vasten;
+jos live-repossa on myöhempiä muutoksia, automaattiset lisäykset tehdään
+olemassa olevaan tiedostoon eikä sitä korvata vanhalla kopiolla.

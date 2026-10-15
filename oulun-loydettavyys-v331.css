@@ -1,0 +1,13 @@
+/* Matkaile Suomessa v331 — Oulu löytyy myös suoraan, ilman pitkän kuntalistan selausta. */
+.ms331-oulu-shortcuts { box-sizing: border-box; display:flex; flex-wrap:wrap; align-items:center; gap:8px 11px;
+  background:#f5f9f6; border:1px solid #d7e6db; border-radius:14px; padding:10px 12px; margin:10px 0 18px;
+  font:600 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif; color:#365a48; }
+.ms331-oulu-shortcuts .ms331-oulu-label { color:#5b7265; font-size:12px; font-weight:750; white-space:nowrap; }
+.ms331-oulu-shortcuts a { border-radius:9px; padding:5px 10px; color:#15533c; background:white;
+  border:1px solid #d8e6dc; font-weight:800; text-decoration:none; }
+.ms331-oulu-shortcuts a:hover,.ms331-oulu-shortcuts a:focus-visible {background:#e4f2e7;outline-offset:2px;}
+@media (max-width:480px) {
+ .ms331-oulu-shortcuts {gap:6px;padding:9px 10px;margin-top:8px;}
+ .ms331-oulu-shortcuts .ms331-oulu-label {width:100%}
+ .ms331-oulu-shortcuts a {font-size:13px; flex-grow:1;text-align:center}
+}
