@@ -56,8 +56,3 @@ body .footnav{display:none!important}
 .ms302-nav .ms302-icon{font-size:clamp(25px,7vw,33px)!important;line-height:1.03!important}
 .ms302-nav .ms302-label{font-size:clamp(10px,2.6vw,13px)!important;font-weight:800!important;color:#174d40!important}
 @media(min-width:720px){.ms302-nav{padding-top:8px!important;padding-bottom:8px!important}.ms302-nav a{min-height:66px!important}}
-
-/* Yhtenäiset SVG-kuvakkeet: eivät vaihdu käyttöjärjestelmän emojien mukaan. */
-.ms302-nav .ms302-icon{display:flex!important;align-items:center!important;justify-content:center!important;height:39px!important;width:48px!important;line-height:1!important}
-.ms302-nav .ms302-icon svg{display:block;width:45px;height:38px;max-width:100%}
-@media(max-width:360px){.ms302-nav .ms302-icon svg{width:39px;height:34px}}

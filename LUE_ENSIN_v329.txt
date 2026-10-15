@@ -1,0 +1,24 @@
+MATKAILE SUOMESSA v329 – OULU + OULUN SEUTU + SOVITTU ALAVALIKKO
+
+MIKÄ OLI V328-VERSIOSSA KESKEN?
+Oulun varsinainen kuntasivu jäi suppeaksi. Oulun seudun kortit tulivat näkyviin vain, jos navigaatiotiedosto latasi toisen JavaScript-tiedoston. Uuden paketin Oulu-sivu sisältää kohteet jo HTML-koodissa. Muiden seudun kuntien sivuihin lisätään suorat JS/CSS-viitteet asennustyökalulla.
+
+SISÄLTÖ
+- Oulun omalla sivulla 37 nimetyn kohteen korttia ja seitsemän haku-/suodatinryhmää.
+- Muut seutukunnat: Kempele, Liminka, Hailuoto, Ii, Muhos, Tyrnävä, Lumijoki ja Utajärvi.
+- Oulun seudun koontisivu (oulun-seutu.html), linkki Pohjois-Pohjanmaan maakuntasivulle.
+- Kohteisiin suorat tai alueen viralliset lisätietolinkit.
+- Kohteen sydän tallentaa suosikin aiemmin käytettyyn ms_favorites_v301-avaimeen.
+- Alavalikko: Koti / Paikkakunnat / Pysähdy matkalla / Omat matkat.
+- Etusivun suuria painikkeita ja matkamuistoja ei muuteta.
+
+ASENNUS (tärkeä)
+1. Pura ZIP. Vie sen sisällä olevat tiedostot repositorion samoihin polkuihin.
+2. Jos .github/workflows/ -työ saa kirjoittaa, asennustyökalu lisää v329-viitteet automaattisesti seudun kuntasivuille. Työn nimi: Alavalikko ja Oulun seutu v329. Päivitys korvaa aiemman alavalikko-v301.yml-työn.
+3. Jos automaattinen päivitys ei käynnisty tai sillä ei ole kirjoitusoikeutta, aja projektin juuressa: python tyokalut/paivita_rakenne_v329.py; vie muuttuneet HTML-sivutkin GitHubiin.
+4. Tarkista uudelleenlatauksen jälkeen oulu.html, oulun-seutu.html, kempele.html ja pohjois-pohjanmaa.html sekä alapalkki.
+5. Älä julkaise aiempaa v328-versiota tämän jälkeen.
+
+HUOM. Oulun kuntasivu toimii HTML:n osalta, vaikka JavaScript ei latautuisi; hakusuodatin ja sydäntallennus tarvitsevat JS:n. Oulun seudun koontisivulla on JS:stä riippumaton kuntalinkkiluettelo. Muiden kuntien lisäkortit käyttävät JS:ää.
+
+Kohdetietojen tarkistus: 15.10.2026. Kauden aukiolot ja hinnat varmistettava kohteen sivulta ennen matkaa.

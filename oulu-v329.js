@@ -1,0 +1,9 @@
+(() => { 'use strict';
+const input=document.getElementById('ou329-search'), buttons=[...document.querySelectorAll('.ou329-tabs button')],cards=[...document.querySelectorAll('.ou329-card')], count=document.getElementById('ou329-count'),empty=document.getElementById('ou329-no-results');let active='Kaikki';
+const norm=s=>(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+function draw(){const term=norm(input.value.trim());let n=0;for(const card of cards){const match=(active==='Kaikki'||card.dataset.category===active)&&norm(card.dataset.text).includes(term);card.hidden=!match;if(match)n++;}count.textContent=n+' kohdetta';empty.hidden=n>0;}
+buttons.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.cat;buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));draw();}));input.addEventListener('input',draw);
+const KEY='ms_favorites_v301';function read(){try{const x=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(x)?x:[]}catch{return []}}
+function sync(){const list=read();document.querySelectorAll('.ou329-heart').forEach(b=>{const yes=list.some(x=>x.url===b.dataset.url);b.textContent=yes?'♥':'♡';b.setAttribute('aria-pressed',String(yes));b.setAttribute('aria-label',(yes?'Poista suosikeista: ':'Tallenna suosikkeihin: ')+b.dataset.title);})}
+document.querySelectorAll('.ou329-heart').forEach(b=>b.addEventListener('click',()=>{const list=read(), url=b.dataset.url,index=list.findIndex(x=>x.url===url);if(index>=0)list.splice(index,1);else list.unshift({url,title:b.dataset.title,savedAt:new Date().toISOString()});try{localStorage.setItem(KEY,JSON.stringify(list));sync()}catch(e){alert('Suosikkia ei voitu tallentaa tällä laitteella.')}}));window.addEventListener('storage',sync);sync();draw();
+})();
