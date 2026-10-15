@@ -1,0 +1,62 @@
+/* Matkaile Suomessa v330 – sisältösivujen yhtenäinen, rauhallinen esitystapa.
+   Ei yhtään etusivuun kohdistuvaa sääntöä. Tärkeät hakutoiminnot säilyvät. */
+body.ms330-content-page{--ms330-ink:#194a39;--ms330-muted:#5d7567;--ms330-line:#dbe8de;--ms330-accent:#eaf4ed;color:var(--ms330-ink)}
+body.ms330-content-page :is(main,.map-page,.ou329-main){min-width:0}
+body.ms330-content-page :is(main,.map-page,.ou329-main) :is(h1,h2,h3){overflow-wrap:break-word}
+body.ms330-content-page :is(main,.map-page,.ou329-main) h1{font-size:clamp(28px,5vw,43px);line-height:1.13;letter-spacing:-.028em}
+body.ms330-content-page :is(main,.map-page,.ou329-main) h2{font-size:clamp(21px,3vw,29px);line-height:1.23;letter-spacing:-.018em}
+body.ms330-content-page :is(main,.map-page,.ou329-main) p{line-height:1.5}
+/* Isoista esittelylaatikoista kompaktit sivuotsikot, myös Oulussa. */
+body.ms330-content-page .ms330-page-intro{margin-top:5px!important;margin-bottom:15px!important;padding:clamp(14px,2.9vw,27px)!important;border-radius:18px!important;box-shadow:none!important}
+body.ms330-content-page .ms330-page-intro h1{font-size:clamp(28px,5vw,43px)!important;margin:5px 0 9px!important}
+body.ms330-content-page .ms330-page-intro p{font-size:clamp(14px,1.7vw,16px)!important;line-height:1.5!important;max-width:72ch}
+body.ms330-content-page .ms330-regions-intro .eyebrow,body.ms330-content-page .ms330-regions-intro .kicker{letter-spacing:.04em}
+/* Paikkakunnat: hakua ja maakuntien valintaa ei peitetä tekstin ja kartan taakse. */
+body.ms330-content-page .map-page{max-width:1080px!important;margin-inline:auto!important;background:transparent!important}
+body.ms330-content-page .map-hero{padding:12px 18px 4px!important}
+body.ms330-content-page .map-intro{padding:15px 19px!important;margin-bottom:11px!important;border-radius:17px!important;box-shadow:none!important}
+body.ms330-content-page .map-intro h1{font-size:clamp(28px,4.5vw,39px)!important;margin-bottom:4px!important}
+body.ms330-content-page .map-intro p{font-size:14px!important;font-weight:500!important}
+body.ms330-content-page .search-card{padding:14px 17px!important;margin-bottom:10px!important;border-radius:16px!important;box-shadow:none!important}
+body.ms330-content-page :is(.search-card input,.search-card select,.ou329-searchbox input){min-height:47px!important;max-width:100%;font-size:16px!important}
+body.ms330-content-page .map-toggle{border-radius:15px!important;margin-block:12px!important;box-shadow:none!important}
+body.ms330-content-page .map-toggle > summary{font-size:16px!important;font-weight:750!important;padding:12px 15px!important;cursor:pointer}
+body.ms330-content-page .finland-card{border-radius:15px!important;box-shadow:none!important;margin-bottom:10px!important}
+body.ms330-content-page .region-row{border-radius:13px!important;padding:11px 13px!important;margin-bottom:7px!important;box-shadow:none!important}
+body.ms330-content-page .region-list{border-radius:16px!important;padding:15px!important;box-shadow:none!important}
+body.ms330-content-page .status-card{border-radius:16px!important;box-shadow:none!important}
+/* Kaikki muut sisältösivut: vähemmän sisäkkäisiä kehyksiä ja suurempi sisällön osuus. */
+body.ms330-content-page :is(.card,.feature){box-shadow:none!important;border-radius:16px!important}
+body.ms330-content-page .quick{margin-block:10px!important;gap:7px!important}
+body.ms330-content-page .quick a{min-height:40px;border-radius:12px!important}
+body.ms330-content-page .v278-more{margin-block:16px!important}
+body.ms330-content-page :is(.v278-tip,.es321-card,.os328-card){box-shadow:none!important;border-radius:14px!important}
+body.ms330-content-page :is(.v278-grid,.es321-grid,.os328-grid){gap:10px!important}
+body.ms330-content-page .ou329-main{max-width:1150px!important}
+body.ms330-content-page .ou329-hero{padding:clamp(20px,3vw,32px)!important;margin-bottom:15px!important;border-radius:18px!important}
+body.ms330-content-page .ou329-hero h1{font-size:clamp(32px,5vw,47px)!important;margin:9px 0 7px!important}
+body.ms330-content-page .ou329-hero p{font-size:15px!important;line-height:1.5!important}
+body.ms330-content-page .ou329-tags{margin-top:12px!important}
+body.ms330-content-page .ou329-tags span{padding:5px 9px!important;font-size:12px!important}
+body.ms330-content-page .ou329-intro{margin-bottom:6px!important}
+body.ms330-content-page .ou329-intro h2{font-size:clamp(20px,2.7vw,26px)!important}
+body.ms330-content-page .ou329-card{border-radius:14px!important;box-shadow:none!important}
+body.ms330-content-page .ou329-feature{border-radius:14px!important;margin-top:14px!important}
+/* Tietokoneella näkyy oikea leveä asettelu, ei puhelimen kapea palsta. */
+@media(min-width:850px){
+ body.ms330-content-page .map-page{padding-inline:clamp(18px,3vw,32px)!important}
+ body.ms330-content-page .map-page .region-list{max-width:100%!important}
+ body.ms330-content-page .ou329-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+/* Täydennyskortteja on aluksi kuusi; loput saa esiin yhdellä painikkeella. */
+body.ms330-content-page :is(.es321-grid,.v278-grid,.os328-grid):not(.ms330-show-all) > .ms330-extra-card{display:none!important}
+body.ms330-content-page .ms330-expand{display:block;margin:11px 0 19px;min-height:43px;padding:9px 16px;border:1px solid #b9d8c4;background:#eaf4ed;border-radius:12px;color:#18543a;font:750 14px system-ui;cursor:pointer}
+body.ms330-content-page .ms330-expand:focus-visible{outline:3px solid #e79d49;outline-offset:2px}
+body.ms330-content-page .ms330-duplicate-back{display:none!important}
+@media(max-width:700px){
+ body.ms330-content-page .map-page{padding-bottom:104px!important}
+ body.ms330-content-page :is(.ou329-card,.os328-card,.v278-tip,.es321-card){padding:13px!important}
+ body.ms330-content-page .ou329-intro p{font-size:14px!important}
+ body.ms330-content-page .ou329-hub{font-size:13px!important}
+ body.ms330-content-page .map-toggle .finland-svg{max-height:560px}
+}

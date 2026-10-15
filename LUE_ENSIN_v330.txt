@@ -1,0 +1,37 @@
+MATKAILE SUOMESSA v330 – SISÄLTÖSIVUJEN SELKEYTYS
+
+Tämä on ASENNETTAVA PÄIVITYSPAKETTI olemassa olevaan GitHub-repositorioon.
+Se EI ole koko sivuston ZIP-kopio.
+
+MUUTOKSET
+- Etusivun pääsisältöä ja isoja painikkeita EI muuteta. Sovittu neljän
+  painikkeen alavalikko päivittyy tarvittaessa myös etusivulle.
+- Kaikille muille HTML-sivuille lisätään rauhallisempi asettelu ja yhtenäisempi typografia.
+- Paikkakunnat: lyhyempi yläosa, ensisijaisesti haku ja valinnat, kartta avattavaksi.
+- Osassa paikkakuntien kohdeluetteloista näytetään ensin 6 lisäkorttia;
+  muut saa auki Näytä kaikki -painikkeella. Hakuun perustuvaa listaa ei rajata.
+- Oulun uuden sisällön 37 kohdekorttia, hakusuodattimet ja linkit säilyvät.
+- Neljän painikkeen alavalikko: Koti / Paikkakunnat / Pysähdy matkalla / Omat matkat.
+- Vanhoja matkailukohteita, kuvia, suosikkeja tai reittejä ei poisteta.
+
+ASENNUS
+1. Pura ZIP ja kopioi KAIKKI sen tiedostot GitHub-projektin vastaaviin kansioihin.
+   Korvaa saman nimiset tiedostot (erityisesti .github/workflows/alavalikko-v301.yml).
+2. Commit / tallenna muutokset. GitHub Actions -työ nimeltä
+   "Sisältösivujen selkeytys ja alavalikko v330" päivittää HTML-sivut.
+3. Tarkista GitHubin Actions-välilehdeltä että työ on onnistunut.
+   Työ tarvitsee repositorion "Read and write permissions" -oikeuden.
+4. Jos automaattinen työ ei saa muokata sivuja, aja repositorion juuressa:
+   python tyokalut/paivita_rakenne_v329.py
+   python tyokalut/paivita_rakenne_v330.py
+   ja vie muuttuneet HTML-sivut takaisin GitHubiin.
+5. Päivitä sivu selaimessa ja tarkista erityisesti maakunnat.html,
+   oulu.html, mikkeli.html, pysahdy-matkalla.html sekä etusivu.
+
+HUOM
+Paketti pohjautuu v329-korjauksiin. Jos v329 on jo käytössä, samoista
+v329-tiedostoista ei synny uutta sisältöä. Uudet v330-tiedostot lisätään.
+
+Kattavaa selainkohtaista testausta koko sivustoon ei voi tehdä ilman
+GitHubin koko sivuston lähdekoodia. Tämä päivitys on rajattu siten, ettei
+etusivun koodia tai kohdetietoja poisteta.
