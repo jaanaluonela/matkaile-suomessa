@@ -115,3 +115,138 @@
   body[data-home="true"] .home-primary-links-v290 .menu{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 @media(prefers-reduced-motion:reduce){.ms339-feature{transition:none!important}}
+
+
+/* v340 — paluu leveään tietokonesivuun. 900px alempana mobiili pysyy ennallaan. */
+@media screen and (min-width:900px) {
+  html { font-size: 17px; }
+  body { overflow-x: hidden; }
+  /* Sivun oikea leveys: poistaa vanhan 520–900px mobiilirajauksen */
+  body > main,
+  body > main.home-shell,
+  body > main.page,
+  body > main.regions-page,
+  body > main.ms302-stops,
+  body main.home-shell,
+  body main.page,
+  body main.regions-page,
+  body main.ms302-stops,
+  body .home-shell,
+  body .page,
+  body .regions-page,
+  body .ms302-stops {
+    width: calc(100% - 48px) !important;
+    max-width: 1580px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body main.home-shell {
+    padding: 24px 0 76px !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  body .ms339-shell {
+    width: calc(100% - 48px) !important;
+    max-width: 1580px !important;
+  }
+  .ms339-toprow { min-height: 76px; }
+  .ms339-navbar { padding-bottom: 12px; gap: 12px; }
+  .ms339-navbar a { font-size: 15px !important; }
+  /* Koko sivun levyinen maisemakuva, kuten aiemmassa tietokonenäkymässä */
+  body[data-home="true"] main.home-shell > .hero {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 410px !important;
+    background-image:
+      linear-gradient(90deg,rgba(10,40,34,.86) 0%, rgba(10,40,34,.48) 47%, rgba(10,40,34,.05) 82%),
+      url('hero-etusivu.jpg') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    padding: 40px 5% !important;
+    border-radius: 24px !important;
+    box-shadow: 0 12px 34px rgba(13,43,35,.12) !important;
+  }
+  body[data-home="true"] .hero .hero-content { max-width: 670px !important; width: 100% !important; }
+  body[data-home="true"] .hero .home-hero-lead-v290 {
+    color: white !important; font-size: clamp(25px, 3vw, 39px) !important;
+    line-height: 1.18 !important; max-width: 650px !important;
+    text-shadow: 0 2px 10px #0009 !important;
+  }
+  body[data-home="true"] .hero .hero-stats { gap: 12px; }
+  /* Haku leveästi heti kuvan jälkeen */
+  body[data-home="true"] main.home-shell > .home-explore-v251 {
+    width: 100% !important; max-width: none !important; box-sizing: border-box !important;
+    margin: 24px 0 26px !important; padding: 31px 4% !important;
+  }
+  body[data-home="true"] .home-explore-v251 h2 { font-size: clamp(28px, 2.8vw, 39px) !important; }
+  body[data-home="true"] #place-search { height: 66px !important; font-size: 21px !important; }
+  /* v339:n kolme pienikokoista korttia poistetaan tietokoneelta — ei tuplavalikoita. */
+  body[data-home="true"] .ms339-home-features { display: none !important; }
+  /* Leveät yksipalstaiset toimintorivit vanhojen pienten ruutujen tilalle. */
+  body[data-home="true"] .home-primary-links-v290 {
+    display: block !important; width:100% !important; max-width:none !important;
+    padding:0 !important; margin:0 !important; border:0 !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 14px !important; width:100% !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu::before {
+    content: 'Tutustu Suomen kohteisiin'; display:block;
+    color:#184e3f; font-weight:850; letter-spacing:-.035em;
+    font-size:clamp(28px,2.7vw,37px); line-height:1.18;
+    padding:10px 0 7px; grid-column: 1 / -1;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a,
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 {
+    display:flex !important; flex-direction:row !important;
+    justify-content:flex-start !important; align-items:center !important;
+    column-gap:20px !important; width:100% !important;
+    min-width:0 !important; max-width:none !important;
+    min-height:110px !important; height:auto !important;
+    box-sizing:border-box !important;
+    padding:25px 40px !important;
+    text-align:left !important;
+    background:linear-gradient(100deg,#ecf5ee,#ffffff) !important;
+    border:1px solid #cfe1d5 !important; border-radius:20px !important;
+    color:#195241 !important; box-shadow:0 6px 18px #1e50380b !important;
+    text-decoration:none !important;
+    transform:none !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(even) {
+    background:linear-gradient(100deg,#f6f3e9,#ffffff) !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a strong {
+    display:block !important; font-size:clamp(23px,2.2vw,30px) !important;
+    line-height:1.2 !important; color:#1d5444 !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a small {
+    display:block !important; margin-top:5px !important; font-size:16px !important;
+    color:#607b6d !important; line-height:1.35 !important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a::before {
+    display:inline-flex !important; align-items:center; justify-content:center;
+    width:68px; height:68px; flex:0 0 68px;
+    border-radius:16px; background:#ffffffc7; font-size:37px;
+    box-shadow:inset 0 0 0 1px #dae6dd;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(1)::before {content:'🗺️'}
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(2)::before {content:'🏕️'}
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(3)::before {content:'🅿️'}
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(4)::before {content:'📍'}
+  body[data-home="true"] .home-primary-links-v290 .menu>a:nth-of-type(5)::before {content:'🌲'}
+  body[data-home="true"] .home-primary-links-v290 .menu>a .choice-icon { display:none !important; }
+  body[data-home="true"] .home-primary-links-v290 .menu>a .choice-arrow { margin-left:auto; font-size:25px; color:#277354; }
+  body[data-home="true"] .home-primary-links-v290 .menu > a:hover { border-color:#9ec9ae !important; background:#e5f2e7 !important; }
+  body[data-home="true"] main.home-shell>.v244-memories { width:100%; max-width:none; box-sizing:border-box; margin-top:20px !important; }
+  /* Alavalikko vain puhelimelle: työpöydällä pidetään leveä ylävalikko. */
+  body .bottom-nav, body .site-nav, body .ms301-nav, body .ms302-nav, body .ms303-nav,
+  body .ms304-nav, body .ms332-nav, body .ms337-bottom, body .ms327-bottom,
+  body nav[aria-label="Sivuston alavalikko"], body nav[aria-label="Alavalikko"] { display:none !important; }
+}
+@media screen and (min-width:900px) and (max-width:1150px) {
+  body[data-home="true"] main.home-shell > .hero { min-height:350px !important; }
+  body[data-home="true"] .home-primary-links-v290 .menu > a { min-height:96px !important; padding:19px 25px !important; }
+}

@@ -1,0 +1,25 @@
+MATKAILE SUOMESSA — V340 — PALAUTETAAN LEVEÄ TIETOKONEVERSIO
+
+Tämä korjaus on tarkoitettu v339-päivityksen asentaneelle sivustolle.
+
+MUUTOKSET
+- Tietokoneella leveämpi sisältöalue (enintään 1580 px, noin 24 px reunaväli).
+- Leveä maisemakuva ja leveä hakukenttä etusivulla.
+- v339-version kolme päällekkäistä oikopolkukorttia poistuvat tietokoneelta.
+- Etusivun varsinaiset paikkakunta-, leirintäalue-, matkaparkki-, läheltä
+  löytämisen ja matkalla pysähtymisen linkit pysyvät näkyvillä, nyt leveinä riveinä.
+- Tietokoneella ylävalikko. Alareunan kiinteä alavalikko vain puhelimella.
+- Puhelimen ulkoasua ei muuteta: kaikki lisäsäännöt alkavat näytön 900 px leveydestä.
+- Ei muutoksia HTML-tiedostoihin, hakutuloksiin, matkoihin tai sisältöaineistoon.
+
+ASENNUS
+1. Avaa GitHubin matkaile-suomessa -projektin pääkansio.
+2. Korvaa vanha desktop-v339.css tällä saman nimisellä tiedostolla.
+3. Paina Commit changes ja odota GitHub Pages -julkaisua.
+4. Avaa tietokoneella etusivu ja paina Ctrl+Shift+R (tai Ctrl+F5).
+5. Jos muutos ei näy, tarkista selaimen osoiteriviltä oikea GitHub Pages -osoite
+   ja varmista, että desktop-v339.css on samassa kansiossa index.html:n kanssa.
+
+HUOM.
+Tämä korjaus kohdistuu v339-tyyleihin, joita etusivu jo lataa.
+Pakettia ei ole julkaistu GitHubiin käyttäjän puolesta.
