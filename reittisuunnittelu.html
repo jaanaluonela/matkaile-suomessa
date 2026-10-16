@@ -1,89 +1,33 @@
-<!doctype html>
-<html lang="fi"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#174d40"><meta name="description" content="Suunnittele ajoreitti ja löydä sen varrelle jäävät nähtävyydet, kahvilat, ravintolat, leirintäalueet ja matkaparkit.">
-<title>Suunnittele reitti | Matkaile Suomessa</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoVRVBp5+7mR8v3w=" crossorigin="">
-<style>
-:root{--green:#145747;--ink:#183c31;--soft:#ecf5ed;--line:#dce8df;--muted:#64766d;--gold:#e7ae49}*{box-sizing:border-box}body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f3f7f2;color:var(--ink)}a{color:var(--green)}button,input,select{font:inherit}button{cursor:pointer}.head{background:#fff;border-bottom:1px solid var(--line)}.head-inner{max-width:1240px;margin:auto;padding:17px 22px;display:flex;gap:20px;align-items:center;justify-content:space-between}.brand{text-decoration:none;color:#173e32;font-size:18px;font-weight:900;line-height:1.05}.navlinks{display:flex;gap:23px;font-size:13px;font-weight:750}.navlinks a{text-decoration:none}.shell{max-width:1240px;margin:0 auto;padding:25px 22px 100px}.intro{margin-bottom:19px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#247252;font-weight:850}.intro h1{font-size:clamp(28px,3vw,42px);letter-spacing:-.035em;margin:4px 0 6px}.intro p{margin:0;color:var(--muted);line-height:1.5}.layout{display:grid;grid-template-columns:minmax(350px,420px) minmax(0,1fr);gap:19px;align-items:start}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 8px 26px rgba(21,60,39,.055)}.panel label{font-size:14px;display:block;font-weight:800;margin:0 0 14px}.panel input[type=text]{display:block;width:100%;padding:13px;border:1px solid #d6e1d9;border-radius:12px;background:#fafcf9;color:var(--ink);margin-top:6px;outline:none;font-size:16px}.panel input:focus{border-color:#2e9668;box-shadow:0 0 0 3px #d9f0e0}.fieldpair{display:grid;grid-template-columns:1fr 1fr;gap:11px}.fieldpair label{min-width:0}.muted{color:var(--muted);font-weight:500}.primary{display:block;width:100%;background:linear-gradient(125deg,#116b4c,#1a9862);border:0;color:#fff;border-radius:14px;padding:14px 18px;font-weight:830;box-shadow:0 8px 20px #22825920}.primary:disabled{opacity:.62;cursor:progress}.filters-title{margin:21px 0 7px;font-size:19px}.helper{font-size:13px;color:var(--muted);margin:0 0 12px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px}.checks label{display:flex;align-items:center;gap:8px;font-size:13px;border:1px solid var(--line);background:#f9fbf8;padding:11px;border-radius:10px;margin:0;cursor:pointer;font-weight:690}.checks input{width:17px;height:17px;accent-color:#127956;flex:0 0 auto}.radius-row{display:flex;align-items:center;gap:10px;margin-top:16px}.radius-row label{font-size:13px;margin:0}.radius-row select{padding:10px;border:1px solid var(--line);border-radius:10px;background:#fff;min-width:100px}.status{font-size:13px;line-height:1.5;color:#5d6e64;margin:12px 1px 0;min-height:20px}.status.error{color:#a13622}.mapcard{padding:14px}.maptop{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:2px 4px 12px}.maptop h2{font-size:19px;margin:0}.maptop small{color:#68796e;font-size:12px}.map{height:390px;width:100%;border-radius:13px;background:#e6efe9;overflow:hidden}.mapempty{display:flex;align-items:center;justify-content:center;height:100%;color:#526c5c;text-align:center;padding:20px;font-size:14px;line-height:1.6}.summary{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.stat{background:#ebf5ed;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:760}.results{margin-top:18px}.results h2{margin:0 0 8px;font-size:23px}.results-meta{font-size:13px;color:var(--muted);margin-bottom:14px}.towns{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}.town{background:#eaf3eb;border:1px solid #dbe8db;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:740}.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.item{border:1px solid var(--line);border-radius:13px;background:#fff;padding:15px;min-width:0}.item strong{display:block;font-size:16px;line-height:1.3}.item small{display:block;color:#507561;font-weight:700;margin:4px 0}.item p{font-size:13px;color:#63726a;margin:8px 0;line-height:1.45}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}.actions a{font-size:13px;font-weight:750}.notice{background:#fffdf7;border:1px solid #eddfc3;border-radius:12px;padding:13px;margin-top:14px;color:#657263;font-size:12px;line-height:1.55}.empty{padding:22px;background:#f4f8f4;border:1px dashed #cadae0;border-radius:12px;color:#617365}.bottomnav{display:none}.leaflet-popup-content{line-height:1.35}.leaflet-popup-content a{font-weight:800}.map-fallback{font-size:14px;padding:20px;color:#365849}
-@media(max-width:850px){.head-inner{padding:12px 16px}.navlinks{gap:10px;font-size:12px}.shell{padding:20px 12px 115px}.layout{grid-template-columns:1fr}.map{height:350px}.items{grid-template-columns:1fr}}
-@media(max-width:570px){.navlinks{display:none}.head{display:none}.intro{margin-left:6px}.intro h1{font-size:29px}.intro p{font-size:14px}.card{padding:15px;border-radius:19px}.panel{padding:17px}.checks{grid-template-columns:1fr 1fr}.checks label{padding:10px 8px;font-size:12px}.map{height:310px}.bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:#fff;justify-content:space-around;padding:10px 0 calc(12px + env(safe-area-inset-bottom));box-shadow:0 -4px 22px #203e3520}.bottomnav a{text-decoration:none;text-align:center;color:#597266;font-size:11px;font-weight:850}.bottomnav span{display:block;font-size:23px}}
-</style>
-</head><body>
-<header class="head"><div class="head-inner"><a class="brand" href="index.html">Matkaile<br>Suomessa</a><nav class="navlinks"><a href="index.html">Etusivu</a><a href="maakunnat.html">Paikkakunnat</a><a href="pysahdy-matkalla.html">Pysähdy matkalla</a><a href="leirintaalueet.html">Leirintäalueet</a><a href="matkaparkit.html">Matkaparkit</a></nav></div></header>
-<main class="shell"><div class="intro"><span class="eyebrow">Matkaile Suomessa · Karavaanarin apuna</span><h1>Suunnittele reitti</h1><p>Valitse reitti ja löydä sen läheltä ruokapaikat, nähtävyydet, taukopaikat ja yöpymispaikat.</p></div>
-<div class="layout"><section class="card panel" aria-label="Reitin valinnat"><form id="form">
-<label for="start">Lähtöpaikka<input type="text" id="start" required value="Vääksy" placeholder="Esim. Vääksy" autocomplete="address-level2"></label>
-<label for="end">Määränpää<input type="text" id="end" required value="Jyväskylä" placeholder="Esim. Jyväskylä" autocomplete="address-level2"></label>
-<label for="via">Välietappi <span class="muted">(valinnainen)</span><input type="text" id="via" placeholder="Esim. Heinola"></label>
-<button class="primary" id="search" type="submit">Näytä reitti ja pysähdykset →</button>
-<h2 class="filters-title">Mitä haluat nähdä matkalla?</h2><p class="helper">Voit valita useita. Tulokset päivittyvät samalla reitillä.</p>
-<div class="checks" id="checks">
-<label><input type="checkbox" value="food" checked>🍽️ Ravintolat</label>
-<label><input type="checkbox" value="cafe" checked>☕ Kahvilat</label>
-<label><input type="checkbox" value="sight" checked>🏛️ Nähtävyydet</label>
-<label><input type="checkbox" value="nature">🌲 Luontokohteet</label>
-<label><input type="checkbox" value="stop">🅿️ Taukopaikat</label>
-<label><input type="checkbox" value="camping">🏕️ Leirintäalueet</label>
-<label><input type="checkbox" value="park">🚐 Matkaparkit</label>
-<label><input type="checkbox" value="shop">🛒 Kyläkaupat</label>
-<label><input type="checkbox" value="town" checked>🏘️ Paikkakunnat</label>
-</div><div class="radius-row"><label for="radius">Poikkeama reitiltä</label><select id="radius"><option value="5">5 km</option><option value="10" selected>10 km</option><option value="20">20 km</option></select></div>
-<p id="status" class="status" role="status" aria-live="polite">Täytä paikat ja paina ”Näytä reitti ja pysähdykset”.</p>
-</form></section>
-<div><section class="card mapcard"><div class="maptop"><h2>Matkareitti kartalla</h2><small>Ajoreitti · OpenStreetMap</small></div><div id="map" class="map" aria-label="Ajoreitin ja pysähdysten kartta"><div class="mapempty">Kartta ja reitti näkyvät tässä haun jälkeen.</div></div><div id="summary" class="summary" hidden></div></section>
-<section class="results" id="result-section"><h2>Matkan varren löydöt</h2><p id="result-meta" class="results-meta">Hae ensin reitti, niin näet sen varrelle jäävät kohteet.</p><div id="towns" class="towns"></div><div id="items" class="items"></div></section>
-<div class="notice">Näytämme sivustolla olevat, sijaintitiedolla varustetut kohteet. Poikkeama on linnuntie-etäisyys ajoreitistä, ei lisäajomatka. Reittihaku käyttää ulkoisia karttapalveluja ja vaatii internetyhteyden; tarkista ajoreitti, kohteiden aukiolo ja matkailuauton sopivuus ennen lähtöä. Kaikki Suomen kohteet eivät vielä kuulu aineistoon.</div></div></div></main>
-<nav class="bottomnav" aria-label="Alavalikko"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav>
-<script src="nearby-data-v218.js"></script><script src="kayntikohteet-data-v230.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<!DOCTYPE html>
+<html lang="fi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Suunnittele matka | Matkaile Suomessa</title><link rel="stylesheet" href="tyylit.css"><link rel="stylesheet" href="desktop-v339.css?v=339">
+</head>
+<body><div class="app route-page-v90">
+<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Tee reitti ja avaa se Google Mapsissa. Myöhemmin tähän lisätään kohteet reitin varrelta.</p></div></header>
+<main class="content route-content-v90">
+<section class="section card route-card-v90"><b>🚗 Reittisuunnittelu</b><p class="plain-region-note">Kirjoita lähtöpaikka ja määränpää. Voit lisätä myös yhden välietapin.</p>
+<label>Lähtöpaikka<input id="routeStart" placeholder="Esim. Helsinki, koti tai leirintäalue"></label>
+<label>Määränpää<input id="routeEnd" placeholder="Esim. Asikkala, Rovaniemi tai Yyteri"></label>
+<label>Välietappi <small>(valinnainen)</small><input id="routeVia" placeholder="Esim. Lahti"></label>
+<button id="openRoute" class="cta-visited" type="button">Avaa reitti Google Mapsissa</button>
+<p id="routeHint" class="route-hint-v90">Täytä lähtöpaikka ja määränpää.</p></section>
+<section class="section"><div class="section-head"><h2>Reitin varrella myöhemmin</h2></div><div class="compact-info-list ph-service-list">
+<a class="place-row" href="kartta.html"><span>🌲</span><div><b>Luontokohteet</b><small>Kansallispuistot, retkeilyreitit ja näköalapaikat.</small></div><em>›</em></a>
+<a class="place-row" href="kartta.html"><span>🚐</span><div><b>Karavaanarin palvelut</b><small>Matkaparkit, leirintäalueet ja huoltopisteet.</small></div><em>›</em></a>
+<a class="place-row" href="kartta.html"><span>☕</span><div><b>Kahvilat ja pysähdykset</b><small>Hyvät taukopaikat matkan varrelle.</small></div><em>›</em></a>
+</div></section>
+</main><nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav></div>
 <script>
-(()=>{'use strict';
-const $=id=>document.getElementById(id), form=$('form'),status=$('status'),btn=$('search'),radius=$('radius');
-let route=null,results=[],townResults=[],map=null,routeLayer=null,pointsLayer=null,startEndLayer=null;
-const escapeHTML=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-const foodRx=/ravintol|lounas|ruoka|bistro|grill|pizzer|pizza|burger|keitti|pitop|taverna/;
-const cafeRx=/kahvil|cafe|coffee|munkki|leipomo|paviljonki|konditoria|teehuone/;
-const natureRx=/kansallispuist|luontopol|retkeil|tuntur|vesiputou|koski|rotko|nakoal|jarv|ranta|saari|harju|luola|pitkos|mets|luonto|vaellus|puisto/;
-const shopRx=/kylakaup|lahiruok|myymala|puoti|tilapuoti|tori|kauppa/;
-const allRaw=[...(window.nearbyData||[]),...(window.visitHighlights||[])];const keys=new Set();
-const catalog=allRaw.filter(p=>p&&p.name&&p.city&&Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&p.lat>=59&&p.lat<=71&&p.lon>=19&&p.lon<=32).filter(p=>{let k=norm(p.city+'|'+p.name).replace(/\W/g,'');if(keys.has(k))return false;keys.add(k);return true;}).map(p=>{
-let words=norm((p.name||'')+' '+(p.description||''));let cat=p.type==='park'?'park':p.type==='camping'?'camping':p.type==='sight'?(natureRx.test(words)?'nature':'sight'):p.type==='nature'?'nature':foodRx.test(words)?'food':cafeRx.test(words)?'cafe':shopRx.test(words)?'shop':'stop';let cats=p.type==='stop'?([...(foodRx.test(words)?['food']:[]),...(cafeRx.test(words)?['cafe']:[]),...(shopRx.test(words)?['shop']:[]) ]):[cat];if(!cats.length)cats=['stop'];return{...p,cat,cats};});
-// Each town dot represents the center of available local entries, rather than an asserted driven-through town.
-let townsByName=new Map();(window.nearbyOrigins||[]).forEach(p=>{if(Number.isFinite(p.lat)&&Number.isFinite(p.lon))townsByName.set(norm(p.name),{name:p.name,lat:p.lat,lon:p.lon});});
-let citySums=new Map();for(const p of catalog){if(!citySums.has(p.city))citySums.set(p.city,{name:p.city,lats:[],lons:[]});const s=citySums.get(p.city);s.lats.push(p.lat);s.lons.push(p.lon);}
-for(const v of citySums.values()){if(townsByName.has(norm(v.name)))continue;const median=a=>{a.sort((x,y)=>x-y);return a[Math.floor(a.length/2)];};townsByName.set(norm(v.name),{name:v.name,lat:median(v.lats),lon:median(v.lons)});}
-// Accurate local lookup for common names already present in the dataset (including Vääksy).
-const localOrigins=[...(window.nearbyOrigins||[]),{name:'Jyväskylä',lat:62.2415,lon:25.7209}];
-const bboxFin=p=>p.lat>=59&&p.lat<=71&&p.lon>=19&&p.lon<=32;
-function showStatus(t,error=false){status.textContent=t;status.classList.toggle('error',error);}
-async function geocode(name){const key=norm(name.trim());const found=localOrigins.find(p=>norm(p.name)===key);if(found)return found;
-const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),11500);
-try{let res=await fetch('https://photon.komoot.io/api/?q='+encodeURIComponent(name+', Suomi')+'&limit=8&lang=fi',{signal:controller.signal});if(!res.ok)throw Error('Paikkahakupalvelu ei vastaa');const json=await res.json();let hits=(json.features||[]).map(f=>({name:f.properties?.name||name,lat:f.geometry?.coordinates?.[1],lon:f.geometry?.coordinates?.[0],country:f.properties?.countrycode||f.properties?.country})).filter(p=>bboxFin(p)&&(!p.country||/^(fi|finland|suomi)$/i.test(p.country)));if(!hits.length)throw Error('Paikkaa ”'+name+'” ei löytynyt Suomesta. Tarkista kirjoitusasu.');return hits[0];}finally{clearTimeout(timeout);}}
-async function drivingRoute(locations){let coords=locations.map(x=>x.lon+','+x.lat).join(';');const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),17000);
-try{let resp=await fetch('https://router.project-osrm.org/route/v1/driving/'+coords+'?overview=full&geometries=geojson&steps=false',{signal:controller.signal});if(!resp.ok)throw Error('Ajoreittipalvelu ei vastaa. Yritä hetken kuluttua.');let json=await resp.json();if(json.code!=='Ok'||!json.routes?.[0]?.geometry?.coordinates?.length)throw Error('Ajokelpoista reittiä ei löytynyt näiden paikkojen välille.');return json.routes[0];}finally{clearTimeout(timeout);}}
-function km(a,b){const dlat=(b[0]-a[0])*Math.PI/180,dlon=(b[1]-a[1])*Math.PI/180,lat1=a[0]*Math.PI/180,lat2=b[0]*Math.PI/180;const z=Math.sin(dlat/2)**2+Math.cos(lat1)*Math.cos(lat2)*Math.sin(dlon/2)**2;return 12742*Math.atan2(Math.sqrt(z),Math.sqrt(1-z));}
-// Project onto every segment of the sampled geographic route; short distances measured with a latitude-adjusted plane.
-function nearest(pt,latlons){let best=Infinity,at=0;const py=pt.lat;
-for(let i=1;i<latlons.length;i++){const a=latlons[i-1],b=latlons[i],cos=Math.cos((pt.lat+a[0]+b[0])/3*Math.PI/180);const ax=a[1]*cos,ay=a[0],bx=b[1]*cos,by=b[0],x=pt.lon*cos;let vx=bx-ax,vy=by-ay,den=vx*vx+vy*vy,t=den?Math.max(0,Math.min(1,((x-ax)*vx+(py-ay)*vy)/den)):0;const dist=Math.hypot(x-ax-t*vx,py-ay-t*vy)*111.195;if(dist<best){best=dist;at=i-1+t;}}return{dist:best,at};}
-function distanceIndex(arr){const out=[0];for(let i=1;i<arr.length;i++)out.push(out[i-1]+km(arr[i-1],arr[i]));return out;}
-function makeMap(){if(map||!window.L)return;const div=$('map');div.replaceChildren();map=L.map(div,{scrollWheelZoom:false}).setView([63.2,25.6],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMapin tekijät',maxZoom:18}).addTo(map);pointsLayer=L.layerGroup().addTo(map);startEndLayer=L.layerGroup().addTo(map);}
-function selected(){return new Set([...document.querySelectorAll('#checks input:checked')].map(x=>x.value));}
-function actionLink(label,url){const a=document.createElement('a');a.textContent=label;a.href=url;if(/^https?:\/\//i.test(url)){a.target='_blank';a.rel='noopener noreferrer';}return a;}
-function validUrl(url){return /^(?:https:\/\/|[\w./%-]+\.html(?:[?#][\w.%=&?#+-]*)?)$/i.test(url||'');}
-function render(){if(!route)return;const rad=Number(radius.value),set=selected();results=catalog.map(p=>({...p,match:nearest(p,route.sampled)})).filter(p=>p.match.dist<=rad&&p.cats.some(cat=>set.has(cat))).sort((a,b)=>a.match.at-b.match.at||a.match.dist-b.match.dist);
-townResults=[...townsByName.values()].map(p=>({...p,match:nearest(p,route.sampled)})).filter(p=>p.match.dist<=rad).sort((a,b)=>a.match.at-b.match.at);const showTowns=set.has('town');$('result-meta').textContent=results.length+' kohdetta reitin enintään '+rad+' km etäisyydellä'+(showTowns?' · '+townResults.length+' paikkakuntaa lähellä reittiä':'')+'.';
-const tc=$('towns');tc.replaceChildren();if(showTowns){for(const t of townResults){const el=document.createElement('span');el.className='town';el.textContent=t.name;tc.appendChild(el);}}
-const el=$('items');el.replaceChildren();const cats={food:'🍽️ Ruokapaikka',cafe:'☕ Kahvila',sight:'🏛️ Nähtävyys',nature:'🌲 Luontokohde',stop:'🅿️ Taukopaikka',camping:'🏕️ Leirintäalue',park:'🚐 Matkaparkki',shop:'🛒 Kyläkauppa'};
-for(const p of results.slice(0,120)){const article=document.createElement('article');article.className='item';const tag=document.createElement('small');tag.textContent=(cats[p.cat]||'Kohde')+' · '+p.city+' · '+p.match.dist.toFixed(1).replace('.',',')+' km reitistä';const title=document.createElement('strong');title.textContent=p.name;article.append(title,tag);if(p.description){const d=document.createElement('p');d.textContent=p.description;article.append(d);}const links=document.createElement('div');links.className='actions';if(validUrl(p.url))links.append(actionLink('Tutustu kohteeseen',p.url));links.append(actionLink('Sijainti kartalla ↗','https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lon+'#map=16/'+p.lat+'/'+p.lon));article.append(links);el.appendChild(article);}
-if(!results.length){const note=document.createElement('p');note.className='empty';note.textContent='Näillä valinnoilla ei löytynyt kohteita nykyisestä aineistosta. Voit laajentaa poikkeamaa tai valita lisää kohdeluokkia.';el.append(note);}if(results.length>120){const note=document.createElement('p');note.className='empty';note.textContent='Näytetään ensimmäiset 120 kohdetta reitin järjestyksessä. Rajaa hakua valinnoilla.';el.append(note);}
-if(map){pointsLayer.clearLayers();for(const p of results.slice(0,150)){const marker=L.circleMarker([p.lat,p.lon],{radius:6,color:'#ffffff',weight:1.5,fillColor:p.cat==='food'||p.cat==='cafe'?'#d68235':p.cat==='park'||p.cat==='camping'?'#327aaf':'#247b56',fillOpacity:.94}).addTo(pointsLayer);const block=document.createElement('div');const t=document.createElement('b');t.textContent=p.name;block.append(t,document.createElement('br'),document.createTextNode(p.city+' · '+p.match.dist.toFixed(1)+' km reitistä'));if(validUrl(p.url)){block.append(document.createElement('br'),actionLink('Tutustu kohteeseen',p.url));}marker.bindPopup(block);}}
-showStatus('Reitti valmis. Voit muuttaa valintoja ilman uutta reittihakua.');}
-async function search(e){e.preventDefault();const start=$('start').value.trim(),end=$('end').value.trim(),via=$('via').value.trim();if(!start||!end){showStatus('Kirjoita lähtöpaikka ja määränpää.',true);return;}btn.disabled=true;route=null;showStatus('Haetaan paikkojen sijainnit ja ajoreitti…');try{const locations=[];for(const n of [start,...(via?[via]:[]),end])locations.push(await geocode(n));const r=await drivingRoute(locations);const geometry=r.geometry.coordinates.map(c=>[c[1],c[0]]);let step=Math.max(1,Math.ceil(geometry.length/1500));let sampled=geometry.filter((x,i)=>i%step===0);if(sampled.at(-1)!==geometry.at(-1))sampled.push(geometry.at(-1));route={sampled,geometry,locations,distance:r.distance/1000,duration:r.duration/60};
-$('summary').hidden=false;$('summary').replaceChildren();for(const s of [start+' → '+end,Math.round(route.distance)+' km', 'Arvioitu ajoaika '+Math.floor(route.duration/60)+' h '+Math.round(route.duration%60)+' min']){const tag=document.createElement('span');tag.className='stat';tag.textContent=s;$('summary').append(tag);}makeMap();if(map){if(routeLayer)map.removeLayer(routeLayer);routeLayer=L.polyline(geometry,{color:'#16865b',weight:6,opacity:.88}).addTo(map);startEndLayer.clearLayers();L.marker([locations[0].lat,locations[0].lon]).addTo(startEndLayer).bindPopup('Lähtö: '+escapeHTML(start));L.marker([locations.at(-1).lat,locations.at(-1).lon]).addTo(startEndLayer).bindPopup('Määränpää: '+escapeHTML(end));map.fitBounds(routeLayer.getBounds().pad(.08));setTimeout(()=>map.invalidateSize(),120);}else{$('map').innerHTML='<p class="map-fallback">Kartta ei latautunut, mutta reitin kohdeluettelo toimii.</p>';}
-render();}catch(err){$('result-meta').textContent='Reittihakua ei saatu valmiiksi.';$('items').replaceChildren();$('towns').replaceChildren();$('summary').hidden=true;showStatus(err.name==='AbortError'?'Yhteys karttapalveluun aikakatkaistiin. Kokeile uudelleen.':err.message||'Reittiä ei voitu hakea.',true);}finally{btn.disabled=false;}}
-form.addEventListener('submit',search);radius.addEventListener('change',render);$('checks').addEventListener('change',render);
+(function(){
+ const start=document.getElementById('routeStart'), end=document.getElementById('routeEnd'), via=document.getElementById('routeVia'), btn=document.getElementById('openRoute'), hint=document.getElementById('routeHint');
+ function mapsUrl(){
+   const s=start.value.trim(), e=end.value.trim(), v=via.value.trim();
+   if(!s||!e) return '';
+   const base='https://www.google.com/maps/dir/?api=1&travelmode=driving';
+   let url=base+'&origin='+encodeURIComponent(s)+'&destination='+encodeURIComponent(e);
+   if(v) url+='&waypoints='+encodeURIComponent(v);
+   return url;
+ }
+ btn.addEventListener('click',()=>{const url=mapsUrl(); if(!url){hint.textContent='Kirjoita ensin lähtöpaikka ja määränpää.'; return;} window.open(url,'_blank');});
 })();
-</script>
+</script><script defer src="desktop-v339.js?v=339"></script>
 </body></html>

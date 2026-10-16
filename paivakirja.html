@@ -42,25 +42,8 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-h
 .lightbox-caption{display:block;word-wrap:break-word;font-weight:600}.lightbox-instruction{display:block;margin-top:2px;color:#b7c8be;font-size:12px}
 @media(max-width:450px){.lightbox-toolbar{min-height:52px}.lightbox-arrow{width:37px;min-height:42px;font-size:27px}.lightbox-footer{min-height:49px}}
 
-</style><link rel="stylesheet" href="navigation-v191.css?v=244"><link rel="stylesheet" href="v244.css?v=244">
-
-<style id="ms331-standalone-nav">
-/* Self-contained fallback if the shared script is not yet deployed. */
-body{padding-bottom:calc(95px + env(safe-area-inset-bottom,0px))!important}
-body>nav.ms331-nav{position:fixed!important;inset:auto 0 0!important;z-index:9999!important;
- display:block!important;box-sizing:border-box!important;width:100%!important;margin:0!important;
- padding:7px 6px calc(7px + env(safe-area-inset-bottom,0px))!important;
- background:#fff!important;border-top:1px solid #e0eae3!important;box-shadow:0 -5px 22px #173d2820!important}
-body>nav.ms331-nav .ms302-nav-inner{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:4px!important;max-width:1000px;margin:auto}
-body>nav.ms331-nav a{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
- min-width:0!important;min-height:60px!important;gap:2px!important;padding:4px 1px!important;
- text-decoration:none!important;color:#174d40!important;border-radius:14px!important;background:transparent!important}
-body>nav.ms331-nav a[aria-current="page"]{background:#e7f3eb!important}
-body>nav.ms331-nav .ms302-icon{font:normal 27px/1.1 'Apple Color Emoji','Segoe UI Emoji',sans-serif!important}
-body>nav.ms331-nav .ms302-label{font:800 clamp(10px,2.8vw,13px)/1.2 system-ui,sans-serif!important;text-align:center!important;letter-spacing:-.2px!important}
-</style>
-<link rel="stylesheet" href="alavalikko-v304.css?v=331">
-<script defer src="alavalikko-v304.js?v=331"></script>
+</style><link rel="stylesheet" href="navigation-v191.css?v=339"><link rel="stylesheet" href="v244.css?v=244">
+<link rel="stylesheet" href="desktop-v339.css?v=339">
 </head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Avaa oma matka. Kansikuva on ylhäällä ja kaikki muut kuvat löytyvät heti sen alta sivuttain selaamalla.</p>
 <section id="list"><p class="muted">Omat matkakohteet ja matkapäiväkirja samassa paikassa.</p><button id="new">+ Lisää matka</button><div id="trips"></div></section>
 <section id="editor" class="hidden">
@@ -83,7 +66,7 @@ body>nav.ms331-nav .ms302-label{font:800 clamp(10px,2.8vw,13px)/1.2 system-ui,sa
 </div>
 <details class="card optional"><summary>📍 Lisää reitti ja pysähdyspaikat</summary><p class="muted">Halutessasi voit lisätä matkan pysähdykset järjestyksessä.</p><div id="stops"></div><label for="place">Pysähdyspaikka</label><div class="row"><div><input id="place" placeholder="Paikkakunta tai osoite"></div><button id="add">Lisää</button></div><p><a id="map" class="map hidden" target="_blank" rel="noopener">Avaa reitti kartassa ↗</a></p></details>
 <p class="muted storage-note">Matkat, kuvat ja kuvatekstit säilyvät tässä selaimessa ja tällä laitteella. Ne eivät siirry automaattisesti toiselle laitteelle. Älä tyhjennä selaimen sivustotietoja, jos haluat säilyttää ne.</p><button id="remove" class="danger">Poista matka</button>
-</section></main><nav class="ms331-nav ms302-nav" aria-label="Sivuston päävalikko" data-ms331="1"><div class="ms302-nav-inner"><a href="index.html"><span class="ms302-icon" aria-hidden="true">🏡</span><span class="ms302-label">Koti</span></a><a href="maakunnat.html"><span class="ms302-icon" aria-hidden="true">🗺️</span><span class="ms302-label">Paikkakunnat</span></a><a href="pysahdy-matkalla.html"><span class="ms302-icon" aria-hidden="true">🌲</span><span class="ms302-label">Pysähdy matkalla</span></a><a href="paivakirja.html" aria-current="page"><span class="ms302-icon" aria-hidden="true">📖</span><span class="ms302-label">Omat matkat</span></a></div></nav>
+</section></main><nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
 <div class="photo-lightbox hidden" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Kuva koko näytöllä" tabindex="-1">
  <div class="lightbox-toolbar"><span class="lightbox-counter" id="lightbox-counter" role="status"></span><button id="lightbox-close" class="lightbox-close" type="button" aria-label="Sulje koko näytön kuva">✕ Sulje</button></div>
  <div class="lightbox-stage" id="lightbox-stage" aria-label="Koko näytön kuva – pyyhkäise seuraavaan kuvaan">
@@ -389,4 +372,5 @@ if(window.indexedDB){
 window.addEventListener('pagehide',()=>{flushPhotoNote();if(dirty)capture()});
 window.addEventListener('storage',e=>{if(active===null&&(e.key===key||e.key===null))load()});
 window.addEventListener('pageshow',()=>{if(active===null)load()});
-</script></body></html>
+</script><script defer src="desktop-v339.js?v=339"></script>
+</body></html>

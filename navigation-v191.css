@@ -53,3 +53,10 @@ html{scroll-padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
     grid-template-columns:repeat(3,minmax(0,1fr))!important;
   }
 }
+
+/* v339 — the bottom bar belongs to phones only. */
+@media(min-width:900px){
+ html{scroll-padding-bottom:0!important}
+ body{padding-bottom:0!important}
+ body .site-nav, body nav.site-nav, body .bottom-nav, body .ms301-nav, body .ms302-nav, body .ms303-nav, body .ms304-nav, body .ms332-nav, body .ms337-bottom, body nav[aria-label="Sivuston alavalikko"]{display:none!important;visibility:hidden!important;height:0!important;margin:0!important;padding:0!important;border:0!important}
+}

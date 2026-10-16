@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>🏕️ Leirintäalueet – Matkailu Suomessa</title><meta content="295" name="ms-sfc-update"/><link href="valikot-v198.css" rel="stylesheet"/><link href="navigation-v191.css?v=244" rel="stylesheet"/><script src="caravan-data.js"></script><script defer="" src="leirinta-data-v264.js?v=264"></script><script defer="" src="leirinta-data-v265.js?v=265"></script><script src="kunnat-v200.js"></script><script defer="" src="rovaniemi-data-v245.js"></script><script defer="" src="kouvola-data-v247.js"></script><script defer="" src="lappi-data-v248.js"></script><script defer="" src="karavaanialueet-v279.js?v=279"></script><script defer="" src="lappi-karavaani-v284.js?v=286"></script><script defer="" src="uusimaa-karavaani-v288.js?v=288"></script><script defer="" src="sfc-alueet-v295.js?v=295"></script><script defer="" src="ms-kohteet-v296.js?v=296"></script><script defer="" src="kohteet-v318.js?v=318"></script><script defer="" src="valikot-v200.js"></script><link href="v243.css" rel="stylesheet"/><link href="palvelut-v275.css?v=287" rel="stylesheet"/><script defer="" src="v243.js"></script><script defer="" src="palvelut-v275.js?v=287"></script><link href="v244.css?v=244" rel="stylesheet"/><link href="leirinta-aukiolo-v263.css?v=272" rel="stylesheet"/> 
+<html lang="fi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>🏕️ Leirintäalueet – Matkailu Suomessa</title><meta content="295" name="ms-sfc-update"/><link href="valikot-v198.css" rel="stylesheet"/><link href="navigation-v191.css?v=339" rel="stylesheet"/><script src="caravan-data.js"></script><script defer="" src="leirinta-data-v264.js?v=264"></script><script defer="" src="leirinta-data-v265.js?v=265"></script><script src="kunnat-v200.js"></script><script defer="" src="rovaniemi-data-v245.js"></script><script defer="" src="kouvola-data-v247.js"></script><script defer="" src="lappi-data-v248.js"></script><script defer="" src="karavaanialueet-v279.js?v=279"></script><script defer="" src="lappi-karavaani-v284.js?v=286"></script><script defer="" src="uusimaa-karavaani-v288.js?v=288"></script><script defer="" src="sfc-alueet-v295.js?v=295"></script><script defer="" src="ms-kohteet-v296.js?v=296"></script><script defer="" src="kohteet-v318.js?v=318"></script><script defer="" src="valikot-v200.js"></script><link href="v243.css" rel="stylesheet"/><link href="palvelut-v275.css?v=287" rel="stylesheet"/><script defer="" src="v243.js"></script><script defer="" src="palvelut-v275.js?v=287"></script><link href="v244.css?v=244" rel="stylesheet"/><link href="leirinta-aukiolo-v263.css?v=272" rel="stylesheet"/> 
 
 <link href="kehitys-v318.css?v=318" rel="stylesheet"/>
 <style id="ms337-nav-css">
@@ -29,7 +29,178 @@ body .ms337-bottom a:focus-visible {outline:3px solid #ca8b34!important;outline-
 @media (max-width:360px){body .ms337-bottom {padding-left:4px!important;padding-right:4px!important}
  body .ms337-bottom .ms337-links{gap:1px!important}body .ms337-bottom .ms337-text{font-size:10px!important}}
 </style>
-<meta name="ms-nav-update" content="337"/></head><body data-kind="camping"><main class="page"><header class="ms318-hero ms318-hero--camp"><a class="top" href="index.html">‹ Etusivulle</a><div class="ms318-camp-intro"><span class="ms318-eyebrow">MATKAILE SUOMESSA · YÖPYMINEN</span><p class="ms318-hero-subtitle">Löydä oma leiripaikkasi järven rannalta, kaupungin läheltä tai matkareittisi varrelta.</p></div><h1>🏕️ Leirintäalueet</h1></header><div aria-label="Kohdelajit" class="menu"><a href="maakunnat.html"><span aria-hidden="true" class="v244-stay-icon">🗺️</span><span>Paikkakunnat</span></a><a aria-current="page" href="leirintaalueet.html"><span aria-hidden="true" class="v244-stay-icon">🏕️</span><span>Leirintäalueet</span></a><a href="matkaparkit.html"><span aria-hidden="true" class="v244-stay-icon">🅿️</span><span>Matkaparkit</span></a></div><div class="ms318-camp-layout"><section aria-label="Leirintäalueiden hakuehdot" class="ms318-camp-sidebar"><div class="ms318-panel-heading"><h2>Rajaa hakua</h2><p>Hae nimellä, maakunnalla tai palveluilla.</p></div><div class="v243-stay-top">
+<meta name="ms-nav-update" content="337"/><style id="ms338-single-column">
+
+/* v338 — tietokoneen leirintäaluehaku: yksi leveä sisältösarake.
+   Alavalikko, hakutoiminnot ja nykyinen kohdeaineisto jäävät ennalleen. */
+@media (min-width: 850px) {
+  body[data-kind="camping"] {
+    background:linear-gradient(180deg,#f5f9f5 0%,#ffffff 55%)!important;
+  }
+  body[data-kind="camping"] .page {
+    width:min(94vw,1180px)!important;
+    max-width:1180px!important;
+    margin:0 auto!important;
+    padding:24px 28px 130px!important;
+    box-sizing:border-box!important;
+  }
+  body[data-kind="camping"] .ms318-hero--camp {
+    width:100%!important;
+    box-sizing:border-box!important;
+    padding:30px 42px!important;
+    margin:0 0 20px!important;
+    background:linear-gradient(112deg,#e7f3eb 0%,#f7f8ee 53%,#fffbef 100%)!important;
+    border:1px solid #d3e6d7!important;
+    border-radius:24px!important;
+  }
+  body[data-kind="camping"] .ms318-hero--camp h1 {
+    font-size:clamp(34px,3.6vw,48px)!important;
+    line-height:1.1!important;
+    letter-spacing:-.035em!important;
+  }
+  body[data-kind="camping"] .page > .menu {
+    width:100%!important;
+    margin:0 0 20px!important;
+    gap:12px!important;
+  }
+  body[data-kind="camping"] .page > .menu > a {
+    font-size:17px!important;
+    min-height:62px!important;
+    border-radius:16px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-layout {
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:24px!important;
+    width:100%!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar,
+  body[data-kind="camping"] .ms318-camp-list {
+    display:block!important;
+    flex:none!important;
+    position:static!important;
+    top:auto!important;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+    padding:30px 35px!important;
+    background:#fff!important;
+    border:1px solid #dbe9df!important;
+    border-radius:22px!important;
+    box-shadow:0 14px 32px rgba(18,67,47,.06)!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar {
+    background:linear-gradient(180deg,#fff 0%,#f9fcf9 100%)!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .v243-filter-grid {
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:17px!important;
+    align-items:end!important;
+    margin:18px 0 20px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar input[type="search"],
+  body[data-kind="camping"] .ms318-camp-sidebar select,
+  body[data-kind="camping"] .ms318-camp-sidebar .v243-filter-field input {
+    width:100%!important;
+    min-height:51px!important;
+    box-sizing:border-box!important;
+    border-radius:12px!important;
+    font-size:16px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-panel {
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:12px 22px!important;
+    align-items:center!important;
+    padding:13px 0!important;
+    margin:6px 0 20px!important;
+    border-bottom:1px solid #e2eee5!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-choice {
+    flex:1 1 280px!important;
+    margin:0!important;
+    padding:10px 13px!important;
+    border-radius:14px!important;
+    background:#edf6ef!important;
+    min-height:65px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-note {
+    flex:1 0 100%!important;
+    margin:0!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-panel {
+    margin-top:14px!important;
+    padding-top:18px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-choices {
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:9px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-choices label {
+    flex:0 1 auto!important;
+    padding:11px 14px!important;
+    width:auto!important;
+    font-size:14px!important;
+    border-radius:99px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-list {min-height:0!important;}
+  body[data-kind="camping"] .ms318-camp-list .ms318-results-header {
+    padding-bottom:20px!important;
+    margin-bottom:20px!important;
+  }
+  body[data-kind="camping"] .ms318-camp-list .ms318-results-header h2 {
+    font-size:clamp(26px,2.7vw,34px)!important;
+  }
+  body[data-kind="camping"] .ms318-camp-list #municipality-results,
+  body[data-kind="camping"] .ms318-camp-list #municipality-results:has(.stay) {
+    display:flex!important;
+    flex-direction:column!important;
+    gap:14px!important;
+    grid-template-columns:none!important;
+    width:100%!important;
+  }
+  body[data-kind="camping"] #municipality-results .stay {
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+    min-height:0!important;
+    padding:23px 27px!important;
+    margin:0!important;
+    border-left:5px solid #7eae92!important;
+    border-radius:17px!important;
+    background:linear-gradient(105deg,#fff 0%,#f9fcf8 100%)!important;
+    box-sizing:border-box!important;
+  }
+  body[data-kind="camping"] #municipality-results .stay h2 {
+    font-size:clamp(19px,2vw,23px)!important;
+    margin-top:5px!important;
+  }
+  body[data-kind="camping"] #municipality-results .stay p {
+    font-size:15px!important;
+    max-width:100ch!important;
+  }
+}
+@media (min-width:850px) and (max-width:1040px) {
+  body[data-kind="camping"] .ms318-camp-sidebar .v243-filter-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media (max-width:849px) {
+  body[data-kind="camping"] .ms318-camp-layout {
+    display:flex!important;
+    flex-direction:column!important;
+    gap:14px!important;
+  }
+}
+
+</style><link rel="stylesheet" href="desktop-v339.css?v=339">
+</head><body data-kind="camping"><main class="page"><header class="ms318-hero ms318-hero--camp"><a class="top" href="index.html">‹ Etusivulle</a><div class="ms318-camp-intro"><span class="ms318-eyebrow">MATKAILE SUOMESSA · YÖPYMINEN</span><p class="ms318-hero-subtitle">Löydä oma leiripaikkasi järven rannalta, kaupungin läheltä tai matkareittisi varrelta.</p></div><h1>🏕️ Leirintäalueet</h1></header><div aria-label="Kohdelajit" class="menu"><a href="maakunnat.html"><span aria-hidden="true" class="v244-stay-icon">🗺️</span><span>Paikkakunnat</span></a><a aria-current="page" href="leirintaalueet.html"><span aria-hidden="true" class="v244-stay-icon">🏕️</span><span>Leirintäalueet</span></a><a href="matkaparkit.html"><span aria-hidden="true" class="v244-stay-icon">🅿️</span><span>Matkaparkit</span></a></div><div class="ms318-camp-layout"><section aria-label="Leirintäalueiden hakuehdot" class="ms318-camp-sidebar"><div class="ms318-panel-heading"><h2>Rajaa hakua</h2><p>Hae nimellä, maakunnalla tai palveluilla.</p></div><div class="v243-stay-top">
 <p class="v243-page-description">Löydä leirintäalue tai matkaparkki kunnan, nimen tai palvelun perusteella.</p>
 <label class="v243-search-label" for="v243-stay-search">🔍 Hae yöpymispaikkaa</label>
 <input autocomplete="off" id="v243-stay-search" placeholder="Esim. Onnela, Tuuri, SFC, vesipiste" type="search"/>
@@ -43,4 +214,5 @@ body .ms337-bottom a:focus-visible {outline:3px solid #ca8b34!important;outline-
 <span><strong>Näytä vain ympäri vuoden avoinna olevat</strong><small>Vain kohteet, joiden ympärivuotinen aukiolo on ilmoitettu.</small></span>
 </label>
 <p class="camp-opening-note">Molemmat rastit toimivat yhdessä maakunnan ja kunnan kanssa. Tarkista kauden aukiolo ennen lähtöä.</p>
-</div><section aria-label="Rajaa palveluiden mukaan" class="ms275-services-panel"><h2>Palvelut</h2><p>Valitse tarvitsemasi palvelut. Haku näyttää vain kohteet, joissa palvelu on vahvistettu.</p><div class="ms275-services-choices"><label><input class="ms275-service-choice" type="checkbox" value="electric"/><span>⚡ Sähkö</span></label><label><input class="ms275-service-choice" type="checkbox" value="shower"/><span>🚿 Suihku</span></label><label><input class="ms275-service-choice" type="checkbox" value="sauna"/><span>♨️ Sauna</span></label><label><input class="ms275-service-choice" type="checkbox" value="wc"/><span>🚻 WC</span></label><label><input class="ms275-service-choice" type="checkbox" value="greywater"/><span>🛠️ Harmaavesi</span></label><label><input class="ms275-service-choice" type="checkbox" value="cottages"/><span>🏠 Mökit</span></label><label><input class="ms275-service-choice" type="checkbox" value="cafe"/><span>☕ Kahvila</span></label><label><input class="ms275-service-choice" type="checkbox" value="playground"/><span>🛝 Leikkipaikka</span></label><label><input class="ms275-service-choice" type="checkbox" value="beach"/><span>🏖️ Uimaranta</span></label><label><input class="ms275-service-choice" type="checkbox" value="kitchen"/><span>🍳 Keittiö</span></label><label><input class="ms275-service-choice" type="checkbox" value="laundry"/><span>🧺 Pyykinpesu</span></label></div><div class="ms275-service-footer"><button id="ms275-clear-services" type="button">Tyhjennä palveluvalinnat</button><small>Vahvistamattomia palveluja ei oleteta löytyviksi.</small></div></section></section><section aria-label="Leirintäalueiden hakutulokset" class="ms318-camp-list"><div class="ms318-results-header"><div><span class="ms318-eyebrow">LÖYDÄ JA VERTAILE</span><h2>Leirintäalueet Suomessa</h2></div><button id="ms318-camp-reset" type="button">Tyhjennä kaikki</button></div><p id="list-status" role="status"></p><div id="municipality-results"></div><aside aria-label="Tietojen luotettavuus" class="ms296-note" style="margin:18px 0 14px;padding:12px 14px;border:1px solid #d6e4db;background:#f5f9f5;border-radius:14px;color:#28483c;font-size:.92rem;line-height:1.5"><strong>Tietoa leirintäalueiden:</strong> <strong>Aukiolo:</strong> näkyvät kaudet perustuvat julkaistuihin vuoden 2026 tietoihin. Ota yhteyttä alueeseen ennen lähtöä; palvelut ja vastaanotto voivat vaihdella. <strong>Haku:</strong> kokeile alueen nimeä tai kuntaa.</aside><noscript>Ota JavaScript käyttöön nähdäksesi kunnan kohteet.</noscript></section></div></main><nav class="ms337-bottom" aria-label="Sivuston alavalikko"><div class="ms337-links"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span class="ms337-text">Koti</span></a><a href="maakunnat.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg><span class="ms337-text">Paikkakunnat</span></a><a href="pysahdy-matkalla.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M4 5h13l3 4-3 4H4l3-4zM20 14H7l-3 4 3 4h13l-3-4z"/></svg><span class="ms337-text">Pysähdy matkalla</span></a><a href="paivakirja.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span class="ms337-text">Omat matkat</span></a></div></nav><script defer="" src="leirinta-palvelut-v274.js?v=274"></script><script defer="" src="leirinta-aukiolo-v263.js?v=272"></script><script defer="" src="ms-haku-v296.js?v=296"></script><script defer="" src="leirinta-v318.js?v=318"></script></body></html>
+</div><section aria-label="Rajaa palveluiden mukaan" class="ms275-services-panel"><h2>Palvelut</h2><p>Valitse tarvitsemasi palvelut. Haku näyttää vain kohteet, joissa palvelu on vahvistettu.</p><div class="ms275-services-choices"><label><input class="ms275-service-choice" type="checkbox" value="electric"/><span>⚡ Sähkö</span></label><label><input class="ms275-service-choice" type="checkbox" value="shower"/><span>🚿 Suihku</span></label><label><input class="ms275-service-choice" type="checkbox" value="sauna"/><span>♨️ Sauna</span></label><label><input class="ms275-service-choice" type="checkbox" value="wc"/><span>🚻 WC</span></label><label><input class="ms275-service-choice" type="checkbox" value="greywater"/><span>🛠️ Harmaavesi</span></label><label><input class="ms275-service-choice" type="checkbox" value="cottages"/><span>🏠 Mökit</span></label><label><input class="ms275-service-choice" type="checkbox" value="cafe"/><span>☕ Kahvila</span></label><label><input class="ms275-service-choice" type="checkbox" value="playground"/><span>🛝 Leikkipaikka</span></label><label><input class="ms275-service-choice" type="checkbox" value="beach"/><span>🏖️ Uimaranta</span></label><label><input class="ms275-service-choice" type="checkbox" value="kitchen"/><span>🍳 Keittiö</span></label><label><input class="ms275-service-choice" type="checkbox" value="laundry"/><span>🧺 Pyykinpesu</span></label></div><div class="ms275-service-footer"><button id="ms275-clear-services" type="button">Tyhjennä palveluvalinnat</button><small>Vahvistamattomia palveluja ei oleteta löytyviksi.</small></div></section></section><section aria-label="Leirintäalueiden hakutulokset" class="ms318-camp-list"><div class="ms318-results-header"><div><span class="ms318-eyebrow">LÖYDÄ JA VERTAILE</span><h2>Leirintäalueet Suomessa</h2></div><button id="ms318-camp-reset" type="button">Tyhjennä kaikki</button></div><p id="list-status" role="status"></p><div id="municipality-results"></div><aside aria-label="Tietojen luotettavuus" class="ms296-note" style="margin:18px 0 14px;padding:12px 14px;border:1px solid #d6e4db;background:#f5f9f5;border-radius:14px;color:#28483c;font-size:.92rem;line-height:1.5"><strong>Tietoa leirintäalueiden:</strong> <strong>Aukiolo:</strong> näkyvät kaudet perustuvat julkaistuihin vuoden 2026 tietoihin. Ota yhteyttä alueeseen ennen lähtöä; palvelut ja vastaanotto voivat vaihdella. <strong>Haku:</strong> kokeile alueen nimeä tai kuntaa.</aside><noscript>Ota JavaScript käyttöön nähdäksesi kunnan kohteet.</noscript></section></div></main><nav class="ms337-bottom" aria-label="Sivuston alavalikko"><div class="ms337-links"><a href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span class="ms337-text">Koti</span></a><a href="maakunnat.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg><span class="ms337-text">Paikkakunnat</span></a><a href="pysahdy-matkalla.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M4 5h13l3 4-3 4H4l3-4zM20 14H7l-3 4 3 4h13l-3-4z"/></svg><span class="ms337-text">Pysähdy matkalla</span></a><a href="paivakirja.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span class="ms337-text">Omat matkat</span></a></div></nav><script defer="" src="leirinta-palvelut-v274.js?v=274"></script><script defer="" src="leirinta-aukiolo-v263.js?v=272"></script><script defer="" src="ms-haku-v296.js?v=296"></script><script defer="" src="leirinta-v318.js?v=318"></script><script defer src="desktop-v339.js?v=339"></script>
+</body></html>

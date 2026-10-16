@@ -35,3 +35,10 @@ body[data-home=true] #travel-stop-v268,body[data-home=true] #ms-ruukki-backup-v2
 .ms301-favorites h1{font-size:clamp(28px,6vw,40px);margin:12px 0 8px}
 .ms301-favorites p{color:#596c60}
 .ms302-fav-notice{font-size:12px;margin-top:22px}
+
+/* v339 — the bottom bar belongs to phones only. */
+@media(min-width:900px){
+ html{scroll-padding-bottom:0!important}
+ body{padding-bottom:0!important}
+ body .site-nav, body nav.site-nav, body .bottom-nav, body .ms301-nav, body .ms302-nav, body .ms303-nav, body .ms304-nav, body .ms332-nav, body .ms337-bottom, body nav[aria-label="Sivuston alavalikko"]{display:none!important;visibility:hidden!important;height:0!important;margin:0!important;padding:0!important;border:0!important}
+}

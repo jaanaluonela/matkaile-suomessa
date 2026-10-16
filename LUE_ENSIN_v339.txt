@@ -1,0 +1,28 @@
+MATKAILE SUOMESSA v339 — OMA TIETOKONEVERSIO
+==============================================
+
+MITÄ MUUTTUU?
+- Alareunan kiinteä mobiilivalikko piilotetaan tietokoneella (900 px ja leveämmät näytöt).
+- Puhelimella nykyinen neljän painikkeen alavalikko säilyy.
+- Tietokoneelle tulee oma vaakasuuntainen ylävalikko, haku ja reittisuunnittelun oikopolku.
+- Etusivulle oikea hero-etusivu.jpg-valokuva, kolme oikopolku-korttia ja leveämpi sisältö.
+- Leirintäalueiden haun asetukset ovat tulosten yläpuolella, ei erillisenä sivupalkkina.
+- Pysähdy matkalla / Maakunnat / Matkaparkit / Yöpyminen: leveämmät näkymät.
+- Tallennettuihin matkoihin ja hakujen tietoihin ei kosketa.
+
+ASENNUS
+1. Pura ZIP.
+2. Vie ZIPin sisällä olevat tiedostot projektisi JUUREEN (samaan kansioon kuin index.html).
+3. Korvaa vain samannimiset tiedostot; älä poista muita.
+4. Paina GitHubin Commit changes; odota julkaisua.
+5. Päivitä tietokoneen selain Ctrl + F5 tai Ctrl + Shift + R.
+
+HUOM: leirintaalueet.html pohjautuu viimeisimpään v338-versioon.
+Muiden pääsivujen pohjana on aiemmin toimitettu projektikopio. Jos GitHubissasi
+on niistä sitä tuoreempia sisältömuutoksia, yhdistä muutokset ennen ylikirjoitusta.
+Tämä paketti ei sisällä koko sivustoa eikä korvaa kohteiden tietokantoja.
+
+TARKISTUS
+Avaa etusivu tietokoneella: leveä valokuva, uusi ylävalikko, ei alareunan palkkia.
+Avaa leirintäalueet: yksi sisältövirta ja tulokset hakuehtojen alla.
+Kavenna ikkuna alle 900px: ylävalikko poistuu, puhelimen alavalikko näkyy.

@@ -1,0 +1,117 @@
+/* Matkaile Suomessa v339 — aito oma tietokonenäkymä. Puhelinversioon ei kosketa. */
+@media (max-width:899px){
+  .ms339-topbar,.ms339-home-features,.ms339-end-links{display:none!important}
+}
+@media (min-width:900px){
+  :root{--ms339-forest:#175448;--ms339-ink:#183f35;--ms339-line:#d6e6dc;--ms339-sand:#f6f3e8}
+  html{scroll-padding-top:148px!important;scroll-padding-bottom:0!important}
+  body{padding-bottom:0!important; min-height:100vh!important; background:#f6f9f5!important; color:var(--ms339-ink)}
+  body .site-nav,body nav.site-nav,body .bottom-nav,body .ms301-nav,body .ms302-nav,body .ms303-nav,
+  body .ms304-nav,body .ms332-nav,body .ms337-bottom,body .ms327-bottom,
+  body nav[aria-label="Sivuston alavalikko"],body nav[aria-label="Alavalikko"]{
+    display:none!important; visibility:hidden!important; height:0!important; min-height:0!important;
+    margin:0!important; padding:0!important; border:0!important; box-shadow:none!important;
+  }
+  body .ms339-topbar{display:block!important;position:sticky;top:0;z-index:12500;background:rgba(253,254,251,.97);border-bottom:1px solid var(--ms339-line);box-shadow:0 7px 22px #1a4b3b11;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .ms339-shell{width:min(calc(100% - 64px),1360px);margin:0 auto;box-sizing:border-box}
+  .ms339-toprow{display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:79px}
+  .ms339-brand{display:flex;align-items:center;gap:12px;text-decoration:none!important;color:#164d40!important;flex-shrink:0}
+  .ms339-brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:#e7f1e9;font-size:25px}
+  .ms339-brand strong{display:block;font-weight:850;font-size:21px;letter-spacing:-.045em;line-height:1.08}
+  .ms339-brand small{display:block;color:#658075;font-size:12px;font-weight:600;margin-top:4px}
+  .ms339-search{display:flex;align-items:center;gap:0;width:min(100%,420px);height:45px;border:1px solid #c9dcd0;border-radius:14px;background:#fff;overflow:hidden}
+  .ms339-search input{min-width:0;flex:1;height:100%;border:0!important;outline:none!important;background:transparent!important;padding:0 15px!important;font:500 14px/1.2 system-ui,sans-serif;color:#234a3f!important;box-shadow:none!important}
+  .ms339-search button{height:100%;min-width:79px;border:0!important;border-radius:0!important;background:#206751!important;color:white!important;font:750 13px system-ui,sans-serif;cursor:pointer;padding:0 15px!important;white-space:nowrap}
+  .ms339-search:focus-within{outline:2px solid #4d997b;outline-offset:2px}
+  .ms339-navbar{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:0 0 10px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}
+  .ms339-navbar a{display:inline-flex;align-items:center;justify-content:center;min-height:37px;gap:7px;white-space:nowrap;flex:0 0 auto;border-radius:11px;padding:8px 12px!important;text-decoration:none!important;color:#325f50!important;font:750 13.5px/1 system-ui,sans-serif!important;border:1px solid transparent}
+  .ms339-navbar a:hover,.ms339-navbar a:focus-visible{background:#eaf4ec!important;border-color:#d7e9dc!important;outline:none}
+  .ms339-navbar a[aria-current="page"]{background:#e6f0e9!important;color:#12503f!important;border-color:#d2e4d6!important}
+  .ms339-navbar .ms339-nav-cta{background:#206751!important;color:white!important;padding:10px 16px!important}
+  .ms339-navbar .ms339-nav-cta:hover{background:#114b39!important;color:white!important}
+  .ms339-navbar .ms339-ico{font-size:16px;line-height:1}
+  /* Jokaisella sivulla yksi leveä sisältövirta — ei pysyvää vasenta sivupalkkia. */
+  body > main,body > main.page,body > main.home-shell,body > main.regions-page,
+  body > main.ms302-stops, body main.page,body main.home-shell,body main.regions-page,
+  body main.ms302-stops,body main.ms301-favorites{box-sizing:border-box!important;width:min(calc(100% - 72px),1250px)!important;max-width:1250px!important;margin:0 auto!important;padding-bottom:75px!important}
+  body > main{padding-top:26px}
+  body main.page .menu,body main.home-shell .menu{margin-bottom:24px}
+  body main.page > header,body main.regions-page > header,body main.ms302-stops > header{max-width:none!important}
+  body main.page h1,body main.ms302-stops h1,body main.regions-page h1{font-size:clamp(35px,3.5vw,51px)!important;line-height:1.08!important;letter-spacing:-.035em!important}
+  body main .lead,body main .ms318-hero-subtitle{font-size:clamp(16px,1.5vw,19px)!important}
+  body main .card,body main .stay,body main .ms318-camp-sidebar,body main .ms318-camp-list {box-shadow:0 11px 28px #224d370a}
+  /* Etusivu: aito valokuva, kookas hakukenttä ja selkeät toimintokortit. */
+  body[data-home="true"] main.home-shell{background:none!important;padding-top:22px!important}
+  body[data-home="true"] main.home-shell > .hero{
+     position:relative!important;box-sizing:border-box!important;min-height:310px!important;height:auto!important;
+     border-radius:27px!important;overflow:hidden!important;padding:35px 43px!important;
+     background:linear-gradient(90deg,rgba(10,42,33,.9) 0%,rgba(18,65,52,.69) 49%,rgba(18,65,52,.1) 100%),url('hero-etusivu.jpg') center 47%/cover no-repeat!important;
+     border:1px solid #cee2d3!important;box-shadow:0 16px 38px #204d3b16!important;
+  }
+  body[data-home="true"] .hero:after{display:none!important;content:none!important}
+  body[data-home="true"] .hero .hero-content{position:relative!important;z-index:1!important;max-width:720px!important;text-align:left!important}
+  body[data-home="true"] .hero .home-brand-banner-v290{max-width:380px!important;max-height:126px!important;object-fit:contain!important;object-position:left center!important;background:rgba(255,255,255,.96)!important;padding:9px 12px!important;border-radius:14px!important}
+  body[data-home="true"] main.home-shell > .hero .hero-content p.home-hero-lead-v290{font-size:clamp(20px,2.4vw,30px)!important;color:#fff!important;font-weight:800!important;letter-spacing:-.02em!important;margin:24px 0 13px!important;text-shadow:0 2px 12px #0005!important}
+  body[data-home="true"] .hero-stats{justify-content:flex-start!important}
+  body[data-home="true"] .hero-stats span{color:#fff!important;background:#163d33c7!important;border:1px solid #ffffff38!important;border-radius:10px!important;padding:7px 11px!important;font-size:13px!important}
+  body[data-home="true"] .home-explore-v251{background:#fff!important;padding:27px 32px!important;margin:23px 0 0!important;border:1px solid #d8e7dc!important;border-radius:23px!important;box-shadow:0 9px 26px #204d3b0b!important}
+  body[data-home="true"] .home-explore-v251 h2{font-size:clamp(25px,2.5vw,34px)!important}
+  body[data-home="true"] #place-search{height:60px!important;font-size:19px!important;border-radius:13px!important}
+  body[data-home="true"] .home-explore-search-v251{max-width:none!important}
+  body[data-home="true"] .search-results{position:relative;z-index:10}
+  .ms339-home-features{margin:22px 0 29px;display:block}
+  .ms339-eyebrow{font-size:12px;letter-spacing:.19em;color:#6a8a78;font-weight:800;text-transform:uppercase}
+  .ms339-feature-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:15px}
+  .ms339-feature-heading h2{font-size:clamp(25px,2.5vw,35px);margin:5px 0 0;letter-spacing:-.03em;color:#1a4f40}
+  .ms339-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .ms339-feature{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:15px;min-height:188px;padding:23px!important;background:#fff;border:1px solid var(--ms339-line);border-radius:20px;box-shadow:0 8px 20px #1b503809;text-decoration:none!important;color:#1e4a3c!important;transition:transform .17s ease,box-shadow .17s ease}
+  .ms339-feature:hover{transform:translateY(-3px);box-shadow:0 14px 28px #1b503818}
+  .ms339-feature:nth-child(1){background:linear-gradient(145deg,#e6f3e9,#f6faf4)}
+  .ms339-feature:nth-child(2){background:linear-gradient(145deg,#f3efe0,#fffdf5)}
+  .ms339-feature:nth-child(3){background:linear-gradient(145deg,#eaf2f1,#fff)}
+  .ms339-feature-icon{font-size:31px;line-height:1}
+  .ms339-feature strong{font-size:20px;letter-spacing:-.02em}
+  .ms339-feature p{font-size:14px;line-height:1.5;color:#577369;margin:9px 0 0}
+  .ms339-feature-arrow{position:absolute;bottom:20px;right:23px;color:#1d7155;font-weight:800;font-size:22px}
+  body[data-home="true"] .home-primary-links-v290{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important}
+  body[data-home="true"] .home-primary-links-v290 .menu{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a{min-height:145px!important;max-width:none!important;border-radius:19px!important;box-shadow:0 8px 20px #194c380b!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a.home-feature-v306{grid-column:auto!important;grid-template-columns:92px minmax(0,1fr) 18px!important;min-height:150px!important;height:150px!important;gap:8px!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a.home-feature-v306 .feature-art-v306{width:92px!important;height:150px!important}
+  body[data-home="true"] .v244-memories{margin-top:22px!important}
+  body[data-home="true"] .later-note{font-size:13px!important;color:#6c8476!important}
+  /* Leirintäalueiden v338: hakuehdot ylhäällä, tulokset alla. */
+  body[data-kind="camping"] .ms318-camp-layout{display:flex!important;flex-direction:column!important;width:100%!important;gap:22px!important}
+  body[data-kind="camping"] .ms318-camp-sidebar,body[data-kind="camping"] .ms318-camp-list{width:100%!important;max-width:none!important;min-width:0!important;position:static!important}
+  body[data-kind="camping"] #municipality-results{display:flex!important;flex-direction:column!important;gap:14px!important;grid-template-columns:none!important}
+  body[data-kind="camping"] #municipality-results .stay{width:100%!important;max-width:none!important}
+  /* Muut yöpaikkasivut saavat leveän hakupaneelin. */
+  body[data-kind] main.page .v243-stay-top,body[data-kind] main.page .v243-filter-grid{width:100%!important;max-width:none!important}
+  body[data-kind] main.page .v243-filter-grid{display:flex!important;flex-wrap:wrap!important;gap:14px!important}
+  body[data-kind] main.page .v243-filter-field{flex:1 1 250px!important;min-width:0!important}
+  body[data-kind] main.page #municipality-results{width:100%!important;max-width:none!important}
+  /* Pysähdy matkalla: hakuehdot ja tulokset leveinä pystysuuntaisina osioina. */
+  body .ms302-stops{max-width:1250px!important}
+  body .ms302-stops-search{width:100%;box-sizing:border-box}
+  body .ms302-stops .ms302-results{width:100%;max-width:none!important;box-sizing:border-box}
+  body .ms302-stops .ms302-category{display:flex!important;flex-wrap:wrap!important;gap:10px!important}
+  body .ms302-stops .ms302-results>*{max-width:none!important}
+  /* Maakunnat: leveä kartta ja alla kuntalista. */
+  body .regions-page{width:min(calc(100% - 72px),1250px)!important;max-width:1250px!important}
+  body .regions-page .ms-map-panel{width:100%;max-width:none!important}
+  .ms339-end-links{border-top:1px solid #dce9df;background:#edf5ef;margin-top:50px;padding:28px 0;color:#48685c}
+  .ms339-end-links .ms339-shell{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+  .ms339-end-links .ms339-end-brand{font-weight:800;color:#1f5645}
+  .ms339-end-links .ms339-end-list{display:flex;flex-wrap:wrap;gap:19px}
+  .ms339-end-links a{color:#255c48!important;text-decoration:none!important;font-weight:700;font-size:13px}
+  .ms339-end-links a:hover{text-decoration:underline!important}
+}
+@media(min-width:900px) and (max-width:1160px){
+  .ms339-shell{width:min(calc(100% - 40px),1360px)}
+  .ms339-brand small{display:none}
+  .ms339-toprow{min-height:70px}
+  .ms339-navbar a{padding:8px 9px!important;font-size:12.5px!important}
+  .ms339-feature-grid{gap:10px}
+  body[data-home="true"] .home-primary-links-v290 .menu{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(prefers-reduced-motion:reduce){.ms339-feature{transition:none!important}}
