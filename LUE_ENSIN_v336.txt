@@ -1,0 +1,21 @@
+MATKAILE SUOMESSA — v336 TIETOKONEVERSION HAKUKORJAUS
+
+Korjaus koskee vain etusivun tietokoneversion hakua.
+
+Asennus GitHubiin:
+1. Avaa GitHubissa jaanaluonela/matkaile-suomessa.
+2. Pura ZIP tietokoneella (tai lataa suoraan tämän tiedoston viereen toimitettu JS-tiedosto).
+3. Vie etusivu-haku-v253.js repositorion juurikansioon ja korvaa samanniminen vanha tiedosto.
+4. ÄLÄ korvaa index.html-tiedostoa. ÄLÄ poista muita tiedostoja.
+5. Odota GitHub Pages -julkaisua. Avaa etusivu ja päivitä pakotetusti Ctrl+F5 (Windows) / Cmd+Shift+R (Mac), tarvittaessa odota välimuistin päivittymistä.
+6. Testaa etusivun tietokoneversion Pysähdy matkalla -haussa: "ou" -> Oulu, ja Oulu -> oulu.html.
+
+Muutokset:
+- Yhdistää tietokoneen hakuun Suomen kaikki 308 kuntaa ja 19 maakuntaa sekä vanhat matkailukohteet.
+- Suosii kunnan nimeä osittaisessa haussa: "ou" -> Oulu ensimmäisenä.
+- Oulun hakutulos johtaa suoraan oulu.html-sivulle.
+- Korjaa myös tietokoneen ylätunnisteen paikkakuntahaun.
+- Jättää puhelinversion haun ja muut sivuston toiminnot ennalleen.
+- Jos kunnalla ei ole suoraan tunnistettavaa sivua, avaa sen kuntakortin.
+
+Korjaus ei ole vielä julkaistu GitHubiin; tiedosto on lisättävä itse.
