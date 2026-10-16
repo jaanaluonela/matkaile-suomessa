@@ -1,0 +1,12 @@
+MATKAILE SUOMESSA v337 – LEIRINTÄALUEIDEN ALAVALIKKO
+
+1. Avaa GitHubissa jaana.../matkaile-suomessa (main-haara).
+2. Pura tämä ZIP tietokoneella.
+3. Korvaa vain sivuston pääkansiossa oleva leirintaalueet.html uudella.
+4. Varmista, että muutos tallentuu Commit changes -painikkeella.
+5. Kun GitHub Pages on päivittänyt sivun, avaa leirintäalueet.html ja päivitä Ctrl+F5.
+
+Muutoksia vain yhteen HTML-sivuun. Leirintäalueiden tiedot, haut ja rajaukset säilyvät.
+Alavalikon linkit: Koti / Paikkakunnat / Pysähdy matkalla / Omat matkat.
+
+Huom. Tämä korjaa juuri leirintaalueet.html-sivun, ei muita sivuja.
