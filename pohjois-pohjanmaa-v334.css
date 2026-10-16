@@ -1,0 +1,63 @@
+/* Matkaile Suomessa v334: Lahden mallin mukainen Pohjois-Pohjanmaan kuntanäkymä */
+:root{--pp-dark:#173f35;--pp-green:#175c49;--pp-muted:#566f64;--pp-line:#d5e5db;--pp-pale:#eaf3ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}
+body.ms334-page{margin:0;background:#f9fbf8;color:var(--pp-dark);font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.54}
+.ms334-page a{color:#195d49}.ms334-page a:focus-visible,.ms334-page summary:focus-visible{outline:3px solid #e69a35;outline-offset:3px}
+.ms334-main{width:min(100%,790px);margin:auto;padding:19px 16px 140px}
+.ms334-back{display:inline-block;margin:0 0 8px;padding:6px 0;font-weight:800;text-decoration:none}
+.ms334-header h1{font-size:clamp(33px,7vw,45px);letter-spacing:-.03em;line-height:1.16;margin:5px 0 8px}
+.ms334-lead{font-size:clamp(16px,3.5vw,19px);color:#526f61;line-height:1.5;margin:0 0 18px}
+.ms334-facts{display:flex;align-items:center;gap:16px;padding:17px;background:#e7f1eb;border:1px solid var(--pp-line);border-radius:20px;margin:14px 0 22px;min-height:112px}
+.ms334-facts>a{flex:0 0 72px;display:flex;justify-content:center;align-items:center}
+.ms334-facts img{width:66px;max-height:82px;object-fit:contain;filter:drop-shadow(0 1px 1px #0001)}
+.ms334-facts strong{font-size:18px}.ms334-facts p{font-size:13px;color:#52675c;margin:4px 0}.ms334-facts div{min-width:0}
+.ms334-quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:17px 0 22px}
+.ms334-quick a{display:flex;align-items:center;gap:9px;text-decoration:none;padding:16px 13px;border:1px solid #cde1d6;border-radius:17px;min-height:78px;font-size:18px;font-weight:800;line-height:1.2;box-shadow:0 1px 2px #142b1908}
+.ms334-quick .tile-green{background:#e5f2ea}.ms334-quick .tile-gold{background:#f3f0e3}.ms334-quick .tile-blue{background:#e9f2f2}.ms334-quick .tile-peach{background:#f7ece6}
+.ms334-intro,.ms334-group,.ms334-soft,.ms334-legacy section,.ms334-legacy details{border:1px solid var(--pp-line);border-radius:19px;background:#fff;padding:18px;margin:16px 0}
+.ms334-intro h2,.ms334-soft h2{font-size:23px;line-height:1.3;margin:0 0 9px}
+.ms334-intro p,.ms334-soft p{margin:8px 0;line-height:1.56}
+.ms334-photo{margin-top:15px;border-radius:14px;overflow:hidden;background:#eff3ed}
+.ms334-photo img{display:block;width:100%;max-height:300px;object-fit:cover}.ms334-photo small{display:block;padding:7px 11px;font-size:12px;color:#566e63}
+.ms334-group{scroll-margin-top:15px}.ms334-group summary{cursor:pointer;list-style:revert;display:list-item;font-weight:800;font-size:20px;color:#175444}
+.ms334-amount{color:#63796f;font-size:13px;font-weight:650;margin-left:8px;white-space:nowrap}
+.ms334-hint{color:var(--pp-muted);font-size:14px}
+.ms334-places{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:13px}
+.ms334-place{display:flex;flex-direction:column;min-width:0;text-decoration:none;border:1px solid #d9e7dd;background:#f8fbf8;border-radius:13px;padding:13px}
+.ms334-place strong{font-size:16px;line-height:1.34}.ms334-place p{font-size:14px;color:#52675c;margin:7px 0 10px;flex:1}.ms334-more{font-size:13px;font-weight:800;text-decoration:underline}
+.ms334-extra,.ms334-bottomnote{color:#52695e;font-size:14px}.ms334-soft{background:#eff6f1}
+.ms334-footer{position:fixed;z-index:3000;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;background:#ffffffed;border-top:1px solid #d6e8dd;box-shadow:0 -6px 22px #294a2910;padding:7px max(8px,env(safe-area-inset-right)) calc(7px + env(safe-area-inset-bottom));backdrop-filter:blur(12px)}
+.ms334-footer a{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:66px;text-align:center;border-radius:13px;text-decoration:none;color:#20503e;font-weight:800;font-size:clamp(10px,2.7vw,13px);line-height:1.25;padding:4px 1px}
+.ms334-footer a.active{background:#eaf3ed}.ms334-footer a span{font-size:27px;line-height:1.25;font-weight:500}
+.ms334-label{display:block;font-weight:800;margin:11px 0 5px}.ms334-region input[type=search]{width:100%;font:inherit;padding:13px;border:1px solid #c7dbcd;border-radius:12px;background:#fff}
+.ms334-municipalities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ms334-municipality{display:flex;align-items:center;gap:10px;padding:10px;min-width:0;min-height:69px;border:1px solid var(--pp-line);border-radius:13px;background:#f8fbf8;text-decoration:none!important}
+.ms334-municipality img{width:35px;height:44px;object-fit:contain;flex:none}.ms334-municipality span:not(.ms334-arrow){min-width:0;display:flex;flex-direction:column}
+.ms334-municipality strong{font-size:15px;overflow-wrap:anywhere}.ms334-municipality small{font-size:12px;color:#64766d}.ms334-arrow{margin-left:auto;font-size:21px}
+.ms334-region-facts>img{flex:0 0 66px}
+/* Existing town pages enhanced with JS: hide ONLY duplicated top UI, keep existing content intact. */
+body.ms334-enhanced .ms332-top,body.ms334-enhanced .ms334-old-head,body.ms334-enhanced .ms334-old-breadcrumb,body.ms334-enhanced .ms334-old-quick,body.ms334-enhanced .ms334-old-facts{display:none!important}
+body.ms334-enhanced .ms334-newtop{display:block!important}
+body.ms334-enhanced .ms334-newtop.ms334-main{padding:0;margin:0;max-width:none}
+body.ms334-enhanced main{max-width:790px!important;margin-left:auto!important;margin-right:auto!important;padding:18px 16px 145px!important;width:100%!important}
+body.ms334-enhanced .ms334-newtop .ms334-header h1{display:block!important;visibility:visible!important;color:#173f35!important;margin:5px 0 8px!important}
+body.ms334-enhanced .ms334-newtop .ms334-lead{margin:0 0 16px!important;display:block!important}
+body.ms334-enhanced .ms334-newtop .ms334-facts{display:flex!important}
+body.ms334-enhanced .ms334-newtop .ms334-quick{display:grid!important}
+body.ms334-enhanced .ms334-newtop .ms334-quick a{min-height:78px!important;color:#195d49!important}
+body.ms334-enhanced .footnav,body.ms334-enhanced .site-nav,body.ms334-enhanced nav.ms304-nav,body.ms334-enhanced nav.ms301-nav,body.ms334-enhanced .ms304-bottomnav,body.ms334-enhanced .alavalikko{display:none!important}
+body.ms334-enhanced .ms334-legacy details{padding:15px}body.ms334-enhanced .ms334-legacy .place{color:#154936}
+body.ms334-enhanced .ms334-footer{display:grid!important}
+@media(max-width:620px){.ms334-main{padding:16px 13px 138px}.ms334-facts{gap:11px;padding:13px}.ms334-facts img{width:54px;max-height:73px}.ms334-facts>a{flex-basis:55px}.ms334-facts strong{font-size:16px}.ms334-facts p{font-size:12px}.ms334-quick{gap:9px}.ms334-quick a{font-size:15px;gap:6px;padding:13px 11px;min-height:72px}.ms334-places{grid-template-columns:1fr}.ms334-municipalities{gap:7px}.ms334-municipality{padding:9px 7px;gap:6px}.ms334-municipality strong{font-size:13px}.ms334-municipality small{font-size:11px}}
+@media(min-width:850px){.ms334-footer{max-width:790px;left:50%;transform:translateX(-50%);border-left:1px solid #d6e8dd;border-right:1px solid #d6e8dd;border-radius:14px 14px 0 0}}
+
+/* v334 viimeistely: suodatuksen piilotus ja vanhojen sivujen typografia */
+.ms334-municipality[hidden]{display:none!important}
+body.ms334-enhanced{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;color:#173f35;background:#f9fbf8;line-height:1.54}
+body.ms334-enhanced .ms334-newtop a{color:#195d49}
+body.ms334-enhanced .ms334-old-eyebrow{display:none!important}
+body.ms334-page .ms302-nav,body.ms334-page .ms302-crumb,body.ms334-page .footnav,body.ms334-page .site-nav,body.ms334-page .ms301-nav,body.ms334-page .ms304-nav,body.ms334-enhanced .ms302-nav,body.ms334-enhanced .ms302-crumb{display:none!important}
+body.ms334-page.ms330-content-page .ms334-main .ms334-header.ms330-page-intro,body.ms334-enhanced.ms330-content-page .ms334-newtop .ms334-header.ms330-page-intro{padding:0!important;margin:0!important;border:none!important;background:transparent!important;box-shadow:none!important}
+body.ms334-page.ms330-content-page .ms334-header.ms330-page-intro h1,body.ms334-enhanced.ms330-content-page .ms334-header.ms330-page-intro h1{font-size:clamp(33px,7vw,45px)!important}
+
+.ms334-footer a svg{width:27px;height:27px;display:block;flex:none;margin:0 0 4px;fill:none;stroke:#265540;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
