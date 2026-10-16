@@ -1,0 +1,185 @@
+/* Matkaile Suomessa v334 — yksi selkeä sisältöalue tietokoneella.
+   Täysin lisätty tyylitiedosto: mobiilin vanhat tyylit säilyvät.
+   Käyttää projektin omaa hero-etusivu.jpg -valokuvaa. */
+@media screen and (min-width: 900px) {
+  :root {
+    --ms334-ink:#163e32;
+    --ms334-green:#165a45;
+    --ms334-muted:#547365;
+    --ms334-line:#d8e5db;
+    --ms334-soft:#f4f8f2;
+    --ms334-shadow:0 14px 34px rgba(17,62,43,.075);
+  }
+  /* Pieni tekstin ja reunojen viimeistely — ei muutoksia toimintalogiikkaan. */
+  body:has(.regions-page),body[data-kind="camping"],body[data-kind="park"],
+  body[data-kind="all"],body:has(.ms318-nearby-main) {
+    background:linear-gradient(180deg,#eff4ee 0,#fafbf8 430px,#f8faf7 100%)!important;
+    color:var(--ms334-ink);
+  }
+  :is(.regions-page,.page,.ms318-nearby-page) a:focus-visible,
+  :is(.regions-page,.page,.ms318-nearby-page) button:focus-visible,
+  :is(.regions-page,.page,.ms318-nearby-page) input:focus-visible,
+  :is(.regions-page,.page,.ms318-nearby-page) select:focus-visible {
+    outline:3px solid #cf9140!important;outline-offset:3px;
+  }
+
+  /* Maakunnat: suuri kuva -> haku -> kartta -> maakuntalista. EI sivupalstaa. */
+  body .regions-page{
+    width:min(100% - 52px,1180px)!important;max-width:1180px!important;
+    margin:0 auto!important;padding:23px 0 128px!important;
+  }
+  .regions-page .regions-back{margin:0 0 14px 6px!important;min-height:34px}
+  .regions-page .regions-hero {
+    position:relative!important;min-height:315px!important;
+    margin:0 0 23px!important;padding:35px clamp(24px,4vw,55px)!important;
+    display:flex!important;flex-direction:column!important;justify-content:flex-end!important;
+    border:0!important;border-radius:25px!important;overflow:hidden!important;
+    background-image:linear-gradient(90deg,rgba(10,39,32,.88),rgba(10,47,37,.52) 55%,rgba(10,47,37,.15)),url('hero-etusivu.jpg')!important;
+    background-position:center,center 43%!important;background-size:cover!important;
+    box-shadow:0 20px 42px rgba(12,52,40,.16)!important;
+  }
+  .regions-page .regions-hero :is(.regions-kicker,h1,p,small){color:#fff!important;position:relative!important;z-index:1}
+  .regions-page .regions-hero .regions-kicker{font-size:12px!important;letter-spacing:.15em!important;opacity:.92}
+  .regions-page .regions-hero h1{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(44px,4.5vw,65px)!important;line-height:1.05!important;margin:4px 0 9px!important;letter-spacing:-.035em!important}
+  .regions-page .regions-hero p{font-size:16px!important;max-width:660px!important;line-height:1.5!important;margin:0 0 12px!important}
+  .regions-page .regions-hero small{font-size:13px!important;opacity:.88}
+  .regions-page .regions-search{
+    background:#fff!important;border:1px solid var(--ms334-line)!important;
+    padding:20px 24px 23px!important;border-radius:19px!important;margin:0 0 20px!important;
+    box-shadow:var(--ms334-shadow)!important;
+  }
+  .regions-page .regions-search label{font-weight:800!important;margin:0 0 9px!important}
+  .regions-page .regions-input-wrap input{min-height:56px!important;border-radius:13px!important;font-size:17px!important;background:#fafdfa!important}
+  .regions-page .regions-layout{
+    display:flex!important;flex-direction:column!important;grid-template-columns:none!important;
+    align-items:stretch!important;gap:23px!important;width:100%!important;
+  }
+  .regions-page .ms-map-panel{
+    position:static!important;top:auto!important;width:100%!important;max-width:none!important;
+    min-width:0!important;margin:0!important;
+  }
+  .regions-page .ms-map-toggle{
+    display:block!important;background:#fff!important;border:1px solid var(--ms334-line)!important;
+    border-radius:22px!important;box-shadow:var(--ms334-shadow)!important;overflow:hidden!important;
+  }
+  .regions-page .ms-map-toggle>summary{min-height:69px!important;padding:15px 25px!important;font-size:18px!important;background:#f3f7ee!important}
+  .regions-page .ms-map-copy{padding:21px 30px 4px!important;text-align:center!important}
+  .regions-page .ms-map-copy h2{font-family:Georgia,serif!important;font-size:30px!important}
+  .regions-page .ms-map-copy p{font-size:15px!important}
+  .regions-page .ms-map-viewport{justify-content:center!important;padding:13px 25px 0!important}
+  .regions-page .ms-map-stage{max-width:430px!important;width:100%!important}
+  .regions-page .ms-finland-map{max-width:395px!important}
+  .regions-page .ms-map-selection{width:min(100% - 48px,650px)!important;margin:13px auto 16px!important}
+  .regions-page .ms-selected-actions{justify-content:center!important}
+  .regions-page .ms-regions-results{width:100%!important;min-width:0!important;max-width:none!important;margin:0!important}
+  .regions-page .regions-status{font-size:14px!important;font-weight:650!important;margin:5px 5px 15px!important}
+  .regions-page .regions-list{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+    align-items:stretch!important;gap:12px!important;
+  }
+  .regions-page .region-card{width:100%!important;min-width:0!important;max-width:none!important;border-radius:18px!important;box-shadow:0 5px 17px rgba(16,57,43,.05)!important}
+  .regions-page .region-card>summary{min-height:73px!important;padding:15px 25px!important}
+  .regions-page .region-card>summary strong{font-size:22px!important}
+  .regions-page .region-content{padding:0 23px 22px!important}
+  .regions-page .region-towns{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+  .regions-page .region-town{min-height:64px!important;background:#fff!important}
+  .regions-page .region-town a{padding:14px 12px!important}
+  .regions-page .regions-footnote{padding:10px 7px 0!important}
+
+  /* Yöpymispaikat: poista vasen hakusivupalsta, kaikki peräkkäin. */
+  body[data-kind] .page{
+    box-sizing:border-box!important;width:min(100% - 52px,1180px)!important;
+    max-width:1180px!important;margin:0 auto!important;padding:24px 0 130px!important;
+  }
+  body[data-kind="camping"] .page .ms318-hero--camp,
+  body[data-kind="park"] .page .ms318-hero,
+  body[data-kind="all"] .page .ms318-hero{
+    display:flex!important;flex-direction:column!important;justify-content:flex-end!important;
+    min-height:265px!important;padding:28px clamp(24px,4vw,48px)!important;
+    background-image:linear-gradient(90deg,rgba(10,44,33,.87),rgba(10,45,35,.5) 65%,rgba(10,45,35,.14)),url('hero-etusivu.jpg')!important;
+    background-size:cover!important;background-position:center,center 51%!important;
+    border:0!important;border-radius:24px!important;margin:0 0 20px!important;
+    box-shadow:0 18px 36px rgba(12,52,40,.16)!important;
+  }
+  body[data-kind] .page .ms318-hero:after{display:none!important}
+  body[data-kind] .page .ms318-hero :is(a,span,h1,p){position:relative!important;z-index:1!important;color:#fff!important}
+  body[data-kind] .page .ms318-hero h1{font:700 clamp(39px,4vw,57px)/1.08 Georgia,'Times New Roman',serif!important;margin:9px 0!important}
+  body[data-kind] .page .ms318-hero p{max-width:640px!important;font-size:17px!important;line-height:1.5!important}
+  body[data-kind] .page .ms318-hero .top{color:#fff!important}
+  /* Vanhemman sivuversion kuvabanneri — ei luoda jos v318-banneri on olemassa. */
+  body[data-kind="camping"] .page:not(:has(.ms318-hero))::before,
+  body[data-kind="park"] .page:not(:has(.ms318-hero))::before,
+  body[data-kind="all"] .page:not(:has(.ms318-hero))::before{
+    content:"";display:block;height:260px;margin:0 0 17px;border-radius:24px;
+    background:linear-gradient(90deg,rgba(11,47,35,.4),rgba(11,47,35,.05)),url('hero-etusivu.jpg') center 46%/cover;
+    box-shadow:0 18px 36px rgba(12,52,40,.16);
+  }
+  body[data-kind] .page > h1{font:700 clamp(36px,3.4vw,47px)/1.13 Georgia,'Times New Roman',serif!important;color:#174f3c!important}
+  body[data-kind] .page>.menu{margin:14px 0 22px!important;gap:12px!important}
+  body[data-kind] .page>.menu>a{min-height:58px!important;font-weight:780!important;font-size:16px!important;box-shadow:0 5px 18px rgba(23,74,53,.035)!important}
+  body[data-kind="camping"] .ms318-camp-layout{
+    display:flex!important;flex-direction:column!important;
+    grid-template-columns:none!important;gap:22px!important;width:100%!important;
+  }
+  body[data-kind="camping"] .ms318-camp-sidebar,
+  body[data-kind="camping"] .ms318-camp-list{
+    box-sizing:border-box!important;position:static!important;top:auto!important;
+    width:100%!important;min-width:0!important;max-width:none!important;
+    max-height:none!important;height:auto!important;overflow:visible!important;
+    margin:0!important;padding:24px 29px!important;
+    border:1px solid var(--ms334-line)!important;border-radius:22px!important;
+    background:#fff!important;box-shadow:var(--ms334-shadow)!important;
+  }
+  body[data-kind="camping"] .ms318-panel-heading{margin:0 0 12px!important}
+  body[data-kind="camping"] .ms318-panel-heading h2{font:700 28px/1.2 Georgia,serif!important;color:var(--ms334-ink)!important}
+  body[data-kind="camping"] .ms318-panel-heading p{font-size:14px!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .v243-stay-top{margin:0 0 14px!important}
+  body[data-kind="camping"] .ms318-camp-sidebar #v243-stay-search{min-height:55px!important;font-size:16px!important;width:100%!important;max-width:none!important;border-radius:13px!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .v243-filter-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin:15px 0!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-panel{display:flex!important;flex-wrap:wrap!important;gap:20px!important;padding:13px 0!important;margin:4px 0!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-choice{flex:1 1 300px!important;max-width:none!important;align-items:center!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .camp-opening-note{width:100%!important;flex-basis:100%!important;margin:0!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-panel{border-top:1px solid #e2eae2!important;margin:17px 0 0!important;padding:15px 0 0!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-choices{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:8px!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-choices label{min-height:41px!important;padding:8px 9px!important;font-size:13px!important}
+  body[data-kind="camping"] .ms318-camp-list .ms318-results-header{padding:0 0 15px!important;margin:0 0 17px!important}
+  body[data-kind="camping"] .ms318-camp-list .ms318-results-header h2{font:700 29px/1.2 Georgia,serif!important}
+  body[data-kind="camping"] .ms318-camp-list #municipality-results:has(.stay),
+  body[data-kind="camping"] .page #municipality-results:has(.stay){display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:13px!important}
+  body[data-kind="camping"] #municipality-results .stay{
+    box-sizing:border-box!important;width:100%!important;max-width:none!important;min-width:0!important;
+    height:auto!important;margin:0!important;padding:22px clamp(18px,3vw,30px)!important;
+    border:1px solid var(--ms334-line)!important;border-left:5px solid #2e8762!important;
+    border-radius:15px!important;background:#fff!important;box-shadow:0 5px 16px rgba(18,59,42,.045)!important;
+  }
+  body[data-kind="camping"] #municipality-results .stay :is(h2,h3,h4){font-size:20px!important;line-height:1.3!important;color:#154b39!important}
+  /* Vanhat yöpymishakusivut: hakukentät ja tulokset saman levyisiksi. */
+  body[data-kind="camping"] .page:not(:has(.ms318-camp-layout)) :is(.v243-filter-grid,.camp-opening-panel,.ms275-services-panel){width:100%!important;max-width:none!important}
+  body[data-kind="camping"] .page:not(:has(.ms318-camp-layout)) .v243-filter-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  /* Matkaparkit ja muu yöpyminen: myös yksi päävirta. */
+  body[data-kind="park"] .page #municipality-results:has(.stay),
+  body[data-kind="all"] .page #municipality-results:has(.stay){display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:13px!important}
+  body[data-kind="park"] .page #municipality-results .stay,
+  body[data-kind="all"] .page #municipality-results .stay{height:auto!important;min-width:0!important;padding:22px!important}
+  body[data-kind="park"] .page .v243-filter-grid,
+  body[data-kind="all"] .page .v243-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+  /* Muut uudemmat kahden pääpalstan desktop-asettelut pinotaan. */
+  .ms318-nearby-layout,.ms318-detail-layout{
+    display:flex!important;flex-direction:column!important;grid-template-columns:none!important;gap:20px!important;
+  }
+  .ms318-nearby-controls,.ms318-nearby-main,
+  .ms318-detail-layout>*{position:static!important;max-height:none!important;overflow:visible!important;width:100%!important;max-width:none!important}
+  /* Etusivu saa tietokoneen leveyden, mutta mobiilikorttien rakenne pysyy. */
+  body .home-shell{width:min(calc(100% - 40px),1190px)!important;max-width:1190px!important}
+  body .home-shell>.hero{min-height:390px!important;border-radius:26px!important}
+  .ms302-nav-inner,.ms304-nav-inner{max-width:760px!important}
+}
+@media screen and (min-width: 900px) and (max-width: 1120px) {
+  .regions-page .region-towns{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body[data-kind="camping"] .ms318-camp-sidebar .ms275-services-choices{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media (prefers-reduced-motion:reduce) {
+  .regions-page .region-card,.regions-page .region-card *{transition:none!important}
+}

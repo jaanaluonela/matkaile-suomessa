@@ -1,41 +1,39 @@
-MATKAILE SUOMESSA – POHJOIS-POHJANMAA v334 / KORJAUS 16.10.2026
+MATKAILE SUOMESSA - v334 TIETOKONESIVUT YHTEEN PALSTAAN
 
-Tavoite: Lahden mallin mukainen selkeä kuntasivu Ouluun ja kaikkiin
-Pohjois-Pohjanmaan 30 kuntaan, oikeat vaakunat ja 31.12.2025 asukasluvut.
+TÄMÄ ON PIENI PÄIVITYSPAKETTI, EI KOKO SIVUSTO.
+Se on suunniteltu nykyisten tiedostojesi päälle. Se EI korvaa kuntatietoja,
+maakuntia, matkamuistoja, suosikkeja tai hakutietoja.
 
-SISÄLTÖ:
-- oulu.html: Oulun uusi sivu, 37 nykyistä matkailukohdetta säilytetty / ryhmitelty;
-  vaakuna, 217 469 asukasta, 4 värillistä painiketta, 2x2 myös mobiilissa.
-- pohjois-pohjanmaa.html: 30 kuntaa, kuntakohtaiset vaakunat, asukasluvut, haku.
-- pohjois-pohjanmaa-v334.css: yhteinen vihreä, hillitty ulkoasu ja alavalikko.
-- pohjois-pohjanmaa-v334.js: päivittää muiden 29 olemassa olevan kunnan esittelyn
-  avaamatta/sotkematta vanhoja kohdetietoja; ei poista mitään.
-- tyokalut/paivita_pohjois_pohjanmaa_v334.py: lisää kaksi viitettä olemassa
-  oleviin 29 kuntatiedostoon. Ei korvaa niiden sisältöä.
-- .github/workflows/alavalikko-v301.yml: säilyttää aiemmat vaiheet ja ajaa
-  v334-vaiheen lopuksi (tärkeää!).
+MITÄ MUUTTUU TIETOKONEELLA (näytön leveys vähintään 900 pikseliä):
+- Maakunnat: iso aito kuvaotsake, haku, kartta ja maakuntalista PERÄKKÄIN.
+- Leirintäalueet: hakuehdot ylös, tulokset alle. Ei vasenta sivupalstaa.
+- Kortit leveämmiksi ja helppolukuisemmiksi.
+- Myös muut uudemmat kaksipalstaiset sisältöasettelut pinoutuvat.
+- Etusivun sisältö hyödyntää tietokoneen leveyttä paremmin.
+- Puhelinversio ei muutu (alle 900 px).
 
-ASENNUS (toimii GitHubin verkkosivulla):
-1) Pura ZIP, lataa kaikki yllä mainitut tiedostot (7 tiedostoa yhteensä), myös GitHub-workflow
-   sekä tyokalut-kansio TÄSMÄLLEEN polkuineen projektin juureen.
-   Älä poista muita tiedostoja. Korvaa saman nimiset.
-2) Commit changes ja odota Actions-työn loppumista.
-3) GitHub Pagesin julkaisun valmistuttua avaa:
-   /oulu.html ja /pohjois-pohjanmaa.html
-   sekä esim. /kalajoki.html tai /ii.html. Päivitä selaimen välimuisti.
-4) Tarkista, että Oulussa näkyy 217 469, oikea vaakuna ja 4 painiketta.
+KÄYTTÖÖNOTTO GITHUBISSA:
+1. Pura ZIP tietokoneella.
+2. Siirrä tiedostot oman GitHub-repositorion JUUREEN niin, että polut pysyvät:
+     tietokone-v334.css
+     tyokalut/lisaa_tietokone_v334.py
+     .github/workflows/tietokone-v334.yml
+   LUE_ENSIN_v334.txt on ohje, sitä ei tarvitse siirtää GitHubiin.
+3. Tee GitHubissa Commit changes päähaaraan (main/master).
+4. Avaa GitHub -> Actions -> "Matkaile Suomessa - tietokoneulkoasu v334".
+   Odota vihreää onnistumismerkkiä. Automaattinen työ lisää css-linkin
+   olemassa olevien HTML-sivujen HEAD-osaan (ilman että sisältöjä korvataan).
+5. Odota Pages-julkaisua ja tee selaimessa Ctrl+F5.
 
-EI ole suoraan ladattu GitHubiin. Käyttää sivuston omaa sisältöä.
-Myös Omat matkat -toiminto säilyy jos v333 on jo asennettu.
+JOS ACTIONS EI AJA: GitHubissa Actions -> valitse uusi työ -> Run workflow.
+Vaihtoehtoisesti paikallisella koneella projektin pääkansiossa:
+     python tyokalut/lisaa_tietokone_v334.py
+ja sitten vie muuttuneet .html-tiedostot GitHubiin.
 
-VÄKILUKULÄHTEET:
-  https://stat.fi/fi/tilastot/tietoa-teemoittain/vakiluku
-  https://kuntavaesto.com/maakunta/pohjois-pohjanmaa/
-Vaakunoiden nimet:
-  https://commons.wikimedia.org/wiki/Category:SVG_coats_of_arms_of_municipalities_of_Northern_Ostrobothnia
-Kuntaluettelo:
-  https://www.pohjois-pohjanmaa.fi/pohjois-pohjanmaan-liitto/
+KÄYTETTY VALOKUVA:
+Projektin oma hero-etusivu.jpg. Uusia lisenssiepäselviä kuvia ei lisätty.
 
-Väkiluvut ovat 31.12.2025, eivät lokakuun 2026 ennakkotietoja.
-Wikimedia Commons -kuvat tarvitsevat nettiyhteyden. Mikäli niitä ei
-voi ladata käyttäjän selaimessa, tarkista mediapalvelun tavoitettavuus.
+TÄRKEÄÄ:
+Älä lataa vanhaa matkaile-suomessa-main.zip -kokopakettia GitHubiin!
+Se korvaisi uudemmat sisältöpäivitykset. Käytä vain tätä v334-pakettia.
+Github.com-sivua ei päivitetä automaattisesti tästä keskustelusta käsin.
