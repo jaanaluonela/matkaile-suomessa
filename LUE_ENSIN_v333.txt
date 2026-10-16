@@ -1,0 +1,39 @@
+MATKAILE SUOMESSA – v333 / OLEN KÄYNYT TÄÄLLÄ
+
+Tämä on PIENI PÄIVITYS jo olemassa olevan sivuston päälle.
+Älä poista vanhoja tiedostoja tai matkamuistoja.
+
+ASENNUS GITHUBIIN
+1. Pura tämä ZIP tietokoneelle.
+2. Lisää paketissa olevat tiedostot samoihin polkuihin nykyiseen GitHub-projektiin:
+    matkamuistot-v333.js
+    matkamuistot-v333.css
+    tyokalut/lisaa_matkamuistot_v333.py
+    .github/workflows/matkamuistot-v333.yml
+   Voit jättää LUE_ENSIN_v333.txt-ohjeen talteen.
+3. Tallenna Commit changes.
+4. GitHub Actions suorittaa matkamuistot-v333-työn, joka lisää viittaukset
+   kuntien HTML-sivuille ja paivakirja.html-sivulle automaattisesti.
+5. Tarkista Actionsin onnistuminen ja julkaise / odota GitHub Pagesin päivitystä.
+
+MITÄ TEKEE
+- Hillitty "◯ Olen käynyt täällä" ilmestyy kunnan esittelyn perustietojen
+  alle, ei otsikkoon eikä isona painikkeena.
+- Vanha iso "Omat matkat" -käyntipainikekortti piilotetaan kunnan sivulta,
+  jotta sama toiminto ei näy kahdesti.
+- Painallus merkitsee kunnan käydyksi paikalliseen matkapäiväkirjaan ja
+  avaa Omat matkat -sivulta juuri kyseisen kunnan muokkausnäkymän.
+- Käyttäjä voi lisätä päiväyksen, kuvat, tähdet ja muutaman sanan muiston
+  jo nykyisillä päiväkirjan toiminnoilla. Tietoja voi muokata myöhemmin.
+- Palattaessa kuntasivulle linkissä lukee "✓ Käyty · Näytä matkamuisto".
+- Jo tallennettuja matkoja, kuvia tai suosikkeja ei poisteta.
+- Käynnit ja kuvat tallentuvat käyttäjän omaan selaimeen/laitteeseen.
+
+PAKETTI EI PÄIVITÄ GITHUBIA ITSESTÄÄN: sinun tulee lisätä tiedostot
+GitHubin projektin juuri- ja tyokalut-/workflows-kansioihin.
+
+Jos Actions-ajo ei onnistu, voit ajaa projektin juurihakemistossa:
+  python tyokalut/lisaa_matkamuistot_v333.py
+ja tallentaa muuttuneet HTML:t GitHubiin.
+
+Uudelleenajo ei lisää samoja skriptejä kahdesti.

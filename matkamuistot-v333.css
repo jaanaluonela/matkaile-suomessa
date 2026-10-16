@@ -1,0 +1,10 @@
+/* Matkaile Suomessa v333 — hillitty kuntasivun käyntilinkki (ei otsikkoon). */
+.ms333-visit { margin: 0 0 18px!important; padding: 0!important; border: 0!important; background: transparent!important; box-shadow: none!important; font: 400 13px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif!important; }
+.ms333-visit-link { display: inline-flex; align-items: center; gap: 7px; min-height: 35px; padding: 4px 2px; color: #567265!important; text-decoration: none!important; font-weight: 560!important; font-size: 13px!important; border: 0!important; background: transparent!important; box-shadow: none!important; cursor: pointer; }
+.ms333-visit-link:hover { color: #205843!important; text-decoration: underline!important; text-underline-offset: 3px; }
+.ms333-visit-link:focus-visible { outline: 2px solid #c78b28; outline-offset: 3px; border-radius: 4px; }
+.ms333-visit-link.ms333-is-visited { color: #2e6c54!important; }
+.ms333-visit-icon { width: 15px; display: inline-block; text-align: center; font-size: 15px; line-height: 1; }
+.ms333-visit-error { display: block; color: #9b443b; font-size: 12px; }
+.ms333-legacy-hidden { display: none!important; }
+@media (max-width:600px) { .ms333-visit { margin-bottom: 13px!important; } }
