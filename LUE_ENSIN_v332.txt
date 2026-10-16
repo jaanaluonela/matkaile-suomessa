@@ -1,29 +1,40 @@
-MATKAILE SUOMESSA - ALAVALIKKO KAIKILLE SIVUILLE v332
+MATKAILE SUOMESSA – v332 / YHTENÄINEN PAIKKAKUNTANÄKYMÄ
 
-Ongelma: mm. Heinolan sivulla näkyy yhä Koti / Yöpyminen / Paikkakunnat.
-Korjaus: neljä painiketta jokaisella HTML-sivulla:
-Koti - Paikkakunnat - Pysähdy matkalla - Omat matkat.
+Näyttää saman rakenteen kuin Kuhmon ja Lahden mallikuvissa KAIKILLA
+sivuston olemassa olevilla kuntasivuilla:
+  Maakuntaan takaisin → Paikkakunnan nimi → lyhyt kuvaus → vaakuna
+  ja asukasluku → 2 x 2 selkeää painiketta → paikkakunnan omat kohteet.
 
-TÄMÄ PAKETTI SISÄLTÄÄ VAIN YHDEN GITHUBIIN VIETÄVÄN TIEDOSTON:
-.github/workflows/korjaa-alavalikko-v332.yml
+TÄRKEÄÄ
+Tämä on päivitys jo olemassa olevan GitHub-sivuston päälle, ei
+kokonainen uusi sivusto. Älä poista muita tiedostoja.
 
-Asennus:
-1. Pura ZIP-tiedosto ensin tietokoneelle.
-2. Avaa GitHubissa Matkaile Suomen repositorio.
-3. Avaa kansio .github ja sen alta workflows.
-4. Valitse Add file -> Upload files ja lataa korjaa-alavalikko-v332.yml.
-   Jos workflows-kansiota ei ole, luo se ensin. Säilytä polku täsmälleen.
-5. Commit changes. Avaa Actions ja tarkista, että
-   'Matkaile Suomessa - alavalikko joka sivulle v332' onnistuu.
-6. Odota GitHub Pages -julkaisu ja lataa sivu uudestaan.
+ASENNUS
+1. Pura ZIP. Kopioi viisi tiedostoa ja niiden kansiorakenteet GitHubiin.
+2. Korvaa .github/workflows/alavalikko-v301.yml vanhalla nimellä oleva tiedosto.
+3. Säilytä muut tiedostot ja hyväksy muutokset (Commit changes).
+4. GitHubin Actions tekee kuntakohtaiset muutokset automaattisesti.
+   Odota työn "... v332" valmistumista ja GitHub Pagesin julkaisua.
+5. Päivitä sivusto selaimessa, tarvittaessa sulje vanha välilehti.
 
-Workflow muuttaa GitHubissa automaattisesti olemassa olevia HTML-sivuja
-sekä luo yhden yhteisen alavalikko-v332.css-tiedoston. Sivujen muu sisältö
-pysyy ennallaan. Edes v331:n CSS/JS-tiedostojen ei tarvitse toimia.
+MISTÄ TIEDOT TULEVAT?
+- Vaakuna, väkiluku, päivämäärä ja lähdelinkki otetaan kunkin vanhan
+  kuntasivun omista nykyisistä tiedoista, niitä ei arvata.
+- Jos vahvistettu väkiluku tai vaakuna puuttuu, siinä näkyy selkeä
+  tieto täydentämisestä. Kuntaan kuuluvat nähtävyydet ja muut tiedot
+  eivät katoa.
+- Linkkipainikkeet ohjaavat kyseisen paikkakunnan omiin olemassa oleviin
+  kohtiin. Jos osio puuttuu, siitä kerrotaan rehellisesti.
+- Samanlainen rakenne myös puhelimessa ja tietokoneella. Tietokoneella
+  neljä painiketta on vierekkäin.
 
-Jos GitHub Actions antaa virheen 'Permission denied / 403':
-GitHub -> Settings -> Actions -> General -> Workflow permissions:
-'Read and write permissions', jonka jälkeen Actions -> Run workflow.
+PAIKKAKUNTIEN TUNNISTUS
+- Työkalu käyttää sivuston omaa "suomi-kunnat-v253.js" -kuntaluetteloa.
+- Muuttaa vain olemassa olevia kuntasivuja, ei maakunta- tai kohdesivuja.
+- Suoritettavissa uudelleen ilman tuplapainikkeita.
 
-Tätä ZIP:iä ei pidä ladata GitHubiin pakattuna tiedostona.
-Tästä keskustelusta ei voi suoraan muuttaa GitHub-verkkosivua.
+Jos automaattinen Actions-ajo ei onnistu, aja paikallisesti:
+    python tyokalut/yhtenaista_paikkakunnat_v332.py
+ja lähetä muuttuneet HTML-tiedostot GitHubiin.
+
+Tätä ZIP-tiedostoa ei ole ladattu suoraan GitHub-repositorioon.
