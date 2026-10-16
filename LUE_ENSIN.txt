@@ -1,17 +1,23 @@
-LUE ENSIN – Matkaile Suomessa v47
+MATKAILE SUOMESSA — v341 / alkuperäinen leveä tietokonenäkymä
 
-Tärkein korjaus:
-hero-etusivu.jpg on nyt pääkansiossa samassa tasossa kuin index.html.
-Tämän pitää näkyä GitHubin tiedostolistassa erillisenä tiedostona.
+Palauttaa etusivulle aiemmin hyväksytyn v315-tyylisen LEVEÄN tietokoneversion:
+• leveä suuri maisemakuva
+• neljä suurta pääpainiketta rinnakkain
+• Pysähdy matkalla -haku, reittisuunnittelu ja kuvalliset kohteet
+• oma ylävalikko, EI kiinteää alavalikkoa tietokoneella
 
-Kun lataat GitHubiin, varmista että mukana näkyvät ainakin:
-- index.html
-- tyylit.css
-- sovellus.js
-- data.js
-- hero-etusivu.jpg
-- kartta.html
-- paijat-hame.html
-- asikkala.html
+Tämä paketti sisältää yhden tiedoston, index.html.
+Se perustuu v339-etusivuun, johon palautettiin v315:n erillinen tietokoneasettelu.
+Puhelimen alkuperäinen HTML-sisältö säilyy samana; v315-näkymä on piilossa
+alle 980 px leveillä näytöillä.
 
-Älä lataa tätä ZIP-pakettia sellaisenaan repositorioon. Pura ZIP ja lataa sisältö.
+ASENNUS:
+1. Pura ZIP.
+2. Vie index.html GitHubin sivuston pääkansioon ja korvaa samanniminen tiedosto.
+3. Tallenna muutokset (Commit changes).
+4. Kun sivusto on julkaistu, päivitä selain Ctrl+F5.
+
+HUOM: Älä poista mitään muuta GitHubin tiedostoa. Jos GitHubissa oleva index.html
+sisältää v339-versiota UUSEMPIA ominaisuuksia, ne on ensin yhdistettävä,
+sillä tämä tiedosto on laadittu viimeksi tässä keskustelussa toimitetun v339:n
+perusteella. Muiden sivujen sisältöihin tai kuntatietokantoihin ei kosketa.
