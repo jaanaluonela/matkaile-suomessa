@@ -1,0 +1,26 @@
+/* Matkaile Suomessa v322 – approved light four-item bottom navigation. */
+:root { --ms322-ink:#194e40; --ms322-line:#dbe8df; }
+html {scroll-padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))!important;}
+body {padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important;}
+body nav.site-nav,body nav.bottom-nav,body nav.ms301-nav,body nav.ms302-nav,body nav.ms303-nav,body nav.ms304-nav {display:none!important;}
+nav.ms322-bottom {position:fixed!important;left:0!important;right:0!important;bottom:0!important;
+ z-index:9999!important;display:block!important;box-sizing:border-box!important;
+ background:rgba(255,255,255,.97)!important;border-top:1px solid var(--ms322-line)!important;
+ box-shadow:0 -3px 14px rgba(25,65,44,.06)!important;
+ padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px))!important;
+ -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+nav.ms322-bottom .ms322-inner {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ gap:3px!important;max-width:660px!important;width:100%!important;margin:0 auto!important;padding:0!important;}
+nav.ms322-bottom .ms322-link{display:flex!important;min-width:0!important;min-height:61px!important;
+ flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;
+ padding:5px 2px!important;border-radius:16px!important;box-sizing:border-box!important;
+ text-align:center!important;text-decoration:none!important;color:var(--ms322-ink)!important;
+ background:transparent!important;font:750 12px/1.16 system-ui,-apple-system,'Segoe UI',sans-serif!important;}
+nav.ms322-bottom .ms322-link.is-active{background:#e8f3ed!important;}
+nav.ms322-bottom .ms322-icon{width:27px!important;height:27px!important;display:block!important;flex:none!important;line-height:0!important;color:inherit!important;}
+nav.ms322-bottom .ms322-icon svg{display:block!important;width:27px!important;height:27px!important;}
+nav.ms322-bottom .ms322-label{display:block!important;max-width:100%!important;white-space:normal!important;
+ color:inherit!important;font:inherit!important;overflow-wrap:normal!important;}
+nav.ms322-bottom .ms322-link:focus-visible{outline:3px solid #cb9053!important;outline-offset:1px!important;}
+@media(max-width:360px){nav.ms322-bottom .ms322-link{font-size:10px!important;padding-inline:0!important;}}
+@media(min-width:800px){nav.ms322-bottom .ms322-inner{max-width:720px!important;}nav.ms322-bottom .ms322-link{min-height:64px!important;font-size:13px!important;}}

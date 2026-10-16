@@ -1,0 +1,16 @@
+Matkaile Suomessa – v322 alavalikon korjaus
+
+Hyväksytty alapalkki: Koti | Paikkakunnat | Pysähdy matkalla | Omat matkat
+Tyyli: valkoinen, vihreät kuvakkeet ja tekstit, vaalea vihreä aktiivinen tausta.
+
+PÄÄSIVUT-PAKETTI: pura ja lataa GitHub-repositorion JUUREEN kaikki paketin tiedostot.
+Korvaa samannimiset tiedostot, mutta älä poista muita sivuston tiedostoja.
+Etelä-Savon lisäpaketti päivittää myös uusimmat 13 Etelä-Savon sivua.
+
+HUOM: Tämä korjaa paketeissa mukana olevien sivujen alavalikon; kaikkia vanhoja
+satoja erillisiä kohdesivuja EI ole tässä päivityksessä vaihdettu, jotta
+päivittäminen pysyy kohtuullisena. Nykyiset suosikit säilyvät suosikkisivulla,
+niitä ei poisteta eikä muuteta.
+
+Jos näet edelleen vanhan navigoinnin päivityksen jälkeen, avaa
+maakunnat.html?v=322 tai päivitä sivu selaimen uudelleenlatauksella.
