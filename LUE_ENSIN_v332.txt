@@ -1,40 +1,26 @@
-MATKAILE SUOMESSA – v332 / YHTENÄINEN PAIKKAKUNTANÄKYMÄ
+MATKAILE SUOMESSA – OULUN SIVUN KORJAUS v332
 
-Näyttää saman rakenteen kuin Kuhmon ja Lahden mallikuvissa KAIKILLA
-sivuston olemassa olevilla kuntasivuilla:
-  Maakuntaan takaisin → Paikkakunnan nimi → lyhyt kuvaus → vaakuna
-  ja asukasluku → 2 x 2 selkeää painiketta → paikkakunnan omat kohteet.
-
-TÄRKEÄÄ
-Tämä on päivitys jo olemassa olevan GitHub-sivuston päälle, ei
-kokonainen uusi sivusto. Älä poista muita tiedostoja.
+KORJATTU
+- Oulun iso vihreä otsikkolaatikko muutettu lyhyeksi, vaaleaksi esittelyksi.
+- Nallikarin oikea, CC0-lisensoitu kuva näkyy omana kuvanaan ilman tummaa peitettä.
+- Mobiilin otsikko, leipäteksti ja suosikkipainike mahtuvat paremmin.
+- Poistettu neljä kuvan päällä ollutta, painikkeilta näyttävää mutta toimimatonta merkkiä.
+- Kohdehaku, 7 toimivaa aihevalintaa ja kaikki 37 kohdekorttia säilyvät.
+- Työpöytäversio käyttää vierekkäistä kuvaa ja tekstiä.
+- Vanha alavalikko ja Omat matkat säilyvät ennallaan.
 
 ASENNUS
-1. Pura ZIP. Kopioi viisi tiedostoa ja niiden kansiorakenteet GitHubiin.
-2. Korvaa .github/workflows/alavalikko-v301.yml vanhalla nimellä oleva tiedosto.
-3. Säilytä muut tiedostot ja hyväksy muutokset (Commit changes).
-4. GitHubin Actions tekee kuntakohtaiset muutokset automaattisesti.
-   Odota työn "... v332" valmistumista ja GitHub Pagesin julkaisua.
-5. Päivitä sivusto selaimessa, tarvittaessa sulje vanha välilehti.
+Pura ZIP ja vie GitHub-repositorion pääkansioon nämä kaksi tiedostoa:
+  oulu.html
+  oulu-v329.css
+Korvaa vanhat samannimiset tiedostot. Älä poista muita GitHubin tiedostoja.
+Odota Github Pages -julkaisua ja avaa oulu.html uudelleen.
+Jos vanha ulkoasu näkyy yhä iPhonessa, sulje sivu ja avaa uudessa välilehdessä.
 
-MISTÄ TIEDOT TULEVAT?
-- Vaakuna, väkiluku, päivämäärä ja lähdelinkki otetaan kunkin vanhan
-  kuntasivun omista nykyisistä tiedoista, niitä ei arvata.
-- Jos vahvistettu väkiluku tai vaakuna puuttuu, siinä näkyy selkeä
-  tieto täydentämisestä. Kuntaan kuuluvat nähtävyydet ja muut tiedot
-  eivät katoa.
-- Linkkipainikkeet ohjaavat kyseisen paikkakunnan omiin olemassa oleviin
-  kohtiin. Jos osio puuttuu, siitä kerrotaan rehellisesti.
-- Samanlainen rakenne myös puhelimessa ja tietokoneella. Tietokoneella
-  neljä painiketta on vierekkäin.
+TÄRKEÄÄ
+Tämä on v331-päivityspaketin päälle tehty pieni korjaus.
+Uutta sivustoa ei asenneta ZIP:n siirtämisellä suoraan GitHubiin: pura ensin.
+Tämä tiedosto ei ole suoraan GitHubiin julkaistu päivitys.
 
-PAIKKAKUNTIEN TUNNISTUS
-- Työkalu käyttää sivuston omaa "suomi-kunnat-v253.js" -kuntaluetteloa.
-- Muuttaa vain olemassa olevia kuntasivuja, ei maakunta- tai kohdesivuja.
-- Suoritettavissa uudelleen ilman tuplapainikkeita.
-
-Jos automaattinen Actions-ajo ei onnistu, aja paikallisesti:
-    python tyokalut/yhtenaista_paikkakunnat_v332.py
-ja lähetä muuttuneet HTML-tiedostot GitHubiin.
-
-Tätä ZIP-tiedostoa ei ole ladattu suoraan GitHub-repositorioon.
+Kuvan tiedot: Nallikari Beach Oulu 20250701 02.jpg, Estormiz, CC0.
+https://commons.wikimedia.org/wiki/File:Nallikari_Beach_Oulu_20250701_02.jpg

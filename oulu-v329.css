@@ -1,2 +1,74 @@
 
 :root{color-scheme:light}body{margin:0;background:#f7faf6;color:#194b3b;font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.ou329-main{max-width:1190px;margin:0 auto;padding:16px clamp(14px,4vw,35px) 130px;box-sizing:border-box}.ou329-main *{box-sizing:border-box}.ou329-hero{border-radius:25px;padding:clamp(25px,6vw,60px);color:white;background:linear-gradient(120deg,rgba(10,65,52,.96),rgba(27,101,76,.91)),url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Nallikari_Beach_Oulu_20250701_02.jpg/960px-Nallikari_Beach_Oulu_20250701_02.jpg') center/cover;margin:4px 0 22px}.ou329-back{display:inline-block;color:#d9f1e1;text-decoration:none;font-weight:750;margin-bottom:18px}.ou329-eyebrow{display:block;font-size:11px;letter-spacing:.11em;font-weight:900;opacity:.85}.ou329-hero h1{font-size:clamp(46px,8vw,76px);line-height:1.05;margin:12px 0}.ou329-hero p{font-size:clamp(16px,2.5vw,22px);max-width:690px;color:#e9f4ed}.ou329-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.ou329-tags span{border:1px solid #ffffff57;border-radius:99px;padding:7px 12px;background:#ffffff1a;font-weight:650;font-size:13px}.ou329-intro{display:flex;align-items:center;justify-content:space-between;gap:18px}.ou329-intro h2,.ou329-feature h2{font-size:clamp(23px,3vw,32px);margin:4px 0;color:#225b44}.ou329-intro p{margin:3px 0 14px;color:#5b7768}.ou329-hub{background:#e4f2e9;padding:10px 15px;border-radius:14px;text-decoration:none;color:#18583b;font-weight:800;flex-shrink:0}.ou329-searchbox{margin:12px 0}.ou329-searchbox label{display:block;font-weight:800;font-size:14px;margin-bottom:6px}.ou329-searchbox input{padding:15px 16px;width:100%;border:1.5px solid #cadfd0;background:white;color:#194b3b;border-radius:15px;font:inherit;box-shadow:0 2px 9px #1b5b3311}.ou329-tabs{display:flex;gap:7px;overflow-x:auto;padding:5px 0 12px;scrollbar-width:thin}.ou329-tabs button{border:1px solid #cadfd0;border-radius:999px;white-space:nowrap;background:#fff;color:#23533f;padding:9px 14px;font:700 14px system-ui;cursor:pointer}.ou329-tabs button[aria-pressed=true]{background:#276e53;color:#fff;border-color:#276e53}.ou329-count{color:#567667;margin:0 0 9px;font-size:14px;font-weight:700}.ou329-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.ou329-card{background:white;border:1px solid #d7e8dc;border-radius:18px;padding:18px;min-width:0;display:flex;flex-direction:column;gap:8px;box-shadow:0 4px 18px #1656380b}.ou329-card[hidden]{display:none!important}.ou329-kicker{color:#397558;font-size:11px;text-transform:uppercase;letter-spacing:.07em;font-weight:850}.ou329-card h3{font-size:19px;line-height:1.2;margin:0;color:#194b3b}.ou329-card p{margin:0;flex:1;font-size:14px;color:#587267}.ou329-card-bottom{margin-top:10px}.ou329-tip{font-size:12px;color:#688173}.ou329-actions{display:flex;justify-content:space-between;align-items:center;margin-top:9px;gap:9px}.ou329-actions a{background:#e7f3e9;color:#225e44;text-decoration:none;border-radius:9px;padding:10px 11px;font-size:13px;font-weight:800}.ou329-heart{border:1px solid #c8ded0;border-radius:10px;background:#fafdfa;color:#216744;font-size:26px;width:46px;height:41px;cursor:pointer;line-height:1}.ou329-heart[aria-pressed=true]{color:#d94f61;background:#fff2f4}.ou329-feature{padding:20px;margin-top:23px;background:#eaf5f2;border:1px solid #d2e7dc;border-radius:20px}.ou329-feature p{color:#506d60;margin:8px 0 12px}.ou329-feature a{display:inline-block;color:#176648;font-weight:800;padding:7px 0}.ou329-memo{background:#f8f4eb}.ou329-linkrow{display:flex;gap:15px;flex-wrap:wrap}.ou329-disclaimer{color:#617a69;font-size:13px;margin:22px 0}.ou329-no-results{padding:16px;border-radius:12px;background:white}.ou329-main a:focus-visible,.ou329-main button:focus-visible,.ou329-main input:focus-visible{outline:3px solid #df9640;outline-offset:3px}@media(max-width:940px){.ou329-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:660px){.ou329-main{padding:10px 13px 128px}.ou329-hero{padding:25px 20px;border-radius:17px}.ou329-intro{align-items:flex-start;flex-direction:column;gap:0}.ou329-hub{margin-bottom:12px}.ou329-grid{grid-template-columns:1fr}.ou329-card{padding:15px}.ou329-card h3{font-size:18px}.ou329-tabs button{font-size:13px}.ou329-feature{padding:15px}}
+
+
+/* Matkaile Suomessa v332 – Oulun näkymän itsenäinen, mobiilissa kompakti korjaus.
+   Poistaa peittävän vihreän kuvagradientin ja oikeuttaa valokuvalle oman tilan.
+   Yhteinen v330-sisältötyyli ei saa kasvattaa otsikkokorttia takaisin. */
+.ou329-main .ou329-hero.ou332-hero{
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  grid-template-rows:auto;align-items:stretch;min-height:225px;
+  margin:2px 0 13px;padding:0!important;background:#fff;color:#183f34;
+  border:1px solid #e2e9e2;border-radius:18px;overflow:hidden;box-shadow:none;
+}
+.ou332-photo{grid-column:2;grid-row:1;position:relative;min-width:0;min-height:225px;background:#dfebe7}
+.ou332-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 50%;}
+.ou332-photo-label{position:absolute;bottom:11px;left:12px;z-index:1;display:inline-block;padding:5px 10px;
+  border-radius:30px;background:#173e32ba;color:#fff;font-size:12px;font-weight:700}
+.ou332-hero-body{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  padding:clamp(18px,3vw,34px);min-width:0;gap:0}
+.ou329-main .ou332-hero .ou329-back{font-size:13px;color:#286549;margin:0 0 10px;font-weight:750;text-decoration:none}
+.ou329-main .ou332-hero .ou329-back:hover{text-decoration:underline}
+.ou329-main .ou332-hero .ou329-eyebrow{color:#547f69;opacity:1;font-size:11px;letter-spacing:.065em}
+.ou329-main .ou332-hero h1{color:#164c39;font-size:clamp(33px,4.6vw,49px)!important;line-height:1.1;margin:5px 0 7px!important;letter-spacing:-.035em}
+.ou329-main .ou332-hero p{max-width:45ch;font-size:15px!important;line-height:1.42!important;color:#50695d;margin:3px 0 0}
+.ou329-main .ou332-hero button{max-width:100%;min-height:40px;padding:7px 12px;font-size:13px}
+.ou329-main .ou332-hero :is(button,a):focus-visible{outline:3px solid #c58f36;outline-offset:3px}
+.ou329-main .ou332-intro{margin:7px 0 3px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+.ou329-main .ou332-intro h2{margin:0 0 3px;color:#1d543e;font-size:clamp(20px,2.4vw,26px);line-height:1.25}
+.ou329-main .ou332-intro p{margin:0;color:#5c766a;font-size:14px}
+.ou329-main .ou332-intro .ou329-hub{display:inline-flex;align-items:center;min-height:37px;
+  margin:0;padding:8px 12px;font-size:13px;background:#eaf4ed;border-radius:10px}
+.ou329-main .ou329-searchbox{margin:12px 0 6px}
+.ou329-main .ou329-searchbox label{font-size:13px;margin-bottom:5px}
+.ou329-main .ou329-searchbox input{padding:10px 14px;min-height:46px;border-radius:12px}
+.ou329-main .ou329-tabs{padding:4px 0 9px;gap:7px}
+.ou329-main .ou329-tabs button{padding:8px 12px}
+.ou329-main .ou329-count{margin-bottom:9px}
+@media(max-width:700px){
+ .ou329-main .ou329-hero.ou332-hero{display:flex;flex-direction:column;min-height:0!important;
+  border-radius:15px;margin:0 0 11px!important;padding:0!important}
+ .ou332-photo{order:0;width:100%;height:142px;min-height:142px;max-height:142px;flex:none}
+ .ou332-photo img{object-position:center 55%}
+ .ou332-photo-label{bottom:8px;left:10px;font-size:11px;padding:4px 9px}
+ .ou332-hero-body{order:1;display:block;padding:13px 15px 15px!important;}
+ .ou329-main .ou332-hero .ou329-back{display:inline-block;font-size:12px;margin:0 0 6px}
+ .ou329-main .ou332-hero .ou329-eyebrow{font-size:10px;letter-spacing:.045em}
+ .ou329-main .ou332-hero h1{font-size:36px!important;line-height:1.06!important;margin:3px 0 4px!important}
+ .ou329-main .ou332-hero p{font-size:14px!important;line-height:1.42!important;margin:6px 0 0}
+ .ou329-main .ou332-hero button{font-size:12px!important;padding:6px 11px!important;margin:4px 0 0;min-height:37px!important}
+ .ou329-main .ou332-intro{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:5px;margin:0 0 2px}
+ .ou329-main .ou332-intro h2{font-size:20px!important;margin-bottom:1px}
+ .ou329-main .ou332-intro p{font-size:13px!important;line-height:1.35}
+ .ou329-main .ou332-intro .ou329-hub{font-size:12px!important;min-height:30px;padding:4px 9px;margin:4px 0 0!important}
+ .ou329-main .ou329-searchbox{margin:9px 0 5px}
+ .ou329-main .ou329-tabs button{font-size:12.5px;min-height:38px}
+}
+/* v330 adds a page-intro class dynamically. Override its generous padding at every width. */
+body.ms330-content-page .ou329-main .ou329-hero.ou332-hero,
+body.ms330-content-page .ou329-main .ou329-hero.ou332-hero.ms330-page-intro{
+  padding:0!important;margin-bottom:12px!important;border-radius:16px!important;box-shadow:none!important;
+}
+body.ms330-content-page .ou329-main .ou329-hero.ou332-hero .ou332-hero-body h1{
+  font-size:clamp(33px,4.6vw,49px)!important;margin:5px 0 7px!important;
+}
+body.ms330-content-page .ou329-main .ou329-hero.ou332-hero .ou332-hero-body p{
+  font-size:15px!important;line-height:1.42!important;
+}
+@media(max-width:700px){
+ body.ms330-content-page .ou329-main .ou329-hero.ou332-hero{padding:0!important}
+ body.ms330-content-page .ou329-main .ou329-hero.ou332-hero .ou332-hero-body h1{
+  font-size:36px!important;margin:3px 0 4px!important}
+ body.ms330-content-page .ou329-main .ou329-hero.ou332-hero .ou332-hero-body p{
+  font-size:14px!important;line-height:1.42!important}
+}
