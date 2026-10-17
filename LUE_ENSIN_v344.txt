@@ -1,0 +1,37 @@
+MATKAILE SUOMESSA — v344: KORJATTU PUHELINNÄKYMÄ JA ALAVALIKKO
+=========================================================
+
+TÄRKEÄÄ: TÄMÄ ZIP EI ASENNU ITSEKSEEN. CHATGPT EI OLE JULKAISSUT SITÄ GITHUBIIN.
+Vanhasta ulkoasusta näkyy, jos uutta tiedostoa ei ole lisätty / julkaisu on kesken.
+
+MUKANA
+- Puhelimen etusivun KAHDEKSAN korttia KAHDESSA SARAKKEESSA. Oikea teksti, ei pystykirjaimia.
+- Neljä alavalikon painiketta samalla rivillä kaikilla sivuilla:
+  Koti — Paikkakunnat — Pysähdy matkalla — Omat matkat.
+- Aiempi, leveä tietokonenäkymä säilyy; ei tehdä tietokoneesta puhelinversiota.
+- v342 palauttaa kaikki 308 kuntalinkkiä sekä puuttuneet sivut. Ei korvaa olemassaolevia
+  kuntasivuja, matkailutekstejä eikä vierailumuistoja.
+- v341:n aiemmin puuttunut alavalikon asennusohjelma CSS- ja JS-tiedostoineen mukana.
+
+ASENNUS GITHUBIIN
+1. Tallenna ensin nykyisestä GitHub-repositorion tilasta varmuuskopio: Code > Download ZIP.
+2. Pura tämä v344 ZIP tietokoneellasi. Siirrä sen KAIKKI tiedostot nykyisen
+   repositorion vastaaviin kansioihin; .github/workflows ja tyokalut ovat kansioita.
+   ÄLÄ lataa ZIP-tiedostoa yksin GitHubin pääkansioon.
+   ÄLÄ pura sisempää palautus/vanha_sisalto_v342.zip -tiedostoa.
+3. GitHub: Commit changes (main-haaraan). Katso Actions-välilehdestä että
+   "Palauta sisallot ja korjaa puhelin v344" menee vihreäksi.
+   Jos työnkulku ei pysty tekemään muutoksia, avaa Settings > Actions > General
+   > Workflow permissions > Read and write permissions. Uudelleenkäynnistä workflow.
+4. Odota myös Pages-julkaisun vihreää onnistumista. Avaa sivu uudelleen Safarissa.
+   Jos vanha näkyy, lisää osoitteen loppuun ?versio=344 (tai &versio=344, jos ? jo on).
+
+HUOM: Tämä on LISÄYS nykyiseen repoosi, ei sen koko sisältöä korvaava sivusto.
+Jos GitHubissa ei ole nykyisen sivuston index.html:ää, kerro siitä ennen asentamista.
+
+MANUAALINEN VARATAPA (jos GitHub Actions ei käynnisty):
+Suorita nykyisen repositorion pääkansiossa peräkkäin:
+ python tyokalut/palauta_kunnat_v342.py
+ python tyokalut/paivita_alavalikko_v341.py
+ python tyokalut/asenna_etusivun_nakymat_v344.py
+ja siirrä muuttuneet tiedostot GitHubiin.

@@ -1,0 +1,118 @@
+/* Matkaile Suomessa v344: vain puhelimen etusivu. Tietokoneen levea
+   v340/v341-nakyma ja kaikki sisaltosivut jaavat ennalleen. */
+@media screen and (max-width:899px){
+  body[data-home="true"] .home-primary-links-v290{
+    width:100%!important;max-width:none!important;margin:20px auto 0!important;
+    padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:clamp(12px,3vw,17px)!important;align-items:stretch!important;margin:0!important;
+    padding:0!important;max-width:none!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a,
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268{
+    display:flex!important;flex-direction:column!important;justify-content:flex-end!important;
+    align-items:center!important;gap:0!important;grid-column:auto!important;
+    box-sizing:border-box!important;position:relative!important;
+    width:100%!important;max-width:none!important;min-width:0!important;
+    height:auto!important;min-height:0!important;aspect-ratio:1 / 1.03!important;
+    padding:15px 9px 20px!important;margin:0!important;
+    border:1px solid #cfe1d6!important;border-radius:22px!important;
+    box-shadow:none!important;color:#154b3c!important;text-align:center!important;
+    text-decoration:none!important;overflow:hidden!important;
+    background:#f4f7f1!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a:nth-of-type(1){order:1!important;background:#e6f3ed!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a:nth-of-type(2){order:2!important;background:#edf3e1!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a:nth-of-type(3){order:3!important;background:#e7f0fa!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a:nth-of-type(4){order:4!important;background:#fff0e4!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268{order:5!important;background:#f4f6ed!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #archipelago-route-v233{order:6!important;background:#f4f6ed!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-route-v306{order:7!important;background:#f4f6ed!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-memories-v306{order:8!important;background:#f4f6ed!important}
+  /* vanhat nelja havainnekuvaa, suuret mutta tekstista erillaan */
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="maakunnat.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="leirintaalueet.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="matkaparkit.html"]:not(#travel-stop-v268)::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a[href="lahella-minua.html"]:not(#travel-stop-v268)::before{
+    content:""!important;display:block!important;width:86%!important;
+    height:clamp(79px,25vw,125px)!important;flex:0 0 auto!important;
+    background-size:contain!important;background-repeat:no-repeat!important;
+    background-position:center!important;margin:0 auto 13px!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a strong,
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 strong,
+  body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268 strong{
+    display:block!important;font:800 clamp(16px,4.6vw,24px)/1.16 system-ui,-apple-system,"Segoe UI",sans-serif!important;
+    color:#154b3c!important;letter-spacing:-.035em!important;text-align:center!important;
+    margin:0!important;padding:0!important;overflow-wrap:normal!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-copy-v306{
+    display:block!important;width:100%!important;flex:0 0 auto!important;min-width:0!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306{
+    display:block!important;align-self:center!important;flex:0 0 auto!important;
+    width:90%!important;height:clamp(90px,26vw,132px)!important;
+    max-width:180px!important;margin:0 auto 12px!important;
+    background-image:none!important;background-repeat:no-repeat!important;
+    background-position:center center!important;background-size:contain!important;
+  }
+  body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268 .feature-art-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268 .art-stops{background-image:url('home-stops-v306.svg')!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #archipelago-route-v233 .feature-art-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > #archipelago-route-v233 .art-ferry{background-image:url('home-ferry-v306.svg')!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-route-v306 .feature-art-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-route-v306 .art-route{background-image:url('home-route-v306.svg')!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-memories-v306 .feature-art-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > #home-memories-v306 .art-memories{background-image:url('home-memories-v306.svg')!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 small,
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-arrow-v306,
+  body[data-home="true"] .home-primary-links-v290 .menu > a .choice-icon,
+  body[data-home="true"] .home-primary-links-v290 .menu > a .choice-arrow{display:none!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306::before,
+  body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306::after{display:none!important;content:none!important}
+  body[data-home="true"] .home-primary-links-v290 .menu > a:focus-visible{outline:3px solid #1a7459!important;outline-offset:3px!important}
+  /* Kuvassa nakyva vaalea opastelaatikko. Ei poista tai piilota sivun muuta sisaltoa. */
+  body[data-home="true"] .ms343-help{
+    display:block!important;margin:25px 0 30px;padding:24px 19px 14px;
+    background:#f0f7ef;border:1px solid #cfe2d5;border-radius:24px;
+    color:#194c3d;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  }
+  body[data-home="true"] .ms343-help h2{font-size:clamp(21px,6vw,31px);line-height:1.17;margin:0 0 8px;color:#164c3d;letter-spacing:-.035em}
+  body[data-home="true"] .ms343-help-intro{font-size:clamp(15px,3.6vw,18px);color:#667c70;margin:0 0 15px}
+  body[data-home="true"] .ms343-help-item{display:flex;gap:15px;align-items:flex-start;padding:18px 0;text-decoration:none;border-bottom:1px solid #d7e5d9;color:#19503f}
+  body[data-home="true"] .ms343-help-item:last-child{border-bottom:0}
+  body[data-home="true"] .ms343-help-icon{font-size:23px;line-height:1.2;display:flex;align-items:center;justify-content:center;flex:0 0 51px;width:51px;height:51px;background:#fff;border:1px solid #d5e4d8;border-radius:15px}
+  body[data-home="true"] .ms343-help-copy strong{display:block;font-size:clamp(16px,4vw,20px);line-height:1.25;color:#18513f}
+  body[data-home="true"] .ms343-help-copy span{display:block;font-size:14px;line-height:1.45;color:#63786e;margin-top:4px}
+  /* puhelimen neljan painikkeen alavalikko, vain alle 900px */
+  body[data-home="true"] nav.ms302-nav{display:block!important}
+  body[data-home="true"]{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))!important}
+}
+@media screen and (min-width:900px){
+  body[data-home="true"] .ms343-help{display:none!important}
+}
+@media screen and (max-width:359px){
+  body[data-home="true"] .home-primary-links-v290 .menu{gap:9px!important}
+  body[data-home="true"] .home-primary-links-v290 .menu>a{padding-left:5px!important;padding-right:5px!important}
+}
+
+/* v344: vaaran pituinen/paattyva teksti ei saa pakottaa korttia kapeaksi. */
+@media (max-width:899px){
+ body[data-home="true"] .home-primary-links-v290 .menu > a,
+ body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268{
+   writing-mode:horizontal-tb!important;white-space:normal!important;
+   text-orientation:mixed!important;word-break:normal!important;
+ }
+ body[data-home="true"] .home-primary-links-v290 .menu > a strong,
+ body[data-home="true"] .home-primary-links-v290 .menu > a span strong,
+ body[data-home="true"] .home-primary-links-v290 .menu > #travel-stop-v268 strong{
+   writing-mode:horizontal-tb!important;word-break:normal!important;
+   overflow-wrap:break-word!important;white-space:normal!important;
+ }
+ body nav.ms302-nav .ms302-nav-inner{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:2px!important}
+ body nav.ms302-nav a{min-width:0!important;white-space:normal!important}
+ body nav.ms302-nav .ms302-label{overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(10px,2.75vw,12px)!important}
+}
