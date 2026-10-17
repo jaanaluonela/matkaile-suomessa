@@ -1,0 +1,50 @@
+MATKAILE SUOMESSA — v343: VANHAT TIEDOT TAKAISIN + ERILLISET ETUSIVUT
+====================================================================
+
+TÄMÄ ON YHDISTETTY PAKETTI: sinun ei tarvitse asentaa v342:ta erikseen.
+
+PUHELIN (alle 900 px)
+- Kuvan kaltainen 2 sarakkeen etusivu ja kahdeksan suurta painiketta.
+  Paikkakunnat, Leirintäalueet, Matkaparkit, Lähellä minua,
+  Pysähdy matkalla, Saariston rengastie, Suunnittele reitti, Omat matkat.
+- Vaalea matkailuopaste "Löydä enemmän matkan varrelta".
+- Hyväksytty nelipainikkeinen alavalikko säilyy.
+
+TIETOKONE (alkaen 900 px)
+- Aiemman v340/v341:n oma leveä työpöytänäkymä säilyy.
+- Tietokoneen vaakasuuntainen ylävalikko, iso valokuvallinen otsake ja
+  yhden palstan leveät valintarivit, EI puhelimen kaksipalstaista ulkoasua.
+- Desktop-v339.css ja desktop-v339.js -tiedostojen tulee olla repossa,
+  kuten aiemmin asennetussa v341-päivityksessä.
+
+VANHAT TIEDOT (v342 mukana)
+- Kaikkien 308 kunnan hakuluettelo ja oikea etusivun kuntalaskuri.
+- Palautetaan puuttuvat vanhat sivut ja niihin liittyvät tiedostot.
+- Olemassa olevia kuntasivuja tai matkailutekstejä EI ylikirjoiteta.
+- Oulun vanha laaja opas omalla sivullaan, linkki Oulun sivulta.
+- Mahdolliset korvatut/lyhentyneet vanhat sivut raportoidaan tiedostoon
+  palautus/RAPORTTI_v342.txt; niitä ei kopioida sokkona päälle.
+
+ASENNUS GITHUBIIN
+1. Tee ensin GitHub-reposta varmuuskopio: Code > Download ZIP.
+2. Pura TAM̈Ä v343 ZIP koneelle.
+3. Lataa kaikki sen mukana olevat 7 asennustiedostoa GitHub-repositorioosi
+   samoihin polkuihin. Korvaa .github/workflows/alavalikko-v301.yml,
+   jos se löytyy entuudestaan. Säilytä kansiorakenne tyokalut/ ja palautus/.
+   ÄLÄ pura sisempää palautus/vanha_sisalto_v342.zip -tiedostoa.
+4. GitHubissa Commit changes. Automaattinen Actions-työ nimeltä
+   "Vanhat kuntatiedot ja erilliset etusivut v343" tekee muutokset.
+   Tarvittaessa Actionsin työnkululle tulee antaa Contents: read and write.
+5. Odota GitHub Pages -julkaisua. Lataa puhelimella ja tietokoneella
+   sivusto uudelleen (välimuisti voi säilyttää vanhan version).
+
+PAKETISSA EI OLE UUTTA INDEX.HTML-TIEDOSTOA: ASENNUSOHJELMA LISÄÄ
+VÄHÄN CSS/JS-KOODIA OLEMASSA OLEVAAN SIVUUN, JOTTA KAIKKI HAKUSISÄLTÖ
+JA KAIKKI VANHAT TIEDOT SÄILYVÄT.
+
+MANUAALINEN VAIHTOEHTO, JOS ACTIONS EI KÄYNNISTY:
+python tyokalut/palauta_kunnat_v342.py
+python tyokalut/asenna_etusivun_nakymat_v343.py
+ja vie muuttuneet tiedostot GitHubiin.
+
+HUOM: Tämä paketti ei asennu GitHubiin automaattisesti ChatGPT:stä.
