@@ -1,0 +1,14 @@
+MATKAILE SUOMESSA – v356 – PAIKKAKUNNAT-SIVUN MOBIILIKORJAUS
+
+Korjatut tiedostot:
+- maakunnat.html (lyhyempi esittely, yksi sivupolku, puhelimen kartta aluksi suljettu)
+- maakunnat-mobiili-v356.css (tiiviimpi puhelinnäkymä)
+
+PÄIVITYS OLEMASSA OLEVAAN GITHUB-SIVUSTOON:
+1. Pura tämä pieni ZIP-paketti.
+2. Lisää molemmat tiedostot GitHub-repositorion juureen (samaan kansioon kuin index.html).
+3. Korvaa olemassa oleva maakunnat.html, muut tiedostot säilytetään.
+4. Tee Commit changes ja päivitä sivu selaimessa tarvittaessa välimuistin ohittaen.
+
+Tämä paketti ei muuta muiden sivujen tekstejä, kuntia, vaakunoita tai muita tietoja.
+Jos haluat toimittaa koko sivuston yhdellä kertaa, käytä erillistä v356_KOKO_SIVUSTO.zip -pakettia.

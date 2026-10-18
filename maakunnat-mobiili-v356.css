@@ -1,0 +1,112 @@
+/* Matkaile Suomessa v356 – Paikkakunnat-sivun selkeä mobiilinäkymä.
+   Ulkoasua tiivistetään; maakunnat, kunnat, kartta ja muu sisältö pysyvät ennallaan. */
+@media screen and (max-width: 899px) {
+  body.ms353-unified > main.regions-page {
+    box-sizing: border-box !important;
+    width: calc(100% - 28px) !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    padding: 12px 0 calc(112px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  body.ms353-unified .regions-page .ms302-crumb {
+    margin: 0 1px 13px !important;
+    padding: 0 !important;
+    min-height: 28px;
+  }
+  body.ms353-unified .regions-page .regions-hero {
+    background: #eaf3ec !important;
+    border: 1px solid #d5e5d9 !important;
+    padding: 18px 20px 17px !important;
+    margin: 0 0 18px !important;
+    border-radius: 19px !important;
+    box-shadow: none !important;
+  }
+  body.ms353-unified .regions-page .regions-hero h1 {
+    margin: 0 0 5px !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    color: #173c30 !important;
+    font-size: clamp(29px, 7vw, 35px) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -.025em !important;
+  }
+  body.ms353-unified .regions-page .regions-hero p {
+    margin: 0 !important;
+    max-width: 55ch !important;
+    color: #455f51 !important;
+    font-size: 15.5px !important;
+    line-height: 1.48 !important;
+    font-weight: 450 !important;
+  }
+  body.ms353-unified .regions-page .regions-search {
+    padding: 0 !important;
+    margin: 0 0 14px !important;
+  }
+  body.ms353-unified .regions-page .regions-search label {
+    display: block !important;
+    margin: 0 0 7px !important;
+    color: #244f3d !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+  body.ms353-unified .regions-page .regions-input-wrap input {
+    display: block !important;
+    width: 100% !important;
+    min-height: 51px !important;
+    padding: 11px 44px 11px 14px !important;
+    border: 1px solid #c6dacf !important;
+    border-radius: 13px !important;
+    background: #fff !important;
+    font-size: 16px !important;
+  }
+  body.ms353-unified .regions-page .regions-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 11px !important;
+  }
+  body.ms353-unified .regions-page .ms-map-panel,
+  body.ms353-unified .regions-page .ms-regions-results {width: 100% !important; min-width: 0 !important;}
+  body.ms353-unified .regions-page .ms-map-toggle {
+    border: 1px solid #d5e5d9 !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+  }
+  body.ms353-unified .regions-page .ms-map-toggle > summary {
+    min-height: 55px !important;
+    padding: 9px 14px !important;
+    background: #f3f7f0 !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+  }
+  body.ms353-unified .regions-page .ms-map-summary-icon {
+    width: 32px !important;
+    flex-basis: 32px !important;
+    height: 32px !important;
+    font-size: 24px !important;
+  }
+  body.ms353-unified .regions-page .regions-status {
+    margin: 4px 1px 9px !important;
+    min-height: 0 !important;
+    color: #566e60 !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+  body.ms353-unified .regions-page .regions-list {gap: 9px !important;}
+  body.ms353-unified .regions-page .region-card {border-radius: 16px !important;}
+  body.ms353-unified .regions-page .region-card > summary {
+    min-height: 63px !important;
+    padding: 12px 15px !important;
+  }
+  body.ms353-unified .regions-page .region-card > summary strong {
+    font-size: clamp(18px, 4.8vw, 22px) !important;
+    line-height: 1.24 !important;
+  }
+  body.ms353-unified .regions-page .region-card > summary .region-arrow {font-size: 23px !important;}
+  body.ms353-unified .regions-page .region-towns {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+  body.ms353-unified .regions-page .region-town-main .region-town-pick {min-height:34px !important;}
+  body.ms353-unified .regions-page .regions-footnote {margin: 16px 2px 0 !important;}
+}
+@media screen and (max-width: 350px) {
+  body.ms353-unified .regions-page .region-towns {grid-template-columns:1fr !important;}
+  body.ms353-unified .regions-page .regions-hero {padding: 15px 16px !important;}
+}
