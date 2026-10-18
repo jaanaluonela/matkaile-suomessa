@@ -5,8 +5,7 @@
   ['index.html','Etusivu','⌂'],
   ['maakunnat.html','Paikkakunnat','⌖'],
   ['pysahdy-matkalla.html','Pysähdy matkalla','✦'],
-  ['leirintaalueet.html','Leirintäalueet','♧'],
-  ['matkaparkit.html','Matkaparkit','▣'],
+  ['leirintaalueet.html','Yöpymispaikat','♧'],
   ['paivakirja.html','Omat matkat','▤'],
   ['reittisuunnittelu.html','Suunnittele reitti','↗']
  ];

@@ -1,0 +1,147 @@
+/* Matkaile Suomessa v348 — ilmavampi tietokoneversio.
+   Media queries: mobiilin sivut, kuvat, valikot ja painikkeet säilyvät ennallaan. */
+@media screen and (min-width:980px){
+  /* Etusivun oma leveä tietokonetoteutus. */
+  body[data-home="true"] .msv-header{height:84px;}
+  body[data-home="true"] .msv-header-inner{width:min(calc(100% - 76px),1480px);gap:clamp(18px,1.8vw,35px)}
+  body[data-home="true"] .msv-nav{gap:clamp(12px,1.8vw,29px)}
+  body[data-home="true"] .msv-nav a{font-size:clamp(12.5px,0.9vw,15px);font-weight:720}
+  body[data-home="true"] .msv-hero{height:370px;}
+  body[data-home="true"] .msv-hero-content{width:min(calc(100% - 86px),1480px);padding:54px 0 0 12px}
+  body[data-home="true"] .msv-hero h1{font-size:clamp(47px,4.5vw,70px)}
+  body[data-home="true"] .msv-hero .msv-tagline{font-size:clamp(21px,1.8vw,29px);margin:7px 0 16px}
+  body[data-home="true"] .msv-hero .msv-subhead{font-size:17px;line-height:1.55;max-width:540px}
+  body[data-home="true"] .msv-main{width:min(calc(100% - 78px),1480px);padding-bottom:75px}
+  body[data-home="true"] .msv-primary{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:-43px}
+  body[data-home="true"] .msv-primary-card{min-height:166px;gap:20px;padding:25px 27px;border-radius:22px}
+  body[data-home="true"] .msv-icon{width:88px;flex-basis:88px;height:85px;font-size:53px}
+  body[data-home="true"] .msv-card-copy strong{font-size:clamp(19px,1.4vw,25px);line-height:1.25}
+  body[data-home="true"] .msv-card-copy small{font-size:clamp(13px,0.9vw,15px);line-height:1.5;margin-top:8px}
+  body[data-home="true"] .msv-arr{font-size:25px}
+  body[data-home="true"] .msv-stops{margin-top:29px;padding:32px 40px 31px;border-radius:24px}
+  body[data-home="true"] .msv-stops-head{gap:21px;margin-bottom:20px}
+  body[data-home="true"] .msv-road{font-size:67px;width:130px}
+  body[data-home="true"] .msv-stops h2{font-size:clamp(30px,2.35vw,39px);margin:0 0 8px}
+  body[data-home="true"] .msv-stops p{font-size:16px;line-height:1.5}
+  body[data-home="true"] .msv-stop-form,body[data-home="true"] .msv-tags{margin-left:151px}
+  body[data-home="true"] .msv-stop-form{gap:13px}
+  body[data-home="true"] .msv-main-search{height:59px;border-radius:14px}
+  body[data-home="true"] .msv-main-search input{font-size:16px}
+  body[data-home="true"] .msv-tags{gap:11px;margin-top:20px;justify-content:flex-start}
+  body[data-home="true"] .msv-tags a{font-size:13.5px;min-height:42px;padding:10px 17px}
+  body[data-home="true"] .msv-shortcuts{gap:20px;margin-top:28px}
+  body[data-home="true"] .msv-small-card{min-height:112px;gap:14px;padding:22px 24px;border-radius:19px}
+  body[data-home="true"] .msv-small-ico{font-size:38px}
+  body[data-home="true"] .msv-small-copy strong{font-size:17px}
+  body[data-home="true"] .msv-small-copy small{font-size:12.5px;line-height:1.45;margin-top:6px}
+  body[data-home="true"] .msv-featured{margin-top:46px}
+  body[data-home="true"] .msv-section-head{margin-bottom:19px}
+  body[data-home="true"] .msv-section-head h2{font-size:29px}
+  body[data-home="true"] .msv-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  body[data-home="true"] .msv-photo-card{border-radius:18px}
+  body[data-home="true"] .msv-photo-card img{height:205px}
+  body[data-home="true"] .msv-photo-details{padding:17px 19px;min-height:82px}
+  body[data-home="true"] .msv-photo-details strong{font-size:18px}
+  body[data-home="true"] .msv-photo-details small{font-size:13px;margin-top:5px}
+  body[data-home="true"] .msv-credits{margin-top:37px;line-height:1.7}
+}
+@media screen and (min-width:980px) and (max-width:1220px){
+  body[data-home="true"] .msv-header-inner{width:calc(100% - 44px);gap:15px}
+  body[data-home="true"] .msv-brand{min-width:170px}
+  body[data-home="true"] .msv-nav{gap:12px}
+  body[data-home="true"] .msv-nav a{font-size:12px}
+  body[data-home="true"] .msv-head-search{width:145px}
+  body[data-home="true"] .msv-primary{gap:13px}
+  body[data-home="true"] .msv-primary-card{min-height:151px;padding:20px 17px;gap:9px}
+  body[data-home="true"] .msv-icon{width:57px;flex-basis:57px;font-size:40px}
+  body[data-home="true"] .msv-card-copy strong{font-size:18px}
+  body[data-home="true"] .msv-card-copy small{font-size:12px}
+  body[data-home="true"] .msv-small-card{padding:16px 13px;gap:9px}
+  body[data-home="true"] .msv-small-ico{font-size:27px}
+  body[data-home="true"] .msv-small-copy strong{font-size:14px}
+  body[data-home="true"] .msv-small-copy small{font-size:11px}
+  body[data-home="true"] .msv-stops{padding:24px}
+}
+@media screen and (min-width:900px){
+  /* Muut sivut: leveä mutta luettava sivu, ei väkisin kapeaksi puristettua saraketta. */
+  body .ms339-shell{width:min(calc(100% - 66px),1480px)}
+  body .ms339-toprow{min-height:83px}
+  body .ms339-navbar{gap:11px;padding-bottom:13px}
+  body .ms339-navbar a{font-size:14px!important;padding:10px 15px!important;min-height:44px}
+  body .ms339-brand strong{font-size:23px}
+  body > main,body > main.page,body > main.regions-page,body > main.ms302-stops,
+  body main.page,body main.regions-page,body main.ms302-stops{
+    width:min(calc(100% - 76px),1400px)!important;max-width:1400px!important;
+    padding-top:36px!important;padding-bottom:90px!important;
+  }
+  body main.page h1,body main.ms302-stops h1,body main.regions-page h1{font-size:clamp(38px,3.8vw,54px)!important}
+  /* Hakukortti + tulokset: reilummin tilaa ilman liikaa ylityhjiä yksittäisiä rivejä. */
+  body[data-stay-combined="true"] main.page .ms318-hero--camp{
+    padding:40px 48px!important;margin-bottom:31px!important;border-radius:27px!important;
+  }
+  body[data-stay-combined="true"] main.page .ms318-camp-layout{gap:30px!important}
+  body[data-stay-combined="true"] main.page .ms318-camp-sidebar,
+  body[data-stay-combined="true"] main.page .ms318-camp-list{
+    padding:35px 44px!important;border-radius:25px!important;
+  }
+  body[data-stay-combined="true"] main.page .ms318-panel-heading h2{font-size:28px}
+  body[data-stay-combined="true"] main.page .ms347-kinds{gap:15px;margin:25px 0}
+  body[data-stay-combined="true"] main.page .ms347-kinds button{min-height:58px;font-size:17px}
+  body[data-stay-combined="true"] main.page #v243-stay-search{min-height:59px!important;font-size:17px!important}
+  body[data-stay-combined="true"] main.page .ms318-camp-sidebar .v243-filter-grid{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:20px!important;margin:26px 0 25px!important;
+  }
+  body[data-stay-combined="true"] main.page .ms318-camp-sidebar .v243-filter-field{flex:none!important;width:100%!important}
+  body[data-stay-combined="true"] main.page .camp-opening-panel{gap:16px 22px!important;margin:18px 0 25px!important}
+  body[data-stay-combined="true"] main.page .ms275-services-choices{gap:13px!important}
+  body[data-stay-combined="true"] main.page .ms275-services-choices label{font-size:15px!important;padding:13px 18px!important}
+  body[data-stay-combined="true"] main.page .ms318-results-header{padding-bottom:22px!important;margin-bottom:25px!important}
+  body[data-stay-combined="true"] main.page .ms318-results-header h2{font-size:clamp(25px,2.6vw,35px)!important}
+  body[data-stay-combined="true"] main.page #municipality-results{gap:20px!important}
+  body[data-stay-combined="true"] main.page #municipality-results .stay{
+    padding:25px 28px!important;border-radius:20px!important;min-height:200px!important;
+  }
+  /* Muut pääsivut saavat samat ilmavat välit. */
+  body .ms302-stops-intro{padding:36px 42px!important;margin:14px 0 29px!important;border-radius:25px}
+  body .ms302-stops-search{padding:30px 37px!important;border-radius:23px}
+  body .ms302-stops-fields{gap:23px}
+  body .ms302-stops-fields select,body .ms302-stops-fields input{min-height:57px;font-size:17px}
+  body .ms302-category{gap:12px!important;margin-top:23px}
+  body .ms302-category button{font-size:15px;padding:13px 17px;min-height:46px}
+  body .ms302-results-head{margin:29px 4px 17px}
+  body .ms302-results{gap:22px!important}
+  body .ms302-result{padding:25px 29px;border-radius:20px;gap:10px}
+  body .ms302-result strong{font-size:20px}
+  body .ms302-result p{font-size:16px;line-height:1.55}
+  body .regions-hero{padding:35px 43px!important;margin-bottom:28px!important;border-radius:25px}
+  body .regions-hero p{font-size:17px;line-height:1.55}
+  body .regions-search{margin-bottom:18px}
+  body .regions-input-wrap input{min-height:59px}
+  body .regions-layout{gap:27px!important}
+  body .regions-list{gap:17px!important}
+  body .region-card summary{min-height:93px;padding:20px 25px}
+  body .region-card summary strong{font-size:clamp(21px,1.55vw,27px)}
+  /* Omat matkat: muistot ovat suuria kortteja eivätkä pitkää tiivistä rivilistaa. */
+  body:has(#trips) > main{padding-top:43px!important}
+  body:has(#trips) > main h1{font-size:clamp(37px,3.5vw,49px)!important;margin:19px 0}
+  body:has(#trips) > main .muted{font-size:16px;line-height:1.6}
+  body:has(#trips) #list{max-width:1330px}
+  body:has(#trips) #trips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px;margin-top:24px}
+  body:has(#trips) #trips .trip{margin:0;min-height:112px;border-radius:19px;box-shadow:0 10px 24px #244c3510}
+  body:has(#trips) #trips .trip-info{padding:22px 25px}
+  body:has(#trips) #trips .trip-title{font-size:21px}
+  body:has(#trips) #trips .trip-meta{font-size:14px;margin-top:8px}
+  body:has(#trips) #editor{max-width:1050px;margin-inline:auto}
+}
+@media screen and (min-width:1220px){
+  /* Kaksi ryhdikästä korttia vierekkäin, eikä venytetä jokaista koko ruudulle. */
+  body[data-stay-combined="true"][data-kind="camping"] main.page .ms318-camp-list #municipality-results,
+  body[data-stay-combined="true"][data-kind="camping"] main.page .ms318-camp-list #municipality-results:has(.stay){
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch;
+  }
+}
+@media screen and (min-width:900px) and (max-width:1219px){
+  body[data-stay-combined="true"] main.page #municipality-results{display:flex!important;flex-direction:column!important}
+  body:has(#trips) #trips{grid-template-columns:1fr}
+}

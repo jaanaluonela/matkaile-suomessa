@@ -1,0 +1,25 @@
+MATKAILE SUOMESSA v348 — VÄLJEMPI TIETOKONENÄKYMÄ (18.10.2026)
+
+POHJANA: v347 päivitys / v347 koko sivusto. Tämä paketti sisältää VAIN muuttuneet tiedostot.
+
+1. Pura ZIP tietokoneella.
+2. Avaa GitHub-repositoriosi matkaile-suomessa.
+3. Valitse Add file -> Upload files.
+4. Lisää paketin HTML-, CSS- ja JS-tiedostot repositorion JUUREEN.
+   Älä siirrä niitä uuteen matkaile-suomessa-main-kansioon.
+5. Valitse Commit changes / Vahvista muutokset.
+6. Odota GitHub Pages -julkaisun päivittymistä. Päivitä sivu tarvittaessa Ctrl+Shift+R.
+
+Muutokset vain tietokoneen näkymään:
+- Etusivun Leirintäalueet + Matkaparkit -kortit ja valikkolinkit yhdistetty: Yöpymispaikat.
+- Etusivulla 3 leveämpää pääkorttia, väljemmät hakutoiminnot ja 3 sarakkeen isommat valokuvakortit.
+- Sivujen leveys, hakukentät, tuloskortit ja välit kasvatettu.
+- Yöpymispaikkojen tuloskortit kahteen sarakkeeseen suurilla näytöillä.
+- Pysähdy matkalla, Maakunnat ja Omat matkat -sivut väljemmiksi.
+- Ylävalikko muilla pääsivuilla näyttää yhden Yöpymispaikat-linkin.
+
+EI muuteta puhelinnäkymää (uudet tyylit alkavat 900/980 px leveydestä).
+EI muuteta paikkakuntia, kohdetietoja, kuvia, tallennettujen matkojen tietovarastoa tai hakujen JS-logiikkaa.
+Vanhojen matkaparkit.html-linkkien ohjaus säilyy v347:n mukaisena.
+
+Huom: GitHub Pages ei päivity automaattisesti ennen uuden ZIPin sisältämien tiedostojen lataamista.

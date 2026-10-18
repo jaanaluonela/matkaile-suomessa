@@ -44,6 +44,9 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-h
 
 </style><link rel="stylesheet" href="navigation-v191.css?v=339"><link rel="stylesheet" href="v244.css?v=244">
 <link rel="stylesheet" href="desktop-v339.css?v=339">
+<link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
+<link rel="stylesheet" href="alavalikko-v304.css?v=346">
+<script defer src="alavalikko-v304.js?v=346"></script>
 </head><body><main><a href="index.html">← Etusivu</a><h1>❤️ Omat matkat</h1><p class="muted">Avaa oma matka. Kansikuva on ylhäällä ja kaikki muut kuvat löytyvät heti sen alta sivuttain selaamalla.</p>
 <section id="list"><p class="muted">Omat matkakohteet ja matkapäiväkirja samassa paikassa.</p><button id="new">+ Lisää matka</button><div id="trips"></div></section>
 <section id="editor" class="hidden">
@@ -372,5 +375,5 @@ if(window.indexedDB){
 window.addEventListener('pagehide',()=>{flushPhotoNote();if(dirty)capture()});
 window.addEventListener('storage',e=>{if(active===null&&(e.key===key||e.key===null))load()});
 window.addEventListener('pageshow',()=>{if(active===null)load()});
-</script><script defer src="desktop-v339.js?v=339"></script>
+</script><script defer src="desktop-v339.js?v=348"></script>
 </body></html>
