@@ -1,0 +1,19 @@
+MATKAILE SUOMESSA v349 – TIETOKONEEN ETUSIVUN KORJAUS
+
+Korjaus edellisen v348-päivityksen liian suurille etusivun laatikoille.
+Palautetaan kompakti, leveä tietokonenäkymä: lyhyempi maisemaosio, kolme
+maltillista pääkorttia, matalampi Pysähdy matkalla -haku ja 4 valokuvakorttia rivillä.
+Leirintäalueet ja matkaparkit pysyvät Yöpymispaikat-painikkeen alla.
+
+PAKETISSA ON VAIN 2 SIVUSTOTIEDOSTOA:
+- index.html (korvaa vanha index.html)
+- desktop-etusivu-v349.css (uusi tiedosto)
+
+1. Pura zip-paketti.
+2. Avaa matkaile-suomessa-repositorion JUURI GitHubissa.
+3. Lisää nämä KAKSI tiedostoa ja vahvista muutokset.
+4. Päivitä julkaistu etusivu Ctrl+Shift+R, kun Pages-päivitys on valmis.
+
+Säilytä kaikki muut tiedostot. Älä poista vanhaa v348-tyylitiedostoa:
+sitä voivat käyttää sivuston muut HTML-sivut.
+Mobiilin etusivuun tai sivuston sisältöihin ei kosketa.
