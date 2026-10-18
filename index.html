@@ -1,753 +1,126 @@
-<!-- Matkaile Suomessa v300 – hyväksytyt neljä suurta etusivukuvaketta -->
 <!doctype html>
 <html lang="fi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#123e35">
-  <meta name="description" content="Karavaanarin opas Suomen leirintäalueisiin, matkaparkkeihin ja paikkakuntien palveluihin.">
-  <title>Matkailu Suomessa – matkailukohteet ja yöpyminen</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    :root{
-      --home-ink:#173c34;
-      --home-muted:#5d6e68;
-      --home-green:#17634f;
-      --home-sand:#f3ead9;
-      --home-gold:#d5a64b;
-      --home-card:#fff;
-      --home-line:#dfe8e3;
-      --home-shadow:0 12px 30px rgba(20,62,52,.10);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:#e8efe9;
-      color:var(--home-ink);
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    a{color:inherit}
-    .home-shell{
-      width:min(100%,520px);
-      min-height:100vh;
-      margin:0 auto;
-      padding:12px 12px calc(92px + env(safe-area-inset-bottom));
-      background:
-        radial-gradient(circle at 100% 0,rgba(213,166,75,.10),transparent 28%),
-        #fafbf8;
-      box-shadow:0 0 42px rgba(17,57,47,.11);
-    }
-    .hero{
-      position:relative;
-      min-height:500px;
-      overflow:hidden;
-      display:flex;
-      align-items:flex-end;
-      padding:26px 22px;
-      border-radius:28px;
-      color:#fff;
-      background:
-        linear-gradient(180deg,rgba(8,34,29,.03) 20%,rgba(8,34,29,.30) 55%,rgba(8,34,29,.92) 100%),
-        url("assets/hero/hero-karavaanari-v184.jpg") 64% center/cover no-repeat;
-      box-shadow:0 18px 42px rgba(18,62,53,.20);
-    }
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg,rgba(8,38,31,.18),transparent 58%);
-      pointer-events:none;
-    }
-    .hero-content{position:relative;z-index:1;width:100%}
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      margin:0 0 10px;
-      padding:8px 12px;
-      border:1px solid rgba(255,255,255,.48);
-      border-radius:999px;
-      background:rgba(13,51,42,.52);
-      font-size:.78rem;
-      font-weight:800;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-      backdrop-filter:blur(8px);
-    }
-    .hero h1{
-      max-width:390px;
-      margin:0;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(2.45rem,10vw,3.55rem);
-      line-height:.97;
-      letter-spacing:-.045em;
-      text-wrap:balance;
-    }
-    .hero p{
-      max-width:400px;
-      margin:14px 0 19px;
-      color:rgba(255,255,255,.92);
-      font-size:1rem;
-      line-height:1.48;
-    }
-    .hero-button{
-      min-height:54px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      padding:12px 17px;
-      border:1px solid rgba(255,255,255,.45);
-      border-radius:16px;
-      background:#f7f0e1;
-      color:#153f35;
-      font-weight:850;
-      text-decoration:none;
-      box-shadow:0 9px 22px rgba(0,0,0,.20);
-    }
-    .hero-stats{
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      margin:0 0 16px;
-    }
-    .hero-stats span{
-      padding:7px 10px;
-      border:1px solid rgba(255,255,255,.32);
-      border-radius:999px;
-      background:rgba(12,48,40,.52);
-      color:#fff;
-      font-size:.78rem;
-      font-weight:800;
-      backdrop-filter:blur(7px);
-    }
-    .section{margin-top:32px}
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:14px;
-      margin:0 4px 13px;
-    }
-    .section-kicker{
-      margin:0 0 3px;
-      color:var(--home-green);
-      font-size:.75rem;
-      font-weight:900;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .section h2{
-      margin:0;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:1.58rem;
-      line-height:1.15;
-      letter-spacing:-.025em;
-    }
-    .text-link{
-      flex:none;
-      padding-bottom:2px;
-      color:var(--home-green);
-      font-size:.87rem;
-      font-weight:800;
-      text-decoration:none;
-    }
-    .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-    .path-card{
-      min-height:184px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:17px;
-      border:1px solid var(--home-line);
-      border-radius:22px;
-      background:var(--home-card);
-      text-decoration:none;
-      box-shadow:0 10px 26px rgba(20,62,52,.08);
-    }
-    .path-card:first-child{background:linear-gradient(145deg,#dcece3,#fff 72%)}
-    .path-card:last-child{background:linear-gradient(145deg,#f7ead4,#fff 72%)}
-    .path-icon{
-      width:48px;height:48px;
-      display:grid;place-items:center;
-      border-radius:16px;
-      background:rgba(255,255,255,.88);
-      font-size:1.55rem;
-      box-shadow:0 5px 14px rgba(20,62,52,.08);
-    }
-    .path-card h3{margin:16px 0 5px;font-size:1.08rem}
-    .path-card p{margin:0;color:var(--home-muted);font-size:.84rem;line-height:1.38}
-    .path-arrow{align-self:flex-end;margin-top:12px;color:var(--home-green);font-size:1.2rem;font-weight:900}
-    .search-box{
-      position:relative;
-      margin:0 2px;
-    }
-    .search-box input{
-      width:100%;
-      min-height:54px;
-      padding:0 46px 0 17px;
-      border:1px solid #cedbd4;
-      border-radius:18px;
-      background:#fff;
-      color:var(--home-ink);
-      font:inherit;
-      box-shadow:0 8px 22px rgba(20,62,52,.07);
-    }
-    .search-box input:focus{outline:3px solid rgba(39,123,96,.18);border-color:#438a74}
-    .search-symbol{
-      position:absolute;right:16px;top:50%;
-      transform:translateY(-50%);
-      font-size:1.2rem;
-      pointer-events:none;
-    }
-    .search-results{
-      display:none;
-      margin:8px 2px 0;
-      overflow:hidden;
-      border:1px solid var(--home-line);
-      border-radius:15px;
-      background:#fff;
-      box-shadow:var(--home-shadow);
-    }
-    .search-results.is-open{display:block}
-    .search-results a{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      padding:13px 15px;
-      border-bottom:1px solid #edf1ee;
-      text-decoration:none;
-      font-weight:750;
-    }
-    .search-results a:last-child{border-bottom:0}
-    .search-results small{color:var(--home-muted);font-weight:600}
-    .destination-row{
-      display:grid;
-      grid-auto-flow:column;
-      grid-auto-columns:minmax(176px,72%);
-      gap:11px;
-      overflow-x:auto;
-      padding:1px 3px 11px;
-      scroll-snap-type:x mandatory;
-      scrollbar-width:none;
-    }
-    .destination-row::-webkit-scrollbar{display:none}
-    .destination{
-      scroll-snap-align:start;
-      min-height:142px;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      padding:16px;
-      overflow:hidden;
-      position:relative;
-      border-radius:19px;
-      color:#fff;
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(20,62,52,.12);
-    }
-    .destination::before{
-      content:"";position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(9,39,32,.02),rgba(9,39,32,.82));
-    }
-    .destination:nth-child(1){background:url("assets/hero/hero-karavaanari-v184.jpg") 68% center/cover}
-    .destination:nth-child(2){background:url("assets/hero/hero-asikkala.jpg") center/cover}
-    .destination:nth-child(3){background:url("assets/hero/hero-paijat-hame.jpg") center/cover}
-    .destination > *{position:relative}
-    .destination small{margin-bottom:3px;color:rgba(255,255,255,.78);font-weight:750}
-    .destination strong{font-size:1.22rem}
-    .feature-card{
-      display:grid;
-      grid-template-columns:1fr auto;
-      gap:16px;
-      align-items:center;
-      padding:20px;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:23px;
-      background:
-        radial-gradient(circle at 100% 0,rgba(213,166,75,.18),transparent 38%),
-        linear-gradient(145deg,#164d40,#0f352d);
-      color:#fff;
-      text-decoration:none;
-      box-shadow:0 14px 32px rgba(15,53,45,.18);
-    }
-    .feature-card .tag{
-      display:inline-block;
-      margin-bottom:8px;
-      color:#aed6c7;
-      font-size:.75rem;
-      font-weight:900;
-      letter-spacing:.07em;
-      text-transform:uppercase;
-    }
-    .feature-card h2{margin:0 0 7px;color:#fff}
-    .feature-card p{margin:0;color:rgba(255,255,255,.76);font-size:.9rem;line-height:1.45}
-    .feature-icon{
-      width:60px;height:60px;
-      display:grid;place-items:center;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.10);
-      font-size:1.8rem;
-    }
-    .later-note{
-      margin:22px 4px 0;
-      padding:13px 15px;
-      border:1px solid #dce5df;
-      border-radius:15px;
-      color:var(--home-muted);
-      background:linear-gradient(135deg,#f3f7f3,#fff);
-      font-size:.82rem;
-      line-height:1.4;
-    }
-    .tip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-    .tip-card{
-      min-height:112px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:15px;
-      border:1px solid rgba(23,99,79,.08);
-      border-radius:18px;
-      color:var(--home-ink);
-      text-decoration:none;
-      box-shadow:0 8px 20px rgba(20,62,52,.06);
-    }
-    .tip-card:nth-child(1){background:#e8f2ed}
-    .tip-card:nth-child(2){background:#eaf1f7}
-    .tip-card:nth-child(3){background:#f0edf7}
-    .tip-card:nth-child(4){background:#f7efe3}
-    .tip-card span{font-size:1.45rem}
-    .tip-card strong{font-size:.92rem;line-height:1.2}
-    .tip-card small{color:var(--home-muted);font-size:.72rem}
-    .bottom-nav{
-      position:fixed;
-      z-index:20;
-      left:50%;
-      bottom:0;
-      transform:translateX(-50%);
-      width:min(100%,520px);
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      padding:8px 8px calc(8px + env(safe-area-inset-bottom));
-      border-top:1px solid #dfe7e2;
-      background:rgba(255,255,255,.96);
-      box-shadow:0 -8px 24px rgba(20,62,52,.08);
-      backdrop-filter:blur(12px);
-    }
-    .bottom-nav a{
-      min-height:54px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:3px;
-      border-radius:13px;
-      color:#53675f;
-      font-size:.71rem;
-      font-weight:750;
-      text-decoration:none;
-    }
-    .bottom-nav a span{font-size:1.2rem}
-    .bottom-nav a[aria-current="page"]{background:#e8f2ed;color:#155342}
-    @media (min-width:521px){
-      .home-shell{padding-top:20px}
-      .hero{min-height:450px}
-    }
-    @media (prefers-reduced-motion:no-preference){
-      .hero-button,.path-card,.destination,.feature-card{transition:transform .18s ease,box-shadow .18s ease}
-      .hero-button:active,.path-card:active,.destination:active,.feature-card:active{transform:scale(.985)}
-    }
-  
-/* Etusivun logo ja mobiiliasettelu v190 */
-.home-shell > .hero {height:auto;min-height:0;padding:22px 18px;background:#174d40;}
-.home-shell > .hero::before,.home-shell > .hero::after {display:none;}
-.home-shell > .hero > .hero-content {position:relative;left:auto;right:auto;bottom:auto;display:block;width:100%;min-width:0;}
-.home-shell .home-logo {display:block !important;width:100% !important;max-width:600px !important;height:auto !important;min-height:0 !important;max-height:143px !important;aspect-ratio:1179 / 280 !important;object-fit:contain !important;margin:0 auto 20px !important;border-radius:12px;}
-.home-shell .hero h1 {font-size:clamp(1.65rem,7vw,2.6rem);line-height:1.12;max-width:100%;overflow-wrap:anywhere;}
-.home-shell .hero p {font-size:1rem;line-height:1.5;margin:14px 0 19px;}
-
-
-.home-shell{padding:16px 16px 20px!important}
-.home-shell>.hero{padding:16px!important;border-radius:20px;box-shadow:none}
-.home-shell .home-logo{margin-bottom:14px!important;max-height:100px!important}
-.home-shell .hero h1{font-size:28px!important;line-height:1.15!important;letter-spacing:-.02em}
-.home-shell .hero p{font-size:16px!important;font-weight:400!important;line-height:1.45!important;margin:10px 0 12px!important}
-.hero-stats{gap:8px;margin:0!important}.hero-stats span{padding:0;border:0;background:none;font-size:12px}
-.section{margin-top:24px}.section-head{margin:0 0 12px;align-items:center;gap:8px}
-.section h2{font-family:system-ui;font-size:22px;line-height:1.2;letter-spacing:-.02em}
-#hakuotsikko{font-size:20px}.search-box{margin:0}.search-box input{min-height:50px;border-radius:14px;padding-left:12px;font-size:16px;box-shadow:none}
-.tip-grid{gap:10px}.tip-card{min-height:108px;padding:12px;border-radius:16px;box-shadow:none;gap:7px}.tip-card strong{font-size:15px}.tip-card small{font-size:12px}.tip-card span{font-size:23px}
-.destination-row{grid-auto-flow:unset;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;overflow:visible;padding:0}
-.destination{min-height:108px;padding:13px;border-radius:16px;box-shadow:none;background:#e8f2ed!important;color:#173c34}
-.destination::before{display:none}.destination small{color:#5d6e68;font-size:12px}.destination strong{font-size:17px;line-height:1.2}
-.text-link{font-size:13px}.later-note{margin:20px 0 0;padding:0;border:0;border-radius:0;background:none;font-size:12px}
-
-</style>
-<link rel="stylesheet" href="navigation-v191.css?v=339">
-<link rel="stylesheet" href="valikot-v198.css"><script src="kunnat-v200.js"></script><script src="caravan-data.js" defer></script><script defer src="kayntikohteet-data-v230.js"></script><script defer src="rovaniemi-data-v245.js"></script><script src="kouvola-data-v247.js" defer></script><script src="lappi-data-v248.js" defer></script><script src="matkaparkit-lisat-v274.js?v=274" defer></script><script src="sfc-alueet-v295.js?v=295" defer></script><script src="ms-kohteet-v296.js?v=296" defer></script><script src="valikot-v200.js" defer></script><link rel="stylesheet" href="v243.css"><script src="v243.js" defer></script><link rel="stylesheet" href="v244.css?v=244"><link rel="stylesheet" href="etusivu-haku-v251.css?v=255"><script src="suomi-kunnat-v253.js?v=253" defer></script><script src="v254-kuntalinkit.js?v=254" defer></script><script src="v257-siuntio.js?v=257" defer></script><script src="v258-lansi-suomi.js?v=258" defer></script><script src="v259-fiskars-kunnat.js?v=259" defer></script><script src="v260-etela-pohjanmaa.js?v=260" defer></script><script src="v261-kymenlaakso.js?v=261" defer></script><script src="v262-etela-karjala.js?v=262" defer></script><script defer src="kuntalinkit-v342.js?v=342"></script>
-<script src="etusivu-haku-v253.js?v=256" defer></script><link rel="stylesheet" href="responsiivinen-v263.css?v=263">
-  <link rel="preload" href="matkaile-suomessa-logo-v296.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="etusivu-v291.css?v=291"><link rel="stylesheet" href="etusivu-v296.css?v=296"><link rel="stylesheet" href="ruukkikylat-v297.css?v=297">
-  <link rel="stylesheet" href="etusivu-v301.css?v=301">
-    <link rel="stylesheet" href="alavalikko-v304.css?v=346">
-  <link rel="stylesheet" href="etusivu-pysahdy-v304.css?v=304">
-  <script defer src="alavalikko-v304.js?v=346"></script>
-  <script defer src="etusivu-pysahdy-v304.js?v=304"></script>
-<link rel="stylesheet" href="etusivu-painikkeet-v307.css?v=307"><script defer src="etusivu-painikkeet-v307.js?v=307"></script>
-<style id="ms-desktop-v315">
-/* v315: a distinct photographic desktop home, mobile kept untouched. */
-.ms-v315-only{display:none}
-@media screen and (min-width:980px){
- html{scroll-padding-top:85px!important}
- body[data-home="true"]{background:#f8faf7!important;margin:0!important;padding:0!important;color:#163f36!important}
- body[data-home="true"] > .home-shell,body[data-home="true"] > .site-nav,body[data-home="true"] > .ms302-nav,body[data-home="true"] > .bottom-nav{display:none!important}
- body[data-home="true"] .ms-v315-only{display:block!important;min-width:0;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#143d33}
- .ms-v315-only *{box-sizing:border-box}
- .ms-v315-only a{color:inherit;text-decoration:none}
- .msv-header{height:73px;background:rgba(255,255,255,.985);border-bottom:1px solid #e4ebe6;position:sticky;top:0;z-index:200;box-shadow:0 1px 10px rgba(14,58,43,.035)}
- .msv-header-inner{width:min(calc(100% - 64px),1380px);margin:auto;height:100%;display:flex;align-items:center;gap:30px}
- .msv-brand{display:flex;align-items:center;flex:none;gap:10px;min-width:204px;line-height:.98;letter-spacing:-.045em;font-size:19px;font-weight:900;color:#174c3f}
- .msv-brand-icon{display:grid;place-items:center;font-size:32px;width:60px;height:49px;background:linear-gradient(135deg,#c9eee4,#e9f6e8);border-radius:15px;color:#11664e}
- .msv-brand-icon svg{width:54px;height:41px;stroke:#176d54;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
- .msv-nav{display:flex;align-items:center;gap:clamp(10px,1.35vw,24px);min-width:0;white-space:nowrap;flex:1}
- .msv-nav a{display:flex;align-items:center;height:44px;font-size:12.2px;font-weight:680;border-bottom:2px solid transparent}
- .msv-nav a:hover,.msv-nav a[aria-current="page"]{border-color:#1c6e58;color:#0d573f}
- .msv-header-actions{display:flex;align-items:center;gap:14px;margin-left:auto}
- .msv-search-wrap{position:relative;min-width:0}
- .msv-head-search{width:clamp(158px,15.5vw,240px);height:39px;display:flex;align-items:center;gap:7px;padding:0 13px;border:1px solid #d9e3dc;border-radius:12px;background:#fbfdfb}
- .msv-head-search:focus-within{border-color:#2c7960;box-shadow:0 0 0 3px #d9eee4}
- .msv-head-search input{border:0;outline:0;background:transparent;font:inherit;font-size:12px;width:100%;min-width:0;color:#173c34}
- .msv-favs-toggle{display:flex;align-items:center;gap:6px;flex:none;padding:8px 0;border:0;background:transparent;font:inherit;font-size:12.2px;font-weight:780;cursor:pointer}
- .msv-favs-toggle svg{width:21px;height:21px;fill:none;stroke:#143f34;stroke-width:2.2}
- .msv-hero{height:315px;position:relative;overflow:hidden;background:#cfded8 url("hero-etusivu.jpg") center 56% / cover no-repeat}
- .msv-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,248,237,.95) 0%,rgba(244,248,237,.70) 26%,rgba(244,248,237,.08) 56%,rgba(244,248,237,0) 100%)}
- .msv-hero-content{width:min(calc(100% - 80px),1380px);margin:auto;position:relative;z-index:1;padding:39px 0 0 20px}
- .msv-hero h1{margin:0;color:#0c4435;font-size:clamp(40px,4.55vw,62px);line-height:1.04;font-weight:870;letter-spacing:-.055em}
- .msv-hero .msv-tagline{margin:1px 0 12px;color:#124c3c;font-size:clamp(17px,1.8vw,26px);line-height:1.2;font-weight:530;letter-spacing:-.028em}
- .msv-hero .msv-subhead{max-width:440px;color:#245144;font-size:15.5px;line-height:1.35;font-weight:520;margin:0}
- .msv-main{width:min(calc(100% - 64px),1380px);margin:0 auto;padding-bottom:36px;position:relative;z-index:2}
- .msv-primary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:-36px}
- .msv-primary-card{min-height:117px;border:1px solid rgba(27,85,61,.07);border-radius:15px;display:flex;align-items:center;gap:12px;padding:17px 15px;box-shadow:0 8px 24px rgba(20,52,42,.075);transition:transform .17s,box-shadow .17s;min-width:0}
- .msv-primary-card:hover,.msv-small-card:hover,.msv-photo-card:hover{transform:translateY(-3px);box-shadow:0 13px 26px rgba(20,52,42,.12)}
- .msv-primary-card:first-child{background:#e8f4ef}.msv-primary-card:nth-child(2){background:#eff3e8}.msv-primary-card:nth-child(3){background:#e9f2fc}.msv-primary-card:nth-child(4){background:#fff0e7}
- .msv-icon{flex:0 0 76px;width:76px;height:67px;display:grid;place-items:center;font-size:50px;filter:drop-shadow(0 3px 2px rgba(9,46,34,.09))}
- .msv-card-copy{min-width:0;flex:1}.msv-card-copy strong{display:block;font-size:15.8px;line-height:1.25;font-weight:850;letter-spacing:-.02em}.msv-card-copy small{display:block;font-size:11.3px;font-weight:450;color:#496158;margin-top:4px;line-height:1.4}
- .msv-arr{font-size:21px;font-weight:650;align-self:center;color:#134e3f;margin-left:auto;flex:none}
- .msv-stops{margin-top:15px;border:1px solid #e9dcc4;border-radius:16px;background:linear-gradient(112deg,#fbf3e5 0%,#f8f2e6 75%,#f5eee0);padding:18px 22px 15px;position:relative;overflow:visible}
- .msv-stops-head{display:flex;align-items:center;gap:18px;margin-bottom:12px}
- .msv-road{font-size:60px;line-height:.9;width:146px;flex:none;text-align:center}
- .msv-stops h2{font-size:31px;line-height:1.1;letter-spacing:-.038em;font-weight:850;margin:0 0 5px;color:#13483c}
- .msv-stops p{font-size:14px;margin:0;color:#56665d;line-height:1.4}
- .msv-stop-form{display:flex;gap:8px;margin-left:164px;position:relative}
- .msv-main-search{height:43px;background:white;border:1px solid #dedfda;border-radius:11px;display:flex;align-items:center;flex:1;min-width:0;padding:0 14px;gap:10px;box-shadow:0 3px 7px rgba(37,56,44,.04)}
- .msv-main-search:focus-within{border-color:#207354;box-shadow:0 0 0 3px #d4eade}
- .msv-main-search input{outline:0;border:0;background:transparent;width:100%;min-width:0;font-size:13px;color:#173e34;font-family:inherit}
- .msv-region{white-space:nowrap;display:flex;align-items:center;gap:5px;border:1px solid #dedfda;background:#fff;padding:0 12px;border-radius:11px;font-size:12.4px;font-weight:690}
- .msv-go{border:0;background:#0d5848;color:white;border-radius:11px;padding:0 19px;white-space:nowrap;font-size:12.2px;font-weight:760;cursor:pointer}
- .msv-go:hover{background:#084637}
- .msv-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin:11px 0 0 164px}
- .msv-tags a{min-height:33px;display:inline-flex;align-items:center;justify-content:center;gap:5px;background:#fffdf8;border:1px solid #dddcd1;padding:7px 13px;border-radius:999px;box-shadow:0 2px 4px rgba(45,54,33,.035);font-size:11.4px;font-weight:750;white-space:nowrap}
- .msv-tags a:first-child,.msv-tags a:hover{background:#0d5b48;color:#fff;border-color:#0d5b48}
- .msv-shortcuts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:13px}
- .msv-small-card{min-height:74px;display:flex;align-items:center;gap:11px;min-width:0;border-radius:14px;border:1px solid rgba(41,77,58,.08);padding:14px 18px;box-shadow:0 5px 15px rgba(35,57,41,.045);transition:transform .17s,box-shadow .17s}
- .msv-small-card:nth-child(1){background:#e6f0e9}.msv-small-card:nth-child(2){background:#e8f4f9}.msv-small-card:nth-child(3){background:#f0f5ed}.msv-small-card:nth-child(4){background:#fdf0e1}
- .msv-small-ico{font-size:32px;line-height:1;flex:none}.msv-small-copy{flex:1;min-width:0}.msv-small-copy strong{display:block;font-weight:790;font-size:14px}.msv-small-copy small{display:block;color:#64746b;font-size:10.7px;line-height:1.3;margin-top:2px}
- .msv-featured{margin-top:22px}
- .msv-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:16px}
- .msv-section-head h2{font-size:22px;font-weight:850;letter-spacing:-.035em;margin:0}
- .msv-section-head a{font-weight:750;font-size:12px;color:#0c604c;text-decoration:underline;text-underline-offset:3px}
- .msv-gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
- .msv-photo-card{border:1px solid #e5e9e4;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(31,54,41,.055);transition:transform .17s,box-shadow .17s;min-width:0;position:relative}
- .msv-photo-link{display:block;min-width:0}.msv-photo-card img{display:block;width:100%;height:125px;object-fit:cover;background:#e0ece6}
- .msv-photo-details{padding:10px 10px 13px;min-height:64px}.msv-photo-details strong{font-size:12px;font-weight:820;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.msv-photo-details small{font-size:10.3px;line-height:1.3;color:#647268;display:block;margin-top:4px}
- .msv-heart{position:absolute;top:7px;right:7px;display:grid;place-items:center;border:1px solid #e2e8df;border-radius:50%;background:#fffdfbec;color:#194e3c;font-size:23px;width:33px;height:33px;cursor:pointer;line-height:1;box-shadow:0 2px 5px #1d3c2b22}
- .msv-heart[aria-pressed="true"]{color:#cf4d58;background:#fff5f5}
- .msv-photo-card[hidden]{display:none!important}
- .msv-no-favs{display:none;padding:16px;border:1px solid #e7e8dc;background:#f9fbf7;border-radius:10px;font-size:14px}
- .msv-results{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:250;max-height:340px;overflow:auto;border:1px solid #dce5dc;border-radius:12px;background:#fff;box-shadow:0 15px 28px rgba(23,55,39,.18)}
- .msv-results.is-open{display:block}
- .msv-results a{display:flex;flex-direction:column;padding:11px 13px;border-bottom:1px solid #eef2ee;font-size:12px;font-weight:740}
- .msv-results a:hover,.msv-results a:focus{background:#eef8f0;outline:0}
- .msv-results a:last-child{border-bottom:0}
- .msv-results small{font-size:11px;font-weight:470;color:#607269;margin-top:3px}
- .msv-credits{font-size:10.4px;line-height:1.6;color:#75837a;margin:23px 2px 0}
- .msv-credits a{text-decoration:underline;text-underline-offset:2px}
- .ms-v315-only a:focus-visible,.ms-v315-only button:focus-visible{outline:3px solid #d78d45;outline-offset:3px}
-}
-@media screen and (min-width:980px) and (max-width:1199px){
- .msv-header-inner{width:calc(100% - 34px);gap:16px}
- .msv-brand{min-width:160px;font-size:16px}.msv-brand-icon{width:47px}.msv-nav{gap:10px}.msv-nav a{font-size:10.7px}.msv-head-search{width:155px}.msv-header-actions{gap:9px}
- .msv-main{width:calc(100% - 38px)}.msv-hero-content{width:calc(100% - 38px)}
- .msv-primary-card{gap:7px;padding:12px 9px}.msv-icon{width:54px;flex-basis:54px;font-size:37px}.msv-card-copy strong{font-size:13.5px}.msv-card-copy small{font-size:10.5px}.msv-arr{font-size:15px}
- .msv-road{width:85px;font-size:48px}.msv-stop-form,.msv-tags{margin-left:103px}
- .msv-small-card{padding:10px}.msv-small-ico{font-size:25px}.msv-small-copy strong{font-size:12px}.msv-small-copy small{font-size:10px}
- .msv-photo-card img{height:115px}
-}
-@media (prefers-reduced-motion:reduce){.ms-v315-only *{scroll-behavior:auto!important;transition:none!important}}
-</style>
-<link rel="stylesheet" href="etusivu-mobiili-v344.css?v=346">
-<link rel="stylesheet" href="desktop-etusivu-v350.css?v=350">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#153f33">
+  <meta name="description" content="Matkaile Suomessa – löydä Suomen paikkakunnat, yöpymispaikat, nähtävyydet ja kiinnostavat pysähdykset.">
+  <title>Matkaile Suomessa – Vapaus kulkea · Ilo löytää</title>
+  <link rel="stylesheet" href="etusivu-laadukas-v352.css?v=352">
+  <script defer src="kunnat-v200.js"></script>
+  <script defer src="suomi-kunnat-v253.js?v=253"></script>
+  <script defer src="etusivu-laadukas-v352.js?v=352"></script>
 </head>
-<body data-home="true">
-<div class="ms-v315-only" id="ms-v315-desktop">
- <header class="msv-header"><div class="msv-header-inner">
- <a class="msv-brand" href="index.html" aria-label="Matkaile Suomessa etusivu"><span class="msv-brand-icon"><svg viewBox="0 0 60 48" aria-hidden="true"><path d="M4 34l8-14 8 14H4Z" fill="#449977"/><path d="M9 28l9-20 9 20H9Z" fill="#2f795f"/><path d="M19 35l10-22 10 22H19Z" fill="#206d54"/><path d="M36 34l8-17 8 17H36Z" fill="#3a9770"/><path d="M1 39c15-9 34 9 58 0" stroke="#287bac" stroke-width="3.8"/><circle cx="48" cy="9" r="6" fill="#f7be56" stroke="none"/></svg></span><span>Matkaile<br>Suomessa</span></a>
- <nav class="msv-nav" aria-label="Tietokoneversion päävalikko">
- <a href="index.html" aria-current="page">Koti</a><a href="maakunnat.html">Paikkakunnat</a><a href="leirintaalueet.html">Yöpymispaikat</a><a href="pysahdy-matkalla.html">Pysähdy matkalla</a><a href="saariston-rengastie.html">Saariston rengastie</a>
- </nav>
- <div class="msv-header-actions"><div class="msv-search-wrap">
- <form class="msv-head-search" data-msv-form="top" role="search"><span aria-hidden="true">⌕</span><input type="search" data-msv-search="top" placeholder="Hae kohteita, paikkakuntia…" autocomplete="off" aria-label="Hae kohteita ja paikkakuntia" aria-controls="msv-top-results" aria-expanded="false"></form><div class="msv-results" id="msv-top-results" role="listbox" aria-label="Hakuehdotukset"></div>
- </div><button type="button" class="msv-favs-toggle" id="msv-favs-toggle" aria-pressed="false" title="Näytä tallennetut suosikit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.8a5.2 5.2 0 0 0-7.4 0L12 6.2l-1.4-1.4a5.2 5.2 0 1 0-7.4 7.4l8.8 8.7 8.8-8.7a5.2 5.2 0 0 0 0-7.4Z"/></svg>Suosikit <span id="msv-fav-count"></span></button></div>
- </div></header>
- <section class="msv-hero" aria-label="Matkaile Suomessa - maisema"><div class="msv-hero-content"><h1>Matkaile Suomessa</h1><p class="msv-tagline">Vapaus kulkea · Ilo löytää</p><p class="msv-subhead">Parhaat paikat, pysähdykset ja elämykset<br>unohtumattomiin kotimaan matkoihin.</p></div></section>
- <main class="msv-main">
- <section class="msv-primary" aria-label="Tutustu matkailusivustoon">
- <a class="msv-primary-card" href="maakunnat.html"><span class="msv-icon" aria-hidden="true">🗺️</span><span class="msv-card-copy"><strong>Paikkakunnat</strong><small>Tutustu kuntiin ja paikkakuntiin ympäri Suomen</small></span><span class="msv-arr" aria-hidden="true">→</span></a>
- <a class="msv-primary-card" href="leirintaalueet.html"><span class="msv-icon" aria-hidden="true">🏕️</span><span class="msv-card-copy"><strong>Yöpymispaikat</strong><small>Leirintäalueet ja matkaparkit samassa haussa</small></span><span class="msv-arr" aria-hidden="true">→</span></a>
- <a class="msv-primary-card" href="lahella-minua.html"><span class="msv-icon" aria-hidden="true">📍</span><span class="msv-card-copy"><strong>Lähellä minua</strong><small>Löydä kiinnostavat kohteet läheltä</small></span><span class="msv-arr" aria-hidden="true">→</span></a>
- </section>
- <section class="msv-stops" aria-labelledby="msv-stops-title">
- <div class="msv-stops-head"><div><h2 id="msv-stops-title">Pysähdy matkalla</h2><p>Nähtävyydet, luonto, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat.</p></div></div>
- <div class="msv-stop-form"><div class="msv-search-wrap" style="flex:1;min-width:0"><form class="msv-main-search" data-msv-form="main" role="search"><span aria-hidden="true">⌕</span><input type="search" data-msv-search="main" placeholder="Hae kohdetta, esim. Fiskars, Vääksy tai kahvila…" autocomplete="off" aria-label="Hae pysähdyspaikkaa" aria-controls="msv-main-results" aria-expanded="false"></form><div class="msv-results" id="msv-main-results" role="listbox" aria-label="Hakuehdotukset"></div></div><span class="msv-region" aria-label="Haku koko Suomen alueelta">⌖ Koko Suomi</span><button type="button" class="msv-go" id="msv-find-button">Hae kohteita →</button></div>
- <div class="msv-tags" aria-label="Pysähdyskohteiden kategoriat"><a href="pysahdy-matkalla.html">Kaikki</a><a href="pysahdy-matkalla.html">Nähtävyydet</a><a href="pysahdy-matkalla.html">Luonto ja retket</a><a href="pysahdy-matkalla.html">Taukopaikat</a><a href="ruukkikylat.html">Ruukkikylät</a><a href="pysahdy-matkalla.html">Kahvilat ja ravintolat</a></div>
- </section>
- <section class="msv-shortcuts" aria-label="Lisää matkailuoppaan palveluita">
- <a id="msv-route-link" class="msv-small-card" href="reittisuunnittelu.html"><span class="msv-small-ico" aria-hidden="true">🧭</span><span class="msv-small-copy"><strong>Suunnittele reitti</strong><small>Suunnittele oma matkareittisi</small></span><span aria-hidden="true">→</span></a>
- <a class="msv-small-card" href="saariston-rengastie.html"><span class="msv-small-ico" aria-hidden="true">⛴️</span><span class="msv-small-copy"><strong>Saariston rengastie</strong><small>Lautat, reitti ja saariston kohteet</small></span><span aria-hidden="true">→</span></a>
- <a class="msv-small-card" href="paivakirja.html"><span class="msv-small-ico" aria-hidden="true">🏞️</span><span class="msv-small-copy"><strong>Omat matkat</strong><small>Tallenna suosikit ja matkamuistot</small></span><span aria-hidden="true">→</span></a>
- <a class="msv-small-card" href="#msv-featured" id="msv-fav-shortcut"><span class="msv-small-ico" aria-hidden="true">⭐</span><span class="msv-small-copy"><strong>Suosikit</strong><small>Tallentamasi kiinnostavat kohteet</small></span><span aria-hidden="true">→</span></a>
- </section>
- <section class="msv-featured" id="msv-featured" aria-labelledby="msv-featured-title"><div class="msv-section-head"><h2 id="msv-featured-title">Suosittuja kohteita</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet →</a></div><p class="msv-no-favs" id="msv-no-favs">Et ole vielä lisännyt suosikkeja. Voit tallentaa kohteen painamalla sen sydäntä.</p><div class="msv-gallery"><article class="msv-photo-card" data-msv-id="0">
- <a class="msv-photo-link" href="savonlinna.html" aria-label="Tutustu: Savonlinna"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Olavinlinna_Savonlinna_Finland.jpg?width=500" alt="Valokuva: Savonlinna" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Savonlinna</strong><small>Historiallinen linna ja järvimaisemat</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="0" aria-label="Lisää suosikkeihin: Savonlinna" aria-pressed="false">♡</button>
- </article><article class="msv-photo-card" data-msv-id="1">
- <a class="msv-photo-link" href="saariston-rengastie.html" aria-label="Tutustu: Saariston rengastie"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Turku_Archipelagoan_view.jpg?width=500" alt="Valokuva: Saariston rengastie" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Saariston rengastie</strong><small>Merellisiä reittejä ja saaristoa</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="1" aria-label="Lisää suosikkeihin: Saariston rengastie" aria-pressed="false">♡</button>
- </article><article class="msv-photo-card" data-msv-id="2">
- <a class="msv-photo-link" href="ruukkikylat.html#fiskars" aria-label="Tutustu: Fiskars"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Scenary_of_the_Fiskars.jpg?width=500" alt="Valokuva: Fiskars" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Fiskars</strong><small>Tunnelmallinen ruukkikylä</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="2" aria-label="Lisää suosikkeihin: Fiskars" aria-pressed="false">♡</button>
- </article><article class="msv-photo-card" data-msv-id="3">
- <a class="msv-photo-link" href="pysahdy-matkalla.html" aria-label="Tutustu: Kolin kansallispuisto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Koli_view_01.jpg?width=500" alt="Valokuva: Kolin kansallispuisto" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Kolin kansallispuisto</strong><small>Kansallismaisemat ja retkeilyreitit</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="3" aria-label="Lisää suosikkeihin: Kolin kansallispuisto" aria-pressed="false">♡</button>
- </article><article class="msv-photo-card" data-msv-id="4">
- <a class="msv-photo-link" href="maakunnat.html" aria-label="Tutustu: Puumalan satama"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Puumala_Harbour.jpg?width=500" alt="Valokuva: Puumalan satama" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Puumalan satama</strong><small>Saimaan maisemat ja palvelut</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="4" aria-label="Lisää suosikkeihin: Puumalan satama" aria-pressed="false">♡</button>
- </article><article class="msv-photo-card" data-msv-id="5">
- <a class="msv-photo-link" href="pysahdy-matkalla.html" aria-label="Tutustu: Yyterin hiekkarannat"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Porin_Yyteri_hiekkarantaa_JHo04_2008.JPG?width=500" alt="Valokuva: Yyterin hiekkarannat" loading="lazy" referrerpolicy="no-referrer"><div class="msv-photo-details"><strong>⌖ Yyterin hiekkarannat</strong><small>Hiekkaa, merta ja luontoa</small></div></a>
- <button type="button" class="msv-heart" data-msv-favorite="5" aria-label="Lisää suosikkeihin: Yyterin hiekkarannat" aria-pressed="false">♡</button>
- </article></div></section>
- <footer class="msv-credits"><strong>Kuvat:</strong> <a href="https://commons.wikimedia.org/wiki/File:Olavinlinna_Savonlinna_Finland.jpg" target="_blank" rel="noopener noreferrer">Savonlinna</a> — HENKKA5, CC0 · <a href="https://commons.wikimedia.org/wiki/File:Turku_Archipelagoan_view.jpg" target="_blank" rel="noopener noreferrer">Saariston rengastie</a> — ZeroOne / Ville Saalo, CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Scenary_of_the_Fiskars.jpg" target="_blank" rel="noopener noreferrer">Fiskars</a> — Pöllö, CC BY 3.0 · <a href="https://commons.wikimedia.org/wiki/File:Koli_view_01.jpg" target="_blank" rel="noopener noreferrer">Kolin kansallispuisto</a> — aiko99ann, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Puumala_Harbour.jpg" target="_blank" rel="noopener noreferrer">Puumalan satama</a> — Eckardt Guenther, CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Porin_Yyteri_hiekkarantaa_JHo04_2008.JPG" target="_blank" rel="noopener noreferrer">Yyterin hiekkarannat</a> — J Hokkanen, CC BY-SA 4.0. Kuvat Wikimedia Commonsista; kuvia rajattu korttinäkymään. Etusivun maisemakuva on sivuston oma aiempi kuva.</footer>
- </main></div>
-  
-  <main class="home-shell">
-    <header class="hero">
-      <div class="hero-content">
-        <img class="home-brand-banner-v290"
-             src="matkaile-suomessa-logo-v296.webp"
-             width="1438" height="398"
-             alt="Matkaile Suomessa – Vapaus kulkea · Ilo löytää"
-             fetchpriority="high" decoding="async">
-        <h1 class="home-accessible-title-v290">Matkaile Suomessa – karavaanarin opas</h1>
-        <p class="home-hero-lead-v290">Löydä yöpymispaikat ja elämykset tien päällä.</p>
-        <div class="hero-stats" aria-label="Oppaan sisältö">
-          <span id="v243-stay-count" aria-live="polite">Yöpymispaikkoja</span>
-          <span id="v243-town-count" aria-live="polite">Kuntia oppaassa</span>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-map" viewBox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"/></symbol>
+    <symbol id="icon-bed" viewBox="0 0 24 24"><path d="M3 5v15m0-4h18v4m-18-6V9h18v7M6 9V7h6v2M14 9V7h5v2"/></symbol>
+    <symbol id="icon-sign" viewBox="0 0 24 24"><path d="M12 22V2M5 5h14l3 3-3 3H5zm14 8H5l-3 3 3 3h14z"/></symbol>
+    <symbol id="icon-coast" viewBox="0 0 24 24"><path d="M2 17c3-3 6-3 9 0s6 3 11 0M2 21c3-3 6-3 9 0s6 3 11 0M3 13 9 3l3 5 3-3 6 8"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h7a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h8"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.7a5.3 5.3 0 0 0-7.4 0L12 6.1l-1.4-1.4a5.3 5.3 0 1 0-7.4 7.5l8.8 8.5 8.8-8.5a5.3 5.3 0 0 0 0-7.5Z"/></symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3zM9 21v-7h6v7"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v15"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Matkaile Suomessa, etusivu">
+        <svg class="brand-mark" viewBox="0 0 60 48" role="img" aria-label="Metsä ja järvi"><path d="M4 33 17 11l8 13 7-10 13 19H4Z" fill="#5b9f76"/><path d="m23 32 13-24 14 24H23Z" fill="#16543e"/><path d="m44 31 8-15 6 15H44Z" fill="#337458"/><path d="M3 39c17-8 34 8 54 0" fill="none" stroke="#1689b5" stroke-width="4" stroke-linecap="round"/></svg>
+        <span class="brand-words"><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Päävalikko">
+        <a href="index.html" aria-current="page">Koti</a>
+        <a href="maakunnat.html">Paikkakunnat</a>
+        <a href="leirintaalueet.html">Yöpymispaikat</a>
+        <a href="pysahdy-matkalla.html">Pysähdy matkalla</a>
+        <a href="saariston-rengastie.html">Saariston rengastie</a>
+        <a href="paivakirja.html">Omat matkat</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-favorites" href="suosikit.html"><svg><use href="#icon-heart"/></svg><span>Suosikit</span></a>
+        <a class="header-search" href="#kohdehaku" aria-label="Siirry hakuun"><svg><use href="#icon-search"/></svg></a>
+      </div>
+      <details class="mobile-menu">
+        <summary aria-label="Avaa sivuston valikko"><svg><use href="#icon-menu"/></svg></summary>
+        <nav aria-label="Lisävalikko">
+          <a href="leirintaalueet.html">Yöpymispaikat</a>
+          <a href="saariston-rengastie.html">Saariston rengastie</a>
+          <a href="reittisuunnittelu.html">Suunnittele reitti</a>
+          <a href="lahella-minua.html">Lähellä minua</a>
+          <a href="suosikit.html">Suosikit</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <h1 id="hero-title">Matkaile Suomessa</h1>
+      <p class="hero-script">Vapaus kulkea · Ilo löytää</p>
+      <p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
+    </div>
+  </section>
+
+  <main class="page-main" id="main">
+    <section class="search-panel" id="kohdehaku" aria-label="Hae kohteita">
+      <form id="homepage-search" role="search" autocomplete="off">
+        <div class="search-field-wrap">
+          <svg class="search-field-icon"><use href="#icon-search"/></svg>
+          <label for="destination-search" class="sr-only">Hae kohdetta tai paikkakuntaa</label>
+          <input id="destination-search" type="search" placeholder="Hae kohdetta, esimerkiksi Fiskars, Vääksy tai kahvila…" aria-controls="home-search-results" aria-expanded="false" autocomplete="off">
+          <div class="suggestions" id="home-search-results" role="listbox" hidden></div>
         </div>
-        
+        <button type="submit" class="search-submit">Hae kohteita <svg><use href="#icon-arrow"/></svg></button>
+      </form>
+      <div class="quick-categories" aria-label="Etsi kohdeluokan mukaan">
+        <a class="selected" href="pysahdy-matkalla.html">Kaikki</a>
+        <a href="pysahdy-matkalla.html?tyyppi=sight">Nähtävyydet</a>
+        <a href="pysahdy-matkalla.html?tyyppi=nature">Luonto ja retket</a>
+        <a href="pysahdy-matkalla.html?tyyppi=stop">Taukopaikat</a>
+        <a href="pysahdy-matkalla.html?tyyppi=food">Kahvilat ja ravintolat</a>
       </div>
-    </header>
-
-    
-
-    
-
-    <!-- v256: yksi yhteinen maakuntaluettelo, ei päällekkäisiä maakuntavalintoja etusivulla. -->
-    <section class="section home-explore-v251" aria-labelledby="home-explore-heading">
-      <div class="home-explore-top-v251">
-        <div>
-          <h2 id="home-explore-heading">Minne matka vie?</h2>
-          <p class="home-search-intro-v290">Hae kuntaa, maakuntaa tai kohdetta.</p>
-        </div>
-      </div>
-      <div class="search-box home-explore-search-v251">
-        <label for="place-search" class="home-explore-label-v251 home-search-label-v290">Hae kuntaa, maakuntaa tai kohdetta</label>
-        <input id="place-search" type="search" placeholder="Esim. Tuuri, Vääksy tai Levi" autocomplete="off">
-        <span class="search-symbol" aria-hidden="true">⌕</span>
-      </div>
-      <div class="search-results" id="search-results" aria-live="polite"></div>
     </section>
 
-    <section class="section home-primary-links-v290" aria-label="Tutustu matkailukohteisiin">
-      <div id="home-scope-v255" class="home-scope-v255" hidden aria-live="polite">
-        <span>Valittu maakunta: <strong id="home-scope-label-v255"></strong></span>
-        <button id="home-clear-region-v255" type="button">Näytä koko Suomi</button>
-      </div>
-      <div class="menu">
-        <a href="maakunnat.html" aria-label="Paikkakunnat"><strong>Paikkakunnat</strong></a>
-        <a href="leirintaalueet.html" aria-label="Leirintäalueet"><strong>Leirintäalueet</strong></a>
-        <a href="matkaparkit.html" aria-label="Matkaparkit"><strong>Matkaparkit</strong></a>
-        <a href="lahella-minua.html" aria-label="Lähellä minua"><strong>Lähellä minua</strong></a>
-        <a id="travel-stop-v268" href="pysahdy-matkalla.html" aria-label="Pysähdy matkalla – nähtävyydet, luonto, taukopaikat, ruukkikylät, kahvilat ja ravintolat"><span class="choice-icon" aria-hidden="true">🚗</span><span><strong>Pysähdy matkalla</strong><small>Nähtävyydet, luonto, taukopaikat ja makuelämykset</small></span><span class="choice-arrow" aria-hidden="true">→</span></a>
-        
-      </div>
+    <section class="main-categories" aria-label="Matkailupalvelut">
+      <a class="category-card" href="maakunnat.html"><svg><use href="#icon-pin"/></svg><span class="category-copy"><strong>Paikkakunnat</strong><span>Tutustu kuntiin ja paikkakuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
+      <a class="category-card" href="leirintaalueet.html"><svg><use href="#icon-bed"/></svg><span class="category-copy"><strong>Yöpymispaikat</strong><span>Leirintäalueet ja matkaparkit samassa haussa</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
+      <a class="category-card" href="pysahdy-matkalla.html"><svg><use href="#icon-sign"/></svg><span class="category-copy"><strong>Pysähdy matkalla</strong><span>Nähtävyydet, luonto, taukopaikat ja ravintolat</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
+      <a class="category-card" href="saariston-rengastie.html"><svg><use href="#icon-coast"/></svg><span class="category-copy"><strong>Saariston rengastie</strong><span>Lautat, reitti ja saariston kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
     </section>
-    <a class="v244-memories" href="paivakirja.html"><span aria-hidden="true">📖</span><span><strong>Omat matkat</strong><small id="v245-trips-summary">Tallenna matkojen kuvat, muistiinpanot ja muistot.</small></span><span aria-hidden="true">→</span></a>
-    <p class="later-note">Opas täydentyy vähitellen. Reittisuunnittelu tulee myöhemmin.</p>
+
+    <section class="route-panel" aria-labelledby="route-title">
+      <svg class="route-icon"><use href="#icon-route"/></svg>
+      <div><h2 id="route-title">Suunnittele reitti</h2><p>Suunnittele oma matkareittisi ja löydä kiinnostavat kohteet matkan varrelta.</p><a class="nearby-link" href="lahella-minua.html">Löydä kohteita läheltäsi →</a></div>
+      <a href="reittisuunnittelu.html">Avaa reittisuunnittelu <svg><use href="#icon-arrow"/></svg></a>
+    </section>
+
+    <section class="destinations" aria-labelledby="destination-title">
+      <div class="destinations-heading"><h2 id="destination-title">Suosittuja kohteita</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet <span aria-hidden="true">→</span></a></div>
+      <p class="destinations-intro">Muutama idea seuraavalle matkalle – ilman turhia kuvakaruselleja.</p>
+      <div class="destination-links" id="home-destination-links">
+        <article data-id="0"><a href="savonlinna.html"><strong>Savonlinna</strong><small>Historiallinen linna ja järvimaisemat</small></a><button type="button" data-fav="0" aria-label="Tallenna Savonlinna suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+        <article data-id="1"><a href="saariston-rengastie.html"><strong>Saariston rengastie</strong><small>Merellisiä reittejä ja saaristoa</small></a><button type="button" data-fav="1" aria-label="Tallenna Saariston rengastie suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+        <article data-id="2"><a href="ruukkikylat.html#fiskars"><strong>Fiskars</strong><small>Ruukkikylä, käsityöt ja kulttuuri</small></a><button type="button" data-fav="2" aria-label="Tallenna Fiskars suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+        <article data-id="3"><a href="koli.html"><strong>Kolin kansallispuisto</strong><small>Kansallismaisemat ja retkeilyreitit</small></a><button type="button" data-fav="3" aria-label="Tallenna Koli suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+        <article data-id="4"><a href="maakunnat.html"><strong>Puumalan satama</strong><small>Saimaan maisemat ja palvelut</small></a><button type="button" data-fav="4" aria-label="Tallenna Puumalan satama suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+        <article data-id="5"><a href="yyteri.html"><strong>Yyterin hiekkarannat</strong><small>Hiekkaa, merta ja luontoa</small></a><button type="button" data-fav="5" aria-label="Tallenna Yyteri suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
+      </div>
+      <button type="button" class="saved-filter" id="home-saved-filter" aria-pressed="false">Näytä vain tallentamani kohteet</button>
+      <p id="home-empty-favorites" hidden>Et ole vielä tallentanut kohteita. Paina kohteen sydänkuvaketta.</p>
+    </section>
+    <footer class="page-footer">Matkaile Suomessa · Vapaus kulkea · Ilo löytää</footer>
   </main>
 
-  <nav class="site-nav" aria-label="Päävalikko"><div class="site-nav-inner"><a href="index.html" aria-current="page"><span aria-hidden="true">⌂</span>Koti</a><a href="yopyminen.html"><span aria-hidden="true">🚐</span>Yöpyminen</a><a href="maakunnat.html"><span aria-hidden="true">🗺️</span>Paikkakunnat</a></div></nav>
-
-  <script>
-    const places = [
-      {"name": "Ruukkikylät", "meta": "Nähtävää · Historialliset ruukit", "url": "ruukkikylat.html"},
-      {"name": "Fiskarsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#fiskars"},
-      {"name": "Billnäsin ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#billnas"},
-      {"name": "Mustion ruukki", "meta": "Raasepori · Ruukkikylä", "url": "ruukkikylat.html#mustio"},
-      {"name": "Fagervikin ruukki", "meta": "Inkoo · Ruukkikylä", "url": "ruukkikylat.html#fagervik"},
-      {"name": "Strömforsin ruukki", "meta": "Loviisa · Ruukkikylä", "url": "ruukkikylat.html#stromfors"},
-      {"name": "Högforsin ruukki", "meta": "Karkkila · Ruukkikylä", "url": "ruukkikylat.html#hogfors"},
-      {"name": "Mathildedalin ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#mathildedal"},
-      {"name": "Teijon ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#teijo"},
-      {"name": "Kirjakkalan ruukki", "meta": "Salo · Ruukkikylä", "url": "ruukkikylat.html#kirjakkala"},
-      {"name": "Taalintehtaan ruukkikylä", "meta": "Kemiönsaari · Ruukkikylä", "url": "ruukkikylat.html#taalintehdas"},
-      {"name": "Leineperin ruukki", "meta": "Ulvila · Ruukkikylä", "url": "ruukkikylat.html#leineperi"},
-      {"name": "Noormarkun ruukki", "meta": "Pori · Ruukkikylä", "url": "ruukkikylat.html#noormarkku"},
-      {"name": "Kauttuan Ruukinpuisto", "meta": "Eura · Ruukkikylä", "url": "ruukkikylat.html#kauttua"},
-      {"name": "Verlan tehdaskylä", "meta": "Kouvola · Ruukkikylä", "url": "ruukkikylat.html#verla"},
-      {"name": "Möhkön ruukki", "meta": "Ilomantsi · Ruukkikylä", "url": "ruukkikylat.html#mohko"},
-      {name:"Tuuri",meta:"Alavus · Keskisen Kyläkauppa ja Onnela",url:"leirintaalueet.html?haku=Tuuri"},
-      {name:"Onnela – Keskisen Kyläkauppa",meta:"Tuuri · Alavus · karavaanialue",url:"leirintaalueet.html?haku=Onnela"},
-      {name:"Töysä",meta:"Alavus · Tuuri ja lähialueet",url:"leirintaalueet.html?haku=Töysä"},
-{"name": "Hyrynsalmen kirkonkylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-hyrynsalmen-kirkonkyla"},{"name": "Kytömäki", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-kytomaki"},{"name": "Luvankylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-luvankyla"},{"name": "Moisiovaara", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-moisiovaara"},{"name": "Oravivaara", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-oravivaara"},{"name": "Tapanikylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-tapanikyla"},{"name": "Letuskylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-letuskyla"},{"name": "Hyttikylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-hyttikyla"},{"name": "Lietekylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-lietekyla"},{"name": "Hakokylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-hakokyla"},{"name": "Hoikka", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-hoikka"},{"name": "Pekankylä", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-pekankyla"},{"name": "Ilves", "meta": "Hyrynsalmi · alue", "url": "kainuu-alueet.html#hyrynsalmi-ilves"},{"name": "Ukkohalla", "meta": "Hyrynsalmi · alue", "url": "ukkohalla.html"},{"name": "Keskusta", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-keskusta"},{"name": "Yläkaupunki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-ylakaupunki"},{"name": "Tulliniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-tulliniemi"},{"name": "Armeijanlaakso", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-armeijanlaakso"},{"name": "Asemanseutu", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-asemanseutu"},{"name": "Onnela", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-onnela"},{"name": "Petäisenniska", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-petaisenniska"},{"name": "Rajavartiosto", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-rajavartiosto"},{"name": "Rajalähiö", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-rajalahio"},{"name": "Honkiräme", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-honkirame"},{"name": "Variskangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-variskangas"},{"name": "Ala-Lehtikangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-ala-lehtikangas"},{"name": "Asemantaus", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-asemantaus"},{"name": "Vanha-Lehtikangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vanha-lehtikangas"},{"name": "Vesitorninmäki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vesitorninmaki"},{"name": "Ylä-Lehtikangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-yla-lehtikangas"},{"name": "Soidinrinne", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-soidinrinne"},{"name": "Soidinsuo", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-soidinsuo"},{"name": "Laajankangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-laajankangas"},{"name": "Kylmä", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kylma"},{"name": "Keskussairaala", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-keskussairaala"},{"name": "Palokangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-palokangas"},{"name": "Hoikankangas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-hoikankangas"},{"name": "Vimpelivaara", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vimpelivaara"},{"name": "Länsi-Purola", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-lansi-purola"},{"name": "Vanha-Purola", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vanha-purola"},{"name": "Kettukallio", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kettukallio"},{"name": "Puistola", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-puistola"},{"name": "Tihisenniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-tihisenniemi"},{"name": "Lohtaja", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-lohtaja"},{"name": "Pikku-Kettu", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-pikku-kettu"},{"name": "Maasto", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-maasto"},{"name": "Syväoja", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-syvaoja"},{"name": "Huuhkajavaara", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-huuhkajavaara"},{"name": "Kulttuurikeskus", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kulttuurikeskus"},{"name": "Puomirinne", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-puomirinne"},{"name": "Kisarinne", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kisarinne"},{"name": "Heinisuo", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-heinisuo"},{"name": "Kuurnanranta", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kuurnanranta"},{"name": "Kättö", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-katto"},{"name": "Kätönlahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-katonlahti"},{"name": "Kangaspuro", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kangaspuro"},{"name": "Äkälänniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-akalanniemi"},{"name": "Vanha-Teppana", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vanha-teppana"},{"name": "Ylä-Teppana", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-yla-teppana"},{"name": "Karolineburg", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-karolineburg"},{"name": "Kuusanmäki-Pöllyvaara", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kuusanmaki-pollyvaara"},{"name": "Komiaho", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-komiaho"},{"name": "Vainio", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vainio"},{"name": "Hetteenmäki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-hetteenmaki"},{"name": "Suvantola", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-suvantola"},{"name": "Nakertaja", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-nakertaja"},{"name": "Kontiosaari", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kontiosaari"},{"name": "Paltaniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-paltaniemi"},{"name": "Hannusranta", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-hannusranta"},{"name": "Kirkkoaho", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kirkkoaho"},{"name": "Jokivarsi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-jokivarsi"},{"name": "Jormua", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-jormua"},{"name": "Kuluntalahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kuluntalahti"},{"name": "Takkaranta", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-takkaranta"},{"name": "Venäänniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-venaanniemi"},{"name": "Karankalahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-karankalahti"},{"name": "Hevossuo-Teerisuo", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-hevossuo-teerisuo"},{"name": "Sarvivaara", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-sarvivaara"},{"name": "Mainua", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-mainua"},{"name": "Lehtovaara", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-lehtovaara"},{"name": "Saaresmäki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-saaresmaki"},{"name": "Hatulanmäki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-hatulanmaki"},{"name": "Halla-aho", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-halla-aho"},{"name": "Lahnasjärvi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-lahnasjarvi"},{"name": "Vuolijoki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vuolijoki"},{"name": "Kytökoski", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kytokoski"},{"name": "Otanmäki", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-otanmaki"},{"name": "Käkisaari", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kakisaari"},{"name": "Kuusiranta", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kuusiranta"},{"name": "Vuottolahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vuottolahti"},{"name": "Koutaniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-koutaniemi"},{"name": "Vuoreslahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-vuoreslahti"},{"name": "Ounas", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-ounas"},{"name": "Parkinniemi", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-parkinniemi"},{"name": "Koski", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-koski"},{"name": "Ojanperä", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-ojanpera"},{"name": "Käkilahti", "meta": "Kajaani · alue", "url": "kainuu-alueet.html#kajaani-kakilahti"},{"name": "Kuhmon keskusta", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-kuhmon-keskusta"},{"name": "Hietaperä", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-hietapera"},{"name": "Härmänkylä", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-harmankyla"},{"name": "Iivantiira", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-iivantiira"},{"name": "Jonkeri", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-jonkeri"},{"name": "Kalliojoki", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-kalliojoki"},{"name": "Kuumu", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-kuumu"},{"name": "Kuusamonkylä", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-kuusamonkyla"},{"name": "Lauvus", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-lauvus"},{"name": "Lentiira", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-lentiira"},{"name": "Lentua", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-lentua"},{"name": "Niemiskylä", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-niemiskyla"},{"name": "Niva", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-niva"},{"name": "Saunajärvi", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-saunajarvi"},{"name": "Timoniemi", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-timoniemi"},{"name": "Vartius", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-vartius"},{"name": "Vepsä-Ahovaara", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-vepsa-ahovaara"},{"name": "Vuosanka", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-vuosanka"},{"name": "Ylä-Vieksi", "meta": "Kuhmo · alue", "url": "kainuu-alueet.html#kuhmo-yla-vieksi"},{"name": "Paltamon kirkonkylä", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-paltamon-kirkonkyla"},{"name": "Kontiomäki", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-kontiomaki"},{"name": "Härmänmäki", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-harmanmaki"},{"name": "Kivesjärvi", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-kivesjarvi"},{"name": "Melalahti", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-melalahti"},{"name": "Mieslahti", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-mieslahti"},{"name": "Uura", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-uura"},{"name": "Varisniemi", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-varisniemi"},{"name": "Vaarankylä", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-vaarankyla"},{"name": "Raappananmäki", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-raappananmaki"},{"name": "Saviranta", "meta": "Paltamo · alue", "url": "kainuu-alueet.html#paltamo-saviranta"},{"name": "Kivesvaara", "meta": "Paltamo · alue", "url": "paltamo-jattilaisenmaa.html"},{"name": "Puolangan kirkonkylä", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-puolangan-kirkonkyla"},{"name": "Askanmäki", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-askanmaki"},{"name": "Joukokylä", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-joukokyla"},{"name": "Kotila", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-kotila"},{"name": "Leipivaara", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-leipivaara"},{"name": "Lylykylä", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-lylykyla"},{"name": "Puokio", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-puokio"},{"name": "Rasi", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-rasi"},{"name": "Suolijärvi", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-suolijarvi"},{"name": "Törmänmäki", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-tormanmaki"},{"name": "Väyrylä", "meta": "Puolanka · alue", "url": "kainuu-alueet.html#puolanka-vayryla"},{"name": "Paljakka", "meta": "Puolanka · alue", "url": "paljakka.html"},{"name": "Ristijärven kirkonkylä", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-ristijarven-kirkonkyla"},{"name": "Hiisijärvi", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-hiisijarvi"},{"name": "Jokikylä", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-jokikyla"},{"name": "Koskenkylä", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-koskenkyla"},{"name": "Mustavaara", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-mustavaara"},{"name": "Pihlajavaara", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-pihlajavaara"},{"name": "Pyhännänkylä", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-pyhannankyla"},{"name": "Uva", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-uva"},{"name": "Heikkisenjoki", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-heikkisenjoki"},{"name": "Karhulankylä", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-karhulankyla"},{"name": "Saukkovaara", "meta": "Ristijärvi · alue", "url": "kainuu-alueet.html#ristijarvi-saukkovaara"},{"name": "Sotkamon kirkonkylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-sotkamon-kirkonkyla"},{"name": "Alasotkamo", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-alasotkamo"},{"name": "Heinämäki", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-heinamaki"},{"name": "Halmetvaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-halmetvaara"},{"name": "Jormaskylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-jormaskyla"},{"name": "Juholankylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-juholankyla"},{"name": "Juurikkalahti", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-juurikkalahti"},{"name": "Kaitainsalmi", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-kaitainsalmi"},{"name": "Korholanmäki", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-korholanmaki"},{"name": "Kontinjoki", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-kontinjoki"},{"name": "Laakajärvi", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-laakajarvi"},{"name": "Losovaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-losovaara"},{"name": "Naapurinvaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-naapurinvaara"},{"name": "Nuasjärvi", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-nuasjarvi"},{"name": "Ontojoki", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-ontojoki"},{"name": "Paakinmäki", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-paakinmaki"},{"name": "Parkua", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-parkua"},{"name": "Pohjavaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-pohjavaara"},{"name": "Riekinranta", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-riekinranta"},{"name": "Sapsoperä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-sapsopera"},{"name": "Saukko", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-saukko"},{"name": "Sipinen", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-sipinen"},{"name": "Sipola", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-sipola"},{"name": "Soidinvaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-soidinvaara"},{"name": "Sumsa", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-sumsa"},{"name": "Suovaara", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-suovaara"},{"name": "Tipasoja", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-tipasoja"},{"name": "Torinkylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-torinkyla"},{"name": "Tuhkakylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-tuhkakyla"},{"name": "Vuokatti", "meta": "Sotkamo · alue", "url": "vuokatti.html"},{"name": "Ylisotkamo", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-ylisotkamo"},{"name": "Ärväänkylä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-arvaankyla"},{"name": "Maanselkä", "meta": "Sotkamo · alue", "url": "kainuu-alueet.html#sotkamo-maanselka"},{"name": "Ämmänsaari", "meta": "Suomussalmi · alue", "url": "ammansaari.html"},{"name": "Suomussalmen kirkonkylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-suomussalmen-kirkonkyla"},{"name": "Hossa", "meta": "Suomussalmi · alue", "url": "hossa.html"},{"name": "Selkoskylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-selkoskyla"},{"name": "Kianta", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-kianta"},{"name": "Korpela", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-korpela"},{"name": "Lapinkylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-lapinkyla"},{"name": "Myllylahti", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-myllylahti"},{"name": "Näljänkä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-naljanka"},{"name": "Näätälä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-naatala"},{"name": "Pesiökylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-pesiokyla"},{"name": "Piispajärvi", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-piispajarvi"},{"name": "Pyhäkylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-pyhakyla"},{"name": "Raate", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-raate"},{"name": "Ruhtinansalmi", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-ruhtinansalmi"},{"name": "Saarikylä", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-saarikyla"},{"name": "Vuokki", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-vuokki"},{"name": "Vääkiö", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-vaakio"},{"name": "Juntusranta", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-juntusranta"},{"name": "Peranka", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-peranka"},{"name": "Vaaranniva", "meta": "Suomussalmi · alue", "url": "kainuu-alueet.html#suomussalmi-vaaranniva"},
-{"name": "Hyrynsalmi", "meta": "Kunta", "url": "hyrynsalmi.html"},{"name": "Puolanka", "meta": "Kunta", "url": "puolanka.html"},{"name": "Ristijärvi", "meta": "Kunta", "url": "ristijarvi.html"},{"name": "Suomussalmi", "meta": "Kunta", "url": "suomussalmi.html"},{"name": "Hossa", "meta": "Suomussalmi", "url": "hossa.html"},{"name": "Paljakka", "meta": "Puolanka", "url": "paljakka.html"},{"name": "Ukkohalla", "meta": "Hyrynsalmi", "url": "ukkohalla.html"},{"name": "Komulanköngäs", "meta": "Luontokohde", "url": "hyrynsalmi-komulankongas.html"},{"name": "Hepoköngäs", "meta": "Luontokohde", "url": "puolanka-hepokongas.html"},{"name": "Camping Vonkka", "meta": "Yöpyminen", "url": "hyrynsalmi-vonkka.html"},{"name": "Ristijärven Pirtti", "meta": "Yöpyminen", "url": "ristijarvi-pirtti.html"},{"name": "Hossan Lumo", "meta": "Yöpyminen", "url": "hossa-lumo.html"},{"name": "Paljakka Lake Resort – Saunapihan matkaparkki", "meta": "Yöpyminen", "url": "paljakka-saunapiha.html"},{"name": "Tassulammen vaunualue", "meta": "Yöpyminen", "url": "paljakka-tassulampi.html"},
-{"name": "Kuhmo", "meta": "Kaupunki", "url": "kuhmo.html"},{"name": "Paltamo", "meta": "Kunta", "url": "paltamo.html"},{"name": "Sotkamo", "meta": "Kunta", "url": "sotkamo.html"},{"name": "Kajaani", "meta": "Kaupunki", "url": "kajaani.html"},{"name": "Vuokatti", "meta": "Sotkamo", "url": "vuokatti.html"},{"name": "Kainuu", "meta": "Maakunta", "url": "kainuu.html"},{"name": "Kalevala Camping", "meta": "Yöpyminen", "url": "kuhmo-kalevala-camping.html"},{"name": "Paltamo Caravan Matkaparkki", "meta": "Yöpyminen", "url": "paltamo-golf-matkaparkki.html"},{"name": "Jättiläisenmaa Camper Park", "meta": "Yöpyminen", "url": "paltamo-jattilaisenmaa.html"},{"name": "SFC-Kohtauspaikka", "meta": "Yöpyminen", "url": "kajaani-kohtauspaikka.html"},
-{"name": "Hanko", "meta": "Kaupunki", "url": "hanko.html"},{"name": "Raasepori", "meta": "Kaupunki", "url": "raasepori.html"},{"name": "Tammisaari", "meta": "Raasepori", "url": "tammisaari.html"},{"name": "Fiskars", "meta": "Raasepori", "url": "fiskars.html"},{"name": "Silversand", "meta": "Leirintäalue", "url": "hanko-silversand.html"},{"name": "Tammisaari Camping", "meta": "Leirintäalue", "url": "tammisaari-camping.html"},
-      { name: "Asikkala", meta: "Kunta", url: "asikkala.html" },
-      { name: "Heinola", meta: "Kaupunki", url: "heinola.html" },
-      { name: "Hollola", meta: "Kunta", url: "hollola.html" },
-      { name: "Lahti", meta: "Kaupunki", url: "lahti.html" },
-      { name: "Padasjoki", meta: "Kunta", url: "padasjoki.html" },
-      { name: "Päijät-Häme", meta: "Maakunta", url: "paijat-hame.html" },
-      { name: "Vääksyn kanava", meta: "Nähtävyys", url: "asikkala-vaaksyn-kanava.html" },
-      { name: "Pulkkilanharju", meta: "Luontokohde", url: "asikkala-pulkkilanharju.html" },
-      { name: "Heinäsaari", meta: "Leirintäalue", url: "heinola-heinasaari.html" },
-      { name: "Messilä", meta: "Leirintäalue", url: "hollola-messila.html" },
-      { name: "Camping Tallukka", meta: "Leirintäalue", url: "camping-tallukka.html" },
-      { name: "Camping Hennala", meta: "Leirintäalue", url: "camping-hennala.html" },
-      { name: "Camping Sysmä", meta: "Leirintäalue", url: "camping-sysma.html" },
-      { name: "Camping Telaranta", meta: "Leirintäalue", url: "camping-telaranta.html" }
-    ];
-    // v296: Leirintäalueiden ja matkaparkkien nimihaun osumat myös etusivulle.
-    for(const p of [{"name": "Silversand Camping", "meta": "Hanko · leirintäalue", "url": "leirintaalueet.html?haku=Silversand%20Camping"}, {"name": "Rastila Camping", "meta": "Helsinki · leirintäalue", "url": "leirintaalueet.html?haku=Rastila%20Camping"}, {"name": "Santalahti Resort / Lomakylä Santalahti", "meta": "Kotka · leirintäalue", "url": "leirintaalueet.html?haku=Santalahti%20Resort%20/%20Lomakyl%C3%A4%20Santalahti"}, {"name": "Lootholma", "meta": "Kustavi · leirintäalue", "url": "leirintaalueet.html?haku=Lootholma"}, {"name": "Loviisa Camping", "meta": "Loviisa · leirintäalue", "url": "leirintaalueet.html?haku=Loviisa%20Camping"}, {"name": "Naantali Camping", "meta": "Naantali · leirintäalue", "url": "leirintaalueet.html?haku=Naantali%20Camping"}, {"name": "Solliden Camping", "meta": "Parainen · leirintäalue", "url": "leirintaalueet.html?haku=Solliden%20Camping"}, {"name": "Ormnäs Camping", "meta": "Raasepori · leirintäalue", "url": "leirintaalueet.html?haku=Ormn%C3%A4s%20Camping"}, {"name": "Rauman Poroholma", "meta": "Rauma · leirintäalue", "url": "leirintaalueet.html?haku=Rauman%20Poroholma"}, {"name": "Tervakallio Camping", "meta": "Sastamala · leirintäalue", "url": "leirintaalueet.html?haku=Tervakallio%20Camping"}, {"name": "Santtioranta", "meta": "Uusikaupunki · leirintäalue", "url": "leirintaalueet.html?haku=Santtioranta"}, {"name": "Apianlahti Camping", "meta": "Valkeakoski · leirintäalue", "url": "leirintaalueet.html?haku=Apianlahti%20Camping"}, {"name": "Toivolansaari", "meta": "Ikaalinen · leirintäalue", "url": "leirintaalueet.html?haku=Toivolansaari"}, {"name": "Camping Kalajoki", "meta": "Kalajoki · leirintäalue", "url": "leirintaalueet.html?haku=Camping%20Kalajoki"}, {"name": "Kokkola Camping", "meta": "Kokkola · leirintäalue", "url": "leirintaalueet.html?haku=Kokkola%20Camping"}, {"name": "Pitkämön Canyon Camping", "meta": "Kurikka · leirintäalue", "url": "leirintaalueet.html?haku=Pitk%C3%A4m%C3%B6n%20Canyon%20Camping"}, {"name": "Merrycamping", "meta": "Merikarvia · leirintäalue", "url": "leirintaalueet.html?haku=Merrycamping"}, {"name": "Kalajärven virkistysalue", "meta": "Seinäjoki · leirintäalue", "url": "leirintaalueet.html?haku=Kalaj%C3%A4rven%20virkistysalue"}, {"name": "Seinäjoen leirintäalue", "meta": "Seinäjoki · leirintäalue", "url": "leirintaalueet.html?haku=Sein%C3%A4joen%20leirint%C3%A4alue"}, {"name": "Sysmän leirintäalue", "meta": "Sysmä · leirintäalue", "url": "leirintaalueet.html?haku=Sysm%C3%A4n%20leirint%C3%A4alue"}, {"name": "Top Camping Vaasa", "meta": "Vaasa · leirintäalue", "url": "leirintaalueet.html?haku=Top%20Camping%20Vaasa"}, {"name": "Ähtäri Camping", "meta": "Ähtäri · leirintäalue", "url": "leirintaalueet.html?haku=%C3%84ht%C3%A4ri%20Camping"}, {"name": "Koskenniemi", "meta": "Hartola · leirintäalue", "url": "leirintaalueet.html?haku=Koskenniemi"}, {"name": "Heinolan Heinäsaari", "meta": "Heinola · leirintäalue", "url": "leirintaalueet.html?haku=Heinolan%20Hein%C3%A4saari"}, {"name": "Juva Camping", "meta": "Juva · leirintäalue", "url": "leirintaalueet.html?haku=Juva%20Camping"}, {"name": "Camping Lappeenranta", "meta": "Lappeenranta · leirintäalue", "url": "leirintaalueet.html?haku=Camping%20Lappeenranta"}, {"name": "Timitraniemi Camping", "meta": "Lieksa · leirintäalue", "url": "leirintaalueet.html?haku=Timitraniemi%20Camping"}, {"name": "Manamansalo Camping", "meta": "Vaala · leirintäalue", "url": "leirintaalueet.html?haku=Manamansalo%20Camping"}, {"name": "Visulahti", "meta": "Mikkeli · leirintäalue", "url": "leirintaalueet.html?haku=Visulahti"}, {"name": "Hyvärilä", "meta": "Nurmes · leirintäalue", "url": "leirintaalueet.html?haku=Hyv%C3%A4ril%C3%A4"}, {"name": "Niemenharjun Matkailukeskus", "meta": "Pihtipudas · leirintäalue", "url": "leirintaalueet.html?haku=Niemenharjun%20Matkailukeskus"}, {"name": "Koskenselkä", "meta": "Puumala · leirintäalue", "url": "leirintaalueet.html?haku=Koskenselk%C3%A4"}, {"name": "Metsäkartano", "meta": "Rautavaara · leirintäalue", "url": "leirintaalueet.html?haku=Mets%C3%A4kartano"}, {"name": "Koivuniemi", "meta": "Rääkkylä · leirintäalue", "url": "leirintaalueet.html?haku=Koivuniemi"}, {"name": "Vuohimäki Camping", "meta": "Savonlinna · leirintäalue", "url": "leirintaalueet.html?haku=Vuohim%C3%A4ki%20Camping"}, {"name": "Hännilänsalmi Camping", "meta": "Viitasaari · leirintäalue", "url": "leirintaalueet.html?haku=H%C3%A4nnil%C3%A4nsalmi%20Camping"}, {"name": "Levilehto Apartments caravan-alue", "meta": "Kittilä · leirintäalue", "url": "leirintaalueet.html?haku=Levilehto%20Apartments%20caravan-alue"}, {"name": "Ounaskoski Camping", "meta": "Rovaniemi · leirintäalue", "url": "leirintaalueet.html?haku=Ounaskoski%20Camping"}, {"name": "Sallainen Caravan ja Mökit", "meta": "Salla · leirintäalue", "url": "leirintaalueet.html?haku=Sallainen%20Caravan%20ja%20M%C3%B6kit"}, {"name": "Camping Sodankylä Nilimella", "meta": "Sodankylä · leirintäalue", "url": "leirintaalueet.html?haku=Camping%20Sodankyl%C3%A4%20Nilimella"}, {"name": "Karhunkainalo", "meta": "Suomussalmi · leirintäalue", "url": "leirintaalueet.html?haku=Karhunkainalo"}, {"name": "Kylmäluoman retkeilykeskus", "meta": "Taivalkoski · leirintäalue", "url": "leirintaalueet.html?haku=Kylm%C3%A4luoman%20retkeilykeskus"}, {"name": "Camping Tornio", "meta": "Tornio · leirintäalue", "url": "leirintaalueet.html?haku=Camping%20Tornio"}, {"name": "Väärninsaari Lapinlahti", "meta": "Lapinlahti · matkaparkki", "url": "matkaparkit.html?haku=V%C3%A4%C3%A4rninsaari%20Lapinlahti"}, {"name": "Madetkosken maisemaparkki", "meta": "Sodankylä · matkaparkki", "url": "matkaparkit.html?haku=Madetkosken%20maisemaparkki"}, {"name": "Molpe Caravan", "meta": "Korsnäs · matkaparkki", "url": "matkaparkit.html?haku=Molpe%20Caravan"}, {"name": "Kangaskoti", "meta": "Kinnula · matkaparkki", "url": "matkaparkit.html?haku=Kangaskoti"}, {"name": "Partaharjukeskus", "meta": "Pieksämäki · matkaparkki", "url": "matkaparkit.html?haku=Partaharjukeskus"}, {"name": "Kokkolan Venekerho ry", "meta": "Kokkola · matkaparkki", "url": "matkaparkit.html?haku=Kokkolan%20Venekerho%20ry"}, {"name": "Pirttikosken kylätalo", "meta": "Pyhäjoki · matkaparkki", "url": "matkaparkit.html?haku=Pirttikosken%20kyl%C3%A4talo"}, {"name": "Hiihtokeskus Påminne", "meta": "Raasepori · matkaparkki", "url": "matkaparkit.html?haku=Hiihtokeskus%20P%C3%A5minne"}, {"name": "Pahkala–Pernun kyläyhdistyksen matkaparkki", "meta": "Kalajoki · matkaparkki", "url": "matkaparkit.html?haku=Pahkala%E2%80%93Pernun%20kyl%C3%A4yhdistyksen%20matkaparkki"}, {"name": "Vähänkyrön Kirkkosaari", "meta": "Vaasa · matkaparkki", "url": "matkaparkit.html?haku=V%C3%A4h%C3%A4nkyr%C3%B6n%20Kirkkosaari"}, {"name": "Hotelli Salpa Matkaparkki", "meta": "Luumäki · matkaparkki", "url": "matkaparkit.html?haku=Hotelli%20Salpa%20Matkaparkki"}, {"name": "Sulkavan Oravanpesät", "meta": "Sulkava · matkaparkki", "url": "matkaparkit.html?haku=Sulkavan%20Oravanpes%C3%A4t"}, {"name": "Lappajärven matkaparkki", "meta": "Lappajärvi · matkaparkki", "url": "matkaparkit.html?haku=Lappaj%C3%A4rven%20matkaparkki"}, {"name": "Heiniksen matkaparkki", "meta": "Sotkamo · matkaparkki", "url": "matkaparkit.html?haku=Heiniksen%20matkaparkki"}, {"name": "Metsä-Nummelan Tila", "meta": "Loppi · matkaparkki", "url": "matkaparkit.html?haku=Mets%C3%A4-Nummelan%20Tila"}, {"name": "Saana, Bellanranta", "meta": "Kuopio · matkaparkki", "url": "matkaparkit.html?haku=Saana%2C%20Bellanranta"}, {"name": "Tiittalan kartanon Camping sähköpaikat", "meta": "Sulkava · matkaparkki", "url": "matkaparkit.html?haku=Tiittalan%20kartanon%20Camping%20s%C3%A4hk%C3%B6paikat"}]) {
-      if(!places.some(q => q.name.toLocaleLowerCase('fi')===p.name.toLocaleLowerCase('fi'))) places.push(p);
-    }
-    const input = document.querySelector("#place-search");
-    const results = document.querySelector("#search-results");
-
-    function showResults() {
-      const query = input.value.trim().toLocaleLowerCase("fi");
-      if (!query) {
-        results.classList.remove("is-open");
-        results.innerHTML = "";
-        return;
-      }
-      const matches = places.filter(place =>
-        (place.name + " " + place.meta).toLocaleLowerCase("fi").includes(query)
-      ).slice(0, 5);
-      results.innerHTML = matches.length
-        ? matches.map(place => `<a href="${place.url}"><span>${place.name}</span><small>${place.meta}</small></a>`).join("")
-        : '<a href="maakunnat.html"><span>Selaa kaikkia maakuntia</span><small>Ei suoraa osumaa</small></a>';
-      results.classList.add("is-open");
-    }
-    input.addEventListener("input", showResults);
-    input.addEventListener("focus", showResults);
-    document.addEventListener("click", event => {
-      if (!event.target.closest(".search-box") && !event.target.closest(".search-results")) {
-        results.classList.remove("is-open");
-      }
-    });
-  </script>
-
-<script>
-// v245: näkyvä yhteys etusivun Omat matkat -kortin ja matkapäiväkirjan välillä.
-(function () {
-  function refresh() {
-    const output=document.getElementById('v245-trips-summary');
-    if (!output) return;
-    try {
-      const data=JSON.parse(localStorage.getItem('ms_trips_v2')||'[]');
-      if (!Array.isArray(data) || data.length===0) { output.textContent='Tallenna matkojen kuvat, muistiinpanot ja muistot.'; return; }
-      const last=data[0];
-      output.textContent=data.length+' tallennettua matkaa · '+(last.name||'Avaa matkapäiväkirja');
-    } catch (e) { /* Tallentamattomat matkat: näytetään alkuperäinen teksti. */ }
-  }
-  document.addEventListener('DOMContentLoaded',refresh);
-  window.addEventListener('pageshow',refresh);
-  window.addEventListener('storage',refresh);
-})();
-</script>
-
-<script id="ms-v315-desktop-script">
-(function(){
-  function start(){
-    const root=document.getElementById('ms-v315-desktop');if(!root)return;
-    const normalize=s=>(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const catalog=(typeof places!=='undefined' && Array.isArray(places)) ? places.slice():[];
-    const regions=window.msFinlandRegions2026||{};
-    const townNames=new Set(catalog.map(item=>normalize(item.name)));
-    // Vanhan hakuluettelon puute: Oulu ei näy ilman erillistä kunta-aineistoa.
-    if(!townNames.has('oulu')){catalog.push({name:'Oulu',meta:'Pohjois-Pohjanmaa · kaupunki',url:'oulu.html'});townNames.add('oulu');}
-    Object.entries(regions).forEach(([region,towns])=>{
-      (towns||[]).forEach(name=>{
-        if(townNames.has(normalize(name)))return;
-        const resolved=window.msTownUrl253?window.msTownUrl253(name):null;
-        const url=name==='Oulu'?'oulu.html':(resolved&&resolved.url||'kuntakortti.html?kunta='+encodeURIComponent(name));
-        catalog.push({name,meta:region+' · paikkakunta',url});
-        townNames.add(normalize(name));
-      });
-    });
-    // Oulun hakutulos avaa aina Oulun oman esittelysivun.
-    for(const item of catalog)if(normalize(item.name)==='oulu')item.url='oulu.html';
-    function matches(q){const needle=normalize(q).trim();if(!needle)return [];
-      return catalog.filter(x=>normalize(x.name+' '+(x.meta||'')).includes(needle)).sort((a,b)=>{
-        const ar=normalize(a.name).startsWith(needle)?0:1,br=normalize(b.name).startsWith(needle)?0:1;
-        return ar-br||a.name.localeCompare(b.name,'fi');
-      }).slice(0,7);
-    }
-    function makeItem(x){const a=document.createElement('a');a.href=x.url||'pysahdy-matkalla.html';a.setAttribute('role','option');
-      const name=document.createElement('span');name.textContent=x.name;
-      const meta=document.createElement('small');meta.textContent=x.meta||'Tutustu kohteeseen';a.append(name,meta);return a;
-    }
-    root.querySelectorAll('[data-msv-search]').forEach(input=>{
-      const key=input.dataset.msvSearch;const out=root.querySelector('#msv-'+key+'-results');const form=input.closest('form');
-      const show=()=>{out.replaceChildren();const q=input.value.trim();if(!q){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');return;}
-        const found=matches(q);
-        if(found.length){found.forEach(x=>out.appendChild(makeItem(x)))}
-        else {const a=makeItem({name:'Selaa pysähdyskohteita',meta:'Ei suoraa osumaa – avaa kohdehaku',url:'pysahdy-matkalla.html'});out.appendChild(a)}
-        out.classList.add('is-open');input.setAttribute('aria-expanded','true');
-      };
-      input.addEventListener('input',show);input.addEventListener('focus',show);
-      form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q){input.focus();return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html';});
-      input.addEventListener('keydown',e=>{if(e.key==='Escape'){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');}});
-      document.addEventListener('click',e=>{if(!input.closest('.msv-search-wrap').contains(e.target)){out.classList.remove('is-open');input.setAttribute('aria-expanded','false');}});
-    });
-    const searchButton=root.querySelector('#msv-find-button');searchButton.addEventListener('click',()=>{const inp=root.querySelector('[data-msv-search="main"]');const q=inp.value.trim();if(!q){location.href='pysahdy-matkalla.html';return;}const hit=matches(q)[0];location.href=hit?hit.url:'pysahdy-matkalla.html';});
-    /* Use the original site's native route planner link if v310 injected one. */
-    const originalRoute=document.getElementById('home-route-v306');
-    // Reittisuunnittelu pysyy sivuston sisällä.
-    const routeLink=root.querySelector('#msv-route-link'); if(routeLink)routeLink.href='reittisuunnittelu.html';
-    const storageKey='ms_v315_home_favorites';let fav=[];
-    try{const saved=JSON.parse(localStorage.getItem(storageKey)||'[]');fav=Array.isArray(saved)?saved.filter(x=>Number.isInteger(x)):[];}catch(e){}
-    const toggle=root.querySelector('#msv-favs-toggle');const short=root.querySelector('#msv-fav-shortcut');const count=root.querySelector('#msv-fav-count');const heading=root.querySelector('#msv-featured-title');const empty=root.querySelector('#msv-no-favs');let filtered=false;
-    function render(){const set=new Set(fav);const cards=root.querySelectorAll('.msv-photo-card');let visible=0;cards.forEach(card=>{const id=Number(card.dataset.msvId);const active=set.has(id);const button=card.querySelector('.msv-heart');button.textContent=active?'♥':'♡';button.setAttribute('aria-pressed',String(active));button.setAttribute('aria-label',(active?'Poista suosikeista: ':'Lisää suosikkeihin: ')+card.querySelector('.msv-photo-details strong').textContent.replace(/^⌖ /,''));card.hidden=filtered&&!active;if(!card.hidden)visible++;});count.textContent=fav.length?'('+fav.length+')':'';toggle.setAttribute('aria-pressed',String(filtered));heading.textContent=filtered?'Omat suosikkikohteet':'Suosittuja kohteita';empty.style.display=filtered&&!visible?'block':'none';}
-    root.querySelectorAll('.msv-heart').forEach(b=>b.addEventListener('click',()=>{const id=Number(b.dataset.msvFavorite);fav=fav.includes(id)?fav.filter(x=>x!==id):[...fav,id];try{localStorage.setItem(storageKey,JSON.stringify(fav));}catch(e){}render();}));
-    function changeFav(e){if(e)e.preventDefault();filtered=!filtered;render();root.querySelector('#msv-featured').scrollIntoView({behavior:'smooth',block:'center'});}
-    toggle.addEventListener('click',changeFav);short.addEventListener('click',changeFav);render();
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true});else start();
-})();
-</script>
-<script defer src="etusivu-mobiili-v344.js?v=346"></script>
+  <nav class="mobile-bottom" aria-label="Puhelimen päävalikko">
+    <a href="index.html" aria-current="page"><svg><use href="#icon-home"/></svg><span>Koti</span></a>
+    <a href="maakunnat.html"><svg><use href="#icon-map"/></svg><span>Paikkakunnat</span></a>
+    <a href="pysahdy-matkalla.html"><svg><use href="#icon-sign"/></svg><span>Pysähdy matkalla</span></a>
+    <a href="paivakirja.html"><svg><use href="#icon-book"/></svg><span>Omat matkat</span></a>
+  </nav>
 </body>
 </html>

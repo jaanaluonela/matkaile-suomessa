@@ -1,0 +1,35 @@
+MATKAILE SUOMESSA – ETUSIVUN PÄIVITYS v352
+
+Tämä päivitys toteuttaa hyväksytyn, rauhallisen matkailusivuston etusivun.
+
+Muutetut/uudet tiedostot:
+- index.html (uusi etusivu)
+- etusivu-laadukas-v352.css (uusi responsiivinen ulkoasu)
+- etusivu-laadukas-v352.js (haku, ehdotukset ja etusivun suosikit)
+
+Muita tiedostoja EI tarvitse poistaa eikä muuttaa.
+Etusivu käyttää jo sivustolla olevaa hero-etusivu.jpg-maisemakuvaa, joka
+on valmiiksi sivuston juuressa. Se ei tarvitse uutta latausta.
+
+GITHUBIIN LATAAMINEN
+1. Avaa ZIP tietokoneella ja pura se.
+2. Avaa GitHubissa matkaile-suomessa-repositorion juurikansio.
+3. Valitse Add file > Upload files.
+4. Vedä kolme yllä mainittua tiedostoa suoraan juurikansioon.
+   Älä luo ylimääräistä hakemistoa niiden ympärille.
+5. Valitse Commit changes / Vahvista muutokset.
+6. Odota 1–3 minuuttia ja päivitä sivu Ctrl+F5 (puhelimessa uusi välilehti).
+
+HUOMIOITAVAA
+- Vain etusivu muuttuu. Muut kunta-, reitti- ja palvelusivut säilyvät.
+- Leirintäalueet ja matkaparkit avautuvat edelleen yhteiseltä sivulta.
+- Etusivulla on vain yksi maisemakuva. Suosittuja kohteita näytetään
+  alempana kevyinä tekstikortteina ilman kuvakarusellia.
+- Puhelimen neljän painikkeen alavalikko säilyy.
+- Aiemmat etusivun suosikit säilyvät selaimen paikallisessa tallennuksessa.
+- Etusivun uusi haku käyttää samoja kuntatiedostoja kuin aiempi sivusto.
+- Ennen lataamista ota halutessasi kopio nykyisestä index.html:stä.
+
+Päivitys tarkistettiin tiedosto- ja kooditasolla. Paikallinen selaintestaus
+oli ympäristössä estetty, joten tarkista ulkoasu julkaisun jälkeen myös
+puhelimella.
