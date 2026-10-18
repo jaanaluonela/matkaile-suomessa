@@ -1,0 +1,28 @@
+MATKAILE SUOMESSA — V355 YHTEINEN SIVULEVEYS JA ALAVALIKKO
+
+Tama on pieneen lataukseen tarkoitettu yhteinen ulkoasupaivitys.
+Pura ZIP ja lataa seuraavat tiedostot GitHub-repositorion JUUREEN,
+korvaten samannimiset tiedostot:
+
+  alavalikko-v304.css
+  alavalikko-v304.js
+
+EI sisalla eika poista paikkakuntien HTML-sisaltoa, vaakunoita,
+matkailukohteita, tallennettuja matkoja tai valokuvia.
+
+Korjaukset:
+- 4-painikkeinen mobiilialavalikko myos vanhoilla kuntasivuilla
+- vanhat 3-painikkeiset alavalikot piiloon/pois
+- tietokoneversiossa kuntasivuille yhtenainen n. 1180 px sisaltoleveys
+- tietokoneella 4 toimintopainiketta samalla rivilla
+- mobiilissa 2x2 toimintopainikkeet
+- tietokoneversiossa ei kiinteaa alavalikkoa
+- Omat matkat -sivulle ei enaa "Lisaa suosikkeihin" -painiketta
+
+HUOM: nykyisissa HTML-sivuissa on vanha ?v=346 -versiotunniste.
+Sen vuoksi selaimeen saattaa jaada vanha tyylitiedosto valimuistiin.
+Varmempi ratkaisu on paivittaa myos HTML-viittausten versio v355.
+Erillinen laajempi v355-julkaisu sisaltaa nama viittauskorjaukset.
+Pakkauksen pienen koon vuoksi sivujen HTML-tiedostoja ei tassa ylikirjoiteta.
+
+Lataa vain tiedostot, ala ZIP-arkistoa sellaisenaan.

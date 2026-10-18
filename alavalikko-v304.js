@@ -6,6 +6,7 @@
  const href=path=>new URL(path,base).href;
  const file=(location.pathname.split('/').pop()||'index.html').toLowerCase();
  const home=file==='index.html';
+ const townPage=file==='kuntakortti.html'||!!document.querySelector('main .facts,main .ms334-facts,main .lap281-page,main .navtiles');
  const stopFiles=new Set(['pysahdy-matkalla.html','kayntikohteet.html','ruukkikylat.html']);
  const fav=file==='suosikit.html';
  // Legacy links keep functioning, but lead to the single combined search.
@@ -53,12 +54,12 @@
  function nav(){
    // Both legacy bottom bars and the previous version are removed, not layered.
    // Säilytetään tietokoneversion alkuperäinen navigointi. Mobiilissa vaihdetaan 4 linkin palkkiin.
-   if(window.matchMedia('(max-width:899px)').matches) document.querySelectorAll('.site-nav,.bottom-nav,.ms301-nav,.ms302-nav,.ms303-nav,.ms304-nav,.footnav').forEach(el=>el.remove());
+   document.querySelectorAll('.site-nav,.bottom-nav,.ms301-nav,.ms302-nav,.ms303-nav,.ms304-nav,.footnav,.lap281-footnav,.ms334-footer,.ms337-bottom,.mobile-bottom').forEach(el=>el.remove());
    const bar=elt('nav','ms302-nav');bar.setAttribute('aria-label','Sivuston päävalikko');
    const inner=elt('div','ms302-nav-inner');
    const links=[
      ['index.html','home','Koti',home],
-     ['maakunnat.html','map','Paikkakunnat',['maakunnat.html','kunnat.html'].includes(file)],
+     ['maakunnat.html','map','Paikkakunnat',(['maakunnat.html','kunnat.html'].includes(file)||townPage)],
      ['pysahdy-matkalla.html','signpost','Pysähdy matkalla',stopFiles.has(file)],
      ['paivakirja.html','book','Omat matkat',file==='paivakirja.html']
    ];
@@ -128,7 +129,7 @@
    };render();window.addEventListener('storage',render);
  }
  function saveDetail(){
-   if(home||fav||stopFiles.has(file)||['leirintaalueet.html','matkaparkit.html','maakunnat.html','lahella-minua.html','yopyminen.html'].includes(file))return;
+   if(home||fav||file==='paivakirja.html'||file==='reittisuunnittelu.html'||stopFiles.has(file)||['leirintaalueet.html','matkaparkit.html','maakunnat.html','lahella-minua.html','yopyminen.html'].includes(file))return;
    const h=document.querySelector('main h1');if(!h||document.querySelector('.ms301-save,.ms302-detail-save'))return;
    const title=h.textContent.trim();
    const u=new URL(location.href);const basePath=base.pathname;
@@ -143,9 +144,9 @@
  }
  function ms354Facts(){
   if(document.querySelector('script[data-ms354]'))return;
-  const css=document.createElement('link');css.rel='stylesheet';css.href=href('kuntatiedot-v354.css?v=354');document.head.append(css);
-  const data=document.createElement('script');data.src=href('kuntatiedot-v354-data.js?v=354');data.async=false;data.dataset.ms354='data';
-  const logic=document.createElement('script');logic.src=href('kuntatiedot-v354.js?v=354');logic.async=false;logic.dataset.ms354='logic';
+  const css=document.createElement('link');css.rel='stylesheet';css.href=href('kuntatiedot-v354.css?v=355');document.head.append(css);
+  const data=document.createElement('script');data.src=href('kuntatiedot-v354-data.js?v=355');data.async=false;data.dataset.ms354='data';
+  const logic=document.createElement('script');logic.src=href('kuntatiedot-v354.js?v=355');logic.async=false;logic.dataset.ms354='logic';
   // Browsers execute non-async dynamically inserted classic scripts in insertion order.
   document.head.append(data,logic);
  }

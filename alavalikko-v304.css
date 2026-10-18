@@ -136,3 +136,36 @@ body.ms353-unified .ms302-nav .ms302-label{font-size:clamp(10px,2.5vw,12px)!impo
  body.ms353-unified .ms302-nav{z-index:1200!important}
 }
 @media(max-width:380px){body.ms353-unified .ms353-words strong{font-size:16px}body.ms353-unified .ms353-words em{font-size:10px}body.ms353-unified .ms353-toggle{min-width:74px}}
+
+/* v355 — samankokoiset kuntaesittelyt ja vain yksi mobiilin alavalikko.
+   Sisalto-osiot, tallennetut matkat, vaakunat ja vakiluvut pysyvat ennallaan. */
+body.ms353-unified :is(.site-nav,.bottom-nav,.footnav,.ms301-nav,.ms303-nav,.ms304-nav,.lap281-footnav,.ms334-footer,.ms337-bottom,.mobile-bottom){display:none!important}
+body.ms353-unified .ms302-nav{display:block!important}
+body.ms353-unified .ms302-nav .ms302-icon svg{width:27px;height:27px}
+body.ms353-unified .ms302-nav a.ms302-active{background:#e8f3eb!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles){display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;width:100%!important;max-width:none!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles) a{min-width:0!important;display:flex!important;justify-content:center;align-items:center;text-align:center;min-height:60px;border:1px solid #d5e3d9!important;border-radius:13px!important;color:#194a3a!important;text-decoration:none!important;background:#edf5ef!important;padding:12px!important;line-height:1.35!important;font-size:clamp(14px,1.45vw,17px)!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles) a:nth-child(2){background:#f3f4e9!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles) a:nth-child(3){background:#eff4f5!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles) a:nth-child(4){background:#f5f1e9!important}
+body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles) a:hover{border-color:#a8c7b2!important;background:#e5f0e8!important}
+body.ms354-municipality :is(.ms354-identity,.ms354-return){max-width:none!important}
+body.ms354-municipality main :is(.lap282-guide,.ms334-intro,.lap281-section,.card,.panel){box-sizing:border-box}
+@media(min-width:900px){
+ body.ms353-unified .ms302-nav,body.ms354-municipality .ms302-nav{display:none!important}
+ body.ms354-municipality > main,body.ms354-municipality main.ms334-main,body.ms354-municipality main.lap281,body.ms354-municipality main.v253-wrap{
+  box-sizing:border-box!important;width:min(1180px,calc(100% - 64px))!important;max-width:1180px!important;
+  margin:0 auto!important;padding:30px 32px 66px!important;
+ }
+ body.ms354-municipality main :is(.lap282-guide,.ms334-intro,.lap281-section,.ms334-soft){max-width:none!important;width:100%!important}
+ body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles){grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+ body.ms354-municipality :is(.ms334-main,.lap281-page,.v253-wrap) :is(.lap282-guide,.ms334-intro){margin-left:0!important;margin-right:0!important}
+}
+@media(max-width:899px){
+ body.ms353-unified .ms302-nav{display:block!important}
+ body.ms354-municipality > main,body.ms354-municipality main.ms334-main,body.ms354-municipality main.lap281,body.ms354-municipality main.v253-wrap{
+  box-sizing:border-box!important;width:calc(100% - 24px)!important;max-width:760px!important;margin:0 auto!important;
+  padding:18px 8px calc(114px + env(safe-area-inset-bottom,0px))!important;
+ }
+ body.ms353-unified main :is(.quick,.ms334-quick,.lap281-menu,.navtiles){grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
