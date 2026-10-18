@@ -63,3 +63,9 @@ body .footnav{display:none!important}
   body nav.ms302-nav a[aria-current="page"]{background:#e7f3eb!important}
   body nav.ms302-nav .ms302-icon{line-height:1.06!important}
 }
+/* v345: alavalikko kuuluu vain puhelimeen. Leveä tietokoneversio ennallaan. */
+@media(min-width:900px){
+  body nav.ms302-nav{display:none!important}
+  body{padding-bottom:0!important}
+  html{scroll-padding-bottom:0!important}
+}

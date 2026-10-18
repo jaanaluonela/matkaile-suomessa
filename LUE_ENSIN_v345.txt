@@ -1,0 +1,41 @@
+MATKAILE SUOMESSA – v345 / 17.10.2026
+====================================
+Tämä on lisäys nykyiseen GitHub-sivustoon, EI uusi tyhjä sivusto.
+Sivuja, vanhoja kuntatietoja, Omat matkat -muistoja eikä tietokoneversiota poisteta.
+
+MUKANA:
+• Puhelimen etusivun v344 CSS ja JavaScript liitetään käyttöön v345-versiotunnisteella.
+• Neljän painikkeen alavalikko kaikille sivuille vain mobiiliin (tietokoneen ulkoasu säilyy).
+• Hanko, Tammisaari, Raasepori, Porvoo ja Loviisa saavat 144 kuratoitua
+  kohdemerkintää. Olemassa olevat täsmälleen samannimiset kohteet jätetään pois
+  lisäysosasta. Kaikki eivät siksi näy uutena kohteena.
+• 4 uutta Raaseporin osa-aluesivua: Karjaa, Billnäs, Pohja, Mustio (26 merkintää).
+• 308 kunnan luettelo ja vanhat puuttuvat sivut palautetaan aiemmasta varmuuskopiosta
+  vain silloin, jos niitä EI ole nykyisessä sivustossa.
+• Ei lisätä uusia valokuvia, joiden tekijänoikeutta ei ole vahvistettu.
+
+ASENNUS:
+1. GitHubissa: Code > Download ZIP ja tallenna nykyinen repositorio varmuuskopioksi.
+2. Pura tämä v345-zip omalle tietokoneellesi.
+3. GitHub > matkaile-suomessa > Add file > Upload files. Siirrä PURKAMASI
+   tiedostot kansiorakenteineen (esim. .github/workflows ja tyokalut),
+   EI PELKKÄÄ zip-tiedostoa. Säilytä kansiorakenne ja korvaa SAMANNIMISET
+   apuohjelmat, älä poista muita sivustotiedostoja.
+4. Commit changes main-haaraan. GitHub Actionsin työnkulku
+   'Palauta vanhat tiedot ja laajenna kohteet v345' käynnistyy.
+5. Varmista Actionsista vihreä valmistuminen JA Pagesin onnistunut julkaisu.
+   Jos git push epäonnistuu: Settings > Actions > General > Workflow permissions
+   > Read and write permissions. Käynnistä työnkulku sen jälkeen uudelleen.
+6. Avaa puhelimella osoitteesi loppuun ?v=345 lisättynä; Safarin vanha
+   välilehti voi käyttää aiempaa välimuistia.
+
+HUOM! GitHub ei pura zip-paketteja itsestään. Pelkkä zip-repositorion kansiossa
+EI päivitä sivua. Ilman Actions-ajon onnistumista muutos EI näy.
+
+Asennus voidaan ajaa myös itse paikallisen GitHub-repositorion juuressa:
+  python tyokalut/palauta_kunnat_v342.py
+  python tyokalut/asenna_sisallot_v345.py
+  python tyokalut/paivita_alavalikko_v341.py
+
+RAPORTTI_v345.txt syntyy ja kertoo, mitä oikeasti lisättiin.
+Tietoja ei ole julkaistu ChatGPT:stä suoraan GitHub-tilillesi.

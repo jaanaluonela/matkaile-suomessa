@@ -1,0 +1,817 @@
+{
+  "tammisaari.html": {
+    "title": "Tammisaari – lisää löydettävää",
+    "intro": "Tammisaaren historialliset puutalokorttelit, museot, merenranta ja Raaseporin saaristo. Tammisaari on osa Raaseporin kaupunkia, ei itsenäinen kunta.",
+    "source": "https://www.visitraseborg.com/fi/nae-koe/kaupunginosat-kylat/tammisaari/",
+    "groups": {
+      "🏛️ Museot, kulttuuri ja historia": [
+        [
+          "Chappe-taidemuseo",
+          "Nykytaiteen ja visuaalisen kulttuurin museo Raaseporin museon vieressä.",
+          "https://chappe.fi/"
+        ],
+        [
+          "Raaseporin museo",
+          "Paikallishistoriaa ja Helene Schjerfbeckin elämää; Museokatu 8.",
+          "https://www.visitraseborg.com/fi/suunnittele-matkasi/ryhmille/raataloi-oma-paivaohjelma/"
+        ],
+        [
+          "Porvaristalo",
+          "Raaseporin museon pihapiirin vanha kaupunkilaistalo; avoinna kausittain."
+        ],
+        [
+          "Galleria Elverket",
+          "Vaihtuvia näyttelyitä museokorttelissa."
+        ],
+        [
+          "Villa Skeppet",
+          "Alvar Aallon suunnittelema huvila ja arkkitehtuurikohde; tutustuminen opastetusti."
+        ],
+        [
+          "Tammisaaren kirkko",
+          "Vanhan kaupungin harmaakivikirkko ja rauhallinen kirkkoympäristö."
+        ],
+        [
+          "Raatihuoneentori",
+          "Tammisaaren keskustan vanha tori; toripäivät perinteisesti keskiviikkoisin ja lauantaisin."
+        ],
+        [
+          "Kuninkaankatu ja puutalokorttelit",
+          "Vanhankaupungin kujat, putiikit ja puutalokorttelit."
+        ],
+        [
+          "Bio Forum",
+          "Historiallinen elokuvateatteri vuodelta 1912."
+        ],
+        [
+          "Kulttuuritalo Karelia",
+          "Esityksiä, musiikkia ja kulttuuritapahtumia."
+        ],
+        [
+          "Helene Schjerfbeckin muistopaikat",
+          "Taidemaalarin Tammisaaren-vaiheisiin liittyviä ympäristöjä ja muistomerkkejä."
+        ],
+        [
+          "Punavankien muistomerkki",
+          "Vuoden 1918 Tammisaaren vankileirin historian muistopaikka."
+        ],
+        [
+          "Mannerheimin muistokivi",
+          "Historiallinen muistopaikka Tammisaaressa."
+        ]
+      ],
+      "🌲 Meri, luonto ja ulkoilu": [
+        [
+          "Stallörenin rantapuisto",
+          "Merellinen kaupunkipuisto keskustassa, puisto- ja leikkialueita."
+        ],
+        [
+          "Länsivallin rantakävely",
+          "Kävelyreitti vanhan kaupungin reunaa pitkin meren rannassa."
+        ],
+        [
+          "Skepparträdgården",
+          "Viehättävä puisto ja Helene Schjerfbeckin muistokello."
+        ],
+        [
+          "Högholmenin luontoalue",
+          "Ramsholmenin vieressä metsäpolkuja ja lehtometsämaisemia."
+        ],
+        [
+          "Västerbyn ulkoilualue",
+          "Tammisaaren lähistön ulkoilureittejä ja metsämaisemia."
+        ],
+        [
+          "Dagmarin puisto ja Källviken",
+          "Luonnonsuojelualue, lähde ja merimaisema Tammisaaren ja Hangon välillä.",
+          "https://www.visitraseborg.com/fi/aktiviteetit/retkeily-ja-aktiviteetit/retkeily/"
+        ],
+        [
+          "Gullön Kukkalaakso",
+          "Saaren tunnettu kukkiva puutarhakohde; tarkista yhteydet ja vierailukausi."
+        ],
+        [
+          "Jussarö",
+          "Tammisaaren saariston saari, jolla on teollisuus- ja merihistoriaa; veneellä kausittain."
+        ],
+        [
+          "Älgö ja Rödjan",
+          "Saariston kansallispuiston perinnemaisemia ja veneilijän pysähdyspaikkoja.",
+          "https://www.luontoon.fi/fi/kohteet/tammisaaren-saariston-kansallispuisto"
+        ],
+        [
+          "Tammisaaren saariston kansallispuisto",
+          "Saaristoluontoa, veneilyä ja luontoretkiä; meriyhteydet on suunniteltava etukäteen.",
+          "https://www.luontoon.fi/fi/kohteet/tammisaaren-saariston-kansallispuisto"
+        ]
+      ],
+      "🏖️ Rannat ja tekeminen lasten kanssa": [
+        [
+          "Knipanin ranta ja merimaisema",
+          "Sataman ja historiallisen ravintolan ympäristön merellinen käyntikohde."
+        ],
+        [
+          "Ramsholmenin uimaranta",
+          "Uimapaikka puistometsän ja ulkoilureittien lähellä."
+        ],
+        [
+          "Tammisaari Campingin uimaranta",
+          "Ormnäsin leirintäalueen rantaa; palvelut ja käyttöoikeus varmistettava."
+        ],
+        [
+          "Knipnäsin ranta",
+          "Rantakohde Tammisaaren läheisyydessä; tarkista sijainti ja palvelut."
+        ],
+        [
+          "Leijonapuiston leikkipaikka",
+          "Stallöreninpuiston vieressä oleva leikkipaikka."
+        ],
+        [
+          "Tammisaaren uimahalli",
+          "Sisäuintia myös sateisella säällä; tarkista aukiolot."
+        ],
+        [
+          "Tammisaaren minigolf",
+          "Perheen yhteistä tekemistä sesongin mukaan."
+        ],
+        [
+          "Melonta ja SUP Tammisaaressa",
+          "Merellisiä aktiviteetteja ja välinevuokrausta palveluntarjoajan mukaan."
+        ]
+      ],
+      "☕ Kahvilat ja ruokailu": [
+        [
+          "Ravintola Knipan",
+          "Perinteinen merellinen kesäravintola.",
+          "https://knipan.fi/"
+        ],
+        [
+          "Ravintola Fyren",
+          "Ruokailua ja merellistä tunnelmaa Tammisaaren sataman seudulla."
+        ],
+        [
+          "Ravintola Albatros",
+          "Rantapuiston ympäristön ravintola, tarkista kausi."
+        ],
+        [
+          "Niska Tammisaari",
+          "Rento ruokailupaikka Tammisaaren keskustassa."
+        ],
+        [
+          "Santa Fe Tammisaari",
+          "Ravintola- ja kahvilapysähdys keskustassa."
+        ],
+        [
+          "Lilla Skärgårdsbageriet",
+          "Pieni saaristohenkinen leipomo-/kahvilakohde; varmista toimintatilanne."
+        ],
+        [
+          "Tammisaaren torikahvilat",
+          "Keskustan torin seudulla kahvilat ja leipomot; valikoima vaihtelee."
+        ],
+        [
+          "Ektassa gastropub",
+          "Tammisaaren paikallinen ravintola- ja panimoympäristö; tarkista aukiolo."
+        ]
+      ],
+      "🚐 Yöpyminen ja satamat": [
+        [
+          "Kopparön matkailualue",
+          "Saariston leirintäalue ja mökkejä; veneily- ja saunapalveluita kausittain."
+        ],
+        [
+          "Knipnäs Gård",
+          "Majoitus- ja vierailukohde rannan tuntumassa."
+        ],
+        [
+          "Tammisaaren vierasvenesatama",
+          "Veneilijän palveluita keskustan läheisyydessä."
+        ],
+        [
+          "Tammisaaren hotellit ja B&B",
+          "Keskustan pieniä majoituksia; etsi ja varmista suoraan majoittajalta."
+        ]
+      ]
+    }
+  },
+  "hanko.html": {
+    "title": "Hanko – lisää löydettävää",
+    "intro": "Hankoniemen rannat, huvila-arkkitehtuuri, merihistoria ja luonto. Palvelut, laivayhteydet ja uimarantavarustelu voivat vaihdella vuodenaikojen mukaan.",
+    "source": "https://visithanko.fi/",
+    "groups": {
+      "🏛️ Nähtävyydet ja historia": [
+        [
+          "Hangon kirkko",
+          "Keskustan kirkko ja kaupunkimaisema."
+        ],
+        [
+          "Hangon ortodoksinen kirkko",
+          "Historiallinen ortodoksinen kirkkorakennus."
+        ],
+        [
+          "Hangon museo",
+          "Hangon paikallishistoriaa, meri- ja kylpyläkaupungin perintöä."
+        ],
+        [
+          "Hangon Rintamamuseo",
+          "Hankoniemen sotahistoriaa; museo sijaitsee Hangon ja Tammisaaren välillä.",
+          "https://www.rintamamuseo.fi/"
+        ],
+        [
+          "Vapaudenpatsas",
+          "Keskustan historiallinen muistomerkki."
+        ],
+        [
+          "Siirtolaismonumentti",
+          "Muistomerkki Hangon kansainvälisestä siirtolaisuushistoriasta."
+        ],
+        [
+          "Kuningattarenvuori ja Myrskytorni",
+          "Näköalapaikka ja rannikon historiaa Hangon keskustan läheisyydessä."
+        ],
+        [
+          "Kylpyläpuisto",
+          "Historiallinen puisto ja vanhat kylpyläajan huvilat."
+        ],
+        [
+          "Hangon Casino",
+          "Kulttuurihistoriallinen rakennus Casinon rannan vieressä."
+        ],
+        [
+          "Hangon kaupungintalon galleria",
+          "Kaupungintalon vaihtuvia näyttelyitä."
+        ],
+        [
+          "Hangon kirjaston galleria",
+          "Kirjaston näyttelytila ja kulttuuripalveluja."
+        ],
+        [
+          "Hauensuolen kalliokaiverrukset",
+          "Merihistoriallisia kaiverruksia saariston kallioilla; saavutettavuus veneellä."
+        ],
+        [
+          "Gustavsvärnin linnoitus",
+          "Linnoitussaari ja merihistoriaa; veneilykohde."
+        ],
+        [
+          "Kappelin muistokivi",
+          "Historiallinen muistomerkki."
+        ],
+        [
+          "Hiidenkirnu",
+          "Geologinen nähtävyys Hangon alueella."
+        ],
+        [
+          "Hangon vanhat huvilakorttelit",
+          "Pitsihuviloita ja vanhan kylpyläkaupungin maisemia."
+        ],
+        [
+          "Itäsataman makasiinit",
+          "Ravintoloita, venesatama ja merellistä kaupunkitunnelmaa."
+        ],
+        [
+          "Länsisatama",
+          "Satamaympäristöä ja kansainvälistä meriliikenteen historiaa."
+        ]
+      ],
+      "🏖️ Hiekkarannat": [
+        [
+          "Bellevuen uimaranta",
+          "Pitkää hiekkarantaa ja mäntymetsää."
+        ],
+        [
+          "Casinon uimaranta",
+          "Kaupungin historiallinen rantamaisema Casinon lähellä."
+        ],
+        [
+          "Tulliniemen uimaranta",
+          "Pitkä luonnonranta Hankoniemen kärjen suunnassa."
+        ],
+        [
+          "Silversandin ranta",
+          "Luonnonläheinen hiekkaranta leirintäalueen läheisyydessä."
+        ],
+        [
+          "Hangonkylän uimaranta",
+          "Lapsiperheiden rantapaikka Hangonkylässä."
+        ],
+        [
+          "Lappohjan uimaranta",
+          "Hankoon kuuluva ranta Lappohjassa; ei Tammisaaren alueella."
+        ],
+        [
+          "Furunäsin ranta",
+          "Rantaluontoa ja ulkoilua Hangossa."
+        ],
+        [
+          "Neljän Tuulen Tuvan ranta",
+          "Maisemallinen rantapysähdys kahvilan läheisyydessä."
+        ],
+        [
+          "Gunnarsinranta",
+          "Hangon paikallinen ranta-alue; tarkista uimapaikan opasteet."
+        ]
+      ],
+      "🌲 Luonto ja reitit": [
+        [
+          "Uddskatan – Suomen eteläisin kärki",
+          "Manner-Suomen eteläisin kärki; tutustu alueen kulkurajoituksiin."
+        ],
+        [
+          "Tulliniemen luontopolku",
+          "Merellinen luontoreitti dyynien ja rantojen maisemissa."
+        ],
+        [
+          "Puistovuoren Rakkauden polku",
+          "Vanha rantakallioiden kävelyreitti ja meri."
+        ],
+        [
+          "Högholmenin luontopolku Hangossa",
+          "Hankoniemen luontoalue ja ulkoilureittejä; erillinen Tammisaaren Högholmenista."
+        ],
+        [
+          "Täktomin kosteikko",
+          "Lintujen tarkkailua ja rantaluontoa."
+        ],
+        [
+          "Svanvikin luontoalue",
+          "Lintu- ja rantaluontoa Hangossa."
+        ],
+        [
+          "Tvärminnen luontokohteet",
+          "Kylä- ja rantaluontoa, osassa kohteita kulkurajoituksia."
+        ],
+        [
+          "Peikonpolku",
+          "Metsäinen luontopolku ja koko perheen retki."
+        ],
+        [
+          "Hangon kansallinen kaupunkipuisto",
+          "Laaja rantamaisemien, puistojen ja kulttuuriympäristöjen kokonaisuus."
+        ]
+      ],
+      "🧸 Lasten kanssa ja aktiviteetit": [
+        [
+          "Plagenin vesikaruselli",
+          "Matala ranta-alue ja lasten tunnettu kesäaktiviteetti."
+        ],
+        [
+          "Bulevardin leikkipuisto",
+          "Leikkipaikka Hangon keskustassa."
+        ],
+        [
+          "Feffe Park",
+          "Lapsille suunnattua ulkotekemistä; tarkista aukiolo."
+        ],
+        [
+          "Hangon skeittipuisto",
+          "Rullailua ja nuorten ulkoilua."
+        ],
+        [
+          "Hangon minigolf",
+          "Koko perheen kesätekemistä."
+        ],
+        [
+          "Kolavikenin snorklauspolku",
+          "Merenalaiseen luontoon tutustumista; tarkista turvallisuus, olosuhteet ja saavutettavuus."
+        ],
+        [
+          "Purjehdus ja melonta Hangossa",
+          "Retkiä ja välinevuokrausta paikallisilta palveluntarjoajilta."
+        ]
+      ],
+      "☕ Ruoka, majoitus ja veneilijän palvelut": [
+        [
+          "Neljän Tuulen Tupa",
+          "Tunnettu merellinen kahvila ja näköalapaikka; kausi vaihtelee."
+        ],
+        [
+          "Bryggan Hanko",
+          "Itäsataman ravintolatarjontaa."
+        ],
+        [
+          "Ravintola Segel",
+          "Venesataman ruokailupaikka; tarkista kausi."
+        ],
+        [
+          "Hangon Itäsataman vierasvenesatama",
+          "Veneilijöiden palvelut sekä sataman ravintolat."
+        ],
+        [
+          "Regatta SPA Hotel",
+          "Hotelli- ja kylpyläpalveluita Hangon keskustassa."
+        ],
+        [
+          "Villa Maija",
+          "Historialliseen huvila-alueeseen liittyvää majoitusta."
+        ],
+        [
+          "Pensionat Tellina & Thalatta",
+          "Huvilamajoitusta Hangossa."
+        ],
+        [
+          "Villa Solgården",
+          "Pieni majoituskohde Hangossa."
+        ],
+        [
+          "Silversand Resort & Camping",
+          "Leirintäalue matkailuautolle ja vaunulle; varmista sesonki ja palvelut."
+        ]
+      ]
+    }
+  },
+  "raasepori.html": {
+    "title": "Raaseporin muut kylät ja nähtävyydet",
+    "intro": "Raasepori kattaa Tammisaaren, Karjaan, Pohjan sekä monet historialliset ruukkikylät. Nämä ovat Raaseporin sisäisiä alueita eivätkä erillisiä kuntia.",
+    "source": "https://www.visitraseborg.com/fi/",
+    "groups": {
+      "🏘️ Kaupunginosat ja ruukkikylät": [
+        [
+          "Tammisaari – merellinen puukaupunki",
+          "Oma laaja Tammisaaren matkaopas: museot, rannat ja saaristo.",
+          "tammisaari.html"
+        ],
+        [
+          "Karjaan keskusta",
+          "Rautatiekaupungin palveluita, kulttuuria ja Karjaanjoen maisemia.",
+          "karjaa.html"
+        ],
+        [
+          "Pohjan kirkonkylä",
+          "Historiallista asutusta ja Pohjan seudun ruukkiympäristöjä.",
+          "pohja.html"
+        ],
+        [
+          "Billnäsin ruukki",
+          "Vanha teollisuuskylä ja Billnäsin ruukin rakennukset.",
+          "billnas.html"
+        ],
+        [
+          "Fiskarsin ruukki",
+          "Käsityötä, museoita, designia ja ruukkimiljöötä.",
+          "fiskars.html"
+        ],
+        [
+          "Antskogin ruukki",
+          "Pieni historiallinen ruukkiympäristö Fiskarsin lähiseudulla."
+        ],
+        [
+          "Åminneforsin ruukki",
+          "Entinen teollisuusyhdyskunta ja jokimaisema."
+        ],
+        [
+          "Mustion kylä",
+          "Mustion linna, puisto ja historiallinen ruukkiympäristö.",
+          "mustio.html"
+        ],
+        [
+          "Bromarv",
+          "Saaristokylä satamineen ja rantapalveluineen."
+        ],
+        [
+          "Snappertuna",
+          "Raaseporin linnan ja vanhan kylämaiseman alue."
+        ],
+        [
+          "Tenhola",
+          "Historiallinen kirkko ja maaseutu-/saaristomaisemia."
+        ]
+      ],
+      "🏰 Kulttuuri ja retket": [
+        [
+          "Raaseporin linnanrauniot",
+          "Keskiaikaisen linnan rauniot Snappertunassa; tutustu myös linnan lähireitteihin."
+        ],
+        [
+          "Raaseporin linnan kesäteatteri",
+          "Kesäesityksiä linnan lähellä; kausiohjelma vaihtelee."
+        ],
+        [
+          "Mustion linnan puisto",
+          "Historiallinen kartanopuisto ja puutarha."
+        ],
+        [
+          "Lepinjärven luontopolku",
+          "Luonto- ja kulttuurireitti, lintuhavaintoja."
+        ],
+        [
+          "Kulttuurivalli Karjaa–Billnäs",
+          "Jokivarren kulttuurikävely ja ruukkimaisemia."
+        ],
+        [
+          "Ekenäs Archipelago – saaristoristeilyt",
+          "Saaristoreitit ja veneretket Tammisaaren lähtösatamista."
+        ],
+        [
+          "Kopparön luontopolut",
+          "Saaristoluontoa, leirintäalue ja merellinen ympäristö."
+        ],
+        [
+          "Jättiläisenmaa",
+          "Luonnonläheinen erikoiskohde; varmista sijainti ja vierailumahdollisuus ennen lähtöä."
+        ]
+      ]
+    }
+  },
+  "porvoo.html": {
+    "title": "Porvoo – lisää nähtävää",
+    "intro": "Täydennyksiä nykyisen Porvoon esittelyn rinnalle. Olemassa olevat nähtävyydet ja matkamuistotoiminnot säilyvät.",
+    "source": "https://www.visitporvoo.fi/",
+    "groups": {
+      "🏛️ Kaupunki ja kulttuuri": [
+        [
+          "Porvoon jokirannan puna-aitat",
+          "Jokirannan tunnistettava historiallinen maisema."
+        ],
+        [
+          "Vanha raatihuone ja Porvoon museo",
+          "Vanhankaupungin kulttuuri- ja museokohde."
+        ],
+        [
+          "J. L. Runebergin kotimuseo",
+          "Kirjailijan koti ja ajankuva."
+        ],
+        [
+          "Porvoon Paahtimo",
+          "Jokirannan kahvila entisessä varastorakennuksessa."
+        ],
+        [
+          "Sikosaari ja lintutorni",
+          "Meri- ja lintuluontoa keskustan ulkopuolella."
+        ],
+        [
+          "Haikon kartano",
+          "Historiallinen kartano, ravintola- ja majoituspalveluita."
+        ],
+        [
+          "Söderskärin majakka",
+          "Saarella sijaitseva majakka; veneellä kausittain."
+        ],
+        [
+          "Pellingin saaristo",
+          "Lossiyhteyksiä, saaristokyliä ja merimaisemia."
+        ],
+        [
+          "Kråkö",
+          "Saaristoalue ja paikallisten palvelujen pysähdyksiä."
+        ],
+        [
+          "Porvoon kansallinen kaupunkipuisto",
+          "Jokilaaksoa, kulttuurimaisemia ja virkistysreittejä."
+        ]
+      ],
+      "🧸 Perheet ja karavaanarit": [
+        [
+          "Porvoon leikkipuistot",
+          "Leikkipaikkoja eri puolilla kaupunkia; tarkista sopivin sijainti kartalta."
+        ],
+        [
+          "Kokonniemen liikunta- ja ulkoilualue",
+          "Ulkoilua ja liikuntaa eri vuodenaikoina."
+        ],
+        [
+          "Porvoon vierasvenesatama",
+          "Satamapalveluita jokirannan tuntumassa."
+        ],
+        [
+          "Emäsalon meriretket",
+          "Saaren kalliomaisemat ja rantakohteet; varmista reittien saavutettavuus."
+        ]
+      ]
+    }
+  },
+  "loviisa.html": {
+    "title": "Loviisa – lisää nähtävää",
+    "intro": "Täydennyksiä Loviisan ja sen kylien matkailuun, kuitenkaan poistamatta vanhaa sisältöä.",
+    "source": "https://www.visitloviisa.fi/",
+    "groups": {
+      "🏰 Historia ja kaupunginosat": [
+        [
+          "Loviisan Bastion Ungern",
+          "Vanhan linnoituksen vallirakenteita lähellä keskustaa."
+        ],
+        [
+          "Bastion Rosen",
+          "Loviisan vanhan maalinnoituksen säilynyttä osaa."
+        ],
+        [
+          "Loviisan kaupunginmuseo",
+          "Paikallishistoriaa historiallisessa rakennuksessa."
+        ],
+        [
+          "Loviisan kirkko",
+          "Kaupungin näyttävä uusgoottilainen kirkko."
+        ],
+        [
+          "Strömforsin ruukin käsityöpajat",
+          "Ruukkimiljöön käsitöitä, puoteja ja näyttelyitä."
+        ],
+        [
+          "Ruotsinpyhtään kirkko",
+          "Ruukkikylän historiallinen kirkko."
+        ],
+        [
+          "Pernajan kirkonkylä",
+          "Keskiaikainen kirkko ja arvokas kylämaisema."
+        ],
+        [
+          "Liljendalin kylä",
+          "Maaseutukylä ja paikallisia palveluita."
+        ],
+        [
+          "Valkon satama",
+          "Loviisan merellinen satama-alue."
+        ]
+      ],
+      "🌊 Saaristo, luonto ja retkeily": [
+        [
+          "Loviisan Laivasillan rantareitti",
+          "Satamakorttelin makasiinit ja merelliset kävelymatkat."
+        ],
+        [
+          "Svartholman merilinnoitus",
+          "Merilinnoitussaari; veneyhteydet riippuvat sesongista."
+        ],
+        [
+          "Isnäsin kylä",
+          "Perinteinen rannikon kylä ja kulttuurimaisema."
+        ],
+        [
+          "Kabböle",
+          "Saaristokylä ja merellinen ympäristö."
+        ],
+        [
+          "Valkon uimaranta",
+          "Loviisan alueen uimapaikka; tarkista kunnossapito."
+        ],
+        [
+          "Loviisanlahden lintukohteet",
+          "Lintujen tarkkailua ja rannikon luontoa."
+        ],
+        [
+          "Strömforsin ruukin jokireitti",
+          "Kymijoen sivuhaaran ruukkimaisemia ja ulkoilua."
+        ]
+      ]
+    }
+  },
+  "karjaa.html": {
+    "title": "Karjaa",
+    "intro": "Karjaa on Raaseporin liikenteellinen ja kaupallinen keskus, josta pääsee tutustumaan ruukkikyliin ja jokimaisemiin.",
+    "source": "https://www.visitraseborg.com/fi/",
+    "new_page": true,
+    "groups": {
+      "🏘️ Keskusta ja kulttuuri": [
+        [
+          "Karjaan keskusta",
+          "Kauppoja, kahviloita ja palveluita rautatieaseman ympäristössä."
+        ],
+        [
+          "Karjaan kirkko",
+          "Keskiaikainen kivikirkko ja historiallinen hautausmaa."
+        ],
+        [
+          "Kulttuuritalo Fokus",
+          "Kulttuuria, tapahtumia ja Luckan Raseborgin palveluita."
+        ],
+        [
+          "Karjaan rautatieasema",
+          "Junayhteydet ja kulttuurihistoriallinen asemaympäristö."
+        ]
+      ],
+      "🌲 Läheltä löydät": [
+        [
+          "Kulttuurivalli Karjaa–Billnäs",
+          "Jokivarren kulttuuri- ja kävelyreitti Billnäsin ruukille."
+        ],
+        [
+          "Billnäsin ruukki",
+          "Historiallinen ruukkikylä lähellä Karjaata.",
+          "billnas.html"
+        ],
+        [
+          "Mustion linna",
+          "Kartano ja puutarha lyhyen matkan päässä.",
+          "mustio.html"
+        ]
+      ]
+    }
+  },
+  "billnas.html": {
+    "title": "Billnäs",
+    "intro": "Historiallinen ruukkikylä Raaseporissa, lähellä Karjaan keskustaa.",
+    "source": "https://www.visitraseborg.com/fi/",
+    "new_page": true,
+    "groups": {
+      "🏭 Ruukin nähtävyydet": [
+        [
+          "Billnäsin ruukki",
+          "Vanhat teollisuusrakennukset ja tunnelmallinen ruukkiympäristö."
+        ],
+        [
+          "Billnäsin puisto ja ruukkimaisema",
+          "Jokivartta ja perinnemaisemaa kylän ympärillä."
+        ],
+        [
+          "Billnäsin kylän palvelut",
+          "Tarkista ravintola-, tapahtuma- ja majoituspalvelut kauden mukaan."
+        ]
+      ],
+      "🌲 Retket": [
+        [
+          "Kulttuurivalli-kävelyreitti",
+          "Karjaan ja Billnäsin välinen kulttuurikohteita yhdistävä reitti."
+        ],
+        [
+          "Karjaan keskusta",
+          "Lähialueen palvelut ja junayhteydet.",
+          "karjaa.html"
+        ],
+        [
+          "Fiskarsin ruukki",
+          "Toinen kuuluisa raaseporilainen ruukkikylä.",
+          "fiskars.html"
+        ]
+      ]
+    }
+  },
+  "pohja.html": {
+    "title": "Pohja",
+    "intro": "Pohja on Raaseporin historiallinen kaupunginosa, jonka ympärillä on ruukkeja, kyliä ja maaseutumaisemia.",
+    "source": "https://www.visitraseborg.com/fi/",
+    "new_page": true,
+    "groups": {
+      "🏛️ Kylät ja historia": [
+        [
+          "Pohjan kirkko",
+          "Historiallinen kivikirkko ja kirkonkylä."
+        ],
+        [
+          "Pohjan kirkonkylä",
+          "Vanhaa kylämaisemaa ja palveluita."
+        ],
+        [
+          "Antskogin ruukki",
+          "Entinen ruukkikylä ja kulttuuriympäristö."
+        ],
+        [
+          "Åminneforsin ruukki",
+          "Teollisuushistoriaa ja jokivarren maisemia."
+        ]
+      ],
+      "🌲 Lähikohteet": [
+        [
+          "Fiskarsin ruukki",
+          "Designia, taidetta, pajoja ja ravintoloita.",
+          "fiskars.html"
+        ],
+        [
+          "Billnäsin ruukki",
+          "Kulttuurimaisema Karjaan lähellä.",
+          "billnas.html"
+        ]
+      ]
+    }
+  },
+  "mustio.html": {
+    "title": "Mustio",
+    "intro": "Mustion linna, kartanopuisto ja ruukkihistoria ovat Raaseporin tunnettuja matkailuhelmiä.",
+    "source": "https://www.visitraseborg.com/fi/",
+    "new_page": true,
+    "groups": {
+      "🏰 Historia ja nähtävyydet": [
+        [
+          "Mustion linna",
+          "Historiallinen kartano, majoitus ja ravintolapalveluita."
+        ],
+        [
+          "Mustion linnan puutarha",
+          "Laaja kartanopuisto ja kävelyreittejä."
+        ],
+        [
+          "Mustion ruukkimiljöö",
+          "Rautaruukin historiaa ja vanhoja rakennuksia."
+        ],
+        [
+          "Mustion kirkko",
+          "Kylän historialliseen ympäristöön kuuluva kirkko."
+        ]
+      ],
+      "🌿 Kulttuuri ja luonto": [
+        [
+          "Mustionjoki",
+          "Jokimaisemia Mustion ympärillä."
+        ],
+        [
+          "Mustion linnan kesätapahtumat",
+          "Kulttuuriohjelmaa ja tapahtumia sesongin mukaan; varmista ohjelma."
+        ],
+        [
+          "Karjaa",
+          "Läheisen kaupunginosan palvelut ja junayhteydet.",
+          "karjaa.html"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/* Matkaile Suomessa v345: erilliset, lisätyt sisällöt. Vanhoihin luokkiin ei kosketa. */
+.ms345-wrap{box-sizing:border-box;max-width:1100px;margin:24px auto 30px;padding:19px 18px 24px;border:1px solid #cbded2;border-radius:21px;background:#f4faf5;color:#173e35;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.ms345-wrap *,.ms345-area-shortcuts *{box-sizing:border-box}
+.ms345-wrap h2{font-size:clamp(25px,5vw,35px);line-height:1.18;color:#17493c;margin:4px 0 10px}
+.ms345-wrap p{margin:0 0 12px}
+.ms345-kicker{font-size:12px;font-weight:850;color:#52806d;text-transform:uppercase;letter-spacing:.07em}
+.ms345-note{font-size:13px;color:#536d5f;background:#e5f1e9;padding:12px 14px;border-radius:11px}
+.ms345-group{border:1px solid #d9e8de;background:#fff;border-radius:14px;margin:11px 0;overflow:hidden;padding:0}
+.ms345-group summary{display:flex;align-items:center;gap:12px;cursor:pointer;min-height:54px;padding:14px;color:#164f3e;font-size:clamp(16px,3.3vw,20px);font-weight:800}
+.ms345-group summary small{margin-left:auto;color:#537363;font-size:12px;font-weight:650;white-space:nowrap}
+.ms345-group[open] summary{border-bottom:1px solid #e2ebe4}
+.ms345-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:12px}
+.ms345-card{min-width:0;border:1px solid #e0eae2;background:#fafdfa;border-radius:12px;padding:14px}
+.ms345-card h4{margin:0 0 7px;color:#164735;font-size:16px;line-height:1.3}
+.ms345-card p{color:#556d60;font-size:14px;line-height:1.42;margin:0 0 10px}
+.ms345-links{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;font-weight:750}
+.ms345-links a{color:#185a47;overflow-wrap:anywhere;text-underline-offset:2px}
+.ms345-source{margin-top:14px!important;font-size:13px;color:#506c5d}
+.ms345-area-shortcuts{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0}
+.ms345-area-shortcuts a{background:#e5f2e9;border:1px solid #cfe5d5;color:#16543f;text-decoration:none;padding:8px 10px;border-radius:999px;font-size:13px;font-weight:800}
+.ms345-new-page{max-width:970px;margin:auto;padding:20px 15px 108px;font:16px/1.5 system-ui;color:#173e35}
+.ms345-new-page header{background:#e8f2eb;border-radius:18px;padding:15px 19px;margin:15px 0}
+.ms345-new-page h1{font-size:clamp(28px,6vw,44px);margin:0 0 8px}
+.ms345-new-page a{color:#155d49}
+@media(max-width:600px){.ms345-grid{grid-template-columns:1fr}.ms345-wrap{padding:15px 11px 19px}.ms345-group summary{padding:13px 11px}.ms345-card{padding:13px}}
