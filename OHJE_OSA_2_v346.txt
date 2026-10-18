@@ -1,0 +1,15 @@
+MATKAILE SUOMESSA v346 / OSA 2 - KUNTATIEDOT JA SISÄLTÖ
+
+Vie myös tämän ZIP:n PURETUT tiedostot GitHubin repositorion juureen.
+Säilytä alikansiot täsmälleen: .github/workflows/, tyokalut/ ja palautus/.
+Korvaa samannimiset tiedostot. Commit changes.
+
+GitHub Actions: "Palauta sisältö ja korjaa puhelin v346" käynnistyy
+automaattisesti main/master-haaraan tehdystä päivityksestä.
+Sen täytyy valmistua vihreäksi. Tarkista sen jälkeen Pages-julkaisu.
+Jos Actions ei voi tallentaa muutoksia, katso Settings > Actions > General
+> Workflow permissions > Read and write permissions.
+
+Tämä varmuuskopio sisältää vain aiemmasta GitHubista puuttuneet 11 tiedostoa.
+Muita kuntasivuja EI poisteta eikä korvata vanhoilla versioilla.
+Älä lataa ZIP-pakettia sellaisenaan GitHubiin.
