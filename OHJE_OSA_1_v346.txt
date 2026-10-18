@@ -1,0 +1,10 @@
+MATKAILE SUOMESSA v346 / OSA 1 - PUHELIMEN ULKOASU
+
+Tämä on GitHub-päivityksen ensimmäinen osa.
+Pura tämä ZIP ja vie sen sisällä olevat tiedostot GitHubin
+matkaile-suomessa-repositorion JUUREEN säilyttäen tiedostojen nimet.
+Korvaa samannimiset tiedostot. Commit changes.
+
+Lataa ja vie myös OSA 2, jotta vanhat kuntatiedot ja laajennukset
+varmistuvat. Älä lataa ZIP-tiedostoa sellaisenaan GitHubiin.
+Alkuperäistä 308 kunnan luetteloa ei poisteta.

@@ -116,3 +116,34 @@
  body nav.ms302-nav a{min-width:0!important;white-space:normal!important}
  body nav.ms302-nav .ms302-label{overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(10px,2.75vw,12px)!important}
 }
+
+/* v346: tärkein ruutukorjaus. Vanhat #travel-stop-valinnat tekivät tästä täysleveän. */
+@media screen and (max-width:899px){
+ html body[data-home="true"] section.home-primary-links-v290 div.menu > a#travel-stop-v268 {
+   grid-column:auto!important;grid-row:auto!important;min-width:0!important;max-width:100%!important;
+ }
+ /* Neljä selkeää samanmittaista etusivukorttia myös pienessä puhelimessa. */
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306 {
+   background-image:url('etusivu-kuvitukset-v307.png')!important;
+   background-repeat:no-repeat!important;
+   background-size:312.195% 552.518%!important;
+   background-position-x:4.167%!important;
+   width:90%!important;max-width:180px!important;min-height:0!important;
+ }
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-stops{background-position-y:22.178%!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-route{background-position-y:46.184%!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-ferry{background-position-y:70.032%!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-memories{background-position-y:94.038%!important}
+}
+
+/* v346: leikatut alkuperäiset kuvitukset (ei tyhjiä sprite-alueita). */
+@media screen and (max-width:899px){
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306{
+   background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+   border-radius:12px!important;width:min(100%,150px)!important;height:clamp(82px,25vw,130px)!important;
+ }
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-stops{background-image:url('etusivu-kuva-stops-v346.webp')!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-route{background-image:url('etusivu-kuva-route-v346.webp')!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-ferry{background-image:url('etusivu-kuva-ferry-v346.webp')!important}
+ html body[data-home="true"] .home-primary-links-v290 .menu > a.home-feature-v306 .feature-art-v306.art-memories{background-image:url('etusivu-kuva-memories-v346.webp')!important}
+}

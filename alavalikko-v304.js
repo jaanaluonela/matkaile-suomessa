@@ -20,7 +20,8 @@
  function elt(name,cls,txt){const el=document.createElement(name);if(cls)el.className=cls;if(txt)el.textContent=txt;return el;}
  function nav(){
    // Both legacy bottom bars and the previous version are removed, not layered.
-   document.querySelectorAll('.site-nav,.bottom-nav,.ms301-nav,.ms302-nav,.ms303-nav,.ms304-nav,.footnav').forEach(el=>el.remove());
+   // Säilytetään tietokoneversion alkuperäinen navigointi. Mobiilissa vaihdetaan 4 linkin palkkiin.
+   if(window.matchMedia('(max-width:899px)').matches) document.querySelectorAll('.site-nav,.bottom-nav,.ms301-nav,.ms302-nav,.ms303-nav,.ms304-nav,.footnav').forEach(el=>el.remove());
    const bar=elt('nav','ms302-nav');bar.setAttribute('aria-label','Sivuston päävalikko');
    const inner=elt('div','ms302-nav-inner');
    const links=[
@@ -107,6 +108,6 @@
      if(save(all))refresh();else alert('Tallennus ei onnistunut tällä selaimella.');
    });h.after(b);refresh();
  }
- function init(){trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
+ function init(){if(window.matchMedia('(max-width:899px)').matches)trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

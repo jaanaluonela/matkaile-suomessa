@@ -69,3 +69,11 @@ body .footnav{display:none!important}
   body{padding-bottom:0!important}
   html{scroll-padding-bottom:0!important}
 }
+
+/* v346: leveissä näkymissä alkuperäiset sivukohtaiset navigaatiot palautetaan. */
+@media screen and (min-width:900px){
+  body:not([data-home="true"]) .site-nav,
+  body:not([data-home="true"]) .bottom-nav,
+  body:not([data-home="true"]) .footnav {display:block!important}
+  body .ms302-nav{display:none!important}
+}
