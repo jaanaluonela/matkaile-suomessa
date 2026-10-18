@@ -1,0 +1,44 @@
+/* Matkaile Suomessa v347: yhteinen leirintäalueiden ja matkaparkkien haku */
+body[data-stay-combined="true"] .ms347-kinds{
+  min-width:0;display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:18px 0 18px;
+  border:0;
+}
+body[data-stay-combined="true"] .ms347-kinds legend{
+  display:block;width:100%;font-size:16px;font-weight:800;color:#244f3e;margin-bottom:8px;
+}
+body[data-stay-combined="true"] .ms347-kinds button{
+  flex:1 1 150px;min-height:46px;padding:10px 12px;border:1px solid #c8ddce;
+  border-radius:13px;background:#eef5ef;color:#26533f;font:750 15px/1.25 system-ui,-apple-system,sans-serif;
+  white-space:normal;cursor:pointer;
+}
+body[data-stay-combined="true"] .ms347-kinds button[aria-pressed="true"]{
+  background:#2d6652;border-color:#2d6652;color:white;
+}
+body[data-stay-combined="true"] .ms347-kinds button:focus-visible{
+  outline:3px solid #c28f29;outline-offset:2px;
+}
+body[data-stay-combined="true"] #municipality-results .stay .ms347-type{
+  display:inline-flex;align-items:center;padding:5px 11px;border-radius:99px;
+  background:#e5f0e8;color:#285640;font:800 12px/1.35 system-ui,-apple-system,sans-serif;
+  margin-right:8px;margin-bottom:8px;
+}
+body[data-stay-combined="true"] #municipality-results .stay[data-stay-type="park"] .ms347-type{
+  background:#e4edf9;color:#245781;
+}
+body[data-stay-combined="true"] #municipality-results .stay .ms347-facts{
+  color:#48675a;font-size:13px;line-height:1.55;margin:12px 0 14px;padding:10px 13px;
+  background:#f2f7f2;border-radius:11px;overflow-wrap:anywhere;
+}
+body[data-stay-combined="true"] .ms347-empty{
+  padding:18px 20px;border-radius:14px;color:#536b5d;background:#f2f7f2;
+  border:1px solid #dce9e0;font-size:15px;line-height:1.5;
+}
+body[data-stay-combined="true"] .ms347-empty[hidden]{display:none!important}
+@media(max-width:600px){
+ body[data-stay-combined="true"] .ms347-kinds{gap:7px;margin:12px 0 15px}
+ body[data-stay-combined="true"] .ms347-kinds button{flex:1 1 110px;min-height:49px;padding:9px 7px;font-size:13px}
+ body[data-stay-combined="true"] .ms347-kinds button:first-of-type{flex:1 0 100%}
+ body[data-stay-combined="true"] .ms318-hero--camp h1{font-size:clamp(26px,6.8vw,35px)!important}
+}
+/* v318:n display: block !important ei saa kumota hakutulosten piilotusta. */
+body[data-stay-combined="true"] #municipality-results .stay[hidden]{display:none!important}

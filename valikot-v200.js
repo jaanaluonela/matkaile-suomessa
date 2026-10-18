@@ -24,7 +24,7 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
  const region=document.getElementById('region'), mapping=window.municipalityRegions || {};
  (window.siteRegions || []).forEach(r=>{if(!Array.from(region.options).some(o=>o.value===r)){const o=document.createElement('option');o.value=r;o.textContent=r;region.append(o);}});
  function fillTowns(){select.innerHTML='<option value="">'+(region.value?'Koko maakunta':'Valitse ensin maakunta…')+'</option>';select.disabled=!region.value;Object.keys(towns).filter(c=>mapping[c]===region.value).sort((a,b)=>a.localeCompare(b,'fi')).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;select.append(o);});}
- const kind=document.body.dataset.kind || 'town';
+ const kind=document.body.dataset.stayCombined==='true' ? 'all' : (document.body.dataset.kind || 'town');
  function render(){
  const city=select.value;box.innerHTML='';
  if(!region.value&&kind==='town'){status.textContent='Valitse maakunta ja kunta nähdäksesi '+(kind==='town'?'kunnan sivun.':'sen kohteet.');return;}

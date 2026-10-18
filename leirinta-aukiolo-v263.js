@@ -101,8 +101,9 @@
       return {status:'seasonal',label:'📅 '+raw};
     return {status:'unknown', label:'? Aukioloaika ei tiedossa'};
   }
+  window.ms347CampingFacts = {isSfcArea, opening};
   ready(() => {
-    if (document.body.dataset.kind !== 'camping') return;
+    if (document.body.dataset.stayCombined === 'true' || document.body.dataset.kind !== 'camping') return;
     const yearCheckbox = document.getElementById('camp-only-year-round');
     const sfcCheckbox = document.getElementById('camp-only-sfc');
     const input = document.getElementById('v243-stay-search');

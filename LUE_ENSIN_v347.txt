@@ -1,0 +1,17 @@
+Matkaile Suomessa v347 — YÖPYMISPAIKKOJEN YHDISTÄMINEN (18.10.2026)
+
+Tämä versio perustuu v346 VALMIS KOKO SIVUSTO -pakettiin.
+
+Muutokset:
+- Leirintäalueet-sivun yläosan ylimääräinen Paikkakunnat-linkki pois.
+- Leirintäalueet ja matkaparkit samassa Yöpymispaikat-näkymässä.
+- Kaikki / Leirintäalueet / Matkaparkit -suodatin, maakunta-, kunta-, palvelu-, SFC- ja aukiolosuodattimet.
+- Myös matkaparkit.html ja yopyminen.html vievät uuteen yhteiseen näkymään.
+- Kuntien omat tiedot, valokuvat, reittisivut ja mobiilin nelipainikkeinen alavalikko säilytetty.
+
+GitHub-asennus: pura PIENI_PAIVITYS.zip. Lisää tai korvaa sen sisältämät 9 tiedostoa
+GitHub-repositorion juuressa (ei ylimääräisen kansion sisällä). Muutoksia ei tarvitse
+tehdä muihin tiedostoihin. Odota GitHub Pagesin päivitystä ja avaa sivu uudestaan.
+
+Jos käytät KOKO_SIVUSTO.zip -pakettia, sen sisällä oleva matkaile-suomessa-main
+-kansio sisältää koko sivuston. GitHub-repositorion juuressa pitää olla index.html.

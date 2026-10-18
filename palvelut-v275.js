@@ -73,7 +73,7 @@ for(const item of window.msMatkaparkitV274||[]){
 const ready=fn=>document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn,{once:true}):fn();
 ready(()=>{
  const kind=document.body.dataset.kind;
- if(kind!=='park'&&kind!=='camping')return;
+ if(document.body.dataset.stayCombined==='true'||(kind!=='park'&&kind!=='camping'))return;
  const root=document.getElementById('municipality-results'),search=document.getElementById('v243-stay-search');
  if(!root||!search)return;
  const filterFields=[...document.querySelectorAll('.ms275-service-choice')];
