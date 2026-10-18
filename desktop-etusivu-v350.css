@@ -1,0 +1,143 @@
+/* v349 — rauhallinen, aidosti leveä tietokone-ETUSIVU.
+   Ei vaikutusta puhelinnäkymään, muihin sivuihin tai sivuston sisältöihin. */
+@media screen and (min-width:980px){
+  body[data-home="true"]{background:#f8faf8!important}
+  body[data-home="true"] .msv-header{height:76px;box-shadow:0 1px 8px rgba(19,64,50,.04)}
+  body[data-home="true"] .msv-header-inner{width:min(calc(100% - 72px),1360px);gap:26px}
+  body[data-home="true"] .msv-nav{gap:clamp(12px,1.4vw,23px)}
+  body[data-home="true"] .msv-nav a{font-size:clamp(12px,.92vw,14px);font-weight:700}
+  body[data-home="true"] .msv-hero{height:295px}
+  body[data-home="true"] .msv-hero::before{background:linear-gradient(90deg,rgba(247,250,245,.95) 0%,rgba(247,250,245,.82) 21%,rgba(247,250,245,.12) 50%,transparent 75%)}
+  body[data-home="true"] .msv-hero-content{width:min(calc(100% - 80px),1360px);padding:42px 0 0 10px}
+  body[data-home="true"] .msv-hero h1{font-size:clamp(43px,4.05vw,60px);line-height:1.03}
+  body[data-home="true"] .msv-hero .msv-tagline{font-size:clamp(19px,1.65vw,25px);margin:4px 0 13px}
+  body[data-home="true"] .msv-hero .msv-subhead{font-size:15px;line-height:1.48;max-width:450px}
+  body[data-home="true"] .msv-main{width:min(calc(100% - 80px),1360px);padding-bottom:56px}
+  body[data-home="true"] .msv-primary{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin-top:-25px}
+  body[data-home="true"] .msv-primary-card{min-height:104px;padding:17px 19px;gap:13px;border-radius:16px;border:1px solid #dde9e1;box-shadow:0 4px 13px rgba(22,69,53,.06)}
+  body[data-home="true"] .msv-primary-card:nth-child(1){background:#eaf4ee}
+  body[data-home="true"] .msv-primary-card:nth-child(2){background:#f0f4eb}
+  body[data-home="true"] .msv-primary-card:nth-child(3){background:#eef3f8}
+  body[data-home="true"] .msv-icon{flex:0 0 49px;width:49px;height:52px;font-size:34px;filter:none}
+  body[data-home="true"] .msv-card-copy strong{font-size:19px;line-height:1.2}
+  body[data-home="true"] .msv-card-copy small{font-size:12.5px;line-height:1.35;margin-top:6px}
+  body[data-home="true"] .msv-arr{font-size:20px}
+  body[data-home="true"] .msv-stops{margin-top:19px;display:grid;grid-template-columns:minmax(250px, 35%) minmax(0,1fr);grid-template-areas:'intro search' 'intro tags';column-gap:25px;row-gap:12px;align-items:center;padding:25px 30px;border-radius:18px;background:linear-gradient(120deg,#fcf7ee,#f6f4eb);border-color:#e6dfd0}
+  body[data-home="true"] .msv-stops-head{grid-area:intro;align-items:center;gap:16px;margin:0;min-width:0}
+  body[data-home="true"] .msv-road{display:grid;place-items:center;width:62px;height:62px;flex:0 0 62px;border-radius:16px;background:#f3e9d8;font-size:34px;line-height:1}
+  body[data-home="true"] .msv-stops h2{font-size:clamp(25px,2.1vw,31px);margin:0 0 8px;line-height:1.15}
+  body[data-home="true"] .msv-stops p{font-size:13.5px;line-height:1.5;max-width:320px}
+  body[data-home="true"] .msv-stop-form{grid-area:search;min-width:0;margin:0;gap:9px}
+  body[data-home="true"] .msv-main-search{height:48px;border-radius:11px}
+  body[data-home="true"] .msv-main-search input{font-size:14px}
+  body[data-home="true"] .msv-region{font-size:11px;padding:0 10px}
+  body[data-home="true"] .msv-go{font-size:12px;padding:0 13px}
+  body[data-home="true"] .msv-tags{grid-area:tags;margin:0;gap:7px;justify-content:flex-start;min-width:0}
+  body[data-home="true"] .msv-tags a{min-height:32px;font-size:11px;padding:6px 11px;border-radius:999px;box-shadow:none}
+  body[data-home="true"] .msv-shortcuts{gap:15px;margin-top:19px;grid-template-columns:repeat(4,minmax(0,1fr))}
+  body[data-home="true"] .msv-small-card{min-height:83px;padding:16px 17px;border-radius:15px;gap:11px;box-shadow:0 3px 10px rgba(25,60,46,.045)}
+  body[data-home="true"] .msv-small-ico{font-size:29px}
+  body[data-home="true"] .msv-small-copy strong{font-size:14px}
+  body[data-home="true"] .msv-small-copy small{font-size:11px;line-height:1.3;margin-top:3px}
+  body[data-home="true"] .msv-featured{margin-top:32px}
+  body[data-home="true"] .msv-section-head{margin-bottom:15px}
+  body[data-home="true"] .msv-section-head h2{font-size:25px}
+  body[data-home="true"] .msv-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+  body[data-home="true"] .msv-photo-card{border-radius:15px;box-shadow:0 5px 15px rgba(25,64,49,.055)}
+  body[data-home="true"] .msv-photo-card img{height:175px}
+  body[data-home="true"] .msv-photo-details{padding:13px 15px;min-height:72px}
+  body[data-home="true"] .msv-photo-details strong{font-size:15px}
+  body[data-home="true"] .msv-photo-details small{font-size:11.8px}
+  body[data-home="true"] .msv-credits{margin-top:28px}
+}
+@media screen and (min-width:980px) and (max-width:1200px){
+  body[data-home="true"] .msv-header-inner{width:calc(100% - 40px);gap:14px}
+  body[data-home="true"] .msv-brand{min-width:165px}
+  body[data-home="true"] .msv-nav{gap:10px}
+  body[data-home="true"] .msv-nav a{font-size:11.5px}
+  body[data-home="true"] .msv-head-search{width:155px}
+  body[data-home="true"] .msv-main{width:calc(100% - 48px)}
+  body[data-home="true"] .msv-primary{gap:12px}
+  body[data-home="true"] .msv-primary-card{padding:15px 13px;gap:9px}
+  body[data-home="true"] .msv-icon{flex-basis:39px;width:39px;font-size:29px}
+  body[data-home="true"] .msv-card-copy strong{font-size:16.5px}
+  body[data-home="true"] .msv-card-copy small{font-size:11.5px}
+  body[data-home="true"] .msv-stops{grid-template-columns:260px minmax(0,1fr);padding:20px;column-gap:14px}
+  body[data-home="true"] .msv-road{flex-basis:45px;width:45px;height:45px;font-size:29px}
+  body[data-home="true"] .msv-stops-head{gap:10px}
+  body[data-home="true"] .msv-stops h2{font-size:24px}
+  body[data-home="true"] .msv-stops p{font-size:12.3px}
+  body[data-home="true"] .msv-region{display:none}
+  body[data-home="true"] .msv-small-card{padding:12px 11px;gap:7px}
+  body[data-home="true"] .msv-small-ico{font-size:24px}
+  body[data-home="true"] .msv-small-copy strong{font-size:12.5px}
+  body[data-home="true"] .msv-small-copy small{font-size:10px}
+}
+
+/* v350 — asiallisempi ja helppolukuisempi Pysähdy matkalla -osio.
+   Tietokoneen etusivu vain. Ei puhelimen etusivun muutoksia. */
+@media screen and (min-width:980px){
+  body[data-home="true"] .msv-stops{
+    background:linear-gradient(115deg,#f4f7f5 0%,#edf3ef 100%);
+    border:1px solid #dbe6df;
+    box-shadow:0 3px 14px rgba(37,69,52,.035);
+    padding:29px 30px;
+    grid-template-columns:minmax(255px,34%) minmax(0,1fr);
+    column-gap:34px;
+    row-gap:12px;
+  }
+  body[data-home="true"] .msv-stops-head{
+    border-left:3px solid #568777;
+    padding-left:20px;
+    display:block;
+  }
+  body[data-home="true"] .msv-stops h2{
+    color:#183f35;
+    font-size:clamp(27px,2.22vw,33px);
+    font-weight:780;
+    line-height:1.18;
+    letter-spacing:-.028em;
+    margin-bottom:10px;
+  }
+  body[data-home="true"] .msv-stops p{
+    font-size:15px;
+    line-height:1.5;
+    color:#4e655b;
+    max-width:345px;
+  }
+  body[data-home="true"] .msv-main-search{
+    height:51px;
+    border:1px solid #cfdbd3;
+    box-shadow:none;
+  }
+  body[data-home="true"] .msv-main-search input{font-size:15px;}
+  body[data-home="true"] .msv-go{font-size:13px;font-weight:750;}
+  body[data-home="true"] .msv-tags{gap:7px;}
+  body[data-home="true"] .msv-tags a{
+    font-size:12.7px;
+    min-height:35px;
+    padding:7px 12px;
+    background:#fff;
+    border:1px solid #d9e3db;
+    font-weight:690;
+    box-shadow:none;
+    color:#365e4e;
+  }
+  body[data-home="true"] .msv-tags a:first-child,
+  body[data-home="true"] .msv-tags a:hover{
+    background:#275f4f;
+    color:#fff;
+    border-color:#275f4f;
+  }
+}
+@media screen and (min-width:980px) and (max-width:1200px){
+  body[data-home="true"] .msv-stops{
+    grid-template-columns:245px minmax(0,1fr);
+    column-gap:17px;
+    padding:24px 22px;
+  }
+  body[data-home="true"] .msv-stops-head{padding-left:13px;}
+  body[data-home="true"] .msv-stops h2{font-size:27px;}
+  body[data-home="true"] .msv-stops p{font-size:13.7px;}
+  body[data-home="true"] .msv-tags a{font-size:11.8px;padding:6px 9px;}
+}

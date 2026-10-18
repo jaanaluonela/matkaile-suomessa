@@ -1,0 +1,18 @@
+Matkaile Suomessa v350 – Pysähdy matkalla -etusivukorjaus
+
+Pysähdy matkalla -osion sarjakuvamainen auto poistettiin TÄYSIN.
+Osioon tuli rauhallisempi vihertävänharmaa tausta, selkeä otsikko,
+luettavampi teksti ja tekstimuotoiset kategoriat ilman emojikuvakkeita.
+Kohteiden hakukenttä, linkit, kohdetiedot ja muu toiminnallisuus säilyvät.
+
+Tämä muutos koskee tietokoneen etusivua. Puhelinversioon ei kosketa.
+
+PAKETTI: index.html ja desktop-etusivu-v350.css sekä tämä ohje.
+1. Pura ZIP omalle koneellesi.
+2. Avaa GitHubissa matkaile-suomessa -repositorion pääkansio.
+3. Valitse Add file -> Upload files ja lataa molemmat sivustotiedostot
+   pääkansioon. Korvaa samanniminen index.html ja lisää uusi CSS-tiedosto.
+4. Vahvista muutokset. Julkaisun päivityttyä päivitä sivu Ctrl+Shift+R.
+
+Älä poista muuta sivustoa tai tyylitiedostoja. Ei tarvitse ladata
+suurta koko sivuston ZIP-pakettia GitHubiin.
