@@ -1,0 +1,19 @@
+MATKAILE SUOMESSA v354 – YHTENÄISET KUNTATIETOSIVUT
+
+Pura ZIP ja lataa seuraavat NELJÄ tiedostoa GitHub-repositorion sivuston JUUREEN:
+- alavalikko-v304.js  (korvaa samanniminen)
+- kuntatiedot-v354-data.js (uusi)
+- kuntatiedot-v354.js (uusi)
+- kuntatiedot-v354.css (uusi)
+
+ÄLÄ lataa tekstiraporttia GitHubiin. ÄLÄ poista muita tiedostoja.
+
+Kuntien tiedot ja matkailusisällöt pysyvät nykyisissä HTML-sivuissa.
+Kuntatietojen ulkoasu ja paluulinkit yhdistyvät. Virallisesti vahvistamattomat
+asukasluvut on merkitty tarkistettaviksi – niitä ei arvata.
+
+Päivitä sivu GitHubin lataamisen jälkeen Ctrl+F5 (Windows) tai Safari:ssa
+päivitä sivu. Pidä nykyiset v352/v353-tiedostot ennallaan.
+
+Jos GitHub Pages tallentaa vanhan JavaScriptin välimuistiin, odota muutama
+minuutti ja päivitä sivu uudelleen.

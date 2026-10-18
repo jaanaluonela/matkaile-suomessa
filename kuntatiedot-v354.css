@@ -1,0 +1,18 @@
+/* v354. Accessible, compact municipality identity for desktop and mobile. */
+body.ms354-municipality main{max-width:min(1160px,calc(100% - 28px));margin-inline:auto}
+body.ms354-municipality main h1{color:#103d2f;font-family:Georgia,"Times New Roman",serif;line-height:1.12;letter-spacing:-.025em;font-size:clamp(2rem,4vw,3.3rem)}
+.ms354-identity{display:grid;grid-template-columns:minmax(64px,94px) minmax(0,1fr);align-items:center;gap:20px;margin:18px 0 10px;padding:18px 22px;background:#f3f6f1;border:1px solid #d7e3d9;border-radius:16px;box-sizing:border-box}
+.ms354-coat{width:90px;max-width:100%;min-height:80px;display:grid;place-content:center;justify-items:center;overflow:hidden}
+.ms354-coat-image{display:block;max-width:76px;max-height:90px;width:auto;height:auto;object-fit:contain}
+.ms354-coat-link{font-weight:700;color:#15513d;line-height:1.45;font-size:14px;text-align:center}
+.ms354-facts-caption{margin:0 0 5px;color:#537368;text-transform:uppercase;letter-spacing:.09em;font-size:12px;font-weight:750}
+.ms354-pop{font-family:Arial,sans-serif;font-size:clamp(17px,2vw,22px);color:#163f32;line-height:1.4;margin:0 0 4px}
+.ms354-fact-source{font-size:13px;color:#4a665d;margin:4px 0}
+.ms354-fact-source a,.ms354-coat-source{color:#225c47;text-decoration:underline;text-underline-offset:3px;font-size:13px}
+.ms354-pending{font-size:16px;color:#586d65;font-weight:400}
+.ms354-return{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.ms354-return a{padding:10px 15px;background:#fff;color:#174936;text-decoration:none;border:1px solid #d5e1d7;border-radius:11px;font-weight:700;font-size:15px}
+body.ms354-municipality main nav.quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+body.ms354-municipality main nav.quick a{display:flex;justify-content:center;align-items:center;min-height:48px;padding:11px 12px;text-decoration:none;border-radius:12px;box-sizing:border-box;font-weight:700;font-size:15px;color:#164937;background:#f1f6f2;border:1px solid #dce5dd}
+body.ms354-municipality main a:focus-visible,body.ms354-municipality main button:focus-visible{outline:3px solid #c17d20;outline-offset:3px}
+@media(max-width:700px){body.ms354-municipality main{max-width:calc(100% - 24px)}.ms354-identity{grid-template-columns:68px minmax(0,1fr);gap:12px;padding:14px 13px}.ms354-coat{min-height:65px;width:68px}.ms354-coat-image{max-width:60px;max-height:78px}body.ms354-municipality main nav.quick{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}body.ms354-municipality main nav.quick a{font-size:15px}.ms354-return a{font-size:15px}}

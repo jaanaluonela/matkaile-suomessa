@@ -141,6 +141,14 @@
      if(save(all))refresh();else alert('Tallennus ei onnistunut tällä selaimella.');
    });h.after(b);refresh();
  }
- function init(){ms353Masthead();if(window.matchMedia('(max-width:899px)').matches)trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
+ function ms354Facts(){
+  if(document.querySelector('script[data-ms354]'))return;
+  const css=document.createElement('link');css.rel='stylesheet';css.href=href('kuntatiedot-v354.css?v=354');document.head.append(css);
+  const data=document.createElement('script');data.src=href('kuntatiedot-v354-data.js?v=354');data.async=false;data.dataset.ms354='data';
+  const logic=document.createElement('script');logic.src=href('kuntatiedot-v354.js?v=354');logic.async=false;logic.dataset.ms354='logic';
+  // Browsers execute non-async dynamically inserted classic scripts in insertion order.
+  document.head.append(data,logic);
+ }
+ function init(){ms353Masthead();ms354Facts();if(window.matchMedia('(max-width:899px)').matches)trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
