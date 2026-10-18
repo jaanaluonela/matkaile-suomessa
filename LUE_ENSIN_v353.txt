@@ -1,0 +1,36 @@
+MATKAILE SUOMESSA v353 – YHTEINEN SIVUSTOTYYLI
+
+Päivitetty: 18.10.2026
+
+Paketin 3 sivustotiedostoa ladataan GitHub-repositorion juureen.
+ÄLÄ lataa ZIP-pakettia sellaisenaan GitHubiin, vaan pura se ensin.
+ÄLÄ poista muita tiedostoja, hakemistoja tai vanhoja kuntasivuja.
+
+1. Avaa GitHubissa matkaile-suomessa -repository.
+2. Valitse Add file → Upload files.
+3. Vedä nämä kolme tiedostoa lataukseen ja vahvista korvaaminen:
+   - alavalikko-v304.css
+   - alavalikko-v304.js
+   - etusivu-laadukas-v352.css
+4. Valitse Commit changes / Vahvista muutokset.
+5. Odota GitHub Pagesin päivitystä; päivitä selaimessa Ctrl+F5 tai Ctrl+Shift+R.
+
+Muutokset:
+- Yhteinen yläpalkki, sivuston logo ja ensisijaiset linkit.
+- Helppo mobiilivalikko ja neljän kuvakepainikkeen alavalikko.
+- Samat värit, otsikot, perustietokortit, painikkeet ja kontrastit.
+- Kunnan olemassa oleva vaakuna ja asukasluku nostetaan esiin koskematta lukuihin.
+- Etusivun silta-kuvan tilalle asetetaan aito Päijänne-valokuva.
+
+ETUSIVUN KUVA:
+- Päijänne view from Kullasvuori towers in Padasjoki Finland, valokuvaaja Kotivalo.
+- Wikimedia Commons, CC0 1.0 (public domain):
+  https://commons.wikimedia.org/wiki/File:P%C3%A4ij%C3%A4nne_view_from_Kullasvuori_towers_in_Padasjoki_Finland.jpg
+- Kuva haetaan Wikimedia Commonsista. Jos kuva ei lataudu, vanha paikallinen hero-etusivu.jpg toimii varakuvana.
+
+TÄRKEÄ TIETO:
+- Yhtään HTML-sivua EI ole poistettu tai muutettu tässä paketissa.
+- Vanhoja vaakuna-, asukasluku- ja lähdetietoja EI muutettu.
+- Kaikilla vanhoilla kuntasivuilla ei lähtöaineistossa ollut tunnistettavia vaakuna- ja väestötietoja.
+  Niiden täydentäminen vaatii lähteiden tarkistuksen. Erillinen tarkistuslista on mukana.
+- Selaimessa toteutuvaa ulkoasua ei saatu automaattisesti todennettua tässä ympäristössä.

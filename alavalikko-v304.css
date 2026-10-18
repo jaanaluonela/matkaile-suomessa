@@ -77,3 +77,62 @@ body .footnav{display:none!important}
   body:not([data-home="true"]) .footnav {display:block!important}
   body .ms302-nav{display:none!important}
 }
+
+
+/* v353 — laadukas, yhtenäinen ulkoasu kaikille olemassa oleville sivuille.
+   Tämä muuttaa vain ulkoasua ja navigaatiota, EI kunnan tietoja, vaakunoita eikä asukaslukuja. */
+body.ms353-unified{--ms353-ink:#14382d;--ms353-muted:#4e6458;--ms353-line:#dce7dd;--ms353-surface:#ffffff;--ms353-pale:#f0f5ee;background:#fbfcfa;color:var(--ms353-ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.58;overflow-x:hidden}
+body.ms353-unified *{box-sizing:border-box}
+body.ms353-unified :is(a,button,summary,input,select,textarea):focus-visible{outline:3px solid #a87d36!important;outline-offset:3px}
+body.ms353-unified .ms353-skip{position:fixed;top:-120px;left:12px;z-index:9999;background:#fff;color:#14382d;padding:12px 18px;border-radius:10px}
+body.ms353-unified .ms353-skip:focus{top:10px}
+body.ms353-unified .ms353-masthead{position:sticky;top:0;z-index:1250;background:#fffdfcf5;border-bottom:1px solid #e2eae2;box-shadow:0 2px 13px #1a493009;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+body.ms353-unified .ms353-bar{max-width:1450px;margin:auto;padding:10px clamp(16px,2.7vw,38px);min-height:72px;display:flex;align-items:center;gap:clamp(12px,2vw,28px)}
+body.ms353-unified .ms353-brand{display:inline-flex;gap:10px;align-items:center;flex-shrink:0;color:#14382d!important;text-decoration:none!important;background:none!important;border:0!important;padding:0!important}
+body.ms353-unified .ms353-mark{width:46px;height:39px;display:block;flex-shrink:0}body.ms353-unified .ms353-mark svg{width:100%;height:100%;display:block}
+body.ms353-unified .ms353-words{display:flex;flex-direction:column;line-height:1.08}
+body.ms353-unified .ms353-words strong{font:700 clamp(18px,1.8vw,25px)/1.16 Georgia,"Times New Roman",serif;color:#163e32;white-space:nowrap}
+body.ms353-unified .ms353-words em{font:italic 13px/1.2 Georgia,serif;color:#537261;white-space:nowrap;padding-top:2px}
+body.ms353-unified .ms353-links{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:4px clamp(7px,1.1vw,20px);margin-left:auto}
+body.ms353-unified .ms353-links a{font:650 clamp(12px,1vw,15px)/1.25 system-ui,sans-serif;padding:10px 2px;border:0;border-bottom:2px solid transparent;background:none!important;text-decoration:none!important;color:#183c30!important;white-space:nowrap}
+body.ms353-unified .ms353-links a:hover,body.ms353-unified .ms353-links a[aria-current="page"]{border-bottom-color:#246b4e}
+body.ms353-unified .ms353-toggle{display:none}
+body.ms353-unified > main{box-sizing:border-box;width:min(100% - 34px,1080px);max-width:1080px;margin:0 auto;padding:26px 10px 50px}
+body.ms353-unified > main.regions-page{width:min(100% - 28px,1250px);max-width:1250px}
+body.ms353-unified :is(main h1,main h2,main h3){color:#14382d;overflow-wrap:break-word}
+body.ms353-unified main h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(31px,3.5vw,46px);line-height:1.15;letter-spacing:-.02em}
+body.ms353-unified main h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,2.2vw,30px);line-height:1.25}
+body.ms353-unified main p{line-height:1.62}
+body.ms353-unified main :is(input[type="text"],input[type="search"],select,textarea){border-color:#cbdad0;border-radius:12px;min-height:44px;color:#1a3e31;max-width:100%}
+body.ms353-unified main :is(.lead,.ms334-lead,.lap281-lead){font-size:clamp(16px,1.65vw,19px);color:#4f6759;line-height:1.5}
+body.ms353-unified main :is(.facts,.ms334-facts,.ms353-municipality-facts){display:flex;gap:18px;align-items:center;background:#eef5ef!important;border:1px solid #cfdfd3!important;border-radius:16px!important;padding:18px!important;color:#173d30!important;min-height:100px}
+body.ms353-unified main :is(.facts,.ms334-facts) img{max-width:85px!important;max-height:108px!important;object-fit:contain!important;flex:0 0 auto}
+body.ms353-unified main :is(.facts,.ms334-facts) strong{font-size:clamp(16px,1.6vw,19px);color:#14382d}
+body.ms353-unified main :is(.facts,.ms334-facts) :is(.note,.tiny,small){color:#4e6458}
+body.ms353-unified main :is(.card,.ms334-intro,.ms334-group,.lap282-panel,.lap281-panel,.lap281-place){border-radius:16px;border-color:#dce7dd;box-shadow:0 3px 12px #173b2a09}
+body.ms353-unified main :is(.quick,.ms334-quick){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+body.ms353-unified main :is(.quick,.ms334-quick) a{font-size:clamp(15px,1.45vw,18px);min-height:68px;border-radius:14px;border:1px solid #d6e4d9;text-decoration:none;color:#173e33}
+body.ms353-unified main :is(.quick,.ms334-quick) a:hover{background:#e4f0e7}
+body.ms353-unified .ms302-crumb{font-size:14px!important;margin:0 0 15px!important}
+body.ms353-unified .ms302-crumb a{color:#225a45}
+body.ms353-unified :is(.site-nav,.bottom-nav,.footnav,.ms334-footer,.lap281-footnav,.ms337-bottom){display:none!important}
+body.ms353-unified .ms302-nav .ms302-icon{display:grid;place-items:center;height:28px;font:inherit!important;line-height:1!important}
+body.ms353-unified .ms302-nav .ms302-icon svg{width:27px;height:27px}
+body.ms353-unified .ms302-nav .ms302-label{font-size:clamp(10px,2.5vw,12px)!important;line-height:1.2!important}
+@media(min-width:900px){body.ms353-unified main :is(.quick,.ms334-quick){grid-template-columns:repeat(4,minmax(0,1fr))}body.ms353-unified .ms353-links{flex-wrap:nowrap}}
+@media(max-width:899px){
+ body.ms353-unified .ms353-masthead{position:sticky;top:0;z-index:1250}
+ body.ms353-unified .ms353-bar{padding:10px 14px;min-height:66px;flex-wrap:wrap;gap:5px}
+ body.ms353-unified .ms353-mark{width:38px;height:34px}
+ body.ms353-unified .ms353-words strong{font-size:18px}
+ body.ms353-unified .ms353-words em{font-size:11px}
+ body.ms353-unified .ms353-toggle{display:block;margin-left:auto;background:#eff5ef;border:1px solid #d5e2d8;color:#193c30;border-radius:12px;min-height:43px;min-width:82px;font:700 14px system-ui;cursor:pointer;padding:8px}
+ body.ms353-unified .ms353-links{display:none;order:3;flex:1 0 100%;margin:7px 0 0;background:white;border:1px solid #dfe9df;border-radius:13px;padding:10px;gap:0;box-shadow:0 7px 22px #22453217}
+ body.ms353-unified .ms353-links.ms353-open{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.ms353-unified .ms353-links a{min-height:47px;padding:12px;white-space:normal;border-bottom:1px solid #edf2ec}
+ body.ms353-unified > main{width:min(100% - 16px,780px);padding:18px 8px 115px}
+ body.ms353-unified main :is(.facts,.ms334-facts){padding:14px!important;gap:12px}
+ body.ms353-unified main :is(.quick,.ms334-quick){gap:9px}
+ body.ms353-unified .ms302-nav{z-index:1200!important}
+}
+@media(max-width:380px){body.ms353-unified .ms353-words strong{font-size:16px}body.ms353-unified .ms353-words em{font-size:10px}body.ms353-unified .ms353-toggle{min-width:74px}}

@@ -18,6 +18,38 @@
    location.replace(url.href);return;
  }
  function elt(name,cls,txt){const el=document.createElement(name);if(cls)el.className=cls;if(txt)el.textContent=txt;return el;}
+
+ // v353: yhteinen sivustoilme. Säilyttää sivujen kaikki alkuperäiset kunta- ja kohdetiedot.
+ const ms353Paths={
+   home:'<path d="m3 10 9-7 9 7v11H3z"/><path d="M9 21v-8h6v8"/>',
+   map:'<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15m6-12v15"/>',
+   signpost:'<path d="M12 3v19M5 7h15l-3 4H5zm14 7H4l3 4h12z"/>',
+   book:'<path d="M12 7c-3-3-6-3-9-2v15c4-1 7 0 9 2 2-2 5-3 9-2V5c-3-1-6-1-9 2zM12 7v15"/>',
+   search:'<circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 6 6"/>'
+ };
+ function ms353Icon(key){return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">'+(ms353Paths[key]||ms353Paths.map)+'</svg>';}
+ function ms353Masthead(){
+   if(document.querySelector('.ms353-masthead'))return;
+   document.body.classList.add('ms353-unified');
+   const skip=elt('a','ms353-skip','Siirry sisältöön');skip.href='#ms353-content';document.body.prepend(skip);
+   const main=document.querySelector('main')||document.querySelector('.app');
+   if(main&&!main.id)main.id='ms353-content';
+   if(main&&main.id!=='ms353-content')skip.href='#'+main.id;
+   const header=elt('header','ms353-masthead');
+   const inr=elt('div','ms353-bar');
+   const brand=elt('a','ms353-brand');brand.href=href('index.html');brand.setAttribute('aria-label','Matkaile Suomessa – etusivulle');
+   const logo=elt('span','ms353-mark');logo.innerHTML='<svg viewBox="0 0 60 45" aria-hidden="true" focusable="false"><path d="M3 32 16 9l10 18 9-13 15 18Z" fill="#579a74"/><path d="M23 32 38 4l18 28Z" fill="#16543e"/><path d="M3 39c17-8 33 8 54 0" fill="none" stroke="#1689b5" stroke-linecap="round" stroke-width="4"/></svg>';
+   const words=elt('span','ms353-words');words.append(elt('strong','','Matkaile Suomessa'),elt('em','','Vapaus kulkea · Ilo löytää'));brand.append(logo,words);
+   const toggle=elt('button','ms353-toggle');toggle.type='button';toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','ms353-navigation');toggle.textContent='Valikko ☰';
+   const nav=elt('nav','ms353-links');nav.id='ms353-navigation';nav.setAttribute('aria-label','Matkaile Suomessa – sivustovalikko');
+   const links=[['index.html','Koti'],['maakunnat.html','Paikkakunnat'],['leirintaalueet.html','Yöpymispaikat'],['pysahdy-matkalla.html','Pysähdy matkalla'],['saariston-rengastie.html','Saariston rengastie'],['reittisuunnittelu.html','Suunnittele reitti'],['paivakirja.html','Omat matkat']];
+   for(const [target,label] of links){const a=elt('a','',label);a.href=href(target);if(file===target || (file==='matkaparkit.html'&&target==='leirintaalueet.html'))a.setAttribute('aria-current','page');nav.append(a);}
+   toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav.classList.toggle('ms353-open',open)});
+   nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('ms353-open');toggle.setAttribute('aria-expanded','false');}});
+   inr.append(brand,toggle,nav);header.append(inr);skip.after(header);
+   // Vanhat vaakunat, asukaslukutiedot ja lähdelinkit jäävät omille paikoilleen.
+   document.querySelectorAll('aside.facts,aside.ms334-facts,.lap282-facts').forEach(el=>el.classList.add('ms353-municipality-facts'));
+ }
  function nav(){
    // Both legacy bottom bars and the previous version are removed, not layered.
    // Säilytetään tietokoneversion alkuperäinen navigointi. Mobiilissa vaihdetaan 4 linkin palkkiin.
@@ -25,15 +57,15 @@
    const bar=elt('nav','ms302-nav');bar.setAttribute('aria-label','Sivuston päävalikko');
    const inner=elt('div','ms302-nav-inner');
    const links=[
-     ['index.html','🏡','Koti',home],
-     ['maakunnat.html','🗺️','Paikkakunnat',['maakunnat.html','kunnat.html'].includes(file)],
-     ['pysahdy-matkalla.html','🌲','Pysähdy matkalla',stopFiles.has(file)],
-     ['paivakirja.html','📖','Omat matkat',file==='paivakirja.html']
+     ['index.html','home','Koti',home],
+     ['maakunnat.html','map','Paikkakunnat',['maakunnat.html','kunnat.html'].includes(file)],
+     ['pysahdy-matkalla.html','signpost','Pysähdy matkalla',stopFiles.has(file)],
+     ['paivakirja.html','book','Omat matkat',file==='paivakirja.html']
    ];
    for(const [target,icon,label,active] of links){
       const a=elt('a',active?'ms302-active':'');a.href=href(target);
       if(active)a.setAttribute('aria-current','page');
-      const i=elt('span','ms302-icon',icon);i.setAttribute('aria-hidden','true');
+      const i=elt('span','ms302-icon');i.innerHTML=ms353Icon(icon);i.setAttribute('aria-hidden','true');
       a.append(i,elt('span','ms302-label',label));inner.append(a);
    }
    bar.append(inner);document.body.append(bar);
@@ -52,11 +84,12 @@
    const label=p?.[0]||(h?.textContent||document.title.split('–')[0]).trim().replace(/^[^\p{L}\p{N}]*/u,'').slice(0,64);
    if(file==='ms-kohde-v296.html' && p){try{const r=new URL(document.referrer);if(r.origin===location.origin){const from=r.pathname.split('/').pop();if(['matkaparkit.html','leirintaalueet.html'].includes(from)){p.push(from,from==='matkaparkit.html'?'Matkaparkit':'Leirintäalueet');}}}catch{}}
    const old=main.querySelector(':scope > a.back,:scope > a.top,:scope > a.ms301-back');
+   const oldReturn=old&&old.href?{href:old.href,label:old.textContent.trim().replace(/^[‹←\s]+/,'')}:null;
    if(old)old.remove();
    const existing=main.querySelector(':scope > .ms302-crumb');if(existing)existing.remove();
    const crumb=elt('nav','ms302-crumb');crumb.setAttribute('aria-label','Sivupolku');
    const a=elt('a','','Etusivu');a.href=href('index.html');crumb.append(a);
-   if(p?.[1]){crumb.append(elt('span','','›'));const b=elt('a','',p[2]);b.href=href(p[1]);crumb.append(b);}
+   if(p?.[1]||oldReturn){const back=p?.[1]?{href:href(p[1]),label:p[2]}:oldReturn; if(back&&back.href){crumb.append(elt('span','','›'));const b=elt('a','',back.label);b.href=back.href;crumb.append(b);}}
    crumb.append(elt('span','','›'),elt('span','ms302-where',label));
    main.prepend(crumb);
  }
@@ -108,6 +141,6 @@
      if(save(all))refresh();else alert('Tallennus ei onnistunut tällä selaimella.');
    });h.after(b);refresh();
  }
- function init(){if(window.matchMedia('(max-width:899px)').matches)trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
+ function init(){ms353Masthead();if(window.matchMedia('(max-width:899px)').matches)trimRedundancy();breadcrumb();nav();favoritesPage();saveDetail();}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

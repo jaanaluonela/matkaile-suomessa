@@ -1,0 +1,123 @@
+Matkaile Suomessa v353 – kuntatietojen tarkistuslista
+
+ULKOASUPÄIVITYS ei poista, lisää tai muuta kuntien perustietoja.
+Aineiston automaattinen läpikäynti on alustava; kuntien nykyiset viralliset nimet ja erikoistapaukset on tarkistettava erikseen.
+
+Kuntaluettelon 308 kunnasta 182 löytyi tässä tarkistuksessa täsmäävältä nimisivulta, 126 ei täsmännyt nimihaulla (voi olla toisella tiedostonimellä).
+Näistä 111 kuntasivusta puuttui tekstinä tunnistettava asukasluku ja/tai alt-tekstin perusteella vaakuna.
+Tietoja ei täytetty arvaamalla. Nykyiset vaaku­na- ja asukaslukukentät säilyvät.
+
+TÄYDENNETTÄVÄT / KÄSIN TARKISTETTAVAT
+- Imatra (Etelä-Karjala), imatra.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Lappeenranta (Etelä-Karjala), lappeenranta.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Parikkala (Etelä-Karjala), parikkala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ruokolahti (Etelä-Karjala), ruokolahti.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Paltamo (Kainuu), paltamo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kaustinen (Keski-Pohjanmaa), kaustinen.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kokkola (Keski-Pohjanmaa), kokkola.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Hankasalmi (Keski-Suomi), hankasalmi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Joutsa (Keski-Suomi), joutsa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Jyväskylä (Keski-Suomi), jyvaskyla.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Jämsä (Keski-Suomi), jamsa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Keuruu (Keski-Suomi), keuruu.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Konnevesi (Keski-Suomi), konnevesi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Laukaa (Keski-Suomi), laukaa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Muurame (Keski-Suomi), muurame.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Petäjävesi (Keski-Suomi), petajavesi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Saarijärvi (Keski-Suomi), saarijarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Äänekoski (Keski-Suomi), aanekoski.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kotka (Kymenlaakso), kotka.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kouvola (Kymenlaakso), kouvola.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Enontekiö (Lappi), enontekio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Inari (Lappi), inari.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kemi (Lappi), kemi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kemijärvi (Lappi), kemijarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Keminmaa (Lappi), keminmaa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kittilä (Lappi), kittila.html: asukasluku ei tunnistu, vaakuna on
+- Kolari (Lappi), kolari.html: asukasluku ei tunnistu, vaakuna on
+- Muonio (Lappi), muonio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pelkosenniemi (Lappi), pelkosenniemi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pello (Lappi), pello.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Posio (Lappi), posio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ranua (Lappi), ranua.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Rovaniemi (Lappi), rovaniemi.html: asukasluku ei tunnistu, vaakuna on
+- Salla (Lappi), salla.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Savukoski (Lappi), savukoski.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Simo (Lappi), simo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Sodankylä (Lappi), sodankyla.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tervola (Lappi), tervola.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tornio (Lappi), tornio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Utsjoki (Lappi), utsjoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ylitornio (Lappi), ylitornio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ikaalinen (Pirkanmaa), ikaalinen.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kangasala (Pirkanmaa), kangasala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Lempäälä (Pirkanmaa), lempaala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Mänttä-Vilppula (Pirkanmaa), mantta-vilppula.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Nokia (Pirkanmaa), nokia.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Orivesi (Pirkanmaa), orivesi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ruovesi (Pirkanmaa), ruovesi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Sastamala (Pirkanmaa), sastamala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tampere (Pirkanmaa), tampere.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Valkeakoski (Pirkanmaa), valkeakoski.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Virrat (Pirkanmaa), virrat.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ylöjärvi (Pirkanmaa), ylojarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kristiinankaupunki (Pohjanmaa), kristiinankaupunki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Mustasaari (Pohjanmaa), mustasaari.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pietarsaari (Pohjanmaa), pietarsaari.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Vaasa (Pohjanmaa), vaasa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Alavieska (Pohjois-Pohjanmaa), alavieska.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Haapajärvi (Pohjois-Pohjanmaa), haapajarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Haapavesi (Pohjois-Pohjanmaa), haapavesi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Hailuoto (Pohjois-Pohjanmaa), hailuoto.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ii (Pohjois-Pohjanmaa), ii.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kalajoki (Pohjois-Pohjanmaa), kalajoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kempele (Pohjois-Pohjanmaa), kempele.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kuusamo (Pohjois-Pohjanmaa), kuusamo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kärsämäki (Pohjois-Pohjanmaa), karsamaki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Liminka (Pohjois-Pohjanmaa), liminka.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Lumijoki (Pohjois-Pohjanmaa), lumijoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Merijärvi (Pohjois-Pohjanmaa), merijarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Muhos (Pohjois-Pohjanmaa), muhos.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Nivala (Pohjois-Pohjanmaa), nivala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Oulainen (Pohjois-Pohjanmaa), oulainen.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pudasjärvi (Pohjois-Pohjanmaa), pudasjarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pyhäjoki (Pohjois-Pohjanmaa), pyhajoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pyhäjärvi (Pohjois-Pohjanmaa), pyhajarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pyhäntä (Pohjois-Pohjanmaa), pyhanta.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Raahe (Pohjois-Pohjanmaa), raahe.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Reisjärvi (Pohjois-Pohjanmaa), reisjarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Sievi (Pohjois-Pohjanmaa), sievi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Siikajoki (Pohjois-Pohjanmaa), siikajoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Siikalatva (Pohjois-Pohjanmaa), siikalatva.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Taivalkoski (Pohjois-Pohjanmaa), taivalkoski.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tyrnävä (Pohjois-Pohjanmaa), tyrnava.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Utajärvi (Pohjois-Pohjanmaa), utajarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Vaala (Pohjois-Pohjanmaa), vaala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Ylivieska (Pohjois-Pohjanmaa), ylivieska.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kaavi (Pohjois-Savo), kaavi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kuopio (Pohjois-Savo), kuopio.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Lapinlahti (Pohjois-Savo), lapinlahti.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Leppävirta (Pohjois-Savo), leppavirta.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Siilinjärvi (Pohjois-Savo), siilinjarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Suonenjoki (Pohjois-Savo), suonenjoki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tuusniemi (Pohjois-Savo), tuusniemi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Askola (Uusimaa), askola.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Espoo (Uusimaa), espoo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Helsinki (Uusimaa), helsinki.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Hyvinkää (Uusimaa), hyvinkaa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Järvenpää (Uusimaa), jarvenpaa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kauniainen (Uusimaa), kauniainen.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Kerava (Uusimaa), kerava.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Lapinjärvi (Uusimaa), lapinjarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Loviisa (Uusimaa), loviisa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Myrskylä (Uusimaa), myrskyla.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Mäntsälä (Uusimaa), mantsala.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Nurmijärvi (Uusimaa), nurmijarvi.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pornainen (Uusimaa), pornainen.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Porvoo (Uusimaa), porvoo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Pukkila (Uusimaa), pukkila.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Sipoo (Uusimaa), sipoo.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Tuusula (Uusimaa), tuusula.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+- Vantaa (Uusimaa), vantaa.html: asukasluku ei tunnistu, vaakuna ei tunnistu
+
+HUOM. Tämä raportti ei ole kuntien puuttuvien sivujen täydellinen luettelo. Kaikki nykyiset HTML-tiedostot säilytetään.
