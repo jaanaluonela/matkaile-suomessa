@@ -1,0 +1,14 @@
+MATKAILE SUOMESSA v359 – MATKAPARKKIEN PALVELURAJAUS
+
+Korvaa GitHubissa nämä kaksi tiedostoa:
+
+1. leirintaalueet.html
+2. yopymispaikat-v347.js
+
+Muutos:
+- Matkaparkit-valinnassa näkyvät vain Sähkö, WC ja Harmaavesi.
+- Muut palvelut piilotetaan ja niiden mahdolliset valinnat poistetaan.
+- Kaikki- ja Leirintäalueet-valinnoissa koko palvelulista näkyy edelleen.
+- Sivun rakenne ja ulkoasu säilyvät ennallaan.
+
+Lataa molemmat tiedostot samaan kansioon kuin nykyiset sivustotiedostot.

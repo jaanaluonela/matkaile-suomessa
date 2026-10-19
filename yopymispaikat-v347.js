@@ -1,4 +1,4 @@
-/* Matkaile Suomessa v347 — yhteinen leirintäalueiden ja matkaparkkien haku.
+/* Matkaile Suomessa v359 — yhteinen leirintäalueiden ja matkaparkkien haku.
  * Täydentää v346:n dataa, ei korvaa tai poista yhtäkään kohdetta.
  */
 (() => {
@@ -61,6 +61,7 @@
    const serviceBoxes=[...document.querySelectorAll('.ms275-service-choice')];
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
+   const parkServices=new Set(['electric','wc','greywater']);
    if(!container||!search||!kindButtons.length)return;
    const urlKind=new URLSearchParams(location.search).get('tyyppi');
    let kind=['camping','park'].includes(urlKind)?urlKind:'all';
@@ -103,7 +104,18 @@
      const text=snippets.join('   |   ');
      if(info.textContent!==text) info.textContent=text;
    }
+   function syncServiceChoices(){
+     const parkOnly=kind==='park';
+     for(const box of serviceBoxes){
+       const unavailable=parkOnly&&!parkServices.has(box.value);
+       const choice=box.closest('label');
+       if(choice)choice.hidden=unavailable;
+       box.disabled=unavailable;
+       if(unavailable)box.checked=false;
+     }
+   }
    function apply(){
+     syncServiceChoices();
      const q=parseQuery(search.value);
      const checked=serviceBoxes.filter(el=>el.checked).map(el=>el.value);
      const required=new Set([...q.services,...checked]);
