@@ -1,0 +1,14 @@
+MATKAILE SUOMESSA v357 – MOBIILIN ALAVALIKKO JA YÖPYMISPAIKAT
+
+Lataa GitHubin pääkansioon ja korvaa vanha tiedosto:
+- alavalikko-v304.js
+
+Korjattu:
+- kuntasivuille sama neljän painikkeen mobiilivalikko kuin etusivulla
+- Koti – Paikkakunnat – Pysähdy matkalla – Omat matkat
+- Yöpymispaikat-sivun sivupolun nimi
+- poistettu päällekkäinen Matkaparkit-linkki
+- leirintäalueet ja matkaparkit säilyvät samassa haussa
+
+Jos vanha alavalikko näkyy vielä lataamisen jälkeen, päivitä sivu uudelleen
+tai sulje selainvälilehti ja avaa sivusto uudestaan.

@@ -75,7 +75,7 @@
    if(home)return;
    const main=document.querySelector('main');if(!main)return;
    const p={
-     'leirintaalueet.html':['Leirintäalueet'], 'matkaparkit.html':['Matkaparkit'],
+     'leirintaalueet.html':['Yöpymispaikat'], 'matkaparkit.html':['Yöpymispaikat'],
      'lahella-minua.html':['Lähellä minua'], 'maakunnat.html':['Paikkakunnat'],
      'kunnat.html':['Paikkakunnat'],'pysahdy-matkalla.html':['Pysähdy matkalla'],
      'suosikit.html':['Suosikit'],'sfc-kohde-v292.html':['Kohde','leirintaalueet.html','Leirintäalueet'],
@@ -99,14 +99,11 @@
    if(file==='leirintaalueet.html'||file==='matkaparkit.html'){
       const main=document.querySelector('main');
       const old=main?.querySelector(':scope > .menu');if(old)old.remove();
-      const h=main?.querySelector('h1');
-      const other=file==='leirintaalueet.html'?'matkaparkit.html':'leirintaalueet.html';
-      const label=file==='leirintaalueet.html'?'Matkaparkit':'Leirintäalueet';
-      if(h&&!main.querySelector('.ms302-other-stay')){
-         const a=elt('a','ms302-other-stay','Katso myös '+label+' →');a.href=href(other);h.after(a);
-      }
+      // Leirintäalueet ja matkaparkit ovat samalla Yöpymispaikat-sivulla,
+      // joten erillistä ristiinlinkkiä ei enää näytetä.
+      main?.querySelectorAll('.ms302-other-stay').forEach(el=>el.remove());
       const d=main?.querySelector('.v243-page-description');
-      if(d)d.textContent=file==='leirintaalueet.html'?'Hae leirintäaluetta nimellä, paikkakunnalla tai palveluilla.':'Hae matkaparkkia nimellä, paikkakunnalla tai palveluilla.';
+      if(d)d.textContent='Hae leirintäaluetta tai matkaparkkia nimellä, paikkakunnalla tai palveluilla.';
       const search=main?.querySelector('#v243-stay-search');
       if(search&&file==='leirintaalueet.html')search.placeholder='Esim. Onnela, Tuuri tai sauna';
       if(search&&file==='matkaparkit.html')search.placeholder='Esim. Vääksy, matkaparkki tai sähkö';
