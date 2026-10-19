@@ -15,3 +15,11 @@
 
 /* Myös aiempi Lähellä minua -toiminto pysyy helposti löydettävissä. */
 .nearby-link{display:inline-block;margin-top:7px;color:#225c43;font-size:14px;font-weight:700;text-underline-offset:3px}
+
+/* v358: mobiilissa nimi näkyy kerran, maisemakuvan pääotsikkona. */
+@media(max-width:680px){
+  .site-header .brand-words{display:none}
+  .site-header .brand{gap:0}
+  .site-header .brand-mark{width:54px;height:43px}
+  #destination-search{font-size:14px;padding-right:8px}
+}

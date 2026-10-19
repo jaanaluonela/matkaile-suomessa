@@ -1,0 +1,11 @@
+MATKAILE SUOMESSA v358 – ETUSIVUN MOBIILIKORJAUS
+
+Lataa GitHubin pääkansioon ja korvaa vanhat tiedostot:
+- index.html
+- etusivu-laadukas-v352.css
+
+Korjattu:
+- hakukentässä lyhyempi teksti, joka mahtuu puhelimen näytölle
+- Matkaile Suomessa -nimi ei toistu mobiilissa kahdesti
+- yläpalkissa säilyvät logo ja valikkopainike
+- maisemakuva, pääotsikko, kortit ja alavalikko säilyvät ennallaan
