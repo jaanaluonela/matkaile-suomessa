@@ -34,6 +34,8 @@ body[data-stay-combined="true"] .ms347-empty{
   border:1px solid #dce9e0;font-size:15px;line-height:1.5;
 }
 body[data-stay-combined="true"] .ms347-empty[hidden]{display:none!important}
+/* Palvelupainikkeiden display:flex !important ei saa ohittaa Matkaparkit-rajausta. */
+body[data-stay-combined="true"] .ms275-services-panel .ms275-services-choices label[hidden]{display:none!important}
 @media(max-width:600px){
  body[data-stay-combined="true"] .ms347-kinds{gap:7px;margin:12px 0 15px}
  body[data-stay-combined="true"] .ms347-kinds button{flex:1 1 110px;min-height:49px;padding:9px 7px;font-size:13px}

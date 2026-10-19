@@ -1,0 +1,18 @@
+MATKAILE SUOMESSA v361 – MATKAPARKIN PALVELUPAINIKKEIDEN KORJAUS
+
+Pura zip ja lataa sen kuusi sivustotiedostoa GitHubissa
+samaan kansioon vanhojen tiedostojen päälle:
+  leirintaalueet.html
+  yopymispaikat-v347.css
+  yopymispaikat-v347.js
+  paijat-hame-matkaparkit-v360.js
+  matkaparkki-kohde.html
+  matkaparkki-kohde-v274.js
+
+Muutos: Matkaparkit-valinnassa näkyvät vain Sähkö, WC ja Harmaavesi.
+Kaikki- ja Leirintäalueet-valinnoissa näkyy koko palvelulista.
+Paketti sisältää myös v360:n Päijät-Hämeen tietotäydennyksen.
+
+Tämä on korjaus aiempaan pakettiin: tyylitiedoston display:flex !important
+ohitti piilotuksen. Nyt label[hidden] on myös display:none !important.
+Sivuston ulkoasun asettelu ei muutu.
