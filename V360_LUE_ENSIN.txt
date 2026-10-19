@@ -1,0 +1,19 @@
+MATKAILE SUOMESSA v360 – PÄIJÄT-HÄMEEN MATKAPARKKIEN TIEDOT
+
+Korvaa GitHubin sivustokansiossa nämä viisi tiedostoa:
+leirintaalueet.html
+matkaparkki-kohde.html
+yopymispaikat-v347.js
+matkaparkki-kohde-v274.js
+paijat-hame-matkaparkit-v360.js (uusi)
+
+Kuuden matkaparkin hinta-/saapumis-/palvelu-/lähdetiedot tarkistettu 19.10.2026:
+Kanavaanari, Heinolan Satama, Vidnäsin kartano, Hennala,
+Kärkkäinen Lahti ja Renkomäki. Puuttuvia palveluita ei arvata.
+
+Huom. Hennalan sähkö on ilmoitettu, mutta sen saatavuudesta on
+ristiriitaisia kokemuksia, joten sähkörajaus ei käytä sitä vahvistettuna.
+Vidnäsin kartanon yhteysosoite poikkeaa varauspalvelun listausosoitteesta.
+Matkaparkkien hinta ja aukiolo on tarkistettava ennen matkaa.
+
+Nykyinen asettelu ja kuntasivujen rakenne eivät muutu.

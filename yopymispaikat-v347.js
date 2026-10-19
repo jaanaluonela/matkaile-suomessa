@@ -82,7 +82,7 @@
      return {map,urls};
    }
    function findCardPlace(card,index){
-     const url=card.querySelector('.buttons a[href]')?.getAttribute('href')||'';
+     const url=card.dataset.originalStayUrl||card.querySelector('.buttons a[href]')?.getAttribute('href')||'';
      const title=card.querySelector('h2')?.textContent||'';
      return index.map.get(url+'|'+title) || index.urls.get(url) || null;
    }
@@ -93,14 +93,25 @@
      let type=card.querySelector('.ms347-type');
      if(!type){type=document.createElement('span');type.className='ms347-type';card.prepend(type);}
      type.textContent=typeName(place);
+     const detail=card.querySelector('.buttons a.btn:not(.secondary)');
+     if(detail&&place.detailId){
+       if(!card.dataset.originalStayUrl)card.dataset.originalStayUrl=detail.getAttribute('href')||'';
+       detail.href='matkaparkki-kohde.html?id='+encodeURIComponent(place.detailId);
+     }
+     const address=card.querySelector('.address');
+     if(address&&place.checked==='2026-10-19')address.textContent=place.city+' · '+place.address;
+     const website=card.querySelector('.buttons a.secondary');
+     if(website&&place.website&&website.textContent.includes('Omat sivut'))website.href=place.website;
      let info=card.querySelector('.ms347-facts');
      if(!info){info=document.createElement('div');info.className='ms347-facts';const buttons=card.querySelector('.buttons');if(buttons)card.insertBefore(info,buttons);else card.append(info);}
      const snippets=[];
      if(isSfc(place))snippets.push('SFC-alue');
      if(isYearRound(place))snippets.push('✓ Ympäri vuoden');
+     if(place.priceText)snippets.push('Hinta: '+place.priceText);
      const known=servicesFor(place);
      if(known.size) snippets.push('Palvelut: '+[...known].map(k=>SERVICE_LABELS[k]||k).join(' · '));
      else snippets.push('Palvelut tarkistettava kohteesta');
+     if(place.stayText)snippets.push('Saapuminen: '+place.stayText);
      const text=snippets.join('   |   ');
      if(info.textContent!==text) info.textContent=text;
    }
