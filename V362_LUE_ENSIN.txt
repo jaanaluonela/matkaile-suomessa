@@ -1,0 +1,9 @@
+MATKAILE SUOMESSA – MATKAPARKIT, MAAKUNNIT v362 (20.10.2026)
+
+Pura zip ja lataa kaikki sen tiedostot GitHub-repositorion juureen samannimisten tiedostojen päälle. Säilytä muu sivusto. GitHub Pagesin välimuisti voi vaatia sivun päivittämisen.
+
+Paketti sisältää aikaisemman Päijät-Hämeen täydennyksen ja palvelusuodattimen korjauksen sekä uuden valtakunnallisen lisäyksen. Aineistossa on nyt matkaparkkeja kaikista Suomen 19 maakunnasta, mukaan lukien Ahvenanmaa. Tässä erässä tuli 15 uutta yksilöllistä kohdetta 13 maakuntaan; kaksi jo olemassa ollutta Uudenmaan kohdetta tunnistettiin päällekkäisiksi.
+
+Kunta- ja maakuntarajaus löytää myös uudet matkaparkit yhdistetyllä yöpymissivulla. Puhelimen ulkoasu ja kuntasivujen rakenne eivät muutu. Palvelusuodatin näyttää vain vahvistetut palvelut. Käynti, varaus ja mahdolliset hinnat kannattaa tarkistaa aina kohteelta.
+
+Lähde uusille kohteille: https://matkaparkki.com/matkaparkit/ (luettu 20.10.2026). Lähde ei ole täydellinen Suomen kaikkien matkaparkkien rekisteri.

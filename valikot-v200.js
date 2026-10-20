@@ -23,7 +23,7 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
  if(!select)return;
  const region=document.getElementById('region'), mapping=window.municipalityRegions || {};
  (window.siteRegions || []).forEach(r=>{if(!Array.from(region.options).some(o=>o.value===r)){const o=document.createElement('option');o.value=r;o.textContent=r;region.append(o);}});
- function fillTowns(){select.innerHTML='<option value="">'+(region.value?'Koko maakunta':'Valitse ensin maakunta…')+'</option>';select.disabled=!region.value;Object.keys(towns).filter(c=>mapping[c]===region.value).sort((a,b)=>a.localeCompare(b,'fi')).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;select.append(o);});}
+ function fillTowns(){select.innerHTML='<option value="">'+(region.value?'Koko maakunta':'Valitse ensin maakunta…')+'</option>';select.disabled=!region.value;const available=new Set(Object.keys(towns).filter(c=>mapping[c]===region.value));if(document.body.dataset.stayCombined==='true'||document.body.dataset.kind==='park')places.filter(p=>p.type==='park'&&mapping[p.city]===region.value).forEach(p=>available.add(p.city));[...available].sort((a,b)=>a.localeCompare(b,'fi')).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;select.append(o);});}
  const kind=document.body.dataset.stayCombined==='true' ? 'all' : (document.body.dataset.kind || 'town');
  function render(){
  const city=select.value;box.innerHTML='';
@@ -35,7 +35,7 @@ Object.assign(window.siteMunicipalities||(window.siteMunicipalities={}),{Loviisa
  box.innerHTML=filtered.map(d=>`<article class="stay"><span class="badge">${esc(d.season || (d.type==='park'?'🅿️ Matkaparkki':'🏕️ Leirintäalue'))}</span><h2>${esc(d.name)}</h2><p class="address">${esc(d.city)} · ${esc(d.address)}</p><p class="description">${esc(d.description)}</p><div class="buttons"><a class="btn" href="${esc(d.url)}">Kohteen tiedot →</a>${d.website?`<a class="btn secondary" href="${esc(d.website)}" target="_blank" rel="noopener">Omat sivut ↗</a>`:''}<a class="btn secondary" href="${esc(d.navigate || d.map)}" target="_blank" rel="noopener">Ajo-ohje ↗</a></div></article>`).join('');
  }
  const params=new URLSearchParams(location.search), city=params.get('kunta');region.value=(city&&mapping[city])||params.get('maakunta')||'';fillTowns();if(city&&towns[city])select.value=city;region.addEventListener('change',()=>{fillTowns();const u=new URL(location.href);u.searchParams.delete('kunta');if(region.value)u.searchParams.set('maakunta',region.value);else u.searchParams.delete('maakunta');history.replaceState(null,'',u);render();});
- select.addEventListener('change',()=>{if(document.body.dataset.home&&select.value){location.href=towns[select.value];return;}const url=new URL(location.href);if(select.value)url.searchParams.set('kunta',select.value);else url.searchParams.delete('kunta');history.replaceState(null,'',url);render();});render();
+ select.addEventListener('change',()=>{if(document.body.dataset.home&&select.value){location.href=towns[select.value];return;}const url=new URL(location.href);if(select.value)url.searchParams.set('kunta',select.value);else url.searchParams.delete('kunta');history.replaceState(null,'',url);render();});window.msRefreshStayFilters=()=>{const chosen=select.value;fillTowns();if([...select.options].some(o=>o.value===chosen))select.value=chosen;render();};render();
 })();
 // Etusivun neljä suurta valintaa v212.
 (() => {
