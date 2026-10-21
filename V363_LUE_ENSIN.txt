@@ -1,0 +1,40 @@
+MATKAILE SUOMESSA – v363: LISÄÄ VÄRIÄ JA YHTENÄINEN ULKOASU (21.10.2026)
+
+TÄMÄ ON PIENI PÄIVITYSPAKETTI (6 TIEDOSTOA), EI KOKO SIVUSTO.
+Päivitys asennetaan v362:n ja aiempien päivitysten päälle.
+
+1. Pura ZIP tietokoneelle.
+2. Avaa GitHubissa sivustosi repository.
+3. Lataa nämä tiedostot repositoryn JUUREEN:
+   index.html
+   maakunnat.html
+   pysahdy-matkalla.html
+   paivakirja.html
+   varit-ja-yhtenaisyys-v363.css
+   V363_LUE_ENSIN.txt (valinnainen ohje)
+4. Korvaa neljä vanhaa HTML-tiedostoa samannimisillä uusilla.
+   Uutta CSS-tiedostoa ei tarvitse nimetä uudelleen.
+5. Säilytä kaikki muut tiedostot (kunnat, matkaparkit, kuvat, ohjelmakoodi).
+6. Odota GitHub Pages -päivitystä, avaa sivu uudelleen ja tarvittaessa
+   päivitä pakotetusti / tyhjennä selaimen välimuisti.
+
+Muutokset:
+- Värilliset pienet korostukset: järvensininen, terrakotta, kullanruskea
+  sekä tuttu metsänvihreä.
+- Etusivu: värikoodatut isot valintakortit ja hakupainike, yhtenäinen
+  ylä- ja alavalikko myös puhelimessa.
+- Paikkakunnat: maakuntalaatikot tiiviimpiä, hillityt värireunukset.
+- Pysähdy matkalla: kategorioiden värit, emojit pois kategoriapainikkeista.
+- Omat matkat: selkeämpi aloitus ja matkakorteissa värillinen reunus.
+- Kaikki nykyiset kunnat, kohteet, vaakunat, asukasluvut,
+  leirintäalueet ja matkaparkit säilyvät ennallaan.
+- Käyttäjän tallennetut matkat eivät sisälly ZIPiin: ne ovat edelleen
+  selaimen paikallisessa tallennustilassa. Älä tyhjennä sivuston
+  paikallista dataa, jos haluat säilyttää ne.
+
+HUOM: Älä poista repoista vanhoja CSS- ja JS-tiedostoja. Etusivun
+  uusi yhtenäinen navigaatio käyttää jo olemassa olevia
+  alavalikko-v304.css ja alavalikko-v304.js -tiedostoja.
+
+Testaus: tiedostot ja keskeiset JS-tiedostot tarkistettu staattisesti.
+Paikallista selainkuvakaappausta ei voitu ajaa tässä ympäristössä.

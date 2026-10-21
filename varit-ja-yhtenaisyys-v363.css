@@ -1,0 +1,123 @@
+/* Matkaile Suomessa v363 — hillitty väri ja yhtenäiset neljä pääsivua.
+   Vain ulkoasua: kuntia, kohteita, matkaparkkeja tai tallennettua dataa ei muuteta. */
+:root{--v363-forest:#194f40;--v363-lake:#2b7892;--v363-lake-pale:#eaf4f8;--v363-clay:#b86548;--v363-clay-pale:#fbf0e9;--v363-gold:#ad7c2d;--v363-gold-pale:#faf4e2;--v363-sage:#eef5ed;--v363-line:#d7e5da}
+body.ms353-unified{background:#fcfdfb!important;color:#183c31}
+body.ms353-unified .ms353-masthead{border-bottom:2px solid #dce9e5;background:#fff!important}
+body.ms353-unified .ms353-masthead::after{content:"";position:absolute;bottom:-2px;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--v363-forest) 0% 36%,var(--v363-lake) 36% 63%,var(--v363-clay) 63% 82%,#cfab62 82% 100%);opacity:.74;pointer-events:none}
+body.ms353-unified .ms353-brand strong{color:#173e32!important}
+body.ms353-unified .ms353-toggle{background:#f0f5f0!important;border-color:#cfdfd4!important}
+body.ms353-unified .ms353-links a:hover,body.ms353-unified .ms353-links a[aria-current="page"]{color:#155942!important;border-bottom-color:var(--v363-clay)!important}
+body.ms353-unified .ms302-nav a.ms302-active,body.ms353-unified nav.ms302-nav a[aria-current="page"]{background:#e8f2ee!important}
+body.ms353-unified nav.ms302-nav a.ms302-active .ms302-icon{color:var(--v363-lake)!important}
+body.ms353-unified :is(button,input,select,a,summary):focus-visible{outline:3px solid #b66b45!important;outline-offset:3px!important}
+@media(min-width:900px){body.ms353-unified .ms302-nav{display:none!important}}
+
+/* Etusivu: säilytä luonnollinen järvimaisema, korosta valintoja. */
+body.ms353-unified.ms-v363-home .site-header{display:none!important}
+body.ms-v363-home .hero{border-bottom:4px solid #d3e2dc}
+@media(min-width:900px){body.ms353-unified.ms-v363-home > main.page-main{box-sizing:border-box;width:min(100% - 42px,1400px)!important;max-width:1400px!important;padding:0 16px 56px!important}}
+body.ms-v363-home .hero-script{color:#1e5e4c}
+body.ms-v363-home .search-panel{background:linear-gradient(130deg,#f0f6f0,#f4f8f5 60%,#ecf5f8)!important;border-color:#d9e7e0!important}
+body.ms-v363-home .search-panel:before{content:"";position:absolute;top:0;left:24px;width:100px;height:4px;border-radius:0 0 7px 7px;background:linear-gradient(90deg,var(--v363-lake) 0 55%,var(--v363-clay) 55%)}
+body.ms-v363-home #destination-search:focus{border-color:#76a9b8}
+body.ms-v363-home .search-submit{background:#1c6578}
+body.ms-v363-home .search-submit:hover{background:#124e62}
+body.ms-v363-home .quick-categories a{border-color:#d5e1da}
+body.ms-v363-home .quick-categories a:nth-child(2){background:var(--v363-clay-pale);border-color:#edd6c8;color:#86472f}
+body.ms-v363-home .quick-categories a:nth-child(3){background:#eaf5e9;border-color:#d1e4d1;color:#275e3c}
+body.ms-v363-home .quick-categories a:nth-child(4){background:var(--v363-lake-pale);border-color:#cce0e9;color:#215d73}
+body.ms-v363-home .quick-categories a:nth-child(5){background:var(--v363-gold-pale);border-color:#e9ddb9;color:#725619}
+body.ms-v363-home .quick-categories a.selected{background:var(--v363-forest);color:white;border-color:var(--v363-forest)}
+body.ms-v363-home .category-card{border:1px solid #d9e5dc;border-left:5px solid var(--v363-forest);background:linear-gradient(115deg,#f0f7f0,#f9fbf8)}
+body.ms-v363-home .category-card:nth-child(2){border-left-color:var(--v363-gold);background:linear-gradient(115deg,#faf5e8,#fdfbf5)}
+body.ms-v363-home .category-card:nth-child(3){border-left-color:var(--v363-lake);background:linear-gradient(115deg,#eaf4f8,#f8fcfc)}
+body.ms-v363-home .category-card:nth-child(4){border-left-color:var(--v363-clay);background:linear-gradient(115deg,#faeee7,#fcf9f4)}
+body.ms-v363-home .category-card:nth-child(2)>svg:first-child{color:#977024}
+body.ms-v363-home .category-card:nth-child(3)>svg:first-child{color:#286f86}
+body.ms-v363-home .category-card:nth-child(4)>svg:first-child{color:#a85b3e}
+body.ms-v363-home .route-panel{background:linear-gradient(110deg,#f1f6f0,#f6f0e6);border-left:5px solid var(--v363-gold)}
+body.ms-v363-home .route-panel>a{background:#235f70}
+body.ms-v363-home .destinations h2:after{content:"";display:block;width:58px;height:3px;background:var(--v363-clay);border-radius:5px;margin-top:7px}
+body.ms-v363-home .destination-links article{border-bottom:3px solid #d9e7de}
+body.ms-v363-home .destination-links article:nth-child(3n+2){border-bottom-color:#c2dce6}
+body.ms-v363-home .destination-links article:nth-child(3n+3){border-bottom-color:#e4c5ad}
+
+/* Maakunnat: tiiviimmät valinnat, rauhalliset alueelliset korostukset. */
+body.ms-v363-regions .regions-hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#e8f3ee,#eff5ec 65%,#eef5f8)!important;border-color:#d5e5db!important}
+body.ms-v363-regions .regions-hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#236f82,#5b9d83,#b96d4c)}
+body.ms-v363-regions .regions-hero h1{margin-bottom:7px!important}
+body.ms-v363-regions .regions-hero h1:after{content:"";display:block;width:58px;height:3px;border-radius:3px;background:#bc7650;margin-top:9px}
+body.ms-v363-regions .regions-search{margin-bottom:11px!important}
+body.ms-v363-regions .regions-input-wrap input:focus{border-color:var(--v363-lake)!important}
+body.ms-v363-regions .ms-map-toggle{border-left:4px solid var(--v363-lake)!important}
+body.ms-v363-regions .ms-map-summary-icon{background:#e3f0f3!important;color:#216678!important}
+body.ms-v363-regions .regions-list{gap:8px!important}
+body.ms-v363-regions .region-card{border:1px solid #dce7dd!important;border-left:5px solid var(--v363-forest)!important;border-radius:15px!important;background:#eef6ef!important}
+body.ms-v363-regions .region-card:nth-child(6n+2){border-left-color:var(--v363-lake)!important;background:#eaf4f8!important}
+body.ms-v363-regions .region-card:nth-child(6n+3){border-left-color:var(--v363-clay)!important;background:#fbf1eb!important}
+body.ms-v363-regions .region-card:nth-child(6n+4){border-left-color:var(--v363-gold)!important;background:#fbf6e9!important}
+body.ms-v363-regions .region-card:nth-child(6n+5){border-left-color:#5c8274!important;background:#eef4f0!important}
+body.ms-v363-regions .region-card:nth-child(6n+6){border-left-color:#798aa6!important;background:#eff3f9!important}
+body.ms-v363-regions .region-card>summary{min-height:57px!important;padding:10px 15px!important;gap:8px!important}
+body.ms-v363-regions .region-card>summary strong{font-size:clamp(18px,4.4vw,21px)!important;line-height:1.25!important;color:#194738!important}
+body.ms-v363-regions .region-card>summary .region-arrow{font-size:23px!important}
+body.ms-v363-regions .region-card[open]{box-shadow:0 5px 16px #2f574b12}
+body.ms-v363-regions .region-town{border-color:#dce7dd}
+body.ms-v363-regions .region-town a{color:#224d3d}
+
+/* Pysähdy matkalla: selkeä hakulomake ja värikoodatut kohdeluokat. */
+body.ms-v363-stops .ms302-stops-intro{position:relative;overflow:hidden;background:linear-gradient(112deg,#e9f4f1,#eef5f6 53%,#fbf1e9)!important;border-color:#d7e5dd!important}
+body.ms-v363-stops .ms302-stops-intro:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--v363-lake),var(--v363-clay))}
+body.ms-v363-stops .ms302-stops-intro h1:after{content:"";display:block;width:58px;height:3px;background:var(--v363-clay);margin-top:9px;border-radius:4px}
+body.ms-v363-stops .ms302-stops-search{padding:15px!important;border-color:#d9e5da!important;box-shadow:0 2px 14px #214b3808}
+body.ms-v363-stops .ms302-stops-fields{gap:10px}
+body.ms-v363-stops .ms302-stops-fields :is(input,select){border-color:#ccdad0!important}
+body.ms-v363-stops .ms302-category{gap:7px;margin-top:12px}
+body.ms-v363-stops .ms302-category button{display:inline-flex;align-items:center;gap:7px;text-align:left;border-radius:11px;padding:8px 11px;min-height:39px;background:#f6faf7;border-color:#d1e1d6;color:#23513d;font-size:13px!important}
+body.ms-v363-stops .ms302-category button:before{content:"";width:8px;height:8px;border-radius:50%;background:#508c69;flex:none}
+body.ms-v363-stops .ms302-category button[data-ms302-category="sight"],body.ms-v363-stops .ms302-category button[data-ms302-category="special"]{background:#fbf2eb;border-color:#ead9c9;color:#87513b}
+body.ms-v363-stops .ms302-category button[data-ms302-category="sight"]:before,body.ms-v363-stops .ms302-category button[data-ms302-category="special"]:before{background:#bb6d48}
+body.ms-v363-stops .ms302-category button[data-ms302-category="stop"]{background:#eaf4f8;border-color:#d2e4ed;color:#24657d}
+body.ms-v363-stops .ms302-category button[data-ms302-category="stop"]:before{background:#367f95}
+body.ms-v363-stops .ms302-category button[data-ms302-category="food"],body.ms-v363-stops .ms302-category button[data-ms302-category="ruukki"]{background:#fbf6e9;border-color:#eae0c5;color:#76571e}
+body.ms-v363-stops .ms302-category button[data-ms302-category="food"]:before,body.ms-v363-stops .ms302-category button[data-ms302-category="ruukki"]:before{background:#b48a39}
+body.ms-v363-stops .ms302-category button[aria-pressed="true"]{background:#194f40!important;border-color:#194f40!important;color:#fff!important}
+body.ms-v363-stops .ms302-category button[aria-pressed="true"]:before{background:#e8c487!important}
+body.ms-v363-stops .ms302-result{border-color:#d6e4dc;border-top:3px solid #94beae;padding:14px}
+body.ms-v363-stops .ms302-result:nth-child(3n+2){border-top-color:#98c0d0}
+body.ms-v363-stops .ms302-result:nth-child(3n+3){border-top-color:#d9b18d}
+body.ms-v363-stops .ms302-actions a{background:#eaf4f7;border-color:#cde0e9;color:#225d72}
+
+/* Omat matkat: sama otsikkotyyli ja lämpimät matkakortit, ei ylimääräistä tekstiä. */
+body.ms-v363-diary > main{max-width:1000px!important}
+body.ms-v363-diary > main>h1{margin:4px 0 9px!important;color:#183e32!important}
+body.ms-v363-diary > main>h1:after{content:"";display:block;margin-top:11px;width:65px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--v363-clay) 0 60%,var(--v363-gold) 60%)}
+body.ms-v363-diary > main>.muted{margin:0 0 17px;color:#4f675b!important;font-size:16px;line-height:1.5}
+body.ms-v363-diary #list{border:1px solid #dce8dd;border-radius:20px;background:linear-gradient(120deg,#f1f7f1,#fdfcf8);padding:17px;margin:0 0 18px}
+body.ms-v363-diary #new{background:#226b79;border-radius:12px;font-weight:750;min-height:48px;padding:11px 18px}
+body.ms-v363-diary #trips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+body.ms-v363-diary .trip{margin:0!important;background:#fff;border:1px solid #d9e5d9;border-left:5px solid #b86c4d!important;border-radius:14px;min-width:0;overflow:hidden;box-shadow:0 2px 8px #27483108}
+body.ms-v363-diary .trip:nth-child(even){border-left-color:#39809a!important}
+body.ms-v363-diary .trip:focus-visible{outline-color:#af733b!important}
+body.ms-v363-diary .trip-info{padding:14px 15px}
+body.ms-v363-diary .trip-title{color:#1b4638;font-size:18px}
+body.ms-v363-diary .trip-meta{font-size:13px;color:#586e61;line-height:1.45}
+body.ms-v363-diary #editor .card{border-left:4px solid #d4af74}
+body.ms-v363-diary #editor .photo-gallery{border-color:#d0e1d8;background:#f4f8f4}
+body.ms-v363-diary #editor .photo-add{border-color:#87b7af;background:#eef7f6}
+@media(max-width:899px){
+ body.ms353-unified.ms-v363-home .site-header{display:none!important}
+ body.ms-v363-home .hero{min-height:255px}
+ body.ms-v363-home .hero-inner{padding-top:37px;padding-bottom:49px}
+ body.ms-v363-home .search-panel{margin-top:-18px!important}
+ body.ms-v363-home .category-card{padding-top:14px;padding-bottom:14px}
+ body.ms-v363-regions .regions-page .regions-hero{padding:17px 18px!important}
+ body.ms-v363-regions .regions-page .regions-hero p{line-height:1.45!important}
+ body.ms-v363-regions .regions-page .region-card>summary{min-height:56px!important;padding:10px 12px!important}
+ body.ms-v363-stops .ms302-stops-search{padding:12px!important}
+ body.ms-v363-diary #list{padding:13px}
+ body.ms-v363-diary #trips{grid-template-columns:1fr;gap:10px}
+ body.ms-v363-diary .trip-cover{height:150px;object-fit:cover}
+}
+@media(max-width:390px){body.ms-v363-home .hero h1{font-size:31px!important}body.ms-v363-stops .ms302-category button{font-size:12px!important;padding:8px 9px}}
+@media(prefers-reduced-motion:reduce){body.ms-v363-home .category-card{transition:none}}
