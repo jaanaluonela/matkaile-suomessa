@@ -1,0 +1,139 @@
+/* MATKAILE SUOMESSA v364 — yhtenäinen voimakas turkoosi.
+   Tämä on vain ulkoasulisäys v363-päivityksen päälle. */
+:root{--ms364-teal:#087b8c;--ms364-teal-dark:#066372;--ms364-teal-deep:#064f5e;--ms364-teal-soft:#e8f4f5;--ms364-ink:#173e38}
+
+/* Etusivun kuusi samanväristä päävalintaa */
+body.ms-v363-home .main-categories{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:12px!important;margin-top:16px!important;margin-bottom:18px!important;
+}
+body.ms-v363-home .main-categories .category-card,
+body.ms-v363-home .main-categories .category-card:nth-child(n){
+ box-sizing:border-box!important;display:flex!important;align-items:center!important;
+ min-width:0!important;min-height:110px!important;margin:0!important;
+ padding:18px 16px!important;gap:13px!important;border:1px solid #087b8c!important;
+ border-radius:16px!important;background:#087b8c!important;
+ background-image:none!important;color:#fff!important;text-decoration:none!important;
+ box-shadow:0 2px 7px rgba(0,75,85,.10)!important;
+}
+body.ms-v363-home .main-categories .category-card:hover,
+body.ms-v363-home .main-categories .category-card:focus-visible{
+ background:#066372!important;border-color:#066372!important;transform:translateY(-1px);
+}
+body.ms-v363-home .category-card > svg:first-child,
+body.ms-v363-home .category-card:nth-child(n)>svg:first-child{
+ width:39px!important;height:39px!important;min-width:39px!important;flex:0 0 39px!important;
+ fill:none!important;stroke:#fff!important;color:#fff!important;stroke-width:1.8!important;
+}
+body.ms-v363-home .category-card .category-copy{display:flex!important;flex-direction:column!important;min-width:0!important;flex:1!important;gap:4px!important;color:#fff!important}
+body.ms-v363-home .category-card .category-copy strong{color:#fff!important;font-size:clamp(16px,1.7vw,21px)!important;line-height:1.2!important;font-weight:800!important}
+body.ms-v363-home .category-card .category-copy span{color:#fff!important;font-size:clamp(12px,1.25vw,15px)!important;line-height:1.35!important;opacity:.98!important}
+body.ms-v363-home .category-card .category-arrow{width:19px!important;height:19px!important;min-width:19px!important;stroke:#fff!important;fill:none!important;color:#fff!important;margin-left:auto!important}
+body.ms-v363-home .search-submit,
+body.ms-v363-home .search-submit:hover{background:#087b8c!important;color:white!important;border-color:#087b8c!important}
+body.ms-v363-home .search-submit:hover{background:#066372!important}
+/* Myös etusivun pienet kategoriapainikkeet samaa sävyä, eivät hailakoita. */
+body.ms-v363-home .quick-categories a,
+body.ms-v363-home .quick-categories a:nth-child(n),
+body.ms-v363-home .quick-categories a.selected{
+ background:#087b8c!important;border:1px solid #087b8c!important;color:#fff!important;
+ font-weight:700!important;
+}
+body.ms-v363-home .quick-categories a:hover{background:#066372!important}
+body.ms-v363-home .quick-categories a.selected{background:#064f5e!important;border-color:#064f5e!important}
+body.ms-v363-home .extra-destinations{display:flex;flex-wrap:wrap;gap:9px 18px;margin:0 0 28px;padding:0 3px}
+body.ms-v363-home .extra-destinations a{color:#075e6d;font-weight:750;text-decoration:underline;text-underline-offset:3px;font-size:14px}
+body.ms-v363-home .extra-destinations a:hover{color:#043f49}
+/* Pienempi yläkuva ja vähemmän tyhjää tilaa ennen hakua */
+body.ms-v363-home .hero{min-height:210px!important;max-height:none!important;display:flex!important;align-items:center!important;background-position:center 52%!important}
+body.ms-v363-home .hero-inner{padding-top:23px!important;padding-bottom:29px!important}
+body.ms-v363-home .hero h1{font-size:clamp(30px,4vw,48px)!important;line-height:1.08!important}
+body.ms-v363-home .hero-script{margin:5px 0 9px!important;font-size:clamp(21px,2.7vw,30px)!important}
+body.ms-v363-home .hero-description{font-size:clamp(15px,1.7vw,18px)!important;line-height:1.4!important;max-width:620px!important}
+body.ms-v363-home .search-panel{margin-top:10px!important}
+/* Väriä hillitysti myös korttien toimintopainikkeisiin */
+body.ms-v363-home .saved-filter{border-color:#087b8c!important;color:#066372!important}
+body.ms-v363-home .destination-links article button[aria-pressed="true"]{color:#087b8c!important}
+
+/* Muiden kolmen pääsivun painikkeiden väritys samaa turkoosia. */
+body.ms-v363-regions .region-card,
+body.ms-v363-regions .region-card:nth-child(n){background:#fff!important;border:1px solid #cddfe0!important;border-radius:14px!important;overflow:hidden}
+body.ms-v363-regions .region-card > summary,
+body.ms-v363-regions .region-card:nth-child(n)>summary{
+ background:#087b8c!important;color:white!important;padding:12px 15px!important;
+}
+body.ms-v363-regions .region-card>summary strong,
+body.ms-v363-regions .region-card>summary .region-arrow{color:#fff!important}
+body.ms-v363-regions .ms-map-toggle{border-left-color:#087b8c!important}
+body.ms-v363-regions .ms-map-summary-icon{background:#087b8c!important;color:#fff!important}
+body.ms-v363-stops .ms302-category button,
+body.ms-v363-stops .ms302-category button:nth-child(n),
+body.ms-v363-stops .ms302-category button[data-ms302-category]{
+ background:#087b8c!important;color:#fff!important;border-color:#087b8c!important;
+ font-weight:700!important;
+}
+body.ms-v363-stops .ms302-category button:before,
+body.ms-v363-stops .ms302-category button[data-ms302-category]:before{background:#fff!important}
+body.ms-v363-stops .ms302-category button[aria-pressed="true"]{background:#064f5e!important;border-color:#064f5e!important}
+body.ms-v363-stops .ms302-actions a{background:#087b8c!important;color:#fff!important;border-color:#087b8c!important}
+body.ms-v363-diary #new{background:#087b8c!important;color:#fff!important}
+body.ms-v363-diary .trip,
+body.ms-v363-diary .trip:nth-child(even){border-left-color:#087b8c!important}
+/* Yhteinen alatunnisteen valittu tila. */
+body.ms353-unified nav.ms302-nav a.ms302-active,
+body.ms353-unified nav.ms302-nav a[aria-current="page"]{background:#d9eff1!important}
+body.ms353-unified nav.ms302-nav a.ms302-active .ms302-icon{color:#087b8c!important}
+
+@media(min-width:900px){
+ body.ms-v363-home .main-categories{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:15px!important}
+ body.ms-v363-home .main-categories .category-card{min-height:128px!important}
+ body.ms-v363-home .hero{min-height:260px!important}
+}
+@media(max-width:899px){
+ body.ms-v363-home .hero{min-height:190px!important}
+ body.ms-v363-home .hero-inner{padding-top:18px!important;padding-bottom:25px!important}
+ body.ms-v363-home .search-panel{margin-top:9px!important}
+}
+@media(max-width:560px){
+ body.ms-v363-home .main-categories{gap:9px!important}
+ body.ms-v363-home .main-categories .category-card,
+ body.ms-v363-home .main-categories .category-card:nth-child(n){min-height:110px!important;padding:13px 10px!important;gap:8px!important;border-radius:12px!important}
+ body.ms-v363-home .category-card > svg:first-child,
+ body.ms-v363-home .category-card:nth-child(n)>svg:first-child{width:30px!important;height:30px!important;min-width:30px!important;flex-basis:30px!important}
+ body.ms-v363-home .category-card .category-copy strong{font-size:14px!important;line-height:1.18!important}
+ body.ms-v363-home .category-card .category-copy span{font-size:11.5px!important;line-height:1.25!important}
+ body.ms-v363-home .category-card .category-arrow{width:13px!important;height:13px!important;min-width:13px!important}
+ body.ms-v363-home .hero{min-height:178px!important}
+ body.ms-v363-home .hero h1{font-size:30px!important}
+ body.ms-v363-home .hero-script{font-size:20px!important}
+ body.ms-v363-home .hero-description{font-size:14px!important}
+}
+@media(max-width:365px){
+ body.ms-v363-home .main-categories{grid-template-columns:1fr!important}
+ body.ms-v363-home .main-categories .category-card{min-height:75px!important}
+ body.ms-v363-home .category-card .category-copy strong{font-size:17px!important}
+ body.ms-v363-home .category-card .category-copy span{font-size:13px!important}
+}
+
+/* Uusi Karavaanarin vinkit -sivu toimii myös ilman muiden sivujen tyylitiedostoja. */
+body.ms-v364-tips{margin:0;background:#fbfdfc;color:#173e38;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;padding-bottom:94px}
+body.ms-v364-tips *{box-sizing:border-box}
+.ms-v364-tips .tips-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px max(18px,calc((100vw - 1160px)/2));border-bottom:3px solid #087b8c;background:#fff}
+.ms-v364-tips .tips-brand{color:#173e38;font-family:Georgia,serif;font-weight:800;font-size:clamp(21px,3vw,30px);text-decoration:none}
+.ms-v364-tips .tips-brand small{display:block;font-style:italic;font-size:14px;font-weight:400;color:#527269}
+.ms-v364-tips .tips-menu{padding:12px 16px;background:#eaf4f5;color:#065e6c;border-radius:12px;text-decoration:none;font-weight:750}
+.ms-v364-tips .tips-main{max-width:1120px;margin:auto;padding:22px 20px 50px}
+.ms-v364-tips .tips-back{color:#075e6d;font-weight:700}
+.ms-v364-tips h1{font:800 clamp(35px,5vw,54px) Georgia,serif;margin:20px 0 8px}
+.ms-v364-tips .tips-lead{font-size:19px;color:#4b665e;margin-bottom:24px}
+.ms-v364-tips .tips-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ms-v364-tips .tips-grid section{background:#fff;border:1px solid #d1e5e6;border-left:5px solid #087b8c;border-radius:15px;padding:18px}
+.ms-v364-tips h2{font-size:23px;margin:0 0 9px}
+.ms-v364-tips p{line-height:1.6}
+.ms-v364-tips .tips-grid a{color:#076c7c;font-weight:800}
+.ms-v364-tips .tips-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:23px}
+.ms-v364-tips .tips-actions a{background:#087b8c;color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:12px}
+.ms-v364-tips .tips-bottom{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;gap:2px;background:#fff;border-top:1px solid #d8e6e6;padding:9px 4px max(10px,env(safe-area-inset-bottom));z-index:5}
+.ms-v364-tips .tips-bottom a{display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:#174a48;font-size:26px;min-width:0;flex:1}
+.ms-v364-tips .tips-bottom span{font-size:11px;font-weight:800;text-align:center}
+@media(max-width:600px){.ms-v364-tips .tips-grid{grid-template-columns:1fr}.ms-v364-tips .tips-header{padding:12px 14px}.ms-v364-tips .tips-menu{padding:9px}.ms-v364-tips .tips-main{padding:18px 15px 45px}}

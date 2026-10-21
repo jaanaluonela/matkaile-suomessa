@@ -1,0 +1,34 @@
+MATKAILE SUOMESSA – v364: YHTENÄINEN TURKOOSI (21.10.2026)
+
+Tämä on PIENI PÄIVITYSPAKETTI v363:n päälle, EI KOKO SIVUSTO.
+Säilytä kaikki muut GitHubissa jo olevat tiedostot!
+
+1. Pura ZIP-paketti.
+2. Avaa GitHubissa Matkaile Suomessa -sivuston repository.
+3. Lataa paketin tiedostot repositoryn JUUREEN (Upload files).
+4. Korvaa samannimiset vanhat tiedostot. Älä poista muita tiedostoja.
+5. Odota GitHub Pagesin päivittymistä ja lataa sivu uudelleen.
+
+Päivityksen tiedostot:
+- index.html: etusivun 6 selkeää valintapainiketta, sisältää linkit
+  Paikkakunnat, Yöpymispaikat, Pysähdy matkalla, Suunnittele reitti,
+  Omat matkat ja Karavaanarin vinkit.
+- maakunnat.html, pysahdy-matkalla.html, paivakirja.html:
+  lisätty uusi turkoosi ulkoasutyylitiedosto, sisältöä ei poistettu.
+- varit-ja-yhtenaisyys-v363.css: aiempi v363-ulkoasu säilytetty.
+- turkoosi-yhtenainen-v364.css: uudet turkoosit painikkeet ja
+  pienempi etusivun yläkuva. Yhtenäinen sävy myös muilla pääsivuilla.
+- karavaanarin-vinkit.html: uusi, toimiva vinkkisivu etusivun painikkeelle.
+- V364_LUE_ENSIN.txt: tämä ohje.
+
+Väri: voimakas turkoosinsininen #087B8C; painikkeissa valkoinen teksti.
+Etusivun "Pysähdy matkalla" -painikkeessa on nähtävyyden merkkiä
+mukaileva nelisilmukkainen kuvake. Muut kuvakkeet kuvaavat omia toimintojaan.
+
+Saariston rengastie ja Lähellä minua ovat edelleen etusivulla linkkeinä.
+Muita aiempia sivuja, kuntatietoja, kuvia, matkaparkkeja ja JS-tiedostoja
+EI ole poistettu eikä muutettu. Omat matkat -tallenteet ovat edelleen
+käyttäjän selaimessa; älä tyhjennä selaimen sivustodataa.
+
+HUOM: Tämä paketti tarvitsee vanhan sivuston CSS/JS/kuvat.
+Älä poista vanhoja CSS- ja JS-tiedostoja GitHubista.
