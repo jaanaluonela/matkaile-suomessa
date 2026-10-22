@@ -16,7 +16,7 @@
 <link href="varit-ja-yhtenaisyys-v363.css?v=363" rel="stylesheet"/>
 <link href="turkoosi-yhtenainen-v364.css?v=364" rel="stylesheet"/>
 <link rel="stylesheet" href="sivuston-varit-v365.css?v=365">
-<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"><link rel="stylesheet" href="v368-yhtenainen.css?v=368">
+<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"><link rel="stylesheet" href="v368-yhtenainen.css?v=371">
 </head>
 <body class="ms-v363-home">
 <svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -65,12 +65,10 @@
 </details>
 </div>
 </header>
-<section aria-label="Suomalainen järvimaisema" class="hero">
+<div class="hero-intro">
+<h1 id="hero-title">Löydä seuraava matkakohteesi</h1>
 
-</section><div class="hero-intro">
-<h1 id="hero-title">Matkaile Suomessa</h1>
-<p class="hero-script">Vapaus kulkea · Ilo löytää</p>
-<p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
+<p class="hero-description">Tutustu paikkakuntiin, yöpymispaikkoihin ja kiinnostaviin pysähdyksiin.</p>
 </div>
 <main class="page-main" id="main">
 <section aria-label="Hae kohteita" class="search-panel" id="kohdehaku">
@@ -81,7 +79,7 @@
 <input aria-controls="home-search-results" aria-expanded="false" autocomplete="off" id="destination-search" placeholder="Hae paikkaa tai kohdetta…" type="search"/>
 <div class="suggestions" hidden="" id="home-search-results" role="listbox"></div>
 </div>
-<button class="search-submit" type="submit">Hae kohteita <svg><use href="#icon-arrow"></use></svg></button>
+<button class="search-submit" type="submit" aria-label="Hae kohteita"><svg><use href="#icon-search"></use></svg><span class="sr-only">Hae</span></button>
 </form>
 <div aria-label="Etsi kohdeluokan mukaan" class="quick-categories">
 <a class="selected" href="pysahdy-matkalla.html">Kaikki</a>

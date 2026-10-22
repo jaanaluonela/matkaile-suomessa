@@ -23,3 +23,30 @@ body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-ti
 @media(max-width:700px){body.ms-v363-home .hero{height:140px!important;min-height:140px!important;max-height:140px!important;overflow:hidden}body.ms-v363-home .hero img{width:100%;height:100%;object-fit:cover}body.ms-v363-home .hero-intro{position:relative}:where(input,select,textarea){font-size:16px}:where(button,.btn,.button){min-height:44px}}
 @media(min-width:701px){body.ms-v363-home .hero{max-height:260px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* v371: selkeä, kuvavapaa etusivu – samat valkoiset kortit kuin muilla sivuilla */
+body.ms-v363-home{background:#f3f5f3!important;color:#1d3029!important}
+body.ms-v363-home .hero{display:none!important}
+body.ms-v363-home .hero-intro{background:transparent!important;box-shadow:none!important;border:0!important;padding:22px 18px 8px!important;margin:0 auto!important;max-width:1100px!important}
+body.ms-v363-home .hero-intro h1{font-family:inherit!important;font-size:clamp(1.45rem,4.8vw,2.2rem)!important;line-height:1.2!important;letter-spacing:-.025em!important;margin:0 0 8px!important;color:#183e32!important}
+body.ms-v363-home .hero-intro .hero-description{font-size:clamp(.95rem,2.8vw,1.08rem)!important;line-height:1.55!important;margin:0!important;color:#56645e!important}
+body.ms-v363-home .page-main{padding-top:0!important}
+body.ms-v363-home .search-panel{background:transparent!important;box-shadow:none!important;border:0!important;padding:12px 16px 8px!important;margin:0 auto 8px!important;max-width:1100px!important}
+body.ms-v363-home #homepage-search{display:flex!important;flex-wrap:nowrap!important;gap:8px!important;align-items:stretch!important}
+body.ms-v363-home .search-field-wrap{min-width:0!important;flex:1 1 auto!important;background:#fff!important;border:1px solid #dce4df!important;border-radius:14px!important}
+body.ms-v363-home #destination-search{min-width:0!important;width:100%!important;font-size:16px!important}
+body.ms-v363-home .search-submit{flex:0 0 52px!important;width:52px!important;min-width:52px!important;min-height:52px!important;padding:12px!important;border-radius:14px!important;background:#28634e!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important}
+body.ms-v363-home .search-submit svg{width:24px!important;height:24px!important}
+body.ms-v363-home .quick-categories{display:none!important}
+body.ms-v363-home .main-categories{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;max-width:1100px!important;margin:12px auto 24px!important;padding:0 16px!important}
+body.ms-v363-home .main-categories .category-card{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:10px!important;min-width:0!important;min-height:152px!important;padding:18px 14px!important;border:1px solid #e0e6e2!important;border-radius:17px!important;background:#fff!important;color:#183e32!important;box-shadow:0 2px 8px rgba(25,50,38,.045)!important;text-decoration:none!important}
+body.ms-v363-home .main-categories .category-card>svg:first-child{width:29px!important;height:29px!important;flex:0 0 auto!important;stroke:#28634e!important;color:#28634e!important}
+body.ms-v363-home .main-categories .category-copy{display:flex!important;flex-direction:column!important;gap:4px!important;min-width:0!important;width:100%!important}
+body.ms-v363-home .main-categories .category-copy strong{font-family:inherit!important;font-weight:700!important;font-size:clamp(.96rem,2.7vw,1.2rem)!important;line-height:1.3!important;color:#183e32!important}
+body.ms-v363-home .main-categories .category-copy>span{font-size:clamp(.8rem,2.4vw,.97rem)!important;line-height:1.4!important;color:#58665f!important}
+body.ms-v363-home .main-categories .category-arrow{display:none!important}
+body.ms-v363-home .main-categories .category-card:hover{border-color:#8bad9c!important;box-shadow:0 5px 15px rgba(25,50,38,.09)!important}
+body.ms-v363-home .extra-destinations,body.ms-v363-home .destinations{max-width:1100px!important}
+body.ms-v363-home .site-header{background:#fff!important}
+@media(min-width:760px){body.ms-v363-home .main-categories{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}body.ms-v363-home .main-categories .category-card{min-height:165px!important;padding:22px!important}}
+@media(max-width:380px){body.ms-v363-home .main-categories{gap:9px!important;padding:0 12px!important}body.ms-v363-home .main-categories .category-card{padding:14px 11px!important}}
