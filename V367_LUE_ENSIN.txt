@@ -1,0 +1,10 @@
+MATKAILE SUOMESSA v367 – ULKOASUN YHTENÄISTYS
+
+Tämä on OSITTAINEN PÄIVITYSPAKETTI, ei kokonainen itsenäinen verkkosivusto.
+Kopioi tiedostot nykyisen sivuston juureen ja korvaa samannimiset. Älä poista muita tiedostoja.
+
+Muutettu: etusivu, maakunnat, Pysähdy matkalla, Omat matkat, Karavaanarin vinkit.
+Värit: etusivu turkoosi, maakunnat vihreä, pysähdy terrakotta, omat matkat okra, vinkit sininen.
+Etusivun maisemakuvan korkeus puhelimessa 140 px. Näppäinten vähimmäiskorkeus 44 px puhelimessa.
+
+HUOM: Kuntakohtaisia sivuja, matkaparkkeja, leirintäalueita ja reittisuunnittelua ei ole mukana tässä lähtöpaketissa. Niiden yhtenäistämiseen tarvitaan koko sivuston ZIP.

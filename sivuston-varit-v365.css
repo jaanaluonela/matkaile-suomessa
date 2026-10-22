@@ -1,0 +1,26 @@
+/* Matkaile Suomessa v365 – sivukohtaiset tunnusvärit, sama rakenne. */
+:root{--ms-ink:#173e35;--ms-teal:#087b8c;--ms-green:#34785f;--ms-clay:#b65b3c;--ms-ochre:#a47723;--ms-blue:#326c88}
+body.ms-v363-home{--page-accent:var(--ms-teal)}
+body.ms-v363-regions{--page-accent:var(--ms-green)}
+body.ms-v363-stops{--page-accent:var(--ms-clay)}
+body.ms-v363-diary{--page-accent:var(--ms-ochre)}
+body.ms-v363-home .hero{height:clamp(125px,18vw,205px)!important;min-height:0!important;max-height:205px!important;padding:0!important;display:block!important;background-size:cover!important;background-position:center 55%!important;border-bottom:0!important;overflow:hidden!important}
+body.ms-v363-home .hero::before,body.ms-v363-home .hero::after{pointer-events:none}
+body.ms-v363-home .hero-intro{box-sizing:border-box;width:min(1120px,100%);margin:0 auto;padding:17px 24px 9px;color:var(--ms-ink);background:#fff}
+body.ms-v363-home .hero-intro h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,48px);line-height:1.08;margin:0 0 4px;color:#183e34}
+body.ms-v363-home .hero-intro .hero-script{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,3vw,28px);margin:0 0 8px;color:#39725c}
+body.ms-v363-home .hero-intro .hero-description{font-size:clamp(15px,2.5vw,18px);line-height:1.4;margin:0;color:#52655d;max-width:690px}
+body.ms-v363-home .search-panel{margin-top:6px!important}
+body.ms-v363-home .main-categories .category-card{background:#087b8c!important;border-color:#087b8c!important}
+body.ms-v363-regions .region-card,body.ms-v363-regions .region-card:nth-child(n){background:#fff!important;border:1px solid #cddfd5!important;border-left:5px solid #34785f!important}
+body.ms-v363-regions .region-card>summary,body.ms-v363-regions .region-card:nth-child(n)>summary{background:#34785f!important;color:#fff!important}
+body.ms-v363-regions .region-card>summary strong,body.ms-v363-regions .region-card>summary .region-arrow{color:#fff!important}
+body.ms-v363-regions .regions-hero{background:#eef5f0!important;border-color:#d6e5db!important}
+body.ms-v363-regions .regions-hero:before{background:#34785f!important}
+body.ms-v363-regions .regions-hero h1:after{background:#34785f!important}
+body.ms-v363-stops{--ms364-teal:#b65b3c;--ms364-teal-dark:#97482f;--ms364-teal-deep:#783622;--ms364-teal-soft:#faeee8}
+body.ms-v363-diary{--ms364-teal:#a47723;--ms364-teal-dark:#855d18;--ms364-teal-deep:#6b4b13;--ms364-teal-soft:#fbf4e5}
+body.ms-v363-stops button,body.ms-v363-stops .filter-chip,body.ms-v363-stops .chip,body.ms-v363-stops [aria-pressed=true]{accent-color:#b65b3c}
+body.ms-v363-diary button{accent-color:#a47723}
+body.ms-v363-stops a:focus-visible,body.ms-v363-diary a:focus-visible,body.ms-v363-regions a:focus-visible{outline:3px solid var(--page-accent);outline-offset:3px}
+@media(max-width:600px){body.ms-v363-home .hero{height:140px!important;max-height:140px!important}body.ms-v363-home .hero-intro{padding:15px 17px 7px}body.ms-v363-home .main-categories{gap:10px!important}body.ms-v363-home .main-categories .category-card{padding:13px 11px!important;min-height:100px!important}}

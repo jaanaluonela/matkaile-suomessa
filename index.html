@@ -1,133 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#087b8c">
-  <meta name="description" content="Matkaile Suomessa – löydä Suomen paikkakunnat, yöpymispaikat, nähtävyydet ja kiinnostavat pysähdykset.">
-  <title>Matkaile Suomessa – Vapaus kulkea · Ilo löytää</title>
-  <link rel="stylesheet" href="etusivu-laadukas-v352.css?v=352">
-  <script defer src="kunnat-v200.js"></script>
-  <script defer src="suomi-kunnat-v253.js?v=253"></script>
-  <script defer src="etusivu-laadukas-v352.js?v=352"></script>
-  <link rel="stylesheet" href="alavalikko-v304.css?v=355">
-  <script defer src="alavalikko-v304.js?v=355"></script>
-<link rel="stylesheet" href="varit-ja-yhtenaisyys-v363.css?v=363">
-<link rel="stylesheet" href="turkoosi-yhtenainen-v364.css?v=364">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#087b8c" name="theme-color"/>
+<meta content="Matkaile Suomessa – löydä Suomen paikkakunnat, yöpymispaikat, nähtävyydet ja kiinnostavat pysähdykset." name="description"/>
+<title>Matkaile Suomessa – Vapaus kulkea · Ilo löytää</title>
+<link href="etusivu-laadukas-v352.css?v=352" rel="stylesheet"/>
+<script defer="" src="kunnat-v200.js"></script>
+<script defer="" src="suomi-kunnat-v253.js?v=253"></script>
+<script defer="" src="etusivu-laadukas-v352.js?v=352"></script>
+<link href="alavalikko-v304.css?v=355" rel="stylesheet"/>
+<script defer="" src="alavalikko-v304.js?v=355"></script>
+<link href="varit-ja-yhtenaisyys-v363.css?v=363" rel="stylesheet"/>
+<link href="turkoosi-yhtenainen-v364.css?v=364" rel="stylesheet"/>
+<link rel="stylesheet" href="sivuston-varit-v365.css?v=365">
+<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"></head>
 <body class="ms-v363-home">
-  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="icon-map" viewBox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"/></symbol>
-    <symbol id="icon-bed" viewBox="0 0 24 24"><path d="M3 5v15m0-4h18v4m-18-6V9h18v7M6 9V7h6v2M14 9V7h5v2"/></symbol>
-    <symbol id="icon-sign" viewBox="0 0 24 24"><path d="M12 22V2M5 5h14l3 3-3 3H5zm14 8H5l-3 3 3 3h14z"/></symbol>
-    <symbol id="icon-coast" viewBox="0 0 24 24"><path d="M2 17c3-3 6-3 9 0s6 3 11 0M2 21c3-3 6-3 9 0s6 3 11 0M3 13 9 3l3 5 3-3 6 8"/></symbol>
-    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h7a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h8"/></symbol>
-    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></symbol>
-    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.7a5.3 5.3 0 0 0-7.4 0L12 6.1l-1.4-1.4a5.3 5.3 0 1 0-7.4 7.5l8.8 8.5 8.8-8.5a5.3 5.3 0 0 0 0-7.5Z"/></symbol>
-    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3zM9 21v-7h6v7"/></symbol>
-    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v15"/></symbol>
-    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
-    <symbol id="icon-sight" viewBox="0 0 24 24"><path d="M12 12C8.2 12 4 9.9 4 6.4a3.5 3.5 0 0 1 7 0V12M12 12c0-3.8 2.1-8 5.6-8a3.5 3.5 0 0 1 0 7H12m0 1c3.8 0 8 2.1 8 5.6a3.5 3.5 0 0 1-7 0V12m-1 0c0 3.8-2.1 8-5.6 8a3.5 3.5 0 0 1 0-7H12"/></symbol>
-    <symbol id="icon-camper" viewBox="0 0 24 24"><path d="M3 16V6a2 2 0 0 1 2-2h12a3 3 0 0 1 3 3v9H3Zm0 0h18v3h-2m-11 0h7M3 19h2m1-3v-5h6v5m4-8h2m-1 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm-12 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></symbol>
-    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-  </svg>
+<svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
+<symbol id="icon-map" viewbox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"></path></symbol>
+<symbol id="icon-bed" viewbox="0 0 24 24"><path d="M3 5v15m0-4h18v4m-18-6V9h18v7M6 9V7h6v2M14 9V7h5v2"></path></symbol>
+<symbol id="icon-sign" viewbox="0 0 24 24"><path d="M12 22V2M5 5h14l3 3-3 3H5zm14 8H5l-3 3 3 3h14z"></path></symbol>
+<symbol id="icon-coast" viewbox="0 0 24 24"><path d="M2 17c3-3 6-3 9 0s6 3 11 0M2 21c3-3 6-3 9 0s6 3 11 0M3 13 9 3l3 5 3-3 6 8"></path></symbol>
+<symbol id="icon-route" viewbox="0 0 24 24"><circle cx="5" cy="5" r="2"></circle><circle cx="19" cy="19" r="2"></circle><path d="M7 5h7a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h8"></path></symbol>
+<symbol id="icon-search" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"></circle><path d="m16 16 5 5"></path></symbol>
+<symbol id="icon-arrow" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></symbol>
+<symbol id="icon-heart" viewbox="0 0 24 24"><path d="M20.8 4.7a5.3 5.3 0 0 0-7.4 0L12 6.1l-1.4-1.4a5.3 5.3 0 1 0-7.4 7.5l8.8 8.5 8.8-8.5a5.3 5.3 0 0 0 0-7.5Z"></path></symbol>
+<symbol id="icon-home" viewbox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3zM9 21v-7h6v7"></path></symbol>
+<symbol id="icon-book" viewbox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v15"></path></symbol>
+<symbol id="icon-menu" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></symbol>
+<symbol id="icon-sight" viewbox="0 0 24 24"><path d="M12 12C8.2 12 4 9.9 4 6.4a3.5 3.5 0 0 1 7 0V12M12 12c0-3.8 2.1-8 5.6-8a3.5 3.5 0 0 1 0 7H12m0 1c3.8 0 8 2.1 8 5.6a3.5 3.5 0 0 1-7 0V12m-1 0c0 3.8-2.1 8-5.6 8a3.5 3.5 0 0 1 0-7H12"></path></symbol>
+<symbol id="icon-camper" viewbox="0 0 24 24"><path d="M3 16V6a2 2 0 0 1 2-2h12a3 3 0 0 1 3 3v9H3Zm0 0h18v3h-2m-11 0h7M3 19h2m1-3v-5h6v5m4-8h2m-1 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm-12 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"></path></symbol>
+<symbol id="icon-pin" viewbox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+</svg>
+<header class="site-header">
+<div class="header-inner">
+<a aria-label="Matkaile Suomessa, etusivu" class="brand" href="index.html">
+<svg aria-label="Metsä ja järvi" class="brand-mark" role="img" viewbox="0 0 60 48"><path d="M4 33 17 11l8 13 7-10 13 19H4Z" fill="#5b9f76"></path><path d="m23 32 13-24 14 24H23Z" fill="#16543e"></path><path d="m44 31 8-15 6 15H44Z" fill="#337458"></path><path d="M3 39c17-8 34 8 54 0" fill="none" stroke="#1689b5" stroke-linecap="round" stroke-width="4"></path></svg>
+<span class="brand-words"><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span>
+</a>
+<nav aria-label="Päävalikko" class="desktop-nav">
+<a aria-current="page" href="index.html">Koti</a>
+<a href="maakunnat.html">Paikkakunnat</a>
+<a href="leirintaalueet.html">Yöpymispaikat</a>
+<a href="pysahdy-matkalla.html">Pysähdy matkalla</a>
+<a href="saariston-rengastie.html">Saariston rengastie</a>
+<a href="paivakirja.html">Omat matkat</a>
+</nav>
+<div class="header-actions">
+<a class="header-favorites" href="suosikit.html"><svg><use href="#icon-heart"></use></svg><span>Suosikit</span></a>
+<a aria-label="Siirry hakuun" class="header-search" href="#kohdehaku"><svg><use href="#icon-search"></use></svg></a>
+</div>
+<details class="mobile-menu">
+<summary aria-label="Avaa sivuston valikko"><svg><use href="#icon-menu"></use></svg></summary>
+<nav aria-label="Lisävalikko">
+<a href="leirintaalueet.html">Yöpymispaikat</a>
+<a href="saariston-rengastie.html">Saariston rengastie</a>
+<a href="reittisuunnittelu.html">Suunnittele reitti</a>
+<a href="lahella-minua.html">Lähellä minua</a>
+<a href="suosikit.html">Suosikit</a>
+</nav>
+</details>
+</div>
+</header>
+<section aria-label="Suomalainen järvimaisema" class="hero">
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="Matkaile Suomessa, etusivu">
-        <svg class="brand-mark" viewBox="0 0 60 48" role="img" aria-label="Metsä ja järvi"><path d="M4 33 17 11l8 13 7-10 13 19H4Z" fill="#5b9f76"/><path d="m23 32 13-24 14 24H23Z" fill="#16543e"/><path d="m44 31 8-15 6 15H44Z" fill="#337458"/><path d="M3 39c17-8 34 8 54 0" fill="none" stroke="#1689b5" stroke-width="4" stroke-linecap="round"/></svg>
-        <span class="brand-words"><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span>
-      </a>
-      <nav class="desktop-nav" aria-label="Päävalikko">
-        <a href="index.html" aria-current="page">Koti</a>
-        <a href="maakunnat.html">Paikkakunnat</a>
-        <a href="leirintaalueet.html">Yöpymispaikat</a>
-        <a href="pysahdy-matkalla.html">Pysähdy matkalla</a>
-        <a href="saariston-rengastie.html">Saariston rengastie</a>
-        <a href="paivakirja.html">Omat matkat</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-favorites" href="suosikit.html"><svg><use href="#icon-heart"/></svg><span>Suosikit</span></a>
-        <a class="header-search" href="#kohdehaku" aria-label="Siirry hakuun"><svg><use href="#icon-search"/></svg></a>
-      </div>
-      <details class="mobile-menu">
-        <summary aria-label="Avaa sivuston valikko"><svg><use href="#icon-menu"/></svg></summary>
-        <nav aria-label="Lisävalikko">
-          <a href="leirintaalueet.html">Yöpymispaikat</a>
-          <a href="saariston-rengastie.html">Saariston rengastie</a>
-          <a href="reittisuunnittelu.html">Suunnittele reitti</a>
-          <a href="lahella-minua.html">Lähellä minua</a>
-          <a href="suosikit.html">Suosikit</a>
-        </nav>
-      </details>
-    </div>
-  </header>
-
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-inner">
-      <h1 id="hero-title">Matkaile Suomessa</h1>
-      <p class="hero-script">Vapaus kulkea · Ilo löytää</p>
-      <p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
-    </div>
-  </section>
-
-  <main class="page-main" id="main">
-    <section class="search-panel" id="kohdehaku" aria-label="Hae kohteita">
-      <form id="homepage-search" role="search" autocomplete="off">
-        <div class="search-field-wrap">
-          <svg class="search-field-icon"><use href="#icon-search"/></svg>
-          <label for="destination-search" class="sr-only">Hae kohdetta tai paikkakuntaa</label>
-          <input id="destination-search" type="search" placeholder="Hae paikkaa tai kohdetta…" aria-controls="home-search-results" aria-expanded="false" autocomplete="off">
-          <div class="suggestions" id="home-search-results" role="listbox" hidden></div>
-        </div>
-        <button type="submit" class="search-submit">Hae kohteita <svg><use href="#icon-arrow"/></svg></button>
-      </form>
-      <div class="quick-categories" aria-label="Etsi kohdeluokan mukaan">
-        <a class="selected" href="pysahdy-matkalla.html">Kaikki</a>
-        <a href="pysahdy-matkalla.html?tyyppi=sight">Nähtävyydet</a>
-        <a href="pysahdy-matkalla.html?tyyppi=nature">Luonto ja retket</a>
-        <a href="pysahdy-matkalla.html?tyyppi=stop">Taukopaikat</a>
-        <a href="pysahdy-matkalla.html?tyyppi=food">Kahvilat ja ravintolat</a>
-      </div>
-    </section>
-
-    <section class="main-categories" aria-label="Matkailupalvelut">
-      <a class="category-card" href="maakunnat.html"><svg><use href="#icon-pin"/></svg><span class="category-copy"><strong>Paikkakunnat</strong><span>Tutustu kuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-      <a class="category-card" href="leirintaalueet.html"><svg><use href="#icon-bed"/></svg><span class="category-copy"><strong>Yöpymispaikat</strong><span>Leirintäalueet ja matkaparkit</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-      <a class="category-card" href="pysahdy-matkalla.html"><svg><use href="#icon-sight"/></svg><span class="category-copy"><strong>Pysähdy matkalla</strong><span>Nähtävyydet, luonto ja taukopaikat</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-      <a class="category-card" href="reittisuunnittelu.html"><svg><use href="#icon-route"/></svg><span class="category-copy"><strong>Suunnittele reitti</strong><span>Lähtö, määränpää ja reitin varren kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-      <a class="category-card" href="paivakirja.html"><svg><use href="#icon-book"/></svg><span class="category-copy"><strong>Omat matkat</strong><span>Tallenna kohteet ja matkamuistot</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-      <a class="category-card" href="karavaanarin-vinkit.html"><svg><use href="#icon-camper"/></svg><span class="category-copy"><strong>Karavaanarin vinkit</strong><span>Vinkkejä ja hyödyllisiä linkkejä</span></span><svg class="category-arrow"><use href="#icon-arrow"/></svg></a>
-    </section>
-
-    <div class="extra-destinations" aria-label="Lisää matkailuvinkkejä">
-      <a href="saariston-rengastie.html">Saariston rengastie <span aria-hidden="true">→</span></a>
-      <a href="lahella-minua.html">Löydä kohteita läheltäsi <span aria-hidden="true">→</span></a>
-    </div>
-
-    <section class="destinations" aria-labelledby="destination-title">
-      <div class="destinations-heading"><h2 id="destination-title">Suosittuja kohteita</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet <span aria-hidden="true">→</span></a></div>
-      <p class="destinations-intro">Muutama idea seuraavalle matkalle – ilman turhia kuvakaruselleja.</p>
-      <div class="destination-links" id="home-destination-links">
-        <article data-id="0"><a href="savonlinna.html"><strong>Savonlinna</strong><small>Historiallinen linna ja järvimaisemat</small></a><button type="button" data-fav="0" aria-label="Tallenna Savonlinna suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-        <article data-id="1"><a href="saariston-rengastie.html"><strong>Saariston rengastie</strong><small>Merellisiä reittejä ja saaristoa</small></a><button type="button" data-fav="1" aria-label="Tallenna Saariston rengastie suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-        <article data-id="2"><a href="ruukkikylat.html#fiskars"><strong>Fiskars</strong><small>Ruukkikylä, käsityöt ja kulttuuri</small></a><button type="button" data-fav="2" aria-label="Tallenna Fiskars suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-        <article data-id="3"><a href="koli.html"><strong>Kolin kansallispuisto</strong><small>Kansallismaisemat ja retkeilyreitit</small></a><button type="button" data-fav="3" aria-label="Tallenna Koli suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-        <article data-id="4"><a href="maakunnat.html"><strong>Puumalan satama</strong><small>Saimaan maisemat ja palvelut</small></a><button type="button" data-fav="4" aria-label="Tallenna Puumalan satama suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-        <article data-id="5"><a href="yyteri.html"><strong>Yyterin hiekkarannat</strong><small>Hiekkaa, merta ja luontoa</small></a><button type="button" data-fav="5" aria-label="Tallenna Yyteri suosikiksi" aria-pressed="false"><svg><use href="#icon-heart"/></svg></button></article>
-      </div>
-      <button type="button" class="saved-filter" id="home-saved-filter" aria-pressed="false">Näytä vain tallentamani kohteet</button>
-      <p id="home-empty-favorites" hidden>Et ole vielä tallentanut kohteita. Paina kohteen sydänkuvaketta.</p>
-    </section>
-    <footer class="page-footer">Matkaile Suomessa · Vapaus kulkea · Ilo löytää</footer>
-  </main>
-
-  <nav class="mobile-bottom" aria-label="Puhelimen päävalikko">
-    <a href="index.html" aria-current="page"><svg><use href="#icon-home"/></svg><span>Koti</span></a>
-    <a href="maakunnat.html"><svg><use href="#icon-map"/></svg><span>Paikkakunnat</span></a>
-    <a href="pysahdy-matkalla.html"><svg><use href="#icon-sign"/></svg><span>Pysähdy matkalla</span></a>
-    <a href="paivakirja.html"><svg><use href="#icon-book"/></svg><span>Omat matkat</span></a>
-  </nav>
+</section><div class="hero-intro">
+<h1 id="hero-title">Matkaile Suomessa</h1>
+<p class="hero-script">Vapaus kulkea · Ilo löytää</p>
+<p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
+</div>
+<main class="page-main" id="main">
+<section aria-label="Hae kohteita" class="search-panel" id="kohdehaku">
+<form autocomplete="off" id="homepage-search" role="search">
+<div class="search-field-wrap">
+<svg class="search-field-icon"><use href="#icon-search"></use></svg>
+<label class="sr-only" for="destination-search">Hae kohdetta tai paikkakuntaa</label>
+<input aria-controls="home-search-results" aria-expanded="false" autocomplete="off" id="destination-search" placeholder="Hae paikkaa tai kohdetta…" type="search"/>
+<div class="suggestions" hidden="" id="home-search-results" role="listbox"></div>
+</div>
+<button class="search-submit" type="submit">Hae kohteita <svg><use href="#icon-arrow"></use></svg></button>
+</form>
+<div aria-label="Etsi kohdeluokan mukaan" class="quick-categories">
+<a class="selected" href="pysahdy-matkalla.html">Kaikki</a>
+<a href="pysahdy-matkalla.html?tyyppi=sight">Nähtävyydet</a>
+<a href="pysahdy-matkalla.html?tyyppi=nature">Luonto ja retket</a>
+<a href="pysahdy-matkalla.html?tyyppi=stop">Taukopaikat</a>
+<a href="pysahdy-matkalla.html?tyyppi=food">Kahvilat ja ravintolat</a>
+</div>
+</section>
+<section aria-label="Matkailupalvelut" class="main-categories">
+<a class="category-card" href="maakunnat.html"><svg><use href="#icon-pin"></use></svg><span class="category-copy"><strong>Paikkakunnat</strong><span>Tutustu kuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" href="leirintaalueet.html"><svg><use href="#icon-bed"></use></svg><span class="category-copy"><strong>Yöpymispaikat</strong><span>Leirintäalueet ja matkaparkit</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" href="pysahdy-matkalla.html"><svg><use href="#icon-sight"></use></svg><span class="category-copy"><strong>Pysähdy matkalla</strong><span>Nähtävyydet, luonto ja taukopaikat</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" href="reittisuunnittelu.html"><svg><use href="#icon-route"></use></svg><span class="category-copy"><strong>Suunnittele reitti</strong><span>Lähtö, määränpää ja reitin varren kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" href="paivakirja.html"><svg><use href="#icon-book"></use></svg><span class="category-copy"><strong>Omat matkat</strong><span>Tallenna kohteet ja matkamuistot</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" href="karavaanarin-vinkit.html"><svg><use href="#icon-camper"></use></svg><span class="category-copy"><strong>Karavaanarin vinkit</strong><span>Vinkkejä ja hyödyllisiä linkkejä</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+</section>
+<div aria-label="Lisää matkailuvinkkejä" class="extra-destinations">
+<a href="saariston-rengastie.html">Saariston rengastie <span aria-hidden="true">→</span></a>
+<a href="lahella-minua.html">Löydä kohteita läheltäsi <span aria-hidden="true">→</span></a>
+</div>
+<section aria-labelledby="destination-title" class="destinations">
+<div class="destinations-heading"><h2 id="destination-title">Suosittuja kohteita</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet <span aria-hidden="true">→</span></a></div>
+<p class="destinations-intro">Muutama idea seuraavalle matkalle – ilman turhia kuvakaruselleja.</p>
+<div class="destination-links" id="home-destination-links">
+<article data-id="0"><a href="savonlinna.html"><strong>Savonlinna</strong><small>Historiallinen linna ja järvimaisemat</small></a><button aria-label="Tallenna Savonlinna suosikiksi" aria-pressed="false" data-fav="0" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+<article data-id="1"><a href="saariston-rengastie.html"><strong>Saariston rengastie</strong><small>Merellisiä reittejä ja saaristoa</small></a><button aria-label="Tallenna Saariston rengastie suosikiksi" aria-pressed="false" data-fav="1" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+<article data-id="2"><a href="ruukkikylat.html#fiskars"><strong>Fiskars</strong><small>Ruukkikylä, käsityöt ja kulttuuri</small></a><button aria-label="Tallenna Fiskars suosikiksi" aria-pressed="false" data-fav="2" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+<article data-id="3"><a href="koli.html"><strong>Kolin kansallispuisto</strong><small>Kansallismaisemat ja retkeilyreitit</small></a><button aria-label="Tallenna Koli suosikiksi" aria-pressed="false" data-fav="3" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+<article data-id="4"><a href="maakunnat.html"><strong>Puumalan satama</strong><small>Saimaan maisemat ja palvelut</small></a><button aria-label="Tallenna Puumalan satama suosikiksi" aria-pressed="false" data-fav="4" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+<article data-id="5"><a href="yyteri.html"><strong>Yyterin hiekkarannat</strong><small>Hiekkaa, merta ja luontoa</small></a><button aria-label="Tallenna Yyteri suosikiksi" aria-pressed="false" data-fav="5" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
+</div>
+<button aria-pressed="false" class="saved-filter" id="home-saved-filter" type="button">Näytä vain tallentamani kohteet</button>
+<p hidden="" id="home-empty-favorites">Et ole vielä tallentanut kohteita. Paina kohteen sydänkuvaketta.</p>
+</section>
+<footer class="page-footer">Matkaile Suomessa · Vapaus kulkea · Ilo löytää</footer>
+</main>
+<nav aria-label="Puhelimen päävalikko" class="mobile-bottom">
+<a aria-current="page" href="index.html"><svg><use href="#icon-home"></use></svg><span>Koti</span></a>
+<a href="maakunnat.html"><svg><use href="#icon-map"></use></svg><span>Paikkakunnat</span></a>
+<a href="pysahdy-matkalla.html"><svg><use href="#icon-sign"></use></svg><span>Pysähdy matkalla</span></a>
+<a href="paivakirja.html"><svg><use href="#icon-book"></use></svg><span>Omat matkat</span></a>
+</nav>
 </body>
 </html>

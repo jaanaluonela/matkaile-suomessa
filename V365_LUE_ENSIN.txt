@@ -1,0 +1,11 @@
+MATKAILE SUOMESSA v365 – ULKOASUPÄIVITYS
+
+TÄMÄ ON PÄIVITYSPAKETTI, EI KOKO SIVUSTO. Lataa tiedostot nykyisen GitHub-repositorion juureen ja korvaa samannimiset tiedostot. Älä poista muita tiedostoja.
+
+Etusivu: vanhan sivuston taustakuvasta matala 140 px kuvakaistale puhelimessa; otsikko ja haku sen alapuolella. Kuva tulee aiemmasta etusivu-laadukas-v352.css-tiedostosta ja sen kuvaresursseista.
+
+Värit: etusivu turkoosi, maakunnat metsänvihreä, pysähdy matkalla terrakotta, omat matkat okra. Yhteiset elementit säilyvät.
+
+Mukana ovat vain alkuperäisen v364-paketin viisi HTML-sivua ja ulkoasutyylit. Muut sivut (esim. leirintäalueet, reittisuunnittelu ja kuntasivut) eivät sisälly toimitettuun lähtöpakettiin, eikä niitä ole voitu muokata. Niiden täysi uudistus edellyttää koko sivuston lähdetiedostoja.
+
+Huom. Säilytä GitHubissa kaikki vanhat CSS, JS, kuva- ja HTML-tiedostot.

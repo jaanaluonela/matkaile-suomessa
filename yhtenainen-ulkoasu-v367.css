@@ -1,0 +1,18 @@
+/* Matkaile Suomessa v367 – unified accessible visual layer */
+:root{--ms-ink:#203c36;--ms-muted:#52665f;--ms-line:#d9e5df;--ms-paper:#fff;--ms-bg:#f6f8f5;--ms-radius:14px}
+body.ms-v363-home{--page-accent:#087f91;--page-soft:#e8f4f5}
+body.ms-v363-regions{--page-accent:#34785f;--page-soft:#edf5ef}
+body.ms-v363-stops{--page-accent:#a95138;--page-soft:#fbefe9}
+body.ms-v363-diary{--page-accent:#987020;--page-soft:#faf2e2}
+body.ms-v364-tips{--page-accent:#326c88;--page-soft:#edf4f8}
+body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips){color:var(--ms-ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(button,input,select,textarea){font:inherit}
+body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--page-accent);outline-offset:3px}
+body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(.card,.category-card,.region-card,.stop-card,.tips-card){border-radius:var(--ms-radius)}
+body.ms-v363-home .main-categories .category-card{background:#087f91!important;border-color:#087f91!important;color:white!important}
+body.ms-v363-regions .region-card>summary{background:#34785f!important;color:white!important}
+body.ms-v363-stops{--ms364-teal:#a95138;--ms364-teal-dark:#87402b;--ms364-teal-deep:#6d3424;--ms364-teal-soft:#fbefe9}
+body.ms-v363-diary{--ms364-teal:#987020;--ms364-teal-dark:#775719;--ms364-teal-deep:#5f4614;--ms364-teal-soft:#faf2e2}
+body.ms-v364-tips{--ms364-teal:#326c88;--ms364-teal-dark:#28556c;--ms364-teal-deep:#204457;--ms364-teal-soft:#edf4f8}
+@media(max-width:640px){body.ms-v363-home .hero{height:140px!important;max-height:140px!important;min-height:0!important}body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(button,.btn,.button,input,select){min-height:44px}body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(h1,h2){overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) *,body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) *::before{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
