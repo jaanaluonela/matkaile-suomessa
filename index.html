@@ -16,7 +16,14 @@
 <link href="varit-ja-yhtenaisyys-v363.css?v=363" rel="stylesheet"/>
 <link href="turkoosi-yhtenainen-v364.css?v=364" rel="stylesheet"/>
 <link rel="stylesheet" href="sivuston-varit-v365.css?v=365">
-<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"><link rel="stylesheet" href="v368-yhtenainen.css?v=371">
+<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"><link rel="stylesheet" href="v368-yhtenainen.css?v=373">
+<style id="v373-card-fix">
+body.ms-v363-home .main-categories>a.category-card{background:#fff!important;color:#183e32!important;border:1px solid #dce4df!important;border-radius:16px!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;}
+body.ms-v363-home .main-categories>a.category-card .category-copy,body.ms-v363-home .main-categories>a.category-card strong{color:#183e32!important;opacity:1!important}
+body.ms-v363-home .main-categories>a.category-card .category-copy>span{color:#53645c!important;opacity:1!important}
+body.ms-v363-home .main-categories>a.category-card>svg:first-child{opacity:1!important;filter:none!important}
+body.ms-v363-home .main-categories>a.category-card:hover{background:#f4f8f5!important}
+</style>
 </head>
 <body class="ms-v363-home">
 <svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
@@ -65,10 +72,12 @@
 </details>
 </div>
 </header>
-<div class="hero-intro">
-<h1 id="hero-title">Löydä seuraava matkakohteesi</h1>
+<section aria-label="Suomalainen järvimaisema" class="hero">
 
-<p class="hero-description">Tutustu paikkakuntiin, yöpymispaikkoihin ja kiinnostaviin pysähdyksiin.</p>
+</section><div class="hero-intro">
+<h1 id="hero-title">Matkaile Suomessa</h1>
+<p class="hero-script">Vapaus kulkea · Ilo löytää</p>
+<p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
 </div>
 <main class="page-main" id="main">
 <section aria-label="Hae kohteita" class="search-panel" id="kohdehaku">
@@ -79,7 +88,7 @@
 <input aria-controls="home-search-results" aria-expanded="false" autocomplete="off" id="destination-search" placeholder="Hae paikkaa tai kohdetta…" type="search"/>
 <div class="suggestions" hidden="" id="home-search-results" role="listbox"></div>
 </div>
-<button class="search-submit" type="submit" aria-label="Hae kohteita"><svg><use href="#icon-search"></use></svg><span class="sr-only">Hae</span></button>
+<button class="search-submit" type="submit">Hae kohteita <svg><use href="#icon-arrow"></use></svg></button>
 </form>
 <div aria-label="Etsi kohdeluokan mukaan" class="quick-categories">
 <a class="selected" href="pysahdy-matkalla.html">Kaikki</a>
@@ -90,12 +99,12 @@
 </div>
 </section>
 <section aria-label="Matkailupalvelut" class="main-categories">
-<a class="category-card" href="maakunnat.html"><svg><use href="#icon-pin"></use></svg><span class="category-copy"><strong>Paikkakunnat</strong><span>Tutustu kuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" href="leirintaalueet.html"><svg><use href="#icon-bed"></use></svg><span class="category-copy"><strong>Yöpymispaikat</strong><span>Leirintäalueet ja matkaparkit</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" href="pysahdy-matkalla.html"><svg><use href="#icon-sight"></use></svg><span class="category-copy"><strong>Pysähdy matkalla</strong><span>Nähtävyydet, luonto ja taukopaikat</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" href="reittisuunnittelu.html"><svg><use href="#icon-route"></use></svg><span class="category-copy"><strong>Suunnittele reitti</strong><span>Lähtö, määränpää ja reitin varren kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" href="paivakirja.html"><svg><use href="#icon-book"></use></svg><span class="category-copy"><strong>Omat matkat</strong><span>Tallenna kohteet ja matkamuistot</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" href="karavaanarin-vinkit.html"><svg><use href="#icon-camper"></use></svg><span class="category-copy"><strong>Karavaanarin vinkit</strong><span>Vinkkejä ja hyödyllisiä linkkejä</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="maakunnat.html"><svg style="color:#28634e!important;stroke:#28634e!important;opacity:1!important"><use href="#icon-pin"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Paikkakunnat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Tutustu kuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="leirintaalueet.html"><svg style="color:#087f91!important;stroke:#087f91!important;opacity:1!important"><use href="#icon-bed"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Yöpymispaikat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Leirintäalueet ja matkaparkit</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="pysahdy-matkalla.html"><svg style="color:#a15d40!important;stroke:#a15d40!important;opacity:1!important"><use href="#icon-sight"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Pysähdy matkalla</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Nähtävyydet, luonto ja taukopaikat</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="reittisuunnittelu.html"><svg style="color:#326c88!important;stroke:#326c88!important;opacity:1!important"><use href="#icon-route"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Suunnittele reitti</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Lähtö, määränpää ja reitin varren kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="paivakirja.html"><svg style="color:#28634e!important;stroke:#28634e!important;opacity:1!important"><use href="#icon-book"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Omat matkat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Tallenna kohteet ja matkamuistot</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
+<a class="category-card" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="karavaanarin-vinkit.html"><svg style="color:#b39a66!important;stroke:#b39a66!important;opacity:1!important"><use href="#icon-camper"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Karavaanarin vinkit</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Vinkkejä ja hyödyllisiä linkkejä</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
 </section>
 <div aria-label="Lisää matkailuvinkkejä" class="extra-destinations">
 <a href="saariston-rengastie.html">Saariston rengastie <span aria-hidden="true">→</span></a>
