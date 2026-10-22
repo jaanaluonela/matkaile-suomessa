@@ -1,11 +1,25 @@
-/* v368 – kaikkien sivujen hillitty yhtenäinen viimeistely. */
-:root{--ms-v368-ink:#183e32;--ms-v368-border:#dbe6e0;--ms-v368-focus:#b47b39;--ms-v368-accent:#087f91}
-html{scroll-behavior:smooth}body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-body.ms-v363-home{--ms-v368-accent:#087f91}body.ms-v363-regions,body.ms-v368-municipality{--ms-v368-accent:#34785f}body.ms-v363-stops{--ms-v368-accent:#a95138}body.ms-v363-diary{--ms-v368-accent:#987020}body.ms-v364-tips,body.ms-v368-overnight{--ms-v368-accent:#326c88}
-:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--ms-v368-focus)!important;outline-offset:3px}
+/* Matkaile Suomessa – yhtenäinen karavaanarin teema, 22.10.2026.
+   Pääväri metsänvihreä; aidot liikennemerkit, kuvat ja vaakunat säilyttävät alkuperäiset värinsä. */
+:root{--ms-v368-ink:#202a26;--ms-v368-border:#dce2df;--ms-v368-focus:#087f91;--ms-v368-accent:#28634e;--page-accent:#28634e;--page-soft:#edf3ef;--ms-ink:#202a26;--ms-muted:#58645f;--ms-line:#dce2df;--ms-paper:#fff;--ms-bg:#f2f3f2;--ms-radius:16px;--ms364-teal:#28634e;--ms364-teal-dark:#20513f;--ms364-teal-deep:#183e32;--ms364-teal-soft:#edf3ef}
+html{scroll-behavior:smooth}
+body{background-color:#f2f3f2;color:#202a26;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.5}
+body.ms-v363-home,body.ms-v363-regions,body.ms-v363-stops,body.ms-v363-diary,body.ms-v364-tips,body.ms-v368-municipality,body.ms-v368-overnight{--page-accent:#28634e!important;--page-soft:#edf3ef!important;--ms-v368-accent:#28634e!important;--ms364-teal:#28634e!important;--ms364-teal-dark:#20513f!important;--ms364-teal-deep:#183e32!important;--ms364-teal-soft:#edf3ef!important}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #087f91!important;outline-offset:3px}
 :where(button,input,select,textarea){font-family:inherit}
 :where(button,[role=button]){cursor:pointer}
-:where(img){max-width:100%}
-@media(max-width:700px){body.ms-v363-home .hero{height:140px!important;min-height:140px!important;max-height:140px!important}body.ms-v363-home .hero img{object-fit:cover}body.ms-v363-home .hero-intro{position:relative} :where(input,select,textarea){font-size:16px}}
+:where(img){max-width:100%;height:auto}
+/* Card backgrounds and gentle borders. Do not recolor official traffic signs, coats of arms, photographs or maps. */
+:where(.card,.category-card,.region-card,.stop-card,.tips-card,.feature-card,.info-card,.service-card){border-radius:16px;box-shadow:0 2px 9px rgba(22,50,39,.055)}
+body.ms-v363-home .main-categories .category-card{background:#fff!important;border:1px solid #dce2df!important;color:#202a26!important;box-shadow:0 2px 9px rgba(22,50,39,.06)}
+body.ms-v363-home .main-categories .category-card :is(h2,h3,strong,span,p,small){color:#202a26!important}
+body.ms-v363-home .main-categories .category-card :is(svg,i){color:#28634e!important}
+body.ms-v363-regions .region-card>summary{background:#fff!important;color:#202a26!important;border-color:#dce2df!important}
+body.ms-v363-regions .region-card>summary :is(strong,span){color:#202a26!important}
+/* Keep a single accent for interface buttons, but avoid overriding road-sign graphics. */
+body:is(.ms-v363-home,.ms-v363-regions,.ms-v363-stops,.ms-v363-diary,.ms-v364-tips) :is(.btn-primary,.primary-button,.button-primary){background:#28634e!important;border-color:#28634e!important;color:#fff!important}
+:where(.mobile-bottom,.site-nav){background:#fff}
+:where(.mobile-bottom,.site-nav) a[aria-current="page"]{color:#28634e!important}
+:where(.mobile-bottom,.site-nav) a[aria-current="page"] svg{color:#28634e!important}
+@media(max-width:700px){body.ms-v363-home .hero{height:140px!important;min-height:140px!important;max-height:140px!important;overflow:hidden}body.ms-v363-home .hero img{width:100%;height:100%;object-fit:cover}body.ms-v363-home .hero-intro{position:relative}:where(input,select,textarea){font-size:16px}:where(button,.btn,.button){min-height:44px}}
 @media(min-width:701px){body.ms-v363-home .hero{max-height:260px!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
