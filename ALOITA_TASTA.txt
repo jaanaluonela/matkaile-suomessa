@@ -1,0 +1,13 @@
+MATKAILE SUOMESSA – SELKEYTYS v369
+
+Päivitys aiemman sivuston päälle. Tämä ei ole tyhjän sivuston asennuspaketti.
+
+1. Pura tämä paketti. Saat 10 numeroitua ZIP-osaa.
+2. Pura OSA 01 ja lataa sen sisältämät tiedostot GitHubin sivustokansion juureen aiempien samannimisten tiedostojen päälle. Älä lataa ZIP-tiedostoa sellaisenaan.
+3. Tee sama osille 02–10. Jokaisessa osassa on enintään 95 tiedostoa.
+4. Säilytä aiemmat kuvat, tietotiedostot ja muut sivuston tiedostot. Anna kaikkien osien latautua ennen sivujen tarkistamista.
+5. Odota GitHub Pagesin päivitystä. Päivitä sen jälkeen selain uudelleen.
+
+Muutos koskee kaikkia 922 HTML-sivua: yksi yhteinen tietokonevalikko, puhelimessa yksi neljän kohdan alavalikko, yhtenäinen sisältöleveys ja turkoosit korostukset. Omat matkat -korteissa näkyvät myös muiston alku ja olemassa oleva kansikuva. Matkojen tallennusavaimet ja kuvakansio on säilytetty.
+
+Aiemmat omat matkat näkyvät samalla laitteella ja samalla selainosoitteella. Testimatkat eivät sisälly pakettiin.
