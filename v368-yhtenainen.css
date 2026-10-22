@@ -1,0 +1,11 @@
+/* v368 – kaikkien sivujen hillitty yhtenäinen viimeistely. */
+:root{--ms-v368-ink:#183e32;--ms-v368-border:#dbe6e0;--ms-v368-focus:#b47b39;--ms-v368-accent:#087f91}
+html{scroll-behavior:smooth}body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+body.ms-v363-home{--ms-v368-accent:#087f91}body.ms-v363-regions,body.ms-v368-municipality{--ms-v368-accent:#34785f}body.ms-v363-stops{--ms-v368-accent:#a95138}body.ms-v363-diary{--ms-v368-accent:#987020}body.ms-v364-tips,body.ms-v368-overnight{--ms-v368-accent:#326c88}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--ms-v368-focus)!important;outline-offset:3px}
+:where(button,input,select,textarea){font-family:inherit}
+:where(button,[role=button]){cursor:pointer}
+:where(img){max-width:100%}
+@media(max-width:700px){body.ms-v363-home .hero{height:140px!important;min-height:140px!important;max-height:140px!important}body.ms-v363-home .hero img{object-fit:cover}body.ms-v363-home .hero-intro{position:relative} :where(input,select,textarea){font-size:16px}}
+@media(min-width:701px){body.ms-v363-home .hero{max-height:260px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
