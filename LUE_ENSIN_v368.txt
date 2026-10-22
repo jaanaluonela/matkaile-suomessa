@@ -1,0 +1,5 @@
+Matkaile Suomessa v368 – koko GitHub-projektin säilyttävä ulkoasupäivitys.
+Mukana alkuperäiset 1450 tiedostoa sekä v368-yhtenainen.css ja tämä ohje.
+Yhtenäinen typografia, näppäimistön kohdistus, mobiilin matala etusivun kuva ja hillityt tunnusvärit.
+Kaikki alkuperäiset kohteet, kuvat, JavaScript-tiedostot ja HTML-sivut säilyvät.
+Pura paketti ja vie matkaile-suomessa-main-kansion sisältö GitHubin juureen.
