@@ -1,0 +1,22 @@
+MATKAILE SUOMESSA – KORJAUS v375
+
+1. Pura tämä paketti. Sen sisällä ovat numeroidut OSA-paketit.
+2. Pura yksi OSA-paketti kerrallaan. Lataa sen sisältämät tiedostot GitHubissa sivuston pääkansioon, jossa index.html jo on. Korvaa samannimiset tiedostot.
+3. Toista kaikille osille numerojärjestyksessä. Kussakin osassa on enintään 95 tiedostoa. Älä lataa itse zip-tiedostoja sivustolle äläkä tee OSA-alikansioita GitHubiin.
+4. Odota GitHub Pagesin päivityksen valmistumista. Avaa sivu uudelleen.
+
+Korjaukset:
+– Yhteinen otsake, neljän kohdan alavalikko, värit ja painikkeet kaikilla sivuilla.
+– Kuntasivuilla yhteinen esittely, kuntatiedot, käyntimerkintä ja neljä sisältöpainiketta.
+– Matkailuauto- ja nähtävyyskuvakkeet emojien sijaan yhteisissä painikkeissa.
+– Puumalan linkit avaavat olemassa olevan varsinaisen opassivun.
+– Tietokoneella leveämpi sisältöalue; puhelimessa kaksi painiketta rinnakkain.
+– Kuopion seudun aiemmat dynaamiset sisällöt toimivat yhteisen pohjan kanssa.
+– Käyntimerkintä käyttää entistä Omat matkat -tallennusta. Aikaisempia matkamuistoja ei tyhjennetä.
+
+Tarkistus:
+308 kuntasivua tarkistettu selaimessa 390 ja 1440 pikselin leveyksillä: 616 tarkistusta, ei rakennevirheitä, leveyden ylityksiä, rikkinäisiä kuntasivun osiolinkkejä eikä JavaScript-virheitä.
+Lisäksi etusivu, paikkakuntahaku, yöpyminen, Pysähdy matkalla ja päiväkirja tarkistettu molemmilla leveyksillä. Käyntimerkinnän tallentuminen ja aiemman matkamuiston säilyminen testattu.
+
+Rajaukset:
+Tämä korjaa ulkoasun ja sivurakenteen. Kuntien ja kohteiden aiempia tietoja ei ole tässä päivityksessä tarkistettu uudelleen ulkoisista lähteistä. Aiemmin puuttuneet väkiluvut näkyvät tarkistettavina. Alkuperäisiä aitoja vaakunatiedostoja käytetään, kun ne ovat mukana; muut vaakunat latautuvat edelleen ulkoisesta lähteestä. Latausvirheessä näkyy lähdelinkki. Aiemman paketin kirjaintunnuksellisia vaakunajäljitelmiä ei käytetä kunnan vaakunana.

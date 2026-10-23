@@ -2,104 +2,42 @@
 
 <html lang="fi">
 <head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
 <meta content="#087b8c" name="theme-color"/>
 <meta content="Matkaile Suomessa – löydä Suomen paikkakunnat, yöpymispaikat, nähtävyydet ja kiinnostavat pysähdykset." name="description"/>
 <title>Matkaile Suomessa – Vapaus kulkea · Ilo löytää</title>
 <link href="etusivu-laadukas-v352.css?v=352" rel="stylesheet"/>
-<script defer="" src="kunnat-v200.js"></script>
-<script defer="" src="suomi-kunnat-v253.js?v=253"></script>
-<script defer="" src="etusivu-laadukas-v352.js?v=352"></script>
+<script defer="" src="kunnat-v200.js?v=375"></script>
+<script defer="" src="suomi-kunnat-v253.js?v=375"></script>
+<script defer="" src="etusivu-laadukas-v352.js?v=375"></script>
 <link href="alavalikko-v304.css?v=355" rel="stylesheet"/>
-<script defer="" src="alavalikko-v304.js?v=355"></script>
+
 <link href="varit-ja-yhtenaisyys-v363.css?v=363" rel="stylesheet"/>
 <link href="turkoosi-yhtenainen-v364.css?v=364" rel="stylesheet"/>
-<link rel="stylesheet" href="sivuston-varit-v365.css?v=365">
-<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"><link rel="stylesheet" href="v368-yhtenainen.css?v=374">
-<style id="v373-card-fix">
-body.ms-v363-home .main-categories>a.category-card{background:#fff!important;color:#183e32!important;border:1px solid #dce4df!important;border-radius:16px!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;}
-body.ms-v363-home .main-categories>a.category-card .category-copy,body.ms-v363-home .main-categories>a.category-card strong{color:#183e32!important;opacity:1!important}
-body.ms-v363-home .main-categories>a.category-card .category-copy>span{color:#53645c!important;opacity:1!important}
-body.ms-v363-home .main-categories>a.category-card>svg:first-child{opacity:1!important;filter:none!important}
-body.ms-v363-home .main-categories>a.category-card:hover{background:#f4f8f5!important}
-</style>
-<style id="v374-final-layout">
-html body.ms-v363-home{background:#f3f5f3!important;color:#183e32!important}
-html body.ms-v363-home .hero{display:none!important}
-html body.ms-v363-home .hero-intro{max-width:1200px!important;margin:0 auto!important;padding:22px 22px 8px!important;background:transparent!important;border:0!important;box-shadow:none!important}
-html body.ms-v363-home .hero-intro h1{font:700 clamp(1.65rem,3vw,2.5rem)/1.18 system-ui,sans-serif!important;color:#183e32!important;margin:0 0 9px!important}
-html body.ms-v363-home .hero-intro .hero-script{display:none!important}
-html body.ms-v363-home .hero-intro .hero-description{font:400 clamp(1rem,1.6vw,1.13rem)/1.5 system-ui,sans-serif!important;color:#53645c!important;margin:0!important}
-html body.ms-v363-home .page-main{width:min(100%,1240px)!important;max-width:1240px!important;margin:0 auto!important;padding:0 18px 80px!important;box-sizing:border-box!important}
-html body.ms-v363-home .search-panel{width:100%!important;max-width:1200px!important;margin:12px auto!important;padding:8px 0!important;background:transparent!important;border:0!important;box-shadow:none!important}
-html body.ms-v363-home .main-categories{width:100%!important;max-width:1200px!important;margin:18px auto 30px!important;padding:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;box-sizing:border-box!important}
-html body.ms-v363-home .main-categories>a.category-card{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;position:relative!important;gap:10px!important;min-width:0!important;min-height:148px!important;width:auto!important;padding:22px!important;background:#fff!important;background-image:none!important;border:1px solid #dce4df!important;border-radius:17px!important;box-shadow:0 2px 10px rgba(25,45,35,.06)!important;color:#183e32!important;text-align:left!important;opacity:1!important;filter:none!important;text-decoration:none!important;transform:none!important}
-html body.ms-v363-home .main-categories>a.category-card *{text-shadow:none!important;filter:none!important;opacity:1!important}
-html body.ms-v363-home .main-categories>a.category-card>svg:first-child{display:block!important;width:30px!important;height:30px!important;stroke:#28634e!important;color:#28634e!important;fill:none!important;flex-shrink:0!important}
-html body.ms-v363-home .main-categories>a.category-card .category-copy{display:flex!important;flex-direction:column!important;gap:5px!important;min-width:0!important;width:100%!important;color:#183e32!important}
-html body.ms-v363-home .main-categories>a.category-card .category-copy strong{font:700 clamp(1rem,1.6vw,1.17rem)/1.25 system-ui,sans-serif!important;color:#183e32!important;display:block!important}
-html body.ms-v363-home .main-categories>a.category-card .category-copy>span{font:400 clamp(.88rem,1.35vw,1rem)/1.4 system-ui,sans-serif!important;color:#53645c!important;display:block!important}
-html body.ms-v363-home .main-categories>a.category-card .category-arrow{display:none!important}
-html body.ms-v363-home .main-categories>a.category-card:hover{background:#f9fcfa!important;border-color:#83aa96!important}
-html body.ms-v363-home .destinations{width:100%!important;max-width:1200px!important;margin-left:auto!important;margin-right:auto!important}
-@media(max-width:699px){html body.ms-v363-home .page-main{padding:0 14px 88px!important}html body.ms-v363-home .hero-intro{padding:18px 16px 4px!important}html body.ms-v363-home .main-categories{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px!important;margin-top:15px!important}html body.ms-v363-home .main-categories>a.category-card{min-height:154px!important;padding:16px 13px!important;gap:11px!important}html body.ms-v363-home .main-categories>a.category-card .category-copy strong{font-size:1rem!important}html body.ms-v363-home .main-categories>a.category-card .category-copy>span{font-size:.88rem!important}}
-</style>
-</head>
-<body class="ms-v363-home">
+<link href="sivuston-varit-v365.css?v=365" rel="stylesheet"/>
+<link href="yhtenainen-ulkoasu-v366.css?v=366" rel="stylesheet"/><link href="yhtenainen-ulkoasu-v367.css?v=367" rel="stylesheet"/><link href="v368-yhtenainen.css?v=368" rel="stylesheet"/>
+<link href="yhteinen-v375.css?v=375" rel="stylesheet"/><script defer="" src="yhteinen-v375.js?v=375"></script></head>
+<body class="ms-v363-home ms375 ms375-home"><a class="ms375-skip" href="#ms375-main">Siirry sisältöön</a><header class="ms375-header"><div class="ms375-header-inner"><a class="ms375-brand" href="index.html"><svg aria-hidden="true" viewBox="0 0 60 44"><path d="M3 32 18 6l14 26" fill="#43836a"></path><path d="M22 32 39 2l18 30" fill="#104c44"></path><path d="M3 37c17-8 34 8 54 0" fill="none" stroke="#2697a1" stroke-width="5"></path></svg><span><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span></a><button aria-controls="ms375-menu-links" aria-expanded="false" class="ms375-menu">Valikko ☰</button><nav aria-label="Päävalikko" hidden="" id="ms375-menu-links"><a href="maakunnat.html">Paikkakunnat</a><a href="leirintaalueet.html">Yöpymispaikat</a><a href="pysahdy-matkalla.html">Pysähdy matkalla</a><a href="reittisuunnittelu.html">Suunnittele reitti</a><a href="karavaanarin-vinkit.html">Karavaanarin vinkit</a><a href="paivakirja.html">Omat matkat</a></nav></div></header>
 <svg aria-hidden="true" class="svg-sprite" xmlns="http://www.w3.org/2000/svg">
-<symbol id="icon-map" viewbox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"></path></symbol>
-<symbol id="icon-bed" viewbox="0 0 24 24"><path d="M3 5v15m0-4h18v4m-18-6V9h18v7M6 9V7h6v2M14 9V7h5v2"></path></symbol>
-<symbol id="icon-sign" viewbox="0 0 24 24"><path d="M12 22V2M5 5h14l3 3-3 3H5zm14 8H5l-3 3 3 3h14z"></path></symbol>
-<symbol id="icon-coast" viewbox="0 0 24 24"><path d="M2 17c3-3 6-3 9 0s6 3 11 0M2 21c3-3 6-3 9 0s6 3 11 0M3 13 9 3l3 5 3-3 6 8"></path></symbol>
-<symbol id="icon-route" viewbox="0 0 24 24"><circle cx="5" cy="5" r="2"></circle><circle cx="19" cy="19" r="2"></circle><path d="M7 5h7a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h8"></path></symbol>
-<symbol id="icon-search" viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"></circle><path d="m16 16 5 5"></path></symbol>
-<symbol id="icon-arrow" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></symbol>
-<symbol id="icon-heart" viewbox="0 0 24 24"><path d="M20.8 4.7a5.3 5.3 0 0 0-7.4 0L12 6.1l-1.4-1.4a5.3 5.3 0 1 0-7.4 7.5l8.8 8.5 8.8-8.5a5.3 5.3 0 0 0 0-7.5Z"></path></symbol>
-<symbol id="icon-home" viewbox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3zM9 21v-7h6v7"></path></symbol>
-<symbol id="icon-book" viewbox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v15"></path></symbol>
-<symbol id="icon-menu" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></symbol>
-<symbol id="icon-sight" viewbox="0 0 24 24"><path d="M12 12C8.2 12 4 9.9 4 6.4a3.5 3.5 0 0 1 7 0V12M12 12c0-3.8 2.1-8 5.6-8a3.5 3.5 0 0 1 0 7H12m0 1c3.8 0 8 2.1 8 5.6a3.5 3.5 0 0 1-7 0V12m-1 0c0 3.8-2.1 8-5.6 8a3.5 3.5 0 0 1 0-7H12"></path></symbol>
-<symbol id="icon-camper" viewbox="0 0 24 24"><path d="M3 16V6a2 2 0 0 1 2-2h12a3 3 0 0 1 3 3v9H3Zm0 0h18v3h-2m-11 0h7M3 19h2m1-3v-5h6v5m4-8h2m-1 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm-12 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"></path></symbol>
-<symbol id="icon-pin" viewbox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
+<symbol id="icon-map" viewBox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"></path></symbol>
+<symbol id="icon-bed" viewBox="0 0 24 24"><path d="M3 5v15m0-4h18v4m-18-6V9h18v7M6 9V7h6v2M14 9V7h5v2"></path></symbol>
+<symbol id="icon-sign" viewBox="0 0 24 24"><path d="M12 22V2M5 5h14l3 3-3 3H5zm14 8H5l-3 3 3 3h14z"></path></symbol>
+<symbol id="icon-coast" viewBox="0 0 24 24"><path d="M2 17c3-3 6-3 9 0s6 3 11 0M2 21c3-3 6-3 9 0s6 3 11 0M3 13 9 3l3 5 3-3 6 8"></path></symbol>
+<symbol id="icon-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"></circle><circle cx="19" cy="19" r="2"></circle><path d="M7 5h7a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h8"></path></symbol>
+<symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"></circle><path d="m16 16 5 5"></path></symbol>
+<symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></symbol>
+<symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.7a5.3 5.3 0 0 0-7.4 0L12 6.1l-1.4-1.4a5.3 5.3 0 1 0-7.4 7.5l8.8 8.5 8.8-8.5a5.3 5.3 0 0 0 0-7.5Z"></path></symbol>
+<symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3zM9 21v-7h6v7"></path></symbol>
+<symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v15"></path></symbol>
+<symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></symbol>
+<symbol id="icon-sight" viewBox="0 0 24 24"><path d="M12 12C8.2 12 4 9.9 4 6.4a3.5 3.5 0 0 1 7 0V12M12 12c0-3.8 2.1-8 5.6-8a3.5 3.5 0 0 1 0 7H12m0 1c3.8 0 8 2.1 8 5.6a3.5 3.5 0 0 1-7 0V12m-1 0c0 3.8-2.1 8-5.6 8a3.5 3.5 0 0 1 0-7H12"></path></symbol>
+<symbol id="icon-camper" viewBox="0 0 24 24"><path d="M3 16V6a2 2 0 0 1 2-2h12a3 3 0 0 1 3 3v9H3Zm0 0h18v3h-2m-11 0h7M3 19h2m1-3v-5h6v5m4-8h2m-1 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm-12 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"></path></symbol>
+<symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></symbol>
 </svg>
-<header class="site-header">
-<div class="header-inner">
-<a aria-label="Matkaile Suomessa, etusivu" class="brand" href="index.html">
-<svg aria-label="Metsä ja järvi" class="brand-mark" role="img" viewbox="0 0 60 48"><path d="M4 33 17 11l8 13 7-10 13 19H4Z" fill="#5b9f76"></path><path d="m23 32 13-24 14 24H23Z" fill="#16543e"></path><path d="m44 31 8-15 6 15H44Z" fill="#337458"></path><path d="M3 39c17-8 34 8 54 0" fill="none" stroke="#1689b5" stroke-linecap="round" stroke-width="4"></path></svg>
-<span class="brand-words"><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span>
-</a>
-<nav aria-label="Päävalikko" class="desktop-nav">
-<a aria-current="page" href="index.html">Koti</a>
-<a href="maakunnat.html">Paikkakunnat</a>
-<a href="leirintaalueet.html">Yöpymispaikat</a>
-<a href="pysahdy-matkalla.html">Pysähdy matkalla</a>
-<a href="saariston-rengastie.html">Saariston rengastie</a>
-<a href="paivakirja.html">Omat matkat</a>
-</nav>
-<div class="header-actions">
-<a class="header-favorites" href="suosikit.html"><svg><use href="#icon-heart"></use></svg><span>Suosikit</span></a>
-<a aria-label="Siirry hakuun" class="header-search" href="#kohdehaku"><svg><use href="#icon-search"></use></svg></a>
-</div>
-<details class="mobile-menu">
-<summary aria-label="Avaa sivuston valikko"><svg><use href="#icon-menu"></use></svg></summary>
-<nav aria-label="Lisävalikko">
-<a href="leirintaalueet.html">Yöpymispaikat</a>
-<a href="saariston-rengastie.html">Saariston rengastie</a>
-<a href="reittisuunnittelu.html">Suunnittele reitti</a>
-<a href="lahella-minua.html">Lähellä minua</a>
-<a href="suosikit.html">Suosikit</a>
-</nav>
-</details>
-</div>
-</header>
-<div class="hero-intro">
-<h1 id="hero-title">Matkaile Suomessa</h1>
-<p class="hero-script">Vapaus kulkea · Ilo löytää</p>
-<p class="hero-description">Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p>
-</div>
-<main class="page-main" id="main">
+
+
+<main class="page-main" id="ms375-main"><section class="ms375-hero"><div><h1>Matkaile Suomessa</h1><p class="ms375-tagline">Vapaus kulkea · Ilo löytää</p><p>Parhaat paikat, pysähdykset ja elämykset unohtumattomiin kotimaan matkoihin.</p></div><img alt="Suomalainen järvimaisema" height="400" src="hero-etusivu.jpg" width="720"/></section>
 <section aria-label="Hae kohteita" class="search-panel" id="kohdehaku">
 <form autocomplete="off" id="homepage-search" role="search">
 <div class="search-field-wrap">
@@ -108,49 +46,15 @@ html body.ms-v363-home .destinations{width:100%!important;max-width:1200px!impor
 <input aria-controls="home-search-results" aria-expanded="false" autocomplete="off" id="destination-search" placeholder="Hae paikkaa tai kohdetta…" type="search"/>
 <div class="suggestions" hidden="" id="home-search-results" role="listbox"></div>
 </div>
-<button class="search-submit" type="submit">Hae kohteita <svg><use href="#icon-arrow"></use></svg></button>
+<button class="search-submit" type="submit">Hae kohteita <svg><use href="icons-v375.svg#search"></use></svg></button>
 </form>
-<div aria-label="Etsi kohdeluokan mukaan" class="quick-categories">
-<a class="selected" href="pysahdy-matkalla.html">Kaikki</a>
-<a href="pysahdy-matkalla.html?tyyppi=sight">Nähtävyydet</a>
-<a href="pysahdy-matkalla.html?tyyppi=nature">Luonto ja retket</a>
-<a href="pysahdy-matkalla.html?tyyppi=stop">Taukopaikat</a>
-<a href="pysahdy-matkalla.html?tyyppi=food">Kahvilat ja ravintolat</a>
-</div>
+
 </section>
-<section aria-label="Matkailupalvelut" class="main-categories">
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="maakunnat.html"><svg style="color:#28634e!important;stroke:#28634e!important;opacity:1!important"><use href="#icon-pin"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Paikkakunnat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Tutustu kuntiin ympäri Suomen</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="leirintaalueet.html"><svg style="color:#087f91!important;stroke:#087f91!important;opacity:1!important"><use href="#icon-bed"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Yöpymispaikat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Leirintäalueet ja matkaparkit</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="pysahdy-matkalla.html"><svg style="color:#a15d40!important;stroke:#a15d40!important;opacity:1!important"><use href="#icon-sight"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Pysähdy matkalla</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Nähtävyydet, luonto ja taukopaikat</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="reittisuunnittelu.html"><svg style="color:#326c88!important;stroke:#326c88!important;opacity:1!important"><use href="#icon-route"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Suunnittele reitti</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Lähtö, määränpää ja reitin varren kohteet</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="paivakirja.html"><svg style="color:#28634e!important;stroke:#28634e!important;opacity:1!important"><use href="#icon-book"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Omat matkat</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Tallenna kohteet ja matkamuistot</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-<a class="category-card" style="background:#fff!important;background-image:none!important;color:#183e32!important;border:1px solid #dce4df!important;opacity:1!important" style="background:#ffffff!important;color:#183e32!important;border:1px solid #dce4df!important;box-shadow:0 2px 9px rgba(20,50,40,.06)!important;" href="karavaanarin-vinkit.html"><svg style="color:#b39a66!important;stroke:#b39a66!important;opacity:1!important"><use href="#icon-camper"></use></svg><span class="category-copy" style="color:#183e32!important;opacity:1!important"><strong style="color:#183e32!important;opacity:1!important;text-shadow:none!important">Karavaanarin vinkit</strong><span style="color:#53645c!important;opacity:1!important;text-shadow:none!important">Vinkkejä ja hyödyllisiä linkkejä</span></span><svg class="category-arrow"><use href="#icon-arrow"></use></svg></a>
-</section>
-<div aria-label="Lisää matkailuvinkkejä" class="extra-destinations">
-<a href="saariston-rengastie.html">Saariston rengastie <span aria-hidden="true">→</span></a>
-<a href="lahella-minua.html">Löydä kohteita läheltäsi <span aria-hidden="true">→</span></a>
-</div>
-<section aria-labelledby="destination-title" class="destinations">
-<div class="destinations-heading"><h2 id="destination-title">Suosittuja kohteita</h2><a href="pysahdy-matkalla.html">Katso kaikki kohteet <span aria-hidden="true">→</span></a></div>
-<p class="destinations-intro">Muutama idea seuraavalle matkalle – ilman turhia kuvakaruselleja.</p>
-<div class="destination-links" id="home-destination-links">
-<article data-id="0"><a href="savonlinna.html"><strong>Savonlinna</strong><small>Historiallinen linna ja järvimaisemat</small></a><button aria-label="Tallenna Savonlinna suosikiksi" aria-pressed="false" data-fav="0" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-<article data-id="1"><a href="saariston-rengastie.html"><strong>Saariston rengastie</strong><small>Merellisiä reittejä ja saaristoa</small></a><button aria-label="Tallenna Saariston rengastie suosikiksi" aria-pressed="false" data-fav="1" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-<article data-id="2"><a href="ruukkikylat.html#fiskars"><strong>Fiskars</strong><small>Ruukkikylä, käsityöt ja kulttuuri</small></a><button aria-label="Tallenna Fiskars suosikiksi" aria-pressed="false" data-fav="2" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-<article data-id="3"><a href="koli.html"><strong>Kolin kansallispuisto</strong><small>Kansallismaisemat ja retkeilyreitit</small></a><button aria-label="Tallenna Koli suosikiksi" aria-pressed="false" data-fav="3" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-<article data-id="4"><a href="maakunnat.html"><strong>Puumalan satama</strong><small>Saimaan maisemat ja palvelut</small></a><button aria-label="Tallenna Puumalan satama suosikiksi" aria-pressed="false" data-fav="4" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-<article data-id="5"><a href="yyteri.html"><strong>Yyterin hiekkarannat</strong><small>Hiekkaa, merta ja luontoa</small></a><button aria-label="Tallenna Yyteri suosikiksi" aria-pressed="false" data-fav="5" type="button"><svg><use href="#icon-heart"></use></svg></button></article>
-</div>
-<button aria-pressed="false" class="saved-filter" id="home-saved-filter" type="button">Näytä vain tallentamani kohteet</button>
-<p hidden="" id="home-empty-favorites">Et ole vielä tallentanut kohteita. Paina kohteen sydänkuvaketta.</p>
-</section>
+<section aria-label="Matkailupalvelut" class="main-categories"><a class="ms375-category ms375-map" href="maakunnat.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#map"></use></svg></span><span><strong>Paikkakunnat</strong><small>Tutustu kuntiin ympäri Suomen</small></span><span aria-hidden="true">›</span></a><a class="ms375-category ms375-camper" href="leirintaalueet.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#camper"></use></svg></span><span><strong>Yöpymispaikat</strong><small>Leirintäalueet ja matkaparkit</small></span><span aria-hidden="true">›</span></a><a class="ms375-category ms375-sight" href="pysahdy-matkalla.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#sight"></use></svg></span><span><strong>Pysähdy matkalla</strong><small>Nähtävyydet, kahvilat ja palvelut</small></span><span aria-hidden="true">›</span></a><a class="ms375-category ms375-route" href="reittisuunnittelu.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#route"></use></svg></span><span><strong>Suunnittele reitti</strong><small>Ideat, reitit ja vinkit matkallesi</small></span><span aria-hidden="true">›</span></a><a class="ms375-category ms375-sign" href="karavaanarin-vinkit.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#sign"></use></svg></span><span><strong>Karavaanarin vinkit</strong><small>Hyödyllistä tietoa matkailuun</small></span><span aria-hidden="true">›</span></a><a class="ms375-category ms375-heart" href="paivakirja.html"><span class="ms375-color"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#heart"></use></svg></span><span><strong>Omat matkat</strong><small>Tallenna kohteet ja pidä matkamuistoja</small></span><span aria-hidden="true">›</span></a></section>
+
+
 <footer class="page-footer">Matkaile Suomessa · Vapaus kulkea · Ilo löytää</footer>
 </main>
-<nav aria-label="Puhelimen päävalikko" class="mobile-bottom">
-<a aria-current="page" href="index.html"><svg><use href="#icon-home"></use></svg><span>Koti</span></a>
-<a href="maakunnat.html"><svg><use href="#icon-map"></use></svg><span>Paikkakunnat</span></a>
-<a href="pysahdy-matkalla.html"><svg><use href="#icon-sign"></use></svg><span>Pysähdy matkalla</span></a>
-<a href="paivakirja.html"><svg><use href="#icon-book"></use></svg><span>Omat matkat</span></a>
-</nav>
-</body>
+
+<nav aria-label="Sivuston päävalikko" class="ms375-bottom"><a aria-current="page" href="index.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#home"></use></svg><span>Koti</span></a><a href="maakunnat.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#map"></use></svg><span>Paikkakunnat</span></a><a href="pysahdy-matkalla.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#sight"></use></svg><span>Pysähdy matkalla</span></a><a href="paivakirja.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#book"></use></svg><span>Omat matkat</span></a></nav></body>
 </html>

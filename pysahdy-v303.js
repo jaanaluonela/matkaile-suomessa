@@ -30,7 +30,7 @@
  [...new Set(items.map(p=>p.city))].sort((a,b)=>a.localeCompare(b,'fi')).forEach(c=>{
     const option=document.createElement('option');option.value=option.textContent=c;town.append(option);
  });
- const requestedTown=params.get('kunta');if([...town.options].some(o=>o.value===requestedTown))town.value=requestedTown;
+ const requestedTown=params.get('kunta');if(requestedTown){if(![...town.options].some(o=>o.value===requestedTown)){const o=document.createElement('option');o.value=o.textContent=requestedTown;town.append(o)}town.value=requestedTown;}
  input.value=params.get('haku')||params.get('q')||'';
  const matchesType=p=>{
    if(category==='all')return true;
