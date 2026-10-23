@@ -1,0 +1,16 @@
+MATKAILE SUOMESSA – TIETOKONEEN ETUSIVU v382 (23.10.2026)
+
+Tämä on pieni, valmis päivityspaketti vain ETUSIVULLE. Puhelimen näkymää EI muuteta. Sisäsivut jäävät ennalleen.
+
+ASENNUS GITHUBIIN:
+1. Pura tämä YKSI ZIP-paketti omalle laitteelle.
+2. Avaa GitHubissa sivustosi tiedostot (sama paikka, jossa index.html on).
+3. Lataa KAIKKI 9 tiedostoa sivuston PÄÄKANSIOON (Add file -> Upload files).
+4. Vahvista index.html-tiedoston korvaaminen. Päivityksessä EI poisteta muita tiedostoja.
+5. Paina Commit changes. Avaa sivusto selaimessa ja päivitä tarvittaessa välimuisti.
+
+Muutettavat tiedostot: vain index.html. Uudet tiedostot: desktop-etusivu-v382.css, maisema-desktop-v382.webp, kortti-paikkakunnat-v382.webp, kortti-yopyminen-v382.webp, kortti-pysahdy-v382.webp, kortti-saaristo-v382.webp, reittikuva-v382.webp.
+
+Desktop-näkymä alkaa ruudun leveydestä 1051px. Pienemmillä näytöillä näkyy aiempi mobiilietusivu.
+Haku vie pysähdyspaikkojen hakuun. Yöpymispaikat-linkki vie sivuston yhteiseen leirintäalueiden ja matkaparkkien hakuun.
+Huomautus: jos GitHubissa oleva nykyinen index.html poikkeaa olennaisesti v380-versiosta, tämän paketin index.html korvaa sen vanhoine mobiilisisältöineen. Säilytä siis varmuuskopio ennen korvausta.
