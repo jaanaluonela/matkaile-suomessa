@@ -2,3 +2,40 @@
 @media(max-width:650px){body{font-size:16px;padding-bottom:calc(82px + env(safe-area-inset-bottom))}.ms375-header{border-bottom-width:4px}.ms375-header-inner{padding:12px 14px;gap:8px}.ms375-brand{gap:8px;min-width:0}.ms375-brand>svg{width:43px;height:37px}.ms375-brand strong{font-size:23px;letter-spacing:-.8px;white-space:nowrap}.ms375-brand em{font-size:14px;margin-top:2px}.ms375-menu{font-size:14px;min-height:44px;padding:8px 12px;border-radius:11px}main{padding:19px 14px 14px}.ms375-hero{display:block;min-height:132px;margin-bottom:16px}.ms375-hero>div{width:100%}.ms375-hero h1{font-size:29px;margin:0 0 5px;letter-spacing:-.7px}.ms375-tagline{font-size:20px;margin:0 0 13px}.ms375-hero p:last-child{font-size:14px;line-height:1.4;max-width:66%;margin:0}.ms376-landscape{bottom:-4px;right:-6px;width:36%;height:102px;object-fit:contain;object-position:right bottom}.search-panel{margin-bottom:15px}#destination-search{height:44px;font-size:14px;padding:8px 6px 8px 39px}.search-field-icon{width:21px;height:21px;left:12px;top:11px}#homepage-search{border-radius:12px}.search-submit{width:45px;border-radius:0 11px 11px 0}.search-submit svg{width:24px;height:24px}.main-categories{gap:7px}.ms375-category{grid-template-columns:46px minmax(0,1fr) 7px;gap:7px;min-height:77px;padding:8px 8px;border-radius:12px}.ms375-color{width:46px;height:50px;border-radius:10px}.ms375-color svg{width:34px;height:34px}.ms375-category strong{font-size:13px;line-height:1.2;letter-spacing:-.35px}.ms375-category small{font-size:12px;line-height:1.25;margin-top:4px}.category-arrow{display:block;font-size:22px}.ms375-bottom{gap:4px;padding:6px 9px calc(6px + env(safe-area-inset-bottom))}.ms375-bottom a{min-height:61px;font-size:12px;gap:4px;padding:5px 2px;border-radius:13px}.ms375-bottom .ms375-icon{width:26px;height:26px}.ms375-bottom span{max-width:85px}.page-footer{font-size:11px;margin:15px 0 0}}
 @media(min-width:430px) and (max-width:650px){.ms375-category{min-height:87px;grid-template-columns:52px minmax(0,1fr) 9px;gap:9px;padding:10px}.ms375-color{width:52px;height:57px}.ms375-category strong{font-size:15px}.ms375-category small{font-size:14px}.ms375-hero h1{font-size:33px}.ms375-hero p:last-child{font-size:16px}.ms375-hero{min-height:148px}}
 @media(max-width:374px){.ms375-header-inner{padding:10px}.ms375-brand{gap:6px}.ms375-brand>svg{width:32px}.ms375-brand strong{font-size:20px}.ms375-brand em{font-size:12px}.ms375-menu{padding:8px;font-size:12px}main{padding:16px 10px}.ms375-hero h1{font-size:27px}.ms375-tagline{font-size:18px}.ms375-category{grid-template-columns:36px minmax(0,1fr) 6px;gap:5px;padding:8px 6px;min-height:85px}.ms375-color{width:36px;height:46px}.ms375-color svg{width:28px;height:28px}.ms375-category strong{font-size:12px}.ms375-category small{font-size:12px}.ms375-bottom a{font-size:11px}}
+
+/* Desktop: laajempi navigointi ja erilliset tutkimisen polut. Puhelimen kuusi valintaa säilyvät. */
+.desktop-discovery{display:none}
+@media(min-width:900px){
+ body{padding-bottom:0}
+ .ms375-bottom{display:none}
+ .ms375-header-inner{flex-wrap:wrap;row-gap:12px;padding-bottom:12px}
+ .ms375-menu{display:none}
+ #ms375-menu-links,#ms375-menu-links[hidden]{display:flex!important;position:static;width:100%;max-width:none;justify-content:space-between;align-items:center;gap:8px;box-shadow:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:10px 0 0;background:transparent}
+ #ms375-menu-links a{padding:9px 12px;font-size:15px;font-weight:650;white-space:nowrap}
+ .ms375-hero{min-height:220px}
+ .main-categories{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:22px 0 0}
+ .ms375-category{min-height:128px;grid-template-columns:68px minmax(0,1fr) 14px;gap:15px;padding:17px}
+ .ms375-color{width:68px;height:72px}
+ .ms375-color svg{width:44px;height:44px}
+ .ms375-category strong{font-size:20px}
+ .ms375-category small{font-size:17px}
+ .desktop-discovery{display:block;margin:32px 0 10px}
+ .desktop-discovery-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:17px}
+ .desktop-discovery-head h2{font:700 34px/1.15 Georgia,serif;margin:0}
+ .desktop-discovery-head>p{max-width:410px;color:var(--muted);font-size:16px;margin:0 0 3px}
+ .desktop-eyebrow{margin:0 0 5px;text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:#397e67}
+ .desktop-discovery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+ .desktop-feature{border:1px solid var(--line);border-radius:20px;background:#fff;padding:23px;min-height:300px;display:flex;flex-direction:column}
+ .desktop-feature-places{border-top:5px solid #397e67}.desktop-feature-caravan{border-top:5px solid #168e9f}.desktop-feature-trip{border-top:5px solid #2069a4}
+ .desktop-feature h3{font:700 25px/1.2 Georgia,serif;margin:0 0 8px}
+ .desktop-feature p{font-size:15px;color:var(--muted);margin:0 0 17px}
+ .desktop-feature-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .desktop-feature:not(.desktop-feature-places) .desktop-feature-links{grid-template-columns:1fr}
+ .desktop-feature-links a{border:1px solid var(--line);border-radius:10px;padding:10px 11px;text-decoration:none;font-size:15px;font-weight:650;display:flex;justify-content:space-between;gap:8px}
+ .desktop-feature-links a:hover,.desktop-feature-links a:focus-visible{background:#e7f1ec;border-color:#6da28a}
+ .desktop-feature-more{display:inline-block;margin-top:auto;padding-top:16px;font-weight:750;text-underline-offset:4px}
+}
+@media(min-width:900px) and (max-width:1100px){#ms375-menu-links a{font-size:13px;padding:8px}.desktop-feature{padding:17px}.desktop-feature-links a{font-size:13px}.ms375-category small{font-size:15px}}
+
+/* Puhelimen yläosa pysyy tiiviinä myös aiemman HTML-version kanssa. */
+@media(max-width:650px){.ms375-hero h1,.ms375-tagline,.page-footer{display:none}.ms375-hero{min-height:110px}.ms375-hero p:last-child{max-width:67%;padding:10px 0}.ms376-landscape{height:98px}}
