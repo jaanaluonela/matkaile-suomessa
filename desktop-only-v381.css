@@ -1,0 +1,22 @@
+/* All declarations scoped to desktop, no mobile styles */
+@media (min-width:1051px) {
+ body.ms381-desktop-on main {max-width:none!important;width:100%!important;padding:0!important;margin:0!important;background:#f9fbfa;color:#163e37}
+ #ms381-desktop{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:45px}
+ #ms381-desktop *{box-sizing:border-box}
+ #ms381-desktop a{text-decoration:none;color:inherit}
+ .ms381-hero{min-height:275px;background:linear-gradient(90deg,rgba(255,252,240,.95),rgba(255,252,240,.48) 48%,transparent 78%),url('hero-etusivu.jpg') center 48%/cover;display:flex;align-items:center}
+ .ms381-hero-inner{width:min(1360px,94%);margin:auto;padding:20px}
+ .ms381-hero h1{font-size:clamp(42px,5vw,65px);letter-spacing:-1.6px;line-height:1.08;margin:0 0 8px}
+ .ms381-hero p{font-size:17px;max-width:480px;margin:8px 0;line-height:1.4}
+ .ms381-hero .ms381-motto{font-size:29px;font-weight:600}
+ .ms381-quick,.ms381-search,.ms381-more,.ms381-popular{width:min(1360px,94%);margin-left:auto;margin-right:auto}
+ .ms381-quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:-23px;position:relative}
+ .ms381-quick a{border-radius:14px;padding:17px;min-height:112px;background:#e9f3ee;border:1px solid #dae7e1;box-shadow:0 6px 16px #173d3515;display:grid;grid-template-columns:48px 1fr;align-content:center;column-gap:13px}
+ .ms381-quick a:nth-child(2){background:#f1f5e4}.ms381-quick a:nth-child(3){background:#e8f1f8}.ms381-quick a:nth-child(4){background:#fff0e4}
+ .ms381-quick span{grid-row:span 2;font-size:35px}.ms381-quick strong{font-size:19px}.ms381-quick small{font-size:13px;margin-top:5px;color:#547067}
+ .ms381-search{margin-top:18px;background:#f7eddd;border:1px solid #edd7b4;border-radius:15px;padding:22px 28px;display:grid;grid-template-columns:1fr 1.25fr;gap:30px;align-items:center}
+ .ms381-search h2{font-size:30px;margin:0 0 8px}.ms381-search p{margin:0;color:#536a62;line-height:1.45}
+ .ms381-search label{display:block;font-weight:700;margin-bottom:7px}.ms381-search form>div{display:flex;gap:9px}.ms381-search input{min-width:0;flex:1;border-radius:9px;border:1px solid #c6d3cc;background:white;padding:12px;font:inherit}.ms381-search button{background:#075449;color:white;border:0;border-radius:9px;font:700 14px system-ui;padding:12px 18px;cursor:pointer}
+ .ms381-more{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.ms381-more a{padding:19px;border-radius:12px;background:#eaf5f1;font-size:20px;border:1px solid #dbe8e2}.ms381-more a:nth-child(2){background:#eaf2f8}.ms381-more a:nth-child(3){background:#fff3e9}
+ .ms381-popular{margin-top:20px}.ms381-popular-head{display:flex;justify-content:space-between;align-items:center}.ms381-popular h2{font-size:26px;margin:0 0 12px}.ms381-popular-head a{font-weight:700;color:#095a50!important}.ms381-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.ms381-cards a{background:white;border-radius:12px;overflow:hidden;border:1px solid #dfe9e4}.ms381-cards img{width:100%;height:148px;object-fit:cover;display:block}.ms381-cards strong,.ms381-cards small{display:block;padding:8px 12px 0}.ms381-cards small{color:#63746c;padding-top:2px;padding-bottom:13px}
+}

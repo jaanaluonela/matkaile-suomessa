@@ -1,0 +1,14 @@
+MATKAILE SUOMESSA — v381 VAIN TIETOKONEEN ETUSIVU
+
+Tämä EI korvaa index.html-tiedostoa eikä muita sivuja. Puhelimen etusivun rakenne ja tyylit jätetään koskematta.
+
+1. Lisää tiedostot desktop-only-v381.js ja desktop-only-v381.css sivuston juurikansioon.
+2. Avaa NYKYINEN GitHubissa käytössä oleva index.html (älä käytä vanhaa v380:n index.html-tiedostoa).
+3. Lisää ennen </head>-merkintää nämä kaksi riviä:
+<link rel="stylesheet" href="desktop-only-v381.css?v=381" media="(min-width: 1051px)">
+<script defer src="desktop-only-v381.js?v=381"></script>
+4. Tallenna index.html.
+
+Skripti tekee muutokset vain näyttöleveyksillä vähintään 1051 px. Puhelimella koodi poistuu toiminnasta ennen sisällön käsittelyä. Näyttökoon vaihtuessa tietokoneesta puhelimeen sivu latautuu uudelleen.
+
+HUOM: Paketti on LISÄOSA eikä korvaa aiempia 1 586 tiedostoa. En voi varmentaa puhelimen identtistä ulkoasua ilman nykyistä GitHubissa julkaistua index.html-tiedostoa. Jos v380 on jo asennettu, se on palautettava edeltävään mobiilissa hyväksyttyyn versioon ennen tämän lisäosan käyttöä.
