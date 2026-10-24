@@ -1,8 +1,3 @@
-V397 – ENEMMÄN KOHTEITA, VIERITYS ALAS
-Tässä paketissa on kuusi tarkistettua kuvallista kohdetta. Lista ei rajoitu kolmeen tai kahteentoista: kaikki hakua vastaavat kohteet näkyvät sivua alaspäin vierittämällä. Kuvat latautuvat sitä mukaa kun niitä tarvitaan.
-
-Lataa sivuston juureen HTML, CSS ja JS sekä kaikki kuusi JPG-kuvaa. Esikatselukuvaa ja tätä ohjetta ei tarvitse ladata sivustolle. Vain pysahdy-matkalla.html korvataan; muut sivut säilyvät ennallaan.
-
-Kuvat ovat aitoja kohdekuvia. Kuvaaja, kuvausvuosi ja lisenssilinkki näkyvät jokaisessa kortissa. Osa valokuvista on vanhoja. Kuvien sisältöä ei ole muokattu, kortissa kuva rajautuu tilaan. Mukana ei ole tekoälykuvia.
-
-Esikatselu on ohjelmallinen asettelukuva, ei selaimen kuvakaappaus. Sivustolla liikutaan normaalisti vierittämällä, alavalikko pysyy puhelimella paikallaan.
+Lataa molemmat tiedostot sivuston samaan kansioon. Korvaa pysahdy-matkalla.html.
+Koko kohdekortti avaa kohteen tiedot. Tutustu, Kartalle ja Suosikki näkyvät vasta avatussa kohteessa.
+Nykyiset v397-kuvat ja CSS säilyvät käytössä. Etusivuihin ei ole tehty muutoksia.
