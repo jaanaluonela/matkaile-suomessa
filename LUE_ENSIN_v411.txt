@@ -1,0 +1,7 @@
+Heinolan alareunan korjaus v411
+
+Lataa heinola.html sivuston samaan kansioon vanhan samannimisen tiedoston päälle.
+
+Tilastokeskuksen tekstilinkki poistettu. Asukasluku, päivämäärä ja vaakuna säilyvät.
+Puhelimen Heinola-sivun alavalikossa on yksi kuvake ja yksi teksti valintaa kohti. Sisällölle on varattu tilaa valikon yläpuolelle.
+Korjaus koskee vain Heinolan sivua.
