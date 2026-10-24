@@ -1,5 +1,2 @@
-Puumalan sisällön tiivistys
-
-Lataa puumala.html GitHubiin nykyisen samannimisen tiedoston tilalle.
-Muutos koskee vain Puumalan puhelinnäkymän sisältöä.
-Sivun leveys, vaakuna, asukasluku, linkit ja kohteet säilyvät.
+Korvaa GitHubissa koli.html tämän paketin koli.html-tiedostolla.
+Korjaus: tietolaatikon tiedot allekkain, puhelimen tekstikoot ja kuvan korkeus pienemmiksi, sisältö ruudun leveyteen.
