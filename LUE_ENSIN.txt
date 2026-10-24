@@ -1,3 +1,5 @@
-Lataa haapajarvi.html sivuston pääkansioon ja korvaa vanha samanniminen tiedosto.
-Asukasluku 6 441 (31.12.2025), lähdelinkki lisätty.
-Haapajärven puhelinnäkymän yläosaa tiivistetty.
+Puumalan sisällön tiivistys
+
+Lataa puumala.html GitHubiin nykyisen samannimisen tiedoston tilalle.
+Muutos koskee vain Puumalan puhelinnäkymän sisältöä.
+Sivun leveys, vaakuna, asukasluku, linkit ja kohteet säilyvät.
