@@ -1,15 +1,20 @@
-Matkaile Suomessa v404 – Haku ja linkkikorjaukset
+Matkaile Suomessa v405 – Lahden aamiaispaikat
 
-Lataa kaikki paketin 9 verkkosivutiedostoa GitHubin matkaile-suomessa-repositorion juureen ja korvaa samannimiset. LUE_ENSIN.txt on vain ohje. Paina Commit changes.
+Lataa paketin 6 verkkosivutiedostoa GitHub-repositorion juureen ja korvaa samannimiset. Paina Commit changes.
+LUE_ENSIN.txt ja LAHTEET.txt ovat ohjeita, niitä ei tarvitse ladata sivustolle.
 
-Mukana on Etsi-painikkeen sisältävä pysahdy-matkalla.html ja uusi pysahdy-v404.js. Molemmat tarvitaan.
+Mukana:
+lahti.html
+lahti-kahiwa.html
+lahti-kahvila-asemapaallikko.html
+lahti-seurahuone-aamiainen.html
+pysahdy-matkalla.html
+pysahdy-v405.js
 
-Haku: 488 kohdetta aiemmasta sivustoaineistosta. Repovesi löytyy nimellä Repovesi sekä Repoveden kansallispuisto. Vain aiemmin lähdetiedoin hyväksytyt kuvat ovat käytössä; muut kohteet näkyvät ilman kuvaa. Puuttuva kuvatiedosto ei enää poista kohdetta.
+Lahden Pysähdy matkalla / Kahvilat ja ravintolat -osioon on lisätty Seurahuoneen aamiainen.
+Kahiwan ja Asemapäällikön olemassa olevat sivut sekä hakutiedot on täydennetty.
+Kahiwa näkyy haussa kerran. Kohteet löytyvät myös hakusanoilla aamiainen tai brunssi.
+Sivut sisältävät käyntiosoitteen, karttalinkin ja linkin palveluntarjoajan tietoihin.
+Kohteissa ei ole kuvituskuvia. Etusivua tai yhteisiä tyylitiedostoja ei ole paketissa.
 
-Kuusi puuttuvaa kuntalinkkiä vie nyt olemassa olevaan kuntakorttiin. Näiden kuntien oma opas on edelleen keskeneräinen. Vanha kartta.html ohjaa toimivaan maakuntakarttaan.
-
-Tarkistus: 958 HTML-tiedoston paikalliset href/src-viittaukset, kaikkien JavaScript-tiedostojen syntaksi, hakupainike, Repovesi/Koli/Puumala/Suomenlinna/Fiskars/Heureka, luokkavalinnat ja rajausten tyhjennys. Ulkoisia linkkejä, kaikkien sivujen käyttöpolkuja tai selainulkoasua ei ole kattavasti testattu.
-
-Etusivua ei ole muutettu. Paketti ei sisällä etusivua eikä yhteisiä tyylitiedostoja.
-
-Jos vanha näkymä näkyy julkaisemisen jälkeen, avaa sivu uudelleen tai päivitä sivu.
+Tämä on päivityspaketti nykyisen sivuston päälle, ei erillinen koko sivusto.
