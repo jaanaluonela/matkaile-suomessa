@@ -12,3 +12,14 @@ body.ms375-home .search-panel:before,body.ms375-home .search-panel:after{display
 @media(max-width:650px){body.ms375 .ms375-brand strong{font-size:19px!important;white-space:nowrap}body.ms375 .ms375-brand em{font-size:12px!important}body.ms375 .ms375-brand>svg{width:34px!important}body.ms375 .ms375-menu{padding:8px 10px;font-size:13px!important}body.ms375-home .ms375-category{grid-template-columns:32px minmax(0,1fr);padding:12px 9px;gap:8px}body.ms375-home .ms375-color{width:32px;height:44px}body.ms375-home .ms375-color svg{width:25px!important;height:25px!important}body.ms375-home .ms375-category strong{font:700 14px/1.3 system-ui,-apple-system,Arial,sans-serif!important;overflow-wrap:normal!important;hyphens:auto}body.ms375-home .ms375-category small{font-size:13px!important}}
 
 body.ms375-town .qnav{display:none!important}
+
+/* v409: readable destination buttons across inner pages; home pages excluded. */
+body.ms375:not(.ms375-home) main :is(.actions a,a.action,.route-links a,a.btn.green),
+body.ms375:not(.ms375-home) main :is(.actions a,a.action,.route-links a,a.btn.green):visited{
+ background:#195e4e!important;color:#fff!important;opacity:1!important;visibility:visible!important;
+}
+body.ms375:not(.ms375-home) main :is(.actions a,a.action,.route-links a,a.btn.green) :is(span,strong,em,small){color:inherit!important}
+body.ms375:not(.ms375-home) main :is(.actions a,a.action,.route-links a,a.btn.green):hover{background:#104d3f!important;color:#fff!important}
+body.ms375:not(.ms375-home) main .actions a:nth-child(2),
+body.ms375:not(.ms375-home) main .actions a:nth-child(2):visited{background:#e6f1ec!important;color:#195e4e!important}
+body.ms375:not(.ms375-home) main .actions a:nth-child(2):hover{background:#d4e9dd!important;color:#195e4e!important}

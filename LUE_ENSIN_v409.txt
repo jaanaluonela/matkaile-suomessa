@@ -1,0 +1,10 @@
+Matkaile Suomessa v409 – Sisäsivujen vihreiden painikkeiden tekstit
+
+Lataa yhteinen-v375.css GitHub-repositorion juureen, korvaa samanniminen tiedosto ja paina Commit changes.
+Tämä tekstitiedosto on vain ohje.
+
+Yhteinen korjaus palauttaa sisäsivujen vihreiden linkkipainikkeiden tekstin valkoiseksi. Vaaleassa toisessa painikkeessa säilyy tumma teksti. Myös aiemmin avatut linkit huomioidaan.
+Sivujen olemassa olevat painiketekstit ja linkkien osoitteet säilyvät. Korjaus koskee kaikkia yhteistä tyyliä käyttäviä sisäsivuja, joissa on nämä painiketyypit.
+Etusivut on rajattu korjauksen ulkopuolelle. Muita yhteisen tyylitiedoston sääntöjä ei muuteta.
+
+Jos vanha tekstiväri näkyy vielä lataamisen jälkeen, päivitä sivu tietokoneella Ctrl+F5. Puhelimella sulje sivu ja avaa se uudelleen; välimuisti voi säilyttää vanhan tyylin.
