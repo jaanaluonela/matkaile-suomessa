@@ -1,12 +1,12 @@
-/* Matkaile Suomessa v311: matkaparkkien oma 3 palvelun valikko; leirintäalueiden valinnat ennallaan. */
+/* Matkaile Suomessa v411: kuusi leirintäalueiden palveluvalintaa; matkaparkkien valinnat säilyvät. */
 (()=>{'use strict';
  const SERVICES=[
-  ['electric','⚡ Sähkö','Sähkö'],['shower','🚿 Suihku','Suihku'],
-  ['sauna','♨️ Sauna','Sauna'],['wc','🚻 WC','WC'],
-  ['greywater','🛠️ Harmaavesi','Harmaavesi'],['cottages','🏠 Mökit','Mökit'],
-  ['cafe','☕ Kahvila','Kahvila'],['playground','🛝 Leikkipaikka','Leikkipaikka'],
-  ['beach','🏖️ Uimaranta','Uimaranta'],['kitchen','🍳 Keittiö','Keittiö'],
-  ['laundry','🧺 Pyykinpesu','Pyykinpesu']
+  ['electric','⚡ Sähkö','Sähköpaikka'],
+  ['sauna','♨️ Sauna','Sauna, yleinen tai varattava'],
+  ['cottages','🏠 Mökit','Mökkimajoitus'],
+  ['laundry','🧺 Pyykinpesu','Pyykinpesumahdollisuus'],
+  ['greywater','🔧 Harmaaveden tyhjennys','Harmaaveden tyhjennys'],
+  ['chemical','🚐 Kemiallisen WC:n tyhjennys','Kemiallisen WC:n tyhjennys']
  ];
  // Matkaparkkien palvelurajaukset on tarkoituksella erotettu leirintäalueista.
  // Suodatusmoottori käyttää samoja tunnuksia (electric, wc, greywater).
@@ -18,7 +18,8 @@
  function init(){
    const group=document.querySelector('.ms275-services-panel .ms275-services-choices');
    if(!group)return;
-   const services=document.body.dataset.kind==='park'?PARK_SERVICES:SERVICES;
+   const services=document.body.dataset.kind==='park'?PARK_SERVICES:
+     document.body.dataset.stayCombined==='true'?[...SERVICES,['wc','🚻 WC','WC']]:SERVICES;
    // Sivukohtaiset valinnat ovat näkyvissä myös JavaScriptin päivityksen jälkeen.
    const existing=new Map([...group.querySelectorAll('input.ms275-service-choice')].map(i=>[i.value,i.checked]));
    group.replaceChildren(...services.map(([value,caption,full])=>{
@@ -30,6 +31,18 @@
      text.textContent=caption;
      label.append(checkbox,text);return label;
    }));
+   if(document.body.dataset.kind==='camping'){
+     group.querySelectorAll('label').forEach(label=>{
+       label.style.minWidth='0';
+       const text=label.querySelector('span');
+       if(text){text.style.whiteSpace='normal';text.style.overflowWrap='anywhere';}
+     });
+     const panel=group.closest('.ms275-services-panel');
+     const intro=panel?.querySelector('p');
+     if(intro)intro.textContent='Valitse tarvitsemasi lisä- ja huoltopalvelut. Tuloksissa näkyvät kohteet, joille valitut palvelut on vahvistettu.';
+     const note=panel?.querySelector('.ms275-service-footer small');
+     if(note)note.textContent='Palvelut voivat olla maksullisia, varattavia tai kausittaisia. Puuttuva tieto ei tarkoita, ettei palvelua ole.';
+   }
    group.setAttribute('role','group');group.setAttribute('aria-label','Valitse tarvitsemasi palvelut');
    document.querySelectorAll('.ms275-scroll-hint').forEach(x=>x.remove());
    const reset=document.getElementById('ms275-clear-services');

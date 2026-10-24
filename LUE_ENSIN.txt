@@ -1,20 +1,36 @@
-Matkaile Suomessa v405 – Lahden aamiaispaikat
+MATKAILE SUOMESSA – PALVELUVALIKKO v411
 
-Lataa paketin 6 verkkosivutiedostoa GitHub-repositorion juureen ja korvaa samannimiset. Paina Commit changes.
-LUE_ENSIN.txt ja LAHTEET.txt ovat ohjeita, niitä ei tarvitse ladata sivustolle.
+Lataa nämä kolme tiedostoa GitHubissa samaan kansioon kuin nykyiset sivuston tiedostot ja korvaa samannimiset:
+- leirintaalueet.html
+- palvelut-v275.js
+- yopymispaikat-v347.js
+Tämä on osapäivitys. Älä poista muita sivuston tiedostoja.
+GitHubissa zip pitää purkaa ennen tiedostojen lataamista.
 
-Mukana:
-lahti.html
-lahti-kahiwa.html
-lahti-kahvila-asemapaallikko.html
-lahti-seurahuone-aamiainen.html
-pysahdy-matkalla.html
-pysahdy-v405.js
+Leirintäalueiden ja Kaikki-näkymän palveluvalinnat:
+Sähkö, sauna, mökit, pyykinpesu, harmaaveden tyhjennys ja kemiallisen WC:n tyhjennys.
+Matkaparkkien valinnat säilyvät: sähkö, WC ja harmaaveden tyhjennys.
+Näkymää vaihdettaessa poistuvan palvelun valinta tyhjentyy.
+Ympärivuotisuus ja SFC-rajaus säilyvät erillisinä valintoina.
+WC, suihku, kahvila, leikkipaikka, uimaranta ja keittiö voivat edelleen näkyä kohteen tiedoissa. Niitä ei poisteta kohdetiedoista.
+Etusivut eivät sisälly päivitykseen. Kohdeluetteloita ei muuteta.
+Sisäsivu on otettu julkaistun sivuston nykyisestä versiosta 24.10.2026; siihen vaihdetaan vain palveluvalinnat ja päivitettyjen skriptien versionumerot.
 
-Lahden Pysähdy matkalla / Kahvilat ja ravintolat -osioon on lisätty Seurahuoneen aamiainen.
-Kahiwan ja Asemapäällikön olemassa olevat sivut sekä hakutiedot on täydennetty.
-Kahiwa näkyy haussa kerran. Kohteet löytyvät myös hakusanoilla aamiainen tai brunssi.
-Sivut sisältävät käyntiosoitteen, karttalinkin ja linkin palveluntarjoajan tietoihin.
-Kohteissa ei ole kuvituskuvia. Etusivua tai yhteisiä tyylitiedostoja ei ole paketissa.
+TARKISTUS 24.10.2026
+Alueilla ei ole yhteistä pakollista palveluluettelon esitystapaa. Mikään yksittäinen palvelutieto ei ole varmasti kaikkien sivuilla samassa muodossa. Kuusi valintaa ovat tämän vertailun perusteella selkeitä, yleisesti erikseen ilmoitettuja lisä- ja huoltopalveluja. Tämä ei tarkoita, että jokainen alue tarjoaisi tai ilmoittaisi jokaisen niistä.
+WC:n puuttuminen Lapin aiemmasta aineistosta oli sivuston tietopuute: alueiden omat sivut kyllä ilmoittavat WC-tiloja.
+Palveluhaku käyttää vahvistettuja tietoja. Puuttuva tieto ei tarkoita puuttuvaa palvelua. Sauna voi olla maksullinen/varattava, pyykinpesu maksullista ja palvelut kausittaisia.
 
-Tämä on päivityspaketti nykyisen sivuston päälle, ei erillinen koko sivusto.
+Vertailussa käytetyt alueiden omat sivut:
+Ounaskoski Camping: https://www.ounaskoski-camping-rovaniemi.com/palvelut/
+Nilimella: https://nilimella.fi/caravan-paikat/
+Sallainen: https://www.sallaiset.fi/majoitus/caravan-kyla/
+Ivalo River Camping: https://www.ivalorivercamping.com/majoitus
+Ivalo River Camping, sauna: https://www.ivalorivercamping.com/aktiviteetit
+Inari Camping: https://www.inaricamping.fi/palvelut/
+Arctic River Resort: https://www.arcticriverresort.fi/en/camping-ivalo/
+Kilpisjärven Retkeilykeskus: https://www.kilpisjarvicamping.com/accommodation/camping.html
+Pohjanranta: https://pohjanranta.fi/en/front-page/caravan/
+
+TEKNINEN TARKISTUS
+JavaScriptin syntaksi tarkistettu. DOM-toimintakokeessa varmennettu kuusi leirintävalintaa, matkaparkkien kolme valintaa ja WC, piilotettujen rastien tyhjeneminen, palveluvalintojen tyhjennys sekä kemiallisen WC:n tyhjennyksen tekstihaku. Koe käytti aiempaa 38 kohteen Lapin aineistoa ja erillistä matkaparkin testitietuetta. Nykyisen julkaistun sivuston täydellistä kohdeaineistoa tai ulkoasua ei testattu selaimessa.

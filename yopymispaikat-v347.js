@@ -17,7 +17,7 @@
    wc:['wc','vessa'],greywater:['harmaavesi','harmaaveden tyhjennys'],
    cottages:['mökki','mökit'],cafe:['kahvila'],playground:['leikkipaikka'],
    beach:['uimaranta'],kitchen:['keittiö'],laundry:['pyykinpesu'],
-   water:['vesipiste','vesi'],chemical:['kemiallinen wc']
+   water:['vesipiste','vesi'],chemical:['kemiallisen wc:n tyhjennys','kemiallisen wc tyhjennys','kemiallisen wc:n','kemiallinen wc','kemssa']
  };
  const aliasList = Object.entries(SERVICE_ALIASES).flatMap(([key,forms]) =>
    forms.map(text => [norm(text),key])).sort((a,b)=>b[0].length-a[0].length);
@@ -62,6 +62,7 @@
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
    const parkServices=new Set(['electric','wc','greywater']);
+   const campingServices=new Set(['electric','sauna','cottages','laundry','greywater','chemical']);
    if(!container||!search||!kindButtons.length)return;
    const urlKind=new URLSearchParams(location.search).get('tyyppi');
    let kind=['camping','park'].includes(urlKind)?urlKind:'all';
@@ -118,15 +119,19 @@
    function syncServiceChoices(){
      const parkOnly=kind==='park';
      for(const box of serviceBoxes){
-       const unavailable=parkOnly&&!parkServices.has(box.value);
+       const unavailable=!(parkOnly?parkServices:campingServices).has(box.value);
        const choice=box.closest('label');
-       if(choice)choice.hidden=unavailable;
+       if(choice){choice.hidden=unavailable;choice.style.display=unavailable?'none':'';}
        box.disabled=unavailable;
        if(unavailable)box.checked=false;
      }
    }
    function apply(){
      syncServiceChoices();
+     const panel=document.querySelector('.ms275-services-panel');
+     const intro=panel?.querySelector('p');
+     if(intro)intro.textContent=kind==='park'?'Valitse tarvitsemasi matkaparkin palvelut. Tuloksissa näkyvät kohteet, joille palvelut on vahvistettu.':'Valitse tarvitsemasi lisä- ja huoltopalvelut. Tuloksissa näkyvät kohteet, joille palvelut on vahvistettu.';
+
      const q=parseQuery(search.value);
      const checked=serviceBoxes.filter(el=>el.checked).map(el=>el.value);
      const required=new Set([...q.services,...checked]);
