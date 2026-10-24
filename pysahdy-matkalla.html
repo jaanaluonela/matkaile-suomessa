@@ -2,47 +2,35 @@
 <html lang="fi"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#174d40">
-<meta name="description" content="Löydä nähtävyydet, luontokohteet, taukopaikat, ruukkikylät sekä kahvilat ja ravintolat samalla haulla.">
+<meta name="description" content="Löydä nähtävyydet, lasten kohteet, luontokohteet ja taukopaikat matkan varrelta.">
 <title>Pysähdy matkalla – Matkaile Suomessa</title>
-<link rel="stylesheet" href="pysahdy-v304.css?v=304">
-<link rel="stylesheet" href="alavalikko-v304.css?v=355">
+<link rel="stylesheet" href="pysahdy-v393.css?v=393">
 <script defer src="nearby-data-v218.js"></script>
 <script defer src="kayntikohteet-data-v230.js"></script>
 <script defer src="ruukkikylat-data-v302.js?v=302"></script>
-<script defer src="erikoiset-kohteet-v305.js?v=305"></script>
-<script defer src="pysahdy-v305.js?v=305"></script>
-<script defer src="alavalikko-v304.js?v=355"></script>
-<link rel="stylesheet" href="desktop-v339.css?v=339">
-<link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
-<link rel="stylesheet" href="varit-ja-yhtenaisyys-v363.css?v=363">
-<link rel="stylesheet" href="turkoosi-yhtenainen-v364.css?v=364">
-<link rel="stylesheet" href="sivuston-varit-v365.css?v=365">
-<link rel="stylesheet" href="yhtenainen-ulkoasu-v366.css?v=366"><link rel="stylesheet" href="yhtenainen-ulkoasu-v367.css?v=367"></head><body class="ms302-stops-page ms-v363-stops">
+<script defer src="pysahdy-v393.js?v=393"></script>
+</head><body>
+<header class="ms375-header"><div class="ms375-header-inner"><a class="ms375-brand" href="index.html"><svg aria-hidden="true" viewBox="0 0 60 44"><path d="M3 32 18 6l14 26" fill="#43836a"/><path d="M22 32 39 2l18 30" fill="#104c44"/><path d="M3 37c17-8 34 8 54 0" fill="none" stroke="#2697a1" stroke-width="5"/></svg><span><strong>Matkaile Suomessa</strong><em>Vapaus kulkea · Ilo löytää</em></span></a><button type="button" aria-controls="ms375-menu-links" aria-expanded="false" class="ms375-menu">Valikko ☰</button><nav aria-label="Päävalikko" hidden id="ms375-menu-links"><a href="maakunnat.html">Paikkakunnat</a><a href="leirintaalueet.html">Yöpymispaikat</a><a href="pysahdy-matkalla.html" aria-current="page">Pysähdy matkalla</a><a href="reittisuunnittelu.html">Suunnittele reitti</a><a href="karavaanarin-vinkit.html">Karavaanarin vinkit</a><a href="paivakirja.html">Omat matkat</a></nav></div></header>
 <main class="ms302-stops" id="main">
-  <header class="ms302-stops-intro">
-    <h1>Pysähdy matkalla</h1>
-    <p>Nähtävyydet, luonto, taukopaikat ja makuelämykset yhdestä paikasta.</p>
-  </header>
+  <nav class="breadcrumb" aria-label="Murupolku"><a href="index.html">Etusivu</a><span>›</span><span>Pysähdy matkalla</span></nav>
+  <header class="ms302-stops-intro"><h1>Pysähdy matkalla</h1><p>Löydä nähtävyydet, lasten kohteet, luontokohteet ja taukopaikat matkan varrelta.</p></header>
   <section class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
-    <div class="ms302-stops-fields">
-      <label>Paikkakunta<select id="ms302-town"><option value="">Koko Suomi</option></select></label>
-      <label>Hae kohdetta<input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"></label>
-    </div>
+    <div class="ms302-stops-fields"><label class="ms302-query-label"><span class="sr-only">Hae kohdetta</span><input id="ms302-query" type="search" placeholder="Hae kohdetta tai paikkakuntaa…" autocomplete="off"></label><label class="ms302-town-label"><span class="sr-only">Paikkakunta</span><select id="ms302-town" aria-label="Valitse paikkakunta"><option value="">Koko Suomi</option></select></label></div>
     <div class="ms302-category" role="group" aria-label="Valitse kohdeluokka">
       <button type="button" data-ms302-category="all" aria-pressed="true">Kaikki</button>
       <button type="button" data-ms302-category="sight" aria-pressed="false">Nähtävyydet</button>
-      <button type="button" data-ms302-category="special" aria-pressed="false">Erikoiset nähtävyydet</button>
-      <button type="button" data-ms302-category="nature" aria-pressed="false">Luonto ja retket</button>
+      <button type="button" data-ms302-category="nature" aria-pressed="false">Luonto</button>
       <button type="button" data-ms302-category="stop" aria-pressed="false">Taukopaikat</button>
+      <button type="button" data-ms302-category="kids" aria-pressed="false">Lasten kohteet</button>
+      <button type="button" data-ms302-category="food" aria-pressed="false">Kahvilat</button>
       <button type="button" data-ms302-category="ruukki" aria-pressed="false">Ruukkikylät</button>
-      <button type="button" data-ms302-category="food" aria-pressed="false">Kahvilat ja ravintolat</button>
     </div>
   </section>
-  <div class="ms302-results-head"><p id="ms302-count" role="status" aria-live="polite">Haetaan kohteita…</p><button id="ms302-reset" type="button">Tyhjennä rajaukset</button></div>
+  <div class="ms302-results-head"><h2>Kohteita matkalle</h2><p id="ms302-count" role="status" aria-live="polite">Haetaan kohteita…</p><button id="ms302-reset" type="button">Tyhjennä rajaukset</button></div>
   <section id="ms302-results" class="ms302-results" aria-label="Hakutulokset"></section>
   <button class="ms302-more" id="ms302-more" type="button" hidden>Näytä lisää kohteita</button>
-  <p class="ms302-note">Tarkista aukioloajat ja palvelut kohteesta ennen matkaa.</p>
-  <noscript><p>Hakutulosten näyttäminen vaatii JavaScriptin.</p></noscript>
+  <p class="ms302-note">Tarkista aukioloajat ja palvelut kohteesta ennen matkaa.</p><noscript><p>Hakutulosten näyttäminen vaatii JavaScriptin.</p></noscript>
 </main>
-<script defer src="desktop-v339.js?v=348"></script>
+<nav aria-label="Sivuston päävalikko" class="ms375-bottom"><a href="index.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#home"/></svg><span>Koti</span></a><a href="maakunnat.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#map"/></svg><span>Paikkakunnat</span></a><a aria-current="page" href="pysahdy-matkalla.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#sight"/></svg><span>Pysähdy matkalla</span></a><a href="paivakirja.html"><svg aria-hidden="true" class="ms375-icon"><use href="icons-v375.svg#book"/></svg><span>Omat matkat</span></a></nav>
+<script>document.querySelector('.ms375-menu').addEventListener('click',function(){const n=document.getElementById('ms375-menu-links');n.hidden=!n.hidden;this.setAttribute('aria-expanded',String(!n.hidden));});</script>
 </body></html>

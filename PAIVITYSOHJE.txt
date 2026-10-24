@@ -1,0 +1,10 @@
+PYSÄHDY MATKALLA – v393
+
+Lataa nämä kolme tiedostoa sivuston juureen ja korvaa siellä oleva pysahdy-matkalla.html:
+- pysahdy-matkalla.html
+- pysahdy-v393.css
+- pysahdy-v393.js
+
+Sivu käyttää jo sivustolla olevia tiedostoja nearby-data-v218.js, kayntikohteet-data-v230.js, ruukkikylat-data-v302.js ja icons-v375.svg. Niitä ei korvata tällä paketilla.
+
+Muutokset: tiivis mobiilinäkymä, paikkakuntahaku, kohdeluokkien suodatus mukaan lukien Lasten kohteet, kohdekortit sekä olemassa oleva suosikkitallennus. Neljän kohdan alavalikko ja nykyinen ylätunniste sisältyvät uuteen sivuun.
