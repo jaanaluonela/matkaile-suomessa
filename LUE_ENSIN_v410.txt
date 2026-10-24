@@ -1,0 +1,7 @@
+Matkaile Suomessa v410 – Heinolan sisällön tarkistus
+
+Lataa paketin 6 HTML- ja JS-tiedostoa GitHub-repositorion juureen ja korvaa samannimiset tiedostot. Paina Commit changes. Tämä ohje ei kuulu sivustolle.
+
+Täydennetty kohteet: Käkisalmi-museo, Kahvila Käki, Harjupaviljonki ja Harjupuisto. Mukana osoitteet, sisältökuvaukset, karttalinkit ja tarkistetut lähdelinkit. Museon ja kahvilan virheelliset kahvilalistauksen linkit on korjattu. Haun Harjupuisto-viittaukset ohjaavat puiston sivulle ja Harjupaviljonki löytyy kahviloista.
+
+Päivitys jatkaa v409:n päälle. Etusivujen tiedostoja tai tyylitiedostoja ei ole paketissa. Koko sivustoa ei ole tarkistettu tällä päivityksellä.
