@@ -1,0 +1,15 @@
+Matkaile Suomessa v406 – Asikkalan kolme kohdesivua
+
+Lataa nämä NELJÄ tiedostoa GitHub-repositorion juureen ja korvaa samannimiset:
+asikkala-v241-kiviston-laavu.html
+asikkala-v241-hugo-lilly.html
+asikkala-v241-kalastusmuseo.html
+asikkala-v241.css
+
+Paina Commit changes. Tämä tekstitiedosto on vain ohje.
+
+Kohteiden omat sivut, esittelyt, palvelut, vierailutiedot, kartat ja lähdelinkit lisätty.
+Kivistön karttapainike näyttää laavun tarkan paikan; lähtöpaikka selitetään erikseen.
+Vihreiden linkkipainikkeiden tekstiväri korjattu Asikkalan sivujen paikallisessa tyylitiedostossa.
+Etusivuja ja yhteisiä tyylitiedostoja ei muuteta.
+Kuvia ei ole lisätty.
