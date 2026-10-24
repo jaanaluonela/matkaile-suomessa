@@ -1,9 +1,3 @@
-V401 – KOKO KORTTI AVAA KOHDESIVUN
-
-Lataa kaikki paketin HTML-, CSS-, JS- ja JPG-tiedostot sivuston juureen. Korvaa pysahdy-matkalla.html. Muut tiedostot ovat uusia tai kuvan ennallaan säilyvä kopio. Ohjetta ei tarvitse ladata.
-
-Suomenlinnan kortti avaa nyt suomenlinna.html-sivun tavallisena sivusiirtymänä samassa välilehdessä. Sivulla ovat kuva, esittely, käytännön tiedot, karttalinkki, suosikit ja Olen käynyt täällä -painike. Ponnahdusikkunaa ei ole.
-
-Kaikki muutkin listan kortit avaavat suoraan niille määritellyn kohdesivun. Koli, Yyteri ja Puumalan satama avaavat omat olemassa olevat sivunsa. Olavinlinna ja Heureka avaavat toistaiseksi viralliset sivunsa. Ne eivät avaa ponnahdusikkunaa.
-
-Tarvitaan aiemmin sivustolle ladatut pysahdy-v397.css ja icons-v375.svg. Etusivujen tiedostoja ei korvata.
+Lataa haapajarvi.html sivuston pääkansioon ja korvaa vanha samanniminen tiedosto.
+Asukasluku 6 441 (31.12.2025), lähdelinkki lisätty.
+Haapajärven puhelinnäkymän yläosaa tiivistetty.
