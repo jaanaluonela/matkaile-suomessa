@@ -1,0 +1,45 @@
+/* v420: vain Yöpymispaikat-sivu */
+.ms420-icon{display:inline-block;width:1.55em;height:1.55em;vertical-align:middle;background-position:center;background-repeat:no-repeat;background-size:contain;flex-shrink:0}
+.ms420-park-icon{background-image:url('matkaparkki-merkki-v420.svg')}
+.ms420-camp-icon{background-image:url('leirintaalue-merkki-v420.svg')}
+.ms347-type.ms420-park,.ms347-type.ms420-camp{display:inline-flex!important;align-items:center;gap:8px}
+.ms347-type.ms420-park:before,.ms347-type.ms420-camp:before{content:'';width:29px;height:29px;display:inline-block;background-size:contain;background-position:center;background-repeat:no-repeat;flex:none}
+.ms347-type.ms420-park:before{background-image:url('matkaparkki-merkki-v420.svg')}
+.ms347-type.ms420-camp:before{background-image:url('leirintaalue-merkki-v420.svg')}
+.ms420-services{border:1px solid #c9ddcf;border-radius:16px;margin:14px 0;background:#f6faf7;overflow:hidden}
+.ms420-services>summary{cursor:pointer;font-weight:800;color:#174b3a;padding:14px 16px;list-style:none}
+.ms420-services>summary:after{content:'⌄';float:right}
+.ms420-services[open]>summary:after{content:'⌃'}
+.ms420-services>summary::-webkit-details-marker{display:none}
+.ms420-services .ms275-services-panel{margin:0!important;padding:12px!important;border:0!important}
+.ms318-results-header .ms318-eyebrow{display:none}
+@media(max-width:700px){
+ .ms318-camp-sidebar,.ms318-camp-list{min-width:0}
+ .ms318-panel-heading{margin-bottom:8px!important}
+ .ms318-camp-sidebar .ms347-kinds{margin:8px 0 12px!important}
+ .ms318-camp-sidebar .v243-stay-top{margin-top:0!important}
+ .ms318-camp-list .ms318-results-header{margin-bottom:10px!important}
+ .ms318-camp-list .ms318-results-header h2{font-size:1.4rem!important}
+ .ms318-camp-list .stay{padding:16px!important;margin-bottom:12px!important}
+ .ms318-camp-list .stay .ms347-facts{font-size:.9rem;line-height:1.45}
+}
+
+/* v421: Yöpymispaikat, korttien ja mobiilin tiivistys */
+body[data-stay-combined="true"] #municipality-results .stay{height:auto!important;min-height:0!important;align-self:start!important;display:flex;flex-direction:column;gap:9px!important;padding:18px!important}
+body[data-stay-combined="true"] #municipality-results{align-items:start!important;grid-auto-rows:auto!important}
+body[data-stay-combined="true"] #municipality-results .stay > *{margin-top:0!important;margin-bottom:0!important}
+body[data-stay-combined="true"] #municipality-results .stay .ms347-type{margin:0!important;align-self:flex-start}
+body[data-stay-combined="true"] #municipality-results .stay h2{line-height:1.2!important;margin:3px 0!important}
+body[data-stay-combined="true"] #municipality-results .stay p{line-height:1.4!important;margin:0!important}
+body[data-stay-combined="true"] #municipality-results .stay .buttons{display:flex!important;flex-wrap:wrap!important;gap:8px!important;margin-top:6px!important;align-items:center!important}
+body[data-stay-combined="true"] #municipality-results .stay .buttons a{padding:10px 13px!important;min-height:0!important;width:auto!important;font-size:clamp(.9rem,1.4vw,1rem)!important}
+body[data-stay-combined="true"] #municipality-results .stay .ms347-facts{padding:9px 12px!important;margin:3px 0!important}
+body[data-stay-combined="true"] #municipality-results .stay .ms421-duplicate{display:none!important}
+@media(max-width:700px){
+ body[data-stay-combined="true"] .ms318-hero--camp{padding:16px 18px!important;min-height:0!important;margin-bottom:12px!important}
+ body[data-stay-combined="true"] .ms318-hero--camp .ms318-eyebrow{display:none!important}
+ body[data-stay-combined="true"] .ms318-hero--camp h1{font-size:clamp(1.8rem,7vw,2.4rem)!important;line-height:1.15!important;margin:5px 0!important}
+ body[data-stay-combined="true"] .ms318-hero--camp .ms318-hero-subtitle{font-size:.95rem!important;line-height:1.35!important;margin:5px 0!important}
+ body[data-stay-combined="true"] #municipality-results .stay{padding:14px!important;gap:8px!important}
+ body[data-stay-combined="true"] #municipality-results .stay .buttons a{font-size:.92rem!important;padding:10px 12px!important}
+}

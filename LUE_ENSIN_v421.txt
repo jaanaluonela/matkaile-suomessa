@@ -1,0 +1,1 @@
+Yöpymispaikat v421: Lataa nämä 3 verkkosivutiedostoa GitHubin juureen. Älä poista muita tiedostoja. Etusivuja ei ole muutettu. Tarkista julkaistu näkymä mobiililla ja tietokoneella.
