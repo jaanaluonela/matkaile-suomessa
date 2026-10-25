@@ -143,7 +143,7 @@
   if(document.querySelector('script[data-ms354]'))return;
   const css=document.createElement('link');css.rel='stylesheet';css.href=href('kuntatiedot-v354.css?v=355');document.head.append(css);
   const data=document.createElement('script');data.src=href('kuntatiedot-v354-data.js?v=355');data.async=false;data.dataset.ms354='data';
-  const logic=document.createElement('script');logic.src=href('kuntatiedot-v354.js?v=355');logic.async=false;logic.dataset.ms354='logic';
+  const logic=document.createElement('script');logic.src=href('kuntatiedot-v354.js?v=412');logic.async=false;logic.dataset.ms354='logic';
   // Browsers execute non-async dynamically inserted classic scripts in insertion order.
   document.head.append(data,logic);
  }
