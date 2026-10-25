@@ -66,3 +66,18 @@ body.ms375-town .k413-grid a span{margin-right:8px!important}
  body.ms375-town nav:not(.k413-grid):not(.ms375-bottom)[class*="bottom"],body.ms375-town nav:not(.k413-grid):not(.ms375-bottom)[class*="mobile"]{display:none!important}
 }
 @media(min-width:800px){body.ms375-town .ms375-bottom{display:none!important}}
+
+/* v418: Kainuun kuntasivujen yhteinen tiivis ulkoasu; ei muutoksia etusivuihin */
+@media(max-width:799px){
+.k413-top{margin-bottom:12px!important;padding-top:4px!important}
+.k413-back{margin-bottom:7px!important}
+.k413-top h1{margin-bottom:7px!important}
+.k413-lead{line-height:1.35!important;margin-bottom:12px!important}
+.k413-facts{padding:12px 14px!important;min-height:84px!important;margin-bottom:11px!important;border-radius:18px!important}
+.k413-facts img{height:66px!important;width:54px!important}
+.k413-visit{margin-bottom:11px!important}
+.k413-grid{gap:9px!important;margin-bottom:13px!important}
+.k413-grid a{min-height:69px!important;padding:10px!important;border:2px solid #cfe0d5!important;border-radius:17px!important;background:#fff!important}
+.k413-grid a span{margin-right:9px!important}
+.k414-icon{width:27px!important;height:27px!important}
+}
