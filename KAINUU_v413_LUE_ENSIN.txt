@@ -1,0 +1,12 @@
+Kainuun kuntasivujen yhtenäistäminen v413
+
+Hyrynsalmi: asukasluku 1 984, vaakuna on, vierailupainike on
+Kajaani: asukasluku 36 370, vaakuna on, vierailupainike on
+Kuhmo: asukasluku 7 300, vaakuna on, vierailupainike on
+Paltamo: asukasluku Tieto tarkistettavana, vaakuna puuttuu, vierailupainike on
+Puolanka: asukasluku 2 322, vaakuna on, vierailupainike on
+Ristijarvi: asukasluku 1 158, vaakuna on, vierailupainike on
+Sotkamo: asukasluku 10 161, vaakuna on, vierailupainike on
+Suomussalmi: asukasluku 6 957, vaakuna on, vierailupainike on
+
+Vain 8 Kainuun kunnan HTML-sivua ja uusi CSS muutettu. Etusivut koskemattomia. Paltamon asukasluku jätetty tarkistettavaksi, koska lähdetiedostossa ei ollut lukua.
