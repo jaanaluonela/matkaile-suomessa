@@ -32,17 +32,6 @@
   population.append(elt('span','ms354-pending','Tieto tarkistettavana'));
  }
  values.append(population);
- const source=elt('p','ms354-fact-source');
- const link=elt('a','','Tilastokeskus · väkiluku 31.12.2025 ↗');
- link.href='https://stat.fi/fi/tilastot/tietoa-teemoittain/vakiluku';link.target='_blank';link.rel='noopener noreferrer';
- source.append(link);
- if(record.popLabel && !record.popLabel.startsWith('Tilastokeskus')){
-  source.prepend(document.createTextNode(record.popLabel+' · '));
- }
- if(!Number.isFinite(record.pop)){
-  link.textContent='Tarkista asukasluku Tilastokeskukselta ↗';
- }
- values.append(source);
  const coatSource=elt('a','ms354-coat-source','Vaakunan lähde: Kuntaliitto ↗');coatSource.href=record.officialPage;coatSource.target='_blank';coatSource.rel='noopener noreferrer';
  values.append(coatSource);
  fact.append(coat,values);

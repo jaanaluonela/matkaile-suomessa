@@ -1,0 +1,11 @@
+ASUKASLUVUN LAHDELINKIT POIS – OSA B
+
+Lataa molemmat osat A ja B. Pura kumpikin zip ja lataa sen sisältämät HTML- ja JS-tiedostot GitHubin sivustokansioon. Korvaa samannimiset vanhat tiedostot. Älä poista muita tiedostoja. Osissa A ja B ei ole samoja tiedostonimiä.
+
+Poistettu asukasluvun jälkeiset Tilastokeskus- ja Kuntaväestö-linkit sekä niiden muodostaminen yhteisissä näkymissä. Asukasluvut, vaakunakuvat ja vaakunan lähdelinkki säilyvät. Etusivua ei muuteta. Heinolan aiempi alareunakorjaus säilyy: heinola.html ei sisälly tähän päivitykseen.
+
+Tarkistus: kaikki 959 HTML-tiedostoa tutkittu. Muutoksia 110 kunta-/kuntapohjasivuun ja neljään yhteiseen JS-tiedostoon. Staattisten asukaslukujen ja kuvien säilyminen tarkistettu. Yhteinen kuntatietokortti kokeiltu 308 kuntatietueella ilman asukasluvun lähdelinkkiä. JS-syntaksit tarkistettu.
+
+Päivitä sivu lataamisen jälkeen. Jos vanha linkki näkyy välimuistista, sulje välilehti ja avaa sivu uudelleen.
+
+Tässä osassa 57 päivitystiedostoa.

@@ -65,19 +65,9 @@
     const population = create('strong','ms332-population',count ? `Asukasluku: ${approx ? 'noin ' : ''}${count}` : 'Asukasluku: tietoa täydennetään');
     content.append(population);
     const meta = create('p','ms332-fact-meta');
-    const link = existing && [...existing.querySelectorAll('a[href]')].find(a=>/tilasto|väest|asukas|kuntavaesto/i.test(title(a.textContent+' '+a.href)));
-    if (date) meta.append(document.createTextNode(date + ' · '));
-    else if (approx) meta.append(document.createTextNode('Arvio · '));
-    if (link) {
-      const a = create('a','',title(link.textContent) || 'Väestötilasto ↗');
-      a.href = link.href;
-      if (link.target === '_blank') {a.target='_blank'; a.rel='noopener noreferrer';}
-      meta.append(a);
-    } else if (count && !date) {
-      meta.append(document.createTextNode('Tarkista ajantasainen väkiluku kunnan tiedoista'));
-    } else if (!count) {
-      meta.append(document.createTextNode('Tietoa ei vielä vahvistettu tällä sivulla'));
-    }
+    if (date) meta.textContent=date;
+    else if (approx) meta.textContent='Arvio';
+    else if (!count) meta.textContent='Tietoa ei vielä vahvistettu tällä sivulla';
     content.append(meta);
     const details = create('p','ms332-region-detail',region);
     const rest = existing && [...existing.querySelectorAll('p')].map(p=>title(p.textContent)).filter(s =>
