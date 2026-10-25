@@ -1,0 +1,68 @@
+/* Kainuun kuntasivujen yhtenäinen mobiiliyläosa v413 */
+.k413-top{max-width:1100px;margin:0 auto 26px;padding:18px 0 0;color:#214d40;font-family:system-ui,-apple-system,sans-serif}.k413-back{display:inline-block;color:#245c49;font-weight:750;font-size:clamp(17px,3.5vw,22px);margin-bottom:18px}.k413-top h1{font-size:clamp(38px,7vw,58px);line-height:1.1;margin:0 0 15px;color:#174e41}.k413-lead{font-size:clamp(17px,3.4vw,23px);line-height:1.48;color:#526a5f;margin:0 0 22px}.k413-facts{display:flex;align-items:center;gap:20px;padding:22px;border:1px solid #cfe0d4;background:#eaf3ed;border-radius:22px;margin:0 0 18px;min-height:110px}.k413-facts img{width:75px;height:94px;object-fit:contain;flex-shrink:0}.k413-facts strong{display:block;font-size:clamp(20px,4vw,27px);line-height:1.3}.k413-facts small{display:block;color:#526a5f;font-size:16px;margin-top:7px}.k413-visit{margin:0 0 22px}.k413-visit button,.k413-visit a{font-size:18px;font-weight:700;max-width:100%;white-space:normal}.k413-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 22px}.k413-grid a{display:flex;align-items:center;justify-content:flex-start;min-height:84px;padding:16px 14px;border:1px solid #d3e1d8;border-radius:19px;background:white;color:#165747!important;font-size:clamp(15px,3.2vw,21px);font-weight:750;text-decoration:none!important;line-height:1.25}.k413-grid a span{margin-right:9px}.k413-top a:hover{text-decoration:underline}.k413-top .k413-grid a:hover{background:#eff6f1}@media(max-width:520px){.k413-top{padding-top:8px}.k413-back{margin-bottom:13px}.k413-facts{padding:15px;gap:14px}.k413-facts img{width:65px;height:82px}.k413-grid a{min-height:78px;padding:12px 10px}}
+/* v414: tiivis otsake, yhtenäiset SVG-kuvakkeet ja selkeä PC-asettelu */
+.k413-top{padding-top:8px!important;margin-bottom:20px!important}
+.k413-back{margin-bottom:10px!important}
+.k413-top h1{margin-bottom:9px!important}
+.k413-lead{margin-bottom:15px!important}
+.k413-facts{margin-bottom:13px!important}
+.k413-visit{margin-bottom:14px!important}
+.k413-grid{margin-bottom:16px!important}
+.k413-grid a span{display:inline-flex;align-items:center;justify-content:center;flex:none;margin-right:13px}
+.k414-icon{width:29px;height:29px;display:block;stroke:#277965}
+@media(min-width:800px){
+ .k413-top{padding-top:10px!important}
+ .k413-grid{gap:16px!important}
+ .k413-grid a{min-height:105px!important;padding:20px 22px!important;font-size:21px!important;border-radius:20px!important;box-shadow:0 2px 7px rgba(16,65,48,.06)}
+ .k414-icon{width:34px;height:34px}
+ /* Alavalikko on mobiilinavigaatio, ei tietokoneen kiinteä palkki */
+ .ms375-bottom-nav,.ms375-bottomnav,.ms375-mobile-nav,.ms375-tabbar{display:none!important}
+}
+@media(max-width:520px){.k413-top{padding-top:4px!important}.k413-back{margin-bottom:8px!important}.k413-top h1{margin-bottom:8px!important}.k413-lead{margin-bottom:13px!important}.k413-facts{margin-bottom:12px!important}.k413-visit{margin-bottom:13px!important}.k413-grid a{min-height:76px!important}.k414-icon{width:25px;height:25px}}
+
+/* v415: Kainuun kahdeksan kunnan ylaosan viimeistely */
+body.ms375-town .k413-top{padding-top:0!important;margin-bottom:14px!important}
+body.ms375-town .k413-back{margin-bottom:7px!important}
+body.ms375-town .k413-top h1{margin-top:0!important;margin-bottom:7px!important}
+body.ms375-town .k413-lead{margin-top:0!important;margin-bottom:12px!important}
+body.ms375-town .k413-facts{margin-top:0!important;margin-bottom:12px!important}
+body.ms375-town .k413-visit{margin-bottom:12px!important}
+body.ms375-town .k413-grid{margin-top:0!important;margin-bottom:16px!important}
+@media(max-width:600px){body.ms375-town .k413-top{padding-top:0!important}body.ms375-town .k413-back{margin-bottom:6px!important}body.ms375-town .k413-top h1{margin-bottom:6px!important}body.ms375-town .k413-lead{margin-bottom:11px!important}body.ms375-town .k413-facts{margin-bottom:11px!important}}
+
+/* v416: Kainuun tiivis yhtenäinen kuntanäkymä */
+body.ms375-town .k413-top{padding-top:0!important;margin-bottom:8px!important}
+body.ms375-town .k413-back{margin-bottom:4px!important;line-height:1.2!important}
+body.ms375-town .k413-top h1{font-size:clamp(33px,7vw,51px)!important;line-height:1.08!important;margin:0 0 6px!important}
+body.ms375-town .k413-lead{font-size:clamp(16px,3.5vw,21px)!important;line-height:1.34!important;margin:0 0 10px!important}
+body.ms375-town .k413-facts{min-height:0!important;padding:12px 14px!important;gap:12px!important;margin:0 0 9px!important;border-radius:18px!important}
+body.ms375-town .k413-facts img{width:53px!important;height:68px!important}
+body.ms375-town .k413-facts strong{font-size:clamp(17px,3.7vw,23px)!important;line-height:1.2!important}
+body.ms375-town .k413-facts small{font-size:13px!important;margin-top:4px!important}
+body.ms375-town .k413-visit{margin:0 0 10px!important}
+body.ms375-town .k413-visit button{border:1px solid #bcd4c7!important;border-radius:12px!important;background:#fff!important;color:#185643!important;font-size:16px!important;line-height:1.2!important;padding:10px 13px!important;min-height:42px!important;box-shadow:none!important}
+body.ms375-town .k413-visit button[aria-pressed=true],body.ms375-town .k413-visit button.is-visited{background:#e6f2eb!important}
+body.ms375-town .k413-grid{gap:9px!important;margin:0 0 13px!important}
+body.ms375-town .k413-grid a{min-height:62px!important;padding:9px 11px!important;border-radius:16px!important;font-size:clamp(15px,3.2vw,19px)!important;line-height:1.16!important}
+body.ms375-town .k414-icon{width:24px!important;height:24px!important}
+body.ms375-town .k413-grid a span{margin-right:8px!important}
+@media(min-width:800px){body.ms375-town .k413-grid a{min-height:82px!important;padding:15px 18px!important}}
+
+/* v417: one consistent Kainuu mobile town layout */
+@media(max-width:799px){
+ body.ms375-town .k413-top{padding:0!important;margin:0 0 8px!important}
+ body.ms375-town .k413-back{margin:0 0 6px!important}
+ body.ms375-town .k413-top h1{margin:0 0 8px!important;line-height:1.08!important;font-size:clamp(32px,8vw,45px)!important}
+ body.ms375-town .k413-lead{margin:0 0 12px!important;line-height:1.32!important;font-size:clamp(15px,3.7vw,19px)!important}
+ body.ms375-town .k413-facts{padding:11px 13px!important;min-height:0!important;margin:0 0 10px!important;gap:12px!important}
+ body.ms375-town .k413-facts img{width:49px!important;height:61px!important;object-fit:contain!important}
+ body.ms375-town .k413-visit{margin:0 0 10px!important}
+ body.ms375-town .k413-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;margin:0 0 14px!important}
+ body.ms375-town .k413-grid a{min-height:64px!important;padding:10px!important;box-sizing:border-box!important}
+ body.ms375-town .ms375-bottom{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;position:fixed!important;bottom:0!important;left:0!important;right:0!important;z-index:9999!important;background:#fff!important;padding:8px 6px max(9px,env(safe-area-inset-bottom))!important;box-shadow:0 -1px 5px #d7e1dc!important}
+ body.ms375-town .ms375-bottom>a{min-width:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:4px!important;padding:5px 2px!important;font-size:12px!important;line-height:1.12!important;white-space:normal!important;text-decoration:none!important;color:#245446!important}
+ body.ms375-town .ms375-bottom .ms375-icon{width:25px!important;height:25px!important}
+ body.ms375-town{padding-bottom:105px!important}
+ body.ms375-town nav:not(.k413-grid):not(.ms375-bottom)[class*="bottom"],body.ms375-town nav:not(.k413-grid):not(.ms375-bottom)[class*="mobile"]{display:none!important}
+}
+@media(min-width:800px){body.ms375-town .ms375-bottom{display:none!important}}
