@@ -87,13 +87,15 @@
      const title=card.querySelector('h2')?.textContent||'';
      return index.map.get(url+'|'+title) || index.urls.get(url) || null;
    }
-   function typeName(place){return place?.type==='park'?'🅿️ Matkaparkki':place?.type==='camping'?'🏕️ Leirintäalue':'ℹ️ Yöpyminen vain sovittaessa';}
+   function typeName(place){return place?.type==='park'?'Matkaparkki':place?.type==='camping'?'Leirintäalue':'ℹ️ Yöpyminen vain sovittaessa';}
    function annotate(card,place){
      if(!place)return;
      card.dataset.stayType=place.type||'';
      let type=card.querySelector('.ms347-type');
      if(!type){type=document.createElement('span');type.className='ms347-type';card.prepend(type);}
      type.textContent=typeName(place);
+     type.classList.toggle('ms420-park',place.type==='park');
+     type.classList.toggle('ms420-camp',place.type==='camping');
      const detail=card.querySelector('.buttons a.btn:not(.secondary)');
      if(detail&&place.detailId){
        if(!card.dataset.originalStayUrl)card.dataset.originalStayUrl=detail.getAttribute('href')||'';
@@ -112,7 +114,7 @@
      const known=servicesFor(place);
      if(known.size) snippets.push('Palvelut: '+[...known].map(k=>SERVICE_LABELS[k]||k).join(' · '));
      else snippets.push('Palvelut tarkistettava kohteesta');
-     if(place.stayText)snippets.push('Saapuminen: '+place.stayText);
+     // Saapumistiedot näkyvät kohteen tarkemmalla sivulla.
      const text=snippets.join('   |   ');
      if(info.textContent!==text) info.textContent=text;
    }
