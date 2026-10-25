@@ -1,0 +1,10 @@
+Matkaile Suomessa – Yöpymispaikat v424
+
+Lataa GitHubin pääkansioon seuraavat 3 tiedostoa:
+- leirintaalueet.html (korvaa vanha)
+- yopymispaikat-v424.css (uusi)
+- yopymispaikat-v424.js (uusi)
+
+HUOM: v424 tarvitsee myös aiemman v423-paketin tiedostot (v421 CSS/JS, v423 CSS, v347 JS sekä merkkien SVG-tiedostot). Jos ne ovat jo GitHubissa, älä lataa niitä uudestaan.
+
+Muutos: Hae on hakukentän sisällä; vanha alareunan hakupainike poistettu. Hae käyttää nykyisiä automaattisesti päivittyviä rajauksia ja siirtää tuloksiin. Etusivuja ei muuteta.

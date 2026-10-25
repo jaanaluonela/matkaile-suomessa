@@ -1,0 +1,7 @@
+/* v424: Hae samassa hakukentässä, vain Yöpymispaikat */
+body[data-stay-combined="true"] .ms424-search-row{display:flex;align-items:stretch;width:100%;min-width:0;border:1px solid #b9d2c1;border-radius:14px;background:white;overflow:hidden}
+body[data-stay-combined="true"] .ms424-search-row #v243-stay-search{flex:1 1 auto;min-width:0;width:1%;margin:0!important;border:0!important;outline:none;background:transparent;box-shadow:none!important;border-radius:0!important;padding:12px 14px!important;font-size:1rem;min-height:54px}
+body[data-stay-combined="true"] .ms424-search-row:focus-within{outline:3px solid #b08a40;outline-offset:2px}
+body[data-stay-combined="true"] #ms424-search-submit{flex:0 0 auto;align-self:stretch;border:0;border-radius:10px;margin:4px;background:#17634e;color:white;font-weight:800;padding:0 19px;min-width:70px;cursor:pointer;font-size:1rem}
+body[data-stay-combined="true"] #ms424-search-submit:focus-visible{outline:3px solid #e6a12b;outline-offset:-3px}
+@media(max-width:420px){body[data-stay-combined="true"] #ms424-search-submit{min-width:62px;padding:0 13px}body[data-stay-combined="true"] .ms424-search-row #v243-stay-search{font-size:16px!important;padding:10px!important}}
