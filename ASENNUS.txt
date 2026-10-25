@@ -1,0 +1,5 @@
+Kymenlaakso v425
+Lataa kuusi HTML-tiedostoa ja kymenlaakso-v425.css GitHubin sivuston pääkansioon. Korvaa vain nämä kuusi kuntasivua. Älä poista muita tiedostoja.
+Sisältöosiot säilytetty; kuuden kunnan otsikko, vaakuna, asukasluku, neljä valintaa ja neljän kohdan alavalikko yhtenäistetty.
+Väkiluvut 31.12.2025 (Tilastokeskus, Kuntaväestö).
+Etusivut eivät kuulu pakettiin.
