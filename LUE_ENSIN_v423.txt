@@ -1,0 +1,1 @@
+Päivitä vain Yöpymispaikat-sivu. Lataa ZIPin 8 verkkosivutiedostoa GitHubin pääkansioon (ei kansiota). Korvaa samannimiset. Etusivuja ei muuteta. Hae-painike käynnistää nykyiset suodattimet ja vierittää tuloksiin. Tarkista toiminta julkaisun jälkeen.
