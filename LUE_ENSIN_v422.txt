@@ -1,0 +1,7 @@
+PÄIJÄT-HÄME v422 – KUNTASIVUJEN TIIVISTYS
+
+Lataa GitHubin pääkansioon 5 tiedostoa: asikkala.html, heinola.html, hollola.html, lahti.html ja paijat-hame-v422.css. Korvaa vain neljä samannimistä HTML-tiedostoa.
+
+Muutos: neljän kunnan sisältöasettelu tiiviimmäksi ja Hollolaan neljän päävalinnan navigointi. Muiden sivujen tiedostoja ei ole mukana eikä muutettu.
+
+Tämä on kohdennettu ulkoasupäivitys, ei kaikkien sisältöjen tai julkaisun toiminnan varmennus. Tarkista julkaisemisen jälkeen puhelin ja tietokone.
