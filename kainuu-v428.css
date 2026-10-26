@@ -1,0 +1,11 @@
+/* v428: Kajaani ja Sotkamo esittelytekstit; Vuokatti yhdenmukainen */
+body.kainuu-unified .municipality-intro p, body.kainuu-unified section.card > p {font-weight:400!important;line-height:1.55!important}
+body.kainuu-unified .municipality-intro h2, body.kainuu-unified section.card > h2 {font-weight:750!important}
+body.kainuu-unified .vuokatti-header{margin:0 0 20px}
+body.kainuu-unified .vuokatti-header h1{font-size:clamp(35px,8vw,45px);line-height:1.12;color:#175344;margin:14px 0}
+body.kainuu-unified .vuokatti-header p{font-size:clamp(17px,4vw,21px);line-height:1.4;color:#5d7167;font-weight:600}
+body.kainuu-unified .k413-back{display:inline-block;margin-bottom:8px}
+body.kainuu-unified .municipality-intro{background:white;border:1px solid #d5e3da;border-radius:22px;padding:20px;margin:18px 0}
+body.kainuu-unified .municipality-intro h2{margin:0 0 12px;color:#203a31}
+body.kainuu-unified .municipality-intro a{overflow-wrap:anywhere}
+body.kainuu-unified main.page{padding-bottom:115px}
