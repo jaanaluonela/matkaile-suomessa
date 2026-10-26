@@ -1,0 +1,13 @@
+/* Kainuu: shared town page polish, scoped only to eight town pages. */
+body.ms375-town.kainuu-unified .k413-top{box-sizing:border-box;max-width:1100px;margin-left:auto!important;margin-right:auto!important}
+body.ms375-town.kainuu-unified .k413-grid a{box-sizing:border-box;min-width:0;overflow-wrap:break-word}
+body.ms375-town.kainuu-unified .k413-facts{box-sizing:border-box}
+body.ms375-town.kainuu-unified .k413-facts>div{min-width:0}
+body.ms375-town.kainuu-unified .k413-facts strong{overflow-wrap:break-word}
+@media(max-width:799px){
+ body.ms375-town.kainuu-unified .k413-top{width:100%!important}
+ body.ms375-town.kainuu-unified .k413-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.ms375-town.kainuu-unified .k413-grid a{display:flex!important;align-items:center!important;justify-content:flex-start!important;min-width:0!important}
+ body.ms375-town.kainuu-unified .ms375-bottom{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ body.ms375-town.kainuu-unified .ms375-bottom>a{min-width:0!important}
+}

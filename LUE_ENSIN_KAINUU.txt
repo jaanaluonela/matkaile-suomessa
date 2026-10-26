@@ -1,0 +1,3 @@
+KAINUU: 8 kuntasivun yhtenainen asettelu.
+Lataa GitHubiin ZIPin 10 tiedostoa arkiston juureen.
+Sailyta muut tiedostot ennallaan. Etusivuja ei muuteta.
