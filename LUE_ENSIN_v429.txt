@@ -1,0 +1,1 @@
+Hakuehdotukset v429: siirrä neljä tiedostoa GitHub-arkiston juureen. Etusivun ulkoasua ei muutettu. Etsi-painike selkeytetty maakuntasivulla, ehdotukset etusivun, maakuntien ja Pysähdy matkalla -hakuihin.
