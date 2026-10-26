@@ -1,0 +1,2 @@
+Maakuntien esittelyt v425
+Lataa GitHubiin ZIP-paketin sisältämät kaksi tiedostoa: maakunnat-v384.js ja maakunnat-v392.css. Säilytä samat tiedostonimet. Muut sivut ja etusivut eivät muutu.
