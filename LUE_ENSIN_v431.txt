@@ -1,0 +1,9 @@
+PÄIVITYS v431 – KESKI-POHJANMAA (osapäivitys)
+
+Lataa tämän ZIPin 5 tiedostoa GitHubin arkiston JUUREEN.
+Korvaa samannimiset tiedostot. Älä lataa ZIP-tiedostoa sellaisenaan.
+
+Muutokset: Kokkolan, Kaustisen ja Halsuan yläpalkin sekä mobiiliasettelun yhtenäistys. Kokkolan alkuperäiset matkailusisällöt säilyvät.
+
+HUOM: Kannus, Veteli, Perho, Toholampi ja Lestijärvi ohjaavat edelleen yleiseen kuntakortti.html-sivuun. Niitä EI ole muutettu tässä paketissa. Tämä ei ole koko kahdeksan kunnan valmis yhtenäistys.
+Etusivuja ei muutettu.
