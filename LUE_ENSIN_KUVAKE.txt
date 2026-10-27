@@ -1,0 +1,7 @@
+MATKAILE SUOMESSA – PUHELIMEN KUVAKKEEN PÄIVITYS
+
+Lataa tämän paketin tiedostot GitHub-repositorion pääkansioon. Korvaa index.html, manifest.json ja icon-192.png. Lisää muut PNG-kuvat.
+
+Vain etusivun kuvakelinkit ja kuvaketiedostot muuttuvat.
+
+iPhone: poista vanha M-pikakuvake Koti-valikosta, avaa päivitetty sivusto Safarissa ja valitse Jaa > Lisää Koti-valikkoon.
