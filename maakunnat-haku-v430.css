@@ -1,0 +1,4 @@
+/* v430: Etsi on hakukentän oikeassa päässä, myös puhelimessa. */
+form.ms430-search{display:flex!important;align-items:stretch!important;width:100%;max-width:100%;overflow:hidden!important;box-sizing:border-box;flex-wrap:nowrap!important}
+form.ms430-search #region-search{display:block!important;min-width:0!important;width:0!important;flex:1 1 auto!important;padding:14px 12px!important;box-sizing:border-box;font-size:16px!important}
+form.ms430-search button[type=submit]{position:static!important;display:flex!important;align-items:center;justify-content:center;flex:0 0 auto!important;width:auto!important;min-width:65px!important;padding:0 14px!important;font-size:17px!important;line-height:1.2!important;white-space:nowrap!important;border-radius:0!important;transform:none!important}
