@@ -1,0 +1,7 @@
+ETELÄ-SAVO – RAVINTOLAT JA KAHVILAT v449
+
+Lataa ZIP-paketin 11 HTML-tiedostoa GitHub-arkiston juureen korvaamaan samannimiset tiedostot. Älä poista muita tiedostoja.
+
+Puumalaan 11 nimettyä kohdetta; muihin kuntiin varmennettuja kohteita siellä missä lähde löytyi. Juvan, Kangasniemen, Hirvensalmen, Rantasalmen ja Sulkavan kohdalla ohjaus kunnan sivuille, ei keksittyjä yrityksiä.
+
+Tämä paketti perustuu viimeksi lähetettyyn matkaile-suomessa-main (23).zip -versioon. Jos kuntasivuja on muutettu sen jälkeen, tarkista ettei uudempia muutoksia korvaudu.
