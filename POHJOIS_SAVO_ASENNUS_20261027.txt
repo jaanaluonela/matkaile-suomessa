@@ -1,0 +1,16 @@
+POHJOIS-SAVO – SISÄLTÖPÄIVITYS 27.10.2026
+
+1. Ota varmuuskopio nykyisestä sivustosta.
+2. Pura tämä ZIP. Lataa sen sisältö nykyisen sivuston juureen.
+3. Korvaa paketin samannimiset tiedostot, myös index.html,
+   hakuehdotukset-v441.js, pohjois-savo.html, keitele.html ja kiuruvesi.html.
+   Säilytä kaikki muut sivuston tiedostot.
+4. Mukana on 10 uutta kuntasivua, 2 täydennettyä kuntasivua, CSS,
+   etusivun hakuehdotusten päivitys ja lähdeluettelo.
+5. Odota GitHub Pagesin päivitystä ja päivitä selain.
+
+Päivitys tarvitsee nykyisen sivuston tiedostot, kuten app.js,
+kuopio-seutu-v270.css ja v368-yhtenainen.css. Se ei ole erillinen koko sivusto.
+Nykyisiä seitsemää kuntasivua ja niiden tietoja ei muutettu.
+Käyntimerkinnät ja Omat matkat käyttävät nykyistä app.js-toteutusta.
+Lähteet on koottu erilliseen lähdetiedostoon ja kohteiden lisätietolinkkeihin.
