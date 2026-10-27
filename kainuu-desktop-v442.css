@@ -4,13 +4,16 @@
 @media(max-width:650px){.municipality .crest{width:24px;height:30px}.municipality{gap:6px;padding:10px 8px}.municipality-name{font-size:12px}}
 
 /* v443: oikean kohteen valokuvia vain, ei kuvituskuvia */
-.hero{background:linear-gradient(90deg,#f6f8f3 0%,rgba(246,248,243,.97) 23%,rgba(246,248,243,.76) 40%,rgba(246,248,243,.05) 66%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Hossa%2C%20june%202006%20-%20panoramio.jpg?width=1600") center 48%/cover no-repeat;min-height:320px}
+.hero{background:linear-gradient(90deg,#f6f8f3 0%,rgba(246,248,243,.97) 23%,rgba(246,248,243,.76) 40%,rgba(246,248,243,.05) 66%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Nuasj%C3%A4rve%C3%A4%20Vuokatilta.jpg?width=1600") center 48%/cover no-repeat;min-height:320px}
 .experience{padding:0;overflow:hidden;min-height:200px;background:#fff!important;display:block;position:relative}
 .experience-photo{height:112px;overflow:hidden;background:#eef3ef}
 .experience-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .experience>.pill,.experience>h3,.experience>p,.experience>.arrow{margin-left:15px;margin-right:15px}
 .experience>.pill{display:inline-block;margin-top:12px}.experience h3{margin-top:8px}.experience .arrow{display:block;margin-bottom:15px}
 .experience:not(:has(.experience-photo)){padding-top:15px;background:#f3f7f4!important}
-@media(max-width:650px){.hero{background:linear-gradient(90deg,rgba(246,248,243,.96),rgba(246,248,243,.76)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Hossa%2C%20june%202006%20-%20panoramio.jpg?width=1600") center/cover no-repeat}.experience-photo{height:160px}}
+@media(max-width:650px){.hero{background:linear-gradient(90deg,rgba(246,248,243,.96),rgba(246,248,243,.76)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Nuasj%C3%A4rve%C3%A4%20Vuokatilta.jpg?width=1600") center/cover no-repeat}.experience-photo{height:160px}}
 
 .photo-credit{font-size:11px;color:#557168;margin:10px 2px 0}
+
+/* v444: ei pientä logoa, korjatut kohdekuvat */
+.brand{gap:0}.brand img{display:none}.hero{background-position:center,center 48%}.experience-photo{height:155px}.experience-photo img{object-position:center}.experience{min-height:255px}
