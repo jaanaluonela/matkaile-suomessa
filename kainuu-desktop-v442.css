@@ -17,3 +17,10 @@
 
 /* v444: ei pientä logoa, korjatut kohdekuvat */
 .brand{gap:0}.brand img{display:none}.hero{background-position:center,center 48%}.experience-photo{height:155px}.experience-photo img{object-position:center}.experience{min-height:255px}
+
+/* v445: neljä tasakokoista aitoa kohdekuvaa */
+.experience-grid .experience{min-height:0;overflow:hidden}
+.experience-grid .experience-photo{display:block!important;width:100%;aspect-ratio:4/3;margin:12px 0 10px;overflow:hidden;border-radius:10px;background:#e0e8df}
+.experience-grid .experience-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.experience-grid .experience h3{margin:12px 0 0}
+.experience-grid .experience .arrow{margin-top:auto;padding-top:12px}
