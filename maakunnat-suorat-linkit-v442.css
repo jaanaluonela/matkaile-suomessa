@@ -1,0 +1,9 @@
+
+/* v440: maakuntakortti vie suoraan maakunnan sivulle; ei toistuvia esittelyjä. */
+#regions-list .ms-region-direct{display:flex;align-items:center;gap:12px;padding:14px 12px;min-height:62px;text-decoration:none;color:#123b32;font-size:16px;font-weight:700;grid-column:auto}
+#regions-list .ms-region-direct::before{content:"";width:10px;height:30px;flex-shrink:0;border-radius:5px;background:var(--color)}
+#regions-list .ms-region-direct::after{content:"›";font-size:27px;margin-left:auto;line-height:1}
+#regions-list .ms-region-direct:hover{background:#f0f6f2;border-color:#a6c8b5}
+#regions-list .ms-region-direct:focus-visible{outline:3px solid #218eab;outline-offset:3px}
+@media(max-width:899px){#regions-list .ms-region-direct{font-size:14px;gap:9px;padding:8px;min-height:58px}#regions-list .ms-region-direct::before{width:8px;height:24px}#regions-list .ms-region-direct::after{font-size:22px}}
+@media(max-width:420px){#regions-list .ms-region-direct{font-size:12px;min-height:45px;padding:7px 8px;gap:8px}#regions-list .ms-region-direct::before{height:21px}#regions-list .ms-region-direct::after{font-size:21px}}
