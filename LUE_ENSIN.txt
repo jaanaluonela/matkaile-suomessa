@@ -1,7 +1,1 @@
-GITHUB-PÄIVITYS v442 — 5 tiedostoa
-Pura ZIP. Lataa kaikki viisi tiedostoa GitHubin arkiston JUUREEN (samaan kansioon kuin index.html).
-Korvaa maakunnat.html ja kainuu.html, lisää uudet CSS/JS-tiedostot.
-Etusivua ja kuntasivuja ei muuteta.
-Maakuntavalinta menee suoraan maakunnan sivulle myös vanhoista ?maakunta= -linkeistä.
-Kainuun kuntakortteihin lisätty vaakunalinkit (Wikimedia Commons); jos kuva ei lataudu, nimi näkyy silti.
-Maisemakuvia ei ole lisätty, koska oikeaa Kainuun kuvatiedostoa ei ollut paketissa.
+v443: Korvaa GitHubin pääkansiossa kainuu.html ja kainuu-desktop-v442.css. Vain 2 tiedostoa. Muut sivut ennallaan. Kuvat latautuvat Wikimedia Commonsista internetyhteydellä. Jos kuva ei lataudu, kortti jää tekstimuotoon. Huom: Vuokatin seudun kuva on Naapurinvaara Sotkamossa, ei Vuokatin rinne. Tarkista julkaistujen kuvien lisenssit ja lisää tekijäkohtaiset attribuutiot ennen julkista käyttöä.
