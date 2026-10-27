@@ -1,0 +1,7 @@
+Matkaile Suomessa – Keski-Pohjanmaa v434 osa 2
+
+Korvaa GitHubin pääkansiossa viisi samannimistä HTML-tiedostoa.
+Kunnat: Kannus, Veteli, Perho, Toholampi, Lestijärvi.
+Muita sivuja tai etusivua ei muuteta.
+Huom: Neljän kunnan asukasluku ei ollut vahvistettuna lähdeaineistossa. Niille ei esitetä keksittyä lukua. Lestijärven 656 on peräisin projektin kuntatietoaineistosta, ei erikseen tarkistettu virallisesta lähteestä.
+Vaakunat jätetty pois, koska niiden oikeita kuvatiedostoja ei voitu varmistaa.
