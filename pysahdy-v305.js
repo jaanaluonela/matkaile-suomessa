@@ -34,10 +34,31 @@
    if(known.has(key))return false;
    known.add(key);return true;
  }).sort((a,b)=>String(a.city).localeCompare(String(b.city),'fi')||String(a.name).localeCompare(String(b.name),'fi'));
- [...new Set(items.map(p=>p.city))].sort((a,b)=>a.localeCompare(b,'fi')).forEach(c=>{
-    const option=document.createElement('option');option.value=option.textContent=c;town.append(option);
+ // Maakunnat ja kunnat: käytetään sivuston virallista kuntaluetteloa.
+ const regions=window.msFinlandRegions2026||{};
+ const municipalityToRegion=new Map();
+ Object.entries(regions).forEach(([region,cities])=>cities.forEach(city=>{
+   municipalityToRegion.set(norm(city),region);
+ }));
+ // Kohteissa voi olla kaupunginosia, matkailualueita tai vaihtoehtoisia paikannimiä.
+ const aliases={'vääksy':'Asikkala','vuokatti':'Sotkamo','ruka':'Kuusamo','levi':'Kittilä','ylläs':'Kolari','saariselkä':'Inari','fiskars':'Raasepori','billnäs':'Raasepori','mathildedal':'Salo','teijo':'Salo','tahko':'Kuopio','himos':'Jämsä'};
+ const regionOf=p=>{
+   const direct=String(p.region||p.maakunta||'').trim();
+   if(regions[direct])return direct;
+   const city=norm(p.city).trim();
+   return municipalityToRegion.get(city)||municipalityToRegion.get(norm(aliases[city]||''))||'';
+ };
+ Object.keys(regions).sort((a,b)=>a.localeCompare(b,'fi')).forEach(r=>{
+   const option=document.createElement('option');option.value=option.textContent=r;town.append(option);
  });
- const requestedTown=params.get('kunta');if([...town.options].some(o=>o.value===requestedTown))town.value=requestedTown;
+ const requestedRegion=params.get('maakunta');
+ if(requestedRegion&&regions[requestedRegion])town.value=requestedRegion;
+ else {
+   // Vanhat kunta-linkit toimivat edelleen: rajaa oikeaan maakuntaan ja hae kunnan nimellä.
+   const oldTown=params.get('kunta');
+   const oldRegion=municipalityToRegion.get(norm(oldTown));
+   if(oldRegion){town.value=oldRegion;if(!params.get('haku')&&!params.get('q'))params.set('haku',oldTown);}
+ }
  input.value=params.get('haku')||params.get('q')||'';
  const matchesType=p=>{
    if(category==='all')return true;
@@ -81,14 +102,14 @@
    actions.append(makeFavorite(p));card.append(actions);return card;
  }
  function saveUrl(){const url=new URL(location.href);
-   for(const [k,v] of [['tyyppi',category==='all'?'':category],['kunta',town.value],['haku',input.value.trim()]]){
+   for(const [k,v] of [['tyyppi',category==='all'?'':category],['maakunta',town.value],['haku',input.value.trim()]]){
      if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);
    }
-   url.searchParams.delete('q');history.replaceState(null,'',url);
+   url.searchParams.delete('kunta');url.searchParams.delete('q');history.replaceState(null,'',url);
  }
  function render(){
    const q=norm(input.value.trim());
-   const matches=items.filter(p=>matchesType(p)&&(!town.value||p.city===town.value)&&(!q||norm([p.name,p.city,p.region,p.description,p.address].join(' ')).includes(q)));
+   const matches=items.filter(p=>matchesType(p)&&(!town.value||regionOf(p)===town.value)&&(!q||norm([p.name,p.city,p.region,p.description,p.address].join(' ')).includes(q)));
    const uniqueCount=matches.length;
    count.textContent=(town.value||'Koko Suomi')+' · '+uniqueCount+(uniqueCount===1?' kohde':' kohdetta');
    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ms302Category===category)));
