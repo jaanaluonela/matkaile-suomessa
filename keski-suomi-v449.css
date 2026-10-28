@@ -1,0 +1,83 @@
+/* Keski-Suomen maakuntaopas. Kainuun sivun rakenne, yhteinen navigaatio. */
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body.ks-region{background:#f5f8f3!important}
+body.ks-region main#ms375-main{max-width:1320px!important;padding:24px 32px 36px!important}
+.ks-region main a{text-decoration:none}
+.ks-back{display:inline-block;padding:8px 0;margin-bottom:18px;font-size:14px;font-weight:700;min-height:40px}
+.ks-hero{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:#edf3e9;border:1px solid #d9e5d7;min-height:350px;display:flex;align-items:center}
+body.ks-region .ks-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% center;z-index:-2}
+.ks-hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#f1f5ec 0%,rgba(241,245,236,.97) 30%,rgba(241,245,236,.74) 51%,rgba(241,245,236,.04) 78%)}
+.ks-hero-copy{padding:38px 40px;max-width:620px}
+.ks-eyebrow{margin:0 0 7px;font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#527460}
+body.ks-region .ks-hero h1{font:700 clamp(40px,4.5vw,60px)/1.1 Georgia,serif!important;margin:6px 0 14px!important;overflow-wrap:normal}
+body.ks-region .ks-hero h2{font:700 22px/1.3 Georgia,serif!important;margin:0 0 12px}
+.ks-hero-copy>p:not(.ks-eyebrow){font-size:16px;line-height:1.6;max-width:455px;margin:0 0 18px;color:#3c5b4d}
+.ks-count{display:inline-block;padding:10px 15px;background:#e0eddf;border:1px solid #c5d9c6;border-radius:11px;font-size:13px;font-weight:750}
+.ks-count span{padding:0 4px}
+.ks-municipalities{margin:22px 0 30px;padding:23px;background:#edf4ed;border:1px solid #dae5d8;border-radius:20px;scroll-margin-top:18px}
+.ks-find-header{display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:24px;margin-bottom:18px}
+body.ks-region .ks-find-header h2,body.ks-region .ks-section-heading h2{font:750 27px/1.25 system-ui,sans-serif!important;margin:0}
+.ks-search label{display:block;font-size:12px;font-weight:750;margin:0 0 6px;color:#456655}
+.ks-search input{display:block;width:100%;min-height:48px;padding:11px 14px;border:1px solid #c5d9c7;border-radius:12px;background:#fff;color:#104d43;font-size:15px!important}
+.ks-search input::placeholder{color:#687d70;opacity:1}
+.ks-town-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ks-town{display:flex;align-items:center;gap:11px;min-height:70px;padding:12px;border:1px solid #d3e2d3;border-radius:12px;background:#fff;font-size:15px;font-weight:750;min-width:0}
+.ks-town img{flex-shrink:0;width:29px;height:37px;object-fit:contain}
+.ks-town span{overflow-wrap:anywhere}
+.ks-town b{margin-left:auto;font-size:23px;font-weight:500}
+.ks-town[hidden]{display:none!important}
+.ks-town:hover,.ks-experience:hover,.ks-category:hover{border-color:#80a68b;box-shadow:0 5px 18px #104d4310}
+.ks-search-status{margin:12px 0 0;font-size:12px;color:#56715f}
+#ks-no-results{font-size:14px;margin-bottom:0}
+#ks-no-results a{text-decoration:underline}
+.ks-section-heading{margin:0 0 17px}
+.ks-experience-grid,.ks-categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ks-experience{overflow:hidden;border:1px solid #d9e4d7;background:#fff;border-radius:17px;display:flex;flex-direction:column}
+.ks-photo{height:155px;overflow:hidden;background:#dce8de}
+body.ks-region .ks-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.ks-experience-copy{padding:16px;display:flex;flex-direction:column;flex:1}
+.ks-pill{align-self:flex-start;font-size:10px;line-height:1.4;font-weight:750;padding:5px 9px;border-radius:20px;background:#edf3e8;color:#41664e}
+.ks-experience:nth-child(2) .ks-pill{background:#f7eddd;color:#805a31}
+.ks-experience:nth-child(4) .ks-pill{background:#e8f1f6;color:#365c70}
+.ks-experience h3{margin:10px 0 8px;font-size:18px;line-height:1.3}
+.ks-experience p{font-size:13px;line-height:1.55;margin:0 0 14px;color:#526c5c}
+.ks-arrow{font-size:12px;font-weight:750;display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+.ks-arrow>span{font-size:22px;font-weight:500}
+.ks-categories{margin-top:24px}
+.ks-category{padding:19px;border:1px solid #d9e4d7;border-radius:17px;display:flex;flex-direction:column;align-items:flex-start}
+.ks-nature{background:#e8f1e4}.ks-sights{background:#f7efdf}.ks-stays{background:#e7f0f4}.ks-nearby{background:#e6f0ea}
+.ks-category-icon{font-size:28px;line-height:1;margin-bottom:10px}
+.ks-category h3{font-size:17px;line-height:1.3;margin:0 0 9px}
+.ks-category p{font-size:13px;line-height:1.55;margin:0 0 15px;color:#4d6759}
+.ks-category strong{font-size:12px;margin-top:auto}
+.ks-photo-credits{margin-top:24px;font-size:12px;color:#5a7162}
+.ks-photo-credits summary{cursor:pointer;padding:8px 0;min-height:36px}
+.ks-photo-credits p{max-width:850px}.ks-photo-credits a{text-decoration:underline!important}
+@media(max-width:1000px){.ks-experience-grid,.ks-categories{grid-template-columns:repeat(2,minmax(0,1fr))}.ks-town-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ks-hero-copy{max-width:570px}.ks-photo{height:190px}}
+@media(max-width:600px){
+ body.ks-region main#ms375-main{padding:12px 14px 28px!important}
+ .ks-back{margin-bottom:10px;font-size:13px}
+ .ks-hero{display:flex;flex-direction:column;align-items:stretch;min-height:0;border-radius:19px}
+ body.ks-region .ks-hero-image{position:static;order:0;width:100%;height:155px;object-fit:cover;object-position:60% center}
+ .ks-hero:after{display:none}
+ .ks-hero-copy{padding:20px;order:1}
+ .ks-eyebrow{font-size:9px;letter-spacing:.1em}
+ body.ks-region .ks-hero h1{font-size:38px!important;margin:7px 0 10px!important}
+ body.ks-region .ks-hero h2{font-size:19px!important;max-width:300px}
+ .ks-hero-copy>p:not(.ks-eyebrow){font-size:14px;line-height:1.55;margin-bottom:14px}
+ .ks-count{padding:9px 10px;font-size:12px}
+ .ks-municipalities{margin:16px 0 25px;padding:15px;border-radius:17px}
+ .ks-find-header{grid-template-columns:1fr;gap:13px;margin-bottom:13px}
+ body.ks-region .ks-find-header h2,body.ks-region .ks-section-heading h2{font-size:23px!important}
+ .ks-search input{font-size:16px!important;padding:11px 12px}
+ .ks-town-grid{gap:8px}.ks-town{font-size:13px;min-height:62px;padding:9px 8px;gap:6px}
+ .ks-town img{width:23px;height:31px}.ks-town b{font-size:20px}
+ .ks-experience-grid{gap:10px}.ks-photo{height:116px}
+ .ks-experience-copy{padding:12px}.ks-experience h3{font-size:16px;margin-top:9px}
+ .ks-experience p{font-size:12px;line-height:1.5}.ks-arrow{font-size:11px;gap:4px}
+ .ks-pill{font-size:9px;padding:4px 7px}
+ .ks-categories{margin-top:18px;gap:10px}.ks-category{padding:14px 12px}
+ .ks-category h3{font-size:15px}.ks-category p,.ks-category strong{font-size:12px}
+}
+@media(max-width:350px){.ks-experience-grid,.ks-categories{grid-template-columns:1fr}.ks-photo{height:175px}.ks-town{font-size:12px}.ks-town img{display:none}.ks-count{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
