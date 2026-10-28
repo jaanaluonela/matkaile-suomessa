@@ -1,0 +1,12 @@
+/* Tilastokeskuksen vuoden 2026 rajat, EPSG:3067. */
+.ms-finland-map.ms451-map{width:100%;height:auto;max-height:none;margin:12px auto 8px;overflow:visible}
+.ms451-map .region{stroke:#fff;stroke-width:1;stroke-linejoin:round;transition:filter .15s}
+.ms451-map .ms451-label{font:600 18px Arial,sans-serif;fill:#173c32;stroke:#fff;stroke-width:3.5;stroke-linejoin:round;paint-order:stroke fill;cursor:pointer}
+.ms451-map .ms451-leader{fill:none;stroke:#49685d;stroke-width:1;pointer-events:none}
+.ms451-map .ms451-dot{fill:#49685d;pointer-events:none}
+.ms451-map .ms451-name-link:hover .ms451-label,.ms451-map .ms451-name-link:focus .ms451-label{fill:#0d5848;text-decoration:underline}
+.ms451-map .ms-map-link:focus-visible .region{stroke:#104d43;stroke-width:2}
+.map-panel .map-note{font-size:11px;line-height:1.5;color:#526a5c;margin-top:12px}
+.map-note a{color:inherit;text-underline-offset:2px}
+@media(max-width:899px){.map-panel .map-content{padding:18px 0 16px}.map-panel .map-content h2{font-size:24px}.ms451-map .ms451-label{font-size:19px}.map-panel{scroll-margin-bottom:100px}}
+@media(prefers-reduced-motion:reduce){.ms451-map .region{transition:none}}
