@@ -12,9 +12,9 @@
   // The symbols are embedded locally as SVG, not emoji or third-party assets.
   const icons = {
     koti:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
-    paikkakunnat:'<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/>',
-    pysahdy:'<path d="M12 2v20M5 6h12l3 3-3 3H5zM19 15H7l-3 3 3 3h12z"/>',
-    matkat:'<path d="M4 3h14a2 2 0 0 1 2 2v16H6a2 2 0 0 1-2-2V3Z"/><path d="M4 17a2 2 0 0 1 2-2h14M8 8h8M8 11h6"/>'
+    paikkakunnat:'<g transform="scale(.75)"><path d="M26 13c0 8-10 17-10 17S6 21 6 13a10 10 0 1 1 20 0Z"/><circle cx="16" cy="13" r="3.5"/></g>',
+    pysahdy:'<g transform="scale(.75)"><path d="M11 11H6a4 4 0 1 1 5-5v20a4 4 0 1 1-5-5h20a4 4 0 1 1-5 5V6a4 4 0 1 1 5 5Z"/></g>',
+    matkat:'<g transform="scale(.75)"><path d="M16 28 5.5 17.5C-3 8 8-1 16 7c8-8 19 1 10.5 10.5Z"/></g>'
   };
   const items = [
     ['koti','index.html','Koti'],

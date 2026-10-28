@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <symbol id="home" viewBox="0 0 32 32"><path d="m4 14 12-10 12 10v14h-9v-9h-6v9H4z"/></symbol>
-<symbol id="map" viewBox="0 0 32 32"><path d="m3 7 8-3 10 3 8-3v21l-8 3-10-3-8 3zM11 4v21M21 7v21"/></symbol>
-<symbol id="book" viewBox="0 0 32 32"><path d="M16 7C12 4 7 4 3 6v22c4-2 9-2 13 1 4-3 9-3 13-1V6c-4-2-9-2-13 1zm0 0v22"/></symbol>
-<symbol id="heart" viewBox="0 0 32 32"><path d="M16 28 5 17C-4 7 9-3 16 7c7-10 20 0 11 10Z"/></symbol>
+<symbol id="map" viewBox="0 0 32 32"><path d="M26 13c0 8-10 17-10 17S6 21 6 13a10 10 0 1 1 20 0Z"/><circle cx="16" cy="13" r="3.5"/></symbol>
+<symbol id="book" viewBox="0 0 32 32"><path d="M16 28 5.5 17.5C-3 8 8-1 16 7c8-8 19 1 10.5 10.5Z"/></symbol>
+<symbol id="heart" viewBox="0 0 32 32"><path d="M16 28 5.5 17.5C-3 8 8-1 16 7c8-8 19 1 10.5 10.5Z"/></symbol>
 <symbol id="sight" viewBox="0 0 32 32"><path d="M11 11H6a4 4 0 1 1 5-5v20a4 4 0 1 1-5-5h20a4 4 0 1 1-5 5V6a4 4 0 1 1 5 5Z"/></symbol>
 <symbol id="camper" viewBox="0 0 40 32"><path d="M4 24H2V8a3 3 0 0 1 3-3h23a4 4 0 0 1 4 4v3l5 5v7h-3M12 24h13M28 12h4M7 10h8v7H7zm14-1h6v7h-6z"/><circle cx="8" cy="25" r="4"/><circle cx="29" cy="25" r="4"/></symbol>
 <symbol id="tree" viewBox="0 0 32 32"><path d="m16 2-9 11h5L5 21h8v8h6v-8h8l-7-8h5Z"/></symbol>

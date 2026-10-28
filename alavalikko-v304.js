@@ -23,9 +23,9 @@
  // v353: yhteinen sivustoilme. Säilyttää sivujen kaikki alkuperäiset kunta- ja kohdetiedot.
  const ms353Paths={
    home:'<path d="m3 10 9-7 9 7v11H3z"/><path d="M9 21v-8h6v8"/>',
-   map:'<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15m6-12v15"/>',
-   signpost:'<path d="M12 3v19M5 7h15l-3 4H5zm14 7H4l3 4h12z"/>',
-   book:'<path d="M12 7c-3-3-6-3-9-2v15c4-1 7 0 9 2 2-2 5-3 9-2V5c-3-1-6-1-9 2zM12 7v15"/>',
+   map:'<g transform="scale(.75)"><path d="M26 13c0 8-10 17-10 17S6 21 6 13a10 10 0 1 1 20 0Z"/><circle cx="16" cy="13" r="3.5"/></g>',
+   signpost:'<g transform="scale(.75)"><path d="M11 11H6a4 4 0 1 1 5-5v20a4 4 0 1 1-5-5h20a4 4 0 1 1-5 5V6a4 4 0 1 1 5 5Z"/></g>',
+   book:'<g transform="scale(.75)"><path d="M16 28 5.5 17.5C-3 8 8-1 16 7c8-8 19 1 10.5 10.5Z"/></g>',
    search:'<circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 6 6"/>'
  };
  function ms353Icon(key){return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">'+(ms353Paths[key]||ms353Paths.map)+'</svg>';}
