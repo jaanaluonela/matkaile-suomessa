@@ -1,1 +1,13 @@
 .msroute-panel{display:grid;gap:13px;margin-bottom:14px}.msroute-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.msroute-tabs button,.msroute-view button{border:1px solid #cbded3;border-radius:12px;background:#eef6f0;color:#16483b;min-height:48px;padding:9px 5px;font:700 13px system-ui;cursor:pointer}.msroute-tabs button[aria-pressed=true],.msroute-view button[aria-pressed=true]{background:#16624e;color:#fff}.msroute-route{display:grid;grid-template-columns:1fr 1fr;gap:10px}.msroute-route label{font:700 13px system-ui}.msroute-route input{display:block;width:100%;min-height:46px;border:1px solid #c5d6cd;border-radius:10px;padding:10px;font:16px system-ui;margin-top:6px}.msroute-primary{display:block;text-align:center;background:#16624e;color:white;border:0;border-radius:12px;padding:13px;font:750 15px system-ui;text-decoration:none;cursor:pointer}.msroute-primary[aria-disabled=true]{opacity:.55}.msroute-help{grid-column:1/-1;margin:0;font-size:13px;color:#52695e}.msroute-route .msroute-primary{grid-column:1/-1}.msroute-view{display:flex;gap:8px}.msroute-view button{flex:1;min-height:40px}#msroute-map-info{padding:12px;border:1px solid #cbded3;border-radius:12px;background:#f4f8f3;font-size:14px}@media(max-width:520px){.msroute-tabs button{font-size:11px;padding:8px 3px}.msroute-route{grid-template-columns:1fr}.msroute-help,.msroute-route .msroute-primary{grid-column:1}.msroute-panel{gap:10px}}
+/* Pysähdy matkalla: selkeä mobiilihaku ja tavoitekuvan mukaiset painikkeet */
+.msroute-panel{gap:14px}
+.msroute-tabs{gap:8px}
+.msroute-tabs button{border-radius:13px;min-height:54px;line-height:1.25;box-shadow:0 1px 2px #123b2912}
+.msroute-tabs button:focus-visible,.msroute-view button:focus-visible,.msroute-primary:focus-visible{outline:3px solid #d3a95c;outline-offset:2px}
+.msroute-route{padding:12px;border:1px solid #d6e5da;border-radius:17px;background:#f8fbf8}
+.msroute-route input:focus{outline:2px solid #16624e;outline-offset:1px}
+.msroute-real-controls{padding-top:4px}
+.msroute-real-controls select{min-height:44px;background:white}
+.msroute-view{padding:3px;background:#eef6f0;border-radius:13px}
+.msroute-view button{border-radius:10px}
+@media(max-width:520px){.msroute-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.msroute-tabs button{font-size:12px;overflow-wrap:anywhere}.msroute-route{padding:12px}.msroute-primary{min-height:48px}}
