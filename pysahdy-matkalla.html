@@ -12,11 +12,11 @@
 <script defer src="erikoiset-kohteet-v305.js?v=305"></script>
 <script defer src="lasten-kohteet-v364.js?v=364"></script>
 <script defer src="suomi-kunnat-v253.js"></script>
-<script defer src="tehtaanmyymalat-data-v1.js?v=1"></script><script defer src="pysahdy-v305.js?v=433"></script>
+<script defer src="tehtaanmyymalat-data-v1.js?v=1"></script><script defer src="pysahdy-v305.js?v=434"></script>
 <script defer src="alavalikko-v304.js?v=355"></script>
 <link rel="stylesheet" href="desktop-v339.css?v=339">
 <link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
-<script defer src="hakuehdotukset-v429.js?v=429"></script><link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script><style id="ms-search-button-style">.ms-search-with-button{display:flex;gap:8px;align-items:stretch;margin-top:6px}.ms-search-with-button input{flex:1;min-width:0;margin-top:0!important}.ms-search-with-button button{flex:none;min-width:70px;padding:0 15px;border:0;border-radius:12px;background:#165b4b;color:white;font:750 16px system-ui;cursor:pointer}.ms-search-with-button button:focus-visible{outline:3px solid #ac8848;outline-offset:2px}@media(max-width:420px){.ms-search-with-button button{min-width:62px;padding:0 12px}}</style></head><body class="ms302-stops-page">
+<script defer src="hakuehdotukset-v429.js?v=429"></script><link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script><style id="ms-search-button-style">.ms-search-with-button{display:flex;gap:8px;align-items:stretch;margin-top:6px}.ms-search-with-button input{flex:1;min-width:0;margin-top:0!important}.ms-search-with-button button{flex:none;min-width:70px;padding:0 15px;border:0;border-radius:12px;background:#165b4b;color:white;font:750 16px system-ui;cursor:pointer}.ms-search-with-button button:focus-visible{outline:3px solid #ac8848;outline-offset:2px}@media(max-width:420px){.ms-search-with-button button{min-width:62px;padding:0 12px}}</style><style id="ms302-category-select-style">.ms302-category-select{margin-top:14px}.ms302-category-select label{display:block;font-size:13px;font-weight:750;color:#315b4e;margin-bottom:6px}.ms302-category-select select{display:block;width:100%;min-height:48px;border:1px solid #bdcfc4;border-radius:12px;background:#fff;color:#173d33;padding:10px 12px;font:650 16px system-ui}.ms302-category-select select:focus-visible{outline:3px solid #ac8848;outline-offset:2px}</style></head><body class="ms302-stops-page">
 <main class="ms302-stops" id="main">
   <header class="ms302-stops-intro">
     <h1>Pysähdy matkalla</h1>
@@ -27,17 +27,7 @@
       <label>Maakunta<select id="ms302-town"><option value="">Koko Suomi</option></select></label>
       <label>Hae kohdetta<div class="ms-search-with-button"><input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"><button id="ms302-search-submit" type="button">Hae</button></div></label>
     </div>
-    <div class="ms302-category" role="group" aria-label="Valitse kohdeluokka">
-      <button type="button" data-ms302-category="all" aria-pressed="true">✨ Kaikki</button>
-      <button type="button" data-ms302-category="sight" aria-pressed="false">🏛️ Nähtävyydet</button>
-      <button type="button" data-ms302-category="child" aria-pressed="false">🎈 Lapsille</button>
-      <button type="button" data-ms302-category="special" aria-pressed="false">✨ Erikoiset nähtävyydet</button>
-      <button type="button" data-ms302-category="nature" aria-pressed="false">🌲 Luonto ja retket</button>
-      <button type="button" data-ms302-category="stop" aria-pressed="false">🚐 Taukopaikat</button>
-      <button type="button" data-ms302-category="outlet" aria-pressed="false">🛍️ Tehtaanmyymälät</button>
-      <button type="button" data-ms302-category="ruukki" aria-pressed="false">🏭 Ruukkikylät</button>
-      <button type="button" data-ms302-category="food" aria-pressed="false">☕ Kahvilat ja ravintolat</button>
-    </div>
+    <div class="ms302-category-select"><label for="ms302-category-select">Kohdeluokka</label><select id="ms302-category-select" aria-label="Valitse kohdeluokka"><option value="all">✨ Kaikki kohteet</option><option value="sight">🏛️ Nähtävyydet</option><option value="child">🎈 Lapsille</option><option value="special">✨ Erikoiset nähtävyydet</option><option value="nature">🌲 Luonto ja retket</option><option value="stop">🚐 Taukopaikat</option><option value="outlet">🛍️ Tehtaanmyymälät</option><option value="ruukki">🏭 Ruukkikylät</option><option value="food">☕ Kahvilat ja ravintolat</option></select></div>
   </section>
   <div class="ms302-results-head"><p id="ms302-count" role="status" aria-live="polite">Haetaan kohteita…</p><button id="ms302-reset" type="button">Tyhjennä rajaukset</button></div>
   <section id="ms302-results" class="ms302-results" aria-label="Hakutulokset"></section>
