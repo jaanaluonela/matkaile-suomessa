@@ -16,7 +16,7 @@
 <script defer src="alavalikko-v304.js?v=355"></script>
 <link rel="stylesheet" href="desktop-v339.css?v=339">
 <link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
-<script defer src="hakuehdotukset-v429.js?v=429"></script><link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script></head><body class="ms302-stops-page">
+<script defer src="hakuehdotukset-v429.js?v=429"></script><link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script><style id="ms-search-button-style">.ms-search-with-button{display:flex;gap:8px;align-items:stretch;margin-top:6px}.ms-search-with-button input{flex:1;min-width:0;margin-top:0!important}.ms-search-with-button button{flex:none;min-width:70px;padding:0 15px;border:0;border-radius:12px;background:#165b4b;color:white;font:750 16px system-ui;cursor:pointer}.ms-search-with-button button:focus-visible{outline:3px solid #ac8848;outline-offset:2px}@media(max-width:420px){.ms-search-with-button button{min-width:62px;padding:0 12px}}</style></head><body class="ms302-stops-page">
 <main class="ms302-stops" id="main">
   <header class="ms302-stops-intro">
     <h1>Pysähdy matkalla</h1>
@@ -25,7 +25,7 @@
   <section class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
     <div class="ms302-stops-fields">
       <label>Maakunta<select id="ms302-town"><option value="">Koko Suomi</option></select></label>
-      <label>Hae kohdetta<input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"></label>
+      <label>Hae kohdetta<div class="ms-search-with-button"><input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"><button id="ms302-search-submit" type="button">Hae</button></div></label>
     </div>
     <div class="ms302-category" role="group" aria-label="Valitse kohdeluokka">
       <button type="button" data-ms302-category="all" aria-pressed="true">✨ Kaikki</button>
@@ -46,4 +46,4 @@
   <noscript><p>Hakutulosten näyttäminen vaatii JavaScriptin.</p></noscript>
 </main>
 <script defer src="desktop-v339.js?v=348"></script>
-</body></html>
+<script>document.getElementById("ms302-search-submit")?.addEventListener("click",()=>{document.activeElement?.blur();document.getElementById("ms302-query")?.dispatchEvent(new Event("input",{bubbles:true}));document.getElementById("ms302-count")?.scrollIntoView({behavior:"smooth",block:"start"});});document.getElementById("ms302-query")?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();document.getElementById("ms302-search-submit")?.click();}});</script></body></html>
