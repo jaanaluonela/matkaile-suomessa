@@ -121,7 +121,7 @@ function capture(){
     const fresh=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(fresh))throw Error('Invalid trip list');
     let t=fresh.find(x=>x.id===active)||trips.find(x=>x.id===active);
     t=t?{...t}:{id:active,stops:[]};if(!Array.isArray(t.stops))t.stops=[];
-    for(let f of ['name','begin','end','diary'])t[f]=$(f).value;
+    for(let f of ['name','purpose','begin','end','diary'])t[f]=$(f).value;
     t.name=t.name.trim()||'Nimetön matka';t.rating=rating;
     const i=fresh.findIndex(x=>x.id===active);if(i<0)fresh.unshift(t);else fresh[i]=t;
     localStorage.setItem(key,JSON.stringify(fresh));trips=fresh;dirty=false;status('✓ Tallennettu');$('remove').classList.remove('hidden');window.dispatchEvent(new CustomEvent('ms-trips-changed'));return t;
