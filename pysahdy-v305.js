@@ -6,6 +6,7 @@
  const more=document.getElementById('ms302-more'),reset=document.getElementById('ms302-reset');
  if(!town||!input||!results||!count) return;
  const buttons=[...document.querySelectorAll('[data-ms302-category]')];
+ const categorySelect=document.getElementById('ms302-category-select');
  const favKey='ms_favorites_v301';
  const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
  const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','child','outlet']);
@@ -114,6 +115,7 @@
    const uniqueCount=matches.length;
    count.textContent=(town.value||'Koko Suomi')+' · '+uniqueCount+(uniqueCount===1?' kohde':' kohdetta');
    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ms302Category===category)));
+   if(categorySelect)categorySelect.value=category;
    results.replaceChildren(...matches.slice(0,visible).map(card));
    if(!matches.length){const empty=document.createElement('p');empty.className='ms302-empty';
      empty.textContent=items.length?'Ei osumia. Kokeile toista hakusanaa tai valitse Kaikki.':'Kohdetietoja ei voitu ladata. Kokeile päivittää sivu.';results.append(empty);}
@@ -122,6 +124,7 @@
  }
  function update(){visible=12;saveUrl();render();}
  buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.ms302Category;update();}));
+ categorySelect?.addEventListener('change',()=>{category=categorySelect.value;update();});
  input.addEventListener('input',update);town.addEventListener('change',update);
  more.addEventListener('click',()=>{visible+=12;render();});
  reset.addEventListener('click',()=>{category='all';town.value='';input.value='';update();input.focus();});
