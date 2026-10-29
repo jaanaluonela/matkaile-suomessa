@@ -1,0 +1,15 @@
+/* Maakuntasivujen yhteinen Lapin-mallinen mobiiliasettelu. Ei vaikuta etusivuun. */
+@media(max-width:900px){
+body .ks-experience-grid,body .ks-categories,body .experience-grid,body .experiences .experience-grid,body .pk-cards,body .categories,body .pp-categories{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+body .ks-experience,body .experience,body .ks-category,body .categories .category,body .pp-categories>a{min-width:0!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;transform:none!important;transition:none!important}
+body .ks-photo,body .experience-photo{height:116px!important;max-height:116px!important;aspect-ratio:auto!important;overflow:hidden!important}
+body .ks-photo img,body .experience-photo img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;transform:none!important;transition:none!important}
+body .ks-experience:hover img,body .experience:hover img{transform:none!important}
+body .ks-category,body .categories .category,body .pp-categories>a{display:flex!important;flex-direction:column!important;align-items:flex-start!important;min-height:0!important;padding:15px!important;border-radius:18px!important}
+body .ks-category h3,body .categories .category h3,body .pp-categories h3{font-size:16px!important;line-height:1.25!important;margin:8px 0!important}
+body .ks-category p,body .categories .category p,body .pp-categories p{font-size:12px!important;line-height:1.4!important}
+body .ks-category-icon,body .categories .category-icon{width:32px!important;height:32px!important}
+body .ks-category strong,body .categories .category strong{font-size:12px!important;margin-top:auto!important}
+body .ks-nature{background:#e8f1e4!important}body .ks-sights{background:#f7efdf!important}body .ks-stays{background:#e7f0f4!important}body .ks-nearby{background:#e6f0ea!important}
+}
+@media(max-width:390px){body .ks-experience-grid,body .ks-categories,body .experience-grid,body .categories,body .pp-categories{gap:8px!important}body .ks-photo,body .experience-photo{height:100px!important;max-height:100px!important}}
