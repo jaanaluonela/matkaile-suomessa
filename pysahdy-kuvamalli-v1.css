@@ -11,3 +11,16 @@
 .msroute-view{padding:3px;background:#eef6f0;border-radius:13px}
 .msroute-view button{border-radius:10px}
 @media(max-width:520px){.msroute-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.msroute-tabs button{font-size:12px;overflow-wrap:anywhere}.msroute-route{padding:12px}.msroute-primary{min-height:48px}}
+
+/* Reittihaun tiivis mobiiliversio */
+.msroute-directions-link{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:6px 10px;border-radius:9px;background:#eef6f0;color:#175d4c;font:700 13px system-ui;text-decoration:none}
+.msroute-distance{border:0;padding:0;margin:0;min-width:0}
+.msroute-distance legend{font:700 13px system-ui;margin-bottom:7px;color:#214c3e}
+.msroute-distance-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.msroute-distance-options label{position:relative;display:block;cursor:pointer}
+.msroute-distance-options input{position:absolute;opacity:0;width:1px;height:1px}
+.msroute-distance-options span{display:block;text-align:center;border:1px solid #cbded3;border-radius:9px;background:white;padding:10px 3px;font:700 14px system-ui;color:#175443}
+.msroute-distance-options input:checked+span{background:#16624e;color:white;border-color:#16624e}
+.msroute-distance-options input:focus-visible+span{outline:3px solid #d3a95c;outline-offset:2px}
+.msroute-real-controls{display:grid;gap:11px}
+@media(max-width:700px){.msroute-panel{gap:9px}.msroute-route{gap:8px}.msroute-help{margin:0}.msroute-directions-link{justify-self:start}.msroute-real-controls{gap:9px}}
