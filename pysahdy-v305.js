@@ -8,7 +8,7 @@
  const buttons=[...document.querySelectorAll('[data-ms302-category]')];
  const favKey='ms_favorites_v301';
  const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
- const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','child']);
+ const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','child','outlet']);
  const params=new URLSearchParams(location.search);
  let category=allowed.has(params.get('tyyppi'))?params.get('tyyppi'):'all';
  let visible=12;
@@ -23,9 +23,9 @@
    'Sotkamo|Holiday Club Katinkulta – kylpylä'
  ]);
  // Prioritize the dedicated ruukkikyla entries, then shared visit highlights and nearby items.
- const raw=[...(window.ms364LastenKohteet||[]),...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
+ const raw=[...(window.ms364LastenKohteet||[]),...(window.ms305Erikoiset||[]),...(window.ms302Ruukit||[]),...(window.msFactoryOutlets||[]),{name:'Pyynikin munkkikahvila ja näkötorni',city:'Tampere',address:'Näkötornintie 20, Tampere',description:'Munkki- ja kahvitauko Pyynikin näkötornin juurella sekä järvimaisemia tornista.',type:'stop',url:'tampere-pyynikin-munkkikahvila.html'},...(window.visitHighlights||[]),...(window.nearbyData||[])];
  const known=new Set();
- const items=raw.filter(p=>p && p.name && p.city && ['ruukki','sight','stop','nature'].includes(p.type)).map(p=>{
+ const items=raw.filter(p=>p && p.name && p.city && ['ruukki','sight','stop','nature','outlet'].includes(p.type)).map(p=>{
    const nature=p.type==='nature'||(p.type==='sight' && (natureName.test(norm(p.name))||natureDesc.test(norm(p.description))));
    const food=p.type==='stop' && foodRx.test(norm(p.name+' '+(p.description||'')));
    return {...p,nature,food,child:!!p.child||childNames.has(p.city+'|'+p.name),kind:p.type==='ruukki'?'ruukki':p.type==='nature'?'sight':p.type};
@@ -65,17 +65,18 @@
    if(category==='special')return !!p.special;
    if(category==='child')return !!p.child;
    if(category==='ruukki')return p.kind==='ruukki';
+   if(category==='outlet')return p.kind==='outlet';
    if(category==='nature')return p.nature;
    if(category==='sight')return p.special||p.kind==='sight'&&!p.nature;
    if(category==='stop')return p.kind==='stop'&&!p.food;
    if(category==='food')return p.food;
    return true;
  };
- const label=p=>p.child?'🎈 Lapsille':p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
+ const label=p=>p.child?'🎈 Lapsille':p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.kind==='outlet'?'🛍️ Tehtaanmyymälä':p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
  function favorites(){try {const a=JSON.parse(localStorage.getItem(favKey)||'[]');return Array.isArray(a)?a:[];}catch{return [];}}
  function makeFavorite(p){
     const a=document.createElement('button');a.type='button';a.className='ms302-favorite';
-    const link='pysahdy-matkalla.html?tyyppi='+encodeURIComponent(p.child?'child':p.kind==='ruukki'?'ruukki':p.food?'food':p.nature?'nature':p.kind)+'&haku='+encodeURIComponent(p.name);
+    const link='pysahdy-matkalla.html?tyyppi='+encodeURIComponent(p.child?'child':p.kind==='ruukki'?'ruukki':p.kind==='outlet'?'outlet':p.food?'food':p.nature?'nature':p.kind)+'&haku='+encodeURIComponent(p.name);
     const update=()=>{const isSaved=favorites().some(x=>x.url===link);a.setAttribute('aria-pressed',String(isSaved));a.textContent=isSaved?'⭐ Tallennettu':'☆ Suosikki';};
     a.addEventListener('click',()=>{const f=favorites();const ix=f.findIndex(x=>x.url===link);
       if(ix>=0)f.splice(ix,1);else f.unshift({url:link,title:p.name+' · '+p.city,savedAt:new Date().toISOString()});
