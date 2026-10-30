@@ -13,3 +13,12 @@ body .ks-category strong,body .categories .category strong{font-size:12px!import
 body .ks-nature{background:#e8f1e4!important}body .ks-sights{background:#f7efdf!important}body .ks-stays{background:#e7f0f4!important}body .ks-nearby{background:#e6f0ea!important}
 }
 @media(max-width:390px){body .ks-experience-grid,body .ks-categories,body .experience-grid,body .categories,body .pp-categories{gap:8px!important}body .ks-photo,body .experience-photo{height:100px!important;max-height:100px!important}}
+
+/* v2: Lapin mukaiset kuntakortit maakuntasivuilla. Asukasluvut vain kuntasivuilla. */
+body .ms334-municipalities,body .ks-town-grid,body .municipality-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+body a.ms334-municipality,body a.ks-town,body a.municipality{display:flex!important;align-items:center!important;gap:10px!important;min-width:0!important;min-height:78px!important;padding:12px!important;border:1px solid #dbe7dd!important;border-radius:15px!important;background:#fff!important;text-decoration:none!important;color:#183f33!important;box-sizing:border-box!important;transform:none!important}
+body a.ms334-municipality img,body a.ks-town img,body a.municipality img{width:32px!important;height:42px!important;object-fit:contain!important;flex-shrink:0!important}
+body a.ms334-municipality>span:not(.ms334-arrow),body a.ks-town>span,body a.municipality .municipality-name{min-width:0!important;font-size:14px!important;line-height:1.3!important;font-weight:700!important;overflow-wrap:anywhere}
+body a.ms334-municipality small{display:none!important}
+body a.ms334-municipality .ms334-arrow,body a.ks-town>b,body a.municipality>span:last-child{margin-left:auto!important;flex-shrink:0!important;color:#276b50!important}
+@media(max-width:390px){body a.ms334-municipality,body a.ks-town,body a.municipality{gap:6px!important;padding:9px!important}body a.ms334-municipality img,body a.ks-town img,body a.municipality img{width:27px!important;height:37px!important}}
