@@ -4,7 +4,7 @@
 <meta name="theme-color" content="#174d40">
 <meta name="description" content="Löydä lasten kohteet, nähtävyydet, luontokohteet, taukopaikat sekä kahvilat ja ravintolat samalla haulla.">
 <title>Pysähdy matkalla – Matkaile Suomessa</title>
-<link rel="stylesheet" href="pysahdy-v304.css?v=364"><link rel="stylesheet" href="pysahdy-kuvamalli-v1.css?v=7"><link rel="stylesheet" href="pysahdy-reittikartta-v1.css?v=4">
+<link rel="stylesheet" href="pysahdy-v304.css?v=364"><link rel="stylesheet" href="pysahdy-etusivu-v1.css?v=1"><link rel="stylesheet" href="pysahdy-kuvamalli-v1.css?v=7"><link rel="stylesheet" href="pysahdy-reittikartta-v1.css?v=4">
 <link rel="stylesheet" href="alavalikko-v304.css?v=355">
 <script defer src="caravan-data.js"></script><script defer src="leirinta-data-v264.js"></script><script defer src="leirinta-data-v265.js"></script><script defer src="karavaanialueet-v279.js"></script><script defer src="sfc-alueet-v295.js"></script><script defer src="ms-kohteet-v296.js"></script><script defer src="leirinta-dedupe-v1.js"></script><script defer src="nearby-data-v218.js"></script>
 <script defer src="kayntikohteet-data-v230.js"></script>
@@ -33,11 +33,25 @@
 }
 </style></head><body class="ms302-stops-page">
 <main class="ms302-stops" id="main">
-  <header class="ms302-stops-intro">
-    <h1>Pysähdy matkalla</h1>
-    <p>Lasten kohteet, nähtävyydet, luonto, taukopaikat ja makuelämykset yhdestä paikasta.</p>
+  <header class="ms302-stops-intro ms-stop-hero">
+    <div class="ms-stop-hero-copy"><span class="ms-stop-eyebrow">MATKAILE SUOMESSA · MATKAN VARRELLA</span><h1>Pysähdy matkalla</h1>
+    <p>Löydä parhaat tauot matkasi varrelta – nähtävyydet, luonto, kahvilat, lasten kohteet, leirintäalueet ja matkaparkit.</p>
+    <a class="ms-stop-hero-cta" href="#ms302-search-area">Etsi pysähdyspaikat <span aria-hidden="true">→</span></a></div>
   </header>
-  <section class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
+  <section class="ms-stop-quick" aria-label="Suositut pysähdyspaikat">
+    <h2>Mitä haluaisit löytää?</h2>
+    <div class="ms-stop-quick-grid">
+      <button type="button" data-stop-filter="all"><span aria-hidden="true">⌕</span> Kaikki kohteet</button>
+      <button type="button" data-stop-filter="sight"><span aria-hidden="true">▣</span> Nähtävyydet</button>
+      <button type="button" data-stop-filter="nature"><span aria-hidden="true">🌲</span> Luonto ja retket</button>
+      <button type="button" data-stop-filter="food"><span aria-hidden="true">☕</span> Ruoka ja kahvilat</button>
+      <button type="button" data-stop-filter="child"><span aria-hidden="true">🎈</span> Lasten kohteet</button>
+      <button type="button" data-stop-filter="camping"><span aria-hidden="true">⛺</span> Leirintäalueet</button>
+      <button type="button" data-stop-filter="park"><span aria-hidden="true">🅿</span> Matkaparkit</button>
+      <button type="button" data-stop-filter="stop"><span aria-hidden="true">🚐</span> Taukopaikat</button>
+    </div>
+  </section>
+  <section id="ms302-search-area" class="ms302-stops-search" aria-label="Hae pysähdyskohteita">
     <div class="ms302-stops-fields">
       <label>Maakunta<select id="ms302-town"><option value="">Koko Suomi</option></select></label>
       <label>Hae kohdetta<div class="ms-search-with-button"><input id="ms302-query" type="search" placeholder="Esim. Fiskars, Vääksy tai kahvila" autocomplete="off"><button id="ms302-search-submit" type="button">Hae</button></div></label>
@@ -51,4 +65,4 @@
   <noscript><p>Hakutulosten näyttäminen vaatii JavaScriptin.</p></noscript>
 </main>
 <script defer src="desktop-v339.js?v=348"></script>
-<script>document.getElementById("ms302-search-submit")?.addEventListener("click",()=>{document.activeElement?.blur();document.getElementById("ms302-query")?.dispatchEvent(new Event("input",{bubbles:true}));document.getElementById("ms302-count")?.scrollIntoView({behavior:"smooth",block:"start"});});document.getElementById("ms302-query")?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();document.getElementById("ms302-search-submit")?.click();}});</script></body></html>
+<script>document.getElementById("ms302-search-submit")?.addEventListener("click",()=>{document.activeElement?.blur();document.getElementById("ms302-query")?.dispatchEvent(new Event("input",{bubbles:true}));document.getElementById("ms302-count")?.scrollIntoView({behavior:"smooth",block:"start"});});document.getElementById("ms302-query")?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();document.getElementById("ms302-search-submit")?.click();}});</script><script defer src="pysahdy-etusivu-v1.js?v=1"></script></body></html>
