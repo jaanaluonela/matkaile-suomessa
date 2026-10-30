@@ -15,3 +15,9 @@ body.ms302-stops-page .ms-stop-hero p{color:#f0f8f3;font-size:clamp(15px,1.7vw,1
 .ms-stop-quick-grid button:hover,.ms-stop-quick-grid button[aria-pressed=true]{background:#dcefe3;border-color:#45876c}
 #ms302-search-area{scroll-margin-top:88px}
 @media(max-width:700px){body.ms302-stops-page .ms-stop-hero{min-height:240px;padding:22px 18px;background:linear-gradient(90deg,rgba(10,52,43,.92),rgba(10,52,43,.64)),url('kortti-pysahdy-v382.webp') center/cover no-repeat;margin-top:6px}body.ms302-stops-page .ms-stop-hero h1{font-size:30px}body.ms302-stops-page .ms-stop-hero p{font-size:14px}.ms-stop-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ms-stop-quick-grid button{min-height:58px;font-size:13px;padding:10px 8px;gap:7px}.ms-stop-quick-grid button span{font-size:20px;min-width:24px}}
+
+/* v2: hyväksytyn mobiilimallin viimeistely */
+.ms-stop-quick-grid button span{display:inline-flex;align-items:center;justify-content:center;flex:none;width:29px;height:29px;min-width:29px}
+.ms-stop-quick-grid button svg{display:block;width:25px;height:25px;stroke:#17604d}
+.ms-stop-quick-grid button[aria-pressed=true] svg{stroke:#14513e}
+@media(max-width:700px){body.ms302-stops-page .ms-stop-hero{min-height:0!important;padding:18px 17px!important;margin-bottom:14px!important}body.ms302-stops-page .ms-stop-hero h1{font-size:27px!important;margin:6px 0 8px!important}body.ms302-stops-page .ms-stop-hero p{font-size:13px!important;line-height:1.42!important;margin-bottom:13px!important}.ms-stop-eyebrow{font-size:10px;letter-spacing:.07em}.ms-stop-hero-cta{min-height:42px;padding:10px 14px;font-size:14px}.ms-stop-quick-grid button span{width:25px;height:25px;min-width:25px}.ms-stop-quick-grid button svg{width:23px;height:23px}}
