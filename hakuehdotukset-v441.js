@@ -10,6 +10,6 @@ const show=()=>{if(list.classList.contains('ms441-mobile-suggest')){const rect=i
 if(list.classList.contains('ms441-mobile-suggest')){window.addEventListener('scroll',()=>{if(!list.hidden)show()}, {passive:true});window.addEventListener('resize',()=>{if(!list.hidden)show()})}input.addEventListener('input',show);input.addEventListener('focus',show);input.addEventListener('keydown',e=>{if(e.key==='Escape')list.hidden=true;if(e.key==='ArrowDown'&&!list.hidden){e.preventDefault();list.querySelector('a')?.focus()}});document.addEventListener('click',e=>{if(!wrap.contains(e.target))list.hidden=true});
 if(kind==='regions'&&form){form.addEventListener('submit',e=>{const q=normalize(input.value.trim());const match=records.find(r=>normalize(r[0])===q);if(match){e.preventDefault();location.href=match[2]}},true)}
 }
-function start(){setup(document.querySelector('#region-search'),'regions');setup(document.querySelector('#ms302-query'),'stops');setup(document.querySelector('#front-search'),'front');setup(document.querySelector('#ms382-haku input[name="haku"]'),'front');}
+function start(){setup(document.querySelector('#region-search'),'regions');setup(document.querySelector('#ms302-query'),'stops');setup(document.querySelector('#front-search'),'front');setup(document.querySelector('#ms382-haku input[name="q"]'),'front');}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
