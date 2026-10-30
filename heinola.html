@@ -106,4 +106,4 @@ function clean(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{clean();setTimeout(clean,300);});else{clean();setTimeout(clean,300);}
 })();
-</script></body></html>
+</script><script id="heinola-remove-generated-buttons-v5">(function(){function clean(){const main=document.querySelector('main');if(!main)return;main.querySelectorAll('a,button').forEach(el=>{const t=(el.textContent||'').trim().replace(/\s+/g,' ').toLowerCase();if(t==='← paikkakuntiin'||t==='paikkakuntiin'||t==='etusivulle'||t==='← etusivulle'){el.remove();}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',clean);else clean();new MutationObserver(clean).observe(document.documentElement,{childList:true,subtree:true});})();</script></body></html>
