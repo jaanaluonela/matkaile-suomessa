@@ -1,0 +1,17 @@
+/* Pysähdy matkalla -osion aloitusnäkymä, mobiili ensin. */
+body.ms302-stops-page .ms302-stops{max-width:1120px}
+body.ms302-stops-page .ms-stop-hero{position:relative;isolation:isolate;overflow:hidden;min-height:250px;display:flex;align-items:center;padding:clamp(20px,4vw,42px);background:linear-gradient(90deg,rgba(10,52,43,.94),rgba(10,52,43,.78) 56%,rgba(10,52,43,.2)),url('kortti-pysahdy-v382.webp') center/cover no-repeat;border:0;border-radius:20px;color:white;margin:10px 0 18px}
+body.ms302-stops-page .ms-stop-hero-copy{max-width:630px}
+body.ms302-stops-page .ms-stop-hero h1{color:#fff;font-size:clamp(30px,5vw,46px);margin:8px 0 10px}
+body.ms302-stops-page .ms-stop-hero p{color:#f0f8f3;font-size:clamp(15px,1.7vw,18px);line-height:1.55;margin:0 0 18px}
+.ms-stop-eyebrow{color:#d1eddd;font-size:11px;font-weight:800;letter-spacing:.12em}
+.ms-stop-hero-cta{display:inline-flex;gap:12px;align-items:center;background:#1e9472;color:#fff;text-decoration:none;border-radius:12px;padding:12px 18px;font-weight:800;min-height:46px}
+.ms-stop-hero-cta:hover{background:#117454}
+.ms-stop-quick{margin:0 0 18px}
+.ms-stop-quick h2{font-size:clamp(19px,3vw,24px);margin:0 0 11px;color:#184d3d}
+.ms-stop-quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ms-stop-quick-grid button{display:flex;gap:10px;align-items:center;justify-content:flex-start;text-align:left;border:1px solid #d3e4d9;border-radius:14px;background:#f2f8f3;color:#174e3e;min-height:64px;padding:12px;font:750 14px/1.3 system-ui;cursor:pointer}
+.ms-stop-quick-grid button span{font-size:23px;min-width:27px;text-align:center}
+.ms-stop-quick-grid button:hover,.ms-stop-quick-grid button[aria-pressed=true]{background:#dcefe3;border-color:#45876c}
+#ms302-search-area{scroll-margin-top:88px}
+@media(max-width:700px){body.ms302-stops-page .ms-stop-hero{min-height:240px;padding:22px 18px;background:linear-gradient(90deg,rgba(10,52,43,.92),rgba(10,52,43,.64)),url('kortti-pysahdy-v382.webp') center/cover no-repeat;margin-top:6px}body.ms302-stops-page .ms-stop-hero h1{font-size:30px}body.ms302-stops-page .ms-stop-hero p{font-size:14px}.ms-stop-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ms-stop-quick-grid button{min-height:58px;font-size:13px;padding:10px 8px;gap:7px}.ms-stop-quick-grid button span{font-size:20px;min-width:24px}}
