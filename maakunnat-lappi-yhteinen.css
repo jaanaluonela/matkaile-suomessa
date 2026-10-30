@@ -22,3 +22,14 @@ body a.ms334-municipality>span:not(.ms334-arrow),body a.ks-town>span,body a.muni
 body a.ms334-municipality small{display:none!important}
 body a.ms334-municipality .ms334-arrow,body a.ks-town>b,body a.municipality>span:last-child{margin-left:auto!important;flex-shrink:0!important;color:#276b50!important}
 @media(max-width:390px){body a.ms334-municipality,body a.ks-town,body a.municipality{gap:6px!important;padding:9px!important}body a.ms334-municipality img,body a.ks-town img,body a.municipality img{width:27px!important;height:37px!important}}
+
+/* v3: Pitkät kuntanimet mahtuvat kortteihin kokonaisina. */
+@media(max-width:900px){
+body a.ms334-municipality,body a.ks-town,body a.municipality,
+body .ps-kunnat>a.municipality{gap:7px!important;padding:10px 8px!important}
+body a.ms334-municipality img,body a.ks-town img,body a.municipality img,
+body .ps-kunnat>a.municipality img{width:26px!important;height:35px!important}
+body a.ms334-municipality strong,body a.ks-town strong,body a.municipality strong,
+body .ps-kunnat>a.municipality strong{font-size:clamp(11px,3.2vw,14px)!important;line-height:1.2!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto!important;white-space:normal!important}
+body a.ms334-municipality>span,body a.ks-town>span,body a.municipality>span{min-width:0!important;flex:1 1 auto!important}
+}
