@@ -53,7 +53,9 @@ body[data-slug="asikkala"] #ms375-main details.ms-asikkala-camper[open]>summary{
 #ms375-main #ms-camper-content[hidden]{display:none!important}
 #ms375-main .ms-camper-panel{background:#fff;border:1px solid #dbe6de;border-radius:22px;margin:12px 0;overflow:hidden}
 #ms375-main .ms-camper-toggle{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;border:0;background:transparent;color:#105044;font:inherit;font-size:clamp(18px,4.5vw,24px);font-weight:750;text-align:left;padding:18px 16px;cursor:pointer}
-#ms375-main .ms-camper-toggle>span[aria-hidden="true"]{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 26px;width:26px;height:26px;font-size:30px!important;line-height:1!important;font-weight:900;color:#105044}
+#ms375-main .ms-camper-toggle>span[aria-hidden="true"]{display:inline-flex!important;align-items:center;justify-content:flex-start;flex:0 0 26px;width:26px;height:30px;font-size:0!important;line-height:0!important;color:transparent!important}
+#ms375-main .ms-camper-toggle>span[aria-hidden="true"]::before{content:"";display:block;width:0;height:0;border-top:13px solid transparent;border-bottom:13px solid transparent;border-left:19px solid #105044}
+#ms375-main .ms-camper-toggle[aria-expanded="true"]>span[aria-hidden="true"]::before{transform:rotate(90deg)}
 #ms375-main .ms-camper-toggle{gap:10px!important}
 #ms375-main .ms-camper-content{padding:0 16px 16px}
 #ms375-main .ms-camper-content .place{display:block;margin:10px 0;padding:14px;border:1px solid #dbe6de;border-radius:14px}
