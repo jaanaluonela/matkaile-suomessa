@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{const key=(document.body.dataset.slug||location.pathname.split('/').pop().replace('.html','')).toLowerCase();const info={
 hartola:['Itä-Hämeen museo - Koskipään kartanon sivurakennus - Koskipääntie 2, Hartola - 1.jpg','Itä-Hämeen museo Hartolassa'],
 karkola:['Field in Kärkölä.jpg','Kärkölän maalaismaisema'],
-lahti:['Sibelius hall.jpg','Sibeliustalo Lahdessa'],
+lahti:['Salpausselkä 03.jpg','Salpausselän hyppyrimäet talvi-iltana Lahdessa'],
 padasjoki:['Padasjoki marina from Kullasvuori towers.jpg','Padasjoen satama'],
 sysma:['Sysmä church.jpg','Sysmän kirkko'],
 iitti:['Iitin kirkko.jpg','Iitin kirkko'],
