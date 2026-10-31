@@ -8,4 +8,4 @@
 <symbol id="tree" viewBox="0 0 32 32"><path d="m16 2-9 11h5L5 21h8v8h6v-8h8l-7-8h5Z"/></symbol>
 <symbol id="route" viewBox="0 0 32 32"><path d="M9 14s-6-6-6-9a6 6 0 0 1 12 0c0 3-6 9-6 9zm14 16s-6-6-6-9a6 6 0 0 1 12 0c0 3-6 9-6 9zM7 21h3m0 6h3m8-17h3"/></symbol>
 <symbol id="sign" viewBox="0 0 32 32"><path d="M16 2v28M5 5h21l4 5-4 5H5zm22 13H6l-4 5 4 5h21z"/></symbol>
-<symbol id="search" viewBox="0 0 32 32"><circle cx="13" cy="13" r="9"/><path d="m20 20 9 9"/></symbol></svg>
+<symbol id="search" viewBox="0 0 32 32"><circle cx="13" cy="13" r="9"/><path d="m20 20 9 9"/></symbol><symbol id="tent" viewBox="0 0 32 32"><path d="M2 27 16 4l14 23H2Z M16 4v23 M9 27l7-12 7 12"/></symbol><symbol id="parking" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 25V7h8a6 6 0 0 1 0 12h-8" fill="none" stroke="currentColor" stroke-width="3"/></symbol></svg>
