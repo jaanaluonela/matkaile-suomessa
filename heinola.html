@@ -121,13 +121,9 @@ body nav#ms-approved-nav,body #ms-unified-bottom{position:fixed!important;bottom
 }
 </style><style id="heinola-visible-quick-icons-fix">
 body.ms-heinola-model main nav.quick.ms-town-quick>a{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;padding:10px!important;background:#fff!important;min-height:72px!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a>svg.ms375-icon{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;transform:none!important;flex:0 0 48px!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;padding:8px!important;box-sizing:border-box!important;border-radius:12px!important;overflow:visible!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a:nth-child(1)>svg{background:#40856e!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a:nth-child(2)>svg{background:#1672b8!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a:nth-child(3)>svg{background:#367e68!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a:nth-child(4)>svg{background:#1269b2!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a>svg path,body.ms-heinola-model main nav.quick.ms-town-quick>a>svg text{visibility:visible!important;opacity:1!important}
-body.ms-heinola-model main nav.quick.ms-town-quick>a>span{display:block!important;min-width:0!important;flex:1!important}
+body.ms-heinola-model main nav.quick.ms-town-quick>a>.heinola-fixed-icon{display:grid!important;place-items:center!important;visibility:visible!important;opacity:1!important;flex:0 0 48px!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;border-radius:12px!important;color:#fff!important}
+body.ms-heinola-model main nav.quick.ms-town-quick>a>.heinola-fixed-icon svg{display:block!important;visibility:visible!important;width:34px!important;height:34px!important;stroke:#fff!important;fill:none!important}
+body.ms-heinola-model main nav.quick.ms-town-quick>a>span:not(.heinola-fixed-icon){display:block!important;flex:1!important;min-width:0!important}
 </style></head><body class="ms-heinola-model" data-slug="heinola"><main><figure class="heinola-hero"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Heinolan_rautatiesilta_2015-08-14.JPG/1280px-Heinolan_rautatiesilta_2015-08-14.JPG" alt="Heinolan rautatiesilta kesämaisemassa" loading="eager" decoding="async"></figure>
 <nav class="heinola-breadcrumb" aria-label="Takaisin maakuntaan"><a href="paijat-hame.html" style="text-decoration:none">‹ Päijät-Häme</a></nav>
 <header><h1>Heinola</h1><p class="lead">Jokimaisemia, Harjupaviljongin vohveleita, lintuhoitola, kylpylä, kesäteatteri sekä luontoretkiä Vierumäellä ja Paistjärvellä.</p></header>
@@ -162,4 +158,15 @@ function clean(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>{clean();setTimeout(clean,300);});else{clean();setTimeout(clean,300);}
 })();
-</script><script id="heinola-remove-generated-buttons-v5">(function(){function clean(){const main=document.querySelector('main');if(!main)return;main.querySelectorAll('a,button').forEach(el=>{const t=(el.textContent||'').trim().replace(/\s+/g,' ').toLowerCase();if(t==='← paikkakuntiin'||t==='paikkakuntiin'||t==='etusivulle'||t==='← etusivulle'){el.remove();}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',clean);else clean();new MutationObserver(clean).observe(document.documentElement,{childList:true,subtree:true});})();</script><div class="heinola-photo-credit" style="font-size:11px;color:#63766e;text-align:center;margin:8px 16px 110px">Kuva: Markus Säynevirta / <a href="https://commons.wikimedia.org/wiki/File:Heinolan_rautatiesilta_2015-08-14.JPG" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener" target="_blank">CC BY-SA 3.0</a></div></body></html>
+</script><script id="heinola-remove-generated-buttons-v5">(function(){function clean(){const main=document.querySelector('main');if(!main)return;main.querySelectorAll('a,button').forEach(el=>{const t=(el.textContent||'').trim().replace(/\s+/g,' ').toLowerCase();if(t==='← paikkakuntiin'||t==='paikkakuntiin'||t==='etusivulle'||t==='← etusivulle'){el.remove();}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',clean);else clean();new MutationObserver(clean).observe(document.documentElement,{childList:true,subtree:true});})();</script><div class="heinola-photo-credit" style="font-size:11px;color:#63766e;text-align:center;margin:8px 16px 110px">Kuva: Markus Säynevirta / <a href="https://commons.wikimedia.org/wiki/File:Heinolan_rautatiesilta_2015-08-14.JPG" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="noopener" target="_blank">CC BY-SA 3.0</a></div><script id="heinola-fixed-icons-v2">
+(function(){
+const shapes=[
+['#40856e','<path d="M13 13h-4a4 4 0 1 1 4-4v22a4 4 0 1 1-4-4h22a4 4 0 1 1-4 4V9a4 4 0 1 1-4 4Z" stroke="white" stroke-width="2.8" fill="none" stroke-linejoin="round"/>'],
+['#1672b8','<path d="M5 35 24 9 43 35H5Z M24 9v26 M14 35l10-14 10 14" stroke="white" stroke-width="2.7" fill="none" stroke-linejoin="round"/>'],
+['#367e68','<path d="M24 5 11 22h7L8 34h32L30 22h7L24 5Z M24 34v10" stroke="white" stroke-width="2.7" fill="none" stroke-linejoin="round"/>'],
+['#1269b2','<text x="24" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="37" font-weight="bold" fill="white">P</text>']
+];
+function apply(){document.querySelectorAll('body.ms-heinola-model main nav.quick.ms-town-quick>a').forEach((a,i)=>{if(i>3)return;let old=a.querySelector('svg.ms375-icon');if(old)old.remove();let holder=a.querySelector('.heinola-fixed-icon');if(!holder){holder=document.createElement('span');holder.className='heinola-fixed-icon';a.insertBefore(holder,a.firstChild)}holder.style.setProperty('background',shapes[i][0],'important');holder.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">'+shapes[i][1]+'</svg>';});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+})();
+</script></body></html>
