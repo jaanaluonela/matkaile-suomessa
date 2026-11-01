@@ -1,0 +1,22 @@
+@media(max-width:899px){
+html body.ms375-home .ms375-header,html body.ms375-home .ms382-header,html body.ms375-home main.ms382-desktop{display:none!important}
+html body.ms375-home{background:#f3f8f5!important;padding-bottom:calc(90px + env(safe-area-inset-bottom))!important}
+html body.ms375-home main.ms480-page{display:block!important;position:relative!important;max-width:none!important;margin:0!important;padding:0 0 24px!important;width:100%!important;min-height:0!important}
+html body.ms375-home .ms480-page *{box-sizing:border-box}
+html body.ms375-home .ms480-hero{position:relative;height:clamp(185px,34vw,300px);background:url('hero-etusivu.jpg') center/cover no-repeat}
+html body.ms375-home .ms480-brand{position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:9px;color:#064738;text-decoration:none;text-shadow:0 1px 5px #fff;font:800 clamp(22px,5vw,34px)/1 system-ui}
+html body.ms375-home .ms480-brand svg{width:58px;height:58px;flex-shrink:0}
+html body.ms375-home .ms480-body{padding:0 12px}
+html body.ms375-home .ms480-search{display:flex;align-items:center;height:67px;margin:0 2px 14px;background:white;border:1px solid #d1dfd7;border-radius:18px;overflow:hidden}
+html body.ms375-home .ms480-search>span{font:50px/1 Arial;color:#075245;padding:0 13px}
+html body.ms375-home .ms480-search input{flex:1;width:0;min-width:0;border:0;outline:0;background:white;font:500 clamp(13px,3.5vw,18px) system-ui;padding:8px 0}
+html body.ms375-home .ms480-search button{height:100%;width:65px;flex-shrink:0;background:#00594c;border:0;color:white;font:55px/1 Arial}
+html body.ms375-home .ms480-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+html body.ms375-home .ms480-grid>a.ms480-card{display:grid!important;grid-template-columns:35% minmax(0,1fr) 11px!important;grid-template-rows:1fr!important;gap:5px!important;align-items:center!important;min-width:0!important;min-height:142px!important;padding:10px 7px!important;background:white!important;border:1px solid #d6e1db!important;border-radius:19px!important;text-decoration:none!important;color:#084b3d!important;overflow:hidden!important}
+html body.ms375-home .ms480-card>.ms480-icon{position:static!important;grid-column:1!important;grid-row:1!important;display:block!important;width:auto!important;font:clamp(32px,7.5vw,59px)/1.1 system-ui!important;text-align:center!important;transform:none!important}
+html body.ms375-home .ms480-card>.ms480-copy{position:static!important;grid-column:2!important;grid-row:1!important;display:block!important;min-width:0!important;transform:none!important}
+html body.ms375-home .ms480-copy strong{display:block!important;font:800 clamp(12px,3vw,18px)/1.15 system-ui!important;word-break:normal!important;overflow-wrap:normal!important;hyphens:auto!important}
+html body.ms375-home .ms480-copy small{display:block!important;margin-top:7px!important;font:clamp(10px,2.65vw,15px)/1.23 Georgia,serif!important;color:#22332c!important;word-break:normal!important;hyphens:auto!important}
+html body.ms375-home .ms480-chevron{position:static!important;grid-column:3!important;grid-row:1!important;font:800 27px system-ui!important}
+}
+@media(min-width:900px){.ms480-brand{display:none}.ms480-page{display:none!important}}
