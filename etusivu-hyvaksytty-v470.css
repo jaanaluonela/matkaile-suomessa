@@ -40,3 +40,16 @@ html body.ms375-home .ms470-card .ms470-copy small{display:block!important;font:
 html body.ms375-home .ms470-card .ms470-next{position:static!important;justify-self:center!important}
 html body.ms375-home .ms470-hero{background-image:url('etusivu-kuvitukset-v307.png')!important;background-position:center!important;background-size:cover!important}
 }
+
+/* v472: isolation from older global home-page CSS */
+@media(max-width:899px){
+html body.ms375-home > main.page-main,html body.ms375-home > main.ms382-desktop{display:none!important}
+html body.ms375-home > main.ms470-home{display:block!important;box-sizing:border-box!important}
+html body.ms375-home main.ms470-home *{box-sizing:border-box}
+html body.ms375-home main.ms470-home .ms470-grid>a.ms470-card{display:grid!important;grid-template-columns:37% minmax(0,1fr) 12px!important;grid-template-rows:auto!important;align-items:center!important;gap:5px!important}
+html body.ms375-home main.ms470-home .ms470-grid>a.ms470-card>.ms470-art{grid-column:1!important;grid-row:1!important;position:relative!important;inset:auto!important;transform:none!important;float:none!important;display:flex!important;justify-content:center!important;align-items:center!important;width:100%!important;height:auto!important;max-height:95px!important;font-size:clamp(32px,7vw,56px)!important;overflow:visible!important}
+html body.ms375-home main.ms470-home .ms470-grid>a.ms470-card>.ms470-copy{grid-column:2!important;grid-row:1!important;position:relative!important;inset:auto!important;transform:none!important;float:none!important;display:block!important;width:auto!important;max-width:100%!important;min-width:0!important}
+html body.ms375-home main.ms470-home .ms470-grid>a.ms470-card>.ms470-next{grid-column:3!important;grid-row:1!important;position:static!important;transform:none!important}
+html body.ms375-home main.ms470-home .ms470-card strong{display:block!important;margin:0!important}
+html body.ms375-home main.ms470-home .ms470-card small{display:block!important;margin-top:7px!important}
+}
