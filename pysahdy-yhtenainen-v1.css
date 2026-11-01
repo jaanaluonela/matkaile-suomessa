@@ -31,3 +31,23 @@ body.ms302-stops-page .ms-stop-discovery>h2,body.ms302-stops-page .ms-stop-disco
 body.ms302-stops-page .msroute-tabs [data-mode="near"]{display:block!important;width:100%!important}
 body.ms302-stops-page .ms302-stops-search .ms302-stops-fields[hidden],body.ms302-stops-page .ms302-stops-search .ms302-category-select[hidden]{display:none!important}
 body.ms302-stops-page .ms-stop-quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+
+/* Approved six-tile layout and municipal dropdown */
+body.ms302-stops-page .ms-stop-quick-grid button[data-stop-filter="viewpoint"]{display:flex!important}
+body.ms302-stops-page .ms-stop-quick-grid button{position:relative;min-height:120px!important;padding:12px 5px!important;gap:8px!important}
+body.ms302-stops-page .ms-stop-quick-grid button span[aria-hidden]{display:grid;place-items:center;width:90%;height:58px;border-radius:14px;background:linear-gradient(145deg,#c7ebff,#e5f3dc);color:#075b47}
+body.ms302-stops-page .ms-stop-quick-grid button span[aria-hidden] svg{width:43px!important;height:43px!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-municipality){background:white;border:1px solid #d2e0d7;border-radius:17px;padding:12px}
+body.ms302-stops-page .ms302-stops-fields{flex-direction:column!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-query){order:-1!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-town){order:2!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-municipality){order:3!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-town),body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-municipality){display:none!important}
+body.ms302-stops-page .ms302-stops-fields{display:contents!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-query){order:2!important}
+body.ms302-stops-page .ms-stop-quick{order:3!important}
+body.ms302-stops-page .msroute-panel{order:4!important}
+body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-town),body.ms302-stops-page .ms302-stops-fields>label:has(#ms302-municipality){display:block!important;order:5!important}
+body.ms302-stops-page .ms302-category-select{order:6!important}
+body.ms302-stops-page .ms302-results-head{order:7!important}
+body.ms302-stops-page .ms302-results{order:8!important}
