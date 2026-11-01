@@ -20,3 +20,20 @@ body.ms375-home .ms460-home{display:block!important;max-width:none;padding:0 0 2
 @media(max-width:360px){.ms460-card{min-height:120px;padding:7px 4px}.ms460-card img{height:77px}.ms460-card small{margin-top:4px}}
 }
 @media(min-width:900px){.ms460-home{display:none!important}}
+
+/* Korjaus: korttien luettavuus pienillä puhelimilla */
+@media(max-width:899px){
+.ms460-grid{gap:10px}
+.ms460-card{grid-template-columns:minmax(0,39%) minmax(0,1fr) 13px;gap:5px;padding:12px 8px;min-height:146px}
+.ms460-card span{min-width:0}
+.ms460-card strong{font-size:clamp(12px,3vw,18px);overflow-wrap:normal;word-break:normal;hyphens:auto}
+.ms460-card small{font-size:clamp(11px,2.65vw,15px);overflow-wrap:normal;hyphens:auto}
+.ms460-card img{height:110px;object-fit:contain}
+.ms460-arrow{font-size:22px}
+.ms460-search .ms460-glass{font-size:0}
+.ms460-search .ms460-glass:before{content:"";display:block;width:19px;height:19px;border:3px solid #075044;border-radius:50%;position:relative}
+.ms460-search .ms460-glass:after{content:"";display:block;width:12px;height:3px;background:#075044;transform:translate(15px,-1px) rotate(47deg);border-radius:3px}
+.ms460-search button{font-size:0;position:relative}
+.ms460-search button:before{content:"";position:absolute;width:21px;height:21px;border:3px solid white;border-radius:50%;left:19px;top:17px}
+.ms460-search button:after{content:"";position:absolute;width:14px;height:3px;background:white;transform:rotate(47deg);left:39px;top:43px;border-radius:3px}
+}
