@@ -5,8 +5,32 @@ function el(tag,text,cls){const e=document.createElement(tag);if(text)e.textCont
 function safeUrl(url){try{const u=new URL(url,location.href);return ['http:','https:','file:'].includes(u.protocol)?u.href:null;}catch{return null;}}
 function render(){if(!origin)return;const kind=$('kind').value,radius=Number($('radius').value);const matches=data.filter(p=>Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&(kind==='all'||(kind==='highlights'?['sight','stop'].includes(p.type):p.type===kind))).map(p=>({...p,d:distance(origin,p)})).filter(p=>p.d<=radius).sort((a,b)=>a.d-b.d||a.name.localeCompare(b.name,'fi'));$('results').replaceChildren();$('count').textContent=matches.length+' kohdetta · lähimmästä alkaen';if(!matches.length){$('results').append(el('p','Tältä etäisyydeltä ei löytynyt oppaan kohteita. Laajenna etäisyyttä tai vaihda kohderyhmää.'));return;}for(const p of matches){const c=el('article',null,'result');c.append(el('h2',p.name));const meta=el('p',p.city+' · '+(labels[p.type]||''),'meta');meta.append(' ',el('span',new Intl.NumberFormat('fi-FI',{maximumFractionDigits:1}).format(p.d)+' km','distance'));c.append(meta);if(p.address)c.append(el('p',p.address));if(p.description)c.append(el('p',p.description));if(p.coordinate_note)c.append(el('p',p.coordinate_note,'note'));const actions=el('div',null,'actions');const href=safeUrl(p.url);if(href){const a=el('a','Tutustu →');a.href=href;actions.append(a);}const a=el('a',p.map_only?'Näytä kartalla ↗':'Ajo-ohje ↗');a.href=p.map_only?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.lat+','+p.lon):'https://www.google.com/maps/dir/?api=1&origin='+origin.lat+','+origin.lon+'&destination='+encodeURIComponent(p.lat+','+p.lon)+'&travelmode=driving';a.target='_blank';a.rel='noopener';actions.append(a);c.append(actions);$('results').append(c);}}
 for(const p of origins){const o=document.createElement('option');o.value=p.name;$('origins').append(o);}
-$('choose').addEventListener('click',()=>{const input=normalize($('origin').value);const place=origins.find(p=>normalize(p.name)===input||(p.aliases||[]).some(a=>normalize(a)===input));if(!place){$('status').textContent='Valitse lähtöpaikka ehdotuslistasta. Kaikkia paikkakuntia ei vielä ole mukana.';return;}request++;$('locate').disabled=false;origin={lat:place.lat,lon:place.lon};$('status').textContent='Lähtöpaikka: '+place.name+' (keskusta).';render();});
-$('locate').addEventListener('click',()=>{if(!navigator.geolocation){$('status').textContent='Sijainti ei ole käytettävissä. Valitse lähtöpaikka.';return;}const token=++request;$('locate').disabled=true;$('status').textContent='Haetaan sijaintiasi…';navigator.geolocation.getCurrentPosition(p=>{if(token!==request)return;$('locate').disabled=false;origin={lat:p.coords.latitude,lon:p.coords.longitude};$('origin').value='';$('status').textContent='Nykyinen sijainti käytössä.';render();},e=>{if(token!==request)return;$('locate').disabled=false;$('status').textContent=e.code===1?'Sijaintilupaa ei annettu. Valitse lähtöpaikka.':'Sijaintia ei saatu. Yritä uudelleen tai valitse lähtöpaikka.';},{timeout:15000,maximumAge:60000,enableHighAccuracy:false});});$('origin').addEventListener('keydown',e=>{if(e.key==='Enter'){$('choose').click();e.preventDefault();}});$('kind').addEventListener('change',render);$('radius').addEventListener('change',render);
-$('search').addEventListener('click',()=>{if($('origin').value.trim()){$('choose').click();}else if(origin){render();}else{$('status').textContent='Käytä sijaintiasi tai kirjoita lähtöpaikka ennen hakua.';return;}if(origin&&$('status').textContent.startsWith('Lähtöpaikka:'))$('results').scrollIntoView?.({behavior:'smooth',block:'start'});});
+$('choose').addEventListener('click',()=>{const input=normalize($('origin').value);const place=origins.find(p=>normalize(p.name)===input||(p.aliases||[]).some(a=>normalize(a)===input));if(!place){$('status').textContent='Valitse lähtöpaikka ehdotuslistasta. Kaikkia paikkakuntia ei vielä ole mukana.';return;}request++;$('locate').disabled=false;$('search').disabled=false;origin={lat:place.lat,lon:place.lon};$('status').textContent='Lähtöpaikka: '+place.name+' (keskusta).';render();});
+function showLocationError(message){
+ origin=null;$('count').textContent='';$('status').textContent=message;
+ $('results').replaceChildren(el('p',message));
+ $('status').scrollIntoView?.({behavior:'smooth',block:'center'});
+}
+function locate(){
+ if($('locate').disabled)return;
+ if(!navigator.geolocation){showLocationError('Sijainti ei ole käytettävissä tässä selaimessa. Kirjoita lähtöpaikka yllä olevaan kenttään.');return;}
+ const token=++request;
+ $('locate').disabled=true;$('search').disabled=true;
+ $('status').textContent='Haetaan sijaintiasi… Salli selaimen sijaintipyyntö.';
+ $('count').textContent='';$('results').replaceChildren(el('p','Haetaan sijaintiasi…'));
+ const finish=()=>{$('locate').disabled=false;$('search').disabled=false;};
+ try{navigator.geolocation.getCurrentPosition(p=>{
+  if(token!==request)return;finish();
+  origin={lat:p.coords.latitude,lon:p.coords.longitude};$('origin').value='';
+  $('status').textContent='Nykyinen sijainti käytössä.';render();
+  $('count').scrollIntoView?.({behavior:'smooth',block:'start'});
+ },e=>{
+  if(token!==request)return;finish();
+  showLocationError(e.code===1?'Sijaintilupaa ei annettu. Salli sijainti selaimen asetuksista tai kirjoita lähtöpaikka yllä olevaan kenttään.':e.code===3?'Sijainnin haku aikakatkaistiin. Yritä uudelleen tai kirjoita lähtöpaikka yllä olevaan kenttään.':'Sijaintia ei saatu. Yritä uudelleen tai kirjoita lähtöpaikka yllä olevaan kenttään.');
+ },{timeout:15000,maximumAge:60000,enableHighAccuracy:false});}
+ catch(e){finish();showLocationError('Sijainti ei ole käytettävissä. Kirjoita lähtöpaikka yllä olevaan kenttään.');}
+}
+$('locate').addEventListener('click',locate);$('origin').addEventListener('keydown',e=>{if(e.key==='Enter'){$('choose').click();e.preventDefault();}});$('kind').addEventListener('change',render);$('radius').addEventListener('change',render);
+$('search').addEventListener('click',()=>{if($('origin').value.trim()){$('choose').click();}else if(origin){render();}else{locate();return;}if(origin&&$('status').textContent.startsWith('Lähtöpaikka:'))$('results').scrollIntoView?.({behavior:'smooth',block:'start'});});
 window.nearbyDistance=distance;
 })();
