@@ -1,0 +1,22 @@
+/* Hyväksytty kuuden kortin mobiilietusivu 1.11.2026 */
+@media(max-width:899px){
+body.ms375-home .ms375-header,body.ms375-home .ms382-header,body.ms375-home .page-main,body.ms375-home .ms382-desktop{display:none!important}
+body.ms375-home{background:#f4f8f5;padding-bottom:calc(82px + env(safe-area-inset-bottom));}
+body.ms375-home .ms460-home{display:block!important;max-width:none;padding:0 0 22px;margin:0}
+.ms460-hero{height:clamp(155px,33vw,295px);background:url('hero-etusivu.jpg') center/cover;position:relative}
+.ms460-brand{position:absolute;top:20px;left:17px;display:flex;align-items:center;gap:9px;color:#07483c;text-decoration:none;text-shadow:0 1px 5px #ffffffb8}
+.ms460-brand img{width:52px;height:52px;object-fit:contain}.ms460-brand strong{font-size:clamp(22px,5vw,35px);line-height:1.02;font-weight:850;max-width:230px}
+.ms460-content{padding:0 12px}
+.ms460-search{position:relative;display:flex;align-items:center;margin:-2px 2px 14px;background:#fff;border:1px solid #d4e0da;border-radius:18px;overflow:hidden;height:67px;box-shadow:0 2px 5px #173f3210}
+.ms460-search .ms460-glass{padding-left:17px;font-size:28px;color:#064f43}
+.ms460-search input{width:100%;min-width:0;flex:1;border:0;background:transparent;padding:10px 12px;font-size:clamp(13px,3.5vw,18px);outline:none}
+.ms460-search button{height:100%;width:64px;border:0;background:#005b4d;color:#fff;font-size:31px;cursor:pointer}
+.ms460-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ms460-card{display:grid;grid-template-columns:40% minmax(0,1fr) 10px;gap:4px;align-items:center;min-height:145px;padding:10px 7px;background:white;border:1px solid #d6e4dd;border-radius:19px;text-decoration:none;color:#084a3e;box-shadow:0 1px 2px #123a3210}
+.ms460-card img{width:100%;height:100px;object-fit:contain}
+.ms460-card strong{display:block;font-size:clamp(13px,3.1vw,19px);line-height:1.13;overflow-wrap:anywhere}
+.ms460-card small{display:block;margin-top:8px;font:clamp(11px,2.8vw,16px)/1.25 Georgia,serif;color:#202c27}
+.ms460-arrow{font-size:25px;font-weight:800;align-self:center}
+@media(max-width:360px){.ms460-card{min-height:120px;padding:7px 4px}.ms460-card img{height:77px}.ms460-card small{margin-top:4px}}
+}
+@media(min-width:900px){.ms460-home{display:none!important}}
