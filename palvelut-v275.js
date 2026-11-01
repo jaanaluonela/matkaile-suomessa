@@ -16,6 +16,7 @@
   ['greywater','🔧 Harmaaveden tyhjennys','Harmaaveden tyhjennys']
  ];
  function init(){
+   if(document.body.dataset.stayDesign==='483')return;
    const group=document.querySelector('.ms275-services-panel .ms275-services-choices');
    if(!group)return;
    const services=document.body.dataset.kind==='park'?PARK_SERVICES:
