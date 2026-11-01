@@ -61,8 +61,8 @@
    const serviceBoxes=[...document.querySelectorAll('.ms275-service-choice')];
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
-   const parkServices=new Set(['electric','wc','greywater']);
-   const campingServices=new Set(['electric','sauna','cottages','laundry','greywater','chemical']);
+   const parkServices=new Set(['electric','wc','shower','sauna','playground','greywater']);
+   const campingServices=new Set(['electric','wc','shower','sauna','playground','cottages','laundry','greywater','chemical']);
    if(!container||!search||!kindButtons.length)return;
    const urlKind=new URLSearchParams(location.search).get('tyyppi');
    let kind=['camping','park'].includes(urlKind)?urlKind:'all';
