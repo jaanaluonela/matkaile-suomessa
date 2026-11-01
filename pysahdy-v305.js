@@ -7,9 +7,10 @@
  if(!town||!input||!results||!count) return;
  const buttons=[...document.querySelectorAll('[data-ms302-category]')];
  const categorySelect=document.getElementById('ms302-category-select');
+ const municipality=document.getElementById('ms302-municipality');
  const favKey='ms_favorites_v301';
  const norm=s=>String(s||'').toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
- const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','child','outlet','camping','park']);
+ const allowed=new Set(['all','sight','special','nature','stop','ruukki','food','child','outlet','camping','park','viewpoint']);
  const params=new URLSearchParams(location.search);
  let category=allowed.has(params.get('tyyppi'))?params.get('tyyppi'):'all';
  let visible=12;
@@ -62,7 +63,9 @@
  }
  input.value=params.get('haku')||params.get('q')||'';
  const matchesType=p=>{
+   if(['camping','park'].includes(p.kind))return false;
    if(category==='all')return true;
+   if(category==='viewpoint')return /näköala|näkötorni|näköalapaikka|näköalatasanne|maisemapaikka|maisematorni|viewpoint/i.test(p.name+' '+(p.description||''));
    if(category==='camping'||category==='park')return p.kind===category;
    if(category==='special')return !!p.special;
    if(category==='child')return !!p.child;
@@ -106,14 +109,14 @@
    actions.append(makeFavorite(p));card.append(actions);return card;
  }
  function saveUrl(){const url=new URL(location.href);
-   for(const [k,v] of [['tyyppi',category==='all'?'':category],['maakunta',town.value],['haku',input.value.trim()]]){
+   for(const [k,v] of [['tyyppi',category==='all'?'':category],['maakunta',town.value],['kunta',municipality?.value||''],['haku',input.value.trim()]]){
      if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);
    }
-   url.searchParams.delete('kunta');url.searchParams.delete('q');history.replaceState(null,'',url);
+   url.searchParams.delete('q');history.replaceState(null,'',url);
  }
  function render(){
    const q=norm(input.value.trim());
-   const matches=items.filter(p=>matchesType(p)&&(!town.value||regionOf(p)===town.value)&&(!q||norm([p.name,p.city,p.region,p.description,p.address].join(' ')).includes(q)));
+   const matches=items.filter(p=>matchesType(p)&&(!municipality?.value||norm(p.city)===norm(municipality.value))&&(!town.value||regionOf(p)===town.value)&&(!q||norm([p.name,p.city,p.region,p.description,p.address].join(' ')).includes(q)));
    const uniqueCount=matches.length;
    count.textContent=(town.value||'Koko Suomi')+' · '+uniqueCount+(uniqueCount===1?' kohde':' kohdetta');
    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.ms302Category===category)));
@@ -127,8 +130,11 @@
  function update(){visible=12;saveUrl();render();}
  buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.ms302Category;update();}));
  categorySelect?.addEventListener('change',()=>{category=categorySelect.value;update();});
- input.addEventListener('input',update);town.addEventListener('change',update);
+ function populateMunicipalities(){if(!municipality)return;const selected=municipality.value;municipality.replaceChildren(new Option(town.value?'Kaikki kunnat':'Valitse ensin maakunta...',''));for(const name of (regions[town.value]||[]).slice().sort((a,b)=>a.localeCompare(b,'fi')))municipality.add(new Option(name,name));municipality.disabled=!town.value;if([...municipality.options].some(o=>o.value===selected))municipality.value=selected;}
+ populateMunicipalities();const initialMunicipality=params.get('kunta');if(initialMunicipality&&municipality&&[...municipality.options].some(o=>norm(o.value)===norm(initialMunicipality)))municipality.value=[...municipality.options].find(o=>norm(o.value)===norm(initialMunicipality)).value;
+ municipality?.addEventListener('change',update);
+ input.addEventListener('input',update);town.addEventListener('change',()=>{if(municipality)municipality.value='';populateMunicipalities();update();});
  more.addEventListener('click',()=>{visible+=12;render();});
- reset.addEventListener('click',()=>{category='all';town.value='';input.value='';update();input.focus();});
+ reset.addEventListener('click',()=>{category='all';town.value='';if(municipality)municipality.value='';populateMunicipalities();input.value='';update();input.focus();});
  render();
 })();
