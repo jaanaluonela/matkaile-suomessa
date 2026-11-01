@@ -35,5 +35,31 @@ function locate(){
 }
 $('locate').addEventListener('click',locate);$('origin').addEventListener('keydown',e=>{if(e.key==='Enter'){$('choose').click();e.preventDefault();}});$('kind').addEventListener('change',render);$('sort').addEventListener('change',render);document.querySelectorAll('[data-kind]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-kind]').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn));});$('kind').value=btn.dataset.kind;render();}));$('show-more').addEventListener('click',()=>{limit+=6;draw();});function tab(map){$('list-tab').classList.toggle('active',!map);$('map-tab').classList.toggle('active',map);$('results').hidden=map;$('show-more').style.display=map?'none':'';$('map-results').hidden=!map;if(map){const box=$('map-results');box.replaceChildren(el('p','Avaa kohteet kartalla:'));for(const p of found.slice(0,30)){const a=el('a',p.name+' ↗');a.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.lat+','+p.lon);a.target='_blank';a.rel='noopener';a.style.display='block';box.append(a);}}}$('list-tab').addEventListener('click',()=>tab(false));$('map-tab').addEventListener('click',()=>tab(true));$('radius').addEventListener('change',render);
 $('search').addEventListener('click',()=>{if($('origin').value.trim()){$('choose').click();}else if(origin){render();}else{locate();return;}if(origin&&$('status').textContent.startsWith('Lähtöpaikka:'))$('results').scrollIntoView?.({behavior:'smooth',block:'start'});});
-if(new URLSearchParams(location.search).get('yopyminen')==='1'){const allowed=['camping','park'];document.querySelectorAll('[data-kind]').forEach(b=>{if(!['all',...allowed].includes(b.dataset.kind))b.hidden=true;});const heading=document.querySelector('.near-page h1');if(heading)heading.textContent='🏕️ Yöpymispaikat lähellä minua';const lead=document.querySelector('.near-page .lead');if(lead)lead.textContent='Löydä lähimmät leirintäalueet ja matkaparkit.';const select=$('kind');for(const o of Array.from(select.options))if(!['all',...allowed].includes(o.value))o.remove();const original=matches;matches=function(p,k){if(!allowed.includes(p.type))return false;return original(p,k);};const locateButton=$('locate');locateButton.textContent='Hae lähellä olevat yöpymispaikat';const crumb=document.querySelector('.crumb');if(crumb)crumb.innerHTML='<a href="leirintaalueet.html">Yöpymispaikat</a> › Lähellä minua';}window.nearbyDistance=distance;
+if(new URLSearchParams(location.search).get('yopyminen')==='1'){const allowed=['camping','park'];document.querySelectorAll('[data-kind]').forEach(b=>{if(!['all',...allowed].includes(b.dataset.kind))b.hidden=true;});const heading=document.querySelector('.near-page h1');if(heading)heading.textContent='🏕️ Yöpymispaikat lähellä minua';const lead=document.querySelector('.near-page .lead');if(lead)lead.textContent='Löydä lähimmät leirintäalueet ja matkaparkit.';const select=$('kind');for(const o of Array.from(select.options))if(!['all',...allowed].includes(o.value))o.remove();const original=matches;matches=function(p,k){if(!allowed.includes(p.type))return false;return original(p,k);};const locateButton=$('locate');locateButton.textContent='Hae lähellä olevat yöpymispaikat';const crumb=document.querySelector('.crumb');if(crumb)crumb.innerHTML='<a href="leirintaalueet.html">Yöpymispaikat</a> › Lähellä minua';}if(new URLSearchParams(location.search).get('yopyminen')==='1'){
+  // Direct nearby-stays search: no second set of choices after the entry button.
+  const categorySection=document.querySelector('[data-kind]')?.parentElement;
+  if(categorySection)categorySection.style.display='none';
+  const filters=document.querySelector('.filters');
+  if(filters)filters.style.display='none';
+  $('radius').value='99999';
+  $('sort').value='near';
+  $('kind').value='all';
+  $('search').style.display='none';
+  $('locate').style.display='none';
+  const originField=$('origin');
+  const originControls=originField?.closest('.origin-controls')||originField?.parentElement;
+  // Keep the manual starting-point fallback accessible only when location fails.
+  if(originControls)originControls.style.display='none';
+  const fallback=()=>{
+    if(originControls)originControls.style.display='';
+    $('locate').style.display='';
+  };
+  const statusObserver=new MutationObserver(()=>{
+    if(!origin && /ei annettu|ei saatu|aikakatkaistiin|ei ole käytettävissä/.test($('status').textContent))fallback();
+  });
+  statusObserver.observe($('status'),{childList:true,characterData:true,subtree:true});
+  // Start the location request as soon as the dedicated page opens.
+  locate();
+}
+window.nearbyDistance=distance;
 })();
