@@ -45,7 +45,8 @@ if(new URLSearchParams(location.search).get('yopyminen')==='1'){const allowed=['
   if(filters)filters.hidden=true;
   $('radius').value='99999';
   $('sort').value='near';
-  $('kind').value='all';
+  const requestedKind=new URLSearchParams(location.search).get('tyyppi');
+  $('kind').value=['camping','park'].includes(requestedKind)?requestedKind:'all';
   $('search').hidden=true;
   $('locate').textContent='Yritä sijaintihakua uudelleen';
   $('status').textContent='Haetaan lähimmät yöpymispaikat…';
