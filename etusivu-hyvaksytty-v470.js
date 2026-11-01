@@ -1,0 +1,10 @@
+(()=>{function init(){if(!document.body.classList.contains('ms375-home')||document.querySelector('.ms470-home'))return;const cards=[
+['maakunnat.html','🗺️','Paikkakunnat','Tutustu kuntiin ympäri Suomen'],
+['leirintaalueet.html','🏕️','Yöpymispaikat','Leirintäalueet ja matkaparkit'],
+['pysahdy-matkalla.html','🅿️','Pysähdy matkalla','Nähtävyydet, kahvilat ja palvelut'],
+['reittisuunnittelu.html','📍','Suunnittele reitti','Ideat, reitit ja vinkit matkallesi'],
+['karavaanarin-vinkit.html','🪧','Karavaanarin vinkit','Hyödyllistä tietoa matkailuun'],
+['paivakirja.html','📸','Omat matkat','Tallenna suosikit ja pidä matkamuistoja']];
+const glass='<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="9"/><path d="m20 20 9 9"/></svg>';
+const logo='<svg viewBox="0 0 72 68" aria-hidden="true"><path fill="#075239" d="M9 44 24 14l15 30ZM27 44 47 4l21 40Z"/><path fill="#2b8150" d="M0 47 13 27l12 20Z"/><path d="M2 57C22 33 35 57 69 42M2 64C25 40 41 65 69 50" fill="none" stroke="#e4c449" stroke-width="6"/></svg>';
+const main=document.createElement('main');main.className='ms470-home';main.id='ms470-home';main.innerHTML='<section class="ms470-hero"><a href="index.html" class="ms470-brand">'+logo+'<strong>Matkaile<br>Suomessa</strong></a></section><div class="ms470-body"><form class="ms470-search" action="pysahdy-matkalla.html" method="get" role="search"><span class="glass">'+glass+'</span><input name="q" type="search" placeholder="Hae paikkakuntaa tai kohdetta..." aria-label="Hae paikkakuntaa tai kohdetta"><button type="submit" aria-label="Hae">'+glass+'</button></form><nav class="ms470-grid" aria-label="Etusivun valinnat">'+cards.map(c=>'<a class="ms470-card" href="'+c[0]+'"><span class="ms470-art" aria-hidden="true">'+c[1]+'</span><span class="ms470-copy"><strong>'+c[2]+'</strong><small>'+c[3]+'</small></span><span class="ms470-next" aria-hidden="true">›</span></a>').join('')+'</nav></div>';document.querySelector('.page-main')?.before(main)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()})();
