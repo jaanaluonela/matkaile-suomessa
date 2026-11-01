@@ -156,7 +156,7 @@
        if(show)visible++;
      }
      const category=kind==='park'?'matkaparkkia':kind==='camping'?'leirintäaluetta':'yöpymispaikkaa';
-     if(status)status.textContent=(city?.value||region?.value||'Koko Suomi')+' · '+visible+' / '+cards.length+' '+category;
+     if(status)status.textContent=(city?.value||region?.value||'Koko Suomi')+' · '+visible+' '+category;
      let empty=document.getElementById('ms347-empty');
      if(!empty){empty=document.createElement('p');empty.id='ms347-empty';empty.className='ms347-empty';container.insertAdjacentElement('afterend',empty);}
      empty.hidden=visible>0||!cards.length;
