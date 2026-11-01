@@ -21,3 +21,22 @@ body.ms375-home .ms470-home{display:block!important;margin:0;padding:0 0 20px;ma
 @media(max-width:365px){.ms470-card{padding:8px 5px;grid-template-columns:35% minmax(0,1fr) 9px;min-height:125px}.ms470-art{font-size:39px}.ms470-copy strong{font-size:12px}.ms470-copy small{font-size:10px;margin-top:5px}}
 }
 @media(min-width:900px){.ms470-home{display:none!important}}
+
+/* v471: override legacy homepage rules and prevent card artwork overlapping text */
+@media(max-width:899px){
+html body.ms375-home main.ms470-home{display:block!important;position:relative!important;visibility:visible!important;max-width:none!important;width:100%!important;padding:0 0 24px!important;margin:0!important}
+html body.ms375-home main.page-main,
+html body.ms375-home main.ms382-desktop,
+html body.ms375-home .new-hero,
+html body.ms375-home .new-quick,
+html body.ms375-home .ms375-header,
+html body.ms375-home .ms382-header{display:none!important}
+html body.ms375-home .ms470-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+html body.ms375-home a.ms470-card{display:grid!important;grid-template-columns:minmax(0,38%) minmax(0,1fr) 12px!important;align-items:center!important;gap:5px!important;position:relative!important;min-height:145px!important;padding:10px 7px!important;overflow:hidden!important}
+html body.ms375-home .ms470-card .ms470-art{position:static!important;display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;width:100%!important;max-width:100%!important;font-size:clamp(30px,7vw,60px)!important;line-height:1!important;overflow:hidden!important}
+html body.ms375-home .ms470-card .ms470-copy{position:static!important;display:block!important;min-width:0!important;z-index:1!important}
+html body.ms375-home .ms470-card .ms470-copy strong{font:800 clamp(12px,3vw,19px)/1.15 system-ui,sans-serif!important;overflow-wrap:normal!important;word-break:normal!important}
+html body.ms375-home .ms470-card .ms470-copy small{display:block!important;font:clamp(10px,2.6vw,15px)/1.25 Georgia,serif!important;margin-top:7px!important;overflow-wrap:normal!important;word-break:normal!important}
+html body.ms375-home .ms470-card .ms470-next{position:static!important;justify-self:center!important}
+html body.ms375-home .ms470-hero{background-image:url('etusivu-kuvitukset-v307.png')!important;background-position:center!important;background-size:cover!important}
+}
