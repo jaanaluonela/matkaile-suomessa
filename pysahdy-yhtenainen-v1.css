@@ -1,0 +1,23 @@
+/* Pysähdy matkalla – sama visuaalinen ilme kuin Yöpymispaikat, toiminnallisuus säilyy. */
+body.ms302-stops-page{background:#f0f7f2!important;color:#164b3e!important}
+body.ms302-stops-page .ms-stop-banner{height:clamp(145px,36vw,330px);background:#b6dcf0 url('yopymispaikat-maisema-v483.webp') center 58%/cover no-repeat;max-width:1180px;margin:0 auto}
+body.ms302-stops-page .ms-stop-crumb{max-width:1120px;margin:18px auto 0;padding:0 20px;color:#466456;font:700 16px system-ui}
+body.ms302-stops-page .ms-stop-crumb a{color:#145545;text-decoration:underline;text-underline-offset:4px}
+body.ms302-stops-page .ms302-stops{width:min(100% - 32px,1100px)!important;max-width:1100px!important;margin:0 auto!important;padding:16px 0 140px!important}
+body.ms302-stops-page .ms302-stops-intro.ms-stop-hero{background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;margin:0 0 14px!important;padding:0!important;color:#064f40!important}
+body.ms302-stops-page .ms-stop-hero-copy{padding:0!important;max-width:none!important}
+body.ms302-stops-page .ms-stop-eyebrow,body.ms302-stops-page .ms-stop-hero-cta{display:none!important}
+body.ms302-stops-page .ms302-stops-intro h1{font:800 clamp(32px,6vw,48px)/1.12 system-ui!important;letter-spacing:-.035em;color:#005340!important;margin:0 0 12px!important;text-shadow:none!important}
+body.ms302-stops-page .ms302-stops-intro p{font:600 clamp(16px,3.5vw,22px)/1.4 system-ui!important;color:#385b4d!important;margin:0!important;text-shadow:none!important}
+body.ms302-stops-page .ms-stop-quick{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:20px 0!important}
+body.ms302-stops-page .ms-stop-quick h2{font:800 23px system-ui!important;color:#064f40!important}
+body.ms302-stops-page .ms-stop-quick-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important}
+body.ms302-stops-page .ms-stop-quick-grid button{background:#fff!important;color:#075344!important;border:1px solid #cbdcd2!important;border-radius:18px!important;min-width:0!important;min-height:96px!important;padding:10px 5px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:7px!important;text-align:center!important;font:750 clamp(12px,2.9vw,16px)/1.2 system-ui!important}
+body.ms302-stops-page .ms-stop-quick-grid button[aria-pressed="true"],body.ms302-stops-page .ms-stop-quick-grid button.active{background:#005b4a!important;color:#fff!important;border:3px solid #005b4a!important}
+body.ms302-stops-page .ms-stop-quick-grid button svg{width:34px!important;height:34px!important}
+body.ms302-stops-page .ms302-stops-search{background:#fff!important;border:1px solid #d0dfd5!important;border-radius:20px!important;box-shadow:none!important;padding:18px!important}
+body.ms302-stops-page .ms302-stops-search input,body.ms302-stops-page .ms302-stops-search select{background:#fff!important;border:1px solid #c8d8ce!important;border-radius:13px!important;min-height:52px!important;color:#234e40!important}
+body.ms302-stops-page .ms302-stops-search label{color:#064f40!important;font-weight:750!important}
+body.ms302-stops-page #ms302-search-submit{background:#005b4a!important;color:#fff!important}
+body.ms302-stops-page .ms302-results-head{color:#064f40!important}
+@media(max-width:700px){body.ms302-stops-page .ms302-stops{width:calc(100% - 32px)!important}body.ms302-stops-page .ms-stop-quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
