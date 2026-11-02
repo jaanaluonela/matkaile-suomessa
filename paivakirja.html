@@ -92,6 +92,49 @@ body.ms-v363-diary #editor .photo-gallery.ms-gallery-preview{border:0;background
 body.ms-v363-diary #editor .photo-gallery.ms-gallery-preview .thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
 body.ms-v363-diary #editor textarea{border-color:#91b9a5}
 @media(max-width:420px){body.ms-v363-diary main{padding-inline:16px!important}body.ms-v363-diary main #trips .trip{min-height:130px!important}body.ms-v363-diary main #trips .trip-cover,body.ms-v363-diary .trip-empty{height:95px}body.ms-v363-diary .trip-action{font-size:.78rem;padding:7px}}
+</style><style id="diary-correction-v3">
+body.ms-v363-diary .diary-hero{background-image:url("omat-matkat-jarvimaisema.svg")!important;background-position:center!important;height:clamp(145px,27vw,225px)!important}
+body.ms-v363-diary .diary-heading img{mix-blend-mode:multiply!important}
+body.ms-v363-diary .diary-heading h1{font-family:system-ui,sans-serif!important;font-weight:850!important;font-size:clamp(2rem,7vw,3.6rem)!important;letter-spacing:-.035em!important;white-space:nowrap}
+body.ms-v363-diary .visited-heading,body.ms-v363-diary #editor h2{font-family:system-ui,sans-serif!important;font-weight:800!important}
+body.ms-v363-diary .trip-empty{font-size:0!important;position:relative}
+body.ms-v363-diary .trip-empty::before{content:"";width:45%;height:44%;border:3px solid #b7cbb9;background:linear-gradient(135deg,transparent 48%,#b7cbb9 49%,#b7cbb9 53%,transparent 54%)}
+body.ms-v363-diary .trip-empty::after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:#b7cbb9;transform:translate(-19px,-17px)}
+body.ms-v363-diary #editor:not(.hidden){display:flex!important;flex-direction:column!important}
+body.ms-v363-diary #editor.hidden{display:none!important}
+body.ms-v363-diary #editor .detail-heading{order:0}
+body.ms-v363-diary #editor>.card:first-of-type{order:1}
+body.ms-v363-diary #editor .editor-bar{order:2;padding:8px 0 0!important}
+body.ms-v363-diary #editor>.card.optional{order:3}
+body.ms-v363-diary #editor>.storage-note{order:4;font-size:.83rem!important}
+body.ms-v363-diary #editor>#remove{order:5;align-self:flex-start}
+body.ms-v363-diary #editor.visit-existing .basics-heading,
+body.ms-v363-diary #editor.visit-existing label[for="name"],
+body.ms-v363-diary #editor.visit-existing #name,
+body.ms-v363-diary #editor.visit-existing label[for="purpose"],
+body.ms-v363-diary #editor.visit-existing #purpose,
+body.ms-v363-diary #editor.visit-existing .rating,
+body.ms-v363-diary #editor.visit-existing #today,
+body.ms-v363-diary #editor.visit-existing .optional,
+body.ms-v363-diary #editor.visit-existing #photo-status,
+body.ms-v363-diary #editor.visit-existing .photo-add{display:none!important}
+body.ms-v363-diary #editor.visit-existing .date-row{display:block!important;background:#fff;border:1px solid #d4e4d8;border-radius:16px;padding:15px;margin:4px 0 20px}
+body.ms-v363-diary #editor.visit-existing label[for="begin"]{font-size:1.5rem!important;margin:4px 0 10px!important}
+body.ms-v363-diary #editor.visit-existing #begin{background:#fff!important;border:1px solid #8ab4a2!important}
+body.ms-v363-diary #editor.visit-existing>.card:first-of-type{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+body.ms-v363-diary #editor.visit-existing .photo-help{font-size:1rem!important;margin:0 0 8px!important}
+body.ms-v363-diary #editor.visit-existing #photo-gallery{margin:5px 0 18px}
+body.ms-v363-diary #editor.visit-existing textarea#diary{min-height:125px!important}
+body.ms-v363-diary #editor.visit-existing label[for="diary"]{font-size:1.5rem!important;margin:20px 0 10px!important}
+body.ms-v363-diary #editor.visit-existing #source-page{text-align:center}
+body.ms-v363-diary #editor .empty-photo-slots{display:none}
+body.ms-v363-diary #editor.no-photos .empty-photo-slots{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#fff;padding:10px;border:1px solid #d4e4d8;border-radius:15px}
+body.ms-v363-diary #editor.no-photos .empty-photo-slots label{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:130px;border-radius:13px;background:#edf6ef;color:#124e40;font-weight:800;font-size:1.7rem;cursor:pointer}
+body.ms-v363-diary #editor.no-photos .empty-photo-slots span{font-size:1rem}
+body.ms-v363-diary #editor.no-photos #photo-gallery,body.ms-v363-diary #editor.no-photos #all-photos{display:none!important}
+body.ms-v363-diary #editor.visit-existing:not(.no-photos) .photo-add{display:block!important}
+body.ms-v363-diary #editor.visit-existing .editor-bar #save{font-size:0!important}
+body.ms-v363-diary #editor.visit-existing .editor-bar #save::after{content:"Tallenna";font-size:1.2rem}
 </style></head><body class="ms-v363-diary"><div class="diary-hero" role="img" aria-label="Suomalainen järvimaisema, matkailuauto ja teltta"></div><main><div id="list-heading"><a href="index.html">Etusivu</a><span> › Omat matkat</span><div class="diary-heading"><div><h1>Omat matkat</h1><p class="muted">Tallenna käymäsi kohteet, kuvat ja muistot.</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
 <section id="list"><button id="new">＋ Lisää uusi matka tai käynti</button><p class="muted">Lisää paikka ja päivämäärä. Voit tallentaa myös kuvia ja muistoja.</p><h2 class="visited-heading">Käymäni paikat</h2><div id="trips"></div></section>
 <section id="editor" class="hidden"><div class="detail-heading"><button id="detail-back" type="button">‹ Omat matkat</button><div class="diary-heading"><div><h1 id="detail-title">Matka</h1><p id="detail-visited">✓ Olen käynyt täällä</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
@@ -102,7 +145,7 @@ body.ms-v363-diary #editor textarea{border-color:#91b9a5}
 <details class="optional"><summary>Useamman päivän matka</summary><label for="end">Päättymispäivä</label><input id="end" type="date"><p class="muted">Yhden päivän käynnille riittää ensimmäinen päivämäärä.</p></details>
 <h2>Omat kuvat</h2>
 <p class="photo-help">Lisää kuvia käynniltäsi. Aluksi näkyy kaksi kuvaa.</p>
-<div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
+<div class="empty-photo-slots"><label for="files">▣＋<span>Lisää kuva</span></label><label for="files">▣＋<span>Lisää kuva</span></label></div><div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
  <div class="cover-frame" id="cover-frame"><img class="hidden" id="cover-photo" alt="Valittu matkan kuva" tabindex="0" role="button" aria-label="Avaa kuva koko näytölle" title="Avaa kuva koko näytölle"><p class="cover-placeholder" id="cover-placeholder">Lisää ensimmäinen matkakuva. Se näkyy kansikuvana.</p><span class="cover-badge hidden" id="cover-badge">Kansikuva</span><button type="button" class="cover-arrow prev hidden" id="previous-photo" aria-label="Edellinen kuva">‹</button><button type="button" class="cover-arrow next hidden" id="next-photo" aria-label="Seuraava kuva">›</button></div>
  <div class="photo-controls"><small id="photo-position" role="status">Ei kuvia</small><button id="set-cover" type="button" class="hidden">Aseta kansikuvaksi</button><button id="delete-photo" type="button" class="hidden">Poista kuva</button></div>
  <div id="photo-thumbs" class="thumbs" role="group" aria-label="Selaa matkan kuvia sivuttain"></div>
@@ -153,7 +196,7 @@ function dateText(value){if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return value|
 async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}let records=[];try{records=await photoStore('get',null,null)}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.'}if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const cover=pictures.find(p=>p.id===t.coverPhotoId)||pictures[0];const url=URL.createObjectURL(cover.blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.rating?'★ '+t.rating+'/5':'',t.purpose||'',t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);const action=document.createElement('span');action.className='trip-action';action.textContent='▣  Lisää kuva ja muisto';info.append(action);b.append(info);if(!pictures.length){const empty=document.createElement('span');empty.className='trip-empty';empty.setAttribute('aria-hidden','true');empty.textContent='▧';b.append(empty)}b.onclick=()=>open(t.id);box.append(b)})}
 
 function back(){flushPhotoNote();if(photoBusy){status('Odota, kuvia tallennetaan.');return}if(dirty&&!capture())return;clearTimeout(saveTimer);active=null;clearPhotoGallery();$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
-function open(k){clearTimeout(saveTimer);dirty=false;status('');photosExpanded=false;active=k||id();selectedPhotoId=null;let t=trips.find(x=>x.id===active)||{};$('detail-title').textContent=t.name||'Uusi matka';$('detail-visited').classList.toggle('hidden',!t.visited);const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','purpose','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
+function open(k){clearTimeout(saveTimer);dirty=false;status('');photosExpanded=false;active=k||id();selectedPhotoId=null;let t=trips.find(x=>x.id===active)||{};$('editor').classList.toggle('visit-existing',!!t.id);$('detail-title').textContent=t.name||'Uusi matka';$('detail-visited').classList.toggle('hidden',!t.visited);const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','purpose','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
 function capture(){
   clearTimeout(saveTimer);if(active===null)return null;
   if($('begin').value&&$('end').value&&$('end').value<$('begin').value){status('Päättymispäivä on ennen käyntipäivää.',true);dirty=true;return null}
@@ -237,7 +280,7 @@ async function photos(preferredId){
  records=records.map((p,i)=>({...p,_order:i})).sort((a,b)=>(a.addedAt||0)-(b.addedAt||0)||a._order-b._order);
  if(version!==photoVersion||current!==active)return;
  closeLightbox();flushPhotoNote();photoUrls.forEach(url=>URL.revokeObjectURL(url));photoUrls=[];
- photoRecords=records;const thumbs=$('photo-thumbs');thumbs.replaceChildren();
+ photoRecords=records;$('editor').classList.toggle('no-photos',!records.length);const thumbs=$('photo-thumbs');thumbs.replaceChildren();
  for(let i=0;i<records.length;i++){
   const p=records[i],url=URL.createObjectURL(p.blob);photoUrls.push(url);
   const thumb=document.createElement('button'),img=document.createElement('img');
