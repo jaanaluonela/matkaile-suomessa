@@ -42,6 +42,13 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-h
 .lightbox-caption{display:block;word-wrap:break-word;font-weight:600}.lightbox-instruction{display:block;margin-top:2px;color:#b7c8be;font-size:12px}
 @media(max-width:450px){.lightbox-toolbar{min-height:52px}.lightbox-arrow{width:37px;min-height:42px;font-size:27px}.lightbox-footer{min-height:49px}}
 
+.photo-gallery.ms-gallery-preview .cover-frame,.photo-gallery.ms-gallery-preview .photo-controls,.photo-gallery.ms-gallery-preview .photo-note-box{display:none!important}
+.photo-gallery.ms-gallery-preview .thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;overflow:visible;padding:12px}
+.photo-gallery.ms-gallery-preview .thumb{width:100%;height:clamp(115px,34vw,190px);min-height:115px;border:0;border-radius:12px}
+.photo-gallery.ms-gallery-preview .thumb:nth-child(n+3){display:none}
+.photo-gallery.ms-gallery-preview .thumb img{width:100%;height:100%;object-fit:cover}
+#all-photos{display:block;margin:10px 0 0;background:#eaf2ea;color:#205b47;border:1px solid #bdd4c5;font-weight:700}
+#all-photos.hidden{display:none}
 </style><link rel="stylesheet" href="navigation-v191.css?v=339"><link rel="stylesheet" href="v244.css?v=244">
 <link rel="stylesheet" href="desktop-v339.css?v=339">
 <link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
@@ -59,14 +66,14 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom))}button,input{min-h
 <p id="source-page" class="hidden"><a id="source-link" href="#">Avaa kohteen sivu ↗</a></p>
 <div class="date-row"><div><label for="begin">Milloin kävit?</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button></div>
 <details class="optional"><summary>Useamman päivän matka</summary><label for="end">Päättymispäivä</label><input id="end" type="date"><p class="muted">Yhden päivän käynnille riittää ensimmäinen päivämäärä.</p></details>
-<h2>📷 Lisää matkakuvat</h2>
-<p class="photo-help">Voit lisätä yhden tai useita kuvia suoraan puhelimestasi. Kansikuva näkyy ensin. Selaa pikkukuvia <strong>sivuttain</strong>. Napauta suurta kuvaa avataksesi sen koko näytölle.</p>
+<h2>Omat kuvat</h2>
+<p class="photo-help">Lisää haluamasi määrä kuvia. Aluksi näkyy kaksi ensimmäistä kuvaa.</p>
 <div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
  <div class="cover-frame" id="cover-frame"><img class="hidden" id="cover-photo" alt="Valittu matkan kuva" tabindex="0" role="button" aria-label="Avaa kuva koko näytölle" title="Avaa kuva koko näytölle"><p class="cover-placeholder" id="cover-placeholder">Lisää ensimmäinen matkakuva. Se näkyy kansikuvana.</p><span class="cover-badge hidden" id="cover-badge">Kansikuva</span><button type="button" class="cover-arrow prev hidden" id="previous-photo" aria-label="Edellinen kuva">‹</button><button type="button" class="cover-arrow next hidden" id="next-photo" aria-label="Seuraava kuva">›</button></div>
  <div class="photo-controls"><small id="photo-position" role="status">Ei kuvia</small><button id="set-cover" type="button" class="hidden">Aseta kansikuvaksi</button><button id="delete-photo" type="button" class="hidden">Poista kuva</button></div>
  <div id="photo-thumbs" class="thumbs" role="group" aria-label="Selaa matkan kuvia sivuttain"></div>
  <details class="photo-note-box hidden" id="photo-note-box"><summary id="photo-note-toggle">✏️ Lisää kuvan kuvauspaikka tai muisto</summary><label for="photo-note">Mistä kuva on otettu? (valinnainen)</label><textarea id="photo-note" rows="2" placeholder="Esim. Repovesi – maisema riippusillalta"></textarea><small id="photo-note-status" role="status" aria-live="polite"></small></details>
-</div>
+</div><button id="all-photos" class="hidden" type="button" aria-expanded="false">Näytä kaikki kuvat</button>
 <label class="photo-add" for="files" tabindex="0" role="button">＋ Valitse kuvia puhelimesta</label><input id="files" class="visually-hidden" type="file" accept="image/*" multiple disabled><p id="photo-status" class="muted" role="status">Kuvien tallennusta avataan…</p>
 <label for="diary">Mitä teit ja mikä jäi mieleen? (valinnainen)</label><textarea id="diary" placeholder="Mitä näit? Mikä jäi mieleen?"></textarea>
 <fieldset class="rating"><legend>Oma arvio</legend><div class="stars" aria-label="Valitse 1–5 tähteä"><button type="button" data-rating="1" aria-label="1 tähti" aria-pressed="false">☆</button><button type="button" data-rating="2" aria-label="2 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="3" aria-label="3 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="4" aria-label="4 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="5" aria-label="5 tähteä" aria-pressed="false">☆</button></div><span id="rating-label" class="muted">Ei vielä arviota</span> <button id="clear-rating" class="quiet" type="button">Tyhjennä arvio</button></fieldset>
@@ -112,7 +119,7 @@ function dateText(value){if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return value|
 async function list(){const version=++listVersion;const box=$('trips');box.replaceChildren();if(!trips.length){box.textContent='Ei vielä tallennettuja matkoja.';return}let records=[];try{records=await photoStore('get',null,null)}catch(e){$('photo-status').textContent='Kuvien avaaminen ei onnistunut.'}if(version!==listVersion||active!==null)return;trips.forEach(t=>{let b=document.createElement('button');b.className='trip';const pictures=records.filter(p=>p.trip===t.id);if(pictures.length){let img=document.createElement('img');img.className='trip-cover';const cover=pictures.find(p=>p.id===t.coverPhotoId)||pictures[0];const url=URL.createObjectURL(cover.blob);img.src=url;img.alt='Matkan '+(t.name||'')+' kansikuva';img.onload=img.onerror=()=>URL.revokeObjectURL(url);b.append(img)}let info=document.createElement('span'),title=document.createElement('strong'),meta=document.createElement('span');info.className='trip-info';title.className='trip-title';meta.className='trip-meta';title.textContent=t.name||'Nimetön matka';meta.textContent=[t.rating?'★ '+t.rating+'/5':'',t.purpose||'',t.visited?'✓ Olen käynyt täällä':'',dateText(t.begin)+(t.end?' – '+dateText(t.end):''),pictures.length?pictures.length+' kuvaa':''].filter(Boolean).join(' · ')||'Avaa päiväkirja';info.append(title,meta);b.append(info);b.onclick=()=>open(t.id);box.append(b)})}
 
 function back(){flushPhotoNote();if(photoBusy){status('Odota, kuvia tallennetaan.');return}if(dirty&&!capture())return;clearTimeout(saveTimer);active=null;clearPhotoGallery();$('editor').classList.add('hidden');$('list').classList.remove('hidden');list()}
-function open(k){clearTimeout(saveTimer);dirty=false;status('');active=k||id();selectedPhotoId=null;let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','purpose','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
+function open(k){clearTimeout(saveTimer);dirty=false;status('');photosExpanded=false;active=k||id();selectedPhotoId=null;let t=trips.find(x=>x.id===active)||{};const src=$('source-page');const link=$('source-link');if(t.sourceUrl&&/^[a-z0-9][a-z0-9._-]*\.html$/i.test(t.sourceUrl)){link.href=t.sourceUrl;src.classList.remove('hidden')}else{src.classList.add('hidden')}for(let f of ['name','purpose','begin','end','diary'])$(f).value=t[f]||'';rating=Number(t.rating)||0;updateRating();$('remove').classList.toggle('hidden',!t.id);$('end').closest('details').open=!!t.end;$('list').classList.add('hidden');$('editor').classList.remove('hidden');stops();photos();window.scrollTo(0,0)}
 function capture(){
   clearTimeout(saveTimer);if(active===null)return null;
   if($('begin').value&&$('end').value&&$('end').value<$('begin').value){status('Päättymispäivä on ennen käyntipäivää.',true);dirty=true;return null}
@@ -137,12 +144,21 @@ function photoStore(mode,value,trip=active){return new Promise((resolve,reject)=
  tx.oncomplete=()=>resolve(mode==='get'?result:null);tx.onerror=tx.onabort=()=>reject(tx.error||Error('Kuvan tallennus epäonnistui'));
  }catch(e){reject(e)}
 })}
-let photoRecords=[], selectedPhotoId=null, photoVersion=0,photoUrls=[],noteTimer=null;
+let photoRecords=[], selectedPhotoId=null, photoVersion=0,photoUrls=[],noteTimer=null,photosExpanded=false;
 const photoSaveQueues=new Map();
+function updateGalleryPresentation(){
+ const preview=!photosExpanded&&photoRecords.length>0;
+ $('photo-gallery').classList.toggle('ms-gallery-preview',preview);
+ const toggle=$('all-photos');
+ toggle.classList.toggle('hidden',photoRecords.length<=2);
+ toggle.textContent=photosExpanded?'Näytä vain kaksi kuvaa':'Näytä kaikki kuvat ('+photoRecords.length+')';
+ toggle.setAttribute('aria-expanded',String(photosExpanded));
+}
+$('all-photos').onclick=()=>{photosExpanded=!photosExpanded;updateGalleryPresentation()};
 function clearPhotoGallery(){
  ++photoVersion;clearTimeout(noteTimer);noteTimer=null;
  photoUrls.forEach(url=>URL.revokeObjectURL(url));photoUrls=[];
- closeLightbox();photoRecords=[];selectedPhotoId=null;$('photo-thumbs').replaceChildren();
+ closeLightbox();photoRecords=[];selectedPhotoId=null;photosExpanded=false;$('photo-thumbs').replaceChildren();updateGalleryPresentation();
 }
 function currentPhoto(){return photoRecords.find(p=>p.id===selectedPhotoId)||null}
 function coverId(){return trips.find(t=>t.id===active)?.coverPhotoId||photoRecords[0]?.id}
@@ -196,11 +212,12 @@ async function photos(preferredId){
   if(p.id===coverId()){
    const badge=document.createElement('span');badge.className='thumb-cover';badge.textContent='★';thumb.append(badge);
   }
-  thumb.onclick=()=>showPhoto(p.id);thumbs.append(thumb);
+  thumb.onclick=()=>{showPhoto(p.id);if(!photosExpanded)openLightbox()};thumbs.append(thumb);
  }
  const wanted=preferredId||selectedPhotoId||coverId();
  $('photo-status').textContent=records.length?records.length+' kuvaa yhdessä kansiossa. Selaa pikkukuvia sivuttain.':'Kuvakansio on vielä tyhjä.';
  showPhoto(records.some(p=>p.id===wanted)?wanted:(coverId()||records[0]?.id));
+ updateGalleryPresentation();
 }
 function stepPhoto(offset){
  const idx=photoRecords.findIndex(p=>p.id===selectedPhotoId);const next=idx+offset;
