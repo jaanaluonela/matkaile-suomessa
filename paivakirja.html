@@ -144,13 +144,39 @@ body.ms-v363-diary #editor.no-photos #photo-gallery,body.ms-v363-diary #editor.n
 body.ms-v363-diary #editor.visit-existing:not(.no-photos) .photo-add{display:block!important}
 body.ms-v363-diary #editor.visit-existing .editor-bar #save{font-size:0!important}
 body.ms-v363-diary #editor.visit-existing .editor-bar #save::after{content:"Tallenna";font-size:1.2rem}
-</style></head><body class="ms-v363-diary"><div class="diary-hero" role="img" aria-label="Suomalainen järvimaisema, matkailuauto ja teltta"></div><main><div id="list-heading"><a href="index.html">Etusivu</a><span> › Omat matkat</span><div class="diary-heading"><div><h1>Omat matkat</h1><p class="muted">Tallenna käymäsi kohteet, kuvat ja muistot.</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
+</style>
+<style id="compact-trip-dates">
+body.ms-v363-diary #editor .trip-dates,
+body.ms-v363-diary #editor.visit-existing .trip-dates {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+  padding: 10px;
+}
+body.ms-v363-diary #editor .trip-dates > div { min-width: 0; }
+body.ms-v363-diary #editor .trip-dates > div:nth-of-type(2) { grid-column: 2; grid-row: 1; }
+body.ms-v363-diary #editor .trip-dates label {
+  font-size: 1rem !important;
+  margin: 0 0 4px !important;
+}
+body.ms-v363-diary #editor .trip-dates input[type="date"] {
+  min-height: 44px;
+  font-size: 1rem;
+  padding: 6px;
+  margin: 0;
+}
+body.ms-v363-diary #editor .trip-dates #today,
+body.ms-v363-diary #editor .trip-dates p { grid-column: 1 / -1; }
+body.ms-v363-diary #editor .trip-dates p { margin: 0; }
+</style>
+</head><body class="ms-v363-diary"><div class="diary-hero" role="img" aria-label="Suomalainen järvimaisema, matkailuauto ja teltta"></div><main><div id="list-heading"><a href="index.html">Etusivu</a><span> › Omat matkat</span><div class="diary-heading"><div><h1>Omat matkat</h1><p class="muted">Tallenna käymäsi kohteet, kuvat ja muistot.</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
 <section id="list"><button id="new">＋ Lisää uusi matka tai käynti</button><p class="muted">Lisää paikka ja päivämäärä. Voit tallentaa myös kuvia ja muistoja.</p><h2 class="visited-heading">Käymäni paikat</h2><div id="trips"></div></section>
 <section id="editor" class="hidden"><div class="detail-heading"><button id="detail-back" type="button">‹ Omat matkat</button><div class="diary-heading"><div><h1 id="detail-title">Matka</h1><p id="detail-visited">✓ Olen käynyt täällä</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
 <div class="editor-bar"><button id="back" class="quiet">← Omat matkat</button><p id="save-status" role="status" aria-live="polite"></p><button id="save">Valmis ✓</button></div>
 <div class="card"><h2 class="basics-heading">Matkan perustiedot</h2><label for="name">Missä kävit? / Matkan nimi</label><input id="name" placeholder="Esim. Rovaniemi, mökkiviikonloppu tai kesäloma" autocomplete="off"><label for="purpose">Matkan tarkoitus</label><select id="purpose"><option value="">Valitse halutessasi</option><option value="Lomamatka">Lomamatka</option><option value="Päiväretki">Päiväretki</option><option value="Sukulaisten tai ystävien luona">Sukulaisten tai ystävien luona</option><option value="Työmatka">Työmatka</option><option value="Harrastus tai tapahtuma">Harrastus tai tapahtuma</option><option value="Luontoretki">Luontoretki</option><option value="Muu matka">Muu matka</option></select>
 <p id="source-page" class="hidden"><a id="source-link" href="#">Avaa kohteen sivu ↗</a></p>
-<div class="date-row trip-dates"><div><label for="begin">Alkupäivä</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button><div><label for="end">Loppupäivä</label><input id="end" type="date"></div><p class="muted">Yhden päivän käynnille riittää alkupäivä. Useamman päivän matkalle merkitse myös loppupäivä.</p></div>
+<div class="date-row trip-dates"><div><label for="begin">Alkupäivä</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button><div><label for="end">Loppupäivä</label><input id="end" type="date"></div><p class="muted">Loppupäivä vain useamman päivän matkalle.</p></div>
 <h2>Omat kuvat</h2>
 <p class="photo-help">Lisää kuvia käynniltäsi. Aluksi näkyy kaksi kuvaa.</p>
 <div class="empty-photo-slots"><label for="files">▣＋<span>Lisää kuva</span></label><label for="files">▣＋<span>Lisää kuva</span></label></div><div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
