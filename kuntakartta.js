@@ -43,7 +43,12 @@
 
   function focusMap(element, section) {
     element.focus({ preventScroll: true });
-    section.scrollIntoView({ block: 'start' });
+    if (section === region) {
+      const safeTop = parseFloat(getComputedStyle(region).scrollMarginTop) || 0;
+      window.scrollTo({ top: window.scrollY + region.getBoundingClientRect().top - safeTop, behavior: 'instant' });
+    } else {
+      section.scrollIntoView({ block: 'start' });
+    }
   }
 
   function render(name, href) {
@@ -54,20 +59,32 @@
     townLinks = new Map(towns.map(([town, page]) => [
       town, page || 'kuntakortti.html?kunta=' + encodeURIComponent(town)
     ]));
-    // Keep crowded labels readable. Every area remains selectable and named for assistive technology.
-    const boxes = [];
-    svg.innerHTML = towns.map(([town, , x, y, path]) => {
-      const halfWidth = town.length * 3.8 + 3;
-      const box = [x - halfWidth, y - 9, x + halfWidth, y + 9];
-      const visible = box[0] >= 0 && box[2] <= width &&
-        !boxes.some(([left, top, right, bottom]) =>
-          box[0] < right && box[2] > left && box[1] < bottom && box[3] > top);
-      if (visible) boxes.push(box);
-      return `<a href="${townLinks.get(town)}" aria-label="${town}" data-town="${town}">
+    // Draw all boundaries first so neighboring municipalities cannot cover a label.
+    svg.innerHTML = towns.map(([town, , , , path]) =>
+      `<a href="${townLinks.get(town)}" aria-label="${town}" data-town="${town}">
         <path d="${path}" fill-rule="evenodd"></path>
-        ${visible ? `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central">${town}</text>` : ''}
-      </a>`;
-    }).join('');
+      </a>`).join('') + '<g class="ph-labels" aria-hidden="true"></g>';
+
+    const labels = svg.querySelector('.ph-labels');
+    const boxes = [];
+    for (const [town, , x, y] of towns) {
+      const label = document.createElementNS(svg.namespaceURI, 'text');
+      label.setAttribute('x', x);
+      label.setAttribute('y', y);
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('dominant-baseline', 'central');
+      label.textContent = town;
+      labels.append(label);
+
+      const bounds = label.getBBox();
+      const box = [bounds.x - 3, bounds.y - 3, bounds.x + bounds.width + 3, bounds.y + bounds.height + 3];
+      const fits = box[0] >= 0 && box[1] >= 0 && box[2] <= width && box[3] <= height;
+      const overlaps = boxes.some(([left, top, right, bottom]) =>
+        box[0] < right && box[2] > left && box[1] < bottom && box[3] > top);
+      if (fits && !overlaps) boxes.push(box);
+      else label.remove();
+    }
+
     list.querySelector('ul').innerHTML = towns.map(([town]) =>
       `<li><button type="button" data-town="${town}">${town}</button></li>`).join('');
     list.open = false;
@@ -84,8 +101,8 @@
     if (!link || !maps[link.dataset.region] || modified(event)) return;
     event.preventDefault();
     returnLink = link;
-    render(link.dataset.region, link.getAttribute('href'));
     setRegionView(true);
+    render(link.dataset.region, link.getAttribute('href'));
     focusMap(heading, region);
   });
 
