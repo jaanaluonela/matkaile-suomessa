@@ -11,7 +11,7 @@
 @media(max-width:899px){.map-panel .map-content{padding:18px 0 16px}.map-panel .map-content h2{font-size:24px}.ms451-map .ms451-label{font-size:19px}.map-panel{scroll-margin-bottom:100px}}
 @media(prefers-reduced-motion:reduce){.ms451-map .region{transition:none}}
 
-/* Päijät-Hämeen kuntakartta */
+/* Kuntakartat */
 #map-toggle .map-content{scroll-margin-top:80px;scroll-margin-bottom:100px}
 .layout.ph-region-active{grid-template-columns:minmax(0,1fr)}
 .ph-region-active .results[hidden]{display:none}
@@ -19,12 +19,12 @@
 .ph-map [hidden],.ph-map[hidden]{display:none}
 .ph-map .ph-back,.ph-map .ph-list button{min-height:44px;padding:.5rem .85rem;border:1px solid #9eb9aa;border-radius:.65rem;background:#fff;color:inherit;font:inherit;font-weight:650;cursor:pointer}
 .ph-map h2{margin-top:.8rem}
-.ph-map svg{display:block;width:min(100%,25rem);height:auto;margin:1rem auto}
-.ph-map polygon{fill:#70a995;stroke:#fff;stroke-width:1.5;stroke-linejoin:round;cursor:pointer}
-.ph-map svg a:nth-child(even) polygon{fill:#85b6a4}
-.ph-map svg text{fill:#12382f;stroke:#f3faf6;stroke-width:2.5;paint-order:stroke fill;stroke-linejoin:round;font:700 15px system-ui,sans-serif;pointer-events:none}
-.ph-map svg a:hover polygon,.ph-map svg a:focus-visible polygon{stroke:#143e32;stroke-width:3}
-.ph-map svg a.is-selected polygon{fill:#205d4d;stroke:#fff;stroke-width:2.5}
+.ph-map svg{display:block;width:min(100%,28rem);height:auto;max-height:32rem;margin:1rem auto}
+.ph-map path{fill:#70a995;stroke:#fff;stroke-width:1.5;stroke-linejoin:round;cursor:pointer}
+.ph-map svg a:nth-child(even) path{fill:#85b6a4}
+.ph-map svg text{fill:#12382f;stroke:#f3faf6;stroke-width:2.5;paint-order:stroke fill;stroke-linejoin:round;font:700 13px system-ui,sans-serif;pointer-events:none}
+.ph-map svg a:hover path,.ph-map svg a:focus-visible path{stroke:#143e32;stroke-width:3}
+.ph-map svg a.is-selected path{fill:#205d4d;stroke:#fff;stroke-width:2.5}
 .ph-map svg a.is-selected text{fill:#fff;stroke:#205d4d}
 .ph-map .ph-town{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem;border:1px solid #aec9ba;border-radius:.9rem;background:#fff;scroll-margin-bottom:115px}
 .ph-map .ph-town h3{margin:0}

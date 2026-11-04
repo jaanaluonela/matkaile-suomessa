@@ -1,0 +1,118 @@
+(() => {
+  const maps = window.msMunicipalityMaps2026;
+  const toggle = document.querySelector('#map-toggle');
+  if (!maps || !toggle) return;
+  const panel = toggle.querySelector('.map-content');
+  const finland = panel.querySelector('#map-slot');
+  const layout = panel.closest('.layout');
+  const results = layout.querySelector('.results');
+  const overview = document.createElement('div');
+  overview.append(...panel.children);
+
+  const region = document.createElement('section');
+  region.className = 'ph-map';
+  region.hidden = true;
+  region.innerHTML = `
+    <button type="button" class="ph-back">← Suomen kartta</button>
+    <h2 tabindex="-1"></h2>
+    <p>Valitse kunta kartalta tai listalta</p>
+    <svg role="group"></svg>
+    <div class="ph-town" hidden><h3 aria-live="polite"></h3><a class="ph-open"></a></div>
+    <details class="ph-list"><summary>Kunnat listana</summary><ul></ul></details>
+    <a class="ph-region-link">Avaa maakuntasivu →</a>
+    <p class="map-note">Kuntarajat:
+      <a href="https://stat.fi/fi/palvelut/tilastodatapalvelut/paikkatietoaineistot/tilastointialueet/kuntapohjaiset-tilastointialueet">Tilastokeskus 2026</a> ·
+      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Yleistetty esitys.
+    </p>`;
+  panel.append(overview, region);
+
+  const heading = region.querySelector('h2');
+  const svg = region.querySelector('svg');
+  const list = region.querySelector('.ph-list');
+  const card = region.querySelector('.ph-town');
+  const openTown = card.querySelector('a');
+  let returnLink;
+  let townLinks;
+
+  function setRegionView(open) {
+    overview.hidden = open;
+    region.hidden = !open;
+    results.hidden = open;
+    layout.classList.toggle('ph-region-active', open);
+  }
+
+  function focusMap(element, section) {
+    element.focus({ preventScroll: true });
+    section.scrollIntoView({ block: 'start' });
+  }
+
+  function render(name, href) {
+    const [width, height, towns] = maps[name];
+    heading.textContent = name;
+    svg.setAttribute('aria-label', name + ' – kuntakartta');
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    townLinks = new Map(towns.map(([town, page]) => [
+      town, page || 'kuntakortti.html?kunta=' + encodeURIComponent(town)
+    ]));
+    // Keep crowded labels readable. Every area remains selectable and named for assistive technology.
+    const boxes = [];
+    svg.innerHTML = towns.map(([town, , x, y, path]) => {
+      const halfWidth = town.length * 3.8 + 3;
+      const box = [x - halfWidth, y - 9, x + halfWidth, y + 9];
+      const visible = box[0] >= 0 && box[2] <= width &&
+        !boxes.some(([left, top, right, bottom]) =>
+          box[0] < right && box[2] > left && box[1] < bottom && box[3] > top);
+      if (visible) boxes.push(box);
+      return `<a href="${townLinks.get(town)}" aria-label="${town}" data-town="${town}">
+        <path d="${path}" fill-rule="evenodd"></path>
+        ${visible ? `<text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central">${town}</text>` : ''}
+      </a>`;
+    }).join('');
+    list.querySelector('ul').innerHTML = towns.map(([town]) =>
+      `<li><button type="button" data-town="${town}">${town}</button></li>`).join('');
+    list.open = false;
+    card.hidden = true;
+    region.querySelector('.ph-region-link').href = href;
+  }
+
+  function modified(event) {
+    return event.ctrlKey || event.metaKey || event.shiftKey || event.altKey;
+  }
+
+  finland.addEventListener('click', event => {
+    const link = event.target.closest('[data-region]');
+    if (!link || !maps[link.dataset.region] || modified(event)) return;
+    event.preventDefault();
+    returnLink = link;
+    render(link.dataset.region, link.getAttribute('href'));
+    setRegionView(true);
+    focusMap(heading, region);
+  });
+
+  region.querySelector('.ph-back').addEventListener('click', () => {
+    setRegionView(false);
+    focusMap(returnLink, panel);
+  });
+
+  toggle.addEventListener('toggle', () => {
+    if (!toggle.open && !region.hidden) setRegionView(false);
+  });
+
+  region.addEventListener('click', event => {
+    const control = event.target.closest('[data-town]');
+    if (!control || modified(event)) return;
+    event.preventDefault();
+    const name = control.dataset.town;
+    for (const item of region.querySelectorAll('[data-town]')) {
+      const selected = item.dataset.town === name;
+      item.classList.toggle('is-selected', selected);
+      if (selected) item.setAttribute('aria-current', 'true');
+      else item.removeAttribute('aria-current');
+    }
+    card.querySelector('h3').textContent = name;
+    openTown.href = townLinks.get(name);
+    openTown.textContent = 'Avaa ' + name;
+    card.hidden = false;
+    card.scrollIntoView({ block: 'nearest' });
+  });
+})();
