@@ -67,22 +67,50 @@
 
     const labels = svg.querySelector('.ph-labels');
     const boxes = [];
+    const displaced = [];
+    const svgElement = name => document.createElementNS(svg.namespaceURI, name);
+    function reserveLabel({ x, y, width: labelWidth, height: labelHeight }, dx = 0, dy = 0) {
+      const box = [x + dx - 3, y + dy - 3, x + dx + labelWidth + 3, y + dy + labelHeight + 3];
+      const fits = box[0] >= 0 && box[1] >= 0 && box[2] <= width && box[3] <= height;
+      const overlaps = boxes.some(([left, top, right, bottom]) =>
+        box[0] < right && box[2] > left && box[1] < bottom && box[3] > top);
+      if (!fits || overlaps) return false;
+      boxes.push(box);
+      return true;
+    }
+
     for (const [town, , x, y] of towns) {
-      const label = document.createElementNS(svg.namespaceURI, 'text');
+      const label = svgElement('text');
       label.setAttribute('x', x);
       label.setAttribute('y', y);
       label.setAttribute('text-anchor', 'middle');
       label.setAttribute('dominant-baseline', 'central');
+      label.setAttribute('data-town', town);
       label.textContent = town;
       labels.append(label);
-
       const bounds = label.getBBox();
-      const box = [bounds.x - 3, bounds.y - 3, bounds.x + bounds.width + 3, bounds.y + bounds.height + 3];
-      const fits = box[0] >= 0 && box[1] >= 0 && box[2] <= width && box[3] <= height;
-      const overlaps = boxes.some(([left, top, right, bottom]) =>
-        box[0] < right && box[2] > left && box[1] < bottom && box[3] > top);
-      if (fits && !overlaps) boxes.push(box);
-      else label.remove();
+      if (!reserveLabel(bounds)) displaced.push({ label, bounds, x, y });
+    }
+
+    // Move crowded names a short distance and connect them to the original map position.
+    const offsets = [[0, -24], [0, 24], [-30, 0], [30, 0], [-40, -24], [40, -24],
+      [-40, 24], [40, 24], [0, -48], [0, 48], [-65, 0], [65, 0]];
+    for (const { label, bounds, x, y } of displaced) {
+      const offset = offsets.find(([dx, dy]) => reserveLabel(bounds, dx, dy));
+      if (!offset) {
+        label.remove();
+        continue;
+      }
+
+      const [dx, dy] = offset;
+      label.setAttribute('x', x + dx);
+      label.setAttribute('y', y + dy);
+      const line = svgElement('line');
+      line.setAttribute('x1', x);
+      line.setAttribute('y1', y);
+      line.setAttribute('x2', x + dx);
+      line.setAttribute('y2', y + dy);
+      labels.prepend(line);
     }
 
     list.querySelector('ul').innerHTML = towns.map(([town]) =>

@@ -25,7 +25,9 @@
 .ph-map svg text{fill:#12382f;stroke:#f3faf6;stroke-width:2.5;paint-order:stroke fill;stroke-linejoin:round;font:700 13px system-ui,sans-serif;pointer-events:none}
 .ph-map svg a:hover path,.ph-map svg a:focus-visible path{stroke:#143e32;stroke-width:3}
 .ph-map svg a.is-selected path{fill:#205d4d;stroke:#fff;stroke-width:2.5}
-.ph-map .ph-labels{pointer-events:none}
+.ph-map .ph-labels line{stroke:#49685d;stroke-width:1;pointer-events:none}
+.ph-map .ph-labels text{pointer-events:visiblePainted;cursor:pointer}
+.ph-map .ph-labels text.is-selected{fill:#fff;stroke:#205d4d}
 .ph-map .ph-town{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem;border:1px solid #aec9ba;border-radius:.9rem;background:#fff;scroll-margin-bottom:115px}
 .ph-map .ph-town h3{margin:0}
 .ph-map .ph-open{display:inline-flex;align-items:center;min-height:44px;padding:.45rem .85rem;border-radius:.6rem;background:#174c3e;color:white;font-weight:700;text-decoration:none}
@@ -36,6 +38,6 @@
 .ph-map .ph-region-link{display:inline-flex;align-items:center;min-height:44px;color:inherit;font-weight:700}
 
 @media(max-width:899px){
-  .ph-map{padding-bottom:1rem}
+  .ph-map{padding-bottom:1rem;scroll-margin-top:max(52px, calc(env(safe-area-inset-top,0px) + 16px))}
   .ph-map .ph-region-link{scroll-margin-bottom:calc(135px + env(safe-area-inset-bottom,0px))}
 }
