@@ -1,5 +1,8 @@
 (() => {
-  const panel = document.querySelector('#map-toggle .map-content');
+  const toggle = document.querySelector('#map-toggle');
+  const panel = toggle.querySelector('.map-content');
+  const layout = panel.closest('.layout');
+  const results = layout.querySelector('.results');
   const finland = panel.querySelector('#map-slot');
   const regionLinks = finland.querySelectorAll('[data-region="Päijät-Häme"]');
   const overview = document.createElement('div');
@@ -50,9 +53,16 @@
   const openTown = card.querySelector('a');
   let returnLink;
 
-  function focusMap(element) {
+  function setRegionView(open) {
+    overview.hidden = open;
+    region.hidden = !open;
+    results.hidden = open;
+    layout.classList.toggle('ph-region-active', open);
+  }
+
+  function focusMap(element, section) {
     element.focus({ preventScroll: true });
-    panel.scrollIntoView({ block: 'start' });
+    section.scrollIntoView({ block: 'start' });
   }
 
   for (const link of regionLinks) {
@@ -60,16 +70,18 @@
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       returnLink = link;
-      overview.hidden = true;
-      region.hidden = false;
-      focusMap(heading);
+      setRegionView(true);
+      focusMap(heading, region);
     });
   }
 
   region.querySelector('.ph-back').addEventListener('click', () => {
-    region.hidden = true;
-    overview.hidden = false;
-    focusMap(returnLink);
+    setRegionView(false);
+    focusMap(returnLink, panel);
+  });
+
+  toggle.addEventListener('toggle', () => {
+    if (!toggle.open && !region.hidden) setRegionView(false);
   });
 
   region.addEventListener('click', event => {

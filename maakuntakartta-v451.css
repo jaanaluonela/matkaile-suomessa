@@ -13,7 +13,9 @@
 
 /* Päijät-Hämeen kuntakartta */
 #map-toggle .map-content{scroll-margin-top:80px;scroll-margin-bottom:100px}
-.ph-map{max-width:36rem;margin:auto;color:#173c32}
+.layout.ph-region-active{grid-template-columns:minmax(0,1fr)}
+.ph-region-active .results[hidden]{display:none}
+.ph-map{max-width:36rem;margin:auto;color:#173c32;scroll-margin-top:calc(env(safe-area-inset-top, 0px) + 16px)}
 .ph-map [hidden],.ph-map[hidden]{display:none}
 .ph-map .ph-back,.ph-map .ph-list button{min-height:44px;padding:.5rem .85rem;border:1px solid #9eb9aa;border-radius:.65rem;background:#fff;color:inherit;font:inherit;font-weight:650;cursor:pointer}
 .ph-map h2{margin-top:.8rem}
