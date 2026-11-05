@@ -77,7 +77,7 @@
    if(category==='food')return p.food;
    return true;
  };
- const label=p=>p.kind==='camping'?'🏕️ Leirintäalue':p.kind==='park'?'🅿️ Matkaparkki':p.child?'🎈 Lapsille':p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.kind==='outlet'?'🛍️ Tehtaanmyymälä':p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
+ const label=p=>p.kind==='camping'?'🏕️ Leirintäalue':p.kind==='park'?'🅿️ Matkaparkki':p.child?'🎈 Lapsille':p.special?'✨ Erikoinen nähtävyys':p.kind==='ruukki'?'🏭 Ruukkikylä':p.kind==='outlet'?'🛍️ '+(p.shopLabel||'Tehtaanmyymälä'):p.nature?'🌲 Luonto ja retket':p.kind==='sight'?'🏛️ Nähtävyys':p.food?'☕ Kahvila tai ravintola':'🚐 Taukopaikka';
  function favorites(){try {const a=JSON.parse(localStorage.getItem(favKey)||'[]');return Array.isArray(a)?a:[];}catch{return [];}}
  function makeFavorite(p){
     const a=document.createElement('button');a.type='button';a.className='ms302-favorite';
@@ -138,3 +138,4 @@
  reset.addEventListener('click',()=>{category='all';town.value='';if(municipality)municipality.value='';populateMunicipalities();input.value='';update();input.focus();});
  render();
 })();
+
