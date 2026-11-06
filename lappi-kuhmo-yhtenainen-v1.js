@@ -27,12 +27,12 @@ function init(){
  localStorage.setItem('ms_trips_v2',JSON.stringify(trips));localStorage.setItem('ms_visited_'+slug,'1');location.href='paivakirja.html?matkamuisto='+encodeURIComponent(trip.id)
  }catch{status.textContent='Tallennus ei onnistunut. Tarkista selaimen tallennustila.'}});
  paint();window.addEventListener('pageshow',paint);window.addEventListener('storage',paint);intro.append(visit,status);
- const icons={sight:'<path d="M11 11H6a4 4 0 1 1 5-5v20a4 4 0 1 1-5-5h20a4 4 0 1 1-5 5V6a4 4 0 1 1 5 5Z"/>',tent:'<path d="M3 27 16 5l13 22H3ZM16 5v22M10 27l6-11 6 11"/>',tree:'<path d="m16 2-9 11h5L5 21h8v8h6v-8h8l-7-8h5Z"/>',parking:'<path d="M11 27V5h8a7 7 0 0 1 0 14h-8"/>'};
+ const icons={sight:'<path d="M11 11H6a4 4 0 1 1 5-5v20a4 4 0 1 1-5-5h20a4 4 0 1 1-5 5V6a4 4 0 1 1 5 5Z"/>',camper:'<path d="M3 23V8h18v7h5l4 5v5h-4M10 25h10M3 23v2h2M6 12h6v6H6ZM16 12h5v6h-5Z"/><circle cx="7.5" cy="25" r="3"/><circle cx="23" cy="25" r="3"/>',tree:'<path d="m16 2-9 11h5L5 21h8v8h6v-8h8l-7-8h5Z"/>',parking:'<path d="M11 27V5h8a7 7 0 0 1 0 14h-8"/>'};
  const nav=document.createElement('nav');nav.className='lap-kuhmo-grid';nav.setAttribute('aria-label','Kunnan matkailuosiot');
  const first=ids=>ids.find(id=>main.querySelector(id));
  const query='maakunta=Lappi&kunta='+encodeURIComponent(name);
- const choices=[['sight','Näe ja koe',first(['#helmet','#lap281-kohteet','#k413-osio-1'])||'pysahdy-matkalla.html?'+query+'&tyyppi=sight'],['tent','Yöpyminen',first(['#yopyminen'])||'leirintaalueet.html?'+query],['tree','Retket',first(['#retket'])||'pysahdy-matkalla.html?'+query+'&tyyppi=nature'],['parking','Pysähdy matkalla','pysahdy-matkalla.html?'+query]];
- for(const [icon,label,href] of choices){const a=document.createElement('a');a.href=href;
+ const choices=[['sight','Näe ja koe',first(['#helmet','#lap281-kohteet','#k413-osio-1'])||'pysahdy-matkalla.html?'+query+'&tyyppi=sight'],['camper','Yöpyminen',first(['#yopyminen'])||'leirintaalueet.html?'+query],['tree','Retket',first(['#retket'])||'pysahdy-matkalla.html?'+query+'&tyyppi=nature'],['parking','Pysähdy matkalla','pysahdy-matkalla.html?'+query]];
+ for(const [icon,label,href] of choices){const a=document.createElement('a');a.href=href;a.dataset.icon=icon;
  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 32 32');svg.setAttribute('aria-hidden','true');svg.innerHTML=icons[icon];
  const b=document.createElement('b');b.textContent=label;a.append(svg,b);
  if(href.startsWith('#'))a.addEventListener('click',()=>{const el=main.querySelector(href);if(el?.tagName==='DETAILS')el.open=true;el?.closest('details')?.setAttribute('open','')});nav.append(a)}
