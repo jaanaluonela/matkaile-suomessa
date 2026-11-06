@@ -1,0 +1,10 @@
+/* Pohjois-Pohjanmaan kuntien neljä matkailupainiketta. */
+html body main nav.pp-travel-icons{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin:24px 0!important;padding:0!important;background:transparent!important}
+html body main nav.pp-travel-icons a{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-width:0!important;min-height:84px!important;padding:14px!important;background:#fff!important;border:2px solid #d3e3d8!important;border-radius:22px!important;color:#155548!important;text-decoration:none!important;box-sizing:border-box!important;font:800 clamp(16px,3.6vw,21px)/1.35 system-ui!important}
+html body main nav.pp-travel-icons a svg{display:block!important;box-sizing:border-box!important;width:46px!important;height:50px!important;flex:0 0 46px!important;padding:9px!important;margin:0!important;border-radius:11px!important;fill:none!important;stroke:#fff!important;stroke-width:2.2!important;stroke-linecap:round;stroke-linejoin:round;background:#89502f!important}
+html body main nav.pp-travel-icons [data-travel-icon="camper"] svg{background:#008f9e!important}
+html body main nav.pp-travel-icons [data-travel-icon="tree"] svg{background:#187339!important}
+html body main nav.pp-travel-icons [data-travel-icon="parking"] svg{background:#0755c9!important;border:2px solid #fff!important;outline:2px solid #0755c9;border-radius:6px!important;stroke-width:3.5!important}
+html body main nav.pp-travel-icons b{font:inherit!important;min-width:0}
+html body main nav.pp-travel-icons a:focus-visible{outline:3px solid #ac8848;outline-offset:3px}
+@media(max-width:359px){html body main nav.pp-travel-icons a{padding:10px!important;gap:8px!important;font-size:15px!important}html body main nav.pp-travel-icons a svg{width:38px!important;height:44px!important;flex-basis:38px!important;padding:7px!important}}
