@@ -1,0 +1,14 @@
+/* Maakuntasivujen yhtenäinen, kuvaton aloitus mobiilissa */
+@media(max-width:700px){
+ body{background:#f3f8f4!important}
+ main{padding-bottom:calc(115px + env(safe-area-inset-bottom))!important}
+ main .ks-hero,main .pk-hero,main .vs-hero,main .ms334-header,main .region-hero,main .hero,main .lap-hero{background:#f3f8f4!important;background-image:none!important;color:#155548!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;padding:12px 0 16px!important;margin:0 0 12px!important}
+ main .ks-hero:before,main .ks-hero:after,main .hero:before,main .hero:after{display:none!important}
+ main .ks-hero img,main .hero>img,main .hero picture,main .ks-hero picture,main .region-hero img,main .hero-photo,main .ks-hero-photo,main .hero-image{display:none!important}
+ main .ks-hero h1,main .ms334-header h1,main .hero h1,main .region-hero h1,main .pk-hero h1{font:850 clamp(32px,8vw,42px)/1.1 system-ui,sans-serif!important;letter-spacing:-.03em!important;color:#164d40!important;margin:6px 0 12px!important}
+ main .ks-hero h2,main .hero h2,main .region-hero h2{font:750 19px/1.3 system-ui,sans-serif!important;color:#164d40!important;margin:8px 0!important}
+ main .ks-hero p,main .ms334-lead,main .hero p,main .region-hero p{font:400 15px/1.45 system-ui,sans-serif!important;color:#536d61!important;margin:6px 0 12px!important}
+ main .ks-hero-copy,main .hero-copy,main .region-hero-copy{padding:0!important;background:transparent!important}
+ main .region-topic-heading h2,main .lap-category-intro h2{font:800 21px/1.25 system-ui,sans-serif!important}
+ main .region-topic-heading,main .lap-category-intro{margin:14px 0 10px!important}
+}
