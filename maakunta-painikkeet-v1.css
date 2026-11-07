@@ -1,0 +1,11 @@
+/* Maakuntien yhdenmukaiset painikkeet */
+main .pp-categories,main .ks-categories,main .categories{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+main .pp-categories>a,main .ks-categories>a,main .categories>a{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;min-width:0!important;min-height:172px!important;padding:17px!important;border-radius:23px!important;text-decoration:none!important;color:#155548!important;gap:8px!important}
+main .pp-categories>a:nth-child(4n+1),main .ks-categories>a:nth-child(4n+1),main .categories>a:nth-child(4n+1){background:#e7f2e4!important}
+main .pp-categories>a:nth-child(4n+2),main .ks-categories>a:nth-child(4n+2),main .categories>a:nth-child(4n+2){background:#f8efdf!important}
+main .pp-categories>a:nth-child(4n+3),main .ks-categories>a:nth-child(4n+3),main .categories>a:nth-child(4n+3){background:#e5f0f4!important}
+main .pp-categories>a:nth-child(4n+4),main .ks-categories>a:nth-child(4n+4),main .categories>a:nth-child(4n+4){background:#e5f0e9!important}
+.region-unified-icon{display:block!important;height:38px!important;flex:none!important;color:#155548!important}
+main .pp-categories>a h2,main .ks-categories>a h3,main .categories>a h3{font-size:clamp(15px,2.5vw,20px)!important;line-height:1.2!important;margin:3px 0!important;color:#155548!important}
+main .pp-categories>a strong,main .ks-categories>a strong,main .categories>a strong{font-size:13px!important;line-height:1.3!important;margin-top:auto!important;padding-top:8px!important;color:#155548!important}
+@media(max-width:650px){main .pp-categories>a,main .ks-categories>a,main .categories>a{min-height:157px!important;padding:13px!important;border-radius:19px!important}main .pp-categories>a p,main .ks-categories>a p,main .categories>a p{display:none!important}}
