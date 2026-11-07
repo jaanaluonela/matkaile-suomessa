@@ -22,5 +22,38 @@ async function geocode(name){const url='https://photon.komoot.io/api/?q='+encode
 panel.querySelector('#msroute-find').addEventListener('click',async()=>{const from=panel.querySelector('#msroute-from').value.trim(),to=panel.querySelector('#msroute-to').value.trim();if(!from||!to){msg.textContent='Kirjoita lähtöpaikka ja määränpää.';return;}const btn=panel.querySelector('#msroute-find');btn.disabled=true;msg.textContent='Haetaan ajoreittiä ja pysähdyspaikkoja…';try{const [a,b]=await Promise.all([geocode(from),geocode(to)]);const response=await fetch('https://router.project-osrm.org/route/v1/driving/'+a.join(',')+';'+b.join(',')+'?overview=full&geometries=geojson');if(!response.ok)throw Error('Reittipalvelu ei vastannut');const data=await response.json(),route=data.routes?.[0];if(!route)throw Error('Ajoreittiä ei löytynyt');lastRoute=route.geometry.coordinates.map(c=>[c[1],c[0]]);const limit=Number(panel.querySelector('input[name="msroute-distance"]:checked').value);routeCandidates=allPoints().map(p=>({...p,routeKm:routeDistance([Number(p.lat),Number(p.lon)],lastRoute)})).filter(p=>p.routeKm<=limit).sort((a,b)=>a.routeKm-b.routeKm);applyRouteFilter();msg.textContent='Reitti löytyi. Näytetään '+lastPoints.length+' koordinaateilla tallennettua kohdetta. Etäisyys ei ole ajomatkan poikkeama.';if(desktop.matches||!mapWrap.hidden){mapBtn.setAttribute('aria-pressed','true');listBtn.setAttribute('aria-pressed','false');await showMap();}}catch(e){msg.textContent='Reittihakua ei saatu valmiiksi: '+e.message+'. Kokeile uudelleen tai avaa ajoreitti karttapalvelussa.';}finally{btn.disabled=false;}});
 panel.querySelector('#msroute-type')?.addEventListener('change',()=>{if(lastRoute)applyRouteFilter();});
 panel.querySelectorAll('input[name="msroute-distance"]').forEach(input=>input.addEventListener('change',()=>{if(lastRoute&&panel.querySelector('#msroute-from').value.trim()&&panel.querySelector('#msroute-to').value.trim())panel.querySelector('#msroute-find').click();}));
-const nearBtn=panel.querySelector('#msroute-locate');nearBtn?.addEventListener('click',()=>{lastRoute=null;lastPoints=[];mapWrap.hidden=true;listBtn.setAttribute('aria-pressed','true');mapBtn.setAttribute('aria-pressed','false');});
+const nearBtn=panel.querySelector('#msroute-locate');
+let nearOrigin=null;
+function showNearby(position){
+ nearOrigin={lat:position.coords.latitude,lon:position.coords.longitude};
+ lastRoute=null;
+ routeCandidates=allPoints().map(p=>({...p,nearKm:dist([nearOrigin.lat,nearOrigin.lon],[Number(p.lat),Number(p.lon)])}))
+  .sort((a,b)=>a.nearKm-b.nearKm||a.name.localeCompare(b.name,'fi'));
+ lastPoints=routeCandidates.slice(0,12);
+ mapWrap.hidden=true;
+ listBtn.setAttribute('aria-pressed','true');mapBtn.setAttribute('aria-pressed','false');
+ count.textContent='Lähimmät käyntikohteet · '+lastPoints.length+' kohdetta';
+ results.replaceChildren();
+ for(const p of lastPoints){
+  const card=document.createElement('article');card.className='ms302-result msroute-result';
+  const content=document.createElement('div');content.className='msroute-card-body';
+  const title=document.createElement('strong');title.textContent=p.name;
+  const detail=document.createElement('p');detail.textContent=[p.city,'noin '+p.nearKm.toFixed(1).replace('.',',')+' km linnuntietä'].filter(Boolean).join(' · ');
+  const a=document.createElement('a');a.href=safeLink(p);a.textContent='Tutustu kohteeseen →';
+  a.style.color='#00644f';content.append(title,detail,a);card.append(content);results.append(card);
+ }
+ const more=document.getElementById('ms302-more');if(more)more.hidden=true;
+ const status=panel.querySelector('#msroute-status');if(status){status.hidden=false;status.textContent='Lähimmät kohteet näytetään linnuntie-etäisyyksinä.';}
+ document.querySelector('.ms302-results-head')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+nearBtn?.addEventListener('click',e=>{
+ e.stopImmediatePropagation();e.preventDefault();
+ if(!navigator.geolocation){msg.textContent='Sijaintia ei voi hakea tällä laitteella.';return;}
+ nearBtn.disabled=true;
+ const status=panel.querySelector('#msroute-status');if(status){status.hidden=false;status.textContent='Haetaan sijaintiasi…';}
+ navigator.geolocation.getCurrentPosition(p=>{nearBtn.disabled=false;showNearby(p);},err=>{
+  nearBtn.disabled=false;
+  if(status)status.textContent=err.code===1?'Sijaintilupa puuttuu. Salli sijainti selaimen asetuksista.':'Sijaintia ei saatu. Yritä uudelleen.';
+ },{timeout:15000,maximumAge:60000,enableHighAccuracy:false});
+},true);
 };if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();})();
