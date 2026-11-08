@@ -280,7 +280,7 @@ html body.ms-v363-diary #editor .trip-dates #today{grid-column:1/-1!important;gr
 const $=s=>document.getElementById(s),key='ms_trips_v2';let trips=[],active=null,db,rating=0,saveTimer,dirty=false,photoBusy=false;
 function id(){return crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random()}
 function status(text,error=false){$('save-status').textContent=text;$('save-status').classList.toggle('status-error',error)}
-function persist(){localStorage.setItem(key,JSON.stringify(trips));window.dispatchEvent(new CustomEvent('ms-trips-changed'))}
+function persist(){const fresh=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(fresh))throw Error('Invalid trip list');const own=trips.find(t=>t.id===active);if(own){const i=fresh.findIndex(t=>t.id===own.id);if(i<0)fresh.unshift(own);else fresh[i]=own}trips=fresh;localStorage.setItem(key,JSON.stringify(fresh));window.dispatchEvent(new CustomEvent('ms-trips-changed'))}
 function scheduleSave(){dirty=true;status('Tallennetaan…');clearTimeout(saveTimer);saveTimer=setTimeout(()=>capture(),450)}
 function updateRating(){document.querySelectorAll('[data-rating]').forEach(b=>{const n=Number(b.dataset.rating);b.textContent=n<=rating?'★':'☆';b.setAttribute('aria-pressed',String(n===rating))});$('rating-label').textContent=rating?rating+'/5 tähteä':'Ei vielä arviota'}
 function load(){
@@ -555,7 +555,7 @@ $('delete-photo').onclick=async()=>{
 };
 // Kuvien lisäys avautuu myös näppäimistöllä, vaikka tiedostokenttä ei vie tilaa.
 document.querySelector('.photo-add').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('files').click()}});
-$('new').onclick=()=>open();$('back').onclick=back;$('save').onclick=()=>{if(capture())back()};$('add').onclick=()=>{let name=$('place').value.trim();if(!name)return;let t=capture();if(!t)return;t.stops.push(name);try{persist();$('place').value='';stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}};$('place').onkeydown=e=>{if(e.key==='Enter')$('add').click()};
+$('new').onclick=()=>open();$('back').onclick=back;$('save').onclick=()=>{if(capture())back()};$('add').onclick=()=>{let name=$('place').value.trim();if(!name)return;let t=capture();if(!t)return;t.stops.push(name);try{persist();$('place').value='';stops()}catch(e){status('Reitin tallennus ei onnistunut.',true)}};$('place').onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();$('add').click()}};
 $('detail-back').onclick=back;$('name').addEventListener('input',()=>{$('detail-title').textContent=$('name').value||'Uusi matka'});for(const field of ['name','purpose','begin','end','diary'])$(field).addEventListener('input',scheduleSave);
 $('purpose').addEventListener('change',scheduleSave);$('today').onclick=()=>{const d=new Date();$('begin').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');scheduleSave()};
 document.querySelectorAll('[data-rating]').forEach(b=>b.onclick=()=>{rating=Number(b.dataset.rating);updateRating();scheduleSave()});
@@ -569,7 +569,7 @@ $('files').onchange=async e=>{
 $('remove').onclick=async()=>{
  if(photoBusy||!confirm('Poistetaanko matka ja sen kuvat?'))return;flushPhotoNote();clearTimeout(saveTimer);
  try{let saved=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(saved))throw Error();saved=saved.filter(t=>t.id!==active);localStorage.setItem(key,JSON.stringify(saved));trips=saved;dirty=false;
- try{for(const p of await photoStore('get'))await photoStore('delete',p.id)}catch(e){console.warn('Kuvien poistaminen epäonnistui',e)}back();
+ try{for(const p of await photoStore('get',null,null))if(p.trip===active)await photoStore('delete',p.id)}catch(e){console.warn('Matkan kuvien poistaminen epäonnistui',e)}back();
  }catch(e){status('Matkan poistaminen ei onnistunut.',true)}
 };
 function photosUnavailable(){$('files').disabled=true;$('photo-status').textContent='Kuvien tallennus ei ole käytettävissä tässä selaimessa. Muut matkan tiedot voi silti tallentaa.'}
