@@ -51,10 +51,10 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 /* Henkilökohtainen kuntatähtiarvio, sama tallennus kuin Omat matkat. */
 (()=>{
 function init(){
- if(!document.body.classList.contains('ms375-town'))return;
- const slug=(location.pathname.split('/').pop()||'').replace(/\.html$/,'').toLowerCase();
+ if(!document.body.classList.contains('ms375-town')&&!document.body.dataset.town)return;
+ const slug=(document.body.dataset.slug||location.pathname.split('/').pop()||'').replace(/\.html$/,'').toLowerCase();
  const title=document.querySelector('main h1');if(!title||!slug)return;
- const town=title.textContent.trim();const main=document.querySelector('main');if(!main)return;
+ const town=(document.body.dataset.town||title.textContent).trim();const main=document.querySelector('main');if(!main)return;
  let section=document.getElementById('ms-own-rating');if(section)return;
  section=document.createElement('section');section.id='ms-own-rating';section.className='card';
  section.style.cssText='margin:20px 0;padding:16px;border:1px solid #d4e4d8;border-radius:16px;background:#f8fbf8';
