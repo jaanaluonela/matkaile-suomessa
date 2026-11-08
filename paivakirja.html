@@ -170,6 +170,24 @@ body.ms-v363-diary #editor .trip-dates #today,
 body.ms-v363-diary #editor .trip-dates p { grid-column: 1 / -1; }
 body.ms-v363-diary #editor .trip-dates p { margin: 0; }
 </style>
+
+<style id="ms-diary-mobile-compact-20261108">
+@media(max-width:699px){
+body.ms-v363-diary .diary-hero{height:88px!important;background-position:center 54%!important}
+body.ms-v363-diary main{padding-top:12px!important}
+body.ms-v363-diary #list-heading>a,body.ms-v363-diary #list-heading>span{font-size:.9rem!important}
+body.ms-v363-diary .diary-heading{margin:10px 0 12px!important;gap:8px!important}
+body.ms-v363-diary .diary-heading h1{font-size:clamp(1.75rem,7vw,2.3rem)!important;margin-bottom:5px!important}
+body.ms-v363-diary .diary-heading .muted{font-size:.9rem!important;line-height:1.3!important}
+body.ms-v363-diary .diary-heading img{width:76px!important;height:76px!important}
+body.ms-v363-diary #new{min-height:48px!important;padding:10px 12px!important;border-radius:12px!important;font-size:1rem!important;margin:10px 0 6px!important}
+body.ms-v363-diary #list>.muted{font-size:.84rem!important;line-height:1.35!important;margin:6px 0 12px!important}
+body.ms-v363-diary .visited-heading{font-size:1.35rem!important;margin:16px 0 9px!important}
+body.ms-v363-diary main #trips .trip{min-height:94px!important;padding:12px!important}
+body.ms-v363-diary main #trips .trip-title{font-size:1.15rem!important}
+body.ms-v363-diary main #trips .trip-cover,body.ms-v363-diary .trip-empty{height:72px!important}
+}
+</style>
 </head><body class="ms-v363-diary"><div class="diary-hero" role="img" aria-label="Suomalainen järvimaisema, matkailuauto ja teltta"></div><main><div id="list-heading"><a href="index.html">Etusivu</a><span> › Omat matkat</span><div class="diary-heading"><div><h1>Omat matkat</h1><p class="muted">Tallenna käymäsi kohteet, kuvat ja muistot.</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
 <section id="list"><button id="new">＋ Lisää uusi matka tai käynti</button><p class="muted">Lisää paikka ja päivämäärä. Voit tallentaa myös kuvia ja muistoja.</p><h2 class="visited-heading">Käymäni paikat</h2><div id="trips"></div></section>
 <section id="editor" class="hidden"><div class="detail-heading"><button id="detail-back" type="button">‹ Omat matkat</button><div class="diary-heading"><div><h1 id="detail-title">Matka</h1><p id="detail-visited">✓ Olen käynyt täällä</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
