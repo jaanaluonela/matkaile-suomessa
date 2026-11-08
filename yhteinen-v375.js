@@ -47,3 +47,27 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 'Pysähdy matkalla':['#0755c9','<text x="24" y="38" font-size="37" font-weight="750" text-anchor="middle" font-family="Arial,sans-serif" fill="#fff">P</text>']};
 function apply(){document.querySelectorAll('nav.ms375-quick a,nav.iitti-quick a,nav.ms-town-quick a,nav.k413-grid a,nav.quick a').forEach(a=>{if(a.closest('.pp-travel-icons'))return;const name=(a.textContent||'').replace(/\\s+/g,' ').replace(/^[^\\p{L}]+/u,'').trim();const spec=shapes[name];if(!spec)return;let svg=a.querySelector('svg');let holder=svg?.parentElement;if(a.dataset.msQuickIcon==='v5')return;if(!svg){svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('aria-hidden','true');a.insertBefore(svg,a.firstChild);holder=svg;}svg.setAttribute('viewBox','0 0 48 48');svg.setAttribute('width','48');svg.setAttribute('height','48');svg.innerHTML=spec[1];svg.style.setProperty('background',spec[0],'important');svg.style.setProperty('border-radius','10px','important');svg.style.setProperty('stroke','none','important');svg.style.setProperty('fill','none','important');svg.querySelectorAll('*').forEach(el=>{for(const p of ['stroke','fill'])if(el.hasAttribute(p))el.style.setProperty(p,el.getAttribute(p),'important')});if(holder&&holder!==a&&holder!==svg&&holder.tagName==='SPAN'){holder.style.setProperty('background',spec[0],'important');}a.dataset.msQuickIcon='v5';});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
+/* Henkilökohtainen kuntatähtiarvio, sama tallennus kuin Omat matkat. */
+(()=>{
+function init(){
+ if(!document.body.classList.contains('ms375-town'))return;
+ const slug=(location.pathname.split('/').pop()||'').replace(/\.html$/,'').toLowerCase();
+ const title=document.querySelector('main h1');if(!title||!slug)return;
+ const town=title.textContent.trim();const main=document.querySelector('main');if(!main)return;
+ let section=document.getElementById('ms-own-rating');if(section)return;
+ section=document.createElement('section');section.id='ms-own-rating';section.className='card';
+ section.style.cssText='margin:20px 0;padding:16px;border:1px solid #d4e4d8;border-radius:16px;background:#f8fbf8';
+ const heading=document.createElement('h2');heading.textContent='Oma arvio paikasta';heading.style.margin='0 0 8px';
+ const info=document.createElement('p');info.style.margin='0 0 10px';
+ const buttons=document.createElement('div');buttons.setAttribute('role','group');buttons.setAttribute('aria-label','Oma tähtiarvio');buttons.style.cssText='display:flex;gap:6px;flex-wrap:wrap';
+ const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.style.margin='8px 0 0';
+ const read=()=>{try{const x=JSON.parse(localStorage.getItem('ms_trips_v2')||'[]');return Array.isArray(x)?x:[]}catch{return []}};
+ const matches=t=>t&&(String(t.locationId||'').toLowerCase()===slug||String(t.sourceUrl||'').toLowerCase()===slug+'.html'||String(t.name||'').trim().toLocaleLowerCase('fi')===town.toLocaleLowerCase('fi'));
+ function render(){const entries=read().filter(matches);const current=entries.find(t=>Number(t.rating)>0)||entries[0];const rating=Number(current?.rating)||0;info.textContent=rating?'Oma arviosi: '+rating+'/5':'Et ole vielä arvioinut tätä paikkaa.';buttons.querySelectorAll('button').forEach(b=>{const n=Number(b.dataset.stars);b.textContent=n<=rating?'★':'☆';b.setAttribute('aria-pressed',String(n===rating))});}
+ function save(value){try{const items=read();let t=items.find(matches);if(!t){t={id:'kohde-'+slug,locationId:slug,name:town,begin:'',end:'',diary:'',stops:[],visited:false,sourceUrl:slug+'.html'};items.unshift(t)}t.rating=value;localStorage.setItem('ms_trips_v2',JSON.stringify(items));window.dispatchEvent(new CustomEvent('ms-trips-changed'));feedback.textContent='✓ Arvio tallennettu Omat matkat -sivulle.';render()}catch{feedback.textContent='Arvion tallennus ei onnistunut tässä selaimessa.'}}
+ for(let n=1;n<=5;n++){const b=document.createElement('button');b.type='button';b.dataset.stars=String(n);b.setAttribute('aria-label',n+' tähteä viidestä');b.style.cssText='background:transparent;border:0;color:#ba7928;font-size:32px;min-width:42px;min-height:44px;padding:2px;cursor:pointer';b.onclick=()=>save(n);buttons.appendChild(b)}
+ section.append(heading,info,buttons,feedback);const own=[...main.querySelectorAll('section')].find(s=>s.textContent.includes('Omat matkat'));if(own)own.before(section);else main.appendChild(section);render();window.addEventListener('pageshow',render);window.addEventListener('storage',render);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
