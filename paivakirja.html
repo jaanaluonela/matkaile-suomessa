@@ -270,6 +270,15 @@ html body.ms-v363-diary main{padding-bottom:calc(100px + env(safe-area-inset-bot
 html body.ms-v363-diary #editor.visit-existing fieldset.rating{display:block!important}
 }
 </style>
+
+<style id="ms-rating-compact-below-photos-v1">
+/* Arviointi kuvien jälkeen, pienemmällä tilankäytöllä mobiilissa. */
+body.ms-v363-diary #editor fieldset.rating{margin:12px 0 14px!important;padding:10px 12px!important;border-radius:12px!important}
+body.ms-v363-diary #editor fieldset.rating legend{font-size:1rem!important;margin-bottom:2px!important}
+body.ms-v363-diary #editor fieldset.rating .stars{gap:2px!important;margin:0 0 3px!important}
+body.ms-v363-diary #editor fieldset.rating .stars button{font-size:27px!important;min-width:40px!important;width:40px!important;min-height:44px!important}
+body.ms-v363-diary #editor fieldset.rating .quiet{padding:6px 9px!important;font-size:12px!important}
+</style>
 </head><body class="ms-v363-diary"><div class="diary-hero" role="img" aria-label="Suomalainen järvimaisema, matkailuauto ja teltta"></div><main><div id="list-heading"><a href="index.html">Etusivu</a><span> › Omat matkat</span><div class="diary-heading"><div><h1>Omat matkat</h1><p class="muted">Tallenna käymäsi kohteet, kuvat ja muistot.</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
 <section id="list"><button id="new">＋ Lisää uusi matka tai käynti</button><p class="muted">Lisää paikka ja päivämäärä. Voit tallentaa myös kuvia ja muistoja.</p><h2 class="visited-heading">Käymäni paikat</h2><div id="trips"></div></section>
 <section id="editor" class="hidden"><div class="detail-heading"><button id="detail-back" type="button">‹ Omat matkat</button><div class="diary-heading"><div><h1 id="detail-title">Matka</h1><p id="detail-visited">✓ Olen käynyt täällä</p></div><img src="etusivu-kuvakkeet-v481/omat-matkat.webp" alt=""></div></div>
@@ -277,7 +286,7 @@ html body.ms-v363-diary #editor.visit-existing fieldset.rating{display:block!imp
 <div class="card"><h2 class="basics-heading">Matkan perustiedot</h2><label for="name">Missä kävit? / Matkan nimi</label><input id="name" placeholder="Esim. Rovaniemi, mökkiviikonloppu tai kesäloma" autocomplete="off"><label for="purpose">Matkan tarkoitus</label><select id="purpose"><option value="">Valitse halutessasi</option><option value="Lomamatka">Lomamatka</option><option value="Päiväretki">Päiväretki</option><option value="Sukulaisten tai ystävien luona">Sukulaisten tai ystävien luona</option><option value="Työmatka">Työmatka</option><option value="Harrastus tai tapahtuma">Harrastus tai tapahtuma</option><option value="Luontoretki">Luontoretki</option><option value="Muu matka">Muu matka</option></select>
 <p id="source-page" class="hidden"><a id="source-link" href="#">Avaa kohteen sivu ↗</a></p>
 <div class="date-row trip-dates"><div><label for="begin">Alkupäivä</label><input id="begin" type="date"></div><button id="today" class="quiet" type="button">Tänään</button><div><label for="end">Loppupäivä</label><input id="end" type="date"></div><p class="muted">Loppupäivä vain useamman päivän matkalle.</p></div>
-<fieldset class="rating"><legend>Oma arvio</legend><div class="stars" aria-label="Valitse 1–5 tähteä"><button type="button" data-rating="1" aria-label="1 tähti" aria-pressed="false">☆</button><button type="button" data-rating="2" aria-label="2 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="3" aria-label="3 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="4" aria-label="4 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="5" aria-label="5 tähteä" aria-pressed="false">☆</button></div><span id="rating-label" class="muted">Ei vielä arviota</span> <button id="clear-rating" class="quiet" type="button">Tyhjennä arvio</button></fieldset>
+
 <h2>Omat kuvat</h2>
 <p class="photo-help">Lisää kuvia matkastasi.</p>
 <div class="empty-photo-slots"><label for="files"><svg width="36" height="36" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M25 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h13M3 19l7-7 6 6 3-3 2 2"/><circle cx="19" cy="9" r="1.5"/><path d="M25 19v10m-5-5h10"/></svg><span>Lisää kuva</span></label><label for="files"><svg width="36" height="36" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M25 15V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h13M3 19l7-7 6 6 3-3 2 2"/><circle cx="19" cy="9" r="1.5"/><path d="M25 19v10m-5-5h10"/></svg><span>Lisää kuva</span></label></div><div class="photo-gallery" id="photo-gallery" aria-label="Matkan kuvat">
@@ -287,6 +296,7 @@ html body.ms-v363-diary #editor.visit-existing fieldset.rating{display:block!imp
  <details class="photo-note-box hidden" id="photo-note-box"><summary id="photo-note-toggle">✏️ Lisää kuvan kuvauspaikka tai muisto</summary><label for="photo-note">Mistä kuva on otettu? (valinnainen)</label><textarea id="photo-note" rows="2" placeholder="Esim. Repovesi – maisema riippusillalta"></textarea><small id="photo-note-status" role="status" aria-live="polite"></small></details>
 </div><button id="all-photos" class="hidden" type="button" aria-expanded="false">Näytä kaikki kuvat</button>
 <label class="photo-add" for="files" tabindex="0" role="button">＋ Lisää kuvia</label><input id="files" class="visually-hidden" type="file" accept="image/*" multiple disabled><p id="photo-status" class="muted" role="status">Kuvien tallennusta avataan…</p>
+<fieldset class="rating"><legend>Oma arvio</legend><div class="stars" aria-label="Valitse 1–5 tähteä"><button type="button" data-rating="1" aria-label="1 tähti" aria-pressed="false">☆</button><button type="button" data-rating="2" aria-label="2 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="3" aria-label="3 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="4" aria-label="4 tähteä" aria-pressed="false">☆</button><button type="button" data-rating="5" aria-label="5 tähteä" aria-pressed="false">☆</button></div><span id="rating-label" class="muted">Ei vielä arviota</span> <button id="clear-rating" class="quiet" type="button">Tyhjennä arvio</button></fieldset>
 <label for="diary">Muistot käynniltä</label><textarea id="diary" placeholder="Mitä näit? Mikä jäi mieleen?"></textarea>
 
 </div>
