@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded',()=>{
  if(quick)quick.classList.add('ph-unified-quick');
  if(lead)lead.classList.add('ph-unified-lead');
  // Siirretään perustiedot esittelyn jälkeen vain silloin kun ne ovat samassa sisältölohkossa.
- if(facts&&lead&&facts.parentElement===lead.parentElement&&facts.compareDocumentPosition(lead)&Node.DOCUMENT_POSITION_FOLLOWING){lead.after(facts)}
+ if(facts&&lead&&facts.parentElement===lead.parentElement&&(facts.compareDocumentPosition(lead) & Node.DOCUMENT_POSITION_FOLLOWING)){lead.after(facts)}
  // Vanhoja arviointeja ja käyntimerkintöjä ei korvata.
 });
