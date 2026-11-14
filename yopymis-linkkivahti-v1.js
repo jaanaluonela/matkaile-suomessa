@@ -1,38 +1,42 @@
-/* Hide unavailable destination buttons on accommodation result cards. */
+/* Yöpymispaikkojen linkkivahti: älä näytä puuttuvan kohdesivun painiketta. */
 (()=>{'use strict';
 const cache=new Map();
-const base=new URL('./',location.href);
-function destination(a){
- const raw=a.getAttribute('href');
- if(!raw||/^(#|javascript:|mailto:|tel:)/i.test(raw))return null;
- try {const u=new URL(raw,location.href);if(!/^https?:$/.test(u.protocol))return null;return u;}catch{return null;}
-}
+const root=document.getElementById('municipality-results');
+if(!root)return;
 function hide(a){a.hidden=true;a.style.setProperty('display','none','important');a.setAttribute('aria-hidden','true');}
+function destination(a){
+ const raw=(a.getAttribute('href')||'').trim();
+ if(!raw||raw==='#'||/^(javascript:|mailto:|tel:|#)/i.test(raw))return null;
+ try{const u=new URL(raw,location.href);return /^https?:$/.test(u.protocol)?u:null;}catch{return null;}
+}
 async function valid(u){
- if(u.origin!==location.origin)return true; // External destinations cannot be reliably checked cross-origin.
- if(u.pathname===base.pathname||/\/(index|404)\.html$/i.test(u.pathname))return false;
- if(!u.pathname.endsWith('.html'))return true;
- const key=u.pathname;
- if(!cache.has(key))cache.set(key,fetch(u.href,{method:'HEAD',cache:'no-store'}).then(r=>r.ok&&new URL(r.url).pathname===u.pathname).catch(()=>null));
- return cache.get(key);
+ if(u.origin!==location.origin)return true; // Ulkoisten sivujen tilaa ei voi luotettavasti tarkistaa selaimesta.
+ if(/\/(index|404)\.html$/i.test(u.pathname)||u.pathname===new URL('./',location.href).pathname)return false;
+ if(!/\.html$/i.test(u.pathname))return true;
+ if(!cache.has(u.pathname)){
+  cache.set(u.pathname,(async()=>{
+   try{
+    let response=await fetch(u.href,{method:'HEAD',cache:'no-store',redirect:'follow'});
+    if(response.status===405||response.status===501)response=await fetch(u.href,{method:'GET',cache:'no-store',redirect:'follow'});
+    return response.ok&&new URL(response.url).pathname===u.pathname;
+   }catch{return null;} // Verkkovirhe ei todista linkkiä rikkinäiseksi.
+  })());
+ }
+ return cache.get(u.pathname);
 }
 async function inspect(a){
- if(a.dataset.linkGuard==='done')return;
+ const raw=a.getAttribute('href')||'';
+ if(a.dataset.linkGuardHref===raw&&a.dataset.linkGuard==='done')return;
+ a.dataset.linkGuardHref=raw;
+ a.dataset.linkGuard='pending';
  const u=destination(a);
  if(!u){hide(a);a.dataset.linkGuard='done';return;}
- const result=await valid(u);
- if(!a.isConnected)return;
- if(result===false)hide(a);
+ const ok=await valid(u);
+ if(!a.isConnected||a.getAttribute('href')!==raw)return;
+ if(ok===false)hide(a);
  a.dataset.linkGuard='done';
 }
-function scan(){
- document.querySelectorAll('#municipality-results .stay .buttons a').forEach(a=>{
-   if(a.dataset.linkGuard==='done'&&a.dataset.linkGuardHref===a.getAttribute('href'))return;
-   a.dataset.linkGuardHref=a.getAttribute('href')||'';
-   a.dataset.linkGuard='pending';
-   inspect(a);
- });
-}
-const start=()=>{scan();new MutationObserver(scan).observe(document.getElementById('municipality-results'),{childList:true,subtree:true,attributes:true,attributeFilter:['href']});};
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+function scan(){root.querySelectorAll('.stay .buttons a').forEach(a=>{if(a.dataset.linkGuard!=='pending')inspect(a);});}
+scan();
+new MutationObserver(scan).observe(root,{childList:true,subtree:true,attributes:true,attributeFilter:['href']});
 })();
