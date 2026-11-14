@@ -11,18 +11,25 @@ const samePlace=(a,b)=>{
   if(names.includes(bn))return !a.city||!b.city||town;
   return town&&street(a.address).length>=12&&street(a.address)===street(b.address);
 };
+// Oppaan vuosien 2026–2027 aukiolo- ja hintatiedot säilytetään erillisinä
+// historiallisina tietoina. Niitä ei merkitä nykyisiksi hinnoiksi tai aukioloajoiksi.
+const guideSource='SF-Caravan Leirintäopas 2026–2027';
+function enrich(place,guide){
+ if(!place.city&&guide.city)place.city=guide.city;
+ if(!place.address&&guide.address)place.address=guide.address;
+ place.guideSource=place.guideSource||guideSource;
+ if(guide.details&&!place.guideDetails2026)place.guideDetails2026=guide.details;
+ if(norm(place.name)!==norm(guide.name))place.aliases=[...new Set([...(place.aliases||[]),guide.name])];
+}
 let matched=0,added=0;
 for(const r of rows){
   const found=places.find(p=>samePlace(p,r));
   if(found){
     matched++;
-    found.guideSource=found.guideSource||'SF-Caravan Leirintäopas 2026–2027';
-    if(!found.city&&r.city)found.city=r.city;
-    if(!found.address&&r.address)found.address=r.address;
-    if(norm(found.name)!==norm(r.name))found.aliases=[...new Set([...(found.aliases||[]),r.name])];
+    enrich(found,r);
     continue;
   }
-  places.push({id:'opas26-'+norm(r.name),name:r.name,city:r.city||'',address:r.address||'',type:r.type,description:'Leirintäoppaan 2026–2027 kohde. '+(r.details||'')+' Tarkista ajantasainen aukiolo, palvelut ja hinnat suoraan kohteelta.',guideSource:'SF-Caravan Leirintäopas 2026–2027',season:'Tarkista aukiolo',priceText:'Oppaan hinnat eivät ole ajantasaisia',verifiedServices:[]});
+  places.push({id:'opas26-'+norm(r.name),name:r.name,city:r.city||'',address:r.address||'',type:r.type,description:'Leirintäoppaan 2026–2027 kohde. '+(r.details||'')+' Tarkista ajantasainen aukiolo, palvelut ja hinnat suoraan kohteelta.',guideSource,guideDetails2026:r.details||'',season:'Tarkista aukiolo',priceText:'Oppaan hinnat eivät ole ajantasaisia',verifiedServices:[]});
   added++;
 }
 // Poista vain varmasti samat opaskohteet: sama tyyppi ja kunta sekä sama nimi tai osoite.
@@ -34,10 +41,7 @@ for(let i=places.length-1;i>=0;i--){
   const j=places.findIndex((other,k)=>k!==i&&other&&!String(other.id||'').startsWith('opas26-')&&samePlace(other,p));
   if(j<0)continue;
   const original=places[j];
-  if(!original.city&&p.city)original.city=p.city;
-  if(!original.address&&p.address)original.address=p.address;
-  original.guideSource=original.guideSource||p.guideSource;
-  if(norm(original.name)!==norm(p.name))original.aliases=[...new Set([...(original.aliases||[]),p.name])];
+  enrich(original,{name:p.name,city:p.city,address:p.address,details:p.guideDetails2026});
   places.splice(i,1);removed++;
 }
 window.msGuideDedupeAudit={guideRows:rows.length,matched,added,removed};
