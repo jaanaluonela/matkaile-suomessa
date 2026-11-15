@@ -61,8 +61,6 @@
    const serviceBoxes=[...document.querySelectorAll('.ms275-service-choice')];
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
-   const parkServices=new Set(['electric','wc','shower','sauna','playground','greywater','chemical']);
-   const campingServices=new Set(['electric','wc','shower','sauna','playground','cottages','laundry','greywater','chemical']);
    if(!container||!search||!kindButtons.length)return;
    const urlKind=new URLSearchParams(location.search).get('tyyppi');
    let kind=['camping','park'].includes(urlKind)?urlKind:'all';
@@ -162,24 +160,13 @@
        if(info.textContent!==text)info.textContent=text;
      }else info.remove();
    }
-   function syncServiceChoices(){
-     const parkOnly=kind==='park';
-     for(const box of serviceBoxes){
-       const unavailable=!(parkOnly?parkServices:campingServices).has(box.value);
-       const choice=box.closest('label');
-       if(choice){choice.hidden=unavailable;choice.style.display=unavailable?'none':'';}
-       box.disabled=unavailable;
-       if(unavailable)box.checked=false;
-     }
-   }
    function apply(){
-     syncServiceChoices();
+     const parkOnly=kind==='park';
      const panel=document.querySelector('.ms275-services-panel');
-     const intro=panel?.querySelector('p');
-     if(intro)intro.textContent=kind==='park'?'Valitse tarvitsemasi matkaparkin palvelut. Tuloksissa näkyvät kohteet, joille palvelut on vahvistettu.':'Valitse tarvitsemasi lisä- ja huoltopalvelut. Tuloksissa näkyvät kohteet, joille palvelut on vahvistettu.';
+     if(panel)panel.hidden=parkOnly;
 
      const q=parseQuery(search.value);
-     const checked=serviceBoxes.filter(el=>el.checked).map(el=>el.value);
+     const checked=parkOnly?[]:serviceBoxes.filter(el=>el.checked).map(el=>el.value);
      const required=new Set([...q.services,...checked]);
      const index=byUrlName();
      const cards=[...container.querySelectorAll('.stay')];
@@ -188,8 +175,8 @@
        const p=findCardPlace(card,index);
        if(p)annotate(card,p);
        const kindOk=kind==='all'||p?.type===kind;
-       const sfcOk=!sfc?.checked||isSfc(p);
-       const yearOk=!year?.checked||Boolean(p && isYearRound(p));
+       const sfcOk=parkOnly||!sfc?.checked||isSfc(p);
+       const yearOk=parkOnly||!year?.checked||Boolean(p && isYearRound(p));
        const text=norm([p?.name,p?.city,p?.region,p?.address,p?.description,p?.season,
          p?.type==='park'?'matkaparkki':p?.type==='camping'?'leirintäalue':'sovittava yöpyminen',isSfc(p)?'SFC':''].join(' '));
        const textOk=q.words.every(w=>text.includes(w));
