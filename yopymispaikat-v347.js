@@ -126,6 +126,21 @@
        if(!card.dataset.originalStayUrl)card.dataset.originalStayUrl=detail.getAttribute('href')||'';
        detail.href='matkaparkki-kohde.html?id='+encodeURIComponent(place.detailId);
      }
+     if(place.type==='park'){
+       // Kortin oma sisältö riittää: poista turha yleinen lisätietopainike.
+       for(const a of card.querySelectorAll('.buttons a')){
+         if(/^Kohteen tiedot\s*[→↗]?\s*$/i.test((a.textContent||'').trim()))a.remove();
+       }
+       // Älä toista matkailuajoneuvopaikka-otsikkoa matkaparkki-merkinnän lisäksi.
+       for(const el of card.querySelectorAll('span,small,p,div')){
+         if(el.children.length===0&&/^(matkailuajoneuvopaikka|tarkista aukiolo)$/i.test((el.textContent||'').trim()))el.remove();
+       }
+       const generic=/^(Palvelut tarkistettava kohteesta|Tarkista ajantasainen aukiolo.*|Leirintäoppaan 2026–2027 kohde\..*)$/i;
+       for(const el of card.querySelectorAll('p')){
+         const t=(el.textContent||'').trim();
+         if(generic.test(t))el.remove();
+       }
+     }
      const address=card.querySelector('.address');
      if(address&&place.checked==='2026-10-19')address.textContent=place.city+' · '+place.address;
      const website=card.querySelector('.buttons a.secondary');
