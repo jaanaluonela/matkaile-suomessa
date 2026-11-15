@@ -69,9 +69,12 @@
    const allPlaces=()=>window.caravanPlaces||[];
    function pagePlaces(){
      const towns=window.municipalityRegions||{};
-     return allPlaces().filter(p=>
-       (!city?.value||p.city===city.value) &&
-       (city?.value||!region?.value||towns[p.city]===region.value));
+     return allPlaces().filter(p=>{
+       const placeCity=String(p?.city||'').trim();
+       const placeRegion=towns[placeCity]||p?.region||'';
+       return (!city?.value||norm(placeCity)===norm(city.value)) &&
+         (!region?.value||norm(placeRegion)===norm(region.value));
+     });
    }
    function byUrlName(){
      const map=new Map(), urls=new Map();
