@@ -29,7 +29,7 @@ for(const r of rows){
     enrich(found,r);
     continue;
   }
-  places.push({id:'opas26-'+norm(r.name),name:r.name,city:r.city||'',address:r.address||'',type:r.type,description:'Leirintäoppaan 2026–2027 kohde. '+(r.details||'')+' Tarkista ajantasainen aukiolo, palvelut ja hinnat suoraan kohteelta.',guideSource,guideDetails2026:r.details||'',season:'Tarkista aukiolo',priceText:'Oppaan hinnat eivät ole ajantasaisia',verifiedServices:[]});
+  places.push({id:'opas26-'+norm(r.name),name:r.name,city:r.city||'',address:r.address||'',type:r.type,description:'Leirintäopas 2026–2027',guideSource,guideDetails2026:r.details||'',verifiedServices:[]});
   added++;
 }
 // Poista vain varmasti samat opaskohteet: sama tyyppi ja kunta sekä sama nimi tai osoite.
