@@ -31,12 +31,33 @@
    }
    return {words:norm(remaining).split(/\s+/).filter(Boolean),services:required};
  }
+ // Kohteiden omilla sivuilla vahvistetut sähköpaikat ja kausihinnat.
+ const PARK_ELECTRIC_DETAILS = {
+   'ms274-kouvola-aurantola':'Noin 25 sähköpaikkaa · sähkö sisältyy vuorokausihintaan',
+   'ms274-kouvola-jaalan-tienristi':'2/8 paikkaa, paikat 7 ja 8',
+   'ms274-hameenlinna-hameensaaren-matkaparkki':'8/22 paikkaa · sähköpaikka 20 €/vrk kaudella 2026'
+ };
+ function parkElectric(place, services){
+   const detail=PARK_ELECTRIC_DETAILS[place.id];
+   if(detail)return {available:true, detail};
+   // https://varkaus.fi/en/node/3997
+   const street=norm(String(place.address||'').split(',')[0]);
+   if(place.city==='Varkaus'&&['wredenkatu 2','rehnstrominkatu 10'].includes(street)){
+     return {available:false};
+   }
+   return {available:services.has('electric')?true:null};
+ }
  function servicesFor(place){
    const found = new Set(place?.verifiedServices || []);
    const stored = place?.services || {};
    const synonyms = {cabins:'cottages',food:'cafe'};
    for(const [key,value] of Object.entries(stored)){
      if(value === true) found.add(synonyms[key]||key);
+   }
+   if(place?.type==='park'){
+     const {available}=parkElectric(place,found);
+     if(available===true)found.add('electric');
+     if(available===false)found.delete('electric');
    }
    return found;
  }
@@ -59,6 +80,7 @@
    const city=document.getElementById('municipality');
    const kindButtons=[...document.querySelectorAll('[data-ms347-kind]')];
    const serviceBoxes=[...document.querySelectorAll('.ms275-service-choice')];
+   const parkElectricBox=document.getElementById('park-only-electric');
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
    if(!container||!search||!kindButtons.length)return;
@@ -130,7 +152,7 @@
      if(badge&&/^(?:🅿️\s*|🏕️\s*)?(?:(?:matkaparkki|leirintäalue)(?:\s*·\s*tarkista aukiolo)?|matkailuajoneuvopaikka|tarkista aukiolo)$/i.test(badge.textContent.trim()))badge.remove();
 
      const description=card.querySelector('.description');
-     const generic=/^(?:Leirintäopas 2026–2027|Leirintäoppaan 2026–2027 kohde\..*|Palvelut tarkistettava kohteesta\.?|Matkailuajoneuvon yöpymiskohde\. Tarkista ajankohtainen aukiolo, varaus ja palvelut suoraan kohteelta ennen matkaa\.|Matkailuajoneuvoille tarkoitettu majoituskohde\. Aukiolo ja palvelujen saatavuus tarkistettava ennen saapumista\.)$/i;
+     const generic=/^(?:Matkaparkkikohde\. Varmista aukiolo, saatavuus sekä ajoneuvon ja palvelujen sopivuus ennen saapumista\.|Leirintäopas 2026–2027|Leirintäoppaan 2026–2027 kohde\..*|Palvelut tarkistettava kohteesta\.?|Matkailuajoneuvon yöpymiskohde\. Tarkista ajankohtainen aukiolo, varaus ja palvelut suoraan kohteelta ennen matkaa\.|Matkailuajoneuvoille tarkoitettu majoituskohde\. Aukiolo ja palvelujen saatavuus tarkistettava ennen saapumista\.)$/i;
      if(description&&(!description.textContent.trim()||generic.test(description.textContent.trim())))description.remove();
 
      const address=card.querySelector('.address');
@@ -153,6 +175,19 @@
      const price=String(place.priceText||'').trim();
      if(price&&!/^(oppaan hinnat eivät ole ajantasaisia|tarkista|ei tietoa)/i.test(price))snippets.push('Hinta: '+price);
      const known=servicesFor(place);
+     if(place.type==='park'&&address){
+       const {available,detail}=parkElectric(place,known);
+       const label=available===true?'⚡ Sähkö saatavilla':available===false?'Ei sähköä':'Sähköstä ei tietoa';
+       let line=card.querySelector('.ms347-park-electric');
+       if(!line){
+         line=document.createElement('p');
+         line.className='ms347-park-electric';
+         address.after(line);
+       }
+       const electricityText=detail?label+' · '+detail:label;
+       if(line.textContent!==electricityText)line.textContent=electricityText;
+       known.delete('electric');
+     }
      if(known.size)snippets.push('Palvelut: '+[...known].map(k=>SERVICE_LABELS[k]||k).join(' · '));
      // Puuttuvista hinnoista ja palveluista ei lisätä täytetekstejä.
      const text=snippets.join('   |   ');
@@ -166,7 +201,8 @@
      if(panel)panel.hidden=parkOnly;
 
      const q=parseQuery(search.value);
-     const checked=parkOnly?[]:serviceBoxes.filter(el=>el.checked).map(el=>el.value);
+     if(parkElectricBox)parkElectricBox.closest('label').hidden=!parkOnly;
+     const checked=parkOnly?(parkElectricBox?.checked?['electric']:[]):serviceBoxes.filter(el=>el.checked).map(el=>el.value);
      const required=new Set([...q.services,...checked]);
      const index=byUrlName();
      const cards=[...container.querySelectorAll('.stay')];
@@ -207,6 +243,7 @@
    city?.addEventListener('change',()=>queueMicrotask(apply));
    sfc?.addEventListener('change',apply);
    year?.addEventListener('change',apply);
+   parkElectricBox?.addEventListener('change',apply);
    serviceBoxes.forEach(box=>box.addEventListener('change',apply));
    document.getElementById('ms275-clear-services')?.addEventListener('click',()=>{
      for(const box of serviceBoxes)box.checked=false;
@@ -215,6 +252,7 @@
    document.getElementById('ms318-camp-reset')?.addEventListener('click',()=>{
      kind='all';search.value='';
      for(const box of serviceBoxes)box.checked=false;
+     if(parkElectricBox)parkElectricBox.checked=false;
      if(sfc)sfc.checked=false;if(year)year.checked=false;
      const url=new URL(location.href);url.searchParams.delete('tyyppi');
      history.replaceState(null,'',url);
