@@ -135,13 +135,15 @@
      const snippets=[];
      if(isSfc(place))snippets.push('SFC-alue');
      if(isYearRound(place))snippets.push('✓ Ympäri vuoden');
-     if(place.priceText)snippets.push('Hinta: '+place.priceText);
+     const price=String(place.priceText||'').trim();
+     if(price&&!/^(oppaan hinnat eivät ole ajantasaisia|tarkista|ei tietoa)/i.test(price))snippets.push('Hinta: '+price);
      const known=servicesFor(place);
-     if(known.size) snippets.push('Palvelut: '+[...known].map(k=>SERVICE_LABELS[k]||k).join(' · '));
-     else snippets.push('Palvelut tarkistettava kohteesta');
-     // Saapumistiedot näkyvät kohteen tarkemmalla sivulla.
+     if(known.size)snippets.push('Palvelut: '+[...known].map(k=>SERVICE_LABELS[k]||k).join(' · '));
+     // Puuttuvista hinnoista ja palveluista ei lisätä täytetekstejä.
      const text=snippets.join('   |   ');
-     if(info.textContent!==text) info.textContent=text;
+     if(text){
+       if(info.textContent!==text)info.textContent=text;
+     }else info.remove();
    }
    function syncServiceChoices(){
      const parkOnly=kind==='park';
