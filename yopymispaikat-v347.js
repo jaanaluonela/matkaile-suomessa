@@ -76,6 +76,28 @@
          (!region?.value||norm(placeRegion)===norm(region.value));
      });
    }
+   // Täydennä kuntavalikko myös myöhemmin lisätyistä oppaan kohteista.
+   // Käytä vain tunnettua maakuntatietoa, älä arvaa kohteen sijaintia.
+   function syncMunicipalities(){
+     if(!city||!region)return;
+     const chosen=city.value;
+     const known=window.municipalityRegions||{};
+     const towns=[...new Set(allPlaces().filter(p=>{
+       const placeRegion=known[p.city]||p.region||'';
+       return p.city&&(!region.value||norm(placeRegion)===norm(region.value));
+     }).map(p=>p.city))].sort((a,b)=>a.localeCompare(b,'fi'));
+     const existing=new Set([...city.options].map(o=>norm(o.value)));
+     for(const name of towns){
+       if(existing.has(norm(name)))continue;
+       const option=document.createElement('option');
+       option.value=name;option.textContent=name;
+       city.append(option);
+       existing.add(norm(name));
+     }
+     if(chosen&&[...city.options].some(o=>o.value===chosen))city.value=chosen;
+   }
+   region?.addEventListener('change',()=>queueMicrotask(syncMunicipalities));
+   queueMicrotask(syncMunicipalities);
    function byUrlName(){
      const map=new Map(), urls=new Map();
      for(const p of pagePlaces()){
