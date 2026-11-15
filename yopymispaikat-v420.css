@@ -1,10 +1,10 @@
 /* v420: vain Yöpymispaikat-sivu */
 .ms420-icon{display:inline-block;width:1.55em;height:1.55em;vertical-align:middle;background-position:center;background-repeat:no-repeat;background-size:contain;flex-shrink:0}
-.ms420-park-icon{background-image:url('matkaparkki-merkki-v420.svg')}
+.ms420-park-icon{background-image:url('matkaparkki-merkki-v420.svg?v=2')}
 .ms420-camp-icon{background-image:url('leirintaalue-merkki-v420.svg')}
 .ms347-type.ms420-park,.ms347-type.ms420-camp{display:inline-flex!important;align-items:center;gap:8px}
 .ms347-type.ms420-park:before,.ms347-type.ms420-camp:before{content:'';width:29px;height:29px;display:inline-block;background-size:contain;background-position:center;background-repeat:no-repeat;flex:none}
-.ms347-type.ms420-park:before{background-image:url('matkaparkki-merkki-v420.svg')}
+.ms347-type.ms420-park:before{background-image:url('matkaparkki-merkki-v420.svg?v=2')}
 .ms347-type.ms420-camp:before{background-image:url('leirintaalue-merkki-v420.svg')}
 .ms420-services{border:1px solid #c9ddcf;border-radius:16px;margin:14px 0;background:#f6faf7;overflow:hidden}
 .ms420-services>summary{cursor:pointer;font-weight:800;color:#174b3a;padding:14px 16px;list-style:none}

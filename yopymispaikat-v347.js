@@ -61,7 +61,7 @@
    const serviceBoxes=[...document.querySelectorAll('.ms275-service-choice')];
    const sfc=document.getElementById('camp-only-sfc');
    const year=document.getElementById('camp-only-year-round');
-   const parkServices=new Set(['electric','wc','shower','sauna','playground','greywater']);
+   const parkServices=new Set(['electric','wc','shower','sauna','playground','greywater','chemical']);
    const campingServices=new Set(['electric','wc','shower','sauna','playground','cottages','laundry','greywater','chemical']);
    if(!container||!search||!kindButtons.length)return;
    const urlKind=new URLSearchParams(location.search).get('tyyppi');
@@ -108,7 +108,7 @@
      return {map,urls};
    }
    function findCardPlace(card,index){
-     const url=card.dataset.originalStayUrl||card.querySelector('.buttons a[href]')?.getAttribute('href')||'';
+     const url=card.dataset.originalStayUrl??card.querySelector('.buttons a[href]')?.getAttribute('href')??'';
      const title=card.querySelector('h2')?.textContent||'';
      return index.map.get(url+'|'+title) || index.urls.get(url) || null;
    }
@@ -122,29 +122,31 @@
      type.classList.toggle('ms420-park',place.type==='park');
      type.classList.toggle('ms420-camp',place.type==='camping');
      const detail=card.querySelector('.buttons a.btn:not(.secondary)');
-     if(detail&&place.detailId){
-       if(!card.dataset.originalStayUrl)card.dataset.originalStayUrl=detail.getAttribute('href')||'';
-       detail.href='matkaparkki-kohde.html?id='+encodeURIComponent(place.detailId);
+     if(card.dataset.originalStayUrl===undefined){
+       card.dataset.originalStayUrl=detail?.getAttribute('href')||'';
      }
-     if(place.type==='park'){
-       // Kortin oma sisältö riittää: poista turha yleinen lisätietopainike.
-       for(const a of card.querySelectorAll('.buttons a')){
-         if(/^Kohteen tiedot\s*[→↗]?\s*$/i.test((a.textContent||'').trim()))a.remove();
-       }
-       // Älä toista matkailuajoneuvopaikka-otsikkoa matkaparkki-merkinnän lisäksi.
-       for(const el of card.querySelectorAll('span,small,p,div')){
-         if(el.children.length===0&&/^(matkailuajoneuvopaikka|tarkista aukiolo)$/i.test((el.textContent||'').trim()))el.remove();
-       }
-       const generic=/^(Palvelut tarkistettava kohteesta|Tarkista ajantasainen aukiolo.*|Leirintäoppaan 2026–2027 kohde\..*)$/i;
-       for(const el of card.querySelectorAll('p')){
-         const t=(el.textContent||'').trim();
-         if(generic.test(t))el.remove();
-       }
-     }
+     if(detail&&place.detailId)detail.href='matkaparkki-kohde.html?id='+encodeURIComponent(place.detailId);
+     if(detail&&(!detail.getAttribute('href')||place.type==='park'||place.website))detail.remove();
+
+     const badge=card.querySelector('.badge,.camp-opening-badge');
+     if(badge&&/^(?:🅿️\s*|🏕️\s*)?(?:(?:matkaparkki|leirintäalue)(?:\s*·\s*tarkista aukiolo)?|matkailuajoneuvopaikka|tarkista aukiolo)$/i.test(badge.textContent.trim()))badge.remove();
+
+     const description=card.querySelector('.description');
+     const generic=/^(?:Leirintäopas 2026–2027|Leirintäoppaan 2026–2027 kohde\..*|Palvelut tarkistettava kohteesta\.?|Matkailuajoneuvon yöpymiskohde\. Tarkista ajankohtainen aukiolo, varaus ja palvelut suoraan kohteelta ennen matkaa\.|Matkailuajoneuvoille tarkoitettu majoituskohde\. Aukiolo ja palvelujen saatavuus tarkistettava ennen saapumista\.)$/i;
+     if(description&&(!description.textContent.trim()||generic.test(description.textContent.trim())))description.remove();
+
      const address=card.querySelector('.address');
-     if(address&&place.checked==='2026-10-19')address.textContent=place.city+' · '+place.address;
-     const website=card.querySelector('.buttons a.secondary');
-     if(website&&place.website&&website.textContent.includes('Omat sivut'))website.href=place.website;
+     const street=String(place.address||'').trim();
+     const cityName=String(place.city||'').trim();
+     const includesCity=cityName&&norm(street).endsWith(norm(cityName));
+     if(address)address.textContent=includesCity?street:[cityName,street].filter(Boolean).join(' · ');
+
+     const buttons=card.querySelector('.buttons');
+     for(const link of buttons?.querySelectorAll('a')||[]){
+       if(!link.getAttribute('href')?.trim())link.remove();
+       else if(place.website&&link.textContent.includes('Omat sivut'))link.href=place.website;
+     }
+     if(buttons&&!buttons.children.length)buttons.remove();
      let info=card.querySelector('.ms347-facts');
      if(!info){info=document.createElement('div');info.className='ms347-facts';const buttons=card.querySelector('.buttons');if(buttons)card.insertBefore(info,buttons);else card.append(info);}
      const snippets=[];
