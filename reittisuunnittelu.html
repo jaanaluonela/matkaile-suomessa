@@ -7,71 +7,68 @@
 .route-page-v90 .bottomnav.simple-bottom { display: none !important; }
 .route-card-v90 [hidden] { display: none !important; }
 .route-card-v90 .route-add-stop { min-height: 44px; padding: 8px 14px; border-radius: 12px; border: 1px solid #9db8ab; background: #edf5ef; color: #155343; font: inherit; font-weight: 700; cursor: pointer; }
-.route-card-v90 .route-submit { margin-top: 12px; }
-.route-card-v90 .route-hint-v90:empty { margin: 0; }
+.route-card-v90 .msroute-real-controls { display: grid; gap: 12px; margin-top: 16px; }
+.route-card-v90 .msroute-distance { border: 1px solid #9db8ab; border-radius: 12px; padding: 8px 12px; }
+.route-card-v90 .msroute-distance-options { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.route-card-v90 .msroute-distance-options label { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin: 0; }
+.route-card-v90 .msroute-distance-options input { width: auto; min-height: 0; margin: 0; }
+.route-card-v90 select, .route-card-v90 .msroute-primary { width: 100%; min-height: 44px; font: inherit; border-radius: 12px; }
+.route-card-v90 select { border: 1px solid #9db8ab; padding: 8px; }
+.route-card-v90 .msroute-primary { border: 0; background: #146d4b; color: white; font-weight: 750; padding: 12px; cursor: pointer; }
+.route-card-v90 .msroute-primary:disabled { opacity: .7; }
+.route-page-v90 #ms302-results { display: grid; gap: 12px; }
+.route-page-v90 .msroute-result { display: flex; gap: 12px; align-items: center; padding: 14px; border: 1px solid #d9e5d9; border-radius: 16px; background: white; }
+.route-page-v90 .msroute-photo { width: 72px; height: 64px; border-radius: 10px; object-fit: cover; flex: none; }
+.route-page-v90 .msroute-card-body { min-width: 0; overflow-wrap: anywhere; }
+.route-page-v90 .msroute-card-body p { margin: 4px 0; }
 </style></head>
 <body><div class="app route-page-v90">
-<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Avaa ajoreitti Google Mapsissa.</p></div></header>
+<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Löydä pysähdyspaikat ajoreittisi läheltä.</p></div></header>
 <main class="content route-content-v90">
-<section class="section card route-card-v90" aria-label="Reittisuunnittelu">
-<form id="routeForm">
-  <label>Lähtöpaikka<input name="origin" placeholder="Esim. Vääksy" required></label>
-  <label>Määränpää<input name="destination" placeholder="Esim. Kokkola" required></label>
+<section class="section card route-card-v90 msroute-panel" data-route-planner aria-label="Reittisuunnittelu">
+<form id="routeForm" class="msroute-route">
+  <label>Lähtöpaikka<input id="msroute-from" name="origin" placeholder="Esim. Vääksy" required></label>
+  <label>Määränpää<input id="msroute-to" name="destination" placeholder="Esim. Kokkola" required></label>
   <label>Välietappi 1 <small>(valinnainen)</small><input name="waypoint" placeholder="Esim. Jyväskylä"></label>
   <label data-extra-stop hidden>Välietappi 2<input name="waypoint"></label>
   <label data-extra-stop hidden>Välietappi 3<input name="waypoint"></label>
   <button id="addRouteVia" class="route-add-stop" type="button">+ Lisää välietappi</button>
-  <div class="route-submit"><button class="cta-visited" type="submit">Avaa reitti Google Mapsissa</button></div>
-  <p id="routeHint" class="route-hint-v90" role="status"></p>
 </form>
+<div class="msroute-view" hidden></div>
+<noscript>Reittihaku tarvitsee JavaScriptin.</noscript>
 </section>
-<section class="section">
-<div class="section-head"><h2>Etsi pysähdyspaikkoja</h2></div>
-<div class="compact-info-list ph-service-list">
-  <a class="place-row" href="pysahdy-matkalla.html"><span aria-hidden="true">🌲</span><div><b>Pysähdy matkalla</b><small>Luontokohteita, näköalapaikkoja ja museoita koko Suomessa.</small></div><em aria-hidden="true">›</em></a>
-  <a class="place-row" href="matkaparkit.html"><span aria-hidden="true">🅿️</span><div><b>Matkaparkit</b><small>Selaa matkaparkkeja ja tarkista kohteen palvelut.</small></div><em aria-hidden="true">›</em></a>
-  <a class="place-row" href="leirintaalueet.html"><span aria-hidden="true">⛺</span><div><b>Leirintäalueet</b><small>Etsi leirintäalue matkailuautolle tai vaunulle.</small></div><em aria-hidden="true">›</em></a>
-</div>
+<section class="section" aria-label="Pysähdysehdotukset">
+  <p id="ms302-count" aria-live="polite"></p>
+  <div id="ms302-results"></div>
+  <div id="ms302-more" hidden></div>
 </section>
 </main><nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav></div>
 <script>
 (() => {
-  const form = document.getElementById('routeForm');
   const add = document.getElementById('addRouteVia');
-  const extraStops = [...form.querySelectorAll('[data-extra-stop]')];
-
+  const stops = [...document.querySelectorAll('#routeForm [data-extra-stop]')];
   add.addEventListener('click', () => {
-    const next = extraStops.find(label => label.hidden);
+    const next = stops.find(label => label.hidden);
     if (!next) return;
     next.hidden = false;
     next.querySelector('input').focus();
-    add.hidden = extraStops.every(label => !label.hidden);
-  });
-
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const start = form.elements.origin.value.trim();
-    const end = form.elements.destination.value.trim();
-    const hint = document.getElementById('routeHint');
-    if (!start || !end) {
-      hint.textContent = 'Kirjoita lähtöpaikka ja määränpää.';
-      (start ? form.elements.destination : form.elements.origin).focus();
-      return;
-    }
-
-    const stops = [...form.querySelectorAll('[name="waypoint"]')]
-      .map(input => input.value.trim()).filter(Boolean);
-    let url = 'https://www.google.com/maps/dir/?api=1&travelmode=driving'
-      + '&origin=' + encodeURIComponent(start)
-      + '&destination=' + encodeURIComponent(end);
-    if (stops.length) url += '&waypoints=' + encodeURIComponent(stops.join('|'));
-    if (url.length > 2048) {
-      hint.textContent = 'Reittilinkki on liian pitkä. Lyhennä paikkojen nimiä tai osoitteita.';
-      return;
-    }
-    hint.textContent = '';
-    window.open(url, '_blank', 'noopener');
+    add.hidden = stops.every(label => !label.hidden);
   });
 })();
-</script><script defer src="desktop-v339.js?v=348"></script>
+</script>
+<script defer src="caravan-data.js"></script>
+<script defer src="leirinta-data-v264.js"></script>
+<script defer src="leirinta-data-v265.js"></script>
+<script defer src="karavaanialueet-v279.js"></script>
+<script defer src="sfc-alueet-v295.js"></script>
+<script defer src="ms-kohteet-v296.js"></script>
+<script defer src="leirinta-dedupe-v1.js"></script>
+<script defer src="nearby-data-v218.js"></script>
+<script defer src="kayntikohteet-data-v230.js"></script>
+<script defer src="ruukkikylat-data-v302.js?v=302"></script>
+<script defer src="erikoiset-kohteet-v305.js?v=305"></script>
+<script defer src="lasten-kohteet-v364.js?v=364"></script>
+<script defer src="suomi-kunnat-v253.js"></script>
+<script defer src="tehtaanmyymalat-data-v1.js?v=20261106"></script>
+<script defer src="pysahdy-reittikartta-v1.js?v=20261116-planner"></script><script defer src="desktop-v339.js?v=348"></script>
 </body></html>
