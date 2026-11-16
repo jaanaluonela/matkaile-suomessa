@@ -3,34 +3,75 @@
 <link rel="stylesheet" href="desktop-valjempi-v348.css?v=348">
 <link rel="stylesheet" href="alavalikko-v304.css?v=346">
 <script defer src="alavalikko-v304.js?v=346"></script>
-<link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script><style>.archipelago-feature{display:flex;gap:18px;align-items:center;padding:22px;border-radius:22px;background:#e5f1ea;border:1px solid #c9e1d1;color:#155b4d;text-decoration:none}.archipelago-feature .icon{font-size:38px}.archipelago-feature strong{display:block;font-size:22px}.archipelago-feature p{margin:7px 0;color:#526c60}.archipelago-feature .go{display:block;font-weight:800;margin-top:12px}.route-page-v90 .bottomnav.simple-bottom{display:none!important}@media(max-width:600px){.archipelago-feature{padding:16px;gap:12px}.archipelago-feature strong{font-size:19px}}</style></head>
+<link rel="stylesheet" href="yhteinen-alavalikko-v1.css?v=1"><script defer src="yhteinen-alavalikko-v1.js?v=1"></script><style>
+.route-page-v90 .bottomnav.simple-bottom { display: none !important; }
+.route-card-v90 [hidden] { display: none !important; }
+.route-card-v90 .route-add-stop { min-height: 44px; padding: 8px 14px; border-radius: 12px; border: 1px solid #9db8ab; background: #edf5ef; color: #155343; font: inherit; font-weight: 700; cursor: pointer; }
+.route-card-v90 .route-submit { margin-top: 12px; }
+.route-card-v90 .route-hint-v90:empty { margin: 0; }
+</style></head>
 <body><div class="app route-page-v90">
-<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Tee reitti ja avaa se Google Mapsissa. Myöhemmin tähän lisätään kohteet reitin varrelta.</p></div></header>
+<header class="route-hero-v90"><div class="toprow"><button class="icon-btn" onclick="history.back()">‹</button><button class="icon-btn" onclick="location.href='index.html'">🏠</button></div><div><h1>Suunnittele matka</h1><p>Avaa ajoreitti Google Mapsissa.</p></div></header>
 <main class="content route-content-v90">
-<section class="section card route-card-v90"><b>🚗 Reittisuunnittelu</b><p class="plain-region-note">Kirjoita lähtöpaikka ja määränpää. Voit lisätä myös yhden välietapin.</p>
-<label>Lähtöpaikka<input id="routeStart" placeholder="Esim. Helsinki, koti tai leirintäalue"></label>
-<label>Määränpää<input id="routeEnd" placeholder="Esim. Asikkala, Rovaniemi tai Yyteri"></label>
-<label>Välietappi <small>(valinnainen)</small><input id="routeVia" placeholder="Esim. Lahti"></label>
-<button id="openRoute" class="cta-visited" type="button">Avaa reitti Google Mapsissa</button>
-<p id="routeHint" class="route-hint-v90">Täytä lähtöpaikka ja määränpää.</p></section>
-<section class="section"><div class="section-head"><h2>Reitin varrella myöhemmin</h2></div><div class="compact-info-list ph-service-list">
-<a class="place-row" href="kartta.html"><span>🌲</span><div><b>Luontokohteet</b><small>Kansallispuistot, retkeilyreitit ja näköalapaikat.</small></div><em>›</em></a>
-<a class="place-row" href="kartta.html"><span>🚐</span><div><b>Karavaanarin palvelut</b><small>Matkaparkit, leirintäalueet ja huoltopisteet.</small></div><em>›</em></a>
-<a class="place-row" href="kartta.html"><span>☕</span><div><b>Kahvilat ja pysähdykset</b><small>Hyvät taukopaikat matkan varrelle.</small></div><em>›</em></a>
-</div></section>
+<section class="section card route-card-v90" aria-label="Reittisuunnittelu">
+<form id="routeForm">
+  <label>Lähtöpaikka<input name="origin" placeholder="Esim. Vääksy" required></label>
+  <label>Määränpää<input name="destination" placeholder="Esim. Kokkola" required></label>
+  <label>Välietappi 1 <small>(valinnainen)</small><input name="waypoint" placeholder="Esim. Jyväskylä"></label>
+  <label data-extra-stop hidden>Välietappi 2<input name="waypoint"></label>
+  <label data-extra-stop hidden>Välietappi 3<input name="waypoint"></label>
+  <button id="addRouteVia" class="route-add-stop" type="button">+ Lisää välietappi</button>
+  <div class="route-submit"><button class="cta-visited" type="submit">Avaa reitti Google Mapsissa</button></div>
+  <p id="routeHint" class="route-hint-v90" role="status"></p>
+</form>
+</section>
+<section class="section">
+<div class="section-head"><h2>Etsi pysähdyspaikkoja</h2></div>
+<div class="compact-info-list ph-service-list">
+  <a class="place-row" href="pysahdy-matkalla.html"><span aria-hidden="true">🌲</span><div><b>Pysähdy matkalla</b><small>Luontokohteita, näköalapaikkoja ja museoita koko Suomessa.</small></div><em aria-hidden="true">›</em></a>
+  <a class="place-row" href="matkaparkit.html"><span aria-hidden="true">🅿️</span><div><b>Matkaparkit</b><small>Selaa matkaparkkeja ja tarkista kohteen palvelut.</small></div><em aria-hidden="true">›</em></a>
+  <a class="place-row" href="leirintaalueet.html"><span aria-hidden="true">⛺</span><div><b>Leirintäalueet</b><small>Etsi leirintäalue matkailuautolle tai vaunulle.</small></div><em aria-hidden="true">›</em></a>
+</div>
+</section>
 </main><nav class="bottomnav simple-bottom"><a href="index.html"><span>🏠</span>Koti</a><a href="kartta.html"><span>🗺️</span>Kartta</a><a href="profiili.html"><span>👤</span>Minä</a></nav></div>
 <script>
-(function(){
- const start=document.getElementById('routeStart'), end=document.getElementById('routeEnd'), via=document.getElementById('routeVia'), btn=document.getElementById('openRoute'), hint=document.getElementById('routeHint');
- function mapsUrl(){
-   const s=start.value.trim(), e=end.value.trim(), v=via.value.trim();
-   if(!s||!e) return '';
-   const base='https://www.google.com/maps/dir/?api=1&travelmode=driving';
-   let url=base+'&origin='+encodeURIComponent(s)+'&destination='+encodeURIComponent(e);
-   if(v) url+='&waypoints='+encodeURIComponent(v);
-   return url;
- }
- btn.addEventListener('click',()=>{const url=mapsUrl(); if(!url){hint.textContent='Kirjoita ensin lähtöpaikka ja määränpää.'; return;} window.open(url,'_blank');});
+(() => {
+  const form = document.getElementById('routeForm');
+  const add = document.getElementById('addRouteVia');
+  const extraStops = [...form.querySelectorAll('[data-extra-stop]')];
+
+  add.addEventListener('click', () => {
+    const next = extraStops.find(label => label.hidden);
+    if (!next) return;
+    next.hidden = false;
+    next.querySelector('input').focus();
+    add.hidden = extraStops.every(label => !label.hidden);
+  });
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const start = form.elements.origin.value.trim();
+    const end = form.elements.destination.value.trim();
+    const hint = document.getElementById('routeHint');
+    if (!start || !end) {
+      hint.textContent = 'Kirjoita lähtöpaikka ja määränpää.';
+      (start ? form.elements.destination : form.elements.origin).focus();
+      return;
+    }
+
+    const stops = [...form.querySelectorAll('[name="waypoint"]')]
+      .map(input => input.value.trim()).filter(Boolean);
+    let url = 'https://www.google.com/maps/dir/?api=1&travelmode=driving'
+      + '&origin=' + encodeURIComponent(start)
+      + '&destination=' + encodeURIComponent(end);
+    if (stops.length) url += '&waypoints=' + encodeURIComponent(stops.join('|'));
+    if (url.length > 2048) {
+      hint.textContent = 'Reittilinkki on liian pitkä. Lyhennä paikkojen nimiä tai osoitteita.';
+      return;
+    }
+    hint.textContent = '';
+    window.open(url, '_blank', 'noopener');
+  });
 })();
 </script><script defer src="desktop-v339.js?v=348"></script>
 </body></html>
